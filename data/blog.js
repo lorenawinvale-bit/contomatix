@@ -664,7 +664,7 @@ module.exports = [
   },
   {
     slug: 'moses-lake-search-engine-optimization-2026',
-    title: 'Moses Lake Search Engine Optimization: The Complete Guide for 2026',
+    title: 'Moses Lake Search Engine Optimization: A Proven 2026 Guide',
     category: 'Local SEO',
     excerpt: 'Search engine optimization in Moses Lake, WA means competing in a genuinely growing local economy with over 3,400 businesses — here is what actually moves rankings and calls in 2026.',
     date: '2026-07-25',
@@ -1068,7 +1068,7 @@ module.exports = [
   },
   {
     slug: 'faceless-digital-marketing-2026',
-    title: 'Faceless Digital Marketing: The Complete 2026 Guide to Building a Brand Without Showing Your Face',
+    title: 'Faceless Digital Marketing: A Proven 2026 Growth Blueprint',
     category: 'Content Marketing',
     excerpt: 'Faceless digital marketing is how creators and businesses build real reach in 2026 without ever being on camera. Here is what actually works, which niches perform best, and how to start.',
     date: '2026-07-24',
@@ -1174,7 +1174,7 @@ module.exports = [
   },
   {
     slug: 'b2b-telemarketing',
-    title: 'B2B Telemarketing in 2026: Where Cold Calling Still Works and Where It Fails',
+    title: 'B2B Telemarketing: A Proven Guide to 2026 Cold Calling',
     category: 'Lead Generation',
     excerpt: "Is B2B telemarketing dead in 2026, or just misunderstood? Here's where cold calling still earns its cost, where it wastes money, and how it should fit alongside SEO, content, and ads.",
     date: '2026-07-23',
