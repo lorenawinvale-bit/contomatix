@@ -122,7 +122,7 @@ app.get('/blog/:slug', (req, res) => {
   const wordCount = post.content.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).length;
   const readMinutes = Math.max(1, Math.round(wordCount / 200));
   res.render('pages/blog-post', {
-    title: `${post.title} — Contomatix Blog`,
+    title: post.title,
     description: post.excerpt,
     pageClass: 'page-blog-post',
     post,
