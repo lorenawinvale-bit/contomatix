@@ -1,5 +1,160 @@
 module.exports = [
   {
+    slug: 'seo-content-writing-guide-2026',
+    title: 'SEO Content Writing: The Definitive Guide From Brief to Rank',
+    category: 'Content Marketing',
+    excerpt: "SEO content writing is not writing with keywords sprinkled in. This guide covers the full process — intent, briefs, structure, E-E-A-T, AI use, and measurement — with every claim tied to Google's own documentation.",
+    date: '2026-08-01',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/seo-content-writing-desk.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p><strong>SEO content writing</strong> is the practice of writing content that answers a real search query well enough to rank for it — and holds the reader once it does. It is not normal writing with keywords sprinkled through it, and treating it that way is why most of it fails.</p>
+<p>The distinction matters because the two halves pull against each other if you don't understand the mechanics. Write purely for search engines and you produce something nobody finishes reading. Write purely for readers and you may produce something excellent that never gets found.</p>
+<p>This guide covers the entire process — how to pick what to write about, how to brief it, how to structure and write it, how to use AI without getting penalised, and how to tell afterwards whether it worked.</p>
+
+<img src="/images/blog/seo-content-writing-desk.jpg" alt="Person planning an article in a notebook beside a laptop and tablet" width="1100" height="733">
+
+<h2>What SEO Content Writing Actually Is</h2>
+<p>At its simplest: content built around a query people actually type, structured so a search engine can understand it, and written well enough that the person who clicks stays and gets what they came for.</p>
+<p>All three parts are load-bearing. Miss the query and you've written something nobody searches for. Miss the structure and search engines struggle to interpret it. Miss the quality and you rank briefly, get clicked, lose the reader, and slide back down.</p>
+
+<h2>How It Differs From Content Writing and Copywriting</h2>
+<p>These three get used interchangeably and they aren't the same job.</p>
+<p><strong>Copywriting</strong> exists to make someone act — buy, sign up, enquire. Success is a conversion rate. It usually doesn't need to rank at all.</p>
+<p><strong>Content writing</strong> exists to inform or engage. Success is whether it's read and valued. Search may be irrelevant to it.</p>
+<p><strong>SEO content writing</strong> has to do both jobs while also satisfying a third constraint: being discoverable for a specific query. That extra constraint is what makes it harder, and it's why a brilliant writer with no SEO understanding often produces content that never gets traffic.</p>
+
+<h2>Start With Search Intent, Not the Keyword</h2>
+<p>The single biggest cause of content that never ranks isn't a weak keyword — it's a mismatch between what the page delivers and what the searcher wanted.</p>
+<p>Before writing anything, search your target query and look at what's already ranking. Not to copy it, but to read what Google has concluded that query means. If the entire first page is comparison listicles and you write a personal essay, you're not competing — you're answering a different question.</p>
+<p>This is also the fastest way to kill a bad idea early. If page one is dominated by major publishers with enormous authority and your site is new, that's useful information before you spend a week writing.</p>
+
+<h2>The Four Intent Types and What Each Demands</h2>
+<ul>
+<li><strong>Informational</strong> — "what is X", "how to X". Wants a clear, complete answer. Usually a guide or tutorial.</li>
+<li><strong>Commercial investigation</strong> — "best X", "X vs Y", "X review". Wants comparison and criteria, not a sales page.</li>
+<li><strong>Transactional</strong> — "buy X", "X pricing", "X near me". Wants to act immediately. Long preamble kills it.</li>
+<li><strong>Navigational</strong> — someone looking for a specific brand or page. Rarely worth targeting unless it's your own brand.</li>
+</ul>
+<p>Matching format to intent is not optional polish. A transactional query answered with a 3,000-word essay will lose to a clean product page every time, no matter how well the essay is written.</p>
+
+<h2>How to Choose What to Write About</h2>
+<p>Volume is the least useful metric to lead with. A query with 200 searches a month from people ready to buy is worth more than 20,000 searches from people who will never become customers.</p>
+<p>Weigh three things together: whether the query is genuinely relevant to what you sell, whether you can realistically compete against what already ranks, and whether the searcher is anywhere near a buying decision. A query that scores well on all three is worth writing even if the volume looks unimpressive.</p>
+<p>Getting this stage right is most of the battle, which is why <a href="/services/keyword-research">keyword research</a> is a discipline rather than a step.</p>
+
+<h2>Build a Brief Before You Write a Word</h2>
+<p>Most weak SEO content is weak because the writer started typing before deciding what the piece needed to do. A brief prevents that, and it takes fifteen minutes.</p>
+<p>A usable brief names: the target query and its intent, who's reading and what they already know, the specific questions the piece must answer, the sections it needs, the internal links it should include, and what makes this version better than what already ranks.</p>
+<p>That last line is the one most briefs omit and the one that decides the outcome. "Better" has to mean something concrete — more current, more specific, actually tested, better organised, or answering a question the ranking pages leave hanging. If you can't articulate it before writing, the finished piece won't have it either.</p>
+
+<h2>Structure It for Humans and Crawlers at Once</h2>
+<p>Good structure serves both audiences with the same decisions.</p>
+<p>Use one H1 — the page title. Use H2s for main sections and H3s beneath them, in a genuine hierarchy rather than by how the text looks. Keep paragraphs short. Answer the core question early rather than burying it under a long introduction; readers who don't find the answer quickly leave, and that behaviour is visible.</p>
+<p>Descriptive headings beat clever ones. "How to Choose What to Write About" tells both a skimming reader and a crawler what follows. "Where It All Begins" tells neither anything.</p>
+
+<h2>Where Keywords Actually Belong</h2>
+<p>Include your main query in the title, somewhere early in the opening, in at least one H2, and naturally through the body where it genuinely fits. That's the whole checklist.</p>
+<p>There is no target keyword density, and chasing one produces stilted writing that reads as manipulated. Use natural variations and related terms instead — search engines understand synonyms and context perfectly well, and repeating an exact phrase mechanically helps nothing.</p>
+<p>The honest test: read the sentence aloud. If the keyword placement makes it sound like a machine wrote it, it's hurting the page rather than helping it.</p>
+
+<h2>Titles and Meta Descriptions That Earn the Click</h2>
+<p>Ranking is only half the job — a page in position three with a dull title loses to position five with a compelling one.</p>
+<p>Put the main query near the front of the title, keep it around 55 to 60 characters so it doesn't get truncated, and give a concrete reason to click. Google's documentation on <a href="https://developers.google.com/search/docs/appearance/title-link" target="_blank" rel="nofollow noopener">title links</a> is worth reading, particularly the part explaining that Google may rewrite your title if it judges another version more useful — a good reason to write descriptive titles rather than vague ones.</p>
+<p>Meta descriptions aren't a ranking factor, but they influence click-through. Write them as a short pitch for the page rather than a keyword dump; Google's guidance on <a href="https://developers.google.com/search/docs/appearance/snippet" target="_blank" rel="nofollow noopener">snippets</a> covers how these get generated and when your version gets used.</p>
+
+<h2>Demonstrating Experience, Not Just Claiming It</h2>
+<p>Google's guidance on <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="nofollow noopener">creating helpful, reliable, people-first content</a> is the closest thing to an official standard, and the questions it poses are worth answering honestly about any draft: does this offer original information or insight? Does it provide substantial value beyond what's already out there? Would someone bookmark it or recommend it?</p>
+<p>In practice, demonstrating experience means specifics. Real numbers instead of "significant results". A named example instead of "many businesses". An admission of what didn't work. Content written by someone who has genuinely done the thing reads differently from content assembled from other articles, and that difference is increasingly what separates pages that hold rankings from pages that don't.</p>
+
+<h2>Using AI Without Triggering Scaled Content Abuse</h2>
+<p>Google's position is that it rewards quality content regardless of how it's produced — the problem is not AI itself. What is explicitly against policy is <strong>scaled content abuse</strong>: generating many pages primarily to manipulate rankings rather than to help people, which <a href="https://developers.google.com/search/docs/essentials/spam-policies" target="_blank" rel="nofollow noopener">Google's spam policies</a> list directly.</p>
+<p>The practical line: AI is genuinely useful for research, outlining, and first drafts. It is not useful for publishing unedited, because it cannot supply the thing that makes content competitive — your actual experience, your specific data, your judgement about what matters.</p>
+<p>A reasonable workflow is to use AI to get to a structured draft faster, then rewrite it substantially with real examples, verify every factual claim independently, and cut anything that reads as generic. If a piece could have been produced by anyone with the same prompt, it has no advantage over the dozens of pages that were.</p>
+
+<h2>Internal Linking Is Part of Writing</h2>
+<p>Internal links belong in the draft, not bolted on afterwards. They help readers go deeper, help search engines understand how your pages relate, and distribute authority across your site.</p>
+<p>Link where it genuinely helps the reader, use descriptive anchor text rather than "click here", and don't overload a page — a handful of relevant links beats twenty forced ones. When a piece naturally references a topic you've already covered properly, link it; that's what makes a set of articles behave like a body of work rather than a pile of posts.</p>
+
+<h2>The Word Count Question</h2>
+<p>There is no ideal word count, and any guide quoting a specific number is inventing it. Length is an output of covering a topic properly, not an input you set in advance.</p>
+<p>The useful question is comparative: what do the pages currently ranking cover, and what would a genuinely complete answer require? Sometimes that's 800 words. Sometimes it's 3,000. Padding a thin topic to hit a target produces exactly the filler that makes readers leave, and reader behaviour feeds back into performance.</p>
+
+<h2>How to Tell Whether It Worked</h2>
+<p>Give a new piece time — meaningful data usually takes weeks to months, and judging a post after a fortnight tells you nothing. When you do assess it, look at more than position.</p>
+<p>Impressions tell you whether it's being surfaced at all. Click-through rate tells you whether the title and description are doing their job — high impressions with low clicks is a title problem, not a content problem. Engagement tells you whether the page delivered on its promise. Conversions tell you whether any of it mattered commercially.</p>
+<p>Diagnosing which of those is failing is what turns measurement into an action rather than a report.</p>
+
+<h2>Updating Old Content Usually Beats Writing New</h2>
+<p>This is the highest-return activity in SEO content work and the most consistently neglected.</p>
+<p>A page already ranking on page two often needs an afternoon of work to reach page one — updating stale facts, adding sections that answer questions competitors now cover, improving the title, tightening the intro. A new page starts from zero with no history and no accumulated signals.</p>
+<p>Before commissioning another new article, check what's already ranking in positions eight to twenty. Improving those is usually faster, cheaper, and more reliable than starting again, and it's a core part of ongoing <a href="/services/on-page-seo">on-page SEO</a> work.</p>
+
+<h2>Mistakes That Waste the Most Effort</h2>
+<ul>
+<li><strong>Writing before checking what already ranks</strong> — the fastest way to answer the wrong question well</li>
+<li><strong>Targeting one keyword per page too rigidly</strong> — a good page ranks for dozens of related queries naturally</li>
+<li><strong>Two pages targeting the same query</strong> — they compete with each other and both underperform</li>
+<li><strong>Burying the answer</strong> — long preambles before the thing the reader searched for</li>
+<li><strong>Publishing and never revisiting</strong> — content decays as facts age and competitors improve</li>
+<li><strong>Optimising for a word count instead of a question</strong> — padding is visible to readers immediately</li>
+</ul>
+<p>If you'd rather have this run as a process than a series of one-off articles, <a href="/contact">get in touch</a> and we'll look at what your existing pages are already close to ranking for.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>What is SEO content writing?</summary>
+    <p>Writing content built around a query people actually search, structured so search engines can interpret it, and good enough that the reader who clicks gets what they came for. It has to satisfy both the algorithm and the person.</p>
+  </details>
+  <details>
+    <summary>How is SEO writing different from normal content writing?</summary>
+    <p>Normal content writing aims to inform or engage. SEO writing has the same goal plus an extra constraint — it must be discoverable for a specific query, which shapes the topic, structure, and title in ways ordinary writing doesn't require.</p>
+  </details>
+  <details>
+    <summary>Do keywords still matter in 2026?</summary>
+    <p>Yes, but placement matters far more than repetition. Include the query in the title, early in the content, and in at least one heading. There's no density target, and forcing exact repetition makes writing worse without helping rankings.</p>
+  </details>
+  <details>
+    <summary>How long should an SEO article be?</summary>
+    <p>There's no correct number. Length should follow from covering the topic properly — compare what currently ranks and ask what a complete answer needs. Padding to hit a target creates filler that drives readers away.</p>
+  </details>
+  <details>
+    <summary>Can I use AI to write SEO content?</summary>
+    <p>Google rewards quality regardless of how content is produced, but scaled content abuse — mass-generating pages primarily to manipulate rankings — is against its spam policies. AI works well for research, outlines and drafts; publishing unedited output does not.</p>
+  </details>
+  <details>
+    <summary>What is search intent and why does it matter so much?</summary>
+    <p>It's what the searcher actually wants — an answer, a comparison, or to buy. Format has to match intent. A transactional query answered with a long essay loses to a clean product page regardless of writing quality.</p>
+  </details>
+  <details>
+    <summary>How do I choose which keyword to target?</summary>
+    <p>Weigh relevance to what you sell, how realistically you can compete with what already ranks, and how close the searcher is to buying. A low-volume query with strong buying intent usually beats a high-volume one with none.</p>
+  </details>
+  <details>
+    <summary>How long until SEO content ranks?</summary>
+    <p>Usually weeks to months, depending on site authority and competition. Judging a piece after two weeks tells you very little — early impression data is more informative than early position data.</p>
+  </details>
+  <details>
+    <summary>What is E-E-A-T and how do I show it in writing?</summary>
+    <p>Experience, expertise, authoritativeness and trust. In practice it means specifics — real numbers, named examples, honest accounts of what didn't work — rather than claims. Content written by someone who has done the thing reads differently from content assembled from other articles.</p>
+  </details>
+  <details>
+    <summary>Should I write new content or update old content?</summary>
+    <p>Usually update. A page already sitting in positions eight to twenty often needs a few hours of work to reach page one, whereas a new page starts with no history at all. Check existing pages before commissioning new ones.</p>
+  </details>
+  <details>
+    <summary>Why isn't my content ranking despite good writing?</summary>
+    <p>Most often intent mismatch — the page answers a different question than the query implies. Other common causes are competing against sites with far greater authority, targeting the same query with two of your own pages, or the page not being indexed at all.</p>
+  </details>
+  <details>
+    <summary>Does a meta description affect rankings?</summary>
+    <p>Not directly. It influences click-through rate, which matters for how much traffic a ranking actually produces. Google also frequently rewrites descriptions using page content when it judges its own version more useful for the query.</p>
+  </details>
+</div>
+`
+  },
+  {
     slug: 'guest-blogging-guide-2026',
     title: 'Guest Blogging: A Complete Guide to Placements That Last',
     category: 'Link Building',
