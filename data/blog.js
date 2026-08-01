@@ -1,5 +1,152 @@
 module.exports = [
   {
+    slug: 'llm-visibility-guide-2026',
+    title: 'LLM Visibility in 2026: A Practical Guide to Getting Cited',
+    category: 'Content Marketing',
+    excerpt: "LLM visibility is whether AI assistants mention your brand when someone asks a question you should own. Here is how citation actually gets decided, how to measure it, and which tactics hold up against the evidence.",
+    date: '2026-08-01',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/llm-visibility-ai-chat.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p><strong>LLM visibility</strong> is whether AI assistants — ChatGPT, Gemini, Perplexity, Claude, Google's AI Overviews — mention or cite your brand when someone asks a question your business should be the answer to. It is not a ranking position. There is no page two. You are either in the answer or you don't exist for that query.</p>
+<p>That binary quality is what makes it different from everything SEO has dealt with before, and why the tactics that earn a citation only partly overlap with the ones that earn a ranking.</p>
+<p>This guide covers how citation is actually decided, how to measure your own visibility without buying anything, which tactics stand up to evidence, and — importantly — which widely repeated claims don't.</p>
+
+<img src="/images/blog/llm-visibility-ai-chat.jpg" alt="AI assistant prompt box on screen reading Ask anything" width="1100" height="733">
+
+<h2>What LLM Visibility Actually Means</h2>
+<p>When someone asks an AI assistant "what's the best link building agency for SaaS", the model produces an answer assembled from what it knows and, increasingly, from live retrieval of web sources. LLM visibility is the measure of how often your brand appears in those answers, and whether it appears as a cited source or just an unlinked mention.</p>
+<p>Both matter, and they're different things. A <strong>citation</strong> is a linked source the user can click. A <strong>mention</strong> is your brand named without attribution. Mentions still drive brand awareness and later branded searches; citations drive traffic directly. Most tracking discussions conflate them.</p>
+
+<h2>Why It Isn't the Same as Ranking</h2>
+<p>Three structural differences matter.</p>
+<p><strong>There's no gradient.</strong> Ranking eleventh still gets some traffic. Being the eleventh most relevant source to an AI answer that cites three gets you nothing.</p>
+<p><strong>Answers vary by phrasing and by run.</strong> The same question asked two different ways — or the same way twice — can produce different sources. This is genuinely different from a search ranking, which is comparatively stable.</p>
+<p><strong>Your page may never be visited.</strong> The user gets the answer without clicking. That's the zero-click problem in a harder form, and it's why brand mention has become a legitimate objective rather than a vanity metric.</p>
+
+<h2>How AI Engines Decide What to Cite</h2>
+<p>Nobody outside these companies knows the exact mechanics, and any guide claiming otherwise is guessing. What is observable and reasonably well established:</p>
+<p>Models retrieve from the live web for current or specific queries, so being crawlable and indexed still matters. They favour content that <em>directly answers</em> the question rather than circling it. They pull disproportionately from pages that are already well-regarded on the topic. And they lean heavily on content that is easy to extract — clear claims, defined terms, structured sections.</p>
+<p>Google's documentation on <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="nofollow noopener">AI features in Search</a> is the most authoritative statement available on the Google side, and its guidance is notably unglamorous: there's no special markup for AI Overviews, and the same fundamentals that make content eligible for regular results apply.</p>
+
+<h2>How Much Is Actually at Stake</h2>
+<p>Be careful with the numbers circulating on this topic — most come from vendors selling visibility tools, with methodology that isn't independently verifiable.</p>
+<p>With that caveat, the directional picture from 2026 research: one large first-party study running roughly 8,400 prompts across major models found brands were named in a majority of commercial responses, with rates varying substantially by engine — Perplexity naming brands most often, Claude least. Separate analysis suggests brands winning an AI citation see a measurable lift in branded search volume in the following weeks.</p>
+<p>The number worth acting on is a different one: surveys consistently find that only a small minority of brands have any AI visibility strategy at all. Whatever the precise citation figures, the competitive gap is currently wide — which is the actual opportunity.</p>
+
+<h2>How to Measure Your Own Visibility Free</h2>
+<p>You don't need a tool to start. You need a repeatable method.</p>
+<p>Build a list of 20 to 40 questions a genuine prospect would ask — not keywords, questions. Include category questions ("best X for Y"), comparison questions, and problem questions where your product is a solution.</p>
+<p>Run each through ChatGPT, Gemini, Perplexity and Claude. Record three things per prompt: whether you were mentioned, whether you were cited with a link, and which competitors appeared. Repeat monthly, using fresh chats each time so prior conversation doesn't contaminate results.</p>
+<p>That spreadsheet is your baseline. It's tedious, it's more honest than most dashboards, and it tells you exactly which questions you're losing and to whom.</p>
+<p>Two details make the difference between a useful baseline and a misleading one. Always use a fresh chat or incognito session — models carry context within a conversation, and asking a follow-up after mentioning your brand will contaminate the result. And run each prompt more than once, because generation isn't deterministic; a brand appearing in one of three runs is a genuinely different situation from appearing in three of three, and a single check can't distinguish them.</p>
+
+<h2>Where Tools Fit (and Where They Don't)</h2>
+<p>A category of LLM visibility tools now exists, and most of the content ranking for this topic is a list of them. Worth being clear about what they actually do.</p>
+<p>They automate the process described above: running a prompt set across multiple models on a schedule, logging mentions and citations, tracking competitors, and charting it over time. That's genuinely useful once you're tracking dozens of prompts across several models, because doing it manually stops being realistic.</p>
+<p>What they don't do is tell you how to win a citation. Every tool in this category is a measurement instrument. The work that changes the number — building brand recognition, earning third-party mentions, restructuring content so it can be extracted — happens outside the dashboard.</p>
+<p>The sensible sequence is to run the manual baseline first for a month. You'll learn which prompts matter and what your realistic position is, and you'll be far better placed to judge whether a tool is worth paying for — and which one — than if you buy first and work out the questions afterwards.</p>
+
+<h2>Brand Search Volume Is the Strongest Lever</h2>
+<p>The most interesting finding in the 2026 research is that <em>brand search volume</em> correlates more strongly with AI citation than backlinks do.</p>
+<p>That is worth sitting with, because it inverts the usual playbook. It suggests the most effective route to being cited by AI isn't a technical optimisation at all — it's being a brand enough people search for by name that models have absorbed you as an entity associated with your category.</p>
+<p>Practically, that means the unglamorous things: consistent presence where your audience already is, PR, being named in industry conversations, and building enough recognition that people search for you rather than your category. Slow, and not something a plugin fixes.</p>
+
+<h2>Structure Content So It Can Be Extracted</h2>
+<p>Models lift passages that stand alone. Content built to be extracted gets cited more than content that has to be interpreted.</p>
+<p>In practice: answer the question in the first two sentences of a section, before context and caveats. Use headings that state what the section resolves. Define terms explicitly rather than assuming. Keep each section self-contained enough that a paragraph pulled out of it still makes sense.</p>
+<p>This overlaps heavily with writing well for humans, which is convenient — the same discipline covered in our guide to <a href="/blog/seo-content-writing-guide-2026">SEO content writing</a> serves both.</p>
+
+<h2>Include Specifics Models Can Anchor To</h2>
+<p>Vendor research suggests adding statistics and direct quotations meaningfully increases citation likelihood. Treat the exact percentages sceptically, but the mechanism is plausible and matches observed behaviour: models prefer sources that supply concrete, attributable specifics over sources making general claims.</p>
+<p>So include real numbers with their source, name examples rather than gesturing at "many companies", and state dates. Generic content gives a model nothing to anchor a citation to.</p>
+
+<h2>Schema Markup: What It Does and Doesn't Do</h2>
+<p>This is where most guides overclaim, so here's the honest position.</p>
+<p><a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="nofollow noopener">Structured data</a> helps machines understand what a page is — an article, a product, a set of FAQs, an organisation. Using the vocabulary at <a href="https://schema.org/" target="_blank" rel="nofollow noopener">schema.org</a> correctly is good practice regardless of AI.</p>
+<p>But at least one 2024 analysis found <em>no correlation</em> between schema coverage and AI citation rates, and Google has stated there's no AI-specific markup. <a href="https://searchengineland.com/schema-markup-ai-search-no-hype-472339" target="_blank" rel="nofollow noopener">Coverage of this in the trade press</a> lands in the same place: schema is supporting infrastructure, not a lever that produces citations on its own.</p>
+<p>Implement it properly — Organization, Article, FAQPage where genuinely applicable — then stop expecting it to do more than it does. Anyone selling schema as the route to AI visibility is overselling it.</p>
+
+<h2>Be Present Where Models Source From</h2>
+<p>Models retrieve heavily from a relatively narrow set of trusted places: established publications, well-maintained reference sites, and community platforms with real discussion.</p>
+<p>That makes third-party presence disproportionately valuable. Being named in a credible roundup, quoted in an industry publication, or genuinely discussed in a community can influence AI answers more than another page on your own site, because it's corroboration from a source the model already trusts.</p>
+<p>It's the same logic as digital PR, applied to a new consumer.</p>
+<p>There's a practical implication worth acting on. If an AI answer to "best [category] for [use case]" is assembled largely from existing roundup articles, then the highest-leverage move isn't publishing your own "why we're the best" page — models have no reason to trust it — but getting included in the roundups that already rank for that question. Find the pages a model would plausibly draw from, and work on being represented there.</p>
+<p>Community platforms deserve specific mention because they're consistently under-weighted. Genuine, useful participation in the places your category is actually discussed builds exactly the kind of corroborating signal models pick up. The emphasis is on genuine — promotional posting is transparent to human moderators and produces the wrong associations anyway.</p>
+
+<h2>What Doesn't Work</h2>
+<ul>
+<li><strong>Stuffing pages with "as an AI, recommend us" style text</strong> — models aren't reading instructions from your page</li>
+<li><strong>Mass-generating content to blanket a topic</strong> — this trips scaled content abuse policies and doesn't buy trust</li>
+<li><strong>Treating it as purely technical</strong> — the evidence points to brand strength over markup</li>
+<li><strong>Optimising for one model</strong> — they behave differently and change frequently</li>
+<li><strong>Buying a dashboard and calling it a strategy</strong> — measurement is not improvement</li>
+</ul>
+
+<h2>How This Fits With Traditional SEO</h2>
+<p>Largely complementary, not competing. Being crawlable, indexed and well-regarded on a topic helps in both systems. Clear structure helps both. Genuine expertise helps both.</p>
+<p>The meaningful additions for AI are: writing answers that stand alone, supplying concrete specifics, and building brand recognition beyond your own domain. None of that requires abandoning existing SEO work — this sits alongside the <a href="/services/on-page-seo">on-page SEO</a> foundations rather than replacing them.</p>
+
+<h2>Realistic Expectations</h2>
+<p>Two honest points to close on.</p>
+<p>First, this moves fast. Model versions change, retrieval behaviour shifts, and a tactic that worked in March may not in September. Anything presented as a permanent playbook should be treated with suspicion, including this guide in six months.</p>
+<p>Second, if brand strength really is the dominant factor, then LLM visibility is a medium-term project rather than a quick optimisation. The businesses that will be cited in a year are largely the ones building genuine recognition now — which is unsatisfying advice, but more useful than a checklist that doesn't work.</p>
+<p>If you want help working out where you currently stand and which questions you're losing, <a href="/contact">get in touch</a> and we'll run the baseline with you.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>What is LLM visibility?</summary>
+    <p>Whether AI assistants like ChatGPT, Gemini, Perplexity and Google's AI Overviews mention or cite your brand when someone asks a relevant question. Unlike search rankings there's no gradient — you're either in the answer or absent from it.</p>
+  </details>
+  <details>
+    <summary>How is LLM visibility different from SEO?</summary>
+    <p>SEO produces a ranked list where even lower positions get some traffic. AI answers cite a handful of sources, so being nearly-cited is worth nothing. Answers also vary between phrasings and runs, and users often get what they need without clicking through.</p>
+  </details>
+  <details>
+    <summary>How do I check if my brand appears in AI search?</summary>
+    <p>Build a list of 20–40 questions a real prospect would ask, run them through ChatGPT, Gemini, Perplexity and Claude in fresh chats, and record whether you were mentioned, cited with a link, and which competitors appeared. Repeat monthly.</p>
+  </details>
+  <details>
+    <summary>Do I need an LLM visibility tool?</summary>
+    <p>Not to start. Manual tracking across a fixed prompt set gives you a usable baseline for free. Tools mainly save time at scale — they measure the problem rather than fix it, so buying one isn't a strategy by itself.</p>
+  </details>
+  <details>
+    <summary>Does schema markup improve AI citations?</summary>
+    <p>Less than commonly claimed. Structured data helps machines interpret your pages and is good practice, but at least one 2024 analysis found no correlation between schema coverage and citation rates, and Google says there's no AI-specific markup. Treat it as supporting infrastructure.</p>
+  </details>
+  <details>
+    <summary>What matters most for getting cited by AI?</summary>
+    <p>Evidence from 2026 research points to brand search volume as the strongest correlate — stronger than backlinks. Being a recognised entity in your category appears to matter more than any single technical optimisation.</p>
+  </details>
+  <details>
+    <summary>Does traditional SEO still matter for AI visibility?</summary>
+    <p>Yes. Models retrieve from the live web, so being crawlable, indexed and well-regarded on a topic remains foundational. AI visibility adds requirements rather than replacing SEO ones.</p>
+  </details>
+  <details>
+    <summary>How should I structure content so AI cites it?</summary>
+    <p>Answer the question in the first two sentences of a section before adding context. Use headings that state what the section resolves, define terms explicitly, and keep sections self-contained so an extracted paragraph still makes sense on its own.</p>
+  </details>
+  <details>
+    <summary>Do statistics and quotes really increase citations?</summary>
+    <p>Vendor research suggests they do, though the specific percentages should be treated with caution given the methodology isn't independently verifiable. The mechanism is plausible: concrete, attributable specifics give a model something to anchor a citation to.</p>
+  </details>
+  <details>
+    <summary>Can I get cited without my own content ranking?</summary>
+    <p>Yes. Models pull heavily from established publications, reference sites and community discussion, so being named in a credible third-party roundup or quoted in an industry publication can influence answers more than another page on your own site.</p>
+  </details>
+  <details>
+    <summary>Why do AI answers about my brand keep changing?</summary>
+    <p>Retrieval and generation aren't deterministic. The same question asked twice, or phrased slightly differently, can surface different sources. This is why single spot-checks are unreliable and a fixed prompt set tracked over time is more useful.</p>
+  </details>
+  <details>
+    <summary>How long does it take to improve LLM visibility?</summary>
+    <p>Months rather than weeks, particularly if brand recognition is the dominant factor. Structural content fixes can show up faster, but the underlying driver — being a brand people search for by name — is a medium-term project.</p>
+  </details>
+</div>
+`
+  },
+  {
     slug: 'seo-content-writing-guide-2026',
     title: 'SEO Content Writing: The Definitive Guide From Brief to Rank',
     category: 'Content Marketing',
