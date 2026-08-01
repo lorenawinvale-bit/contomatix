@@ -1,5 +1,165 @@
 module.exports = [
   {
+    slug: 'guest-blogging-guide-2026',
+    title: 'Guest Blogging: A Complete Guide to Placements That Last',
+    category: 'Link Building',
+    excerpt: "Most guest blogging advice stops at the pitch. This guide covers vetting, outreach, Google's actual policy, correct link attribution, and what to do after publication — the parts that decide whether a placement is worth anything.",
+    date: '2026-08-01',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/guest-blogging-writing-desk.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p><strong>Guest blogging</strong> still works in 2026, but the version that works looks almost nothing like the version that made it famous. Mass outreach, keyword-stuffed anchor text, and 800-word filler articles on sites nobody reads are not a slower way to get results — they're an active liability under Google's current link spam policy.</p>
+<p>What does work is narrower and slower: fewer placements, on sites with real audiences, earned through pitches a human actually wants to reply to. That approach is harder to scale, which is exactly why it still has value.</p>
+<p>This guide covers the whole process end to end — finding and vetting sites, pitching, writing, correct link attribution, and the post-publication work most guides skip entirely.</p>
+
+<img src="/images/blog/guest-blogging-writing-desk.jpg" alt="Laptop, notepad and coffee on a wooden writing desk" width="1100" height="733">
+
+<h2>What Guest Blogging Actually Is</h2>
+<p>Guest blogging means writing an article that gets published on someone else's website, usually with a byline and a link back to your own site. That's the mechanical definition. The strategic definition matters more: it's borrowing someone else's audience and credibility for the length of one article.</p>
+<p>People pursue it for three genuinely different reasons, and confusing them is the root of most wasted effort:</p>
+<ul>
+<li><strong>Authority and links</strong> — earning an editorially-given link from a relevant, credible site</li>
+<li><strong>Referral traffic</strong> — putting your work in front of an audience that will actually click through</li>
+<li><strong>Positioning</strong> — being seen as a credible voice in a space, which pays off in ways that never show up in analytics</li>
+</ul>
+<p>These require different target sites. A high-authority industry publication might be excellent for the first and useless for the second. A smaller niche newsletter with a devoted readership can be the reverse.</p>
+
+<h2>Decide What You Want Before You Pitch Anyone</h2>
+<p>Pick one primary goal per campaign. Not because the others don't matter, but because the goal determines your entire target list, and a list built for three goals at once is optimised for none.</p>
+<p>If the goal is authority, you're filtering for relevance and editorial standards. If it's traffic, you're filtering for engaged audiences — comments, shares, an active newsletter — and authority metrics become close to irrelevant. If it's positioning, you're filtering for where your specific buyers already read.</p>
+<p>Being honest about the goal also keeps you out of trouble. A campaign built purely to acquire links, with no interest in whether anyone reads the article, is precisely what Google's policy targets.</p>
+
+<h2>How to Find Guest Blogging Opportunities</h2>
+<p>Four methods, roughly in order of usefulness:</p>
+<p><strong>Search operators.</strong> Combine your topic with phrases publications use — "write for us", "contribute", "guest post guidelines". Useful, but remember every other outreach person is running the same searches, so these sites receive the most pitches and have the lowest acceptance rates.</p>
+<p><strong>Follow the writers.</strong> Find people who publish widely in your space and look at where they've appeared. This surfaces sites that genuinely accept contributions but don't advertise it — a far less crowded inbox.</p>
+<p><strong>Competitor backlink analysis.</strong> Look at where competitors have earned placements. If a site published them, it's plausibly open to you, and you already know the topic fits.</p>
+<p><strong>Sites that just published something adjacent.</strong> A publication that ran a piece near your topic last month has demonstrated current editorial interest. Pitching a genuine follow-on angle converts noticeably better than a cold pitch to a site with no recent signal.</p>
+
+<h2>How to Vet a Site Before You Pitch</h2>
+<p>Vetting is where most of the value is created or destroyed, and it should happen before you write a single word of outreach.</p>
+<p>Check <strong>audience relevance</strong> first — would their readers plausibly care about what you do? Then <strong>engagement</strong>: are there comments, shares, signs of an actual readership rather than an archive nobody visits? Then <strong>editorial standards</strong>: read three recent posts. If they're thin, generic, or obviously written for search engines rather than people, that tells you what your article will sit next to.</p>
+<p>Authority metrics come last, not first. A relevant site with a modest score and a real audience is worth more than a high-scoring site that publishes anything.</p>
+
+<h2>Red Flags: Sites to Walk Away From</h2>
+<p>Some signals should end your interest immediately, regardless of how good the metrics look:</p>
+<ul>
+<li><strong>A published price list for "guest posts"</strong> — this is paid link placement, and the links must be marked as sponsored to comply with Google's policy, which usually defeats the point</li>
+<li><strong>Topically incoherent archives</strong> — a site publishing crypto, dentistry, and casino content in the same week is a link farm with a blog theme</li>
+<li><strong>No named editor or author bios</strong> — no editorial accountability means no editorial standards</li>
+<li><strong>Every post carries three or four external links to unrelated commercial sites</strong> — you'd be joining a link scheme, not a publication</li>
+<li><strong>Traffic that doesn't match the authority score</strong> — a large gap often indicates manipulated metrics</li>
+<li><strong>Unsolicited emails offering you placements</strong> — genuine publications rarely need to sell contribution slots</li>
+</ul>
+<p>Walking away from these is not being precious. A link from a site Google already distrusts ranges from worthless to actively harmful.</p>
+
+<h2>How to Write a Pitch That Gets a Reply</h2>
+<p>Editors at any site worth targeting receive dozens of pitches a week and accept a tiny fraction. The volume of obviously automated, AI-generated outreach has made this worse — which is genuinely good news for anyone willing to send something human.</p>
+<p>A pitch that works is short and does four things: shows you've actually read the site, proposes a specific angle rather than a topic, explains briefly why you can write it credibly, and makes it easy to say yes.</p>
+<p>Something close to this:</p>
+<blockquote style="border-left:3px solid #ddd; padding-left:16px; margin:0 0 1.4em; color:#555;">
+<p>Hi [name] — your piece on [specific article] made a point I've been arguing with clients for a year, particularly [specific detail].</p>
+<p>I'd like to pitch a follow-on: <em>[specific working title]</em>. It would cover [two or three concrete points], drawing on [your relevant, verifiable experience].</p>
+<p>Roughly [X] words, original, exclusive to you. Want me to send an outline?</p>
+</blockquote>
+<p>What kills pitches: a generic opener that could have been sent to anyone, a topic instead of an angle, listing your credentials before the idea, and any hint the email was generated in bulk. Editors detect that faster than most people assume.</p>
+
+<h2>What to Do When Nobody Replies</h2>
+<p>Most pitches get no response, and that's normal rather than a signal you did something wrong. Send exactly one follow-up, roughly a week later, adding something rather than repeating yourself — a second angle, or a note that you've published something relevant since.</p>
+<p>After that, stop. Repeated follow-ups to an editor who hasn't replied costs you the relationship permanently, and publications are a finite resource in any niche. A "no" or silence today does not prevent a successful pitch in six months; being marked as a nuisance does.</p>
+
+<h2>Writing a Post That Actually Gets Published</h2>
+<p>Write for their audience, not yours. This sounds obvious and is routinely ignored — the most common rejection reason is a draft that reads like content the author wanted to publish on their own site.</p>
+<p>Match the publication's conventions: length, heading structure, formality, whether they use first person. Read two recent posts and mirror them.</p>
+<p>Make it genuinely useful without holding back your best material. The instinct to save your strongest insight for your own blog produces a mediocre guest post that damages the relationship. The point of the placement is that it's good enough that their audience remembers who wrote it.</p>
+<p>If you use AI in the drafting process, treat the output as raw material and rewrite it substantially. Editors are actively screening for generated text now, and a draft that reads as machine-written is an easy rejection.</p>
+
+<h2>The Author Bio and Where Your Link Goes</h2>
+<p>Your bio should match your goal. For authority, link to a relevant page on your site rather than always the homepage. For traffic, link somewhere that gives a first-time visitor an obvious reason to stay. For positioning, a social profile often outperforms either.</p>
+<p>Keep it short, and make the credibility claim specific. "Head of SEO at [company]" is weaker than a concrete, checkable detail about what you actually do.</p>
+<p>Resist the urge to cram multiple links into the body. One or two genuinely relevant contextual links, plus a bio link, is normal. More than that reads as extraction and is the fastest way to have an otherwise-accepted piece edited down or rejected.</p>
+
+<h2>Link Attribution: The Compliance Detail Most Guides Skip</h2>
+<p>If any payment, free product, or other compensation changed hands for a placement, the link must be marked as sponsored. Google's documentation on <a href="https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links" target="_blank" rel="nofollow noopener">qualifying outbound links</a> sets out the attributes: <code>rel="sponsored"</code> for paid or compensated links, <code>rel="nofollow"</code> where you don't want to pass ranking credit, and <code>rel="ugc"</code> for user-generated content.</p>
+<p>This matters because a large share of what the industry calls "guest posting" is paid placement. Paying for a followed link without marking it is a policy violation, and pretending otherwise doesn't make it safe. If a site's business model is selling placements, the compliant version of that link passes no ranking credit — which is worth knowing before you pay for it.</p>
+<p>Genuine editorial guest posts, where nothing changed hands and the editor chose to publish the piece on merit, don't need any of these attributes.</p>
+
+<h2>What Google's Policy Actually Says</h2>
+<p>Worth reading the source rather than the interpretations. Google's <a href="https://developers.google.com/search/docs/essentials/spam-policies" target="_blank" rel="nofollow noopener">spam policies documentation</a> lists "large-scale article marketing or guest posting campaigns with keyword-rich anchor text links" as a link scheme.</p>
+<p>Three words in that sentence do the work. <strong>Large-scale</strong>: volume-driven campaigns, not individual contributions. <strong>Keyword-rich anchor text</strong>: optimised commercial anchors rather than natural ones. And the implied test throughout — whether the primary purpose is links or readers.</p>
+<p>Google has been explicit that guest posts are acceptable when they inform users, educate another site's audience, or bring awareness to your company. The problem was never the format. It's campaigns where the content is incidental to the link, which is also what <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="nofollow noopener">Google's guidance on creating helpful content</a> is pointing at from the other direction.</p>
+<p>The practical test: if the site's audience got nothing from your article, you're in scheme territory regardless of how the link is formatted.</p>
+
+<h2>After Publication: The Part Everyone Skips</h2>
+<p>Most guides end at "your post is live." The work that compounds happens after.</p>
+<p>Reply to comments on the piece for the first week — it's visible to the editor and it's the single easiest way to be invited back. Share it properly rather than dropping a bare link. Thank the editor, and mean it.</p>
+<p>Then keep the relationship alive. A pitch to someone who has published you before, and who has seen you engage with their audience, converts dramatically better than any cold outreach. The second and third placements on a site are far easier than the first, and one genuine relationship with a relevant publication is worth more than fifty one-off placements on sites you'll never approach again.</p>
+
+<h2>How to Track Whether Any of It Worked</h2>
+<p>Track three things per placement, and be honest about the timelines.</p>
+<p><strong>Referral traffic</strong> shows up within days in analytics — filter by referral source and look past sessions to whether those visitors did anything. <strong>Ranking movement</strong> takes considerably longer and is genuinely hard to attribute to a single link. <strong>Qualified enquiries</strong> are the metric that actually matters and the hardest to measure; asking new leads how they found you remains more reliable than most attribution models.</p>
+<p>One realistic expectation to set early: most individual placements produce modest referral traffic. The value is cumulative — a body of work across relevant publications, not any single article.</p>
+
+<h2>Where Guest Blogging Fits Against Other Link Building</h2>
+<p>Guest blogging is one method among several, and it's the right choice less often than its popularity suggests.</p>
+<p>It's strong when you have genuine subject expertise, a niche with real publications, and time to build relationships. It's a poor fit when you need volume quickly, when your niche has few credible outlets, or when you can't produce genuinely good writing — in those cases, digital PR, resource-page outreach, or simply publishing something worth citing usually outperform it.</p>
+<p>It also works differently across markets. Running placements in several languages means separate relationships and market-specific angles rather than one translated pitch, which we covered in our guide to <a href="/blog/multilingual-link-building-2026">multilingual link building</a>.</p>
+<p>If you'd rather have this run properly than build the relationships from scratch, our <a href="/services/guest-posting">guest posting service</a> is built around editorial placements on vetted, relevant sites — or <a href="/contact">get in touch</a> and we'll tell you honestly whether guest blogging is even the right lever for your situation.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Does guest blogging still work in 2026?</summary>
+    <p>Yes, but only the editorial version. Individual, genuinely useful contributions to relevant sites still build authority and traffic. Large-scale campaigns with keyword-rich anchors are classified as link schemes by Google and carry real risk.</p>
+  </details>
+  <details>
+    <summary>Is guest blogging against Google's guidelines?</summary>
+    <p>No — the format is fine. Google explicitly permits guest posts that inform or educate another site's audience. What violates policy is large-scale guest posting campaigns with keyword-rich anchor text where links, not readers, are the point.</p>
+  </details>
+  <details>
+    <summary>How many guest posts should I aim for per month?</summary>
+    <p>Fewer than most people expect. A handful of placements on genuinely relevant sites outperforms dozens on marginal ones, and high volume is itself a signal Google associates with link schemes.</p>
+  </details>
+  <details>
+    <summary>Should I pay for guest post placements?</summary>
+    <p>If you do, the link must carry <code>rel="sponsored"</code> to comply with Google's policy — which means it passes no ranking credit. Paying for a followed link without disclosure is a policy violation, so paid placements only make sense for traffic or brand exposure.</p>
+  </details>
+  <details>
+    <summary>What domain authority should a site have before I pitch it?</summary>
+    <p>Authority scores should be your last filter, not your first. Relevance, a real engaged audience, and genuine editorial standards matter more — a relevant mid-authority site with actual readers beats a high-scoring site that publishes anything.</p>
+  </details>
+  <details>
+    <summary>How do I find sites that accept guest posts?</summary>
+    <p>Search operators like "write for us" work but are heavily saturated. Better sources are tracking where prolific writers in your niche publish, analysing competitor backlinks, and pitching sites that recently ran something adjacent to your topic.</p>
+  </details>
+  <details>
+    <summary>What should I do if an editor doesn't reply?</summary>
+    <p>Send one follow-up about a week later that adds something new rather than repeating the original pitch. After that, stop — persistent chasing costs you the relationship permanently, and publications in any niche are finite.</p>
+  </details>
+  <details>
+    <summary>Can I use AI to write guest posts?</summary>
+    <p>For drafting and research, yes, but the output needs substantial rewriting. Editors are actively screening for generated text, and a draft that reads as machine-written is one of the fastest routes to rejection.</p>
+  </details>
+  <details>
+    <summary>How many links should I include in a guest post?</summary>
+    <p>One or two genuinely relevant contextual links plus a bio link is normal. Anything more reads as extraction and often gets the piece edited down or rejected outright.</p>
+  </details>
+  <details>
+    <summary>Should my bio link to my homepage?</summary>
+    <p>Usually not. Link to whichever page matches your goal — a relevant service or resource page for authority, something with an obvious next step for traffic, or a social profile if you're building personal positioning.</p>
+  </details>
+  <details>
+    <summary>How long before guest blogging shows results?</summary>
+    <p>Referral traffic appears within days. Ranking impact takes months and is difficult to attribute to any single placement. The realistic view is cumulative: value comes from a body of placements over time, not one article.</p>
+  </details>
+  <details>
+    <summary>Is guest blogging better than other link building methods?</summary>
+    <p>Not universally. It suits people with real subject expertise, a niche with credible publications, and time for relationship building. For speed, volume, or niches with few outlets, digital PR or resource-page outreach usually performs better.</p>
+  </details>
+</div>
+`
+  },
+  {
     slug: 'how-is-ranking-different-ppc-vs-seo-2026',
     title: 'How Is Ranking Different in PPC vs SEO? The Complete Guide',
     category: 'PPC & SEM',
