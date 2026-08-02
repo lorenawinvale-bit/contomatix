@@ -1,5 +1,179 @@
 module.exports = [
   {
+    slug: 'best-seo-companies-in-tulsa-2026',
+    title: 'Top 10 Best SEO Companies in Tulsa: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: "Ten Tulsa SEO companies, with every website checked by hand in August 2026 — including which are actually Tulsa-based, which are metro or satellite offices, and what each one is genuinely best at.",
+    date: '2026-08-02',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/tulsa-skyline-seo.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Tulsa</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. One agency that appears on several published Tulsa "top 10" lists was dropped because its domain no longer has a website on it at all — just a hosting error page. That's the kind of thing nobody catches when a list gets copied from another list.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Tulsa, we're not on this list, and none of these companies paid to be here.</p>
+
+<img src="/images/blog/tulsa-skyline-seo.jpg" alt="Downtown Tulsa skyline seen across the pond at Veterans Park" width="1100" height="733">
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to the Tulsa area</strong> — and where a company is headquartered elsewhere, that's stated rather than hidden</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Sooner Marketing</h2>
+<p><strong>Best for:</strong> established businesses wanting a full-service agency with a track record on larger accounts.</p>
+<p>An Oklahoma agency with an unusually broad client list for the market — including the BOK Center, Griffin Communications and the City of Muskogee alongside a long roster of regional businesses. Services span brand, web, and search rather than SEO alone.</p>
+<p>The client mix is the signal here: work with civic and broadcast organisations generally means processes that survive scrutiny. <a href="https://sooner.marketing/" target="_blank" rel="nofollow noopener">sooner.marketing</a></p>
+
+<h2>2. On First Page</h2>
+<p><strong>Best for:</strong> businesses that want SEO specifically, with an eye on AI search.</p>
+<p>Operating since 2007, which is a long run in this industry, and one of the few Tulsa agencies explicitly positioning around AI Search Optimization alongside conventional SEO.</p>
+<p>That matters more than it might sound. As answer engines take a larger share of queries, agencies that haven't adjusted their approach are optimising for a narrowing slice of search. <a href="https://onfirstpage.com/" target="_blank" rel="nofollow noopener">onfirstpage.com</a></p>
+
+<h2>3. Nozak Consulting</h2>
+<p><strong>Best for:</strong> businesses needing a new website and SEO handled together.</p>
+<p>A Tulsa agency covering both local and national SEO alongside web design, PPC, email and social. Technical and local SEO are both named parts of the offering.</p>
+<p>The web design plus SEO combination is genuinely useful when a site needs rebuilding, because retrofitting SEO onto a finished site is consistently more expensive than building it in. <a href="https://nozakconsulting.com/" target="_blank" rel="nofollow noopener">nozakconsulting.com</a></p>
+
+<h2>4. Redhead Labs</h2>
+<p><strong>Best for:</strong> ecommerce businesses, particularly on BigCommerce or Shopify.</p>
+<p>A Tulsa web design firm with a clear ecommerce specialism rather than a general marketing offering, working across ecommerce builds, development and SEO.</p>
+<p>Ecommerce SEO is a genuinely different discipline — faceted navigation, product schema, category architecture and duplicate content at scale are problems a generalist rarely handles well. A specialist is worth seeking out if that's your situation. <a href="https://redheadlabs.com/" target="_blank" rel="nofollow noopener">redheadlabs.com</a></p>
+
+<h2>5. WEBB Branding</h2>
+<p><strong>Best for:</strong> businesses wanting search treated as part of a wider discoverability strategy.</p>
+<p>A Tulsa marketing agency framing its work around being found wherever customers search, then converting and retaining them — SEO sitting inside that rather than as a standalone service.</p>
+<p>That framing suits businesses whose problem is the whole funnel rather than rankings specifically. <a href="https://www.webbbranding.com/" target="_blank" rel="nofollow noopener">webbbranding.com</a></p>
+
+<h2>6. Direct Allied Agency</h2>
+<p><strong>Best for:</strong> small businesses on modest budgets.</p>
+<p>Started in Tahlequah and relocated to Tulsa in 2017. A small team working mainly with small businesses across SEO, web design and branding, positioned around affordability.</p>
+<p>Worth being straightforward about what a small team means: you get direct access to the people doing the work, and less capacity if you scale quickly. For a local business needing steady, competent local SEO, that trade is usually favourable. <a href="https://www.directallied.com/" target="_blank" rel="nofollow noopener">directallied.com</a></p>
+
+<h2>7. U-Thrive Marketing</h2>
+<p><strong>Best for:</strong> businesses that want SEO and paid search together, without a long contract.</p>
+<p>Based in Broken Arrow rather than Tulsa proper — still the metro, but worth knowing if you want someone you can meet in person regularly. A Google Certified Partner operating since 2013, covering PPC, SEO, web design and advertising, and noted for not requiring long-term contracts.</p>
+<p>That last point deserves attention. Long lock-ins are common in this industry and are frequently the biggest source of client regret. An agency willing to work without one is showing confidence in its own retention. <a href="https://www.uthrivemarketing.net/" target="_blank" rel="nofollow noopener">uthrivemarketing.net</a></p>
+
+<h2>8. Seed Technologies</h2>
+<p><strong>Best for:</strong> businesses needing custom software or a complex build alongside search.</p>
+<p>Twenty years in business, spanning web design, custom software development and marketing, with sites built to load quickly and rank locally from the start.</p>
+<p>The software capability is the differentiator. If your project involves integrations, a custom application or anything beyond a standard CMS, most marketing agencies will subcontract that. <a href="https://www.seedtechnologies.com/" target="_blank" rel="nofollow noopener">seedtechnologies.com</a></p>
+
+<h2>9. Medium Giant</h2>
+<p><strong>Best for:</strong> larger budgets needing media buying and creative at scale.</p>
+<p><strong>Important context:</strong> Medium Giant is headquartered in Dallas with a Tulsa location, and is connected to Hearst Media Group. It appears on Tulsa lists as though it were a local agency, which isn't quite the picture.</p>
+<p>That's not a criticism — the scale is real, covering media planning, data science and creative in a way local shops can't match. But if you want a team physically embedded in Tulsa who knows the market personally, a satellite office of a Dallas agency is a different proposition. Match it to budget: this is the enterprise end. <a href="https://mediumgiant.co/" target="_blank" rel="nofollow noopener">mediumgiant.co</a></p>
+
+<h2>10. Linkcx</h2>
+<p><strong>Best for:</strong> local businesses focused on ranking in Tulsa specifically.</p>
+<p>A Tulsa agency positioned squarely around local search for local businesses, covering SEO, web design and digital marketing.</p>
+<p>Straightforward local SEO — Google Business Profile, citations, local content, reviews — is what most Tulsa service businesses actually need, and specialists in it often outperform broader agencies on that narrow job. <a href="https://linkcx.com/" target="_blank" rel="nofollow noopener">linkcx.com</a></p>
+
+<h2>Tulsa-Based vs Metro vs Satellite Office</h2>
+<p>Published lists routinely present all of these as "Tulsa SEO companies". The distinction matters if in-person contact is important to you.</p>
+<div style="overflow-x:auto; margin: 0 0 1.4em;">
+<table style="width:100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Company</th><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Location</th></tr>
+</thead>
+<tbody>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">Sooner Marketing, On First Page, Nozak, Redhead Labs, WEBB, Seed, Linkcx</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Tulsa</td></tr>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">Direct Allied Agency</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Tulsa (relocated from Tahlequah, 2017)</td></tr>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">U-Thrive Marketing</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Broken Arrow (Tulsa metro)</td></tr>
+<tr><td style="padding:10px 14px;">Medium Giant</td><td style="padding:10px 14px;">Dallas HQ, Tulsa office</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>What Tulsa Businesses Should Actually Ask For</h2>
+<p>Tulsa is a mid-sized market, which changes the calculation. Competition for most local service terms is meaningfully lower than in a major metro, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in Dallas or Denver.</p>
+<p>That has a budget implication worth stating plainly: many Tulsa businesses are sold national-scale SEO retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Tulsa, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Tulsa agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Tulsa SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. A list that hasn't been checked recently will usually contain at least one dead or abandoned site — which is exactly what happened here before verification.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Tulsa?</summary>
+    <p>Ten with verified, active websites as of August 2026: Sooner Marketing, On First Page, Nozak Consulting, Redhead Labs, WEBB Branding, Direct Allied Agency, U-Thrive Marketing, Seed Technologies, Medium Giant and Linkcx. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Tulsa?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Tulsa's lower competition means smaller budgets often go further here than in a major metro.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Tulsa?</summary>
+    <p>Not all. Seven are Tulsa-based, Direct Allied relocated from Tahlequah in 2017, U-Thrive is in Broken Arrow within the metro, and Medium Giant is a Dallas-headquartered agency with a Tulsa office.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Tulsa SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Tulsa, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Load their website and look for real content and recent work. Ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level. Walk away from anyone guaranteeing rankings.</p>
+  </details>
+  <details>
+    <summary>What should a small Tulsa business focus on first?</summary>
+    <p>Google Business Profile optimisation, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a mid-sized market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>Are "top 10 SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, so the ordering reflects marketing spend rather than quality. Check whether the list explains its methodology, and click a few entries to see whether the sites are still active.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Tulsa?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months. Lower competition in Tulsa often means faster results than the same work in a large metro.</p>
+  </details>
+  <details>
+    <summary>What contract length should I agree to?</summary>
+    <p>Prefer a 30-day notice period for a first engagement. Twelve-month lock-ins are rarely justified before you've seen the quality of the work, and at least one agency on this list is noted for not requiring long-term contracts.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>Which Tulsa agency is best for ecommerce?</summary>
+    <p>Redhead Labs has the clearest ecommerce specialism on this list, working with BigCommerce and Shopify. Ecommerce SEO involves problems generalists handle poorly, so a specialist is worth seeking out.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
+  },
+  {
     slug: 'seo-agency-vs-freelancer-2026',
     title: 'SEO Agency vs Freelancer: Real Costs and When Each Wins',
     category: 'On-Page SEO',
