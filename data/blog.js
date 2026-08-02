@@ -1,5 +1,184 @@
 module.exports = [
   {
+    slug: 'seo-agency-vs-freelancer-2026',
+    title: 'SEO Agency vs Freelancer: Real Costs and When Each Wins',
+    category: 'On-Page SEO',
+    excerpt: "Agencies charge roughly 138% more than freelancers for what looks like the same work. Here are the real 2026 rates, what the premium actually buys, and the cases where a freelancer is genuinely the better choice.",
+    date: '2026-08-02',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/seo-agency-vs-freelancer-meeting.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>The <strong>SEO agency vs freelancer</strong> decision usually gets framed as a quality question. It isn't. Both can be excellent and both can waste your money. It's a question of scope, risk tolerance, and how much management you want to do yourself.</p>
+<p>Here's the number that frames everything: agencies charge roughly <strong>138% more</strong> than freelancers for what looks, on paper, like the same deliverable. Whether that premium is worth paying depends entirely on your situation — and for a meaningful number of businesses, it isn't.</p>
+<p>A note on where this is coming from: we're an SEO agency. You'd expect an agency to argue everyone should hire an agency. We're not going to, because it isn't true, and the cases where a freelancer wins are easy to identify.</p>
+
+<img src="/images/blog/seo-agency-vs-freelancer-meeting.jpg" alt="Two people reviewing an analytics dashboard on a laptop" width="1100" height="733">
+
+<h2>The Short Answer</h2>
+<p><strong>Hire a freelancer</strong> if your scope is narrow and well-defined, your budget is under roughly $2,000 a month, and you have someone internally who can manage the relationship.</p>
+<p><strong>Hire an agency</strong> if you need several disciplines at once, you have no internal capacity to manage the work, continuity matters, or you're operating at a scale where a single person becomes a bottleneck.</p>
+<p>Everything below is detail on those two sentences.</p>
+
+<h2>What Each Actually Costs in 2026</h2>
+<p>Real numbers, from survey data rather than assertion.</p>
+<div style="overflow-x:auto; margin: 0 0 1.4em;">
+<table style="width:100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">&nbsp;</th><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Freelancer</th><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Agency</th></tr>
+</thead>
+<tbody>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;"><strong>Average hourly</strong></td><td style="padding:10px 14px; border-bottom:1px solid #eee;">~$72</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">~$99</td></tr>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;"><strong>Average monthly retainer</strong></td><td style="padding:10px 14px; border-bottom:1px solid #eee;">~$1,348</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">~$3,209</td></tr>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;"><strong>Typical range</strong></td><td style="padding:10px 14px; border-bottom:1px solid #eee;">$25&ndash;$150/hr</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">$100&ndash;$149/hr</td></tr>
+<tr><td style="padding:10px 14px;"><strong>People on your account</strong></td><td style="padding:10px 14px;">One</td><td style="padding:10px 14px;">Usually three to six</td></tr>
+</tbody>
+</table>
+</div>
+<p>Those averages come from <a href="https://ahrefs.com/blog/seo-pricing" target="_blank" rel="nofollow noopener">Ahrefs' 2026 SEO pricing survey</a>, which also found independent consultants charging more than either at around $171 an hour — worth knowing, because "consultant" and "freelancer" get used interchangeably and price very differently.</p>
+<p>For context on what most businesses actually spend: roughly 63% sit between $500 and $5,000 a month, which spans the top of the freelance range and the bottom of the agency range. That overlap is where the decision is genuinely difficult.</p>
+
+<h2>What the 138% Premium Actually Buys</h2>
+<p>Agencies aren't more expensive because they're better at SEO. They're more expensive because of what sits behind the work.</p>
+<p>Part of it is overhead you're funding — office costs, sales staff, account managers, software licences. That's real cost, but it isn't value delivered to you.</p>
+<p>The part that <em>is</em> value: multiple specialists rather than one generalist, capacity that doesn't stop when one person is ill or on holiday, established processes, and someone accountable when things go wrong. You're partly buying insurance against the single-point-of-failure problem.</p>
+<p>Whether that insurance is worth roughly double depends on how much a stalled month would actually cost you.</p>
+
+<h2>What You Actually Get Month to Month</h2>
+<p>Rates mean little without knowing what arrives for them. Roughly what a mid-range engagement looks like in practice:</p>
+<p><strong>A freelancer at around $1,500 a month</strong> typically covers 15 to 20 hours. Realistically that's one meaningful workstream — say technical fixes and on-page optimisation across a set of priority pages, plus reporting. Content production and link acquisition usually sit outside it unless you're paying separately for them.</p>
+<p>The advantage is that all of those hours come from one experienced person who knows your site properly by month three.</p>
+<p><strong>An agency at around $3,200 a month</strong> spreads across a team, and this is where expectations often break. That budget does not buy 32 hours of senior time. It typically buys a few hours of strategist attention, a larger block of executional work from more junior staff, and account management overhead on top.</p>
+<p>What it does buy is parallelism: technical, content and links progressing simultaneously rather than sequentially.</p>
+<p>The honest comparison is therefore not "one person versus a team". It's <strong>concentrated senior attention on a narrow scope</strong> versus <strong>distributed mixed-seniority attention across a broad scope</strong>. Which is better depends entirely on whether your bottleneck is depth or breadth.</p>
+
+<h2>When a Freelancer Is Genuinely the Better Choice</h2>
+<p>These cases are real and common.</p>
+<p><strong>Your scope is narrow and specific.</strong> A technical audit, a content refresh, hreflang implementation, a migration checklist. Defined projects with a clear endpoint suit an individual specialist far better than a retainer.</p>
+<p><strong>Your budget is under about $2,000 a month.</strong> At that level, an agency gives you the junior end of their team and a fraction of a senior person's attention. A good freelancer gives you all of one experienced person. The freelancer usually wins that comparison outright.</p>
+<p><strong>You need deep expertise in one narrow area.</strong> The best specialists in ecommerce SEO, or international SEO, or a specific CMS, frequently work independently. Agencies are generalists by structure.</p>
+<p><strong>You want to work directly with the person doing the work.</strong> No account manager relaying messages, no telephone game between you and the practitioner.</p>
+<p><strong>You already have someone internally who can direct the work.</strong> Freelancers execute well against clear direction. They're a weaker fit when the client needs strategy set for them.</p>
+
+<h2>When an Agency Is Genuinely the Better Choice</h2>
+<p><strong>You need several disciplines simultaneously.</strong> Technical fixes, content production, digital PR and link acquisition running in parallel is more than one person can deliver well, regardless of talent.</p>
+<p><strong>You have no internal capacity to manage anyone.</strong> This is the most underrated factor. A freelancer with no direction produces activity rather than results. If nobody internally owns SEO, you need a supplier who brings the strategy.</p>
+<p><strong>Continuity is critical.</strong> One person can get sick, take on a bigger client, or simply stop replying. If a two-month gap would genuinely damage the business, redundancy is worth paying for.</p>
+<p><strong>You're at meaningful scale.</strong> Large ecommerce catalogues, multiple locations, several languages — volume alone makes an individual a bottleneck.</p>
+<p><strong>You need accountability structures.</strong> Contracts, reporting cadence, escalation paths, insurance. Enterprise procurement often makes this non-negotiable regardless of preference.</p>
+
+<h2>The Risks of Each, Honestly</h2>
+<p><strong>Freelancer risks:</strong> single point of failure; capacity ceiling when they take on more clients; variable strategic depth; and no cover during illness or holidays. The best ones are also frequently booked out.</p>
+<p><strong>Agency risks:</strong> the senior person who won the pitch is often not the person doing the work; you may fund overhead rather than delivery; junior staff churn means account knowledge resets; and templated processes get applied to businesses they don't suit. Long contracts can also outlast the relationship's usefulness.</p>
+<p>Notice these aren't symmetrical. Freelance risk is mostly about capacity. Agency risk is mostly about attention and getting what you were sold.</p>
+
+<h2>How to Vet a Freelancer</h2>
+<ul>
+<li>Ask what they'd do in the first 30 days on <em>your</em> site specifically — vague answers mean they haven't looked</li>
+<li>Request two references from clients in a similar situation, and actually call them</li>
+<li>Ask how many clients they currently have; more than about eight retainers is a capacity warning</li>
+<li>Ask what happens if they're ill for three weeks — a good answer exists, a defensive one is telling</li>
+<li>Check whether they can explain <em>why</em> a tactic works, not just that it does</li>
+</ul>
+
+<h2>How to Vet an Agency</h2>
+<ul>
+<li>Ask who will actually work on the account day to day, and insist on meeting them before signing</li>
+<li>Ask what proportion of your fee goes to delivery versus account management</li>
+<li>Request a case study from your industry <em>and</em> your rough budget band — big-brand results tell you nothing about a $3,000 retainer</li>
+<li>Check the contract length and exit terms before anything else</li>
+<li>Ask what they'd tell you <em>not</em> to spend money on — an agency that never says this is selling, not advising</li>
+</ul>
+
+<h2>Red Flags That Apply to Both</h2>
+<ul>
+<li><strong>Guaranteed rankings</strong> — nobody controls Google's results, and this is the clearest signal to walk away</li>
+<li><strong>No questions about your business</strong> — anyone quoting before understanding your margins and customers is guessing</li>
+<li><strong>Vague deliverables</strong> — "ongoing optimisation" is not a scope of work</li>
+<li><strong>Reporting on rankings only</strong> — position without traffic and conversions is a vanity metric</li>
+<li><strong>Reluctance to explain their methods</strong> — anything they won't describe is something you may not want done to your site</li>
+</ul>
+<p>That last point matters more than it sounds. Google's own guidance on <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo" target="_blank" rel="nofollow noopener">whether you need an SEO</a> makes a similar case — be cautious of anyone secretive about what they'll actually do, because you carry the consequences of tactics that violate spam policies, not them.</p>
+
+<h2>The Hybrid Option Nobody Mentions</h2>
+<p>The framing as a binary choice is itself a bit false.</p>
+<p>Plenty of businesses run a hybrid: a strategic consultant for a few hours monthly setting direction, plus freelancers or an internal person executing. Or an agency for a defined project — a migration, a technical overhaul — then a freelancer for ongoing maintenance once the heavy lifting is done.</p>
+<p>This is frequently the best value arrangement available, and almost nobody writing about this topic suggests it, because both agencies and freelancers are incentivised to sell a full retainer.</p>
+
+<h2>What to Insist On in Either Contract</h2>
+<ul>
+<li><strong>You own everything</strong> — accounts, content, data, access. If a supplier holds your Search Console or Analytics, that's leverage against you</li>
+<li><strong>A clear scope</strong> with defined deliverables, not hours of unspecified "optimisation"</li>
+<li><strong>A notice period you can live with</strong> — 30 days is reasonable, 12-month lock-ins rarely are for a first engagement</li>
+<li><strong>Reporting that includes business metrics</strong>, not just rankings</li>
+<li><strong>A named person</strong> responsible for the account</li>
+</ul>
+
+<h2>When to Switch</h2>
+<p>Signals it's time to move from a freelancer to an agency: the work has outgrown one person's hours, you're waiting on availability regularly, or you now need disciplines they don't cover.</p>
+<p>Signals it's time to move from an agency to a freelancer: you're paying a retainer for work that has become maintenance, your account has been handed to progressively more junior staff, or you've built internal capability and now need execution rather than strategy.</p>
+<p>Both moves are normal. Neither is a failure — the right answer changes as the business changes.</p>
+
+<h2>How to Decide in Practice</h2>
+<p>Three questions settle it for most businesses.</p>
+<p><strong>What's your monthly budget?</strong> Under $2,000, a freelancer almost always delivers more actual senior attention. Over $5,000, an agency's breadth starts genuinely paying for itself. Between the two, the next question decides it.</p>
+<p><strong>Who manages the work internally?</strong> If the honest answer is nobody, you need a supplier who owns strategy — usually an agency. If you have a marketing lead who can direct work, a freelancer becomes far more effective.</p>
+<p><strong>How many disciplines do you need at once?</strong> One or two, a specialist wins. Four or five running in parallel, you need a team.</p>
+<p>If you'd like a second opinion on which of those describes your situation, <a href="/contact">get in touch</a> — and if the answer is a freelancer, we'll tell you that. We've written separately about <a href="/blog/technical-seo-agency-2026">what a technical SEO agency actually does</a> and <a href="/blog/seo-company-new-orleans-2026">how to evaluate an SEO company</a>, both of which cover the vetting process in more depth.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Is an SEO agency better than a freelancer?</summary>
+    <p>Neither is universally better. Agencies suit businesses needing several disciplines at once, continuity, or with no internal capacity to manage the work. Freelancers suit narrow, well-defined scopes and budgets under roughly $2,000 a month.</p>
+  </details>
+  <details>
+    <summary>How much does an SEO agency cost compared to a freelancer?</summary>
+    <p>Survey data puts agencies at around $99 an hour and roughly $3,209 monthly on average, versus about $72 an hour and $1,348 monthly for freelancers — roughly a 138% premium for agencies.</p>
+  </details>
+  <details>
+    <summary>Why are agencies so much more expensive?</summary>
+    <p>Partly overhead you're funding — offices, sales staff, account managers, software. Partly genuine value: multiple specialists, cover when someone is unavailable, and accountability structures. The split between those two varies enormously by agency.</p>
+  </details>
+  <details>
+    <summary>Can a freelancer handle enterprise SEO?</summary>
+    <p>Rarely alone. Enterprise work usually means large catalogues, multiple markets and several disciplines running in parallel, which exceeds one person's capacity regardless of skill. A freelance specialist can still be valuable alongside a team.</p>
+  </details>
+  <details>
+    <summary>What's the biggest risk with a freelancer?</summary>
+    <p>Single point of failure. Illness, a bigger client, or simply going quiet leaves you with no cover. Ask directly what happens if they're unavailable for three weeks before signing anything.</p>
+  </details>
+  <details>
+    <summary>What's the biggest risk with an agency?</summary>
+    <p>That the senior person who pitched isn't the person doing the work. Insist on meeting the actual day-to-day team before signing, and ask what share of your fee goes to delivery rather than account management.</p>
+  </details>
+  <details>
+    <summary>Should I use both an agency and a freelancer?</summary>
+    <p>Often yes, and it's underrated. A common hybrid is a strategic consultant setting direction monthly with freelancers or internal staff executing, or an agency for a defined project then a freelancer for maintenance afterwards.</p>
+  </details>
+  <details>
+    <summary>What contract length should I agree to?</summary>
+    <p>For a first engagement, prefer a 30-day notice period. Twelve-month lock-ins are rarely justified before you've seen the quality of the work, and reputable suppliers generally accept shorter initial terms.</p>
+  </details>
+  <details>
+    <summary>Who should own my Google Analytics and Search Console?</summary>
+    <p>You, always. Grant your supplier access from your own accounts rather than letting them create and hold the properties. A supplier holding your data is leverage against you if the relationship ends.</p>
+  </details>
+  <details>
+    <summary>How do I know if I'm being overcharged?</summary>
+    <p>Compare against the benchmarks — around $72 an hour freelance, $99 agency — and ask what proportion of the fee reaches delivery. Also check the deliverables are specific. Vague "ongoing optimisation" for a large retainer is the most common overcharging pattern.</p>
+  </details>
+  <details>
+    <summary>Can anyone guarantee first-page rankings?</summary>
+    <p>No. Nobody controls search results, and a guarantee is the clearest signal to walk away from a supplier regardless of whether they're an agency or a freelancer.</p>
+  </details>
+  <details>
+    <summary>When should I switch from a freelancer to an agency?</summary>
+    <p>When the work outgrows one person's available hours, when you're regularly waiting on their availability, or when you need disciplines they don't cover. The reverse move also makes sense once work becomes maintenance rather than strategy.</p>
+  </details>
+</div>
+`
+  },
+  {
     slug: 'answer-engine-optimization-aeo-guide-2026',
     title: 'Answer Engine Optimization: How to Become the Answer in 2026',
     category: 'Content Marketing',
