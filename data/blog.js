@@ -3701,7 +3701,7 @@ module.exports = [
     excerpt: 'Search engine optimization in Boise, ID means competing in one of the fastest-growing tech hubs in the country — here is what actually moves rankings and calls in 2026.',
     date: '2026-08-03',
     author: 'Umaira Liaquat',
-    image: '/images/blog/technical-seo-dashboard.jpg',
+    image: '/images/blog/moses-lake-seo-dashboard.jpg',
     content: `
 <p>Boise, Idaho has a 2026 population of roughly 238,850 and is one of the fastest-growing metro areas in the country, anchored by Micron Technology's headquarters, a rapidly expanding tech sector worth close to $9.8 billion statewide, and major employers like Amazon and St. Luke's Health System. Idaho ranks near the top nationally for tech salary growth, and that growth has pulled in a wave of new residents, new businesses, and new competition for local search visibility. For a Boise business, <strong>search engine optimization</strong> now means competing against a genuinely large, well-funded, and increasingly tech-literate field of competitors — not the sparse local landscape a city this size might have had a decade ago.</p>
 
@@ -3759,7 +3759,7 @@ module.exports = [
     excerpt: 'Ten Spokane Valley and Spokane-area SEO companies, with every website checked by hand in August 2026 — including which are actually Spokane Valley-based and what each one is genuinely best at.',
     date: '2026-08-03',
     author: 'Umaira Liaquat',
-    image: '/images/blog/technical-seo-dashboard.jpg',
+    image: '/images/blog/aeo-answer-engine-search.jpg',
     content: `
 <p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
 <p>Most lists of the <strong>best SEO companies in Spokane Valley</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
@@ -4194,7 +4194,7 @@ module.exports = [
     excerpt: 'Seven Kalamazoo-area SEO companies, with every website checked by hand in August 2026 — including one directory listing that turned out to be a Pennsylvania IT firm with no Kalamazoo presence at all.',
     date: '2026-08-03',
     author: 'Umaira Liaquat',
-    image: '/images/blog/technical-seo-audit-code.jpg',
+    image: '/images/blog/llm-visibility-ai-chat.jpg',
     content: `
 <p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
 <p>Most lists of the <strong>best SEO companies in Kalamazoo</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
@@ -5278,6 +5278,138 @@ module.exports = [
   <details>
     <summary>Which Reno agency is best for a mental health or recovery practice?</summary>
     <p>Beacon Media + Marketing specializes specifically in mental health, behavioral health, and addiction recovery organizations, with a "compassionate marketing" approach built around that sector's specific tone and compliance needs.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
+  },
+  {
+    slug: 'best-seo-companies-in-wichita-2026',
+    title: 'Top 6 Best SEO Companies in Wichita: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Six Wichita SEO companies, with every website checked by hand in August 2026 — including one agency running two well-known local brands out of the same downtown office building.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/hr-tech-consulting-team.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Wichita</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026, out of forty-plus candidates across Wichita-area directory listings. One name was dropped for having no verifiable Wichita location behind an out-of-state phone number, despite appearing on local directory pages.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Wichita, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Wichita</strong> — a real street address, not just a service-area mention</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Prime Concepts Group</h2>
+<p><strong>Best for:</strong> businesses wanting an established agency with real AI-integration depth.</p>
+<p>Operating for more than 30 years with offices in both Wichita and Las Vegas, Prime Concepts Group has completed more than 7,500 projects. SEO sits alongside branding, strategic marketing, and a dedicated AI services division covering custom GPT development and AI strategy.</p>
+<p>Three decades in business, spanning the entire evolution of search from directory listings to AI answers, is a genuine endurance signal few agencies on any of these city lists can match. <a href="https://primeconcepts.com/" target="_blank" rel="nofollow noopener">primeconcepts.com</a></p>
+
+<h2>2. Balefire</h2>
+<p><strong>Best for:</strong> businesses wanting one accountable team instead of juggling separate vendors.</p>
+<p>Based in downtown Wichita on North Broadway Avenue, with more than a decade in business. Balefire consolidates SEO, web design, PPC, email, and social media under one roof, explicitly positioning itself as a cost-effective alternative to hiring multiple freelancers.</p>
+<p>The agency's stated emphasis on explaining "what we're doing, why we're doing it, and what you should expect" is worth holding them to directly in a first call — it's a specific, checkable promise rather than a vague claim. <a href="https://balefireagency.com/" target="_blank" rel="nofollow noopener">balefireagency.com</a></p>
+
+<h2>3. Whitefish Media</h2>
+<p><strong>Best for:</strong> contractors, medical practices, and other trade-specific local businesses.</p>
+<p>Based on East Douglas Avenue in Wichita with more than 15 years of experience, Whitefish Media names specific industry specializations — contractors, bail bonds, real estate, and medical practices — rather than presenting itself as a generalist. Services span Google SEO and Maps optimization through to videography and drone photography.</p>
+<p>Naming unusual, specific verticals like bail bonds suggests genuine niche experience rather than a generic template applied to every client. <a href="https://whitefishmedia.com/" target="_blank" rel="nofollow noopener">whitefishmedia.com</a></p>
+
+<h2>4. Residual Rank</h2>
+<p><strong>Best for:</strong> businesses wanting a smaller client roster and closer personal attention.</p>
+<p><strong>Location note:</strong> Residual Rank shares its East Douglas Avenue address with Whitefish Media — the same downtown Wichita office building appears to house both operations. Run by owner Thomas J. Stinson with 16-plus years of experience, the agency explicitly limits its client count in favor of "fewer clients, more personal attention," covering SEO, Google Ads, and Google Maps optimization.</p>
+<p>A deliberately capped client roster is a real, checkable trade-off: ask directly how many active clients the team currently manages before signing. <a href="https://residualrank.com/" target="_blank" rel="nofollow noopener">residualrank.com</a></p>
+
+<h2>5. Big Corner Creative</h2>
+<p><strong>Best for:</strong> businesses wanting SEO alongside traditional and physical advertising.</p>
+<p>Based on West Kellogg Avenue in Wichita, Big Corner Creative pairs standard digital SEO and search marketing work with traditional media buying (TV and radio) and physical advertising like vehicle wraps and window clings — an unusually broad service span for a single agency.</p>
+<p>That combination suits a business that wants its digital and physical brand presence coordinated by one team rather than split across separate vendors who don't talk to each other. <a href="https://bigcornercreative.com/" target="_blank" rel="nofollow noopener">bigcornercreative.com</a></p>
+
+<h2>6. Cassandra Bryan Design</h2>
+<p><strong>Best for:</strong> businesses wanting a boutique agency that deliberately narrowed its service menu.</p>
+<p>Based on West Douglas Avenue in Wichita and operating since 2009, Cassandra Bryan Design has deliberately reduced its offering to two core services — website design and digital marketing — rather than trying to cover everything, with client work spanning healthcare, aerospace, real estate, and legal services.</p>
+<p>A boutique agency choosing to do fewer things well is a genuinely different model from a full-service shop, and worth considering if you want deep website and marketing work without add-on services you won't use. <a href="https://cassandrabryan.com/" target="_blank" rel="nofollow noopener">cassandrabryan.com</a></p>
+
+<h2>What Wichita Businesses Should Actually Ask For</h2>
+<p>Wichita is a mid-sized market, which changes the calculation. Competition for most local service terms is meaningfully lower than in a major metro like Kansas City or Dallas, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a larger city.</p>
+<p>That has a budget implication worth stating plainly: many Wichita businesses are sold national-scale SEO retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Wichita, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Wichita agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Wichita SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. This particular check also turned up two Wichita agencies sharing the exact same downtown office address — not necessarily a problem, but worth knowing if you assume every listed name is a fully separate company.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Wichita?</summary>
+    <p>Six with verified, active websites as of August 2026: Prime Concepts Group, Balefire, Whitefish Media, Residual Rank, Big Corner Creative, and Cassandra Bryan Design. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Wichita?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Wichita's lower competition means smaller budgets often go further here than in a major metro.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Wichita?</summary>
+    <p>Yes, all six have a verified Wichita street address, though Prime Concepts Group also maintains a Las Vegas office, and Whitefish Media and Residual Rank share the same downtown Wichita building.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Wichita SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Wichita, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Load their website and look for real content and recent work. Ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level. Walk away from anyone guaranteeing rankings.</p>
+  </details>
+  <details>
+    <summary>What should a small Wichita business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a mid-sized market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, so the ordering reflects marketing spend rather than quality. One candidate reviewed for this Wichita list had no verifiable local address behind an out-of-state phone number, despite appearing on local directory pages.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Wichita?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months. Lower competition in Wichita often means faster results than the same work in a large metro.</p>
+  </details>
+  <details>
+    <summary>Which Wichita agency is best for a trade or niche local business?</summary>
+    <p>Whitefish Media names specific industry specializations including contractors, bail bonds, real estate, and medical practices, rather than presenting itself as a generalist agency.</p>
   </details>
   <details>
     <summary>Do I need an SEO agency or can I do it myself?</summary>
