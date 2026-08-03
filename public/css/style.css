@@ -1294,6 +1294,12 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
   font-size: 0.85rem;
 }
 .pagination .current { background: var(--dark); color: #FFFFFF; border-color: var(--dark); }
+.pagination .page-link {
+  width: auto;
+  padding: 0 16px;
+  white-space: nowrap;
+  border-radius: 999px;
+}
 
 /* Single blog post */
 .post-hero { padding: 44px 0 34px; border-bottom: 1px solid var(--border); }
@@ -1619,6 +1625,15 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 .team-card h3 { font-size: 1.05rem; margin-bottom: 2px; }
 .team-card .role { color: var(--accent-teal-dim); font-size: 0.82rem; font-family: var(--font-mono); margin-bottom: 10px; }
 .team-card p.bio { color: var(--text-dim); font-size: 0.88rem; }
+.team-linkedin {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent-teal-dim);
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  text-decoration: none;
+}
+.team-linkedin:hover { text-decoration: underline; }
 
 /* ============================
    Contact page
