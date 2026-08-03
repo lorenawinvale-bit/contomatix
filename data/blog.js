@@ -3922,5 +3922,269 @@ module.exports = [
   </details>
 </div>
 `
+  },
+  {
+    slug: 'best-seo-companies-in-bend-2026',
+    title: 'Top 7 Best SEO Companies in Bend, Oregon: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Seven Bend, Oregon SEO companies, with every website checked by hand in August 2026 — including what each one is genuinely best at, from eCommerce to AI-search visibility.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/seo-agency-vs-freelancer-meeting.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Bend</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. Bend is a genuinely small market for dedicated SEO firms compared to a metro like Portland, so this list runs to seven rather than a padded ten — every entry here is a real, currently operating Bend business, not a filler pick.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Bend, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Bend</strong> — and where a company has since expanded beyond Bend, that's stated rather than hidden</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Intigress</h2>
+<p><strong>Best for:</strong> businesses that want SEO and paid search run together by a small, accountable team.</p>
+<p>A boutique Bend agency founded in 2019, Google Partner certified, and a member of the Bend Chamber of Commerce. The team runs SEO audits, search marketing, and paid advertising (Google, Facebook, Instagram) as one connected strategy rather than separate services.</p>
+<p>The boutique size is the point here — client testimonials reference direct access and quick turnarounds, which is harder to get from a larger agency juggling more accounts. <a href="https://intigress.com/" target="_blank" rel="nofollow noopener">intigress.com</a></p>
+
+<h2>2. zö agency</h2>
+<p><strong>Best for:</strong> businesses that need brand strategy and SEO solved together, not separately.</p>
+<p>A women-owned, Bend-based agency with Clutch recognition and Communicator Awards to its name, working across brand development, design, digital marketing, SEO, and paid media for businesses, nonprofits, and public institutions.</p>
+<p>The nonprofit and public-institution client history is worth noting — that kind of work generally means processes built to survive stakeholder scrutiny, not just a single decision-maker's approval. <a href="https://zo.agency/" target="_blank" rel="nofollow noopener">zo.agency</a></p>
+
+<h2>3. Just By Design</h2>
+<p><strong>Best for:</strong> businesses that want to show up in AI search tools, not just Google.</p>
+<p>Founded in Bend in 2001 by brand strategist Justine Kingston, and now also operating out of Portland, Lake Oswego, and Coeur d'Alene. Twenty-plus years in business, with a specific, current focus on "AI visibility optimization" alongside conventional SEO and content strategy.</p>
+<p>That AI-visibility framing matters more each year: as ChatGPT, Perplexity, and Google's AI Overviews take a growing share of search traffic, an agency that's explicitly built a service around it is ahead of most competitors still selling SEO the same way they did five years ago. <a href="https://justbydesign.com/" target="_blank" rel="nofollow noopener">justbydesign.com</a></p>
+
+<h2>4. Ponderosa Digital</h2>
+<p><strong>Best for:</strong> businesses wanting technical SEO and generative-engine optimization specifically.</p>
+<p>A Bend consultancy built around a strategic-plus-technical approach, explicitly offering "GEO" (generative engine optimization) for platforms like ChatGPT and Perplexity alongside technical SEO, local SEO, and content strategy.</p>
+<p>The technical-first framing suits a business whose site already has content but is underperforming for structural reasons — crawlability, site architecture, migration issues — rather than a content gap. <a href="https://www.ponderosadigital.com/" target="_blank" rel="nofollow noopener">ponderosadigital.com</a></p>
+
+<h2>5. Incumbent Solutions</h2>
+<p><strong>Best for:</strong> small and medium Bend businesses wanting straightforward local SEO and lead generation.</p>
+<p>A Bend agency built around a simple pitch: a website that isn't ranked is a brochure, not a website. Services cover SEO, Google Business Profile optimization, PPC, social media, and web design, aimed specifically at small-to-medium local businesses.</p>
+<p>The focus on ideal-customer targeting rather than broad traffic volume is a sensible fit for a business that doesn't need to compete nationally — most Bend service businesses fall into that category. <a href="https://www.incumbentsolutions.com/" target="_blank" rel="nofollow noopener">incumbentsolutions.com</a></p>
+
+<h2>6. Bend Oregon SEO Solutions (BOSS)</h2>
+<p><strong>Best for:</strong> businesses wanting SEO and web design handled as one project.</p>
+<p>A Bend agency serving "businesses in Bend, Oregon, and beyond," combining keyword research, on-page optimization, and local SEO with responsive web design and content creation under one roof.</p>
+<p>Bundling SEO and web design under a single team avoids the coordination problems that come up when a separate designer and SEO consultant aren't talking to each other. <a href="https://bendoregonseosolutions.com/" target="_blank" rel="nofollow noopener">bendoregonseosolutions.com</a></p>
+
+<h2>7. SEO Oregon</h2>
+<p><strong>Best for:</strong> small local businesses on a tight budget.</p>
+<p>Based in Bend and explicitly positioned around "high value, low cost SEO for small, local businesses," serving Bend, Redmond, and Sisters specifically rather than the wider state. The approach is built around what the agency calls "Conversion SEO" — targeting search terms used by people close to making a purchase, rather than chasing broad traffic.</p>
+<p>The narrow geographic focus (three specific Central Oregon towns rather than "all of Oregon") is a genuine positive here — it usually means deeper, more specific local knowledge than an agency spread across the whole state. <a href="https://seooregon.co/" target="_blank" rel="nofollow noopener">seooregon.co</a></p>
+
+<h2>What Bend Businesses Should Actually Ask For</h2>
+<p>Bend is a small market by national standards, and that changes the calculation. Competition for most local service terms is meaningfully lower than in a major metro like Portland, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a larger city.</p>
+<p>That has a budget implication worth stating plainly: many Bend businesses are sold national-scale SEO retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Bend, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a small market come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Bend agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Bend SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. A genuinely small market like Bend also means some published lists pad their count with agencies that are actually based in Portland or elsewhere — worth checking directly rather than trusting the label.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Bend, Oregon?</summary>
+    <p>Seven with verified, active websites as of August 2026: Intigress, zö agency, Just By Design, Ponderosa Digital, Incumbent Solutions, Bend Oregon SEO Solutions, and SEO Oregon. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Bend?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Bend's lower competition means smaller budgets often go further here than in a major metro like Portland.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Bend?</summary>
+    <p>Yes, all seven were founded in or are currently headquartered in Bend, though Just By Design has since expanded to also operate in Portland, Lake Oswego, and Coeur d'Alene.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Bend SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Bend, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Load their website and look for real content and recent work. Ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level. Walk away from anyone guaranteeing rankings.</p>
+  </details>
+  <details>
+    <summary>What should a small Bend business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a small market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, so the ordering reflects marketing spend rather than quality. In a small market like Bend, some lists also pad their count with agencies actually based elsewhere in Oregon — worth checking directly.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Bend?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months. Lower competition in Bend often means faster results than the same work in a large metro.</p>
+  </details>
+  <details>
+    <summary>Which Bend agency is best for AI search visibility?</summary>
+    <p>Just By Design and Ponderosa Digital both explicitly offer optimization for AI answer engines like ChatGPT and Perplexity, alongside conventional SEO — worth a look if that's a specific priority.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
+  },
+  {
+    slug: 'best-seo-companies-in-coeur-dalene-2026',
+    title: "Top 5 Best SEO Companies in Coeur d'Alene, Idaho: A Verified 2026 List",
+    category: 'Local SEO',
+    excerpt: "Five Coeur d'Alene, Idaho SEO companies, with every website checked by hand in August 2026 — a small, genuinely local market where several bigger national names claiming the city turned out not to be based there at all.",
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/seo-agency-vs-freelancer-meeting.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Coeur d'Alene</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. Several names that show up on Coeur d'Alene SEO lists were checked and dropped: one is headquartered in the UK with no genuine Idaho presence despite ranking for the city, one is a Philadelphia-area agency running a generic landing page for dozens of cities including Coeur d'Alene, and two others returned no working website at all on repeated checks. That's the kind of thing nobody catches when a list gets copied from another list.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Coeur d'Alene, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Coeur d'Alene</strong> specifically — a named local address or a stated local office, not just a city-name landing page built to rank for local searches</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. ML SEO</h2>
+<p><strong>Best for:</strong> businesses wanting a genuinely Kootenai County-focused agency.</p>
+<p>Based in Kootenai County and serving Coeur d'Alene, Post Falls, Hayden, and Spokane Valley directly, ML SEO offers SEO, Google Ads management, and website builds under one roof.</p>
+<p>The multi-city service area within the same lake region — rather than a nationwide list of unrelated cities — is a good sign of genuine local knowledge rather than a template landing page. <a href="https://www.seocda.com/" target="_blank" rel="nofollow noopener">seocda.com</a></p>
+
+<h2>2. Summation X</h2>
+<p><strong>Best for:</strong> businesses wanting local and national SEO run by the same team.</p>
+<p>Based at a specific Coeur d'Alene address on East Coeur d'Alene Avenue, Summation X covers local and national SEO, ecommerce SEO, reputation management, and both static and dynamic web development.</p>
+<p>Offering local and national SEO as distinct, named services (rather than treating them as the same thing) suggests the team understands they require different approaches — which is true, and often glossed over by generalist agencies. <a href="https://summationx.com/" target="_blank" rel="nofollow noopener">summationx.com</a></p>
+
+<h2>3. Like Media</h2>
+<p><strong>Best for:</strong> businesses wanting print and digital reach across the wider Idaho Panhandle.</p>
+<p>Headquartered in Eagle, Idaho, with a genuine office presence in Coeur d'Alene, Hayden, and Sandpoint. Like Media pairs regional lifestyle magazine publishing with digital services that explicitly include SEO, GEO, and AEO alongside web development and social media.</p>
+<p>The magazine-plus-digital combination is a real point of difference for a business whose customers are older, more local, or simply still read print — reach that a pure digital agency won't offer. <a href="https://www.like-media.com/" target="_blank" rel="nofollow noopener">like-media.com</a></p>
+
+<h2>4. Hagadone Media Group</h2>
+<p><strong>Best for:</strong> businesses wanting serious institutional scale and a media-buying arm alongside SEO.</p>
+<p>Operating in the Coeur d'Alene and Sandpoint area with roots dating back to 1886, Hagadone Media Group runs 17 local newspapers and 21 standalone publications alongside a full digital arm — SEO, SEM, programmatic display, and video advertising — plus sister companies covering video production, web development, and branding.</p>
+<p>This is the largest, most established option on this list by a wide margin. It suits a business wanting broad regional reach and media buying alongside SEO, more than a small business wanting a specialist boutique relationship. <a href="https://hagadonemediagroup.com/" target="_blank" rel="nofollow noopener">hagadonemediagroup.com</a></p>
+
+<h2>5. Adapt Digital Solutions</h2>
+<p><strong>Best for:</strong> contractors and home service businesses specifically.</p>
+<p>Based in Coeur d'Alene since 2018, with more than 140 clients, Adapt Digital Solutions works almost exclusively with contractors — remodelers, plumbers, HVAC, electricians, roofers, landscapers, well drillers, and similar trades — covering website builds, SEO, Local Service Ads, Google Ads, and CRM integration.</p>
+<p>That trade-specific focus means less generic advice and more familiarity with exactly what a contractor's customers search for and how their sales cycle actually works. <a href="https://adaptdigitalsolutions.com/" target="_blank" rel="nofollow noopener">adaptdigitalsolutions.com</a></p>
+
+<h2>What Coeur d'Alene Businesses Should Actually Ask For</h2>
+<p>Coeur d'Alene is a small market by national standards, and that changes the calculation. Competition for most local service terms is meaningfully lower than in a major metro like Spokane just across the state line, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a larger city.</p>
+<p>That has a budget implication worth stating plainly: many Coeur d'Alene businesses are sold national-scale SEO retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Coeur d'Alene, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a small market come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Coeur d'Alene agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Coeur d'Alene SEO lists mix genuinely local businesses with national agencies that simply built a landing page targeting the city's name. That's a common SEO tactic, and it's not necessarily dishonest, but it does mean the list is no longer telling you who's actually local.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and look for a specific street address or named local office rather than just a page titled "SEO Company in [City]." A genuine local presence is usually stated plainly; a landing page usually isn't.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Coeur d'Alene?</summary>
+    <p>Five with verified, active websites and a genuine local presence as of August 2026: ML SEO, Summation X, Like Media, Hagadone Media Group, and Adapt Digital Solutions. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Coeur d'Alene?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Coeur d'Alene's lower competition means smaller budgets often go further here than in a major metro.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Coeur d'Alene?</summary>
+    <p>All five have a genuine local presence. ML SEO, Summation X, and Adapt Digital Solutions are headquartered in the city. Like Media is headquartered in Eagle, Idaho with a real Coeur d'Alene office. Hagadone Media Group operates across the Coeur d'Alene and Sandpoint area.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Coeur d'Alene SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Coeur d'Alene, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I tell a real local agency from a national one just targeting the city name?</summary>
+    <p>Look for a specific street address or a named local office, not just a page titled "SEO Company in Coeur d'Alene." Two agencies commonly listed for this city turned out to be headquartered in the UK and Philadelphia respectively, with no genuine local presence.</p>
+  </details>
+  <details>
+    <summary>What should a small Coeur d'Alene business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a small market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, and in smaller markets like Coeur d'Alene, national agencies frequently rank for the city without any real local presence. Check for a specific address before trusting the label.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Coeur d'Alene?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months. Lower competition in Coeur d'Alene often means faster results than the same work in a large metro.</p>
+  </details>
+  <details>
+    <summary>Which Coeur d'Alene agency is best for a contractor or home service business?</summary>
+    <p>Adapt Digital Solutions works almost exclusively with contractors and trades, with more than 140 clients in that specific space, and understands trade-specific sales cycles better than a generalist agency would.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
   }
 ];
