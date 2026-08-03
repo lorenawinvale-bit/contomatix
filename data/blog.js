@@ -5015,5 +5015,152 @@ module.exports = [
   </details>
 </div>
 `
+  },
+  {
+    slug: 'best-seo-companies-in-provo-2026',
+    title: 'Top 6 Best SEO Companies in Provo, Utah: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: "Six Provo and Utah SEO companies, with every website checked by hand in August 2026 — and only one of the six actually headquartered in Provo itself, which most published lists don't mention.",
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/seo-agency-vs-freelancer-meeting.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Provo</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. Worth knowing upfront: Provo proper has very few dedicated SEO firms compared to the wider Salt Lake City-Utah County corridor, so most agencies that show up on a "Provo SEO" search are actually headquartered elsewhere in the Silicon Slopes region — a fact most directory lists don't bother to state.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Provo, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Provo or the wider Utah County/Salt Lake corridor</strong> — and where a company is based elsewhere in that corridor, that's stated rather than hidden</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Wallaroo Media</h2>
+<p><strong>Best for:</strong> established ecommerce brands on Shopify.</p>
+<p>The only agency on this list actually headquartered in Provo. Wallaroo Media describes itself as an "AI-Native Ecommerce Growth Agency," working exclusively with Shopify brands generating $1 million to $30 million-plus in annual revenue, with client names including Casper, Cricut, and Rent the Runway. SEO here includes both technical optimization and what the agency calls "LLM optimization" for AI search visibility.</p>
+<p>The stated revenue floor is a useful filter — this isn't the right fit for a small local business, but it's a serious option for a scaling ecommerce brand. <a href="https://wallaroomedia.com/" target="_blank" rel="nofollow noopener">wallaroomedia.com</a></p>
+
+<h2>2. Disruptive Advertising</h2>
+<p><strong>Best for:</strong> mid-size to larger businesses wanting a proven agency with an established track record.</p>
+<p><strong>Location context:</strong> based in Pleasant Grove, within Utah County but not Provo proper. With 160-plus employees, over $450 million in managed annual ad spend, and a spot on the Inc. 500 list, this is one of the larger and more established names in the region, offering a "measurable growth within 90 days or your money back" guarantee.</p>
+<p>That scale and guarantee structure suit a business with a meaningful budget wanting real accountability, more than a very small local shop. <a href="https://disruptiveadvertising.com/" target="_blank" rel="nofollow noopener">disruptiveadvertising.com</a></p>
+
+<h2>3. Revity Marketing Agency</h2>
+<p><strong>Best for:</strong> businesses wanting a values-driven agency prioritizing transparency over inflated metrics.</p>
+<p><strong>Location context:</strong> based in American Fork, within Utah County. Revity frames its approach as "Revenue with Integrity," explicitly pushing back on inflated reporting in favor of sustainable growth, with SEO sitting alongside PPC, email/SMS, video, and reputation management.</p>
+<p>An agency that states its skepticism of vanity-metric reporting upfront is worth taking at face value — it's an unusual thing to lead with. <a href="https://gorevity.com/" target="_blank" rel="nofollow noopener">gorevity.com</a></p>
+
+<h2>4. Searchbloom</h2>
+<p><strong>Best for:</strong> businesses wanting a dedicated analyst rather than a rotating account team.</p>
+<p><strong>Location context:</strong> based in South Jordan, in the Salt Lake City metro rather than Utah County. Searchbloom runs a "White-Glove" service model with a dedicated analyst per account, no lengthy contracts, and named proprietary methodologies for both SEO ("ART") and PPC ("ACE"), with clients including Nordstrom and US Bank.</p>
+<p>Naming a specific, consistent methodology — rather than an ad hoc approach per client — is a good sign of process maturity worth asking about directly. <a href="https://searchbloom.com/" target="_blank" rel="nofollow noopener">searchbloom.com</a></p>
+
+<h2>5. TKX Media</h2>
+<p><strong>Best for:</strong> franchise businesses specifically.</p>
+<p><strong>Location context:</strong> based in South Jordan, in the Salt Lake City metro. TKX Media names franchise marketing as a distinct specialization alongside standard local, technical, and enterprise SEO, with client results including 3.6x organic traffic growth cited on the homepage.</p>
+<p>Franchise SEO has genuinely different problems than single-location SEO — managing dozens of near-duplicate location pages without triggering duplicate-content issues — so a named specialization here is worth something concrete. <a href="https://tkxmedia.com/" target="_blank" rel="nofollow noopener">tkxmedia.com</a></p>
+
+<h2>6. Upward Engine</h2>
+<p><strong>Best for:</strong> small businesses wanting SEO and AI search visibility without a long-term contract.</p>
+<p><strong>Location context:</strong> based in Riverton, in the Salt Lake City metro. Upward Engine explicitly champions small businesses, naming AI search optimization for ChatGPT and Gemini as a distinct service alongside traditional SEO, paid search, and web development, with no long-term contracts required.</p>
+<p>The small-business framing and contract flexibility are a sensible combination for an owner who wants to test an agency relationship before committing further. <a href="https://upwardengine.com/" target="_blank" rel="nofollow noopener">upwardengine.com</a></p>
+
+<h2>Provo vs. Wider Utah County and Salt Lake Metro</h2>
+<p>Published lists routinely present all of these as "Provo SEO companies." The distinction genuinely matters here, since only one of the six is actually headquartered in Provo.</p>
+<div style="overflow-x:auto; margin: 0 0 1.4em;">
+<table style="width:100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Company</th><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Location</th></tr>
+</thead>
+<tbody>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">Wallaroo Media</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Provo</td></tr>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">Disruptive Advertising, Revity Marketing Agency</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Utah County (Pleasant Grove, American Fork)</td></tr>
+<tr><td style="padding:10px 14px;">Searchbloom, TKX Media, Upward Engine</td><td style="padding:10px 14px;">Salt Lake City metro (South Jordan, Riverton)</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>What Provo Businesses Should Actually Ask For</h2>
+<p>Provo and Utah County sit inside one of the country's fastest-growing tech corridors, which changes the calculation compared with an isolated small city. Competition for many local service terms is still lower than in downtown Salt Lake City proper, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a dense national metro.</p>
+<p>That has a budget implication worth stating plainly: some Provo businesses are sold enterprise-scale retainers sized for a Salt Lake corporate client when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Provo, restricting your search to local agencies narrows your options for no technical benefit — and as this list shows, most "Provo" agencies aren't in Provo anyway. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Provo agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Provo SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to the actual address on each listed site. In Provo's case, doing that reveals that five of the six most commonly listed "Provo SEO companies" are actually based elsewhere in Utah County or the Salt Lake metro — a detail that matters if in-person contact is part of why you're hiring locally.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Provo?</summary>
+    <p>Six with verified, active websites as of August 2026: Wallaroo Media, Disruptive Advertising, Revity Marketing Agency, Searchbloom, TKX Media, and Upward Engine. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Provo?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly, though larger agencies on this list (like Disruptive Advertising) work at a higher budget tier.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Provo?</summary>
+    <p>No — only Wallaroo Media is headquartered in Provo itself. The rest are based elsewhere in Utah County (Pleasant Grove, American Fork) or the Salt Lake City metro (South Jordan, Riverton).</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Provo SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Provo, restricting to local agencies narrows your options without a technical benefit — and given how few agencies are actually in Provo proper, this trade-off is especially relevant here.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Load their website and look for real content and recent work. Ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level. Walk away from anyone guaranteeing rankings. Also check the actual street address — "Provo SEO" search results are dominated by agencies based elsewhere in the corridor.</p>
+  </details>
+  <details>
+    <summary>What should a small Provo business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages — fundamentals that often get skipped when an agency is sized for a large Salt Lake corporate client.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, so the ordering reflects marketing spend rather than quality. In Provo's case specifically, most listed agencies aren't actually based in the city — checking the real address is the single most useful thing you can do with any such list.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Provo?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months.</p>
+  </details>
+  <details>
+    <summary>Which Provo-area agency is best for franchise businesses?</summary>
+    <p>TKX Media names franchise marketing as a distinct specialization, with experience managing the duplicate-content challenges that come with multiple near-identical location pages.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
   }
 ];
