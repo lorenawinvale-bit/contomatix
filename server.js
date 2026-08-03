@@ -105,13 +105,19 @@ app.get('/blog', (req, res) => {
   const category = req.query.category || 'All';
   const categories = ['All', ...new Set(blogPosts.map(p => p.category))];
   const filtered = category === 'All' ? blogPosts : blogPosts.filter(p => p.category === category);
+  const perPage = 6;
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  const page = Math.min(totalPages, Math.max(1, parseInt(req.query.page, 10) || 1));
+  const posts = filtered.slice((page - 1) * perPage, page * perPage);
   res.render('pages/blog', {
     title: 'Blog — Contomatix',
     description: 'SEO strategy, link building tactics, and content marketing insights from Contomatix.',
     pageClass: 'page-blog',
-    posts: filtered,
+    posts,
     categories,
-    activeCategory: category
+    activeCategory: category,
+    page,
+    totalPages
   });
 });
 

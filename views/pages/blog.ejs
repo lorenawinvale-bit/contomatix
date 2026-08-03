@@ -87,6 +87,22 @@
 </div>
 <% } %>
 
-<div class="pagination">
-  <span class="current">1</span>
+<% if (totalPages > 1) { %>
+<div class="container">
+  <div class="pagination">
+    <% if (page > 1) { %>
+      <a href="/blog?category=<%= encodeURIComponent(activeCategory) %>&page=<%= page - 1 %>" class="page-link">&laquo; Prev</a>
+    <% } %>
+    <% for (let i = 1; i <= totalPages; i++) { %>
+      <% if (i === page) { %>
+        <span class="current"><%= i %></span>
+      <% } else { %>
+        <a href="/blog?category=<%= encodeURIComponent(activeCategory) %>&page=<%= i %>"><%= i %></a>
+      <% } %>
+    <% } %>
+    <% if (page < totalPages) { %>
+      <a href="/blog?category=<%= encodeURIComponent(activeCategory) %>&page=<%= page + 1 %>" class="page-link">Next &raquo;</a>
+    <% } %>
+  </div>
 </div>
+<% } %>
