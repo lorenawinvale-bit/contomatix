@@ -105,7 +105,7 @@ app.get('/blog', (req, res) => {
   const category = req.query.category || 'All';
   const categories = ['All', ...new Set(blogPosts.map(p => p.category))];
   const filtered = category === 'All' ? blogPosts : blogPosts.filter(p => p.category === category);
-  const perPage = 6;
+  const perPage = 13; // 4 in the featured/top-stories layout + 9 in the grid below
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
   const page = Math.min(totalPages, Math.max(1, parseInt(req.query.page, 10) || 1));
   const posts = filtered.slice((page - 1) * perPage, page * perPage);
