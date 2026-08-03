@@ -4186,5 +4186,295 @@ module.exports = [
   </details>
 </div>
 `
+  },
+  {
+    slug: 'best-seo-companies-in-kalamazoo-2026',
+    title: 'Top 7 Best SEO Companies in Kalamazoo: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Seven Kalamazoo-area SEO companies, with every website checked by hand in August 2026 — including one directory listing that turned out to be a Pennsylvania IT firm with no Kalamazoo presence at all.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/seo-agency-vs-freelancer-meeting.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Kalamazoo</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. One name on a Kalamazoo directory listing turned out to be a nearly 50-year-old IT and business systems firm headquartered in Wyomissing, Pennsylvania, with no Kalamazoo office at all — a mislabeled directory entry rather than a dead site, but exactly the kind of thing nobody catches when a list gets copied from another list.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Kalamazoo, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Kalamazoo or its immediate metro</strong> — and where a company is based elsewhere, that's stated rather than hidden</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Kzoom</h2>
+<p><strong>Best for:</strong> established businesses wanting media production and strategy under one roof.</p>
+<p>A Kalamazoo agency with more than twenty years in the market, based on East Michigan Avenue. Services span video production, photography, branding, web development, and digital strategy including SEO and SEM, with a notable client roster including Stryker, BASF, and Pfizer.</p>
+<p>That client list is a genuine signal — enterprise healthcare and manufacturing clients generally mean processes built to survive real internal scrutiny. <a href="https://kzoom.com/" target="_blank" rel="nofollow noopener">kzoom.com</a></p>
+
+<h2>2. LKF Marketing</h2>
+<p><strong>Best for:</strong> businesses wanting a long-established, full-service agency.</p>
+<p>Operating since 1989 and headquartered on East Michigan Avenue in Kalamazoo, describing itself as "Southwest Michigan's Most Enthusiastic Marketing Agency." The offering spans strategy, branding, traditional and digital marketing, web design, and video, with case studies including Kalamazoo Public Schools and the State of Michigan.</p>
+<p>Thirty-five years in one market is a real signal of stability, and the public-sector client history suggests processes that hold up to institutional review. <a href="https://lkfmarketing.com/" target="_blank" rel="nofollow noopener">lkfmarketing.com</a></p>
+
+<h2>3. Federated Digital Solutions</h2>
+<p><strong>Best for:</strong> businesses wanting SEO framed specifically around lead generation.</p>
+<p>A family-owned agency serving Kalamazoo-area organizations including Kalamazoo Valley Community College and Kellogg Community Credit Union. The offering separates branding work from lead-generation work explicitly, with SEO, SEM, and local search sitting under the lead-gen category.</p>
+<p>That separation matters: a business that needs more calls and a business that needs broader brand awareness are solving different problems, and an agency that treats them as distinct services is more likely to actually measure the right thing for your goal. <a href="https://federateddigitalsolutions.com/" target="_blank" rel="nofollow noopener">federateddigitalsolutions.com</a></p>
+
+<h2>4. Techtonic Marketing (formerly Skyodin)</h2>
+<p><strong>Best for:</strong> businesses wanting local SEO backed by a named tool partnership.</p>
+<p><strong>Naming note:</strong> this agency rebranded from Skyodin to Techtonic Marketing LLC; older directory listings and reviews may still reference the previous name. Based in Kalamazoo and serving Kalamazoo, Lansing, Jackson, and Detroit, the agency runs local SEO through a stated SEMrush partnership alongside web design and outdoor advertising.</p>
+<p>Naming the specific tool they use for SEO work (rather than a vague "we do SEO") is a small but genuine transparency signal worth noting. <a href="https://skyodin.com/" target="_blank" rel="nofollow noopener">skyodin.com</a></p>
+
+<h2>5. Webistries Marketing & SEO</h2>
+<p><strong>Best for:</strong> small businesses wanting an affordable, methodology-driven approach.</p>
+<p>Based in Portage, within the Kalamazoo metro, and run by founder Brian Ruggiero around the Duct Tape Marketing methodology — a system built specifically for small businesses rather than adapted from enterprise marketing. Local and organic SEO sit alongside website design, content marketing, and reputation management.</p>
+<p>The explicit small-business framing, plus BBB accreditation, suits an owner who wants a marketing team's output without a marketing team's overhead. <a href="https://webistries.com/" target="_blank" rel="nofollow noopener">webistries.com</a></p>
+
+<h2>6. NeuWeb Marketing</h2>
+<p><strong>Best for:</strong> home service and trade businesses specifically.</p>
+<p>Based in Battle Creek, part of the wider Kalamazoo-Battle Creek metro area, with more than ten years of experience across 20-plus local service industries — contractors, roofers, HVAC, dentists, real estate, and landscaping among them. SEO sits alongside advertising, content marketing, and AI-driven marketing automation.</p>
+<p>The trade-specific industry focus means less generic advice and more familiarity with how those particular sales cycles and customer searches actually work. <a href="https://neuwebmarketing.com/" target="_blank" rel="nofollow noopener">neuwebmarketing.com</a></p>
+
+<h2>7. The SEO Chick</h2>
+<p><strong>Best for:</strong> businesses wanting an SEO specialist rather than a general agency, with a wider Michigan footprint.</p>
+<p><strong>Location context:</strong> The SEO Chick is headquartered in Grand Rapids, not Kalamazoo, though it explicitly lists Kalamazoo as a service area. Led by Amber Greening with more than 20 years in the industry, the agency builds SEO into WordPress sites from the ground up rather than retrofitting it, working with chiropractors, dentists, lawyers, roofers, and contractors.</p>
+<p>Worth being upfront about the distance: it's a genuinely SEO-specialist agency, but not a Kalamazoo-based team, so weigh that against how much in-person contact matters to you. <a href="https://theseochick.com/" target="_blank" rel="nofollow noopener">theseochick.com</a></p>
+
+<h2>Kalamazoo-Based vs. Wider Metro</h2>
+<p>Published lists routinely present all of these as "Kalamazoo SEO companies." The distinction matters if in-person contact specifically in Kalamazoo is important to you.</p>
+<div style="overflow-x:auto; margin: 0 0 1.4em;">
+<table style="width:100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Company</th><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Location</th></tr>
+</thead>
+<tbody>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">Kzoom, LKF Marketing, Federated Digital Solutions, Techtonic Marketing</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Kalamazoo</td></tr>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">Webistries Marketing & SEO</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Portage (Kalamazoo metro)</td></tr>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">NeuWeb Marketing</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Battle Creek (Kalamazoo-Battle Creek metro)</td></tr>
+<tr><td style="padding:10px 14px;">The SEO Chick</td><td style="padding:10px 14px;">Grand Rapids, serving Kalamazoo</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>What Kalamazoo Businesses Should Actually Ask For</h2>
+<p>Kalamazoo is a mid-sized market, which changes the calculation. Competition for most local service terms is meaningfully lower than in a major metro like Detroit or Chicago, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a larger city.</p>
+<p>That has a budget implication worth stating plainly: many Kalamazoo businesses are sold national-scale SEO retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Kalamazoo, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Kalamazoo agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Kalamazoo SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. A list that hasn't been checked recently will sometimes carry a mislabeled entry — a nearly 50-year-old Pennsylvania IT firm was listed as a Kalamazoo digital marketing agency on one directory checked for this piece.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Kalamazoo?</summary>
+    <p>Seven with verified, active websites as of August 2026: Kzoom, LKF Marketing, Federated Digital Solutions, Techtonic Marketing (formerly Skyodin), Webistries Marketing & SEO, NeuWeb Marketing, and The SEO Chick. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Kalamazoo?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Kalamazoo's lower competition means smaller budgets often go further here than in a major metro.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Kalamazoo?</summary>
+    <p>Not all. Four are based in Kalamazoo proper, Webistries is in Portage, NeuWeb is in Battle Creek (both part of the wider metro), and The SEO Chick is headquartered in Grand Rapids while serving Kalamazoo as a listed service area.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Kalamazoo SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Kalamazoo, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Load their website and look for real content and recent work. Ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level. Walk away from anyone guaranteeing rankings. One directory checked for this list mislabeled a Pennsylvania IT firm as a Kalamazoo agency — always verify the location directly.</p>
+  </details>
+  <details>
+    <summary>What should a small Kalamazoo business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a mid-sized market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, so the ordering reflects marketing spend rather than quality. Check whether the list explains its methodology, and click a few entries to see whether the sites and locations are accurate.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Kalamazoo?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months. Lower competition in Kalamazoo often means faster results than the same work in a large metro.</p>
+  </details>
+  <details>
+    <summary>Which Kalamazoo agency is best for a home service or trade business?</summary>
+    <p>NeuWeb Marketing focuses specifically on trades and home service industries — contractors, roofers, HVAC, and similar — across more than 20 local service categories.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
+  },
+  {
+    slug: 'best-seo-companies-in-sioux-falls-2026',
+    title: 'Top 7 Best SEO Companies in Sioux Falls: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Seven Sioux Falls SEO companies, with every website checked by hand in August 2026 — including an entry dropped for an expired security certificate that a quick glance at a directory would never catch.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/seo-agency-vs-freelancer-meeting.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Sioux Falls</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026, out of more than thirty candidates found across South Dakota SEO directories. Several were dropped: one site's security certificate has expired, and a handful of others returned nothing but a bot-detection wall on repeated attempts — inconclusive rather than proof of a dead business, but not enough to include on a list this specific.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Sioux Falls, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Sioux Falls</strong> — a real street address, not just a service-area mention</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Tiger29</h2>
+<p><strong>Best for:</strong> small and medium businesses wanting local SEO plus AI-answer visibility.</p>
+<p>Based at Park Place Center on West 41st Street, Tiger29 serves clients across South Dakota, North Dakota, Iowa, and Nebraska. Alongside conventional local SEO and Google Business Profile work, the agency explicitly names generative and answer engine optimization (GEO/AEO) as a current service.</p>
+<p>Naming that specifically — rather than folding it silently into "SEO" — suggests the team has actually adjusted its approach for AI-driven search rather than just relabeling old services. <a href="https://tiger29.com/" target="_blank" rel="nofollow noopener">tiger29.com</a></p>
+
+<h2>2. SAJ Media Marketing</h2>
+<p><strong>Best for:</strong> local trades and service businesses.</p>
+<p>Founded by Francis John and based in Sioux Falls, SAJ Media Marketing runs what it calls a "Local Visibility System" — a four-part approach covering visibility, reputation, conversion, and authority, aimed squarely at real estate agents, HVAC contractors, electricians, painters, and pest control companies.</p>
+<p>The narrow trade focus is the point: those industries share very similar search behavior and review dynamics, and an agency that's built its whole system around them will recognize your specific problem faster than a generalist. <a href="https://sajmedia.co/" target="_blank" rel="nofollow noopener">sajmedia.co</a></p>
+
+<h2>3. Net Profit Marketing</h2>
+<p><strong>Best for:</strong> ecommerce businesses on Shopify or BigCommerce.</p>
+<p>Operating since 2009 from North Phillips Avenue in Sioux Falls, Net Profit Marketing specializes specifically in ecommerce platform work — site migrations, server-side analytics tagging, and platform-specific SEO for Shopify and BigCommerce stores.</p>
+<p>Ecommerce SEO is a genuinely different discipline from standard local SEO — faceted navigation, product schema, and migration risk are problems a generalist agency rarely handles well. <a href="https://netprofitmarketing.com/" target="_blank" rel="nofollow noopener">netprofitmarketing.com</a></p>
+
+<h2>4. KeyMedia Solutions</h2>
+<p><strong>Best for:</strong> businesses wanting SEO folded into a broader paid-and-organic media strategy.</p>
+<p>Based on South Westport Avenue in Sioux Falls, KeyMedia Solutions positions SEO as one part of an integrated "media strategy" that also covers programmatic advertising, paid social, and traditional media buying, serving manufacturing, financial services, education, and government clients.</p>
+<p>That client mix — especially government and education — generally means reporting and process standards built to survive institutional procurement requirements, not just a small-business sales pitch. <a href="https://keymediasolutions.com/" target="_blank" rel="nofollow noopener">keymediasolutions.com</a></p>
+
+<h2>5. Website Promotion</h2>
+<p><strong>Best for:</strong> businesses wanting a long-established agency and a broad service menu.</p>
+<p>Operating since 2001 from Sioux Falls, Website Promotion has one of the longest track records on this list. Core services are SEO and Google Ads, with add-ons spanning Facebook marketing, web design, reputation management, link building, and copywriting.</p>
+<p>Nearly a quarter-century in one market, through several complete shifts in how search engines work, is a real endurance signal. <a href="https://web-promotion-specialist.com/" target="_blank" rel="nofollow noopener">web-promotion-specialist.com</a></p>
+
+<h2>6. Nash-Keller Media</h2>
+<p><strong>Best for:</strong> businesses wanting marketing operations automated with AI, not just SEO handled.</p>
+<p>Based on Mac Dougall Street in Sioux Falls, Nash-Keller Media frames its work around AI automation systems for lead handling, reporting, and content creation, with SEO and local search sitting inside that broader automation offering rather than standing alone.</p>
+<p>That framing suits a business whose actual bottleneck is operational — too many manual steps between a lead and a booked job — rather than a pure visibility problem. <a href="https://nashkellermedia.com/" target="_blank" rel="nofollow noopener">nashkellermedia.com</a></p>
+
+<h2>7. Brinks Web Solutions</h2>
+<p><strong>Best for:</strong> businesses wanting web design and SEO handled by the same small team.</p>
+<p>Founded in 2011 and based in Sioux Falls, Brinks Web Solutions covers custom web design and development alongside on-page SEO, backlink building, and technical improvements, with 5-star ratings on both Google and Facebook.</p>
+<p>Bundling design and SEO under one team avoids the coordination gap that shows up when a separate designer and SEO consultant aren't talking to each other. <a href="https://brinkswebsolutions.com/" target="_blank" rel="nofollow noopener">brinkswebsolutions.com</a></p>
+
+<h2>What Sioux Falls Businesses Should Actually Ask For</h2>
+<p>Sioux Falls is a mid-sized market, which changes the calculation. Competition for most local service terms is meaningfully lower than in a major metro like Minneapolis or Denver, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a larger city.</p>
+<p>That has a budget implication worth stating plainly: many Sioux Falls businesses are sold national-scale SEO retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Sioux Falls, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Sioux Falls agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Sioux Falls SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. Something as simple as an expired security certificate — which one candidate on the broader Sioux Falls list had — is invisible on a directory page but obvious the moment you actually visit the site.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Sioux Falls?</summary>
+    <p>Seven with verified, active websites as of August 2026: Tiger29, SAJ Media Marketing, Net Profit Marketing, KeyMedia Solutions, Website Promotion, Nash-Keller Media, and Brinks Web Solutions. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Sioux Falls?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Sioux Falls' lower competition means smaller budgets often go further here than in a major metro.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Sioux Falls?</summary>
+    <p>Yes, all seven have a verified Sioux Falls street address, unlike some names on broader South Dakota directory lists that serve the area without being locally based.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Sioux Falls SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Sioux Falls, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Load their website and look for real content and recent work. Ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level. Walk away from anyone guaranteeing rankings.</p>
+  </details>
+  <details>
+    <summary>What should a small Sioux Falls business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a mid-sized market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, so the ordering reflects marketing spend rather than quality. Check whether the list explains its methodology, and click a few entries — even something as basic as an expired security certificate is easy to miss on a directory page.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Sioux Falls?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months. Lower competition in Sioux Falls often means faster results than the same work in a large metro.</p>
+  </details>
+  <details>
+    <summary>Which Sioux Falls agency is best for ecommerce?</summary>
+    <p>Net Profit Marketing has the clearest ecommerce specialism on this list, focused on Shopify and BigCommerce platforms specifically, including migration and server-side analytics work.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
   }
 ];
