@@ -5828,5 +5828,127 @@ module.exports = [
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
 </div>
 `
+  },
+  {
+    slug: 'best-seo-companies-in-ann-arbor-2026',
+    title: 'Top 4 Best SEO Companies in Ann Arbor: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: "Four Ann Arbor SEO companies, with every website checked by hand in August 2026 — a small, genuinely local market where several commonly-listed names turned out to be based in Rochester, Farmington Hills, or Detroit instead.",
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/guest-blogging-writing-desk.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Ann Arbor</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. Several commonly-listed "Ann Arbor" names turned out to be based elsewhere in Michigan — Rochester, Farmington Hills, and the wider Metro Detroit area — with no genuine Ann Arbor office. One agency had rebranded entirely under a new name and had to be tracked down through a domain redirect.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Ann Arbor, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Ann Arbor</strong> — a real street address, not just a directory listing claiming the city</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Pure Visibility</h2>
+<p><strong>Best for:</strong> businesses wanting SEO and AI-answer visibility handled together.</p>
+<p>Founded in 2005 and based on South 1st Street in Ann Arbor, Pure Visibility is WBENC-certified and holds Google Partner status, naming answer engine optimization for AI-powered platforms as a distinct current service alongside conventional SEO and PPC management.</p>
+<p>Two decades in one market, plus an explicit AEO offering rather than a bolted-on afterthought, suggests a team that's kept pace with how search itself has changed. <a href="https://purevisibility.com/" target="_blank" rel="nofollow noopener">purevisibility.com</a></p>
+
+<h2>2. Keystone Media</h2>
+<p><strong>Best for:</strong> businesses wanting one of the longest-running agencies in the market.</p>
+<p>Founded in Ann Arbor in 1994 and still based on South Main Street downtown, Keystone Media is a strategy-led web design and digital marketing firm covering SEO, lead generation, content strategy, and social media alongside website development.</p>
+<p>Thirty-plus years in business, spanning the entire history of commercial search engines, is a genuine depth of experience few agencies on any city list can claim. <a href="https://www.keystonemedia.net/" target="_blank" rel="nofollow noopener">keystonemedia.net</a></p>
+
+<h2>3. Michigan SEO Group</h2>
+<p><strong>Best for:</strong> businesses wanting a straightforward, SEO-first local agency.</p>
+<p>Based on West Eisenhower Circle in Ann Arbor, Michigan SEO Group has more than 18 years of experience and covers local, technical, and on-page SEO as its core offering, with website design, PPC, and content marketing as supporting services rather than the main focus.</p>
+<p>A client testimonial citing a specific outcome — reaching the top of page one — rather than a vague satisfaction claim is worth asking any agency to substantiate directly. <a href="https://www.michiganseogroup.com/" target="_blank" rel="nofollow noopener">michiganseogroup.com</a></p>
+
+<h2>4. Three Seven (formerly 3.7 Designs)</h2>
+<p><strong>Best for:</strong> B2B technology, manufacturing, and life sciences companies specifically.</p>
+<p><strong>Naming note:</strong> this agency rebranded from 3.7 Designs to Three Seven; the original domain now redirects to the new site. Based on East Washington Street in Ann Arbor since 2005, Three Seven specializes explicitly in B2B technology, manufacturing, life sciences, and SaaS companies "where generic marketing doesn't work and expert buyers don't respond to hype."</p>
+<p>That kind of stated, narrow vertical focus is worth a lot if your business fits it — B2B technical buyers search and evaluate very differently from a typical local consumer audience. <a href="https://www.threesevenmarketing.com/" target="_blank" rel="nofollow noopener">threesevenmarketing.com</a></p>
+
+<h2>What Ann Arbor Businesses Should Actually Ask For</h2>
+<p>Ann Arbor is a smaller, distinct market sitting close enough to Metro Detroit that competition for some terms runs higher than an isolated small city would see. Even so, competition for most local service terms is still meaningfully lower than in downtown Detroit proper, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a dense national metro.</p>
+<p>That has a budget implication worth stating plainly: some Ann Arbor businesses are sold enterprise-scale retainers sized for a Detroit corporate client when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Ann Arbor, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not an Ann Arbor agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Ann Arbor SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to the actual address on each listed site. Several candidates researched for this list had polished "Ann Arbor" branding while actually being headquartered in Rochester or Farmington Hills — a distinction that only shows up when you check directly.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Ann Arbor?</summary>
+    <p>Four with verified, active websites as of August 2026: Pure Visibility, Keystone Media, Michigan SEO Group, and Three Seven (formerly 3.7 Designs). Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Ann Arbor?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Ann Arbor's lower competition than Metro Detroit means smaller budgets often go further here.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Ann Arbor?</summary>
+    <p>Yes, all four have a verified Ann Arbor street address, unlike several other commonly-listed names that turned out to be based in Rochester or Farmington Hills.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Ann Arbor SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Ann Arbor, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Load their website and look for real content and recent work. Ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level. Walk away from anyone guaranteeing rankings — and check the real address, since several Ann Arbor candidates checked for this list were actually based elsewhere in Michigan.</p>
+  </details>
+  <details>
+    <summary>What should a small Ann Arbor business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages — fundamentals that often get skipped when an agency is sized for a large Detroit corporate client.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, so the ordering reflects marketing spend rather than quality. In Ann Arbor specifically, several polished "local" listings belonged to agencies actually based in Rochester or Farmington Hills.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Ann Arbor?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months.</p>
+  </details>
+  <details>
+    <summary>Which Ann Arbor agency is best for B2B technology companies?</summary>
+    <p>Three Seven (formerly 3.7 Designs) specializes explicitly in B2B technology, manufacturing, life sciences, and SaaS companies, where buyer behavior differs meaningfully from a typical local consumer audience.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
   }
 ];
