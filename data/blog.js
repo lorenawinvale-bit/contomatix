@@ -5950,5 +5950,141 @@ module.exports = [
   </details>
 </div>
 `
+  },
+  {
+    slug: 'best-seo-companies-in-eugene-2026',
+    title: 'Top 4 Best SEO Companies in Eugene, Oregon: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Four Eugene, Oregon SEO companies, with every website checked by hand in August 2026 — after several well-listed directory names turned out to be based in Oklahoma City, or had expired domains and dead SSL certificates.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/faceless-digital-marketing-camera-rig.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Eugene</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. One prominently listed "Eugene" agency turned out to be headquartered in Oklahoma City and Charlotte, North Carolina with no genuine local presence, and several others had expired SSL certificates or domains now for sale on a marketplace.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Eugene, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Eugene or the immediate area</strong> — and where a company is based just outside the city, that's stated rather than hidden</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. UplinkSpyder</h2>
+<p><strong>Best for:</strong> businesses wanting a long-established, genuinely boutique agency.</p>
+<p>Founded in 2009 as a two-person startup and still based on Willakenzie Road in Eugene, UplinkSpyder now covers website development, digital marketing, graphic design, and SEO under one team, describing itself explicitly as a boutique agency offering "exceptional quality for reasonable prices."</p>
+<p>Sixteen years of continuous operation from the same small-team model is a real signal of stability for a business that wants a consistent point of contact rather than a rotating account team. <a href="https://uplinkspyder.com/" target="_blank" rel="nofollow noopener">uplinkspyder.com</a></p>
+
+<h2>2. Eagle Eye Media</h2>
+<p><strong>Best for:</strong> businesses wanting a founder with deep local Oregon roots.</p>
+<p>Based on Goodpasture Island Road in Eugene and founded by Nick Wiley, a seventh-generation Oregonian. Eagle Eye Media covers website design and development, SEO, reputation management, and PPC, with a stated mission built around long-term client relationships rather than one-off projects.</p>
+<p>A founder with multi-generational roots in the region isn't a technical SEO advantage on its own, but it's a genuine signal of long-term commitment to the local market rather than a transient operation. <a href="https://www.eagleeye.media/" target="_blank" rel="nofollow noopener">eagleeye.media</a></p>
+
+<h2>3. 9 Planets Web Design</h2>
+<p><strong>Best for:</strong> businesses wanting web design and SEO handled as one coordinated project.</p>
+<p>Based in Eugene, 9 Planets runs its process as a stated sequence — strategy, design, development, results — combining web design, SEO, hosting, and technical support under one team rather than treating them as separate services.</p>
+<p>Bundling design and SEO from the start avoids the common, expensive problem of retrofitting SEO onto a site that wasn't built with it in mind. <a href="https://9planetsdesign.com/" target="_blank" rel="nofollow noopener">9planetsdesign.com</a></p>
+
+<h2>4. Weldwood Marketing</h2>
+<p><strong>Best for:</strong> businesses wanting content-driven SEO alongside podcast and video production.</p>
+<p><strong>Location note:</strong> based in Lebanon, Oregon, roughly 25 miles from Eugene, serving the wider Eugene-Springfield-Corvallis corridor. Weldwood runs under the tagline "SEO For Humans," pairing conventional SEO and web design with a dedicated content studio, Weldwood Studios, producing podcasts and branded video content.</p>
+<p>The combination of SEO and in-house content production is unusual and genuinely useful for a business that wants to build a content or media presence alongside its search rankings, not just the rankings alone. <a href="https://weldwoodmarketing.com/services/seo/" target="_blank" rel="nofollow noopener">weldwoodmarketing.com</a></p>
+
+<h2>Eugene vs. Nearby Willamette Valley Towns</h2>
+<p>Published lists routinely present all of these as "Eugene SEO companies." The distinction matters if in-person contact specifically in Eugene is important to you.</p>
+<div style="overflow-x:auto; margin: 0 0 1.4em;">
+<table style="width:100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Company</th><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Location</th></tr>
+</thead>
+<tbody>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">UplinkSpyder, Eagle Eye Media, 9 Planets Web Design</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Eugene</td></tr>
+<tr><td style="padding:10px 14px;">Weldwood Marketing</td><td style="padding:10px 14px;">Lebanon (Eugene-Springfield-Corvallis corridor)</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>What Eugene Businesses Should Actually Ask For</h2>
+<p>Eugene is a mid-sized market anchored partly by the University of Oregon's presence, which changes the calculation somewhat compared to a purely small city. Competition for most local service terms is still meaningfully lower than in a major metro like Portland, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a larger city.</p>
+<p>That has a budget implication worth stating plainly: many Eugene businesses are sold national-scale SEO retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Eugene, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Eugene agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Eugene SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. One prominently listed "Eugene" agency checked for this piece turned out to be headquartered over 2,000 miles away in Oklahoma City — a detail no directory listing surfaced.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Eugene?</summary>
+    <p>Four with verified, active websites as of August 2026: UplinkSpyder, Eagle Eye Media, 9 Planets Web Design, and Weldwood Marketing. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Eugene?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Eugene's lower competition means smaller budgets often go further here than in a major metro like Portland.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Eugene?</summary>
+    <p>Three are based directly in Eugene. Weldwood Marketing is based in nearby Lebanon, Oregon, serving the wider Eugene-Springfield-Corvallis corridor.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Eugene SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Eugene, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Load their website and look for real content and recent work. Ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level. Walk away from anyone guaranteeing rankings — and check the real address, since one commonly-listed "Eugene" agency checked for this list was actually based in Oklahoma City.</p>
+  </details>
+  <details>
+    <summary>What should a small Eugene business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a mid-sized market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, so the ordering reflects marketing spend rather than quality. Check whether the list explains its methodology, and click a few entries — one Eugene-listed agency checked for this piece was actually over 2,000 miles away.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Eugene?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months.</p>
+  </details>
+  <details>
+    <summary>Which Eugene agency is best for content and video production?</summary>
+    <p>Weldwood Marketing pairs SEO with an in-house content studio producing podcasts and branded video, useful for a business wanting to build a media presence alongside search rankings.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
   }
 ];
