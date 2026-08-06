@@ -6096,7 +6096,7 @@ module.exports = [
     excerpt: "Four Bozeman, Montana SEO companies, with every website checked by hand in August 2026 — including one agency that has been operating in the same market since 1997, before Google itself existed.",
     date: '2026-08-03',
     author: 'Umaira Liaquat',
-    image: '/images/blog/lagos-digital-marketing-laptop.jpg',
+    image: '/images/blog/b2b-telemarketing-headset.jpg',
     content: `
 <p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
 <p>Most lists of the <strong>best SEO companies in Bozeman</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
@@ -6218,7 +6218,7 @@ module.exports = [
     excerpt: 'Four Asheville SEO companies, with every website checked by hand in August 2026 — after one commonly-listed "Asheville" agency turned out to be based in Athens, Georgia, and another domain redirected to an unrelated dating site.',
     date: '2026-08-03',
     author: 'Umaira Liaquat',
-    image: '/images/blog/lagos-digital-marketing-study.jpg',
+    image: '/images/blog/local-seo-edmonds-storefront.jpg',
     content: `
 <p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
 <p>Most lists of the <strong>best SEO companies in Asheville</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
