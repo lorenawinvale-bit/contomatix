@@ -194,9 +194,20 @@ function initHeroScene(canvasId) {
     mouseY = ((e.clientY - rect.top) / height) - 0.5;
   });
 
+  // Only render while the hero is actually on screen and the tab is visible —
+  // this scene used to run forever, which was the main source of site-wide lag.
+  var isOnScreen = true;
+  if (typeof IntersectionObserver !== 'undefined') {
+    var io = new IntersectionObserver(function (entries) {
+      isOnScreen = entries[0].isIntersecting;
+    }, { threshold: 0 });
+    io.observe(container);
+  }
+
   var t = 0;
   function animate() {
     requestAnimationFrame(animate);
+    if (!isOnScreen || document.hidden) return;
     t += 0.01;
     group.rotation.y += 0.0018;
     group.rotation.x += (mouseY * 0.3 - group.rotation.x) * 0.02;
@@ -249,8 +260,18 @@ function initAmbientScene(canvasId) {
   var points = new THREE.Points(geo, mat);
   scene.add(points);
 
+  // Only render while this section is actually on screen and the tab is visible.
+  var isOnScreen = true;
+  if (typeof IntersectionObserver !== 'undefined') {
+    var io = new IntersectionObserver(function (entries) {
+      isOnScreen = entries[0].isIntersecting;
+    }, { threshold: 0 });
+    io.observe(container);
+  }
+
   function animate() {
     requestAnimationFrame(animate);
+    if (!isOnScreen || document.hidden) return;
     points.rotation.y += 0.0006;
     points.rotation.x += 0.0002;
     renderer.render(scene, camera);
