@@ -6590,5 +6590,249 @@ module.exports = [
   </details>
 </div>
 `
+  },
+  {
+    slug: 'best-seo-companies-in-green-bay-2026',
+    title: 'Top 4 Best SEO Companies in Green Bay: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Four Green Bay, Wisconsin SEO companies, with every website checked by hand in August 2026 — after most of the agencies ranking for "Green Bay SEO" turned out to be national firms in Chicago, Colorado Springs, Miami, and Charleston.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/maritime-ship-port.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Green Bay</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. Green Bay had an unusually high share of national agencies ranking for local searches: most of the top results for "Green Bay SEO company" belonged to firms actually based in Chicago, Colorado Springs, Miami, Texas, and Charleston — in one case, the agency's own domain name still contained a different city entirely. Another commonly-listed name turned out to be based in Sacramento.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Green Bay, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Green Bay or northeast Wisconsin</strong> — a real street address, not a templated city landing page</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Webfitters</h2>
+<p><strong>Best for:</strong> businesses needing custom development alongside SEO.</p>
+<p>Based on North Broadway in Green Bay and operating since 2000, Webfitters covers UX design, web and software development, ecommerce, mobile and web applications, hosting, and IT consulting alongside SEO and paid ads.</p>
+<p>Twenty-five years in the same market, plus genuine software development capability, makes this a fit for a business whose project involves custom functionality rather than a standard CMS build — most marketing agencies subcontract that work. <a href="https://www.webfitters.com/" target="_blank" rel="nofollow noopener">webfitters.com</a></p>
+
+<h2>2. SEO Website Masters</h2>
+<p><strong>Best for:</strong> businesses wanting an SEO-first agency rather than a general marketing shop.</p>
+<p>Based on North Broadway in Green Bay, SEO Website Masters positions SEO — both local and national — as its core service, with web design, PPC, content, email, reputation management, and conversion rate optimization supporting it rather than competing for focus.</p>
+<p>An agency whose name and core offering are both SEO tends to have deeper specialist depth than a generalist shop where search is one service among fifteen. <a href="https://seowebsitemasters.com/" target="_blank" rel="nofollow noopener">seowebsitemasters.com</a></p>
+
+<h2>3. Legit Click Media</h2>
+<p><strong>Best for:</strong> businesses wanting a small, boutique team and transparent reporting.</p>
+<p>Based in the De Pere area just south of Green Bay, Legit Click Media describes itself as a "boutique-style" agency of seasoned marketers, designers, and writers, covering SEO, local search, Google Local Services, PPC, ecommerce marketing, and dashboard reporting.</p>
+<p>The emphasis on real-time data and dashboard reporting is worth testing directly in a first call — ask to see an actual client dashboard (anonymized) rather than a sample screenshot. <a href="https://legitclickmedia.com/" target="_blank" rel="nofollow noopener">legitclickmedia.com</a></p>
+
+<h2>4. Weidert Group</h2>
+<p><strong>Best for:</strong> B2B manufacturers and industrial companies specifically.</p>
+<p><strong>Location note:</strong> based in the Fox Valley, in northeast Wisconsin's industrial corridor rather than Green Bay proper. Weidert Group specializes exclusively in industrial and B2B marketing — advanced manufacturing, engineering, technology, and supply chain — and is positioned as Wisconsin's top HubSpot agency, with SEO sitting inside a broader lead generation and sales enablement offering.</p>
+<p>For a manufacturer with a long, technical sales cycle, an agency that only works in that space understands the buyer journey far better than a generalist local shop would. <a href="https://www.weidert.com/" target="_blank" rel="nofollow noopener">weidert.com</a></p>
+
+<h2>What Green Bay Businesses Should Actually Ask For</h2>
+<p>Green Bay is a mid-sized market with a strong manufacturing, paper, and logistics base alongside its consumer and hospitality economy. Competition for most local service terms is meaningfully lower than in Milwaukee or Chicago, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a larger metro.</p>
+<p>That has a budget implication worth stating plainly: many Green Bay businesses are sold national-scale SEO retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Green Bay, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Green Bay agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Green Bay SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Green Bay is a particularly clear case of national agencies dominating local search results. Among the top-ranking "Green Bay SEO company" pages, we found firms headquartered in Chicago, Colorado Springs, Miami, Texas, Sacramento, and Charleston — one of which hadn't even changed the city name in its own domain. Checking the actual address filters nearly all of these out in seconds.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Green Bay?</summary>
+    <p>Four with verified, active websites as of August 2026: Webfitters, SEO Website Masters, Legit Click Media, and Weidert Group. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Green Bay?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Green Bay's lower competition than Milwaukee or Chicago means smaller budgets often go further here.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Green Bay?</summary>
+    <p>Two are based in Green Bay proper, Legit Click Media is in the nearby De Pere area, and Weidert Group is in the Fox Valley within northeast Wisconsin's industrial corridor.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Green Bay SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Green Bay, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Check the actual street address first — in Green Bay, most agencies ranking for local searches are headquartered in other states entirely. Then ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level.</p>
+  </details>
+  <details>
+    <summary>What should a small Green Bay business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a mid-sized market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. In Green Bay specifically, agencies from Chicago, Colorado Springs, Miami, Texas, Sacramento, and Charleston all rank for local searches — one without even changing the city name in its own domain.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Green Bay?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months.</p>
+  </details>
+  <details>
+    <summary>Which Green Bay-area agency is best for manufacturers?</summary>
+    <p>Weidert Group works exclusively with B2B industrial companies — advanced manufacturing, engineering, technology, and supply chain — and is positioned as Wisconsin's top HubSpot agency.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
+  },
+  {
+    slug: 'best-seo-companies-in-cedar-rapids-2026',
+    title: 'Top 4 Best SEO Companies in Cedar Rapids: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Four Cedar Rapids, Iowa SEO companies, with every website checked by hand in August 2026 — including one run by a Google Business Profile Platinum Product Expert who handles profile suspension reinstatements.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/gym-seo-class.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Cedar Rapids</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. One agency listed on multiple Cedar Rapids directories now returns nothing but a bare error page — "Error. Page cannot be displayed" — despite still appearing in current listings, and several others ranking for local searches turned out to be national platforms rather than Iowa businesses.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Cedar Rapids, we're not on this list, and none of these companies paid to be here.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Cedar Rapids</strong> — a real street address, not just a city-named landing page</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Early Bird Digital Marketing</h2>
+<p><strong>Best for:</strong> businesses with Google Business Profile problems — especially suspensions.</p>
+<p>Based on Quail Trail NE in Cedar Rapids and run by founder Sherry Bonelli, who has been in the industry since 1998 and holds the designation of Google Business Profile Platinum Product Expert — one of a small number of people Google formally recognizes at that level. She also won Search Engine Land's 2018 SEO Contributor of the Year award and holds a Master's degree in Internet Marketing.</p>
+<p>The Google Business Profile suspension reinstatement service is genuinely specialized work. A suspended profile can wipe out a local business's map pack visibility overnight, and very few agencies have the platform relationships or process knowledge to resolve one reliably. <a href="https://www.earlybirddigitalmarketing.com/" target="_blank" rel="nofollow noopener">earlybirddigitalmarketing.com</a></p>
+
+<h2>2. Informatics</h2>
+<p><strong>Best for:</strong> businesses needing web development, cloud hosting, and SEO from one team.</p>
+<p>Based on Second Avenue SE in downtown Cedar Rapids and operating in the Midwest since 1998, Informatics describes itself as "All Things Internet" — digital marketing, custom web and ecommerce development, 4K and drone video production, and AWS-certified cloud hosting, with Google, HubSpot, and AWS certifications and multiple "Best of the Corridor" awards.</p>
+<p>The AWS certification and cloud migration capability is unusual for a marketing agency, and genuinely useful if your project involves infrastructure work rather than just a CMS site. <a href="https://www.informaticsinc.com/" target="_blank" rel="nofollow noopener">informaticsinc.com</a></p>
+
+<h2>3. Inspired Connection Agency</h2>
+<p><strong>Best for:</strong> businesses wanting SEO paired with AI automation and CRM setup.</p>
+<p>Based in Cedar Rapids, Inspired Connection Agency covers local SEO, Google Ads, social media, and AI-powered marketing automation, with CRM integration and drone video as supporting services, and a homepage full of recognisable local client logos.</p>
+<p>The automation and CRM angle suits a business whose bottleneck is handling leads after they arrive, not just generating more of them — a common and often-overlooked problem. <a href="https://www.inspiredconnectionagency.com/" target="_blank" rel="nofollow noopener">inspiredconnectionagency.com</a></p>
+
+<h2>4. Illuminate Digital</h2>
+<p><strong>Best for:</strong> businesses wanting SEO built into the website from the start.</p>
+<p>Based in Cedar Rapids and serving Marion, Hiawatha, Des Moines, and nationally, Illuminate Digital builds mobile-first sites with technical SEO integrated during development rather than retrofitted, alongside on-page, off-page, and local SEO plus Google Business Profile optimization and branding.</p>
+<p>Their stated focus on measurable revenue over vanity metrics is worth holding them to directly — ask specifically which numbers they report on monthly. <a href="https://www.illuminatedigital.net/" target="_blank" rel="nofollow noopener">illuminatedigital.net</a></p>
+
+<h2>What Cedar Rapids Businesses Should Actually Ask For</h2>
+<p>Cedar Rapids is a mid-sized market with a manufacturing, insurance, and agricultural processing base. Competition for most local service terms is meaningfully lower than in Chicago or Minneapolis, so a well-executed Google Business Profile, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a larger metro.</p>
+<p>That has a budget implication worth stating plainly: many Cedar Rapids businesses are sold national-scale SEO retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Cedar Rapids, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p>Whichever agency you pick, the opening quarter should follow a recognisable shape. If it doesn't, that's an early warning rather than something to wait out.</p>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and Google Business Profile granted <em>from your accounts</em> — plus a technical audit and a baseline of where you currently rank and how much traffic you get. You should receive that baseline in writing.</p>
+<p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
+<p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Cedar Rapids agency.</p>
+
+<h2>A Note on "Top 10" Lists Generally</h2>
+<p>Several of the highest-ranking Cedar Rapids SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. One agency still appearing on multiple current Cedar Rapids directory listings now serves nothing but a bare "Page cannot be displayed" error — a directory profile long outlived the working website behind it.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Cedar Rapids?</summary>
+    <p>Four with verified, active websites as of August 2026: Early Bird Digital Marketing, Informatics, Inspired Connection Agency, and Illuminate Digital. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Cedar Rapids?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Cedar Rapids' lower competition than Chicago or Minneapolis means smaller budgets often go further here.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Cedar Rapids?</summary>
+    <p>Yes, all four have a verified Cedar Rapids address, unlike several national platforms that rank for "Cedar Rapids SEO" without an Iowa presence.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Cedar Rapids SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and local market knowledge, particularly if all your customers are in the area. The technical work itself doesn't depend on location, so if you serve customers beyond Cedar Rapids, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>What if my Google Business Profile gets suspended?</summary>
+    <p>Early Bird Digital Marketing specifically offers Google Business Profile suspension reinstatements, and its founder is a Google Business Profile Platinum Product Expert — a formal Google designation held by relatively few practitioners.</p>
+  </details>
+  <details>
+    <summary>What should a small Cedar Rapids business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a mid-sized market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>Are "top SEO company" lists trustworthy?</summary>
+    <p>Often not. Many are directory sites where placement can be paid for, so the ordering reflects marketing spend rather than quality — and profiles frequently outlive the businesses behind them. One agency on current Cedar Rapids listings now serves only an error page.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Cedar Rapids?</summary>
+    <p>Local SEO improvements such as Google Business Profile fixes can show within weeks. Broader organic rankings typically take three to six months.</p>
+  </details>
+  <details>
+    <summary>Which Cedar Rapids agency is best for complex technical projects?</summary>
+    <p>Informatics holds AWS certification alongside Google and HubSpot credentials, covering cloud hosting and migration as well as custom development — unusual capability for a marketing agency.</p>
+  </details>
+  <details>
+    <summary>Do I need an SEO agency or can I do it myself?</summary>
+    <p>Google Business Profile setup, review collection and basic citation consistency are genuinely doable in-house and cover a lot of ground for a local business. Technical audits, content at scale and link acquisition are where outside help usually pays for itself.</p>
+  </details>
+  <details>
+    <summary>How was this list ordered?</summary>
+    <p>It isn't ranked by results. No outsider can verify another agency's client outcomes, so the numbering is a list rather than a league table. Entries are grouped by what each is genuinely best suited to.</p>
+  </details>
+</div>
+`
   }
 ];
