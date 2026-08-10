@@ -78,3 +78,19 @@ var shareUrl = encodeURIComponent(postUrl);
 <div class="container" style="padding-bottom: 60px;">
   <a href="/blog" class="btn btn-outline">&larr; Back to blog</a>
 </div>
+
+<% if (faqs && faqs.length) { %>
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(function (f) {
+      return {
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a }
+      };
+    })
+  }) %>
+</script>
+<% } %>

@@ -6929,6 +6929,41 @@ module.exports = [
 <p>Google Business Profile and review improvements often show movement within weeks. Broader organic rankings for procedure pages typically take three to six months. Because Tulsa is less saturated than a major metro, budgets here tend to go further than the US averages of roughly $3,200 monthly for agencies and $1,350 for freelancers.</p>
 <p>If you are weighing whether to hire locally, we hand-verified every agency in our list of the <a href="/blog/best-seo-companies-in-tulsa-2026">best SEO companies in Tulsa</a>, and the broader trade-offs are covered in our <a href="/blog/seo-agency-vs-freelancer-2026">SEO agency vs. freelancer guide</a>. For the wider dental playbook beyond Tulsa, see our <a href="/blog/seo-for-dentists-2026">SEO for dentists guide</a>.</p>
 
+<div class="post-faq">
+  <details>
+    <summary>How much does SEO for dentists in Tulsa cost?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Tulsa is less saturated than Dallas or Denver, so a smaller budget usually goes further here than the same spend would in a major metro.</p>
+  </details>
+  <details>
+    <summary>How long does dental SEO take to work in Tulsa?</summary>
+    <p>Google Business Profile and review improvements often show movement within a few weeks. Procedure pages and broader organic rankings typically take three to six months, with higher-value terms like implants taking longest because competition for them is strongest.</p>
+  </details>
+  <details>
+    <summary>What is the single highest-impact fix for a dental practice?</summary>
+    <p>A complete, correctly categorised Google Business Profile. For most practices the map pack drives more new-patient calls than the website itself, and profiles are frequently left half-finished with missing services, outdated hours, or stock photos.</p>
+  </details>
+  <details>
+    <summary>Do I need a separate page for every procedure?</summary>
+    <p>Yes, for the procedures that actually matter to your revenue. A single services page listing fifteen treatments will not rank for any of them individually, while a dedicated implants or Invisalign page can rank and convert on its own.</p>
+  </details>
+  <details>
+    <summary>Why does Google treat dental content differently?</summary>
+    <p>Dentistry falls under "Your Money or Your Life" in Google's quality guidelines, so content is held to a higher accuracy and trust standard. Named, credentialed authors on clinical content matter more here than in most industries.</p>
+  </details>
+  <details>
+    <summary>How do I get more patient reviews without being pushy?</summary>
+    <p>Ask at checkout by text or email, immediately after the appointment. The request feels natural at that moment, and response rates are consistently higher than following up days later.</p>
+  </details>
+  <details>
+    <summary>Should I hire a Tulsa SEO agency or work with someone remote?</summary>
+    <p>The technical work does not depend on location, so remote is fine if the agency understands dental specifically. Local helps mainly for face-to-face contact and market familiarity — we hand-verified the local options in our list of the best SEO companies in Tulsa.</p>
+  </details>
+  <details>
+    <summary>What should I avoid when hiring for dental SEO?</summary>
+    <p>Anyone guaranteeing first-page rankings, long lock-in contracts before you have seen the work, and agencies that cannot show a case study at your actual budget level. Also insist that your Google Business Profile, Analytics and Search Console stay in your own accounts.</p>
+  </details>
+</div>
+
 <div class="post-cta">
   <p>Contomatix works with dental practices on exactly this — Google Business Profile optimization, procedure-specific pages built to Google's YMYL standards, and a review pipeline that turns finished appointments into new bookings. Want a free audit of where your Tulsa practice stands right now?</p>
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
@@ -6987,6 +7022,41 @@ module.exports = [
 <p>Google Business Profile and emergency-page improvements often show movement within a season. Broader organic rankings for installation and replacement terms typically take three to six months. Boise remains cheaper to compete in than a major metro, though less so each year as the valley grows.</p>
 <p>If you are weighing local help, we hand-verified the agencies in our <a href="/blog/boise-search-engine-optimization-2026">Boise search engine optimization guide</a>, and the wider hiring trade-offs are in our <a href="/blog/seo-agency-vs-freelancer-2026">SEO agency vs. freelancer guide</a>. For the full national playbook, see our <a href="/blog/seo-for-hvac-companies-2026">SEO for HVAC companies guide</a>.</p>
 
+<div class="post-faq">
+  <details>
+    <summary>How much does HVAC SEO Boise work cost?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Boise is still cheaper to compete in than a major metro, though less so each year as the valley grows.</p>
+  </details>
+  <details>
+    <summary>How long before an HVAC company sees results?</summary>
+    <p>Google Business Profile and emergency-page improvements often show movement within a season. Installation and replacement terms typically take three to six months, which is why the work belongs in the shoulder months rather than mid-heatwave.</p>
+  </details>
+  <details>
+    <summary>Should I list Meridian, Eagle and Nampa as service areas?</summary>
+    <p>Yes, if you genuinely serve them. The Google Business Profile service area setting directly controls which searches your profile is eligible to appear in, and omitting towns you actually drive to removes you from those results entirely.</p>
+  </details>
+  <details>
+    <summary>Do I really need a separate emergency repair page?</summary>
+    <p>Yes. "AC not cooling" and "emergency HVAC repair" are urgent, high-value searches, and a dedicated page leading with same-day availability and click-to-call consistently outperforms a general services page that mentions emergencies in passing.</p>
+  </details>
+  <details>
+    <summary>How many location pages should I build?</summary>
+    <p>One per town you genuinely serve, each with real local detail — response times, a completed job nearby, the housing stock in that area. Near-identical pages with only the city name swapped are treated as thin content and can hurt rather than help.</p>
+  </details>
+  <details>
+    <summary>When should I publish seasonal HVAC content?</summary>
+    <p>Weeks before demand arrives, not during it. Google needs time to crawl and rank a page, so content published mid-heatwave usually misses the spike it was written for. Refresh the same pages each year rather than writing new ones.</p>
+  </details>
+  <details>
+    <summary>Should I publish my pricing?</summary>
+    <p>Ranges, yes. "How much does a new AC unit cost" is a real search, and a page explaining what drives price up or down removes the biggest objection between a homeowner and a booked estimate. Refusing to discuss cost loses those searchers to whoever answered first.</p>
+  </details>
+  <details>
+    <summary>What should I track to know if it is working?</summary>
+    <p>Booked jobs by source, with emergency repairs separated from installations, since their values and sales cycles differ completely. Watch the ratio between them: doubling repair calls without producing installation leads is a content problem, not a budget one.</p>
+  </details>
+</div>
+
 <div class="post-cta">
   <p>Contomatix works with HVAC and home service companies on exactly this — seasonal content calendars, service-area pages built for real local relevance, and a review pipeline that turns completed jobs into future bookings. Want a free audit of where your Boise company stands right now?</p>
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
@@ -7043,6 +7113,41 @@ module.exports = [
 <h2>What Roofing SEO Wichita Work Costs and How Long It Takes</h2>
 <p>Google Business Profile and review improvements can show movement within weeks. Competitive terms like roof replacement typically take three to six months, which is precisely why the work belongs in the off-season. Wichita remains a mid-sized, less saturated market than Dallas or Kansas City, so budgets go further here.</p>
 <p>If you are weighing local help, we hand-checked every agency in our list of the <a href="/blog/best-seo-companies-in-wichita-2026">best SEO companies in Wichita</a>, and the wider hiring trade-offs are covered in our <a href="/blog/seo-agency-vs-freelancer-2026">SEO agency vs. freelancer guide</a>. The trades playbook more broadly is in our <a href="/blog/digital-marketing-for-tradesmen">digital marketing for tradesmen guide</a>.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>How much does Roofing SEO Wichita work cost?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Wichita is a mid-sized, less saturated market than Dallas or Kansas City, so budgets go further here.</p>
+  </details>
+  <details>
+    <summary>When should a roofing company do SEO work?</summary>
+    <p>In the off-season. Competitive roofing terms take three to six months to rank, so pages built during quiet months are what actually pay out in the 48 hours after a hail event. Nobody builds rankings during the week homeowners are searching.</p>
+  </details>
+  <details>
+    <summary>How do I compete with out-of-state storm chasers?</summary>
+    <p>Rank before they arrive, and publish the content they never will — insurance claim guidance, real photos of local completed jobs, and a track record that shows you will still be in Wichita when a claim gets complicated six weeks later.</p>
+  </details>
+  <details>
+    <summary>Why does insurance claim content matter so much?</summary>
+    <p>Most significant roofing jobs here involve a claim, and homeowners search that process heavily — deductibles, what an adjuster looks for, what happens when a claim is denied. Most roofing sites skip it entirely, which makes it an easy gap to win.</p>
+  </details>
+  <details>
+    <summary>Should repair and replacement have separate pages?</summary>
+    <p>Yes. Someone searching "roof leak repair" and someone searching "roof replacement cost" are at completely different stages with different budgets. One combined services page tends to rank and convert poorly for both.</p>
+  </details>
+  <details>
+    <summary>Do I need pages for Derby, Andover and Haysville?</summary>
+    <p>Yes, if you work there. Hail does not stop at the city limits, and without pages for the surrounding metro you are invisible for a meaningful share of the searches a single storm produces.</p>
+  </details>
+  <details>
+    <summary>Are stock photos of roofs a problem?</summary>
+    <p>They are a wasted opportunity. Before-and-after galleries of real Wichita projects give you genuinely local content no out-of-state competitor can replicate, and roofing is a visual purchase where that evidence does most of the convincing.</p>
+  </details>
+  <details>
+    <summary>What should I measure beyond rankings and calls?</summary>
+    <p>Signed contracts, and specifically how many inspection bookings turn into approved insurance claims. Roofing's sales cycle is long enough that call volume can look healthy while close rates quietly tell a different story.</p>
+  </details>
+</div>
 
 <div class="post-cta">
   <p>Contomatix works with roofing and home service companies on exactly this — storm-season content built in advance, service-area pages with real local relevance, and a review pipeline that turns finished roofs into future contracts. Want a free audit of where your Wichita company stands right now?</p>

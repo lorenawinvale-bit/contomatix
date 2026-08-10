@@ -14,6 +14,22 @@ const { sendContactEmail, smtpConfigured } = require('./lib/mailer');
 
 // Only render a member's <img> if the photo file actually exists, so a
 // missing upload falls back to the initials avatar instead of a broken image.
+// Pull the Q&A pairs out of a post's <div class="post-faq"> block so the page can
+// emit FAQPage structured data. The FAQ markup lives inside the post content, so
+// this parses it back out rather than duplicating the copy in two places.
+function extractFaqs(html) {
+  const block = html.match(/<div class="post-faq">([\s\S]*?)<\/div>/);
+  if (!block) return [];
+  const faqs = [];
+  const re = /<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>/g;
+  let m;
+  while ((m = re.exec(block[1])) !== null) {
+    const strip = s => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    faqs.push({ q: strip(m[1]), a: strip(m[2]) });
+  }
+  return faqs;
+}
+
 function withPhotoCheck(member) {
   return {
     ...member,
@@ -133,7 +149,8 @@ app.get('/blog/:slug', (req, res) => {
     pageClass: 'page-blog-post',
     post,
     author: author ? withPhotoCheck(author) : null,
-    readMinutes
+    readMinutes,
+    faqs: extractFaqs(post.content)
   });
 });
 
