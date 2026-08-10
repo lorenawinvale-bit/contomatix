@@ -6934,5 +6934,120 @@ module.exports = [
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
 </div>
 `
+  },
+  {
+    slug: 'hvac-seo-boise-2026',
+    title: 'HVAC SEO Boise: 7 Proven Steps to More Service Calls in 2026',
+    category: 'Local SEO',
+    excerpt: 'HVAC SEO Boise work has to serve two different customers — the one whose AC died on a 100-degree afternoon, and the one planning a furnace replacement weeks out. Here are 7 proven steps that book more jobs in 2026.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/taxi-seo-directions.jpg',
+    content: `
+<p><strong>HVAC SEO Boise</strong> campaigns face a problem most local trades do not: your customers search completely differently depending on the month. A homeowner whose air conditioning fails during a Treasure Valley heatwave searches nothing like someone comparing furnace quotes in November — and a site built for one loses the other.</p>
+<p>Boise also is not the sleepy market it was a decade ago. Rapid growth has pulled in national HVAC franchises with real marketing budgets, so the fundamentals have to be done properly rather than half-done. Here are the seven steps that matter most.</p>
+
+<img src="/images/blog/taxi-seo-directions.jpg" alt="HVAC SEO Boise — a homeowner searching for a local heating and cooling company on a phone" width="1100" height="733" loading="lazy">
+
+<h2>1. Set the Google Business Profile Service Area Properly</h2>
+<p>Most Boise HVAC companies serve well beyond the city line — Meridian, Eagle, Nampa, Kuna, Star. Every one of those needs to be listed as a service area, not just Boise, because that setting directly controls which searches your profile is even eligible to appear in.</p>
+<p>Set "HVAC Contractor" as the primary category and add every secondary category you genuinely offer (Air Conditioning Repair Service, Furnace Repair Service, Duct Cleaning Service). Google's <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">representation guidelines</a> are worth reading before you restructure anything, since getting this wrong can suspend the listing entirely.</p>
+
+<h2>2. Build a Real Emergency Page</h2>
+<p>"AC not cooling", "furnace won't turn on", "emergency HVAC repair Boise" — these are urgent, high-value searches, and the page that answers them needs to lead with speed: same-day availability, after-hours contact, and a click-to-call number that dominates the mobile screen.</p>
+<p>A generic services page that mentions emergencies in passing will lose this search every time to a competitor with a dedicated page.</p>
+
+<h2>3. Give Each Suburb a Page Worth Reading</h2>
+<p>Ten towns need ten genuinely distinct pages — not one template with the city name swapped, which Google increasingly treats as thin doorway content. Real differences work: response times for that area, a completed job in that neighbourhood, the specific housing stock (older Boise bungalows versus new Meridian builds have different ductwork problems).</p>
+<p>Thin location pages are the single most common mistake in HVAC SEO, and at scale they can actively hurt rather than help.</p>
+
+<h2>4. Publish Ahead of the Season, Not During It</h2>
+<p>Search demand swings hard: AC content needs to be live weeks before the first genuinely hot stretch, furnace and heating content before the first cold snap. Publishing in the middle of a heatwave means Google has had no time to rank the page for the demand you are trying to catch.</p>
+<p>Build a simple calendar and refresh the same pages each year rather than writing new ones — updated, established pages usually outrank brand-new ones.</p>
+
+<h2>5. Answer the Cost Question Directly</h2>
+<p>"How much does a new AC unit cost in Boise" is a real, high-intent search. A page giving honest ranges, explaining what drives price (unit size, brand, ductwork condition, home age) and covering financing removes the biggest objection standing between a homeowner and a booked estimate.</p>
+<p>Practices that refuse to discuss pricing until a phone call lose a meaningful share of these searchers to whoever answered the question first.</p>
+
+<h2>6. Turn Finished Jobs Into Reviews Systematically</h2>
+<p>A system replacement is a multi-thousand-dollar decision, and buyers read those reviews closely. Reviews naming the technician, the response time and whether the final price matched the estimate do far more than a high count of generic five-star ratings.</p>
+<p>Ask by text at job completion, while a working system again is still a relief. Following up days later consistently produces fewer reviews.</p>
+
+<h2>7. Measure Booked Jobs, Not Rankings</h2>
+<p>Track calls and booked estimates by source, and split emergency repairs from installations — they have completely different values and sales cycles. A keyword that generates calls which never convert into scheduled work is not a win.</p>
+<p>Set a baseline before any work starts and review it monthly rather than reacting to daily ranking noise, which moves constantly and rarely means anything. Three to six months is the shortest window that reliably separates real progress from normal fluctuation.</p>
+<p>One number worth watching specifically in this trade: the ratio of repair calls to replacement quotes. A campaign that doubles emergency repair volume but never produces installation leads is technically working and commercially disappointing, and the fix is usually content rather than more budget.</p>
+
+<h2>Common HVAC SEO Boise Mistakes to Avoid</h2>
+<p>The recurring ones: near-duplicate suburb pages, no dedicated emergency page despite offering emergency service, seasonal content written once and never refreshed, and a Google Business Profile service area that omits half the towns the company actually drives to.</p>
+<p>The subtler one is stopping. Boise's competition is growing every year, and a company that optimises once and walks away slides down gradually without anything obviously breaking.</p>
+<p>One more worth naming: chasing broad national terms like "HVAC repair" instead of the local searches that actually produce booked jobs. A Boise company ranking on page four nationally is invisible; the same effort spent on Meridian and Eagle service pages produces calls the same month.</p>
+
+<h2>What HVAC SEO Boise Work Costs and How Long It Takes</h2>
+<p>Google Business Profile and emergency-page improvements often show movement within a season. Broader organic rankings for installation and replacement terms typically take three to six months. Boise remains cheaper to compete in than a major metro, though less so each year as the valley grows.</p>
+<p>If you are weighing local help, we hand-verified the agencies in our <a href="/blog/boise-search-engine-optimization-2026">Boise search engine optimization guide</a>, and the wider hiring trade-offs are in our <a href="/blog/seo-agency-vs-freelancer-2026">SEO agency vs. freelancer guide</a>. For the full national playbook, see our <a href="/blog/seo-for-hvac-companies-2026">SEO for HVAC companies guide</a>.</p>
+
+<div class="post-cta">
+  <p>Contomatix works with HVAC and home service companies on exactly this — seasonal content calendars, service-area pages built for real local relevance, and a review pipeline that turns completed jobs into future bookings. Want a free audit of where your Boise company stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
+  },
+  {
+    slug: 'roofing-seo-wichita-2026',
+    title: 'Roofing SEO Wichita: 7 Proven Steps to More Roofing Leads in 2026',
+    category: 'Local SEO',
+    excerpt: 'Roofing SEO Wichita campaigns are shaped by storm season — demand spikes overnight and out-of-state chasers flood in. Here are 7 proven steps to win those searches as a local roofing company in 2026.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/b2b-telemarketing-cold-call.jpg',
+    content: `
+<p><strong>Roofing SEO Wichita</strong> work is not a steady-demand game. It is shaped by weather: a single hail or wind event can generate more roofing searches in 48 hours than the previous two months combined — and it also brings storm-chasing contractors from out of state competing for exactly those searches.</p>
+<p>That makes the goal specific. You want to already be ranking before the storm, because nobody builds rankings during the week homeowners are actually searching. Here are the seven steps that matter most.</p>
+
+<img src="/images/blog/b2b-telemarketing-cold-call.jpg" alt="Roofing SEO Wichita — a roofing company taking storm damage inspection calls after a hail event" width="1100" height="733" loading="lazy">
+
+<h2>1. Own the Storm Damage Searches Before Storm Season</h2>
+<p>"Hail damage roof repair Wichita", "storm damage roof inspection", "emergency roof tarping" — build these pages in the off-season and let them age. Pages published the day after a storm rarely rank in time to catch the demand.</p>
+<p>Each needs to answer what the homeowner is actually anxious about: how fast you can inspect, whether the inspection is free, and how the insurance claim works.</p>
+
+<h2>2. Make Insurance Claim Content a Core Asset</h2>
+<p>Most Wichita roofing jobs of any size involve an insurance claim, and homeowners search that process heavily — what their deductible means, what an adjuster looks for, what happens if a claim is denied. This is genuinely useful content that most roofing sites skip entirely.</p>
+<p>It also positions you against storm chasers, who typically will not be around when a claim gets complicated six weeks later.</p>
+
+<h2>3. Get the Google Business Profile Right</h2>
+<p>The map pack is where a large share of roofing calls start. Complete every field, list every genuine service (roof repair, replacement, inspection, gutters), add real photos of completed Wichita jobs rather than stock roofs, and set the service area to include Derby, Andover, Haysville and the rest of the metro you actually work in.</p>
+<p>Google's <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">representation guidelines</a> are worth reading first — a suspended profile at the start of storm season is a costly mistake.</p>
+
+<h2>4. Show the Work, With Real Photos</h2>
+<p>Roofing is a visual purchase and a trust purchase at once. Before-and-after galleries of actual Wichita projects — with the neighbourhood named where the homeowner agrees — do more convincing than any amount of copy, and they give you genuinely local content that no out-of-state competitor can replicate.</p>
+
+<h2>5. Build Reviews That Mention the Details That Matter</h2>
+<p>For a roof, buyers read reviews looking for specific reassurances: did the crew show up when promised, was the property left clean, did the final invoice match the estimate, did they handle the insurance paperwork. Reviews naming those specifics outperform a wall of generic five-star ratings.</p>
+<p>Ask at job completion, by text, while the finished roof is still visible in the driveway.</p>
+
+<h2>6. Separate Repair Searches From Replacement Searches</h2>
+<p>Someone searching "roof leak repair" and someone searching "roof replacement cost" are at completely different stages with completely different budgets. They need different pages, different calls to action, and different follow-up.</p>
+<p>Collapsing both into one "Roofing Services" page means neither ranks well and neither converts well.</p>
+
+<h2>7. Track Signed Contracts, Not Rankings</h2>
+<p>Track calls and inspection bookings by source, then follow them to signed contracts. Roofing has a long enough sales cycle that raw call volume can look healthy while the actual close rate quietly tells a different story.</p>
+<p>Set a baseline before any work begins and review it monthly rather than reacting to daily ranking movement, which fluctuates constantly and rarely reflects anything real. Three to six months is the shortest window that reliably separates genuine progress from noise.</p>
+<p>Worth tracking separately in this trade: how many inspection bookings turn into approved insurance claims. That ratio says more about which content is attracting the right homeowners than total lead volume ever will, and it is the number storm-chasing competitors never have to care about because they are gone before the claim closes.</p>
+
+<h2>Common Roofing SEO Wichita Mistakes to Avoid</h2>
+<p>The recurring ones: building storm-damage pages only after a storm, no insurance claim content at all, stock photography instead of real completed jobs, and one generic services page trying to serve both repair and replacement intent.</p>
+<p>The costliest is treating SEO as seasonal. Rankings built in the quiet months are exactly what pays out during the busy week — and storm chasers rely on local roofers not having done that work.</p>
+<p>Another common gap is ignoring the surrounding metro entirely. Hail does not stop at the city limits, and a roofer with no pages for Derby, Andover, Goddard or Haysville is invisible for a meaningful share of the searches a single storm produces.</p>
+
+<h2>What Roofing SEO Wichita Work Costs and How Long It Takes</h2>
+<p>Google Business Profile and review improvements can show movement within weeks. Competitive terms like roof replacement typically take three to six months, which is precisely why the work belongs in the off-season. Wichita remains a mid-sized, less saturated market than Dallas or Kansas City, so budgets go further here.</p>
+<p>If you are weighing local help, we hand-checked every agency in our list of the <a href="/blog/best-seo-companies-in-wichita-2026">best SEO companies in Wichita</a>, and the wider hiring trade-offs are covered in our <a href="/blog/seo-agency-vs-freelancer-2026">SEO agency vs. freelancer guide</a>. The trades playbook more broadly is in our <a href="/blog/digital-marketing-for-tradesmen">digital marketing for tradesmen guide</a>.</p>
+
+<div class="post-cta">
+  <p>Contomatix works with roofing and home service companies on exactly this — storm-season content built in advance, service-area pages with real local relevance, and a review pipeline that turns finished roofs into future contracts. Want a free audit of where your Wichita company stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
   }
 ];
