@@ -7364,5 +7364,120 @@ module.exports = [
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
 </div>
 `
+  },
+  {
+    slug: 'best-seo-companies-in-boise-2026',
+    title: 'Top 5 Best SEO Companies in Boise: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Five Boise, Idaho SEO companies, with every website checked by hand in August 2026 — including one of the best-known link building firms in the country, headquartered on State Street rather than in a coastal tech hub.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/digital-marketing-agency-mexico-city.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Boise</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. Boise's search results are unusually crowded with national firms running templated city pages — Thrive from Texas, SEO.co, Helium SEO from Cincinnati — none of which have an Idaho office. Those were excluded. One agency that does appear genuinely local blocked every attempt to load its site, so it could not be verified either way and was left off rather than included on reputation alone.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Boise, we're not on this list, and none of these companies paid to be here.</p>
+
+<img src="/images/blog/digital-marketing-agency-mexico-city.jpg" alt="Best SEO companies in Boise — every website hand-checked for this verified 2026 list" width="1100" height="733" loading="lazy">
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a parked domain can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable connection to Boise or the Treasure Valley</strong> — a real street address, not a templated city landing page</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Page One Power</h2>
+<p><strong>Best for:</strong> businesses that specifically need link building at scale.</p>
+<p>Based on West State Street in Boise and established in 2010, Page One Power is one of the better-known link building firms in the United States — not just in Idaho. The agency runs 100% manual outreach with white-hat methods, and has served more than 200 clients across healthcare, technology, finance, and ecommerce.</p>
+<p>Link building is the hardest part of SEO to do safely, and a specialist that has survived fifteen years of Google penalising manipulative link schemes is a meaningfully different proposition from a generalist agency offering links as one line item. <a href="https://www.pageonepower.com/" target="_blank" rel="nofollow noopener">pageonepower.com</a></p>
+
+<h2>2. VELOX</h2>
+<p><strong>Best for:</strong> consumer brands and ecommerce businesses wanting revenue attribution, not traffic reports.</p>
+<p>Based on South 9th Street in Boise, VELOX splits its offering into organic, paid media, and "intelligence" — the last being attribution analytics and revenue modelling through a proprietary platform called ALTIERA. Client work spans beauty, fashion, SaaS, B2B, and consumer products across 59-plus brands.</p>
+<p>The attribution focus matters if you have been burned by agencies reporting rankings and sessions while nobody could say which channel actually produced revenue. <a href="https://velox.com/" target="_blank" rel="nofollow noopener">velox.com</a></p>
+
+<h2>3. Social Eyes Marketing</h2>
+<p><strong>Best for:</strong> local Treasure Valley businesses that want leads rather than a pretty website.</p>
+<p>Boise-based with 15-plus years serving the Treasure Valley and 164 five-star reviews, Social Eyes Marketing covers SEO, web design, Google Ads, social, video and photography, serving Meridian, Nampa and Eagle alongside Boise itself.</p>
+<p>Their stated position — that websites fail because they don't generate leads, not because of design — plus no long-term contracts, is a reasonable fit for a local business that has been sold a redesign before and seen nothing change. <a href="https://getsocialeyes.com/" target="_blank" rel="nofollow noopener">getsocialeyes.com</a></p>
+
+<h2>4. Crevand SEO</h2>
+<p><strong>Best for:</strong> businesses that want pricing stated upfront before the first call.</p>
+<p>Headquartered on West State Street in Boise with a second office in Wolfeboro, New Hampshire, Crevand has more than 10 years behind it and covers local and technical SEO, content, SEM, reputation management and Google Business Profile work.</p>
+<p>Unusually for this industry, monthly pricing is published openly — campaigns start at $2,000 and run to $10,000 depending on scope. That transparency saves everyone a discovery call if the budget was never going to match. <a href="https://crevand.com/" target="_blank" rel="nofollow noopener">crevand.com</a></p>
+
+<h2>5. Bear Fox Marketing</h2>
+<p><strong>Best for:</strong> home service and manufacturing businesses specifically.</p>
+<p><strong>Location note:</strong> based in Meridian, within the Boise metro rather than the city proper. Founded in 2014, Bear Fox Marketing works specifically with home services — remodeling, HVAC, plumbing, electrical, roofing — plus construction and manufacturing, and names AI search optimization as a distinct current service.</p>
+<p>A vertical specialist that has run campaigns for hundreds of similar businesses generally recognises your specific problem faster than a generalist working it out from scratch. <a href="https://bearfoxmarketing.com/" target="_blank" rel="nofollow noopener">bearfoxmarketing.com</a></p>
+
+<h2>What Boise Businesses Should Actually Ask For</h2>
+<p>Boise is not the easy market it was five years ago. Rapid growth has pulled in national competitors and raised the baseline, so the fundamentals now have to be done properly rather than half-done. Even so, competition for most local service terms is lower than in Seattle or Denver, and a well-executed <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Google Business Profile</a>, consistent citations, genuine reviews and a handful of solid local pages still move the needle further here than the same work would in a major metro.</p>
+<p>That has a budget implication worth stating plainly: many Boise businesses are sold national-scale retainers when local SEO fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>If your business serves customers well beyond Boise, restricting your search to local agencies narrows your options for no technical benefit. The wider trade-offs are covered in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and the market itself in our <a href="/blog/boise-search-engine-optimization-2026">Boise search engine optimization guide</a>.</p>
+
+<h2>How to Check Any List of the Best SEO Companies in Boise</h2>
+<p>Several of the highest-ranking Boise SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Boise is a particularly clear case of national firms dominating local results. Among the top-ranking pages for "Boise SEO company" we found agencies headquartered in Texas, Cincinnati and elsewhere, all running city-specific landing pages with no Idaho office behind them. Checking for a real street address filters most of them out in seconds.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Boise?</summary>
+    <p>Five with verified, active websites as of August 2026: Page One Power, VELOX, Social Eyes Marketing, Crevand SEO, and Bear Fox Marketing. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Boise?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Crevand publishes its range openly at $2,000 to $10,000 monthly, which is a useful benchmark for the local market.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Boise?</summary>
+    <p>Four are based in Boise proper. Bear Fox Marketing is in Meridian, within the Boise metro, and Crevand maintains a second office in New Hampshire alongside its Boise headquarters.</p>
+  </details>
+  <details>
+    <summary>Why were some well-known agencies left off this list?</summary>
+    <p>Because they have no Idaho office. Several firms ranking for "Boise SEO company" are headquartered in Texas, Cincinnati and elsewhere, running templated city landing pages. One genuinely local agency was excluded for a different reason — its site blocked every attempt to load it, so it could not be verified.</p>
+  </details>
+  <details>
+    <summary>Is Boise still an easy market to rank in?</summary>
+    <p>Less than it used to be. Rapid growth has drawn in out-of-state competitors and national brands with real budgets, so fundamentals now have to be executed properly to hold a position rather than done once and left alone.</p>
+  </details>
+  <details>
+    <summary>Which Boise agency is best for link building?</summary>
+    <p>Page One Power specialises in it and is among the better-known link building firms nationally, running 100% manual outreach. Link building is the easiest part of SEO to get wrong dangerously, so a specialist matters more here than elsewhere.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Boise SEO company or a national one?</summary>
+    <p>Local helps for face-to-face contact and market knowledge, particularly if all your customers are in the Treasure Valley. The technical work itself doesn't depend on location, so if you serve customers beyond Boise, restricting to local agencies narrows your options without a technical benefit.</p>
+  </details>
+  <details>
+    <summary>How do I check if an SEO company is legitimate?</summary>
+    <p>Load their website and look for a real street address, then ask who will handle your account day to day, what the contract terms are, and for a case study at your budget level. Walk away from anyone guaranteeing rankings.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix helps fast-growing markets like Boise turn local search visibility into actual calls and appointments — technical fixes, content built around real local search demand, and link building that holds up over time. Want a free audit of where your Boise business stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
   }
 ];
