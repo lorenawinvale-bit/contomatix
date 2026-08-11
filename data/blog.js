@@ -7973,5 +7973,147 @@ module.exports = [
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
 </div>
 `
+  },
+  {
+    slug: 'oxnard-seo-2026',
+    title: 'Oxnard SEO: 4 Best Companies, Hand-Verified for 2026',
+    category: 'Local SEO',
+    excerpt: 'Oxnard SEO agencies compared, with every website checked by hand in August 2026 — including one company currently ranking on page one of Google whose website does not load at all.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/lagos-digital-marketing-study.jpg',
+    content: `
+<p>Search <strong>Oxnard SEO</strong> and the first page is mostly agencies from somewhere else. Before writing this, we checked every result: one is in Ventura, one is in Portland, Oregon, several are nationwide operations with an Oxnard landing page — and one, ranking on page one right now, has a website that refuses connections entirely.</p>
+<p>That last one deserves stating plainly. A dead site is currently ranking for this term. If you called the number on a directory listing for it, nothing would answer.</p>
+<p>So this list works differently. Four agencies, every website opened by hand in August 2026, every address checked against the company's own site rather than a directory profile.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Oxnard, we're not on this list, and none of these companies paid to be here.</p>
+
+<img src="/images/blog/lagos-digital-marketing-study.jpg" alt="Oxnard SEO — comparing local agencies and their search results before hiring" width="1100" height="733" loading="lazy">
+
+<h2>What the Other Oxnard SEO Lists Leave Out</h2>
+<p>The main competing listicle for this search lists six agencies with addresses and star ratings. It does not say how the list was built, does not check whether the websites load, does not mention pricing, includes no FAQs, and gives no local market data. It is a scrape of Google Business Profile data with a headline on top.</p>
+<p>That is the gap this page tries to fill. Below you get the verification method, what each agency is genuinely best at, published pricing where it exists, real local search volumes, and an honest note on which "Oxnard" agencies are not in Oxnard.</p>
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every candidate:</p>
+<ul>
+<li><strong>The website actually loads</strong> — checked manually, not by status code. This alone eliminated two page-one results: one refused the connection, the other timed out at DNS</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not one line in a footer</li>
+<li><strong>A verifiable Oxnard address on the company's own site</strong> — not a directory listing. One agency listed at an Oxnard address states on its own homepage that it is "based throughout the US" with no address anywhere and a 2022 copyright</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful</li>
+</ul>
+<p>This is <em>not</em> a ranking by results. Nobody outside an agency can verify its client outcomes, and anyone publishing a "best to worst" order is inventing it.</p>
+
+<h2>1. LocalisedSEO</h2>
+<p><strong>Best for:</strong> businesses that want the person doing the work to be the person they talk to.</p>
+<p>Based on Samuel Avenue in Oxnard and led by Casey Keith and Meki Cox, LocalisedSEO is a three-person team serving Ventura County and Southern California. Services span SEO, web design, social, brand strategy, reputation management and PPC, with a stated policy of not outsourcing work.</p>
+<p>A three-person team is the clearest answer to the "who will actually work on my account" question — there is nobody to hand you off to. The trade-off is capacity, which is worth asking about directly. <a href="https://localisedseo.com/" target="_blank" rel="nofollow noopener">localisedseo.com</a></p>
+
+<h2>2. Revv Marketing</h2>
+<p><strong>Best for:</strong> businesses already spending seriously on paid ads.</p>
+<p>Based on Hueneme Avenue in Oxnard, Revv Marketing is a Google Partner with over a decade behind it, explicitly targeting mid-market businesses spending $5,000 to $25,000 a month on advertising. The core is PPC strategy, account audits, and franchise or multi-location campaigns, with local SEO and landing page builds alongside.</p>
+<p>Worth being clear: this is a paid-media agency first, SEO second. If organic search is your main channel, one of the others here fits better — but if you are burning ad budget and suspect waste, an audit-led PPC specialist is the right call. <a href="https://revvmarketing.com/" target="_blank" rel="nofollow noopener">revvmarketing.com</a></p>
+
+<h2>3. MGA Nexus Marketing</h2>
+<p><strong>Best for:</strong> small businesses wanting SEO, reputation and print handled together.</p>
+<p>Based on North Oxnard Boulevard, MGA Nexus covers SEO, social media management, reputation management, web design and internet marketing — and unusually, printing for business cards and postcards.</p>
+<p>The print capability is a genuine convenience for a local business that still runs offline marketing alongside digital, and it is not something the other agencies here offer. <a href="https://mganexus.com/" target="_blank" rel="nofollow noopener">mganexus.com</a></p>
+
+<h2>4. Marketing 1on1</h2>
+<p><strong>Best for:</strong> businesses on a smaller budget wanting published pricing and no contract.</p>
+<p><strong>Location note:</strong> listed at an Oxnard address on West 5th Street, but this is a nationally-operating company with client work referenced across Los Angeles, New York, Seattle, Houston and more. Treat it as a national provider with an Oxnard presence rather than a local shop.</p>
+<p>What it does offer, which most here do not, is transparency: tiered packages published from $799 a month, no contracts, no setup fees, and a client dashboard for daily campaign tracking. For a small business that has been quoted vague four-figure retainers, that clarity is worth something. <a href="https://www.marketing1on1.com/digital-marketing-seo-oxnard/" target="_blank" rel="nofollow noopener">marketing1on1.com</a></p>
+
+<h2>What Oxnard SEO Actually Costs</h2>
+<p>No competing list for this search publishes pricing, so here are the real numbers we found while checking:</p>
+<ul>
+<li><strong>$799/month</strong> — published entry-tier package from Marketing 1on1, no contract</li>
+<li><strong>$1,300–$3,000/month</strong> — the range published by one of the out-of-area agencies ranking for Oxnard, a fair benchmark for a serious local campaign</li>
+<li><strong>$5,000–$25,000/month ad spend</strong> — the client profile Revv Marketing targets, which is a different tier of business entirely</li>
+<li><strong>US averages</strong> — roughly $99/hour and $3,200/month for agencies, $72/hour and $1,350/month for freelancers</li>
+</ul>
+<p>If a quote lands far outside those bands in either direction, ask what specifically accounts for it.</p>
+
+<h2>The Local Search Demand in Oxnard</h2>
+<p>Oxnard is Ventura County's largest city, and the local service searches carry real, checkable volume — roughly 165 searches a month for "plumber Oxnard CA", 135 for "best family dentist in Oxnard", and 80 for "lawyer Oxnard".</p>
+<p>Those are not huge numbers, and that is the point. A single map pack position for a term like that, in a city this size, is a handful of high-intent calls a month for a business where one plumbing job or one legal client can be worth thousands. That maths works far better here than chasing broad Los Angeles terms.</p>
+
+<h2>Which "Oxnard" Agencies Are Not in Oxnard</h2>
+<p>This is the single most useful check you can run on any local SEO list, so here is what verification turned up for this one:</p>
+<div style="overflow-x:auto; margin: 0 0 1.4em;">
+<table style="width:100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Ranking for "Oxnard SEO"</th><th style="text-align:left; padding:10px 14px; border-bottom:2px solid #ddd;">Actually based in</th></tr>
+</thead>
+<tbody>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">805 SEO</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Ventura, CA</td></tr>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">Lithium Marketing</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">Portland, Oregon</td></tr>
+<tr><td style="padding:10px 14px; border-bottom:1px solid #eee;">PurpleJACK SEO</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">No address given; site says "throughout the US", 2022 copyright</td></tr>
+<tr><td style="padding:10px 14px;">One page-one result</td><td style="padding:10px 14px;">Website refuses connections — could not be verified at all</td></tr>
+</tbody>
+</table>
+</div>
+<p>None of this makes those agencies bad at their work. It does mean that if you picked one expecting someone who could meet you in Oxnard, you would be surprised.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about an $800 monthly retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>What a Good First 90 Days Looks Like</h2>
+<p><strong>Weeks 1–2:</strong> access handed over properly — Analytics, Search Console and <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Google Business Profile</a> granted from your own accounts — plus a technical audit and a written baseline of current rankings and traffic.</p>
+<p><strong>Weeks 3–6:</strong> the fixes nobody argues about. Broken pages, duplicate title tags, Google Business Profile categories and service areas, citation inconsistencies, speed problems. In a market this size, this is usually where the fastest gains come from.</p>
+<p><strong>Weeks 7–12:</strong> content and links begin — the slow part, and the point where impatient clients switch agencies just before results land.</p>
+<p>If you want a second opinion on a proposal you have received, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not an Oxnard agency.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>Local matters for face-to-face contact and genuine market knowledge, particularly if all your customers are in Ventura County. It matters much less for the technical work — crawl budget, site speed and schema markup do not change by zip code.</p>
+<p>The wider trade-offs are in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a> and our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>. If you're comparing how agency quality differs by market, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-reno-2026">Reno</a> and <a href="/blog/best-seo-companies-in-boise-2026">Boise</a>.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best Oxnard SEO companies?</summary>
+    <p>Four with verified, working websites and a checkable Oxnard address as of August 2026: LocalisedSEO, Revv Marketing, MGA Nexus Marketing, and Marketing 1on1 (a national provider with an Oxnard presence). Each suits a different type of business.</p>
+  </details>
+  <details>
+    <summary>How much does Oxnard SEO cost?</summary>
+    <p>Published local pricing ranges from $799 monthly at the entry tier to $1,300–$3,000 for a serious campaign. US averages sit around $3,200 monthly for agencies and $1,350 for freelancers. Revv Marketing targets businesses spending $5,000–$25,000 monthly on ads specifically.</p>
+  </details>
+  <details>
+    <summary>Is an SEO company really ranking in Oxnard with a dead website?</summary>
+    <p>Yes. One page-one result for "Oxnard SEO" refuses connections entirely, and a second timed out at DNS. Rankings persist for a while after a site goes down, which is exactly why checking the link yourself matters more than trusting a directory listing.</p>
+  </details>
+  <details>
+    <summary>Are these agencies actually based in Oxnard?</summary>
+    <p>Three have verifiable Oxnard addresses on their own websites. Marketing 1on1 is listed at an Oxnard address but operates nationally, which is disclosed above. Several other agencies ranking for this term are in Ventura, Portland, or give no address at all.</p>
+  </details>
+  <details>
+    <summary>How much local search volume does Oxnard actually have?</summary>
+    <p>Roughly 165 monthly searches for "plumber Oxnard CA", 135 for "best family dentist in Oxnard", and 80 for "lawyer Oxnard". Modest numbers, but high intent — one job from a term like that can cover months of the SEO spend.</p>
+  </details>
+  <details>
+    <summary>Should I hire a local Oxnard agency or a national one?</summary>
+    <p>Local helps for face-to-face contact and market knowledge if your customers are all in Ventura County. The technical work does not depend on location, so if you serve customers beyond Oxnard, restricting to local agencies narrows your options for no technical benefit.</p>
+  </details>
+  <details>
+    <summary>What should a small Oxnard business do first?</summary>
+    <p>Complete the Google Business Profile properly with every service area listed, fix name-address-phone inconsistencies across directories, and build a systematic review request into how jobs close. Content and links come after.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Oxnard?</summary>
+    <p>Google Business Profile fixes can show movement within weeks. Broader organic rankings typically take three to six months. Competition here is lower than Los Angeles, so the timeline is usually shorter than a major metro.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix works with businesses in competitive markets on exactly this — Google Business Profile work, technical fixes, and content built around how people actually search locally. Want a free audit of where your Oxnard business stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
   }
 ];
