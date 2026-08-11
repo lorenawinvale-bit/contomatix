@@ -7892,9 +7892,15 @@ module.exports = [
 <p>As the county seat of Hall County and the anchor of Nebraska's Tri-Cities alongside Kearney and Hastings, Grand Island draws customers from a catchment far larger than its own population. People from surrounding towns treat it as their commercial centre for healthcare, retail, trades and professional services.</p>
 <p>The local economy has also proven unusually durable — Hall County added roughly 4,400 jobs between 2003 and 2013, with employment expanding 3.6% during the recession years when most comparable markets contracted. A stable business base means competitors who stay in business, which raises the value of a ranking position you actually hold.</p>
 
-<h2>Google Business Profile: The Single Highest-Leverage Fix</h2>
-<p>For most Grand Island businesses, the map pack drives more calls than the website does. Complete every field on your <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Google Business Profile</a>: primary and secondary categories, service areas, hours including any Saturday availability, and real photographs of the premises and team rather than stock imagery.</p>
-<p>Businesses serving the wider Tri-Cities region should list every town they genuinely cover as a service area rather than leaving it at Grand Island alone — that setting directly controls which searches the profile is eligible to appear in at all.</p>
+<h2>Google Business Profile: The Field-by-Field Setup</h2>
+<p>For most Grand Island businesses the map pack drives more calls than the website does. "Fill it out completely" is the advice everyone gives, which is useless without knowing which fields actually carry weight. They are not equal — here is the order that matters.</p>
+<p><strong>Primary category (the heaviest single field).</strong> Google matches this almost literally against the query. A business categorised as "Contractor" will not surface for "plumber" the way one categorised as "Plumber" does. Choose the narrowest category that describes your main revenue line, then add secondaries for everything else you genuinely do — secondaries help, but noticeably less than the primary.</p>
+<p><strong>Service areas — where Grand Island businesses lose the most ground.</strong> This city anchors Nebraska's Tri-Cities alongside Kearney and Hastings, and draws customers from across Hall County and the smaller towns around it — Doniphan, Wood River, Alda, Cairo, Aurora. If your profile lists only "Grand Island", you are ineligible for searches in places you already drive to. List every town you genuinely serve. Do not pad it with the whole of central Nebraska, though: an over-stretched service area dilutes local relevance rather than expanding reach.</p>
+<p><strong>Services and products.</strong> Separate fields, and badly underused. Each entry takes a name and description, giving Google explicit text to match against long-tail searches your website may never cover. An HVAC company listing "furnace repair", "AC installation" and "duct cleaning" as distinct services is matching three query patterns instead of one.</p>
+<p><strong>Business description.</strong> 750 characters. Weak as a ranking factor, real as a conversion factor — and increasingly it is the text pulled into AI-generated answers. Say plainly what you do, where, and what is specific about the offer.</p>
+<p><strong>Photos.</strong> Real premises, real team, real completed work. Geotagging images is a myth, but recency and volume correlate with engagement, and engagement does feed rankings. Stock photography is the clearest signal of a profile nobody maintains.</p>
+<p><strong>Hours, including special hours.</strong> Google filters by "open now", so accuracy has a direct traffic effect. Holiday hours left blank trigger an "hours may differ" warning that visibly cuts click-through — a real issue around the Nebraska State Fair and harvest season when many local businesses change schedules.</p>
+<p>Read Google's <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">representation guidelines</a> before restructuring anything, particularly if you have several practitioners or locations. That is the most common route to a suspension, and a suspended profile removes you from the map pack overnight.</p>
 
 <h2>How Local Rankings Actually Work</h2>
 <p>Google ranks local results on relevance, distance and prominence. Relevance is whether your profile and site actually match what was searched. Distance is proximity to the searcher or the area they named. Prominence is the reputation signal — reviews, links and consistency of your business information across the web.</p>
@@ -7904,8 +7910,16 @@ module.exports = [
 <p>In a market this size, the order of work matters more than the volume of it. Get the Google Business Profile complete and accurate, fix name-address-phone inconsistencies across directories and the Chamber listing, and build a systematic review request into how jobs or appointments close.</p>
 <p>Only after that does content and link building earn its keep. Agencies that lead with a large content programme in a 54,000-person market are usually selling their standard package rather than what the market actually needs.</p>
 
-<h2>Citations and NAP Consistency</h2>
-<p>Name, address and phone consistency across directories, the Grand Island Area Chamber of Commerce, and industry associations is unglamorous work that still matters. A business listed slightly differently across several sources sends a weaker trust signal than one that is identical everywhere — and it is a cheap, one-time fix.</p>
+<h2>The Grand Island Citation Sources That Actually Exist</h2>
+<p>Generic advice says "build local citations" without naming a single one. For a Grand Island business these are the specific sources worth the time, roughly in order of value:</p>
+<ul>
+<li><strong>Grand Island Area Chamber of Commerce</strong> — 309 W 2nd St, Grand Island NE 68801. Membership puts you in their searchable directory at business.grandisland.org/directory, which is one of the few genuinely Grand Island-specific citation sources carrying real local weight</li>
+<li><strong>Grand Island Area Economic Development Corporation</strong> — operates alongside the Chamber and lists local businesses and business support organisations</li>
+<li><strong>Nebraska Chamber of Commerce</strong> — the state-level member directory at nechamber.com, useful if you serve beyond Hall County</li>
+<li><strong>Nebraska 211 (ne211.org)</strong> — a services directory that matters specifically for healthcare, social services and anything community-facing</li>
+<li><strong>Hall County and city-level listings</strong> — plus any trade association directory relevant to your sector, which in this market frequently means agriculture, food processing or construction bodies</li>
+</ul>
+<p>The reason consistency matters more than volume: Google cross-references your name, address and phone number across these sources to decide how confident it is that your business is real and where it says it is. "Smith Plumbing LLC" in one directory, "Smith Plumbing" in another and "Smith Plumbing Co." on your Chamber listing is three weak signals instead of one strong one. Pick the exact legal name, use it identically everywhere including suite numbers and abbreviations, and fix the old listings rather than only adding new ones.</p>
 
 <h2>Reviews Carry More Weight in a Small Market</h2>
 <p>In a city this size, word of mouth and online reviews overlap heavily — customers frequently know someone who has used you. Reviews that mention specific staff, specific jobs and specific outcomes do more for both rankings and conversion than a high count of generic five-star ratings.</p>
@@ -8054,6 +8068,20 @@ module.exports = [
 </table>
 </div>
 <p>None of this makes those agencies bad at their work. It does mean that if you picked one expecting someone who could meet you in Oxnard, you would be surprised.</p>
+
+<h2>What to Fix Yourself Before You Pay Anyone</h2>
+<p>A good agency will do this work, but you should not pay four figures a month for it if you have a spare afternoon. In a market the size of Oxnard, these three things alone move rankings.</p>
+<p><strong>1. The Google Business Profile fields that actually carry weight.</strong> Not all fields are equal. The <em>primary category</em> is the heaviest — Google matches it almost literally against the query, so a business categorised as "Contractor" will not surface for "plumber" the way one categorised as "Plumber" does. Then <em>service areas</em>: Oxnard sits against Ventura, Camarillo, Port Hueneme and Santa Paula, and if your profile lists only Oxnard you are ineligible for searches in cities you already drive to. Then the <em>services</em> field, which is separate from categories and badly underused — each entry gives Google explicit text to match against long-tail queries your website may never cover. Finally hours, including special hours, since Google filters by "open now" and a blank holiday schedule triggers an "hours may differ" warning that visibly cuts click-through.</p>
+<p><strong>2. The Oxnard citation sources that actually exist.</strong> Generic advice says "build citations" and names none. The specific ones here:</p>
+<ul>
+<li><strong>West Ventura County Business Alliance</strong> — 1901 Solar Dr, Oxnard CA 93036, (805) 484-4384. This is the chamber of commerce covering Oxnard, Camarillo and Port Hueneme, and its member directory at wvcba.org is the closest thing to an authoritative local citation source</li>
+<li><strong>City of Oxnard Economic Development</strong> — oxnard.gov/economic-development, listing local business resources and support programmes</li>
+<li><strong>California Chamber of Commerce local chamber lookup</strong> — useful for confirming which regional bodies you actually qualify to join</li>
+<li>Plus the trade association directory for your sector, which in this market frequently means agriculture, logistics or construction</li>
+</ul>
+<p>Consistency matters more than volume. Google cross-references your name, address and phone across these sources to judge whether the business is real and where it claims to be. "Smith Plumbing LLC" in one directory and "Smith Plumbing Co." in another is two weak signals instead of one strong one. Fix the old listings rather than only adding new ones.</p>
+<p><strong>3. A review request that happens every time.</strong> Not a campaign — a habit. A text or email the moment a job closes, every job, no exceptions. With "plumber Oxnard CA" drawing roughly 165 searches a month, the businesses winning that map pack are rarely the ones with the best websites; they are the ones with recent reviews naming specific work.</p>
+<p>Do those three and you have covered a meaningful share of what an entry-level retainer delivers. What you cannot realistically DIY is technical SEO, content at scale and link building — that is where paying someone earns its keep.</p>
 
 <h2>Questions to Ask Before You Sign</h2>
 <ul>
