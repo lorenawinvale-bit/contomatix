@@ -117,6 +117,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Tulsa agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-wichita-2026">Wichita</a>, <a href="/blog/best-seo-companies-in-springfield-mo-2026">Springfield, MO</a> and <a href="/blog/best-seo-companies-in-fayetteville-2026">Fayetteville, Arkansas</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Tulsa</h2>
 <p>Several of the highest-ranking Tulsa SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. A list that hasn't been checked recently will usually contain at least one dead or abandoned site — which is exactly what happened here before verification.</p>
@@ -3976,6 +3978,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Spokane Valley agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-coeur-dalene-2026">Coeur d'Alene, Idaho</a>, <a href="/blog/best-seo-companies-in-bend-2026">Bend, Oregon</a> and <a href="/blog/best-seo-companies-in-boise-2026">Boise</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Spokane Valley</h2>
 <p>Several of the highest-ranking Spokane-area SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. A list that hasn't been checked recently will usually contain at least one dead or abandoned site — which is exactly what happened here before verification, with four separate entries dropped.</p>
@@ -4119,6 +4123,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Bend agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-eugene-2026">Eugene, Oregon</a>, <a href="/blog/best-seo-companies-in-boise-2026">Boise</a> and <a href="/blog/best-seo-companies-in-spokane-valley-2026">Spokane Valley</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Bend, Oregon</h2>
 <p>Several of the highest-ranking Bend SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. A genuinely small market like Bend also means some published lists pad their count with agencies that are actually based in Portland or elsewhere — worth checking directly rather than trusting the label.</p>
@@ -4247,6 +4253,8 @@ module.exports = [
 <p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a small market come from.</p>
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Coeur d'Alene agency.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-spokane-valley-2026">Spokane Valley</a>, <a href="/blog/best-seo-companies-in-boise-2026">Boise</a> and <a href="/blog/best-seo-companies-in-bozeman-2026">Bozeman, Montana</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Coeur d'Alene, Idaho</h2>
 <p>Several of the highest-ranking Coeur d'Alene SEO lists mix genuinely local businesses with national agencies that simply built a landing page targeting the city's name. That's a common SEO tactic, and it's not necessarily dishonest, but it does mean the list is no longer telling you who's actually local.</p>
@@ -4403,6 +4411,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Kalamazoo agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-ann-arbor-2026">Ann Arbor</a>, <a href="/blog/best-seo-companies-in-green-bay-2026">Green Bay</a> and <a href="/blog/best-seo-companies-in-cedar-rapids-2026">Cedar Rapids</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Kalamazoo</h2>
 <p>Several of the highest-ranking Kalamazoo SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. A list that hasn't been checked recently will sometimes carry a mislabeled entry — a nearly 50-year-old Pennsylvania IT firm was listed as a Kalamazoo digital marketing agency on one directory checked for this piece.</p>
@@ -4542,6 +4552,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Sioux Falls agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-fargo-2026">Fargo</a>, <a href="/blog/best-seo-companies-in-duluth-2026">Duluth</a> and <a href="/blog/best-seo-companies-in-cedar-rapids-2026">Cedar Rapids</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Sioux Falls</h2>
 <p>Several of the highest-ranking Sioux Falls SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. Something as simple as an expired security certificate — which one candidate on the broader Sioux Falls list had — is invisible on a directory page but obvious the moment you actually visit the site.</p>
@@ -4670,6 +4682,8 @@ module.exports = [
 <p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Fargo agency.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-sioux-falls-2026">Sioux Falls</a>, <a href="/blog/best-seo-companies-in-duluth-2026">Duluth</a> and <a href="/blog/best-seo-companies-in-bozeman-2026">Bozeman, Montana</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Fargo</h2>
 <p>Several of the highest-ranking Fargo SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
@@ -4804,6 +4818,8 @@ module.exports = [
 <p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Chattanooga agency.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-huntsville-2026">Huntsville, Alabama</a>, <a href="/blog/best-seo-companies-in-asheville-2026">Asheville</a> and <a href="/blog/best-seo-companies-in-savannah-2026">Savannah</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Chattanooga</h2>
 <p>Several of the highest-ranking Chattanooga SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
@@ -4955,6 +4971,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Fayetteville agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-tulsa-2026">Tulsa</a>, <a href="/blog/best-seo-companies-in-springfield-mo-2026">Springfield, MO</a> and <a href="/blog/best-seo-companies-in-wichita-2026">Wichita</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Fayetteville, Arkansas</h2>
 <p>Several of the highest-ranking Fayetteville SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. The clearest example from this research: a domain listed as a "storage rankers" SEO company now belongs to an entirely unrelated self-storage business in Georgia — the kind of drift that happens when domains lapse and get resold, and that no directory ever catches.</p>
@@ -5088,6 +5106,8 @@ module.exports = [
 <p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains come from.</p>
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Boulder agency.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-fort-collins-2026">Fort Collins</a>, <a href="/blog/best-seo-companies-in-provo-2026">Provo, Utah</a> and <a href="/blog/best-seo-companies-in-reno-2026">Reno</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Boulder</h2>
 <p>Several of the highest-ranking Boulder SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
@@ -5238,6 +5258,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Provo agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-boulder-2026">Boulder</a>, <a href="/blog/best-seo-companies-in-fort-collins-2026">Fort Collins</a> and <a href="/blog/best-seo-companies-in-reno-2026">Reno</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Provo, Utah</h2>
 <p>Several of the highest-ranking Provo SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to the actual address on each listed site. In Provo's case, doing that reveals that five of the six most commonly listed "Provo SEO companies" are actually based elsewhere in Utah County or the Salt Lake metro — a detail that matters if in-person contact is part of why you're hiring locally.</p>
@@ -5366,6 +5388,8 @@ module.exports = [
 <p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains come from.</p>
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Reno agency.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-boulder-2026">Boulder</a>, <a href="/blog/best-seo-companies-in-provo-2026">Provo, Utah</a> and <a href="/blog/best-seo-companies-in-boise-2026">Boise</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Reno</h2>
 <p>Several of the highest-ranking Reno SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
@@ -5501,6 +5525,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Wichita agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-tulsa-2026">Tulsa</a>, <a href="/blog/best-seo-companies-in-springfield-mo-2026">Springfield, MO</a> and <a href="/blog/best-seo-companies-in-lubbock-2026">Lubbock</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Wichita</h2>
 <p>Several of the highest-ranking Wichita SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. This particular check also turned up two Wichita agencies sharing the exact same downtown office address — not necessarily a problem, but worth knowing if you assume every listed name is a fully separate company.</p>
@@ -5630,6 +5656,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Huntsville agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-chattanooga-2026">Chattanooga</a>, <a href="/blog/best-seo-companies-in-asheville-2026">Asheville</a> and <a href="/blog/best-seo-companies-in-savannah-2026">Savannah</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Huntsville, Alabama</h2>
 <p>Several of the highest-ranking Huntsville SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to the actual address on each listed site. In Huntsville's case specifically, two well-reviewed directory entries turned out to be Texas agencies with no Alabama presence at all — a detail no directory listing surfaced.</p>
@@ -5758,6 +5786,8 @@ module.exports = [
 <p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains come from.</p>
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Fort Collins agency.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-boulder-2026">Boulder</a>, <a href="/blog/best-seo-companies-in-provo-2026">Provo, Utah</a> and <a href="/blog/best-seo-companies-in-reno-2026">Reno</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Fort Collins</h2>
 <p>Several of the highest-ranking Fort Collins SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
@@ -6141,6 +6171,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not an Ann Arbor agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-kalamazoo-2026">Kalamazoo</a>, <a href="/blog/best-seo-companies-in-green-bay-2026">Green Bay</a> and <a href="/blog/best-seo-companies-in-duluth-2026">Duluth</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Ann Arbor</h2>
 <p>Several of the highest-ranking Ann Arbor SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to the actual address on each listed site. Several candidates researched for this list had polished "Ann Arbor" branding while actually being headquartered in Rochester or Farmington Hills — a distinction that only shows up when you check directly.</p>
@@ -6279,6 +6311,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Eugene agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-bend-2026">Bend, Oregon</a>, <a href="/blog/best-seo-companies-in-boise-2026">Boise</a> and <a href="/blog/best-seo-companies-in-spokane-valley-2026">Spokane Valley</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Eugene, Oregon</h2>
 <p>Several of the highest-ranking Eugene SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. One prominently listed "Eugene" agency checked for this piece turned out to be headquartered over 2,000 miles away in Oklahoma City — a detail no directory listing surfaced.</p>
@@ -6402,6 +6436,8 @@ module.exports = [
 <p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains come from.</p>
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Bozeman agency.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-boise-2026">Boise</a>, <a href="/blog/best-seo-companies-in-coeur-dalene-2026">Coeur d'Alene, Idaho</a> and <a href="/blog/best-seo-companies-in-fargo-2026">Fargo</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Bozeman, Montana</h2>
 <p>Several of the highest-ranking Bozeman SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
@@ -6541,6 +6577,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not an Asheville agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-chattanooga-2026">Chattanooga</a>, <a href="/blog/best-seo-companies-in-savannah-2026">Savannah</a> and <a href="/blog/best-seo-companies-in-huntsville-2026">Huntsville, Alabama</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Asheville</h2>
 <p>Several of the highest-ranking Asheville SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and click through to two or three of the listed sites. This particular check found an agency branded as "Asheville's premier SEO company" actually headquartered in Georgia, and a separate domain that now redirects to an unrelated dating website.</p>
@@ -6664,6 +6702,8 @@ module.exports = [
 <p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Savannah agency.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-asheville-2026">Asheville</a>, <a href="/blog/best-seo-companies-in-chattanooga-2026">Chattanooga</a> and <a href="/blog/best-seo-companies-in-huntsville-2026">Huntsville, Alabama</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Savannah</h2>
 <p>Several of the highest-ranking Savannah SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
@@ -6789,6 +6829,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Lubbock agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-wichita-2026">Wichita</a>, <a href="/blog/best-seo-companies-in-tulsa-2026">Tulsa</a> and <a href="/blog/best-seo-companies-in-huntsville-2026">Huntsville, Alabama</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Lubbock</h2>
 <p>Several of the highest-ranking Lubbock SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Two practical safeguards when reading any such list: check whether the page discloses how it was compiled, and read past the headline on any "[City] SEO Company" page. The clearest example from this research was a page titled for Lubbock that, a few scrolls down, offered in-person meetings across Southern California instead.</p>
@@ -6913,6 +6955,8 @@ module.exports = [
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Green Bay agency.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-duluth-2026">Duluth</a>, <a href="/blog/best-seo-companies-in-ann-arbor-2026">Ann Arbor</a> and <a href="/blog/best-seo-companies-in-cedar-rapids-2026">Cedar Rapids</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Green Bay</h2>
 <p>Several of the highest-ranking Green Bay SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Green Bay is a particularly clear case of national agencies dominating local search results. Among the top-ranking "Green Bay SEO company" pages, we found firms headquartered in Chicago, Colorado Springs, Miami, Texas, Sacramento, and Charleston — one of which hadn't even changed the city name in its own domain. Checking the actual address filters nearly all of these out in seconds.</p>
@@ -7036,6 +7080,8 @@ module.exports = [
 <p><strong>Weeks 3–6:</strong> the fixes that need no debate. Broken pages, missing or duplicated title tags, Google Business Profile categories and details, citation inconsistencies, obvious speed problems. Unglamorous work, and usually where the fastest gains in a mid-sized market come from.</p>
 <p><strong>Weeks 7–12:</strong> content and links begin. This is the slow part, and the point where impatient clients often change agency just before results arrive.</p>
 <p>What you should <em>not</em> see in the first 90 days: a report full of rankings with no traffic or enquiry numbers attached, or three months of "strategy" with nothing shipped. If you want a second opinion on whether a proposal you've received is reasonable, <a href="/contact">get in touch</a> — we'll give you a straight answer even though we're not a Cedar Rapids agency.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-sioux-falls-2026">Sioux Falls</a>, <a href="/blog/best-seo-companies-in-green-bay-2026">Green Bay</a> and <a href="/blog/best-seo-companies-in-springfield-mo-2026">Springfield, MO</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Cedar Rapids</h2>
 <p>Several of the highest-ranking Cedar Rapids SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
@@ -7435,6 +7481,8 @@ module.exports = [
 <p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
 <p>If your business serves customers well beyond Boise, restricting your search to local agencies narrows your options for no technical benefit. The wider trade-offs are covered in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and the market itself in our <a href="/blog/boise-search-engine-optimization-2026">Boise search engine optimization guide</a>.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-coeur-dalene-2026">Coeur d'Alene, Idaho</a>, <a href="/blog/best-seo-companies-in-bozeman-2026">Bozeman, Montana</a> and <a href="/blog/best-seo-companies-in-provo-2026">Provo, Utah</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Boise</h2>
 <p>Several of the highest-ranking Boise SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Boise is a particularly clear case of national firms dominating local results. Among the top-ranking pages for "Boise SEO company" we found agencies headquartered in Texas, Cincinnati and elsewhere, all running city-specific landing pages with no Idaho office behind them. Checking for a real street address filters most of them out in seconds.</p>
@@ -7550,6 +7598,8 @@ module.exports = [
 <p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
 <p>If your business serves customers well beyond Springfield, restricting your search to local agencies narrows your options for no technical benefit. We've covered the wider trade-offs in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
 
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-tulsa-2026">Tulsa</a>, <a href="/blog/best-seo-companies-in-wichita-2026">Wichita</a> and <a href="/blog/best-seo-companies-in-cedar-rapids-2026">Cedar Rapids</a>.</p>
+
 <h2>How to Check Any List of the Best SEO Companies in Springfield, MO</h2>
 <p>Several of the highest-ranking Springfield SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
 <p>Springfield is a good illustration of why checking matters. One agency still carried on a current directory listing as a Springfield content marketing firm has both its domains dead. Another returned a server error. A third, ranking prominently as "Springfield's premier SEO company", operates out of Athens, Georgia. None of that is visible from the listing itself.</p>
@@ -7664,6 +7714,8 @@ module.exports = [
 <p>An honest question that most local listicles avoid.</p>
 <p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
 <p>In the Twin Ports specifically, the state line is worth ignoring: Superior, Wisconsin is closer to downtown Duluth than parts of Duluth are to each other. The wider trade-offs are covered in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<p>If you operate in more than one market, or you want to see how agency quality differs city to city, we've run the same hand-verification for <a href="/blog/best-seo-companies-in-green-bay-2026">Green Bay</a>, <a href="/blog/best-seo-companies-in-fargo-2026">Fargo</a> and <a href="/blog/best-seo-companies-in-sioux-falls-2026">Sioux Falls</a>.</p>
 
 <h2>How to Check Any List of the Best SEO Companies in Duluth</h2>
 <p>Several of the highest-ranking Duluth SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
