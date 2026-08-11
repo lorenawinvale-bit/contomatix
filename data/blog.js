@@ -8138,13 +8138,34 @@ module.exports = [
 <p>Renton employs roughly 57,600 people, and the composition matters more than the total. The largest industries are retail trade (about 7,650 jobs), health care and social assistance (6,930) and manufacturing (6,560). Boeing Commercial Airplanes is headquartered here, alongside PACCAR, Providence Health &amp; Services and Wizards of the Coast.</p>
 <p>That produces two distinct SEO markets in one city. There is a B2B and industrial supply chain built around aerospace and manufacturing, with long technical sales cycles. And there is a large consumer services economy — retail around The Landing, healthcare, trades — competing purely in the map pack. Those need completely different work, and an agency that only knows one will underserve the other.</p>
 
-<h2>Google Business Profile Comes First</h2>
-<p>For any consumer-facing Renton business, the map pack drives more calls than the website. Complete every field on your <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Google Business Profile</a>: correct primary category, every genuine service, accurate hours, and real photographs rather than stock imagery.</p>
-<p>Service areas matter especially here. Renton sits against Kent, Tukwila, Newcastle, Bellevue and SeaTac, and most service businesses cross those lines daily. Listing only "Renton" removes you from searches you are physically serving.</p>
+<h2>Google Business Profile: The Field-by-Field Setup</h2>
+<p>For any consumer-facing Renton business, the map pack drives more calls than the website. "Fill it out completely" is the advice every competing page gives, which is useless without knowing which fields actually move rankings. In practice they are not equal — here is the order that matters.</p>
+<p><strong>Primary category (highest weight of any single field).</strong> Google matches this almost literally against the search query. A shop listing itself as "Contractor" will not surface for "plumber" the way one categorised as "Plumber" does. Pick the narrowest category that genuinely describes the main revenue line, then add secondary categories for everything else you actually do — secondaries help but carry noticeably less weight than the primary.</p>
+<p><strong>Service areas.</strong> This is where Renton businesses lose the most ground. The city borders Kent, Tukwila, Newcastle, Bellevue, SeaTac and Skyway, and most service businesses cross those lines daily. If your profile lists only "Renton", you are ineligible for searches in cities you are physically working in. List every one you genuinely serve — but do not pad it with places you would refuse a job in, because a service area stretched across all of King County dilutes local relevance rather than expanding it.</p>
+<p><strong>Services and products.</strong> These are separate, underused fields. Each service entry gets a name and description, and they give Google explicit text to match against long-tail queries your website may not cover. A plumber listing "water heater replacement", "sewer line repair" and "emergency leak repair" as distinct services is matching three query patterns instead of one.</p>
+<p><strong>Business description.</strong> 750 characters. It is a weak ranking factor but a real conversion factor, and it is the text most likely to be pulled into an AI-generated answer. State plainly what you do, where, and what makes the offer specific.</p>
+<p><strong>Photos.</strong> Real premises, real team, real completed work — geotagging is a myth, but recency and volume correlate with engagement, and engagement does feed rankings. Stock imagery is the single most common tell of an abandoned profile.</p>
+<p><strong>Hours, including special hours.</strong> Accurate hours matter more than most owners assume because Google surfaces "open now" filtering. Holiday hours left unset produce a "hours may differ" warning that visibly reduces click-through.</p>
+<p>Google's own <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">representation guidelines</a> are worth reading before restructuring anything — particularly if you have multiple practitioners or locations, which is the most common route to a suspension.</p>
+
+<h2>The Renton Citation Sources That Actually Exist</h2>
+<p>Generic advice says "build local citations". Nobody names them. For a Renton business these are the specific ones worth the time, roughly in order of value:</p>
+<ul>
+<li><strong>Greater Renton Chamber of Commerce</strong> — 625 S 4th St, Renton WA 98057, (425) 226-4560. Membership gets you a listing in their business directory at chamber.gorenton.com, which is one of the few genuinely Renton-specific citation sources that carries weight</li>
+<li><strong>visitrenton.com</strong> — the city's visitor-facing listing directory, particularly relevant for retail, hospitality and anything customer-facing near The Landing or downtown</li>
+<li><strong>Seattle Southside Chamber of Commerce</strong> — the regional chamber covering South King County; useful if you serve Tukwila, SeaTac and Kent as well as Renton</li>
+<li><strong>Bellevue Chamber</strong> — worth considering if a meaningful share of your work is on the Eastside</li>
+<li><strong>whyrenton.com</strong> — the city's economic development resource, which lists business support organisations</li>
+</ul>
+<p>Before any of that, get the licensing right, because it determines the legal business name that every citation must match. Washington requires a UBI (Unified Business Identifier) number, and the City of Renton requires its own business licence on top of the state registration. Your Google Business Profile name, your citations and your licence should all carry the identical legal name — mismatches here are a quiet, common cause of weak local rankings.</p>
 
 <h2>Competing Against Seattle Spillover</h2>
-<p>This is the defining challenge of Renton search engine optimization, and no competing page addresses it. Seattle businesses rank for regional terms and market into South King County. You will not outspend them on "Seattle [service]".</p>
-<p>What works instead is depth on the terms they treat as an afterthought: "[service] Renton Highlands", "[service] near The Landing", "[service] Kent WA". These have lower volume and far higher conversion, because someone searching them wants a local provider rather than a downtown firm that will bill travel time.</p>
+<p>This is the defining challenge of Renton search engine optimization, and no competing page addresses it. Seattle firms already rank for regional terms, hold years of accumulated authority, and market outward into South King County. You will not outspend them on "Seattle [service]" — and you should not try.</p>
+<p>The alternative is not vaguer, it is narrower. Three specific tiers, in the order they are worth building:</p>
+<p><strong>Tier 1 — neighbourhood terms.</strong> Renton is not one search market. Renton Highlands, Kennydale, Talbot, Benson Hill, Skyway and the downtown core each get searched by name. "[service] Renton Highlands" has a fraction of the volume of the city-wide term and a fraction of the competition, and the person searching it is describing where they live — that is the highest purchase intent available.</p>
+<p><strong>Tier 2 — bordering cities.</strong> Kent, Tukwila, Newcastle, SeaTac and Skyway are separate search markets that a Renton business can serve without adding drive time. Each needs its own genuinely distinct page — not the Renton page with the city name swapped, which Google increasingly treats as thin doorway content and which can drag the whole set down.</p>
+<p><strong>Tier 3 — landmark and corridor terms.</strong> "near The Landing", "off Rainier Ave", "by Valley Medical" — low volume individually, near-zero competition, and they signal genuine local familiarity in a way that converts.</p>
+<p>The economics are the point. A Seattle agency needs volume to justify its cost base, so it optimises for the big term and ignores the long tail. A Renton business needs a handful of good jobs a month. Twenty neighbourhood-level terms each producing one or two calls beats a losing fight for the term that looks impressive in a ranking report.</p>
 
 <h2>Reviews and Local Trust Signals</h2>
 <p>Reviews mentioning specific staff, specific jobs and specific outcomes outperform a high count of generic ratings for both rankings and conversion. Ask at the moment work completes, by text or email — requests sent days later consistently produce fewer responses.</p>
@@ -8164,8 +8185,14 @@ module.exports = [
 <p>For the industrial side, useful content looks different again: supplier capability pages, tolerance and materials detail, compliance documentation. Those pages rank for very low-volume terms that convert at unusually high rates.</p>
 
 <h2>Measuring Whether It's Working</h2>
-<p>Track Google Business Profile calls, direction requests and website clicks separately from paid channels, then follow them through to paying customers. Set a baseline before work begins and review monthly — daily ranking movement is noise.</p>
-<p>Three to six months is the shortest window that reliably separates genuine progress from normal fluctuation.</p>
+<p>Most reporting fails because it measures the wrong layer. Rankings are an input, traffic is a proxy, and neither pays wages. Track these four, in this order:</p>
+<ul>
+<li><strong>Google Business Profile actions</strong> — calls, direction requests, website clicks and messages, available free in the profile's own performance tab. For a consumer-facing Renton business this is usually the single most honest number available, because a direction request is somebody physically deciding to drive to you</li>
+<li><strong>Calls by source</strong> — organic, map pack and paid tracked separately. Without this split you cannot tell whether SEO is working or whether ad spend is masking that it isn't</li>
+<li><strong>Booked work, not enquiries</strong> — a campaign that doubles enquiries while halving the close rate is attracting the wrong people, and that is a content and targeting problem no amount of extra budget fixes</li>
+<li><strong>Revenue per channel</strong> — for businesses where job values vary widely (trades, legal, medical), lead counts hide the picture entirely. Ten roof repairs and one full replacement are not the same month</li>
+</ul>
+<p>Set the baseline in writing before any work starts, then review monthly. Daily ranking movement is noise — positions fluctuate constantly for reasons that have nothing to do with your site. Three to six months is the shortest window that reliably separates genuine progress from normal variance, and anyone promising a verdict sooner is selling certainty they do not have.</p>
 
 <h2>DIY vs. Hiring Help in Renton</h2>
 <p>A single-location Renton business can genuinely handle the Google Business Profile, citation cleanup and review requests in-house, and that alone covers a lot of ground. Technical SEO, content at scale and link building are where outside help usually pays for itself.</p>
