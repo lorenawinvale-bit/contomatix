@@ -7761,5 +7761,117 @@ module.exports = [
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
 </div>
 `
+  },
+  {
+    slug: 'best-seo-companies-in-cambridge-2026',
+    title: 'Top 4 Best SEO Companies in Cambridge: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Four Cambridge, UK SEO companies, with every website checked by hand in August 2026 — including one that still has "replace with real client quotes before going live" sitting in its published footer.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/airbnb-seo-bedroom-staged.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Cambridge</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026, and Cambridge produced two findings worth stating upfront. One agency ranking for the city's name still has placeholder text in its live footer — "These are placeholder reviews — replace with real client quotes before going live" — meaning an unfinished template was published and left there. And most of the other agencies ranking for "SEO agency Cambridge" are actually based in Peterborough, Brentwood, Stamford or London, running location pages for a city they don't operate from.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Cambridge, we're not on this list, and none of these companies paid to be here.</p>
+
+<img src="/images/blog/airbnb-seo-bedroom-staged.jpg" alt="Best SEO companies in Cambridge — every website hand-checked for this verified 2026 list" width="1100" height="733" loading="lazy">
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because an unfinished template can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page</li>
+<li><strong>A verifiable Cambridge address</strong> — a real office in the city, not a service-area landing page. Where an agency's head office is elsewhere and Cambridge is a second location, that's stated plainly</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Big Bear Creative</h2>
+<p><strong>Best for:</strong> businesses wanting a genuinely Cambridge-based agency with recognisable clients.</p>
+<p>Based at the Allia Future Business Centre on Market Square in the middle of Cambridge, operating since 2016 and holding Google Partner status. The offering covers SEO — keyword research, technical, on-page and local — alongside paid ads, web design and branding, with clients including Anglian Water and Hilton properties.</p>
+<p>This is the most straightforwardly local option here: a real Cambridge office, a decade in the market, and clients you can look up and verify for yourself. <a href="https://www.bigbearcreative.co.uk/" target="_blank" rel="nofollow noopener">bigbearcreative.co.uk</a></p>
+
+<h2>2. Doublespark</h2>
+<p><strong>Best for:</strong> businesses wanting the longest track record in the city.</p>
+<p>Based at Wellington House on East Road in Cambridge with more than 20 years behind it, Doublespark covers SEO, PPC, ecommerce SEO, website development and SEO consultancy including audits and training.</p>
+<p>Two decades in one market means having worked through every major algorithm shift since search marketing became a profession — worth weighing against newer agencies whose experience is entirely post-2015. <a href="https://www.doublespark.co.uk/cambridge" target="_blank" rel="nofollow noopener">doublespark.co.uk</a></p>
+
+<h2>3. A1 SEO</h2>
+<p><strong>Best for:</strong> businesses that want an SEO-only specialist and published pricing.</p>
+<p><strong>Location note:</strong> A1 SEO has a Cambridge office at City House on Hills Road, but its primary office is in Newton Mearns, Glasgow. An independent, family-run limited company, it works exclusively on SEO — link building, technical and local SEO, audits, penalty recovery, digital PR and white-label work for other agencies.</p>
+<p>Pricing is published openly from £1,200 plus VAT per month, which is unusual in this industry and saves a discovery call if the budget was never going to fit. The trade-off is that day-to-day contact will not be Cambridge-based. <a href="https://a1seo.com/seo-cambridge/" target="_blank" rel="nofollow noopener">a1seo.com</a></p>
+
+<h2>4. Bespoke Digital</h2>
+<p><strong>Best for:</strong> ecommerce and lead-generation businesses wanting a focused three-service agency.</p>
+<p><strong>Location note:</strong> head office is in Bristol, with a Cambridge office at Old Farmhouse. Established in 2011, Bespoke Digital deliberately limits itself to three services — SEO consultancy, PPC and content — across three sectors: ecommerce, lead generation and local search.</p>
+<p>An agency that has chosen to do three things rather than fifteen generally has deeper capability in each, which matters more than proximity if your requirement is specialist rather than hands-on-local. <a href="https://www.bespoke-digital.co.uk/seo-cambridge" target="_blank" rel="nofollow noopener">bespoke-digital.co.uk</a></p>
+
+<h2>What Cambridge Businesses Should Actually Ask For</h2>
+<p>Cambridge is an unusual market. The Silicon Fen cluster means a high concentration of technology, biotech and research-led businesses with genuinely complex, long B2B sales cycles — very different from a typical local-services market — sitting alongside a large tourism, hospitality and student economy.</p>
+<p>Those two audiences need different work. A biotech firm selling into international research budgets needs technical content and authority building; a city-centre restaurant needs a properly maintained <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Google Business Profile</a>, consistent citations and reviews. Ask any prospective agency which of those they have actually done before, because the two skill sets rarely overlap in one team.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a £1,200 monthly retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's postcode.</p>
+<p>In Cambridge specifically, this cuts both ways: if you are a Silicon Fen company selling internationally, insisting on a Cambridge office narrows your options for no technical benefit. If you run a city-centre business competing in the map pack, local knowledge genuinely helps. The wider trade-offs are covered in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<p>If you're comparing UK markets more broadly, we've covered the same ground for <a href="/blog/leeds-digital-marketing">digital marketing in Leeds</a>.</p>
+
+<h2>How to Check Any List of the Best SEO Companies in Cambridge</h2>
+<p>Several of the highest-ranking Cambridge SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>Cambridge makes the case for checking yourself better than most markets. Among agencies ranking for the city, we found head offices in Peterborough, Brentwood, Stamford and London — and one site still carrying its own build note asking someone to replace the placeholder reviews before going live. That page has been indexed and is ranking regardless. Open the site and read the footer; it takes seconds and no directory does it.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Cambridge?</summary>
+    <p>Four with verified, active websites and a genuine Cambridge presence as of August 2026: Big Bear Creative, Doublespark, A1 SEO and Bespoke Digital. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Cambridge?</summary>
+    <p>UK agency retainers commonly start around £1,000 to £1,500 monthly for small businesses and rise substantially for competitive sectors. A1 SEO publishes its floor openly at £1,200 plus VAT per month, which is a useful local benchmark since most agencies won't quote before a call.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Cambridge?</summary>
+    <p>Two are Cambridge-based outright — Big Bear Creative on Market Square and Doublespark on East Road. A1 SEO has a Cambridge office with its primary office in Glasgow, and Bespoke Digital has a Cambridge office with its head office in Bristol.</p>
+  </details>
+  <details>
+    <summary>Why were some agencies ranking for "SEO agency Cambridge" excluded?</summary>
+    <p>Because they are not in Cambridge. Verification turned up head offices in Peterborough, Brentwood, Stamford and London, all running Cambridge location pages. One further agency was excluded for still displaying placeholder build text in its live footer.</p>
+  </details>
+  <details>
+    <summary>Does Cambridge need a different SEO approach to other UK cities?</summary>
+    <p>To an unusual degree, yes. The Silicon Fen technology and biotech cluster involves long, technical B2B sales cycles that need authority and content work, while the tourism, hospitality and student economy needs local map-pack fundamentals. Few agencies do both well.</p>
+  </details>
+  <details>
+    <summary>Should a Cambridge tech company hire a local agency?</summary>
+    <p>Not necessarily. If you sell internationally, restricting the search to agencies with a Cambridge postcode narrows your options for no technical benefit. Local matters far more for businesses whose customers are physically in the city.</p>
+  </details>
+  <details>
+    <summary>What should a small Cambridge business focus on first?</summary>
+    <p>Google Business Profile optimisation, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. These fundamentals outperform broad national campaigns for a business serving the city itself.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Cambridge?</summary>
+    <p>Google Business Profile fixes can show movement within weeks. Broader organic rankings typically take three to six months, and longer in competitive Cambridge sectors like biotech, education and professional services.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix works with businesses in competitive markets on exactly this — technical fixes, content built around real search demand, and link building that holds up over time. Want a free audit of where your Cambridge business stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
   }
 ];
