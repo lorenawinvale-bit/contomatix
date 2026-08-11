@@ -7594,5 +7594,120 @@ module.exports = [
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
 </div>
 `
+  },
+  {
+    slug: 'best-seo-companies-in-duluth-2026',
+    title: 'Top 5 Best SEO Companies in Duluth: A Verified 2026 List',
+    category: 'Local SEO',
+    excerpt: 'Five Duluth, Minnesota SEO companies, with every website checked by hand in August 2026 — including one agency we had to exclude because its own website is currently serving injected spam content.',
+    date: '2026-08-03',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/maritime-ship-bw.jpg',
+    content: `
+<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: August 2026</p>
+<p>Most lists of the <strong>best SEO companies in Duluth</strong> are directory pages where placement can be influenced by paying for it. That doesn't make the agencies bad — plenty are excellent — but it does mean the ordering tells you about ad budgets rather than quality.</p>
+<p>This list works differently. Every agency below had its website opened and checked by hand in August 2026. Two findings shaped it. First, most of the top-ranking results for "Duluth SEO company" belong to national firms — Chicago, Texas, and elsewhere — running templated city pages with no Minnesota office. Second, one genuinely local, well-regarded Duluth agency had to be excluded because its own website is currently serving injected spam content in a foreign language, which almost always means the site has been compromised.</p>
+<p>One disclosure up front: we're an SEO agency ourselves. We're not in Duluth, we're not on this list, and none of these companies paid to be here.</p>
+
+<img src="/images/blog/maritime-ship-bw.jpg" alt="Best SEO companies in Duluth — every website hand-checked for this verified 2026 list" width="1100" height="733" loading="lazy">
+
+<h2>How This List Was Built</h2>
+<p>Four checks, applied to every entry:</p>
+<ul>
+<li><strong>The website loads and has real content</strong> — checked manually, not by an automated status code, because a compromised or parked site can still return a healthy-looking response</li>
+<li><strong>SEO is genuinely part of the offering</strong>, not a single line on a web design page. Several well-known Duluth creative agencies were excluded on this basis alone — they do excellent branding and advertising work, but do not sell search optimization</li>
+<li><strong>A verifiable connection to Duluth or the Twin Ports</strong> — a real street address, not a templated city landing page</li>
+<li><strong>A specific specialism</strong>, so the entry tells you something useful rather than "full-service digital marketing"</li>
+</ul>
+<p>What this list is <em>not</em>: a ranking by results. No outsider can verify another agency's client outcomes, and anyone presenting a numbered "best to worst" order is inventing it. Treat the numbering as a list, not a league table.</p>
+
+<h2>1. Finden Marketing</h2>
+<p><strong>Best for:</strong> businesses that want published pricing before the first call.</p>
+<p>Based on East Superior Street in Duluth under the tagline "Small Town Charm, Big City Skill", Finden Marketing covers branding, website design, SEO, paid advertising, social, PR and content, with a focus on construction, trades, hospitality and professional services.</p>
+<p>Unusually for this industry, the tiered packages are published openly — $1,750 to $12,000 monthly — and positioned as an alternative to hiring in-house marketing staff. That transparency saves a discovery call if the budget was never going to match. <a href="https://findenmarketing.com/" target="_blank" rel="nofollow noopener">findenmarketing.com</a></p>
+
+<h2>2. Faster Solutions</h2>
+<p><strong>Best for:</strong> businesses wanting SEO plus AI search visibility from one team.</p>
+<p>Based on East Superior Street in Duluth, with additional coverage in Colorado, Faster Solutions splits its offering into marketing (SEO, PPC, social, automation), design (web development, video, branding) and hosting. Its recent content covers AI search visibility and answer engine optimization specifically.</p>
+<p>Naming AEO as a distinct discipline rather than folding it silently into "SEO" suggests a team that has actually adjusted its approach as AI answers take a growing share of searches. <a href="https://fastersolutions.com/" target="_blank" rel="nofollow noopener">fastersolutions.com</a></p>
+
+<h2>3. Bear North Digital</h2>
+<p><strong>Best for:</strong> trade contractors — HVAC, plumbing, roofing, electrical.</p>
+<p><strong>Location note:</strong> based in Superior, Wisconsin, directly across the bridge and part of the same Twin Ports market. Established in 2018, Bear North Digital works specifically with trade contractors, running local SEO, Google Business Profile management, Google Ads and Local Service Ads, with 125-plus contractors served and a 4.9 rating across 30-plus Google reviews.</p>
+<p>The agency explicitly builds for small-market dynamics — state licensing differences, northern seasonal swings — rather than applying metro templates, which is a genuine distinction in a market like this. <a href="https://bearnorthdigital.com/" target="_blank" rel="nofollow noopener">bearnorthdigital.com</a></p>
+
+<h2>4. Building the Dream Duluth</h2>
+<p><strong>Best for:</strong> local businesses wanting SEO tied to automated follow-up.</p>
+<p><strong>Location note:</strong> based on Tower Avenue in Superior, Wisconsin, serving the Duluth market. The agency covers website design, SEO, social media, SEO content writing and business automation, with published case studies in roofing, legal and dental.</p>
+<p>The automation piece is the differentiator: if your actual bottleneck is following up on leads rather than generating them, that combination is worth more than pure ranking work. <a href="https://buildingthedreamduluth.com/" target="_blank" rel="nofollow noopener">buildingthedreamduluth.com</a></p>
+
+<h2>5. Breakwall Digital</h2>
+<p><strong>Best for:</strong> North Shore businesses wanting generative engine optimization.</p>
+<p><strong>Location note:</strong> based on 1st Avenue in Two Harbors with a Duluth presence, on the North Shore of Lake Superior. Breakwall covers web design and development, site maintenance, digital marketing, social and email — and names Generative Engine Optimization as a distinct service.</p>
+<p>GEO is still an unusual thing for a small regional agency to offer explicitly, and it matters increasingly as AI-generated answers take share from traditional results. <a href="https://breakwalldigital.com/" target="_blank" rel="nofollow noopener">breakwalldigital.com</a></p>
+
+<h2>What Duluth Businesses Should Actually Ask For</h2>
+<p>Duluth is a small market with a tourism, port and healthcare base, and competition for most local service terms is meaningfully lower than in Minneapolis. A well-executed <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Google Business Profile</a>, consistent citations, genuine reviews and a handful of solid local pages will move the needle further here than the same work would in a major metro.</p>
+<p>That has a budget implication worth stating plainly: many Duluth businesses are sold national-scale retainers when local fundamentals would deliver more, faster, for less. Ask any prospective agency what proportion of the work is local versus broad organic — if they can't answer specifically, they haven't looked at your market.</p>
+
+<h2>Questions to Ask Before You Sign</h2>
+<ul>
+<li><strong>Who will actually work on my account day to day?</strong> The person pitching is often not the person delivering</li>
+<li><strong>What's the contract length and notice period?</strong> Prefer 30 days for a first engagement</li>
+<li><strong>Do I own my Google Business Profile, Analytics and Search Console?</strong> The answer must be yes, in your own accounts</li>
+<li><strong>What would you tell me not to spend money on?</strong> An agency that never says this is selling rather than advising</li>
+<li><strong>Can I see a case study at my budget level?</strong> Enterprise results tell you nothing about a $1,500 retainer</li>
+</ul>
+<p>Anyone guaranteeing first-page rankings should be ruled out immediately — nobody controls Google's results, and the guarantee itself is the disqualifier.</p>
+
+<h2>Should You Hire Local at All?</h2>
+<p>An honest question that most local listicles avoid.</p>
+<p>Local matters when you need face-to-face contact, when your customers are exclusively local and market knowledge helps, or when you simply prefer working with someone nearby. It matters much less than people assume for the technical work itself — crawl budget, site speed and schema markup are identical regardless of your agency's zip code.</p>
+<p>In the Twin Ports specifically, the state line is worth ignoring: Superior, Wisconsin is closer to downtown Duluth than parts of Duluth are to each other. The wider trade-offs are covered in our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a>, and what to look for in our piece on <a href="/blog/technical-seo-agency-2026">technical SEO agencies</a>.</p>
+
+<h2>How to Check Any List of the Best SEO Companies in Duluth</h2>
+<p>Several of the highest-ranking Duluth SEO lists are directory sites where agencies can pay for placement, sponsored positions or premium profiles. That's a legitimate business model, but it means the order reflects marketing spend rather than assessed quality.</p>
+<p>The strongest argument for checking yourself came up during this research: a well-regarded local agency, listed in good standing on multiple current directories, is serving injected foreign-language spam on its own site. Nothing in any listing showed that. Open the site, scroll to the bottom, and look at what is actually rendering — it takes ten seconds and directories never do it.</p>
+
+<div class="post-faq">
+  <details>
+    <summary>Who are the best SEO companies in Duluth?</summary>
+    <p>Five with verified, active websites as of August 2026: Finden Marketing, Faster Solutions, Bear North Digital, Building the Dream Duluth, and Breakwall Digital. Each suits a different type of business rather than there being one "best".</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Duluth?</summary>
+    <p>Broadly in line with US averages — agencies around $99 an hour and roughly $3,200 monthly, freelancers around $72 an hour and $1,350 monthly. Finden Marketing publishes its range openly at $1,750 to $12,000 monthly, which is a useful local benchmark.</p>
+  </details>
+  <details>
+    <summary>Are all these companies actually based in Duluth?</summary>
+    <p>Two are in Duluth proper. Bear North Digital and Building the Dream Duluth are in Superior, Wisconsin — across the bridge in the same Twin Ports market — and Breakwall Digital is in Two Harbors on the North Shore with a Duluth presence.</p>
+  </details>
+  <details>
+    <summary>Why were some well-known Duluth agencies left off?</summary>
+    <p>Two reasons. Several respected local creative agencies do branding, advertising and web design but do not sell SEO, so they fell outside the criteria. One agency was excluded because its own website is currently serving injected spam content, which usually indicates a compromise.</p>
+  </details>
+  <details>
+    <summary>Does it matter if my agency is in Superior rather than Duluth?</summary>
+    <p>Practically, no. The Twin Ports function as one market and Superior is minutes from downtown Duluth. It only matters if you specifically want a Minnesota-registered vendor for procurement reasons.</p>
+  </details>
+  <details>
+    <summary>What should a small Duluth business focus on first?</summary>
+    <p>Google Business Profile optimization, consistent name-address-phone details across directories, a genuine review pipeline, and a few well-written local pages. In a small market these fundamentals typically outperform a broader national-style campaign.</p>
+  </details>
+  <details>
+    <summary>How can I tell if an agency's own site has been hacked?</summary>
+    <p>Load the page and scroll to the very bottom, and try viewing it in a private window. Injected spam is often hidden below the footer or shown only to search engines. An agency that cannot keep its own site clean is a poor bet for keeping yours clean.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Duluth?</summary>
+    <p>Google Business Profile fixes can show movement within weeks. Broader organic rankings typically take three to six months, and lower competition here often means faster results than the same work in Minneapolis.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix helps smaller markets like Duluth turn local search visibility into actual calls and appointments — technical fixes, content built around real local search demand, and a review and citation strategy that holds up over time. Want a free audit of where your Duluth business stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
   }
 ];
