@@ -167,7 +167,11 @@ app.get('/about', (req, res) => {
   res.render('pages/about', {
     title: 'About Us — Contomatix',
     description: 'Learn what Contomatix does and how we help brands rank higher.',
-    pageClass: 'page-about'
+    pageClass: 'page-about',
+    team: team.map(withPhotoCheck),
+    services,
+    postCount: blogPosts.length,
+    marketCount: blogPosts.filter(p => p.slug.startsWith('best-seo-companies-in-')).length
   });
 });
 

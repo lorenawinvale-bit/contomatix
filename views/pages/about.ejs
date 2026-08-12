@@ -3,22 +3,170 @@
   <div class="container page-hero-inner">
     <span class="eyebrow">About</span>
     <h1>We build authority, not shortcuts</h1>
-    <p>Contomatix is an SEO and link building agency focused on real, durable ranking growth.</p>
+    <p>Contomatix is an SEO and link building agency for brands that want rankings which hold up — earned through real placements and real content, not schemes that work until the next algorithm update.</p>
   </div>
 </section>
 
 <section>
-  <div class="container" style="max-width: 760px;">
-    <h2>What we do</h2>
-    <p style="color:var(--text-dim);">Contomatix offers link building, link insertion, guest posting, on-page SEO, off-page SEO, and keyword research — built around a single idea: rankings that come from real authority last longer than shortcuts.</p>
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">Why we exist</span>
+      <h2>The problems we kept seeing</h2>
+      <p>Every client who comes to us has usually been burned by at least one of these first.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h4>Links from sites nobody reads</h4>
+        <p>Placements on private blog networks and link farms that look fine in a report and do nothing for rankings — or actively put the domain at risk.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h4>Reports full of rankings, empty of revenue</h4>
+        <p>Position tracking for keywords nobody searches, with no line connecting any of it to calls, enquiries or sales.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h4>Twelve-month lock-ins before proof</h4>
+        <p>Long contracts signed before a single deliverable has been seen, which is exactly backwards from how trust should be earned.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <h4>Work that stops at the ranking</h4>
+        <p>A page reaching position three still fails if the content doesn't answer the question or the site doesn't convert once someone lands.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <h2>How we work</h2>
-    <p style="color:var(--text-dim);">Every engagement starts with an audit of your site and competitors, followed by a prioritized roadmap and transparent monthly reporting, so you always know what's being done and why.</p>
+<section class="compare-section">
+  <div class="container" style="max-width: 860px;">
+    <div class="section-head centered">
+      <span class="eyebrow">What we believe</span>
+      <h2>Search works best when the most useful page wins</h2>
+    </div>
+    <p style="color:var(--text-dim); font-size:1.05rem;">Not the biggest budget, not the most aggressive link scheme. That is the version of search we want to be on the right side of — partly because it is the honest position, and partly because it is the only one that survives an algorithm update.</p>
+    <p style="color:var(--text-dim); font-size:1.05rem;">So our work is deliberately unglamorous: earn placements on sites with real traffic, publish content that genuinely answers the question, fix the technical problems holding a site back, and report on what actually changed. No guarantees of a first-page ranking, because nobody controls Google's results and anyone promising otherwise is selling certainty they do not have.</p>
+  </div>
+</section>
 
-    <div class="cta-band" style="margin-top: 40px;">
-      <h2>Want to work with us?</h2>
-      <p>Get in touch and we'll put together a plan for your site.</p>
-      <a href="/contact" class="btn btn-primary">Contact us</a>
+<section class="stats-band">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">Our own work</span>
+      <h2>We publish what we practise</h2>
+      <p>Rather than cite client numbers you cannot verify, here is our own published research — all of it public and checkable.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-big"><span class="num"><%= postCount %></span><span class="suffix">+</span><label>Guides published</label></div>
+      <div class="stat-big"><span class="num"><%= marketCount %></span><span class="suffix"></span><label>Markets hand-verified</label></div>
+      <div class="stat-big"><span class="num"><%= services.length %></span><span class="suffix"></span><label>Core services</label></div>
+      <div class="stat-big"><span class="num">100</span><span class="suffix">%</span><label>White-hat, always</label></div>
+    </div>
+    <p style="color:var(--text-dim); text-align:center; max-width:720px; margin:26px auto 0;">For our city guides we open every agency's website by hand before listing it. That process has turned up dead domains still ranking on page one, agencies marketing themselves in cities they have no office in, and one firm whose own site was serving injected spam. We publish those findings too.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">Team</span>
+      <h2>Say hello to the team</h2>
+      <p>A small, focused team — you talk to the people doing the work.</p>
+    </div>
+    <div class="container team-grid" style="padding:0;">
+      <% team.forEach(function(member) { %>
+        <div class="team-card">
+          <% if (member.hasPhoto) { %>
+            <div class="team-avatar team-avatar-photo">
+              <img src="<%= member.photo %>" alt="<%= member.name %>" width="88" height="88">
+              <span class="team-avatar-badge" aria-hidden="true"><%- include('../partials/logo', { logoSize: 18, logoId: 'about-badge-' + member.name.replace(/\s+/g,'') }) %></span>
+            </div>
+          <% } else { %>
+            <div class="team-avatar"><%= member.name.split(' ').map(function(w){ return w[0]; }).join('') %></div>
+          <% } %>
+          <h3><%= member.name %></h3>
+          <div class="role"><%= member.role %></div>
+          <p class="bio"><%= member.bio %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <span class="deco-blob deco-blob-1" aria-hidden="true"></span>
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How we work</span>
+      <h2>Six things we hold to</h2>
+    </div>
+    <div class="process-list">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h4>Real sites, or no placement</h4>
+        <p>Every link goes on a site with genuine organic traffic, earned through manual outreach. You see the target list with metrics before anything goes live.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h4>You own your accounts</h4>
+        <p>Analytics, Search Console and Google Business Profile stay in your accounts, with access granted to us — never the other way round.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h4>We say what not to spend on</h4>
+        <p>Sometimes the honest answer is that local fundamentals will do more than the retainer you were about to buy. We would rather say it.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <h4>Reporting tied to outcomes</h4>
+        <p>Rankings are an input. We report calls, enquiries and the work that produced them, not a wall of positions with no context.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">05</span>
+        <h4>Short notice periods</h4>
+        <p>A first engagement should not need a twelve-month lock-in. Confidence in the work should be why you stay.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">06</span>
+        <h4>Honest about AI</h4>
+        <p>We use AI where it genuinely helps and say so. What we do not do is publish unedited AI output and call it content strategy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">Services</span>
+      <h2>What we actually do</h2>
+    </div>
+    <div class="service-grid">
+      <% services.forEach(function(s) { %>
+        <a class="service-card" href="/services/<%= s.slug %>">
+          <h3><%= s.title %></h3>
+          <p><%= s.summary || s.description %></p>
+          <span class="service-card-link">Learn more &rarr;</span>
+        </a>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-band">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <span class="cta-orb cta-orb-3"></span>
+      <h2>Want a straight answer about your site?</h2>
+      <p>Send us your domain and we'll audit your backlink profile and keywords — including the parts you will not want to hear.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+      <p class="cta-note">Free audit · No obligation · Reply within 24 hours</p>
     </div>
   </div>
 </section>
