@@ -120,7 +120,10 @@ app.get('/services/:slug', (req, res) => {
 app.get('/blog', (req, res) => {
   const category = req.query.category || 'All';
   const categories = ['All', ...new Set(blogPosts.map(p => p.category))];
-  const filtered = category === 'All' ? blogPosts : blogPosts.filter(p => p.category === category);
+  // Newest first. Posts are appended to data/blog.js as they're written, so
+  // without this the most recent work ends up on the last page of the listing.
+  const byNewest = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  const filtered = category === 'All' ? byNewest : byNewest.filter(p => p.category === category);
   const perPage = 13; // 4 in the featured/top-stories layout + 9 in the grid below
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
   const page = Math.min(totalPages, Math.max(1, parseInt(req.query.page, 10) || 1));

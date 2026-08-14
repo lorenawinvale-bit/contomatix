@@ -8715,5 +8715,881 @@ module.exports = [
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
 </div>
 `
+  },
+  {
+    slug: 'search-engine-optimization-pearland-2026',
+    title: 'Search Engine Optimization Pearland: A Proven 2026 Guide',
+    category: 'Local SEO',
+    excerpt: "Search engine optimization Pearland businesses need has an oddity most guides miss — the city sits in three separate counties, which changes citations, service areas and who you actually compete with.",
+    date: '2026-08-14',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/pearland-seo.jpg',
+    content: `
+<p><strong>Search engine optimization Pearland</strong> businesses need starts with a fact almost no local guide mentions: Pearland is not in one county. The city sprawls across Brazoria County, where most of it sits, plus slices of Harris County and Fort Bend County.</p>
+<p>That single quirk changes how citations are built, how service areas are set, and which competitors you are actually up against. Add a population of 130,677 and a median household income of $118,842 — roughly 56% above the national figure — and you have a market where buyers research carefully before they call.</p>
+
+<img src="/images/blog/pearland-seo.jpg" alt="Search engine optimization Pearland — local search planning for a Brazoria County business" width="1100" height="733" loading="lazy">
+
+<h2>What Makes Search Engine Optimization Pearland Different</h2>
+<p><strong>Three counties, three sets of records.</strong> A business on the Harris County side and one on the Brazoria County side both have a Pearland address, but their county records, permits and directory listings differ. Getting the county wrong on a citation is a quiet consistency error that nobody notices and Google does.</p>
+<p><strong>Houston is the gravitational pull.</strong> Pearland is a Houston metro city, and Houston agencies rank for the regional terms with budgets you will not match. The winnable ground is Pearland itself, plus Friendswood, Manvel, Alvin and the neighbourhood names — terms Houston firms treat as rounding errors.</p>
+<p><strong>High-income buyers behave differently.</strong> At $118,842 median household income with a 4.09% poverty rate, this is a market that reads reviews, compares three or four options, and checks whether your site answers the question before calling. Thin pages that would convert elsewhere get skipped here.</p>
+<p><strong>A real life-sciences cluster.</strong> Lonza employs 1,079 people locally — more than any single hospital in the city — and it sits alongside Merit Medical, Millar and a manufacturing base including Kemlon, Third Coast Terminals and Endress+Hauser. That is a B2B search market with nothing local about it.</p>
+
+<h2>Google Business Profile: The Field-by-Field Setup</h2>
+<p>For most businesses here the map pack drives more calls than the website. The fields are not equally weighted — this is the order that matters.</p>
+<ul>
+  <li><strong>Primary category</strong> — carries more ranking weight than everything else combined. Pick the single most specific one that describes your core service, not the broadest one that describes everything you could do.</li>
+  <li><strong>Service areas</strong> — list Pearland plus Friendswood, Manvel, Alvin, and the parts of Houston you genuinely serve. Businesses that list only their own city are invisible for the surrounding searches that make up a large share of demand.</li>
+  <li><strong>Services with descriptions</strong> — each service is a separate entry with its own text field. Most profiles leave these blank, which throws away free keyword surface that Google reads.</li>
+  <li><strong>Business description</strong> — 750 characters. Name the neighbourhoods, not just the city.</li>
+  <li><strong>Photos</strong> — geotagging is a myth, but posting fresh photos monthly correlates with engagement, and engagement is measurable.</li>
+  <li><strong>Hours, including special hours</strong> — set holiday hours before the holiday. Customers arriving to an unexpectedly closed business is one of the most common causes of a one-star review.</li>
+</ul>
+<p>Google's own <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">guidelines for representing your business</a> are the authority on what is allowed here, and they are worth reading before anyone edits a category.</p>
+
+<h2>The Pearland Citation Sources That Actually Exist</h2>
+<p>Generic citation lists are filler. These are real, local, and worth the time:</p>
+<ul>
+  <li><strong>Pearland Chamber of Commerce</strong> — 6117 Broadway St, Pearland, TX 77581, (281) 485-3634. The member directory is the single most relevant local citation available.</li>
+  <li><strong>Pearland Economic Development Corporation</strong> — pearlandedc.com. Publishes the major-employer and demographic data the city runs on, and lists local businesses in its site-selection resources.</li>
+  <li><strong>Texas Secretary of State registration</strong> — your legal entity name on the state register is the string every other citation has to match exactly.</li>
+  <li><strong>Your county appraisal district</strong> — Brazoria, Harris or Fort Bend, depending on which side of the line you sit on. Use the right one.</li>
+  <li><strong>Industry associations</strong> — for the life-sciences and energy firms, the trade bodies carry more weight than any general directory.</li>
+</ul>
+<p>Five accurate citations beat fifty auto-submitted ones. The value is in consistency, not volume.</p>
+
+<h2>Winning Neighbourhood Searches, Not Just "Pearland"</h2>
+<p>Shadow Creek Ranch, Silverlake, Southdown, Green Tee Terrace and the area around Pearland Town Center all function as distinct search markets. Someone in Shadow Creek Ranch searching for a dentist is not thinking about the far side of the city — they want close.</p>
+<p>Practical version: one genuinely useful page per neighbourhood you actually serve, mentioning the roads, the landmarks and the travel time. Not five near-identical pages with the name swapped, which Google has been discounting for years.</p>
+
+<h2>The Life Sciences and Energy B2B Layer</h2>
+<p>If you sell into the manufacturing, life-sciences or energy firms here, local SEO barely applies. Those buyers search on capability — tolerances, certifications, cleanroom class, turnaround, regulatory experience — and they are often not in Texas at all.</p>
+<p>That work needs its own pages, written in industry vocabulary, with specifications rather than adjectives. It is a different content programme sitting on the same domain, and treating it as "more local SEO" is why so many suppliers here rank for nothing.</p>
+
+<h2>Measuring Whether It's Working</h2>
+<p>Three things, monthly:</p>
+<ul>
+  <li><strong>Google Business Profile calls and direction requests</strong> — the closest thing to a revenue signal in local search.</li>
+  <li><strong>Search Console queries and average position</strong> — filter to queries containing your city and neighbourhoods, and watch position rather than impressions.</li>
+  <li><strong>Review velocity</strong> — a steady trickle beats a burst. Bursts look manufactured and sometimes get filtered.</li>
+</ul>
+<p>Rankings on their own are an input. If positions improve and calls do not, the problem is usually the page people land on, not the ranking.</p>
+
+<h2>DIY vs. Hiring Help</h2>
+<p>A single-location business here can genuinely handle the Google Business Profile, the Chamber listing, the county records and a review request built into how jobs close. That is most of the available benefit and it costs time rather than money.</p>
+<p>Paying for help makes sense once you need sustained content, technical fixes, or you are competing against Houston firms with real budgets. Our comparison of <a href="/blog/seo-agency-vs-freelancer-2026">hiring an agency versus a freelancer</a> covers the trade-off honestly, and if you are shortlisting providers, our <a href="/blog/seo-company-pearland-texas-2026">guide to choosing an SEO company in Pearland, Texas</a> goes through what to check before signing.</p>
+
+<h2>Common Mistakes in This Market</h2>
+<p>The recurring ones: chasing Houston terms instead of owning the local ones, listing a single service area, using the wrong county in citations, ignoring the neighbourhood names entirely, and treating a B2B life-sciences audience as if proximity mattered to them.</p>
+<p>The most expensive one is thin content. In a market with this income profile, buyers compare — and the page that actually answers the question wins the call.</p>
+
+<h2>Is It Worth It for a Pearland Business?</h2>
+<p>For anyone selling to households here, yes. A city of 130,677 forecast to pass 150,000 by 2040, with high incomes and steady growth, is a market where a well-run profile and a handful of genuinely useful pages produce calls.</p>
+<p>For the B2B suppliers, the answer is also yes but the work is different, and being clear about which one you are is the first decision.</p>
+
+<div class="post-faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>What county is Pearland in for SEO and citation purposes?</summary>
+    <p>Most of Pearland is in Brazoria County, with portions in Harris County and Fort Bend County. Use the county your business physically sits in, and use it consistently everywhere — mixing them is a common source of citation inconsistency.</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Pearland?</summary>
+    <p>Local packages for single-location businesses typically run a few hundred dollars a month. Competitive multi-location or B2B programmes run into the low thousands. Anyone quoting a fixed price before looking at your site is guessing.</p>
+  </details>
+  <details>
+    <summary>Should I target Houston keywords too?</summary>
+    <p>Usually not at first. Houston terms are contested by firms with far larger budgets. Own Pearland, Friendswood, Manvel, Alvin and your neighbourhood terms, then expand once those are producing.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work in Pearland?</summary>
+    <p>Google Business Profile improvements can show within weeks. Broader organic rankings usually take three to six months, and longer where Houston competitors are actively targeting the same terms.</p>
+  </details>
+  <details>
+    <summary>Do neighbourhood pages actually help?</summary>
+    <p>Yes, when they are genuinely different — real landmarks, roads, travel times and local detail. Near-duplicate pages with only the neighbourhood name swapped have been discounted for years.</p>
+  </details>
+  <details>
+    <summary>Is local SEO relevant for a life-sciences supplier here?</summary>
+    <p>Barely. Those buyers search on capability and specification, often from outside Texas. That needs technical content pages rather than local optimisation, though both can live on the same site.</p>
+  </details>
+  <details>
+    <summary>How many reviews do I need to compete?</summary>
+    <p>There is no threshold. What matters is being credible against the businesses currently ranking — check their counts, then build a steady flow rather than a burst.</p>
+  </details>
+  <details>
+    <summary>What is the first thing to fix?</summary>
+    <p>The Google Business Profile: correct primary category, service areas covering Friendswood, Manvel and Alvin, every service filled in with a description, and correct county details across citations. That is the highest-return hour you can spend.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix works with businesses in high-income suburban markets — neighbourhood-level content, Google Business Profile work, and citations that stay consistent across county lines. Want a free audit of where your Pearland business stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
+  },
+  {
+    slug: 'seo-company-pearland-texas-2026',
+    title: "SEO Company Pearland Texas: A Proven 2026 Buyer's Guide",
+    category: 'Local SEO',
+    excerpt: "Choosing an SEO company Pearland Texas businesses can trust comes down to seven checks — including the three-county citation problem most providers get wrong and the contract terms worth refusing.",
+    date: '2026-08-14',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/seo-company-pearland-texas.jpg',
+    content: `
+<p>Hiring an <strong>SEO company Pearland Texas</strong> businesses can actually rely on is harder than it should be, because almost every provider says the same things. The pitch decks are interchangeable. The differences only show up in details you have to ask about.</p>
+<p>This is the checklist we would use ourselves — including one test specific to this city that quietly separates providers who know the market from ones who copied a template.</p>
+
+<img src="/images/blog/seo-company-pearland-texas.jpg" alt="SEO company Pearland Texas — evaluating agency proposals before signing" width="1100" height="733" loading="lazy">
+
+<h2>Why Choosing an SEO Company Pearland Texas Businesses Trust Is Hard</h2>
+<p>This city sits inside the Houston metro, so the providers pitching you range from one-person operations to Houston agencies whose account managers have never driven down Broadway. Both can do good work. Both can also sell you a package built for a different market.</p>
+<p>The economics make it worse. With a median household income of $118,842 and 130,677 residents, the area looks attractive on a spreadsheet, so it attracts remote agencies running volume outreach. Being pitched is not evidence of being understood.</p>
+
+<h2>The Three-County Test</h2>
+<p>Ask any prospective provider one question: <em>which county is my business in, and why does that matter for my citations?</em></p>
+<p>The city spans three — most of it in Brazoria, with portions in Harris and Fort Bend. Someone who has worked here answers immediately and explains that county records, appraisal district listings and directory entries have to match the county you physically sit in. Someone running a template will not know, and will usually change the subject.</p>
+<p>It is a small thing, but it is a reliable proxy for whether any real local work has been done.</p>
+
+<h2>Seven Checks Before You Sign</h2>
+<ul>
+  <li><strong>Ask for two client examples in your industry</strong> — not logos, actual URLs. Then open them and check whether they rank for what is claimed.</li>
+  <li><strong>Ask what happens in month one</strong> — a real answer names the Google Business Profile, specific technical fixes and a content plan. A vague answer means the plan does not exist yet.</li>
+  <li><strong>Ask who does the work</strong> — the person in the meeting, or a subcontractor you will never speak to. Either is acceptable; being misled about it is not.</li>
+  <li><strong>Ask for the link target list before placements go live</strong> — with traffic metrics. Refusal is the clearest warning sign in this industry.</li>
+  <li><strong>Check the notice period</strong> — three months is reasonable while work takes effect. Twelve months before you have seen a deliverable is a lock-in dressed as a strategy.</li>
+  <li><strong>Confirm you own the accounts</strong> — Analytics, Search Console and Google Business Profile in your name, access granted to them. Never the reverse.</li>
+  <li><strong>Ask what the report will say</strong> — if the answer is only rankings, ask how those connect to calls.</li>
+</ul>
+
+<h2>Warning Signs Worth Walking Away From</h2>
+<p><strong>A guaranteed number-one ranking.</strong> Nobody controls Google's results. A guarantee is certainty being sold that the seller does not have.</p>
+<p><strong>A price quoted before seeing your site.</strong> A fixed number in the first email means a fixed package, which means it was not built for you.</p>
+<p><strong>Refusing to name link sources.</strong> This almost always means private blog networks — links that look fine in a report, do nothing, and can put the domain at risk.</p>
+<p><strong>Reports with no commentary.</strong> A dashboard export is data. What you are paying for is someone explaining what changed and why.</p>
+<p><strong>Pressure to sign during the meeting.</strong> Urgency is a sales tactic, not a measure of service quality.</p>
+
+<h2>What Fair Pricing Looks Like</h2>
+<p>Rough ranges, honestly stated. A single-location local business needing profile work, citations and light content sits in the low hundreds per month. A competitive multi-location or service-area business runs roughly $1,500–$3,500. A B2B supplier selling into the life-sciences and energy cluster — Lonza alone employs 1,079 people locally — is a different programme, closer to technical content marketing, and priced accordingly.</p>
+<p>Anything under about $300 a month is usually automated citation submissions and a monthly PDF. It rarely moves anything.</p>
+
+<h2>Local Providers vs. Houston Agencies vs. Remote</h2>
+<p><strong>Local providers</strong> know the neighbourhoods — Shadow Creek Ranch, Silverlake, Southdown — and you can meet them. Capacity is usually the constraint.</p>
+<p><strong>Houston agencies</strong> bring specialists and depth, but you may be a small account, and they may push Houston-wide terms that are far harder to win than local ones.</p>
+<p><strong>Remote agencies</strong> can be excellent and often cost less, but the three-county test matters more, because nothing about this market is obvious from a distance.</p>
+<p>No category is inherently better. The checks above matter more than the postcode on the invoice.</p>
+
+<h2>What to Do Yourself First</h2>
+<p>Before paying anyone: claim and complete the Google Business Profile, get the Chamber of Commerce listing right — 6117 Broadway St, Pearland, TX 77581, (281) 485-3634 — make sure name, address and phone match everywhere, and build a review request into how jobs close.</p>
+<p>That is a meaningful share of the available benefit, and doing it first means you can tell whether a provider is adding value or charging you for what you already had. Our <a href="/blog/search-engine-optimization-pearland-2026">local search engine optimization guide for this market</a> walks through each step, and Google's <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">representing your business guidelines</a> are the authority on what is permitted.</p>
+
+<h2>Five Questions for the First Call</h2>
+<p>What would you do in the first thirty days? Which county am I in and why does it matter? Can I see link targets before they go live? What is the notice period? What will the monthly report actually tell me?</p>
+<p>The answers — and how comfortable someone is giving them — tell you most of what you need. For a wider view of what each engagement model realistically delivers, our <a href="/blog/seo-agency-vs-freelancer-2026">agency versus freelancer comparison</a> is a useful second read, as is our <a href="/blog/best-seo-companies-in-lubbock-2026">hand-verified list of Texas agencies</a>.</p>
+
+<div class="post-faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>How much should an SEO company here cost?</summary>
+    <p>A single-location local business typically sits in the low hundreds per month; competitive or multi-location work runs $1,500–$3,500. Anything under about $300 is usually automated submissions rather than real work.</p>
+  </details>
+  <details>
+    <summary>Does the provider need to be based locally?</summary>
+    <p>No. Remote providers can be excellent and often cost less. What matters is whether they understand the county split, the neighbourhood terms and the Houston competition.</p>
+  </details>
+  <details>
+    <summary>What is the three-county test?</summary>
+    <p>Asking which county your business is in and why it matters. The city spans Brazoria, Harris and Fort Bend counties, and citations must match. Providers who have worked here know this; template operators do not.</p>
+  </details>
+  <details>
+    <summary>Should I sign a twelve-month contract?</summary>
+    <p>Not for a first engagement. Three months is reasonable for work to take effect. Twelve months before any deliverable puts all the risk on you.</p>
+  </details>
+  <details>
+    <summary>Can an agency guarantee first-page rankings?</summary>
+    <p>No. Nobody controls Google's results, and a guarantee is a reliable signal to end the conversation.</p>
+  </details>
+  <details>
+    <summary>How do I check an agency's own results?</summary>
+    <p>Look at what they rank for themselves, then open two named client sites and check whether those rank for the terms claimed. An agency invisible for its own market terms is worth questioning.</p>
+  </details>
+  <details>
+    <summary>What if I sell B2B rather than to households?</summary>
+    <p>Then local SEO is a small part of the answer. Selling into the manufacturing, energy or life-sciences firms here needs capability-led technical content, and you should hire for that skill specifically.</p>
+  </details>
+  <details>
+    <summary>How soon should I expect results?</summary>
+    <p>Google Business Profile changes can show within weeks. Organic rankings generally take three to six months. Anyone promising faster is either lucky or not being straight with you.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix is happy to give you a second opinion on a proposal you have already received — whether the pricing is fair, and what the plan is missing. No obligation either way.</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
+  },
+  {
+    slug: 'search-engine-optimization-racine-2026',
+    title: 'Search Engine Optimization Racine: A Proven 2026 Guide',
+    category: 'Local SEO',
+    excerpt: "Search engine optimization Racine businesses need changed in 2026 — Microsoft's $7.7 billion Mount Pleasant campus is reshaping local demand while the city itself is flat, and that gap is the opportunity.",
+    date: '2026-08-14',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/racine-seo.jpg',
+    content: `
+<p><strong>Search engine optimization Racine</strong> businesses need looks different in 2026 than it did two years ago, and the reason sits a few miles west in Mount Pleasant.</p>
+<p>The city itself is flat — 77,862 residents, declining fractionally at 0.06% a year, with an 18.2% poverty rate. But Racine County is growing, and Microsoft's $7.7 billion Fairwater data centre campus on the old Foxconn land had roughly 375 permanent staff by May 2026, heading toward 800–900, on top of thousands of construction workers and about a decade of construction still to come.</p>
+<p>A static city next to a construction and hiring boom is an unusual search market, and most local businesses are still optimising as though nothing happened.</p>
+
+<img src="/images/blog/racine-seo.jpg" alt="Search engine optimization Racine — local search planning for a Racine County business" width="1100" height="733" loading="lazy">
+
+<h2>What Makes Search Engine Optimization Racine Different</h2>
+<p><strong>The county is the market, not the city.</strong> Racine County has around 199,397 residents and is growing while the city is not. Optimising only for the city name targets the shrinking half of your own market.</p>
+<p><strong>An influx of people with no local preferences.</strong> Construction crews, trades, technicians and engineers arriving for a decade-long project need housing, food, vehicle service, dentists and gyms — and they choose almost entirely through search, because they know nobody. That is genuinely unclaimed demand appearing month after month.</p>
+<p><strong>A serious manufacturing base.</strong> Manufacturing employs 7,731 people here. SC Johnson, Case IH, Modine Manufacturing, InSinkErator, Dremel and Reliance Controls are all Racine names. Suppliers selling into them are running a B2B search programme, not a local one.</p>
+<p><strong>Milwaukee and Chicago on either side.</strong> Racine sits between them on I-94. Milwaukee agencies market down; Kenosha and Illinois businesses reach up. Regional terms are contested; the local and neighbourhood ones are not.</p>
+
+<h2>Google Business Profile: The Field-by-Field Setup</h2>
+<p>For most businesses here the map pack produces more calls than the website. These fields are not equally weighted:</p>
+<ul>
+  <li><strong>Primary category</strong> — outweighs everything else combined. Choose the most specific one that matches your core service, not the broadest.</li>
+  <li><strong>Service areas</strong> — this is the big one locally. List Mount Pleasant, Sturtevant, Caledonia, Union Grove and Kenosha alongside the city. Businesses listing only Racine are invisible for the searches coming from where the growth actually is.</li>
+  <li><strong>Services with descriptions</strong> — each service gets its own text field. Most profiles leave them empty, discarding free keyword surface.</li>
+  <li><strong>Business description</strong> — 750 characters. Name the surrounding communities explicitly.</li>
+  <li><strong>Photos</strong> — geotagging does nothing, but a fresh set monthly correlates with engagement you can measure.</li>
+  <li><strong>Hours and special hours</strong> — Wisconsin winters and holiday closures both cause the same problem: someone arrives, you are shut, you get a one-star review.</li>
+</ul>
+<p>Google's <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">guidelines for representing your business</a> are the authority on what is allowed here, and worth reading before anyone edits a category.</p>
+
+<h2>The Racine County Citation Sources That Actually Exist</h2>
+<p>Skip generic directory lists. These are real and local:</p>
+<ul>
+  <li><strong>RCEDC — Racine County Economic Development Corporation</strong> — 2320 Renaissance Blvd, Sturtevant, WI 53177, (262) 898-7400. The county's economic development body, and it publishes ongoing coverage of the Microsoft project.</li>
+  <li><strong>Wisconsin Department of Financial Institutions</strong> — your registered entity name here is the string every other citation has to match exactly.</li>
+  <li><strong>Village of Mount Pleasant and Village of Sturtevant business listings</strong> — directly relevant if you serve the campus area.</li>
+  <li><strong>Real Racine</strong> — the county tourism organisation, which matters for anything hospitality, food or visitor-facing.</li>
+  <li><strong>Trade associations</strong> — for manufacturing suppliers, industry bodies carry more weight than any general business directory.</li>
+</ul>
+<p>Five accurate, genuinely local citations beat fifty auto-submitted ones. Consistency is the point, not volume.</p>
+
+<h2>The Content Nobody Is Writing: The Mount Pleasant Effect</h2>
+<p>This is the clearest opening in the market. Thousands of people are arriving for construction and permanent roles over roughly a decade, and almost no local business has written anything for them.</p>
+<p>Pages worth having: "new to Racine County" orientation content, practical guides aimed at trades and contractors working the campus, and service pages that name Mount Pleasant and Sturtevant explicitly rather than assuming people will search the city name.</p>
+<p>The searches are things like "apartments near Mount Pleasant data center", "24 hour restaurant Sturtevant", "oil change near I-94 Racine County". They face almost no competition, because the businesses best placed to answer them are still writing for the city as it was in 2019.</p>
+
+<h2>The Manufacturing B2B Layer</h2>
+<p>If you supply Case IH, Modine, SC Johnson or their tier-two suppliers, local SEO is largely beside the point. Those buyers search on capability — tolerances, materials, certifications, lead times — and they are frequently not in Wisconsin.</p>
+<p>That needs its own pages in industry vocabulary with specifications instead of adjectives. It is a separate content programme on the same domain, and confusing the two is why many suppliers here rank for nothing.</p>
+
+<h2>Measuring Whether It's Working</h2>
+<ul>
+  <li><strong>Profile calls and direction requests</strong> — the closest thing to a revenue signal in local search.</li>
+  <li><strong>Search Console position</strong> — filter queries to the county communities, not just the city, and watch average position rather than impressions.</li>
+  <li><strong>Review velocity</strong> — a steady trickle beats a burst; bursts look manufactured and are sometimes filtered.</li>
+</ul>
+<p>If positions improve and calls do not, the problem is the landing page, not the ranking.</p>
+
+<h2>DIY vs. Hiring Help</h2>
+<p>A single-location business here can handle the Google Business Profile — especially adding the county service areas — plus the RCEDC listing, name-address-phone consistency, and a review request built into how jobs close. That is most of the available benefit for the cost of some time.</p>
+<p>Paying for help makes sense once you need sustained content, technical work, or you are competing with Milwaukee firms. Our <a href="/blog/seo-agency-vs-freelancer-2026">agency versus freelancer comparison</a> covers that trade-off honestly, and our <a href="/blog/best-seo-companies-in-green-bay-2026">hand-verified Wisconsin agency list</a> shows what to check before signing with anyone.</p>
+
+<h2>Common Mistakes in This Market</h2>
+<p>The recurring ones: optimising for the city while the growth is in the county, leaving service areas blank, chasing Milwaukee terms that cannot be won, ignoring Mount Pleasant and Sturtevant entirely, and treating manufacturing buyers as a local audience.</p>
+<p>The most costly is the one that looks like caution — waiting to see whether the Microsoft effect is real before writing anything for it. The content advantage goes to whoever publishes first, and construction is scheduled to run for about ten years.</p>
+
+<h2>Is It Worth It for a Racine Business?</h2>
+<p>Yes, and more so than the flat city population suggests. A county of 199,397 with a decade-long construction project and hundreds of permanent technical jobs arriving is a market where new customers keep appearing with no established loyalties.</p>
+<p>The businesses that set service areas properly and write for the surrounding communities will take that demand. The ones still optimising for the 2019 city will not see it happen.</p>
+
+<div class="post-faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>Should I target Racine or Racine County?</summary>
+    <p>Both, but the county matters more than most businesses assume. The city is flat at 77,862 and slightly declining, while the county is around 199,397 and growing. Set service areas covering Mount Pleasant, Sturtevant, Caledonia and Union Grove.</p>
+  </details>
+  <details>
+    <summary>Does the Microsoft data centre actually affect local businesses?</summary>
+    <p>Yes. Around 375 permanent staff were in place by May 2026, heading toward 800–900, plus thousands of construction workers across roughly a decade. Those people need housing, food, vehicle service and trades, and they find them through search.</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Racine?</summary>
+    <p>Local packages for a single-location business typically run a few hundred dollars a month. Competitive or multi-location work runs into the low thousands. Anyone quoting a fixed price before seeing your site is guessing.</p>
+  </details>
+  <details>
+    <summary>Should I compete for Milwaukee keywords?</summary>
+    <p>Generally not at first. Milwaukee terms are contested by firms with larger budgets. Own the county communities, then expand once those are producing calls.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work here?</summary>
+    <p>Google Business Profile fixes can show within weeks. Broader organic rankings usually take three to six months, and longer where Milwaukee competitors target the same terms.</p>
+  </details>
+  <details>
+    <summary>Is local SEO relevant for a manufacturing supplier?</summary>
+    <p>Only partly. Buyers at firms like Case IH or Modine search on capability and specification, often from outside Wisconsin. That needs technical content pages rather than local optimisation.</p>
+  </details>
+  <details>
+    <summary>What content should I write for the new arrivals?</summary>
+    <p>Orientation content for people new to the county, practical guides for trades and contractors working the campus, and service pages naming Mount Pleasant and Sturtevant directly. Those searches have very little competition today.</p>
+  </details>
+  <details>
+    <summary>What should I fix first?</summary>
+    <p>The Google Business Profile service areas. Adding Mount Pleasant, Sturtevant, Caledonia and Union Grove is the single highest-return change most businesses here can make, and it takes minutes.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix works with businesses in markets that are changing faster than their websites — service-area setup, content aimed at new arrivals, and citations that hold up as competition arrives. Want a free audit of where your Racine business stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
+  },
+  {
+    slug: 'bloomington-seo-company-2026',
+    title: 'Bloomington SEO Company: A Proven 2026 Buyer’s Guide',
+    category: 'Local SEO',
+    excerpt: "Picking a Bloomington SEO company means testing for one thing first — whether they understand that a third of this city leaves every May. Seven checks, fair pricing, and the questions worth asking.",
+    date: '2026-08-14',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/bloomington-seo-company.jpg',
+    content: `
+<p>Hiring a <strong>Bloomington SEO company</strong> starts with a disambiguation that costs businesses real money: there are three notable Bloomingtons — Indiana, Illinois and Minnesota. This guide is about Bloomington, Indiana, home of Indiana University and Monroe County, population 83,932 and up 4.81% since 2020.</p>
+<p>If that is your city, the most important thing to test a provider on is not their case studies. It is whether they understand that a large share of the population leaves every May and a different set arrives every August.</p>
+
+<img src="/images/blog/bloomington-seo-company.jpg" alt="Bloomington SEO company — reviewing local search proposals for a Monroe County business" width="1100" height="733" loading="lazy">
+
+<h2>What a Bloomington SEO Company Has to Understand First</h2>
+<p><strong>The academic calendar is the demand curve.</strong> Indiana University is the largest employer and the largest source of population churn. Search volume for restaurants, housing, salons, repairs, storage and moving does not move smoothly through the year here — it spikes in August, drops in May, and behaves differently again over winter break.</p>
+<p>A provider who plans a flat twelve-month content calendar has not understood the market. The August intake needs content published in June and July, not in August when the searches are already happening.</p>
+<p><strong>Two audiences, not one.</strong> Students and permanent residents search differently for the same service. Students search on price, walkability and speed. Long-term residents search on trust, reviews and experience. Pages written for one convert badly for the other.</p>
+<p><strong>The employer base is concentrated and currently unsettled.</strong> Beyond the university, Cook Medical and Crane Naval Surface Warfare Center anchor the region, and Novo Nordisk announced roughly 400 job cuts at its local manufacturing site in March 2026. A provider pitching you on "the growing Bloomington economy" without knowing any of this is reading a template.</p>
+
+<h2>Seven Checks Before You Sign</h2>
+<ul>
+  <li><strong>Ask which Bloomington they have worked in</strong> — a surprising number of remote agencies cannot say, or quietly mean Minnesota. It is a fast, fair filter.</li>
+  <li><strong>Ask how they would handle the academic calendar</strong> — a real answer talks about publishing ahead of August and planning around May. A vague answer means a generic plan.</li>
+  <li><strong>Ask for two client URLs in your industry</strong> — not logos. Open them and check whether they rank for what is claimed.</li>
+  <li><strong>Ask what month one contains</strong> — it should name the Google Business Profile, specific technical fixes and a content plan.</li>
+  <li><strong>Ask for link targets before placements go live</strong> — with traffic metrics. Refusal is the clearest warning sign in this industry.</li>
+  <li><strong>Check the notice period</strong> — three months is reasonable while work takes effect. Twelve months before any deliverable puts all the risk on you.</li>
+  <li><strong>Confirm you own the accounts</strong> — Analytics, Search Console and Google Business Profile in your name, with access granted to them.</li>
+</ul>
+
+<h2>Warning Signs Worth Walking Away From</h2>
+<p><strong>Guaranteed rankings.</strong> Nobody controls Google's results. A guarantee is certainty being sold by someone who does not have it.</p>
+<p><strong>A price before seeing your site.</strong> A fixed number in the first email means a fixed package that was not built for you.</p>
+<p><strong>Refusing to name link sources.</strong> Almost always private blog networks — links that look fine in a report, do nothing, and can put the domain at risk.</p>
+<p><strong>Reports that are only rankings.</strong> Positions are an input. Ask how they connect to calls and enquiries.</p>
+
+<h2>What Fair Pricing Looks Like Here</h2>
+<p>This is a smaller market than Indianapolis, and pricing should reflect that. A single-location local business needing Google Business Profile work, citations and light content sits in the low hundreds per month. Competitive multi-location or student-housing work — one of the most contested niches in the city — runs $1,200–$3,000. Anything under about $300 a month is usually automated citation submissions and a monthly PDF.</p>
+<p>Be sceptical of Indianapolis pricing applied unchanged to a market a fraction of the size.</p>
+
+<h2>The Citation Sources That Actually Matter</h2>
+<p>Ask whether a provider knows these, because they are the genuinely local ones:</p>
+<ul>
+  <li><strong>Greater Bloomington Chamber of Commerce</strong> — the most relevant local citation available.</li>
+  <li><strong>Bloomington Economic Development Corporation</strong> — bloomingtonedc.com, which publishes the county profile data the region runs on.</li>
+  <li><strong>Visit Bloomington</strong> — the tourism body, which matters for anything hospitality, food or visitor-facing.</li>
+  <li><strong>Indiana Secretary of State registration</strong> — the legal entity name every other citation has to match exactly.</li>
+  <li><strong>Monroe County records</strong> — the correct county on every listing.</li>
+</ul>
+<p>Five accurate citations beat fifty automated ones. Google's <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">guidelines for representing your business</a> set the rules for what belongs in the profile itself.</p>
+
+<h2>Local vs. Indianapolis vs. Remote Providers</h2>
+<p><strong>Local providers</strong> understand the calendar without being told and know the campus geography. Capacity is usually the limit.</p>
+<p><strong>Indianapolis agencies</strong> bring specialists, but you may be a small account, and their instinct is often to push Indianapolis-wide terms that are far harder to win than local ones.</p>
+<p><strong>Remote agencies</strong> can be excellent value, but the Bloomington disambiguation and calendar questions matter far more, because neither is obvious from a distance.</p>
+
+<h2>What to Do Before Hiring Anyone</h2>
+<p>Claim and complete the Google Business Profile, add service areas covering Ellettsville, Nashville and the wider Monroe County area, fill in every service with a description, get the Chamber listing right, and build a review request into how jobs close.</p>
+<p>That is a meaningful share of the total benefit, and it means you can judge whether a provider is adding value or billing you for work you already did. Our <a href="/blog/seo-agency-vs-freelancer-2026">agency versus freelancer comparison</a> covers which model suits which situation.</p>
+
+<h2>Questions for the First Call</h2>
+<p>Five is enough: Which Bloomington have you worked in? How would you plan around the August intake? What happens in the first thirty days? Can I see link targets before they go live? What is the notice period?</p>
+<p>How comfortable someone is answering these tells you most of what you need to know. For a sense of how we assess agencies generally, our <a href="/blog/best-seo-companies-in-ann-arbor-2026">hand-verified list for another university town</a> shows the checks applied in practice.</p>
+
+<div class="post-faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>Which Bloomington does this guide cover?</summary>
+    <p>Bloomington, Indiana — Monroe County, home of Indiana University, population 83,932. There are also well-known Bloomingtons in Illinois and Minnesota, and the market conditions are not the same.</p>
+  </details>
+  <details>
+    <summary>How much should an SEO company here cost?</summary>
+    <p>Low hundreds per month for a single-location local business; $1,200–$3,000 for competitive or multi-location work. Anything under about $300 is usually automated submissions rather than real work.</p>
+  </details>
+  <details>
+    <summary>Why does the academic calendar matter so much?</summary>
+    <p>Because demand is seasonal rather than steady. Content aimed at the August intake needs to be published in June and July. A provider planning a flat calendar will miss the year's biggest demand window.</p>
+  </details>
+  <details>
+    <summary>Should I target students or permanent residents?</summary>
+    <p>Decide deliberately — they search differently. Students weigh price, walkability and speed; long-term residents weigh trust and reviews. Trying to serve both on one page usually converts poorly for both.</p>
+  </details>
+  <details>
+    <summary>Does the provider need to be based in Bloomington?</summary>
+    <p>No. Remote providers can be excellent and often cost less. What matters is whether they understand the seasonality and the two-audience split.</p>
+  </details>
+  <details>
+    <summary>Should I chase Indianapolis keywords?</summary>
+    <p>Usually not at first. Those terms are contested by firms with larger budgets. Own Bloomington, Ellettsville and Monroe County first, then expand.</p>
+  </details>
+  <details>
+    <summary>Can any agency guarantee first-page rankings?</summary>
+    <p>No. Nobody controls Google's results, and a guarantee is a reliable signal to end the conversation.</p>
+  </details>
+  <details>
+    <summary>How soon should I expect results?</summary>
+    <p>Google Business Profile changes can show within weeks. Organic rankings generally take three to six months — and in this market, timing them to land before August matters as much as the work itself.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix is happy to give you a second opinion on a proposal you have already received — whether the pricing fits a market this size, and whether the plan accounts for the calendar. No obligation either way.</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
+  },
+  {
+    slug: 'google-ads-company-roseville-2026',
+    title: 'Google Ads Company Roseville: A Proven 2026 Hiring Guide',
+    category: 'PPC & SEM',
+    excerpt: "Hiring a Google Ads company Roseville businesses can trust starts with geo-targeting — this city's retail trade area is far bigger than its borders, and most accounts are targeted far too narrowly.",
+    date: '2026-08-14',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/roseville-google-ads.jpg',
+    content: `
+<p>Choosing a <strong>Google Ads company Roseville</strong> businesses can rely on comes down to one question more than any other: do they understand that this city's trade area is much larger than the city itself?</p>
+<p>Roseville has 171,058 residents and has grown 15.18% since 2020, but it functions as the retail and healthcare hub for a big slice of Placer County. Retail trade employs 8,494 people here — far more than a city this size would generate on its own. People drive in from Rocklin, Lincoln, Granite Bay, Loomis, Auburn and Citrus Heights. An account geo-targeted to the city limits is switched off for a large share of its own customers.</p>
+
+<img src="/images/blog/roseville-google-ads.jpg" alt="Google Ads company Roseville — reviewing paid search campaign structure and targeting" width="1100" height="733" loading="lazy">
+
+<h2>What a Google Ads Company Roseville Businesses Hire Should Get Right</h2>
+<p><strong>Geo-targeting that matches the real trade area.</strong> This is the single most common defect we see in accounts here. A radius drawn around the city misses the customers actually driving to the Galleria and the surrounding retail corridor. Google's own <a href="https://support.google.com/google-ads/answer/1722043" target="_blank" rel="noopener">location targeting documentation</a> also warns that very small target areas can cause ads to serve intermittently or not at all.</p>
+<p><strong>The "presence" versus "interest" setting.</strong> Buried in location options, this decides whether you reach people physically in the area or also people merely searching about it. For a local service business the default often wastes budget on the wrong half. Ask any prospective provider which setting they use and why — it is a fast competence test.</p>
+<p><strong>Realistic cost expectations.</strong> With a median household income of $119,288 and Sacramento metro advertisers bidding on the same regional terms, clicks here are not cheap. A provider promising low costs per lead before seeing your account is guessing.</p>
+<p><strong>Knowing which vertical you are in.</strong> Healthcare and social assistance employs 12,703 people locally, with Kaiser Permanente and Sutter Health both major presences, and professional and technical services another 7,479. Advertising into a healthcare market carries policy restrictions that a generalist may not have handled before.</p>
+
+<h2>Seven Checks Before You Sign</h2>
+<ul>
+  <li><strong>Ask what geographic radius they would set, and why</strong> — the answer should name the surrounding communities, not just the city.</li>
+  <li><strong>Ask to see the account structure they propose</strong> — campaigns split by service and intent, not one campaign holding everything.</li>
+  <li><strong>Ask how they build negative keyword lists</strong> — if there is no clear process, you will pay for irrelevant clicks for months.</li>
+  <li><strong>Ask about Performance Max</strong> — it can work well, but it hides search terms. A good answer explains the trade-off rather than selling it as automatic.</li>
+  <li><strong>Ask how conversions are tracked</strong> — calls, forms and their values. Optimising toward clicks instead of conversions is the most expensive mistake in paid search.</li>
+  <li><strong>Confirm you own the Google Ads account</strong> — in your name, with access granted to them. If they own it, you lose all history when you leave.</li>
+  <li><strong>Ask what the management fee covers</strong> — and whether it is a flat fee or a percentage of spend. A percentage quietly rewards spending more.</li>
+</ul>
+
+<h2>Warning Signs Worth Walking Away From</h2>
+<p><strong>Guaranteed cost per lead.</strong> Nobody controls auction dynamics. A guaranteed number before an audit is a sales device.</p>
+<p><strong>An agency that will not let you see the account.</strong> You are paying for the media as well as the management. Full read access is not a favour.</p>
+<p><strong>Percentage-of-spend fees with no ceiling.</strong> The incentive runs directly against your interest.</p>
+<p><strong>Reports showing impressions and clicks but not cost per acquisition.</strong> Clicks are not the product. Enquiries are.</p>
+<p><strong>Confusing SEO and paid search.</strong> They are different disciplines. If the pitch blurs them together, ask which one they actually do — our <a href="/blog/how-is-ranking-different-ppc-vs-seo-2026">comparison of PPC and SEO ranking</a> covers why the distinction matters.</p>
+
+<h2>What Fair Pricing Looks Like</h2>
+<p>Two numbers matter: media spend and management fee. For a single-location local service business here, a meaningful test budget usually starts around $1,500–$3,000 a month in media given local competition. Management is commonly $500–$1,500 a month, or 10–20% of spend.</p>
+<p>Be wary of very low management fees on high budgets — the work required to run an account properly does not shrink because the fee did. Equally, a large fee on a small budget rarely leaves enough media to learn anything.</p>
+
+<h2>Local Services Ads: Check This First</h2>
+<p>If you are a home service business — plumbing, HVAC, electrical, locksmith, roofing — Local Services Ads often outperform standard search ads, because they sit above everything else and are charged per lead rather than per click. They require background checks and licence verification, which is exactly why competitors avoid them.</p>
+<p>A provider who does not raise this for a qualifying business either does not know about it or would rather bill you for a search campaign. Ask directly.</p>
+
+<h2>Campaign Structure That Works in This Market</h2>
+<p>Practical version: separate campaigns by intent rather than lumping everything together. Brand terms in one campaign, high-intent service terms in another, and broader research terms — if you run them at all — kept apart so they cannot eat the budget.</p>
+<p>Then set the geography deliberately. Many businesses here benefit from splitting the city and the surrounding communities into separate campaigns, because the cost per lead and the conversion rate genuinely differ between them, and averaging the two hides which is working.</p>
+
+<h2>Landing Pages Decide the Cost Per Lead</h2>
+<p>Most underperforming accounts are not a bidding problem. Sending all traffic to the homepage is the classic error — the ad promises one service, the page presents ten, and the visitor leaves.</p>
+<p>One page per service, matching the ad's promise, with the phone number visible and a form that asks for as little as possible. In a market with this income profile buyers do compare, and a page that answers the question converts at a rate no bid adjustment can match.</p>
+
+<h2>Questions for the First Call</h2>
+<p>Five: What radius would you target and why? Presence or presence-and-interest? How is conversion tracking set up? Do I own the account? Is the fee flat or a percentage of spend?</p>
+<p>How readily someone answers tells you most of what you need. For a broader view of how to assess a marketing provider, our <a href="/blog/seo-agency-vs-freelancer-2026">agency versus freelancer comparison</a> applies to paid search as much as to organic.</p>
+
+<div class="post-faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>Which Roseville does this cover?</summary>
+    <p>Roseville, California — Placer County, in the Sacramento metro, population 171,058. There is also a Roseville in Minnesota, and the market conditions are different.</p>
+  </details>
+  <details>
+    <summary>How much should I budget for Google Ads here?</summary>
+    <p>For a single-location local service business, a meaningful test usually starts around $1,500–$3,000 a month in media, plus management of $500–$1,500 or 10–20% of spend. Lower budgets rarely gather enough data to optimise.</p>
+  </details>
+  <details>
+    <summary>What geographic radius should I target?</summary>
+    <p>Wider than the city. Customers routinely travel in from Rocklin, Lincoln, Granite Bay, Loomis and Citrus Heights. Targeting only the city limits switches your ads off for a large share of the real trade area.</p>
+  </details>
+  <details>
+    <summary>Should I use Performance Max?</summary>
+    <p>Sometimes. It can perform well, but it hides search term data, which makes diagnosis harder. It is usually better to establish a working standard search campaign first, then test it.</p>
+  </details>
+  <details>
+    <summary>Are Local Services Ads worth it?</summary>
+    <p>For qualifying home service businesses, often yes — they appear above search ads and charge per lead rather than per click. The background check and licence verification requirement is a barrier that also keeps competition lower.</p>
+  </details>
+  <details>
+    <summary>Flat fee or percentage of spend?</summary>
+    <p>A flat fee aligns incentives better, because a percentage rewards the agency for increasing your spend. If a percentage is used, agree a ceiling.</p>
+  </details>
+  <details>
+    <summary>Should I run Google Ads or SEO?</summary>
+    <p>They answer different needs. Paid search buys immediate visibility and stops when the budget stops; organic compounds slowly and persists. Most growing businesses here end up running both, starting with paid for speed.</p>
+  </details>
+  <details>
+    <summary>How quickly should I expect results?</summary>
+    <p>Ads serve immediately, but a genuine read on cost per lead usually needs four to eight weeks of data. Anyone judging performance in week one is reacting to noise.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix is happy to review a Google Ads account or proposal you already have — targeting, structure, conversion tracking, and whether the fee arrangement works in your favour. No obligation either way.</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
+  },
+  {
+    slug: 'savannah-search-engine-optimization-2026',
+    title: 'Savannah Search Engine Optimization: A Proven 2026 Guide',
+    category: 'Local SEO',
+    excerpt: "Savannah search engine optimization has to serve two economies at once — a tourism market searching from out of state, and a manufacturing boom around Hyundai's Metaplant that barely existed three years ago.",
+    date: '2026-08-14',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/savannah-seo.jpg',
+    content: `
+<p><strong>Savannah search engine optimization</strong> is unusual because the city runs two almost unrelated economies, and a strategy built for one is close to useless for the other.</p>
+<p>One is tourism and hospitality, where most of your customers are searching from another state before they arrive. The other is industry — the fourth-busiest seaport in the United States, and now Hyundai Motor Group's Metaplant America at Ellabell, which will employ more than 8,500 people on the megasite alone once fully operational, with suppliers following it in.</p>
+<p>Metro unemployment sits around 2.9%. This is a tight, fast-changing market, and most local sites are still optimised for the version of it that existed in 2022.</p>
+
+<img src="/images/blog/savannah-seo.jpg" alt="Savannah search engine optimization — local search planning for a coastal Georgia business" width="1100" height="733" loading="lazy">
+
+<h2>What Makes Savannah Search Engine Optimization Different</h2>
+<p><strong>Half your customers are not here yet.</strong> For hotels, restaurants, tours and retail, the decisive search happens days or weeks before arrival, from a different state. "Near me" logic barely applies. What matters is ranking for planning-stage queries and being credible to someone who has never set foot in the city.</p>
+<p><strong>The other half never leaves the county.</strong> For dentists, HVAC firms, mechanics and accountants, this is an ordinary local market where proximity and reviews decide everything. The same city, two completely different playbooks.</p>
+<p><strong>The Hyundai effect is regional, not city-centre.</strong> The Metaplant sits about 20 miles outside the historic district, in Bryan County. The demand it creates — housing, trades, food, vehicle service, industrial supply — lands in Pooler, Richmond Hill, Ellabell and Bloomingdale far more than downtown. Businesses optimising for "Savannah" alone are aiming at the wrong map.</p>
+<p><strong>Seasonality is real.</strong> St. Patrick's Day, spring, and the shoulder seasons produce very different search volumes. Content aimed at spring visitors needs to be live in January, not March.</p>
+
+<h2>Google Business Profile: The Field-by-Field Setup</h2>
+<p>For local-facing businesses the map pack drives more calls than the website. The fields carry very different weight:</p>
+<ul>
+  <li><strong>Primary category</strong> — outweighs everything else combined. Pick the most specific match to your core service.</li>
+  <li><strong>Service areas</strong> — list Pooler, Garden City, Richmond Hill, Rincon and Tybee Island alongside the city if you genuinely serve them. This is where the growth is.</li>
+  <li><strong>Services with descriptions</strong> — each entry has its own text field, and most profiles leave them blank.</li>
+  <li><strong>Business description</strong> — 750 characters. Name the districts: Historic District, Victorian District, Starland, Midtown, Southside.</li>
+  <li><strong>Photos</strong> — for hospitality this is not optional. Visitors judge on images before they read anything.</li>
+  <li><strong>Special hours</strong> — set them for St. Patrick's Day and the festival calendar. Nothing generates one-star reviews faster than an unexpected closure during a peak weekend.</li>
+</ul>
+<p>Google's <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">guidelines for representing your business</a> are the authority on what belongs in each field.</p>
+
+<h2>The Citation Sources That Actually Exist Here</h2>
+<ul>
+  <li><strong>Savannah Area Chamber of Commerce</strong> — the most relevant general local citation, and the body most closely tied to the visitor economy.</li>
+  <li><strong>Visit Savannah</strong> — the destination marketing organisation. For anything hospitality, food, tour or retail, this is worth more than a dozen general directories.</li>
+  <li><strong>Savannah Economic Development Authority (SEDA)</strong> — the relevant listing for industrial, logistics and B2B firms.</li>
+  <li><strong>Georgia Secretary of State registration</strong> — the legal entity name every other citation must match exactly.</li>
+  <li><strong>Chatham, Bryan or Effingham county records</strong> — use the county you are actually in. The Hyundai-driven growth spans all three.</li>
+</ul>
+<p>Five accurate citations beat fifty automated ones.</p>
+
+<h2>Ranking for Visitors Who Are Not Here Yet</h2>
+<p>This is where most hospitality sites lose. Someone planning a trip searches "best time to visit Savannah", "where to stay near River Street", "is Tybee Island worth it" — research queries, not transactional ones.</p>
+<p>The businesses that win those searches capture the visitor before the comparison stage. That means genuinely useful planning content: neighbourhood guides, honest advice about parking and walkability, seasonal detail. Thin promotional pages do not rank for research queries, because they do not answer them.</p>
+
+<h2>The Content Nobody Is Writing: The Metaplant Corridor</h2>
+<p>Thousands of people are moving into the region for the plant and its supplier network, and very few local businesses have written anything aimed at them.</p>
+<p>Useful pages: relocation content for people new to Bryan and Effingham counties, guides for trades and contractors working the site, and service pages that name Pooler, Richmond Hill and Ellabell explicitly. Those queries face very little competition right now, because the businesses best placed to answer them are still writing for the historic district.</p>
+
+<h2>The Port and Industrial B2B Layer</h2>
+<p>If you sell into logistics, freight, warehousing or automotive supply, local SEO is a small part of the job. Those buyers search on capability — capacity, certifications, transit times, compliance — and they are frequently not in Georgia at all.</p>
+<p>That is a technical content programme in industry vocabulary, running on the same domain as your local pages but doing an entirely different job.</p>
+
+<h2>Measuring Whether It's Working</h2>
+<ul>
+  <li><strong>Profile calls and direction requests</strong> — the closest available proxy for revenue in local search.</li>
+  <li><strong>Search Console position, segmented</strong> — separate visitor-intent queries from local-intent ones. Averaging them together hides which side is working.</li>
+  <li><strong>Review velocity</strong> — steady beats bursty; bursts look manufactured and are sometimes filtered.</li>
+</ul>
+
+<h2>DIY vs. Hiring Help</h2>
+<p>A single-location business can handle the profile, the Chamber and Visit Savannah listings, name-address-phone consistency, and a review request built into how jobs close. That covers a real share of the benefit.</p>
+<p>Paid help earns its place when you need sustained content — particularly the visitor-planning kind, which takes genuine writing effort. If you are shortlisting providers, our <a href="/blog/best-seo-companies-in-savannah-2026">hand-verified list of Savannah SEO companies</a> checked every website by hand, and our <a href="/blog/seo-agency-vs-freelancer-2026">agency versus freelancer comparison</a> covers which model fits which situation.</p>
+
+<h2>Is It Worth It for a Savannah Business?</h2>
+<p>Yes, and the timing is unusually good. A regional manufacturing boom is arriving alongside an established visitor economy, which means two distinct streams of customers with no local loyalties.</p>
+<p>The businesses that decide which economy they serve — and write for it properly rather than producing generic pages for both — will take a disproportionate share of it.</p>
+
+<div class="post-faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>Should I optimise for tourists or locals?</summary>
+    <p>Decide deliberately, because they need different content. Visitors search planning queries from out of state weeks ahead; residents search transactional local queries. Trying to serve both on one page usually serves neither.</p>
+  </details>
+  <details>
+    <summary>Does the Hyundai Metaplant affect Savannah businesses?</summary>
+    <p>Yes, though mostly outside the historic district. The site is about 20 miles away in Bryan County and will employ more than 8,500 people once fully operational, plus suppliers. The demand lands in Pooler, Richmond Hill, Ellabell and Bloomingdale.</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Savannah?</summary>
+    <p>Local packages for a single-location business typically run a few hundred dollars a month. Hospitality businesses competing for visitor-planning searches need more content and usually sit in the low thousands.</p>
+  </details>
+  <details>
+    <summary>What content works for out-of-state visitors?</summary>
+    <p>Planning content — neighbourhood guides, best time to visit, parking and walkability, seasonal advice. Research queries need genuine answers; promotional pages do not rank for them.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work here?</summary>
+    <p>Google Business Profile fixes can show within weeks. Organic rankings usually take three to six months. For seasonal content, publish at least two months before the season you are targeting.</p>
+  </details>
+  <details>
+    <summary>Should I list Tybee Island and Pooler as service areas?</summary>
+    <p>If you genuinely serve them, yes. Businesses listing only the city name are invisible for a large share of searches in a metro where the growth is happening outside the core.</p>
+  </details>
+  <details>
+    <summary>Is local SEO relevant for a port or logistics business?</summary>
+    <p>Only partly. Those buyers search on capacity, certifications and transit times, often from outside Georgia. That needs capability-led technical pages rather than local optimisation.</p>
+  </details>
+  <details>
+    <summary>What should I fix first?</summary>
+    <p>The Google Business Profile: correct primary category, service areas covering the surrounding communities, every service filled in, and special hours set for the festival calendar. Highest return for the least effort.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix works with businesses serving two audiences at once — visitor-intent content, local map pack work, and citations that stay consistent across county lines. Want a free audit of where your Savannah business stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
+  },
+  {
+    slug: 'search-engine-optimization-eugene-2026',
+    title: 'Search Engine Optimization Eugene: A Proven 2026 Guide',
+    category: 'Local SEO',
+    excerpt: "Search engine optimization Eugene businesses need has to work in a market that is barely growing — 0.03% a year — where every new customer comes from a competitor rather than from population growth.",
+    date: '2026-08-14',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/eugene-seo.jpg',
+    content: `
+<p><strong>Search engine optimization Eugene</strong> businesses need is shaped by a number most local marketing advice ignores: this city is growing at 0.03% a year. Effectively, it is not growing at all.</p>
+<p>That changes the whole exercise. In a boom market a share of demand is genuinely unclaimed each year, and you can grow by catching new arrivals. Here, with 178,675 residents and a flat population, almost every customer you gain is one a competitor lost. It is a zero-sum market, and the tactics that suit it are different.</p>
+
+<img src="/images/blog/eugene-seo.jpg" alt="Search engine optimization Eugene — local search strategy for a Lane County business" width="1100" height="733" loading="lazy">
+
+<h2>What Makes Search Engine Optimization Eugene Different</h2>
+<p><strong>Displacement, not capture.</strong> Growth has to come from outranking someone. That makes the competitive audit — who currently ranks, and what specifically they are doing better — far more valuable than generic best-practice work.</p>
+<p><strong>The university sets the rhythm.</strong> The University of Oregon employs over 10,000 people and is the largest employer in the city. Its calendar drives seasonal swings in housing, food, retail, storage and services that a flat annual content plan will miss entirely.</p>
+<p><strong>Price sensitivity is real.</strong> Median household income is $66,562 with a 19.04% poverty rate — a very different profile from the affluent suburban markets most SEO advice is written for. Pages that lead with premium positioning and hide pricing convert badly here.</p>
+<p><strong>Portland is not the threat people assume.</strong> It is roughly 110 miles north — far enough that Portland firms do not dominate local terms the way a neighbouring metro usually would. The real competition is other Eugene and Springfield businesses, which makes local differentiation more important than regional defensiveness.</p>
+
+<h2>Google Business Profile: The Field-by-Field Setup</h2>
+<p>In a zero-sum market the map pack is where displacement actually happens. These fields are not equally weighted:</p>
+<ul>
+  <li><strong>Primary category</strong> — carries more ranking weight than everything else combined. Check what the businesses currently outranking you have chosen; it is public, and it is often the whole explanation.</li>
+  <li><strong>Service areas</strong> — list Springfield, Junction City, Creswell, Cottage Grove and Veneta if you serve them. Lane County is the real market, not the city line.</li>
+  <li><strong>Services with descriptions</strong> — each service has its own text field. Most competitors leave them empty, which makes filling them in a cheap advantage.</li>
+  <li><strong>Business description</strong> — 750 characters. Name neighbourhoods: Whiteaker, South Eugene, Bethel, Churchill, River Road.</li>
+  <li><strong>Photos</strong> — fresh photos monthly correlate with engagement, and engagement is measurable.</li>
+  <li><strong>Hours and special hours</strong> — set them around university breaks and holidays, when trading patterns shift noticeably.</li>
+</ul>
+<p>Google's <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">guidelines for representing your business</a> define what is permitted in each field.</p>
+
+<h2>The Lane County Citation Sources That Actually Exist</h2>
+<ul>
+  <li><strong>Eugene Area Chamber of Commerce</strong> — the most relevant general local citation available.</li>
+  <li><strong>Travel Lane County</strong> — the destination marketing body, which matters for hospitality, food and anything visitor-facing.</li>
+  <li><strong>Oregon Secretary of State business registry</strong> — the legal entity name every other citation must match exactly.</li>
+  <li><strong>Lane County records</strong> — the correct county on every listing.</li>
+  <li><strong>Trade associations</strong> — for wood products and manufacturing suppliers, industry bodies outweigh general directories. The region remains a significant softwood lumber and plywood producer.</li>
+</ul>
+<p>Five accurate citations beat fifty auto-submitted ones. In a displacement market, consistency is what separates you from the competitor who never checked theirs.</p>
+
+<h2>Winning by Beating Specific Competitors</h2>
+<p>This is the part that differs most from a growth market. Instead of broad content programmes, work competitor by competitor:</p>
+<ul>
+  <li>List the businesses ranking in the top three for your main terms.</li>
+  <li>Open their profiles: primary category, review count, review recency, photo count, services filled in.</li>
+  <li>Open their top-ranking page and count what it actually answers that yours does not.</li>
+  <li>Fix the specific gaps rather than adding generic pages.</li>
+</ul>
+<p>Most local businesses never do this, which is exactly why the exercise works.</p>
+
+<h2>Planning Around the University Calendar</h2>
+<p>Demand does not move smoothly through the year. Housing, moving, storage, furniture, food and personal services all spike around the September intake and drop in June.</p>
+<p>Content aimed at the autumn intake needs to be published in July, not September. By the time the searches are happening, ranking positions are already settled. This is the single most common timing error in a university town.</p>
+
+<h2>Measuring Whether It's Working</h2>
+<ul>
+  <li><strong>Profile calls and direction requests</strong> — the nearest thing to a revenue signal in local search.</li>
+  <li><strong>Average position on your named target terms</strong> — in a displacement market this matters more than impressions, because you are tracking whether you passed a specific competitor.</li>
+  <li><strong>Review velocity versus theirs</strong> — relative, not absolute. You need to be credible against whoever ranks above you.</li>
+</ul>
+
+<h2>DIY vs. Hiring Help</h2>
+<p>A single-location business here can genuinely run the profile, the Chamber listing, name-address-phone consistency, and a review process. In a price-sensitive market that matters — the cheapest effective option is often the right one.</p>
+<p>Paid help earns its place once you need sustained content or technical work. If you are shortlisting, our <a href="/blog/best-seo-companies-in-eugene-2026">hand-verified list of Eugene SEO companies</a> checked every website by hand, and our <a href="/blog/seo-agency-vs-freelancer-2026">agency versus freelancer comparison</a> sets out what each model realistically delivers.</p>
+
+<h2>Common Mistakes in This Market</h2>
+<p>The recurring ones: running a flat content calendar in a seasonal city, ignoring Springfield and the rest of Lane County, leaving services blank on the profile, positioning on premium in a price-sensitive market, and worrying about Portland competitors who are not actually competing for these terms.</p>
+<p>The most costly is doing generic best-practice work without ever looking at who is ranking above you. In a flat market that is the only question that matters.</p>
+
+<h2>Is It Worth It for a Eugene Business?</h2>
+<p>Yes — arguably more than in a growth market, because the work compounds. In a city where the customer pool is fixed, a competitor who takes the top of the map pack keeps it, and the businesses that get there first tend to stay.</p>
+<p>The flip side is that doing nothing is not neutral. Someone else improving means you decline, even if nothing on your side changed.</p>
+
+<div class="post-faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>Does a flat population make SEO less worthwhile?</summary>
+    <p>No, but it changes the approach. With growth at 0.03% a year, new customers come from competitors rather than new arrivals, so competitive analysis matters far more than broad content programmes.</p>
+  </details>
+  <details>
+    <summary>How much does SEO cost in Eugene?</summary>
+    <p>Local packages for a single-location business typically run a few hundred dollars a month; competitive or multi-location work runs into the low thousands. Given local income levels, be sceptical of pricing imported from larger metros.</p>
+  </details>
+  <details>
+    <summary>Should I worry about Portland agencies and businesses?</summary>
+    <p>Less than you might expect. Portland is around 110 miles away and does not dominate local terms here. Your real competition is other Eugene and Springfield businesses.</p>
+  </details>
+  <details>
+    <summary>How does the university calendar affect timing?</summary>
+    <p>Substantially. Demand spikes around the September intake and falls in June. Content targeting the intake needs to be live by July — publishing in September is too late to rank in time.</p>
+  </details>
+  <details>
+    <summary>Should I list Springfield as a service area?</summary>
+    <p>If you serve it, yes. Lane County is the practical market. Businesses listing only Eugene are invisible for a meaningful share of nearby searches.</p>
+  </details>
+  <details>
+    <summary>How do I find out why a competitor outranks me?</summary>
+    <p>Open their Google Business Profile and compare primary category, review count and recency, photo count and whether services are filled in. Then compare their ranking page against yours for what it actually answers.</p>
+  </details>
+  <details>
+    <summary>How long does SEO take to work here?</summary>
+    <p>Profile fixes can show within weeks. Organic rankings generally take three to six months, and displacing an established competitor can take longer than entering an uncontested market.</p>
+  </details>
+  <details>
+    <summary>What should I fix first?</summary>
+    <p>Compare your Google Business Profile against the top three businesses ranking for your main term. The gap is usually visible in minutes, and closing it is the cheapest available gain.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix works with businesses in flat or contested markets, where growth means outranking someone specific — competitive audits, map pack work, and content timed to the local calendar. Want a free audit of where your Eugene business stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
+  },
+  {
+    slug: 'seo-marketing-plan-lakeland-2026',
+    title: 'SEO Marketing Plan Lakeland: A Proven 90-Day 2026 Template',
+    category: 'Local SEO',
+    excerpt: "An SEO marketing plan Lakeland businesses can actually execute — a week-by-week 90-day template built around the I-4 corridor problem and Polk County's 12.66% growth since 2020.",
+    date: '2026-08-14',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/lakeland-seo-plan.jpg',
+    content: `
+<p>Most advice on building an <strong>SEO marketing plan Lakeland</strong> businesses can use stops at principles. This one is a template with dates attached, because the difference between a plan and a wish is whether anything is scheduled.</p>
+<p>Two local facts shape it. First, the city has 128,276 residents and has grown 12.66% since 2020, inside a Polk County adding roughly 25,000 people a year and projected to pass a million by 2030. Second, it sits on the I-4 corridor between Tampa and Orlando, which means businesses here habitually try to compete with two much larger metros at once — and lose to both.</p>
+
+<img src="/images/blog/lakeland-seo-plan.jpg" alt="SEO marketing plan Lakeland — building a 90-day local search roadmap for a Polk County business" width="1100" height="733" loading="lazy">
+
+<h2>Why an SEO Marketing Plan Lakeland Businesses Follow Looks Different</h2>
+<p><strong>The corridor trap.</strong> Tampa and Orlando advertisers bid and rank aggressively, and Lakeland businesses often try to meet them on regional terms. That budget is nearly always better spent owning Lakeland, Winter Haven, Bartow, Auburndale, Plant City and Polk County — where the competition is a fraction as strong and the customers are actually yours.</p>
+<p><strong>Growth means unclaimed demand.</strong> A county adding 25,000 residents a year produces a steady stream of people with no established preferences, choosing a dentist, mechanic or contractor almost entirely through search. That is genuinely winnable business, and it is why a content plan aimed at new arrivals belongs in the schedule below.</p>
+<p><strong>Two industry clusters worth knowing.</strong> Aviation is real here — more than 60 enterprises operate through the airport, from Amazon Air to the NOAA Hurricane Hunters — and Lakeland is one of only two US centres for the flavour and fragrance industry, alongside New Jersey, with companies including Treatt and International Flavors & Fragrances. If you sell into either, your plan is a B2B content plan, not a local one.</p>
+
+<h2>Days 1–14: Audit and Fix What Already Exists</h2>
+<p>Do not create anything yet. Find out what is broken.</p>
+<ul>
+  <li><strong>Claim and audit the Google Business Profile</strong> — primary category, service areas, every service filled in with a description, business description using the full 750 characters, hours and special hours.</li>
+  <li><strong>Check name, address and phone consistency</strong> everywhere it appears. Inconsistency is the most common silent problem in local search.</li>
+  <li><strong>Confirm Search Console and Analytics are installed</strong> and in your own account. If a previous agency owns them, get that fixed before anything else.</li>
+  <li><strong>List the businesses ranking top three</strong> for your five most valuable terms. Note their review counts, categories and what their pages actually answer.</li>
+</ul>
+<p>Google's <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">guidelines for representing your business</a> are the authority on what is allowed in the profile, and worth reading before any category is changed.</p>
+
+<h2>Days 15–30: Citations and the Local Foundation</h2>
+<ul>
+  <li><strong>Lakeland Chamber of Commerce</strong> — the most relevant single local citation.</li>
+  <li><strong>Central Florida Development Council</strong> — cfdc.org, the county economic development body, which publishes the Polk County data the region runs on.</li>
+  <li><strong>Florida Division of Corporations (Sunbiz)</strong> — your registered entity name here is the string every other citation must match.</li>
+  <li><strong>Polk County records</strong> — the correct county on every listing.</li>
+  <li><strong>Visit Central Florida</strong> — the tourism body, relevant for hospitality, food and visitor-facing businesses.</li>
+</ul>
+<p>Five accurate citations beat fifty automated submissions. Also start the review process in this window: build a request into how every job closes, and aim for a steady trickle rather than a burst, which can look manufactured.</p>
+
+<h2>Days 31–60: Service Pages and Neighbourhood Pages</h2>
+<p>One page per service you actually sell, each answering the question a buyer would ask before calling — what it costs, how long it takes, what happens on the day.</p>
+<p>Then the geographic pages, but only for places you genuinely serve: Winter Haven, Bartow, Auburndale, Plant City, Mulberry. Each needs real local detail — roads, landmarks, travel times. Near-duplicate pages with the town name swapped have been discounted for years and are a common waste of a month.</p>
+<p>If you serve the aviation or flavour-and-fragrance cluster, this is where the capability pages go instead: specifications, certifications and lead times, in industry vocabulary, aimed at buyers who are frequently not in Florida at all.</p>
+
+<h2>Days 61–90: Content for People Who Just Moved Here</h2>
+<p>This is the highest-value content in a fast-growing county, and almost nobody writes it. New arrivals search differently from long-term residents: "new to Polk County", "how to find a good [trade] near Lakeland", "what to know before moving to Lakeland".</p>
+<p>Two or three genuinely useful pieces aimed at this audience will outperform a dozen generic blog posts, because they meet a real need at the moment someone is choosing every supplier in their life at once.</p>
+
+<h2>The Ongoing Monthly Rhythm</h2>
+<ul>
+  <li>Post to the Google Business Profile and add fresh photos.</li>
+  <li>Request reviews from that month's completed jobs.</li>
+  <li>Publish one substantial page — service, location or new-resident content.</li>
+  <li>Check Search Console for queries you rank on positions 5–15, and improve those pages. That is the cheapest available traffic.</li>
+  <li>Re-check the top three competitors quarterly, not monthly. Positions move slowly.</li>
+</ul>
+
+<h2>What to Measure, and What to Ignore</h2>
+<p>Measure: profile calls and direction requests, Search Console average position on your named terms, review count and recency, and enquiries from organic traffic.</p>
+<p>Ignore: total impressions, keyword counts, domain authority scores from third-party tools, and any report that shows rankings without connecting them to enquiries. If positions rise and calls do not, the landing page is the problem, not the ranking.</p>
+
+<h2>Budget: What This Realistically Costs</h2>
+<p>Executed in-house, the 90-day plan above costs time rather than money — realistically a few hours a week. That is the right starting point for most single-location businesses here.</p>
+<p>Hiring help makes sense once you need sustained content or technical work, and for a market this size that usually means the low hundreds per month for local work, or $1,200–$3,000 for competitive multi-location programmes. Our <a href="/blog/seo-agency-vs-freelancer-2026">agency versus freelancer comparison</a> covers which model suits which situation, and our <a href="/blog/search-engine-optimization-in-santa-clarita-2026">guide for another fast-growing suburban market</a> shows the same approach applied elsewhere.</p>
+
+<h2>The Mistakes That Waste the First 90 Days</h2>
+<p>Chasing Tampa and Orlando terms. Building thin location pages for towns you do not serve. Creating content before fixing the profile. Buying links before the fundamentals are in place. And publishing generic advice that would fit any city in America, in a county where the genuinely local content is still unwritten.</p>
+
+<div class="post-faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>Should I target Tampa and Orlando keywords?</summary>
+    <p>Generally no, at least not first. Both metros are contested by advertisers with much larger budgets. Owning Lakeland, Winter Haven, Bartow, Auburndale and Polk County produces far better returns per pound spent.</p>
+  </details>
+  <details>
+    <summary>How long before this plan produces results?</summary>
+    <p>Google Business Profile improvements can show within weeks. Content published in days 31–90 typically takes three to six months to rank. The plan is designed so the fastest wins come first.</p>
+  </details>
+  <details>
+    <summary>What does an SEO plan cost in Lakeland?</summary>
+    <p>Run in-house it costs a few hours a week. Hiring help for local work typically runs in the low hundreds per month, with competitive or multi-location programmes at $1,200–$3,000.</p>
+  </details>
+  <details>
+    <summary>Are location pages for nearby towns worth building?</summary>
+    <p>Only for places you genuinely serve, and only if each page carries real local detail. Near-duplicate pages with the town name swapped have been discounted by Google for years.</p>
+  </details>
+  <details>
+    <summary>Why prioritise content for new residents?</summary>
+    <p>Because Polk County adds roughly 25,000 people a year, and those people are choosing every supplier they use with no existing preferences. Almost no local business writes for them, so the competition is unusually low.</p>
+  </details>
+  <details>
+    <summary>What if I sell B2B into aviation or flavour and fragrance?</summary>
+    <p>Then the plan changes shape. Those buyers search on capability and specification and are often outside Florida entirely, so days 31–90 should produce technical capability pages rather than neighbourhood pages.</p>
+  </details>
+  <details>
+    <summary>How many reviews do I need?</summary>
+    <p>There is no fixed number. What matters is being credible against the businesses currently ranking above you — check their counts, then build a steady flow rather than a burst.</p>
+  </details>
+  <details>
+    <summary>What is the single highest-return task?</summary>
+    <p>Completing the Google Business Profile properly — correct primary category, service areas covering the surrounding Polk County towns, and every service filled in with a description. It takes under an hour and is usually the biggest single gain available.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix builds 90-day plans like this one for businesses in fast-growing markets, then executes them — profile work, local content, and citations that hold up as competition arrives. Want a free audit of where your Lakeland business stands right now?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
   }
 ];
