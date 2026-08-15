@@ -5,7 +5,7 @@ module.exports = [
     name: 'Umaira Liaquat',
     role: 'Co-Founder & SEO Strategist',
     bio: 'Umaira leads strategy at Contomatix — from keyword research and content planning to the link building roadmaps behind every campaign. She works directly with clients to translate business goals into rankings that actually convert.',
-    photo: '/images/team/umaira-liaquat.jpg',
+    photo: '',
     linkedin: 'https://www.linkedin.com/in/umaira-liaquat-7b78403a1/'
   },
   {
