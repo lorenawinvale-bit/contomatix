@@ -9970,5 +9970,94 @@ module.exports = [
   <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
 </div>
 `
+  },
+  {
+    slug: 'web-design-pricing-raleigh-2026',
+    title: 'Web Design Pricing Raleigh: A Proven 2026 Buyer\'s Guide',
+    category: 'Digital Marketing',
+    excerpt: "Web design pricing Raleigh businesses actually pay ranges from $299 landing pages to $75,000 enterprise builds — here's what separates each tier and which one is right for your business.",
+    date: '2026-08-16',
+    author: 'Umaira Liaquat',
+    image: '/images/blog/web-design-pricing-raleigh.jpg',
+    content: `
+<p><strong>Web design pricing Raleigh</strong> businesses see quoted ranges from under $300 to well over $75,000, and almost none of that spread is arbitrary. It maps directly onto who is building the site, what platform it runs on, and how much strategy work happens before anyone touches a design tool.</p>
+<p>This is a breakdown of what each tier actually includes, so a quote can be judged against something more useful than gut feeling.</p>
+
+<img src="/images/blog/web-design-pricing-raleigh.jpg" alt="Web design pricing Raleigh — reviewing a design system and component library" width="1100" height="733" loading="lazy">
+
+<h2>Web Design Pricing Raleigh: The Real Tiers</h2>
+<p><strong>Budget / template builds — $299 to $1,699.</strong> A one-page site starts around $299, with 5-to-12 page small-business builds landing between $399 and $1,699. These use pre-built themes on WordPress or Squarespace, with minimal custom design work. Fine for a business that mainly needs a credible online presence and a contact form.</p>
+<p><strong>Freelancers and solo studios — $500 to $3,500.</strong> Hourly rates typically run $20 to $100 per hour. This tier gets you a real person designing to your brief rather than a theme, but capacity and reliability vary enormously — vet portfolios and past-client references carefully at this level.</p>
+<p><strong>Local specialized studios — $3,500 to $6,500.</strong> Custom branding, mobile optimization, and a website built specifically around your business rather than adapted from a template. This is where most established small and mid-sized Raleigh businesses land.</p>
+<p><strong>Full-service Raleigh agencies — $6,500 to $15,000+, up to $75,000 for enterprise.</strong> Includes market strategy, custom copywriting, and technical integrations beyond the website itself. The top of this range covers complex platforms — e-commerce catalogs, custom booking systems, multi-location architecture — not a standard brochure site.</p>
+<p><strong>Subscription / $0-down models — $0 to $500 upfront, then $150 to $200 a month.</strong> Bundles hosting, updates and minor design changes into a recurring fee. Cheaper upfront, but run the math over 2-3 years against a one-time build — the subscription often costs more over time for a comparable result.</p>
+
+<h2>What Actually Drives the Price Within a Tier</h2>
+<ul>
+  <li><strong>Page count and scope</strong> — more pages, service calculators, or extensive photo galleries add real development time, not just design time.</li>
+  <li><strong>Custom code vs. templates</strong> — a hand-coded layout or bespoke UI costs meaningfully more than a configured WordPress or Squarespace theme, but is also easier to extend later without fighting a template's limitations. Either way, ask whether the build follows Google's own <a href="https://web.dev/learn/performance" target="_blank" rel="noopener">web performance guidance</a> — a slow site undermines the value of any design spend.</li>
+  <li><strong>E-commerce integration</strong> — product catalogs, inventory management and secure payment processing typically add $1,500 to $5,000+ to the baseline.</li>
+  <li><strong>SEO and content</strong> — local SEO structure, keyword mapping and professional copywriting are either bundled into higher-tier packages or billed separately, commonly $500 to $2,000 a month as an ongoing retainer rather than a one-time cost.</li>
+</ul>
+
+<h2>The Question Most Raleigh Businesses Skip: Who Owns the Site After?</h2>
+<p>Before comparing prices, confirm who owns the domain, hosting account, and CMS login once the project ends. Some lower-cost and subscription providers retain admin control, which means switching providers later means rebuilding from scratch rather than migrating. A slightly higher upfront cost that guarantees full ownership is often the better deal once you account for that risk.</p>
+
+<h2>Hourly vs. Fixed Pricing</h2>
+<p>Most Raleigh designers charge either hourly ($75 to $200/hr for established studios) or fixed project pricing. Fixed pricing is almost always better for the client — it caps the total cost and forces the designer to scope the project properly upfront, rather than the cost drifting as "just one more revision" accumulates.</p>
+<p>If a provider will only quote hourly with no estimated total, treat that as a negotiating point, not a fixed reality. Most will provide a not-to-exceed estimate if asked directly.</p>
+
+<h2>Red Flags in a Web Design Quote</h2>
+<p><strong>A price with no scope attached.</strong> "Website for $500" means nothing without page count, revision rounds, and what happens after launch specified in writing.</p>
+<p><strong>No mention of who owns what.</strong> If domain and hosting ownership isn't addressed before you sign, ask directly before assuming anything.</p>
+<p><strong>Design-only, with SEO framed as an afterthought.</strong> A site with no technical SEO foundation — clean URLs, proper heading structure, fast load times — costs more to fix later than to build correctly the first time. Our guide to <a href="/blog/seo-agency-vs-freelancer-2026">choosing between an agency and a freelancer</a> covers the same ownership and scope questions from the SEO side.</p>
+
+<h2>What to Budget For at Each Business Stage</h2>
+<p>A new solo business validating an idea: the $299–$1,699 template tier is usually the right call — don't overspend before you know the business works. An established local business with real revenue: the $3,500–$6,500 custom tier pays for itself in credibility and conversion rate. A business planning to scale, add e-commerce, or expand to multiple locations: budget for the $6,500–$15,000+ tier from the start, because retrofitting that complexity onto a template site later costs more than building for it upfront.</p>
+
+<h2>A Website Is the Foundation, Not the Finish Line</h2>
+<p>The most common mistake at every price tier is treating the website launch as the end of the project. A site with zero organic visibility generates zero return regardless of how much it cost to build. If you're budgeting for a new Raleigh website, it's worth budgeting for what happens after launch too — our guide to <a href="/blog/how-to-get-seo-clients-2026">what actually drives visibility once a site is live</a> covers the channels that convert a finished website into an asset that produces enquiries.</p>
+
+<div class="post-faq">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>What's the average web design price in Raleigh?</summary>
+    <p>Most Raleigh small-business sites land between $399 and $1,699 for a basic build, or $3,500 to $6,500 for a custom small-to-mid business site. Enterprise and complex e-commerce builds can exceed $75,000.</p>
+  </details>
+  <details>
+    <summary>Is hourly or fixed pricing better?</summary>
+    <p>Fixed pricing is almost always better for the client, since it caps total cost and forces proper scoping upfront. Ask for a not-to-exceed estimate if a provider only offers hourly rates.</p>
+  </details>
+  <details>
+    <summary>Are $0-down subscription websites a good deal?</summary>
+    <p>Sometimes, for cash-flow reasons, but run the math over 2-3 years against a one-time build. The $150-200/month recurring fee often costs more over time for a comparable result, and some subscription providers retain admin control of the site.</p>
+  </details>
+  <details>
+    <summary>Does the price include SEO?</summary>
+    <p>Usually not by default. Local SEO structure, keyword mapping and content are either bundled into higher-tier packages or billed separately, commonly $500-$2,000/month as an ongoing retainer.</p>
+  </details>
+  <details>
+    <summary>Should I hire a freelancer or an agency?</summary>
+    <p>Freelancers ($500-$3,500) suit narrowly scoped projects with a clear brief. Agencies and specialized studios ($3,500+) suit businesses needing strategy, copywriting, and technical integrations beyond the design itself.</p>
+  </details>
+  <details>
+    <summary>How much does e-commerce add to the cost?</summary>
+    <p>Typically $1,500 to $5,000+ on top of the baseline build, covering product catalogs, inventory management and secure payment processing.</p>
+  </details>
+  <details>
+    <summary>Who should own the website after it's built?</summary>
+    <p>You should, in almost every case — domain, hosting account and CMS login in your name. Confirm this before signing, since some lower-cost providers retain control, which complicates switching providers later.</p>
+  </details>
+  <details>
+    <summary>What's the biggest mistake businesses make when budgeting for a website?</summary>
+    <p>Treating launch as the finish line. A site with no plan for organic visibility afterward produces no return regardless of build cost — budget for what happens after launch, not just the build itself.</p>
+  </details>
+</div>
+
+<div class="post-cta">
+  <p>Contomatix picks up where the website build ends — turning a finished Raleigh site into one that actually generates enquiries through search. Want a free audit of where your site currently stands?</p>
+  <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+</div>
+`
   }
 ];
