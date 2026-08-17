@@ -10455,12 +10455,10 @@ module.exports = [
     excerpt: "Search engine optimization Murfreesboro businesses need means real customers, not just rankings. See what actually works — and how to compete near Nashville.",
     date: '2026-08-16',
     author: 'Umaira Liaquat',
-    image: '/images/blog/search-engine-optimization-murfreesboro.jpg',
+    image: '',
     content: `
 <p>Murfreesboro sits close enough to Nashville that local businesses face a strange challenge: you're competing not just with the shop down the street, but with well-funded companies across the whole metro. <strong>Search engine optimization Murfreesboro</strong> businesses actually need is how they cut through that noise — showing up when someone searches for exactly what they offer, whether that person is a longtime Rutherford County resident or a student new to MTSU.</p>
 <p>This guide covers what actually drives rankings and revenue here in 2026, including the piece almost every competitor page in this market skips: how to show up in Google's AI Overviews, not just the traditional blue links.</p>
-
-<img src="/images/blog/search-engine-optimization-murfreesboro.jpg" alt="Search engine optimization Murfreesboro — a Middle Tennessee landscape representing the wider Rutherford County market" width="1100" height="733" loading="lazy">
 
 <h2>What Search Engine Optimization Murfreesboro Businesses Actually Need</h2>
 <p>Search engine optimization is the process of improving your website and online presence so Google — and increasingly, AI-powered search tools — show your business to people actively searching for what you offer, without paying per click. For a Murfreesboro business, that means showing up for searches like "orthodontist Murfreesboro TN," "manufacturing supplier Rutherford County," or "apartments near MTSU."</p>
