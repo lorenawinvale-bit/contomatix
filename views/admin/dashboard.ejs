@@ -1,0 +1,44 @@
+<div class="top-actions">
+  <div>
+    <h1>Blog Posts</h1>
+    <p class="muted"><%= posts.length %> total</p>
+  </div>
+  <a href="/admin/posts/new" class="btn">+ New Post</a>
+</div>
+
+<% if (success) { %><div class="flash flash-success"><%= success %></div><% } %>
+<% if (error) { %><div class="flash flash-error"><%= error %></div><% } %>
+
+<div class="card" style="padding:0;">
+  <table>
+    <thead>
+      <tr>
+        <th style="width:40%;">Title</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th>Author</th>
+        <th class="actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% posts.forEach(function(p) { %>
+        <tr>
+          <td>
+            <div><%= p.title %></div>
+            <div class="muted">/blog/<%= p.slug %></div>
+          </td>
+          <td><span class="pill"><%= p.category %></span></td>
+          <td class="muted"><%= p.date %></td>
+          <td class="muted"><%= p.author %></td>
+          <td class="actions">
+            <a href="/blog/<%= p.slug %>" target="_blank" class="btn btn-outline btn-sm">View</a>
+            <a href="/admin/posts/<%= p.slug %>/edit" class="btn btn-outline btn-sm">Edit</a>
+            <form method="POST" action="/admin/posts/<%= p.slug %>/delete" onsubmit="return confirm('Delete this post? This cannot be undone.');" style="display:inline;">
+              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>

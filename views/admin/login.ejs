@@ -1,0 +1,16 @@
+<div class="login-wrap">
+  <div class="card">
+    <h1>Admin Login</h1>
+    <p class="muted" style="margin-bottom:20px;">Contomatix content dashboard</p>
+    <% if (error) { %>
+      <div class="flash flash-error"><%= error %></div>
+    <% } %>
+    <form method="POST" action="/admin/login">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" autocomplete="username" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" autocomplete="current-password" required>
+      <button type="submit" class="btn" style="width:100%; margin-top:22px;">Log in</button>
+    </form>
+  </div>
+</div>

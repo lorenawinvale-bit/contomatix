@@ -1,0 +1,67 @@
+<div class="top-actions">
+  <div>
+    <h1><%= isEdit ? 'Edit Post' : 'New Post' %></h1>
+    <p class="muted"><%= isEdit ? post.slug : 'Fill in the fields below, then publish.' %></p>
+  </div>
+  <a href="/admin" class="btn btn-outline">&larr; Back to Posts</a>
+</div>
+
+<% if (error) { %><div class="flash flash-error"><%= error %></div><% } %>
+
+<form method="POST" action="<%= isEdit ? '/admin/posts/' + post.slug + '/edit' : '/admin/posts/new' %>">
+  <div class="card">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" value="<%= post.title || '' %>" required>
+
+    <label for="slug">URL slug</label>
+    <input type="text" id="slug" name="slug" value="<%= post.slug || '' %>" required pattern="[a-z0-9-]+">
+    <div class="hint">Lowercase letters, numbers and hyphens only. Final URL: /blog/<span id="slug-preview"><%= post.slug || '' %></span></div>
+
+    <div class="row-2">
+      <div>
+        <label for="category">Category</label>
+        <input type="text" id="category" name="category" value="<%= post.category || '' %>" list="category-list" required>
+        <datalist id="category-list">
+          <% categories.forEach(function(c) { %><option value="<%= c %>"><% }); %>
+        </datalist>
+      </div>
+      <div>
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" value="<%= post.author || '' %>" list="author-list" required>
+        <datalist id="author-list">
+          <% authors.forEach(function(a) { %><option value="<%= a %>"><% }); %>
+        </datalist>
+      </div>
+    </div>
+
+    <div class="row-2">
+      <div>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" value="<%= post.date || '' %>" required>
+      </div>
+      <div>
+        <label for="image">Image path</label>
+        <input type="text" id="image" name="image" value="<%= post.image || '' %>" placeholder="/images/blog/example.jpg">
+        <div class="hint">Leave blank for no image. Upload the file to public/images/blog/ separately.</div>
+      </div>
+    </div>
+
+    <label for="excerpt">Excerpt (meta description)</label>
+    <textarea id="excerpt" name="excerpt" required><%= post.excerpt || '' %></textarea>
+
+    <label for="content">Content (HTML)</label>
+    <textarea id="content" name="content" class="content-editor" required><%= post.content || '' %></textarea>
+    <div class="hint">Raw HTML — same format as the rest of the site (h2, p, ul, .post-faq details/summary blocks, .post-cta at the end).</div>
+
+    <div style="margin-top:26px; display:flex; gap:10px;">
+      <button type="submit" class="btn"><%= isEdit ? 'Save Changes' : 'Publish Post' %></button>
+      <a href="/admin" class="btn btn-outline">Cancel</a>
+    </div>
+  </div>
+</form>
+
+<script>
+  var slugInput = document.getElementById('slug');
+  var preview = document.getElementById('slug-preview');
+  slugInput.addEventListener('input', function () { preview.textContent = slugInput.value; });
+</script>

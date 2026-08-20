@@ -4,13 +4,15 @@ const fs = require('fs');
 const express = require('express');
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
+const session = require('express-session');
 
 const services = require('./data/services');
-const blogPosts = require('./data/blog');
+const blogStore = require('./lib/blogStore');
 const team = require('./data/team');
 const reviews = require('./data/reviews');
 const site = require('./data/site');
 const { sendContactEmail, smtpConfigured } = require('./lib/mailer');
+const { checkLogin, requireAdmin } = require('./lib/adminAuth');
 
 // Only render a member's <img> if the photo file actually exists, so a
 // missing upload falls back to the initials avatar instead of a broken image.
@@ -62,6 +64,12 @@ app.use(express.static(path.join(__dirname, 'public'), {
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'dev-only-insecure-secret',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { httpOnly: true, maxAge: 1000 * 60 * 60 * 8 } // 8 hours
+}));
 
 // Helper: pass common data to every view
 app.use((req, res, next) => {
@@ -79,7 +87,7 @@ app.use((req, res, next) => {
 app.get('/sitemap.xml', (req, res) => {
   const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms'];
   const servicePaths = services.map(s => `/services/${s.slug}`);
-  const blogPaths = blogPosts.map(p => `/blog/${p.slug}`);
+  const blogPaths = blogStore.getAll().map(p => `/blog/${p.slug}`);
   const urls = [...staticPaths, ...servicePaths, ...blogPaths];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -93,6 +101,7 @@ ${urls.map(u => `  <url><loc>${site.baseUrl}${u}</loc></url>`).join('\n')}
 app.get('/robots.txt', (req, res) => {
   res.type('text/plain').send(`User-agent: *
 Allow: /
+Disallow: /admin
 
 Sitemap: ${site.baseUrl}/sitemap.xml`);
 });
@@ -118,6 +127,7 @@ app.get('/services/:slug', (req, res) => {
 });
 
 app.get('/blog', (req, res) => {
+  const blogPosts = blogStore.getAll();
   const category = req.query.category || 'All';
   const categories = ['All', ...new Set(blogPosts.map(p => p.category))];
   // Newest first. Posts are appended to data/blog.js as they're written, so
@@ -141,7 +151,7 @@ app.get('/blog', (req, res) => {
 });
 
 app.get('/blog/:slug', (req, res) => {
-  const post = blogPosts.find(p => p.slug === req.params.slug);
+  const post = blogStore.getBySlug(req.params.slug);
   if (!post) return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
   const author = post.author ? team.find(m => m.name === post.author) : null;
   const wordCount = post.content.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).length;
@@ -167,6 +177,7 @@ app.get('/team', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
+  const blogPosts = blogStore.getAll();
   res.render('pages/about', {
     title: 'About Us — Contomatix',
     description: 'Learn what Contomatix does and how we help brands rank higher.',
@@ -234,6 +245,114 @@ app.post('/contact', async (req, res) => {
   } catch (err) {
     console.error('[contact] Failed to send email:', err);
     return renderContact({ error: 'Sorry — something went wrong sending your message. Please try again, or reach us on WhatsApp or email instead.' });
+  }
+});
+
+// ---------- Admin dashboard ----------
+
+app.get('/admin/login', (req, res) => {
+  if (req.session.isAdmin) return res.redirect('/admin');
+  res.render('admin/login', { title: 'Log in', layout: 'admin/layout', hideNav: true, error: null });
+});
+
+app.post('/admin/login', (req, res) => {
+  const { username, password } = req.body;
+  if (checkLogin(username, password)) {
+    req.session.isAdmin = true;
+    return res.redirect('/admin');
+  }
+  res.render('admin/login', { title: 'Log in', layout: 'admin/layout', hideNav: true, error: 'Incorrect username or password.' });
+});
+
+app.get('/admin/logout', (req, res) => {
+  req.session.destroy(() => res.redirect('/admin/login'));
+});
+
+app.get('/admin', requireAdmin, (req, res) => {
+  const posts = [...blogStore.getAll()].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  res.render('admin/dashboard', {
+    title: 'Posts',
+    layout: 'admin/layout',
+    posts,
+    success: req.query.success || null,
+    error: req.query.error || null
+  });
+});
+
+app.get('/admin/posts/new', requireAdmin, (req, res) => {
+  const posts = blogStore.getAll();
+  res.render('admin/post-form', {
+    title: 'New Post',
+    layout: 'admin/layout',
+    isEdit: false,
+    post: {},
+    categories: [...new Set(posts.map(p => p.category))].sort(),
+    authors: [...new Set(posts.map(p => p.author))].sort(),
+    error: null
+  });
+});
+
+app.post('/admin/posts/new', requireAdmin, (req, res) => {
+  const { title, slug, category, author, date, image, excerpt, content } = req.body;
+  const cleanSlug = blogStore.slugify(slug);
+  const posts = blogStore.getAll();
+  try {
+    blogStore.create({ slug: cleanSlug, title, category, excerpt, date, author, image: image || '', content });
+    res.redirect('/admin?success=' + encodeURIComponent('Post published.'));
+  } catch (err) {
+    res.render('admin/post-form', {
+      title: 'New Post',
+      layout: 'admin/layout',
+      isEdit: false,
+      post: { title, slug: cleanSlug, category, author, date, image, excerpt, content },
+      categories: [...new Set(posts.map(p => p.category))].sort(),
+      authors: [...new Set(posts.map(p => p.author))].sort(),
+      error: err.message
+    });
+  }
+});
+
+app.get('/admin/posts/:slug/edit', requireAdmin, (req, res) => {
+  const post = blogStore.getBySlug(req.params.slug);
+  if (!post) return res.redirect('/admin?error=' + encodeURIComponent('Post not found.'));
+  const posts = blogStore.getAll();
+  res.render('admin/post-form', {
+    title: 'Edit Post',
+    layout: 'admin/layout',
+    isEdit: true,
+    post,
+    categories: [...new Set(posts.map(p => p.category))].sort(),
+    authors: [...new Set(posts.map(p => p.author))].sort(),
+    error: null
+  });
+});
+
+app.post('/admin/posts/:slug/edit', requireAdmin, (req, res) => {
+  const { title, slug, category, author, date, image, excerpt, content } = req.body;
+  const cleanSlug = blogStore.slugify(slug);
+  const posts = blogStore.getAll();
+  try {
+    blogStore.update(req.params.slug, { slug: cleanSlug, title, category, excerpt, date, author, image: image || '', content });
+    res.redirect('/admin?success=' + encodeURIComponent('Changes saved.'));
+  } catch (err) {
+    res.render('admin/post-form', {
+      title: 'Edit Post',
+      layout: 'admin/layout',
+      isEdit: true,
+      post: { title, slug: cleanSlug, category, author, date, image, excerpt, content },
+      categories: [...new Set(posts.map(p => p.category))].sort(),
+      authors: [...new Set(posts.map(p => p.author))].sort(),
+      error: err.message
+    });
+  }
+});
+
+app.post('/admin/posts/:slug/delete', requireAdmin, (req, res) => {
+  try {
+    blogStore.remove(req.params.slug);
+    res.redirect('/admin?success=' + encodeURIComponent('Post deleted.'));
+  } catch (err) {
+    res.redirect('/admin?error=' + encodeURIComponent(err.message));
   }
 });
 
