@@ -10455,10 +10455,12 @@ module.exports = [
     excerpt: "Search engine optimization Murfreesboro businesses need means real customers, not just rankings. See what actually works — and how to compete near Nashville.",
     date: '2026-08-16',
     author: 'Umaira Liaquat',
-    image: '',
+    image: '/images/blog/search-engine-optimization-murfreesboro.jpg',
     content: `
 <p>Murfreesboro sits close enough to Nashville that local businesses face a strange challenge: you're competing not just with the shop down the street, but with well-funded companies across the whole metro. <strong>Search engine optimization Murfreesboro</strong> businesses actually need is how they cut through that noise — showing up when someone searches for exactly what they offer, whether that person is a longtime Rutherford County resident or a student new to MTSU.</p>
 <p>This guide covers what actually drives rankings and revenue here in 2026, including the piece almost every competitor page in this market skips: how to show up in Google's AI Overviews, not just the traditional blue links.</p>
+
+<img src="/images/blog/search-engine-optimization-murfreesboro.jpg" alt="Search engine optimization Murfreesboro — a Middle Tennessee farm property representing the wider Rutherford County market" width="1100" height="733" loading="lazy">
 
 <h2>What Search Engine Optimization Murfreesboro Businesses Actually Need</h2>
 <p>Search engine optimization is the process of improving your website and online presence so Google — and increasingly, AI-powered search tools — show your business to people actively searching for what you offer, without paying per click. For a Murfreesboro business, that means showing up for searches like "orthodontist Murfreesboro TN," "manufacturing supplier Rutherford County," or "apartments near MTSU."</p>
@@ -10579,9 +10581,11 @@ module.exports = [
     excerpt: "Comparing a Greeley SEO company? Here's a real framework for evaluating agencies — portfolio, pricing, AI tools, and honest red flags to avoid.",
     date: '2026-08-16',
     author: 'Umaira Liaquat',
-    image: '',
+    image: '/images/blog/greeley-seo-company.jpg',
     content: `
 <p>Searching for a <strong>Greeley SEO company</strong> usually turns up the same three or four names over and over, often ranked on lists that don't explain why. That's not much help when you're the one deciding where to spend your marketing budget. This guide gives you an actual framework — the same criteria a savvy business owner in Weld County should use to compare agencies, spot the difference between real expertise and marketing buzzwords, and avoid signing a contract you'll regret.</p>
+
+<img src="/images/blog/greeley-seo-company.jpg" alt="Greeley SEO company — Weld County farmland representing the wider agricultural and business community" width="1100" height="733" loading="lazy">
 
 <h2>What to Actually Look for in a Greeley SEO Company</h2>
 <p>A good SEO company does three things well: fixes the technical health of your website, builds content that genuinely answers what your customers are searching, and strengthens your local presence through Google Business Profile, reviews, and citations. Anyone selling you SEO without touching all three is selling you a partial solution.</p>
@@ -10719,9 +10723,11 @@ module.exports = [
     excerpt: "Looking for a Clearwater SEO company? Here's what actually drives local rankings and revenue in Pinellas County — plus how to vet a real partner.",
     date: '2026-08-16',
     author: 'Umaira Liaquat',
-    image: '',
+    image: '/images/blog/clearwater-seo-company.jpg',
     content: `
 <p>Clearwater runs on a rhythm most cities don't have to think about — a tourist season that floods search demand for months, a snowbird population that shows up every winter with no existing brand loyalty, and year-round competition from Tampa and St. Pete just across the bay. Searching for a <strong>Clearwater SEO company</strong> usually means one of two things: you want to understand what actually works in this market, or you're trying to vet an agency before handing over a budget. This guide covers both — including the part almost every competitor page skips: how to show up in Google's AI Overviews, not just the traditional blue links.</p>
+
+<img src="/images/blog/clearwater-seo-company.jpg" alt="Clearwater SEO company — a Gulf Coast Florida sunset representing the wider Pinellas County market" width="1100" height="733" loading="lazy">
 
 <h2>What a Clearwater SEO Company Actually Does</h2>
 <p>A Clearwater SEO company improves your website and online presence so Google — and increasingly, AI-powered search tools — show your business to people actively searching for what you offer, without paying per click. That includes ranking in traditional organic results, the Google Maps 3-Pack, and now, AI-generated answer summaries.</p>
