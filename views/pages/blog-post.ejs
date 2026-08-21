@@ -63,7 +63,7 @@ var shareUrl = encodeURIComponent(postUrl);
 <% if (post.image) { %>
   <div class="container">
     <div class="post-cover">
-      <img src="<%= post.image %>" alt="<%= post.title %>" width="760" height="560">
+      <img src="<%= post.image %>" alt="<%= post.title %>" width="760" height="475" loading="eager" fetchpriority="high">
     </div>
   </div>
 <% } %>
@@ -78,6 +78,28 @@ var shareUrl = encodeURIComponent(postUrl);
 <div class="container" style="padding-bottom: 60px;">
   <a href="/blog" class="btn btn-outline">&larr; Back to blog</a>
 </div>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image ? site.baseUrl + post.image : undefined,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Person',
+      name: post.author
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Contomatix',
+      logo: { '@type': 'ImageObject', url: site.baseUrl + '/images/favicon.svg' }
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl }
+  }) %>
+</script>
 
 <% if (faqs && faqs.length) { %>
 <script type="application/ld+json">

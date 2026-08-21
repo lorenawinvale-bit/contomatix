@@ -1,8 +1,5 @@
 <section class="hero">
   <div id="hero-canvas" class="hero-canvas"></div>
-  <span class="hero-chip hero-chip-1">🔗 <span>DR 74 placement</span> <span class="up">live</span></span>
-  <span class="hero-chip hero-chip-2">📈 <span>+38 links</span> <span class="up">this quarter</span></span>
-  <span class="hero-chip hero-chip-3">🏆 <span>#1</span> <span class="up">▲ 4 spots</span></span>
   <div class="container hero-center">
     <div class="hero-badge"><span class="spark">✦</span> White-hat link building &amp; SEO</div>
     <h1>Rankings built on <span class="grad-text">real authority</span>,<br>not <span class="grad-text-warm">shortcuts</span></h1>
@@ -48,11 +45,11 @@
 
     <%
     var serviceArt = {
-      'link-building':    { img: '/images/illus-links.svg',     chip: '🔗 +38 links this quarter' },
+      'link-building':    { img: '/images/illus-links.svg',     chip: '🔗 Manually vetted placements' },
       'guest-posting':    { img: '/images/illus-guestpost.svg', chip: '✍️ Original, editor-approved' },
-      'on-page-seo':      { img: '/images/illus-onpage.svg',    chip: '✅ SEO score 96/100' },
+      'on-page-seo':      { img: '/images/illus-onpage.svg',    chip: '✅ Built to Google\'s own guidelines' },
       'off-page-seo':     { img: '/images/illus-offpage.svg',   chip: '🌍 Authority beyond your site' },
-      'keyword-research': { img: '/images/illus-keyword.svg',   chip: '🎯 40+ keyword gaps found' }
+      'keyword-research': { img: '/images/illus-keyword.svg',   chip: '🎯 Real search-intent research' }
     };
     %>
     <div class="service-rows">
@@ -113,53 +110,43 @@
 
 <section class="stats-band">
   <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">Published, not promised</span>
+      <h2>Numbers you can actually check</h2>
+      <p>Rather than cite client results you can't verify, here's our own public output.</p>
+    </div>
     <div class="stats-grid">
-      <div class="stat-big"><span class="num" data-count="1240">0</span><span class="suffix">+</span><label>Links placed</label></div>
-      <div class="stat-big"><span class="num" data-count="180">0</span><span class="suffix">+</span><label>Campaigns delivered</label></div>
-      <div class="stat-big"><span class="num" data-count="97">0</span><span class="suffix">%</span><label>Clients retained</label></div>
-      <div class="stat-big"><span class="num" data-count="12">0</span><span class="suffix">×</span><label>Avg. traffic growth</label></div>
+      <div class="stat-big"><span class="num" data-count="<%= postCount %>">0</span><span class="suffix">+</span><label>Guides published</label></div>
+      <div class="stat-big"><span class="num" data-count="<%= marketCount %>">0</span><span class="suffix"></span><label>Markets hand-verified</label></div>
+      <div class="stat-big"><span class="num" data-count="<%= services.length %>">0</span><span class="suffix"></span><label>Core services</label></div>
+      <div class="stat-big"><span class="num" data-count="100">0</span><span class="suffix">%</span><label>White-hat, always</label></div>
     </div>
   </div>
 </section>
 
-<section class="testimonials">
+<section class="latest-guides">
   <div class="container">
     <div class="section-head centered">
-      <span class="eyebrow">Reviews</span>
-      <h2>What clients say</h2>
+      <span class="eyebrow">From the blog</span>
+      <h2>Recent guides</h2>
+      <p>Real, published research — the same city and industry guides referenced in the stats above.</p>
     </div>
-  </div>
-  <!-- Placeholder reviews (stock photos) — replace with real client feedback before launch -->
-  <div class="review-marquee">
-    <div class="review-track">
-      <% for (var rep = 0; rep < 2; rep++) { %>
-        <% reviews.slice(0, 6).forEach(function(r) { %>
-          <div class="testimonial-card">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="quote">"<%= r.quote %>"</p>
-            <div class="reviewer">
-              <img class="reviewer-photo" src="<%= r.photo %>" alt="" width="46" height="46" loading="lazy">
-              <span><strong><%= r.name %></strong><em><%= r.role %></em></span>
-            </div>
+    <div class="latest-guides-grid">
+      <% latestPosts.forEach(function(p) { %>
+        <a class="story-card" href="/blog/<%= p.slug %>">
+          <div class="story-thumb">
+            <% if (p.image) { %><img src="<%= p.image %>" alt="" width="192" height="152" loading="lazy"><% } %>
           </div>
-        <% }); %>
-      <% } %>
+          <div>
+            <span class="story-tag"><%= p.category %></span>
+            <div class="story-date">Published <%= p.date %></div>
+            <h3><%= p.title %></h3>
+          </div>
+        </a>
+      <% }); %>
     </div>
-  </div>
-  <div class="review-marquee">
-    <div class="review-track review-track-rev">
-      <% for (var rep2 = 0; rep2 < 2; rep2++) { %>
-        <% reviews.slice(6, 12).forEach(function(r) { %>
-          <div class="testimonial-card">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="quote">"<%= r.quote %>"</p>
-            <div class="reviewer">
-              <img class="reviewer-photo" src="<%= r.photo %>" alt="" width="46" height="46" loading="lazy">
-              <span><strong><%= r.name %></strong><em><%= r.role %></em></span>
-            </div>
-          </div>
-        <% }); %>
-      <% } %>
+    <div class="hero-actions" style="justify-content:center; margin-top:28px;">
+      <a href="/blog" class="btn btn-outline">Read all guides &rarr;</a>
     </div>
   </div>
 </section>

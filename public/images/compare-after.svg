@@ -27,6 +27,7 @@
     <line x1="60" y1="230" x2="1050" y2="230"/><line x1="60" y1="290" x2="1050" y2="290"/>
     <line x1="60" y1="350" x2="1050" y2="350"/><line x1="60" y1="410" x2="1050" y2="410"/><line x1="60" y1="470" x2="1050" y2="470"/>
   </g>
+  <text x="1050" y="500" font-size="12" fill="#9DB8B2" text-anchor="end" font-style="italic">Illustrative example, not real client data</text>
   <g font-size="11" fill="#9DB8B2">
     <text x="30" y="234">500</text><text x="30" y="294">400</text><text x="30" y="354">300</text><text x="30" y="414">200</text><text x="30" y="474">100</text>
   </g>

@@ -33,4 +33,5 @@
   <path d="M60 300 C 200 280, 330 285, 460 310 C 620 340, 820 400, 1050 445" fill="none" stroke="#9AA3B3" stroke-width="3"/>
   <path d="M60 350 C 220 345, 380 360, 540 385 C 720 412, 880 440, 1050 462" fill="none" stroke="#D9534F" stroke-width="2.5" opacity="0.75"/>
   <path d="M60 400 C 240 398, 420 408, 600 424 C 780 440, 920 452, 1050 464" fill="none" stroke="#C9A26B" stroke-width="2.5" opacity="0.7"/>
+  <text x="1050" y="500" font-size="12" fill="#B0B6C3" text-anchor="end" font-style="italic">Illustrative example, not real client data</text>
 </svg>

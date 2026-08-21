@@ -575,8 +575,13 @@ function initCompare() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  initHeroScene('hero-canvas');
-  initAmbientScene('ambient-canvas');
+  // Skip the continuous WebGL render loops for visitors who've asked the OS
+  // for reduced motion — meaningful CPU/battery cost for a decorative effect.
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    initHeroScene('hero-canvas');
+    initAmbientScene('ambient-canvas');
+  }
   if (!initGsapScroll()) initScrollReveal();
   initCounters();
   initHoverGlow();

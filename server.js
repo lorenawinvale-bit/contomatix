@@ -1,18 +1,39 @@
-require('dotenv').config();
-
 const fs = require('fs');
 const express = require('express');
 const path = require('path');
+
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 
 const services = require('./data/services');
 const blogStore = require('./lib/blogStore');
 const team = require('./data/team');
-const reviews = require('./data/reviews');
 const site = require('./data/site');
 const { sendContactEmail, smtpConfigured } = require('./lib/mailer');
 const { checkLogin, requireAdmin } = require('./lib/adminAuth');
+const multer = require('multer');
+
+const BLOG_IMAGES_DIR = path.join(__dirname, 'public', 'images', 'blog');
+const upload = multer({
+  storage: multer.diskStorage({
+    destination: (req, file, cb) => cb(null, BLOG_IMAGES_DIR),
+    filename: (req, file, cb) => {
+      const ext = path.extname(file.originalname).toLowerCase();
+      const base = path.basename(file.originalname, ext)
+        .toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      let name = `${base}${ext}`;
+      let i = 1;
+      while (fs.existsSync(path.join(BLOG_IMAGES_DIR, name))) {
+        name = `${base}-${i}${ext}`;
+        i++;
+      }
+      cb(null, name);
+    }
+  }),
+  fileFilter: (req, file, cb) => cb(null, /\.(jpe?g|png|webp|gif|svg)$/i.test(file.originalname)),
+  limits: { fileSize: 10 * 1024 * 1024 }
+});
 
 // Only render a member's <img> if the photo file actually exists, so a
 // missing upload falls back to the initials avatar instead of a broken image.
@@ -56,10 +77,11 @@ app.use(express.static(path.join(__dirname, 'public'), {
     // CSS comments) and silently break CSS parsing. Force it explicitly.
     if (filePath.endsWith('.css')) res.setHeader('Content-Type', 'text/css; charset=utf-8');
     if (filePath.endsWith('.js')) res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
-    // Without this, browsers can cache CSS/JS aggressively and keep showing an
-    // old version after a deploy until the user manually hard-refreshes.
-    // no-cache forces a fast revalidation check on every load instead.
-    if (filePath.endsWith('.css') || filePath.endsWith('.js')) res.setHeader('Cache-Control', 'no-cache');
+    // Every CSS/JS request already carries a ?v=<assetVersion> query string
+    // (see data/site.js), and that version is bumped on every edit — so the
+    // URL itself changes on deploy and a long, immutable cache is safe here;
+    // no-cache would otherwise force a revalidation round-trip on every load.
+    if (filePath.endsWith('.css') || filePath.endsWith('.js')) res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
   }
 }));
 app.use(express.urlencoded({ extended: true }));
@@ -107,11 +129,17 @@ Sitemap: ${site.baseUrl}/sitemap.xml`);
 });
 
 app.get('/', (req, res) => {
+  const allPosts = blogStore.getAll();
+  const latestPosts = [...allPosts]
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
+    .slice(0, 6);
   res.render('pages/home', {
     title: 'Contomatix — Link Building & SEO Services',
     description: 'Contomatix helps brands grow organic traffic through link building, guest posting, on-page & off-page SEO, and keyword research.',
     pageClass: 'page-home',
-    reviews
+    postCount: allPosts.length,
+    marketCount: allPosts.filter(p => p.slug.startsWith('best-seo-companies-in-')).length,
+    latestPosts
   });
 });
 
