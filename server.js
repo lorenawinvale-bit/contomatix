@@ -78,10 +78,13 @@ app.use(express.static(path.join(__dirname, 'public'), {
     if (filePath.endsWith('.css')) res.setHeader('Content-Type', 'text/css; charset=utf-8');
     if (filePath.endsWith('.js')) res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
     // Every CSS/JS request already carries a ?v=<assetVersion> query string
-    // (see data/site.js), and that version is bumped on every edit — so the
-    // URL itself changes on deploy and a long, immutable cache is safe here;
-    // no-cache would otherwise force a revalidation round-trip on every load.
-    if (filePath.endsWith('.css') || filePath.endsWith('.js')) res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    // (see data/site.js), bumped on every edit, so a long cache is normally
+    // safe — the URL itself changes on deploy. Deliberately NOT `immutable`
+    // and capped at a week rather than a year: a transient host/CDN hiccup
+    // (seen once already) can get a bad response cached under this exact
+    // versioned URL, and a shorter, revalidatable cache limits how long that
+    // stays stuck before self-healing, instead of locking it in for a year.
+    if (filePath.endsWith('.css') || filePath.endsWith('.js')) res.setHeader('Cache-Control', 'public, max-age=604800');
   }
 }));
 app.use(express.urlencoded({ extended: true }));
