@@ -8,34 +8,38 @@
 <div class="container blog-toolbar">
   <div class="category-tabs">
     <% categories.forEach(function(cat) { %>
-      <a class="category-tab <%= cat === activeCategory ? 'active' : '' %>" href="/blog?category=<%= encodeURIComponent(cat) %>"><%= cat %></a>
+      <a class="category-tab <%= cat === activeCategory ? 'active' : '' %>" href="/blog?category=<%= encodeURIComponent(cat) %><%= search ? '&q=' + encodeURIComponent(search) : '' %>"><%= cat %></a>
     <% }); %>
   </div>
-  <input class="search-box" type="search" placeholder="Search...">
+  <form class="search-form" method="get" action="/blog">
+    <% if (activeCategory && activeCategory !== 'All') { %><input type="hidden" name="category" value="<%= activeCategory %>"><% } %>
+    <input class="search-box" type="search" name="q" placeholder="Search..." value="<%= search || '' %>">
+  </form>
 </div>
 
 <% if (posts.length) { %>
-<div class="container top-stories">
-  <a class="story-featured" href="/blog/<%= posts[0].slug %>">
-    <div class="story-image">
-      <% if (posts[0].image) { %><img src="<%= posts[0].image %>" alt="" width="640" height="400" loading="lazy"><% } %>
-    </div>
-    <div class="story-body">
-      <span class="story-tag"><%= posts[0].category %></span>
-      <h3><%= posts[0].title %></h3>
-      <p><%= posts[0].excerpt %></p>
-    </div>
-  </a>
-  <div class="story-side">
-    <% posts.slice(1, 4).forEach(function(p) { %>
-      <a class="story-card" href="/blog/<%= p.slug %>">
-        <div class="story-thumb">
-          <% if (p.image) { %><img src="<%= p.image %>" alt="" width="192" height="152" loading="lazy"><% } %>
+<div class="container">
+  <div class="post-grid post-grid-main">
+    <% posts.forEach(function(p) { %>
+      <a class="post-card" href="/blog/<%= p.slug %>">
+        <div class="post-image">
+          <% if (p.image) { %><img src="<%= p.image %>" alt="" width="360" height="225" loading="lazy"><% } %>
         </div>
-        <div>
+        <div class="post-body">
           <span class="story-tag"><%= p.category %></span>
-          <div class="story-date">Published on <%= p.date %></div>
           <h3><%= p.title %></h3>
+          <div class="post-byline">
+            <% if (p.authorInfo.hasPhoto) { %>
+              <img class="post-byline-avatar" src="<%= p.authorInfo.photo %>" alt="" width="24" height="24">
+            <% } else { %>
+              <span class="post-byline-avatar post-byline-initials"><%= p.authorInfo.name.split(' ').map(function(w){ return w[0]; }).join('') %></span>
+            <% } %>
+            <span class="post-byline-name"><%= p.authorInfo.name %></span>
+            <span class="post-byline-sep">&middot;</span>
+            <span class="post-byline-date"><%= p.date %></span>
+            <span class="post-byline-sep">&middot;</span>
+            <span class="post-byline-read"><%= p.readMinutes %> min read</span>
+          </div>
         </div>
       </a>
     <% }); %>
@@ -68,40 +72,24 @@
   </div>
 </div>
 
-<% if (posts.length > 4) { %>
-<div class="container">
-  <div class="post-grid">
-    <% posts.slice(4).forEach(function(p) { %>
-      <a class="post-card" href="/blog/<%= p.slug %>">
-        <div class="post-image">
-          <% if (p.image) { %><img src="<%= p.image %>" alt="" width="360" height="225" loading="lazy"><% } %>
-        </div>
-        <div class="post-body">
-          <span class="story-tag"><%= p.category %></span>
-          <h3><%= p.title %></h3>
-          <p><%= p.excerpt %></p>
-        </div>
-      </a>
-    <% }); %>
-  </div>
-</div>
-<% } %>
-
+<%
+  var qParam = search ? '&q=' + encodeURIComponent(search) : '';
+%>
 <% if (totalPages > 1) { %>
 <div class="container">
   <div class="pagination">
     <% if (page > 1) { %>
-      <a href="/blog?category=<%= encodeURIComponent(activeCategory) %>&page=<%= page - 1 %>" class="page-link">&laquo; Prev</a>
+      <a href="/blog?category=<%= encodeURIComponent(activeCategory) %><%= qParam %>&page=<%= page - 1 %>" class="page-link">&laquo; Prev</a>
     <% } %>
     <% for (let i = 1; i <= totalPages; i++) { %>
       <% if (i === page) { %>
         <span class="current"><%= i %></span>
       <% } else { %>
-        <a href="/blog?category=<%= encodeURIComponent(activeCategory) %>&page=<%= i %>"><%= i %></a>
+        <a href="/blog?category=<%= encodeURIComponent(activeCategory) %><%= qParam %>&page=<%= i %>"><%= i %></a>
       <% } %>
     <% } %>
     <% if (page < totalPages) { %>
-      <a href="/blog?category=<%= encodeURIComponent(activeCategory) %>&page=<%= page + 1 %>" class="page-link">Next &raquo;</a>
+      <a href="/blog?category=<%= encodeURIComponent(activeCategory) %><%= qParam %>&page=<%= page + 1 %>" class="page-link">Next &raquo;</a>
     <% } %>
   </div>
 </div>

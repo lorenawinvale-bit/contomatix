@@ -1151,6 +1151,7 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
   color: #FFFFFF;
   border-color: var(--dark);
 }
+.search-form { display: flex; }
 .search-box {
   padding: 10px 16px;
   border-radius: 999px;
@@ -1211,17 +1212,39 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 }
 .story-tag {
   display: inline-block;
-  font-size: 0.72rem;
-  font-family: var(--font-mono);
-  color: var(--accent-teal-dim);
-  background: rgba(20,184,166,0.12);
-  padding: 3px 10px;
-  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-orange);
   margin-bottom: 8px;
 }
 .story-date { color: var(--text-faint); font-size: 0.78rem; }
 .story-card h3, .story-featured h3 { font-size: 1.02rem; margin: 6px 0 4px; }
 .story-card p { color: var(--text-dim); font-size: 0.85rem; margin: 0; }
+
+.post-byline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: var(--text-faint);
+}
+.post-byline-avatar {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.post-byline-initials {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--gradient-brand);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+.post-byline-name { color: var(--text-dim); font-weight: 600; }
+.post-byline-sep { color: var(--border-light); }
 
 .newsletter-block {
   display: grid;

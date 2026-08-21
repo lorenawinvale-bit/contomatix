@@ -160,15 +160,28 @@ app.get('/services/:slug', (req, res) => {
 app.get('/blog', (req, res) => {
   const blogPosts = blogStore.getAll();
   const category = req.query.category || 'All';
+  const search = (req.query.q || '').trim();
   const categories = ['All', ...new Set(blogPosts.map(p => p.category))];
   // Newest first. Posts are appended to data/blog.js as they're written, so
   // without this the most recent work ends up on the last page of the listing.
   const byNewest = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
-  const filtered = category === 'All' ? byNewest : byNewest.filter(p => p.category === category);
-  const perPage = 13; // 4 in the featured/top-stories layout + 9 in the grid below
+  let filtered = category === 'All' ? byNewest : byNewest.filter(p => p.category === category);
+  if (search) {
+    const q = search.toLowerCase();
+    filtered = filtered.filter(p => p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q));
+  }
+  const perPage = 12;
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
   const page = Math.min(totalPages, Math.max(1, parseInt(req.query.page, 10) || 1));
-  const posts = filtered.slice((page - 1) * perPage, page * perPage);
+  const posts = filtered.slice((page - 1) * perPage, page * perPage).map(p => {
+    const wordCount = p.content.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).length;
+    const authorMember = team.find(m => m.name === p.author);
+    return {
+      ...p,
+      readMinutes: Math.max(1, Math.round(wordCount / 200)),
+      authorInfo: authorMember ? withPhotoCheck(authorMember) : { name: p.author, hasPhoto: false }
+    };
+  });
   res.render('pages/blog', {
     title: 'Blog — Contomatix',
     description: 'SEO strategy, link building tactics, and content marketing insights from Contomatix.',
@@ -176,6 +189,7 @@ app.get('/blog', (req, res) => {
     posts,
     categories,
     activeCategory: category,
+    search,
     page,
     totalPages
   });
