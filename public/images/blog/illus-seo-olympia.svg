@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="90" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="90" cy="400" r="130" fill="rgba(33,117,155,0.07)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="300" cy="420" rx="140" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Capitol dome building -->
+  <rect x="180" y="280" width="200" height="130" rx="6" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+  <rect x="195" y="300" width="30" height="40" rx="3" fill="#E5F7F1"/>
+  <rect x="235" y="300" width="30" height="40" rx="3" fill="#E5F7F1"/>
+  <rect x="295" y="300" width="30" height="40" rx="3" fill="#E5F7F1"/>
+  <rect x="335" y="300" width="30" height="40" rx="3" fill="#E5F7F1"/>
+  <rect x="255" y="355" width="50" height="55" rx="3" fill="#16192A"/>
+  <path d="M180 280 h200 l-30 -30 h-140 Z" fill="#D9CDBB"/>
+  <path d="M220 250 h120 l-20 -26 h-80 Z" fill="#C9BBA9"/>
+  <circle cx="280" cy="210" r="16" fill="#0EA5A0"/>
+  <line x1="280" y1="194" x2="280" y2="224" stroke="#0EA5A0" stroke-width="0"/>
+  <rect x="278" y="182" width="4" height="32" fill="#0EA5A0"/>
+
+  <!-- person with briefcase -->
+  <path d="M440 420 C440 355 465 318 490 318 C515 318 540 355 540 420 Z" fill="#21759B"/>
+  <circle cx="490" cy="284" r="30" fill="#F0C39E"/>
+  <path d="M461 282 a29 29 0 0 1 58 -9 q-7 -7 -16 -5 q-7 -12 -24 -8 q-15 4 -18 22 Z" fill="#2B2019"/>
+  <path d="M520 316 q24 8 20 40" stroke="#16192A" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- briefcase -->
+  <rect x="536" y="348" width="36" height="28" rx="4" fill="#F59E0B"/>
+  <rect x="536" y="348" width="36" height="8" rx="3" fill="#E8900C"/>
+  <path d="M546 348v-6a8 8 0 0 1 16 0v6" fill="none" stroke="#16192A" stroke-width="2"/>
+
+  <!-- tri-city labels -->
+  <g>
+    <rect x="100" y="150" width="130" height="42" rx="10" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="120" cy="171" r="6" fill="#0EA5A0"/>
+    <text x="132" y="175" font-size="12" font-weight="600" fill="#16192A">Olympia</text>
+  </g>
+  <g>
+    <rect x="100" y="200" width="130" height="42" rx="10" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="120" cy="221" r="6" fill="#F97316"/>
+    <text x="132" y="225" font-size="12" font-weight="600" fill="#16192A">Lacey</text>
+  </g>
+  <g>
+    <rect x="100" y="250" width="130" height="42" rx="10" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="120" cy="271" r="6" fill="#F472B6"/>
+    <text x="132" y="275" font-size="12" font-weight="600" fill="#16192A">Tumwater</text>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="490" y="120" width="220" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="517" cy="144" r="12" fill="#E5F7F1"/>
+    <path d="M511 144l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="536" y="141" font-size="12.5" font-weight="700" fill="#16192A">$100&#8211;$149/hr</text>
+    <text x="536" y="158" font-size="11" fill="#8A8371">local agency rates</text>
+  </g>
+  <g>
+    <rect x="490" y="188" width="220" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="517" cy="212" r="12" fill="#FDF3E2"/>
+    <path d="M517 205v10M517 219v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="536" y="209" font-size="12.5" font-weight="700" fill="#16192A">State capital market</text>
+    <text x="536" y="226" font-size="11" fill="#8A8371">gov + healthcare economy</text>
+  </g>
+  <g>
+    <rect x="490" y="256" width="220" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <path d="M505 279v-8a12 12 0 0 1 24 0v8" fill="none" stroke="#16192A" stroke-width="2.4"/>
+    <text x="536" y="279" font-size="12.5" font-weight="700" fill="#16192A">Olympia, WA</text>
+    <text x="536" y="296" font-size="11" fill="#8A8371">8 agencies compared</text>
+  </g>
+
+  <text x="60" y="455" font-size="20" font-weight="700" fill="#16192A">Top SEO Companies in Olympia</text>
+</svg>
