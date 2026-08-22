@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="620" cy="100" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="390" r="130" fill="rgba(33,117,155,0.07)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="280" cy="420" rx="140" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Factory/hangar building -->
+  <rect x="160" y="270" width="220" height="150" rx="6" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+  <rect x="175" y="295" width="36" height="50" rx="3" fill="#E5F7F1"/>
+  <rect x="220" y="295" width="36" height="50" rx="3" fill="#E5F7F1"/>
+  <rect x="305" y="295" width="36" height="50" rx="3" fill="#E5F7F1"/>
+  <rect x="350" y="295" width="22" height="50" rx="3" fill="#E5F7F1"/>
+  <rect x="255" y="355" width="60" height="65" rx="3" fill="#16192A"/>
+  <path d="M160 270 h220 l-20 -28 h-180 Z" fill="#D9CDBB"/>
+  <rect x="258" y="238" width="54" height="32" rx="4" fill="#C9BBA9"/>
+  <rect x="270" y="228" width="30" height="14" rx="3" fill="#8A8371"/>
+
+  <!-- Airplane silhouette -->
+  <g transform="translate(120,130)">
+    <path d="M10 30 L60 22 L120 18 L170 16 L210 15 L230 20 L210 25 L170 24 L120 22 L60 28 Z" fill="#21759B" opacity="0.9"/>
+    <path d="M130 18 L150 2 L160 2 L145 18" fill="#21759B" opacity="0.9"/>
+    <path d="M60 22 L70 8 L80 8 L72 22" fill="#21759B" opacity="0.9"/>
+    <path d="M200 18 L215 12 L225 14 L210 20" fill="#21759B" opacity="0.7"/>
+  </g>
+
+  <!-- Person with hard hat -->
+  <path d="M430 420 C430 355 455 318 480 318 C505 318 530 355 530 420 Z" fill="#F97316"/>
+  <circle cx="480" cy="284" r="30" fill="#F0C39E"/>
+  <path d="M451 282 a29 29 0 0 1 58 -9 q-7 -7 -16 -5 q-7 -12 -24 -8 q-15 4 -18 22 Z" fill="#2B2019"/>
+  <!-- hard hat -->
+  <ellipse cx="480" cy="260" rx="28" ry="8" fill="#F59E0B"/>
+  <path d="M454 260 Q454 248 480 245 Q506 248 506 260" fill="#F59E0B"/>
+
+  <!-- clipboard in hand -->
+  <path d="M510 316 q24 8 20 40" stroke="#16192A" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <rect x="526" y="348" width="32" height="40" rx="4" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+  <rect x="532" y="356" width="16" height="4" rx="2" fill="#D9CDBB"/>
+  <rect x="532" y="364" width="20" height="4" rx="2" fill="#D9CDBB"/>
+  <rect x="532" y="372" width="12" height="4" rx="2" fill="#D9CDBB"/>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="500" y="120" width="220" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="527" cy="144" r="12" fill="#E5F7F1"/>
+    <path d="M521 144l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="546" y="141" font-size="12.5" font-weight="700" fill="#16192A">$100&#8211;$149/hr</text>
+    <text x="546" y="158" font-size="11" fill="#8A8371">local agency rates</text>
+  </g>
+  <g>
+    <rect x="500" y="188" width="220" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="527" cy="212" r="12" fill="#FDF3E2"/>
+    <path d="M527 205v10M527 219v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="546" y="209" font-size="12.5" font-weight="700" fill="#16192A">Aerospace market</text>
+    <text x="546" y="226" font-size="11" fill="#8A8371">Boeing + supply chain</text>
+  </g>
+  <g>
+    <rect x="500" y="256" width="220" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <path d="M515 279v-8a12 12 0 0 1 24 0v8" fill="none" stroke="#16192A" stroke-width="2.4"/>
+    <text x="546" y="279" font-size="12.5" font-weight="700" fill="#16192A">Everett, WA</text>
+    <text x="546" y="296" font-size="11" fill="#8A8371">8 agencies compared</text>
+  </g>
+
+  <text x="60" y="455" font-size="20" font-weight="700" fill="#16192A">Top SEO Companies in Everett</text>
+</svg>
