@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="Inter, -apple-system, sans-serif">
-  <rect width="760" height="560" fill="#FDFAF5"/>
-  <circle cx="630" cy="100" r="140" fill="rgba(20,184,166,0.06)"/>
-  <circle cx="100" cy="460" r="130" fill="rgba(249,115,22,0.06)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="630" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
 
   <g>
-    <circle cx="46" cy="46" r="17" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <g transform="translate(29,29) scale(0.7083)">
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
       <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
       <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
       <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
@@ -15,55 +15,54 @@
       <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
       <circle cx="24" cy="24" r="2" fill="#16192A"/>
     </g>
-    <text x="72" y="52" font-size="16" font-weight="700" fill="#16192A">Contomatix</text>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
   </g>
 
-  <ellipse cx="320" cy="480" rx="140" ry="16" fill="rgba(23,20,44,0.06)"/>
+  <ellipse cx="320" cy="420" rx="140" ry="14" fill="rgba(23,20,44,0.06)"/>
 
-  <!-- Kent county outline (simplified) -->
-  <path d="M160 200 q40 -60 120 -50 q60 8 100 50 q30 40 20 90 q-10 50 -60 90 q-40 30 -100 20 q-60 -10 -90 -60 q-20 -40 -10 -80 q10 -30 20 -60Z" fill="#E5F7F1" stroke="#0EA5A0" stroke-width="2.5"/>
+  <!-- Kent county outline -->
+  <path d="M150 160 q40 -55 120 -45 q60 8 100 45 q30 38 20 85 q-10 45 -60 80 q-40 28 -100 18 q-60 -10 -85 -55 q-20 -38 -10 -75 q10 -28 15 -53Z" fill="#E5F7F1" stroke="#0EA5A0" stroke-width="2.5"/>
 
-  <!-- town labels on the map -->
-  <circle cx="260" cy="200" r="5" fill="#0EA5A0"/>
-  <text x="270" y="195" font-size="10" fill="#16192A" font-weight="600">Canterbury</text>
-  <circle cx="210" cy="250" r="5" fill="#F97316"/>
-  <text x="220" y="246" font-size="10" fill="#16192A" font-weight="600">Maidstone</text>
-  <circle cx="300" cy="290" r="5" fill="#F472B6"/>
-  <text x="310" y="286" font-size="10" fill="#16192A" font-weight="600">Ashford</text>
-  <circle cx="340" cy="340" r="5" fill="#F59E0B"/>
-  <text x="280" y="356" font-size="10" fill="#16192A" font-weight="600">Folkestone</text>
+  <!-- town labels -->
+  <circle cx="255" cy="165" r="5" fill="#0EA5A0"/>
+  <text x="265" y="160" font-size="10" fill="#16192A" font-weight="600">Canterbury</text>
+  <circle cx="205" cy="210" r="5" fill="#F97316"/>
+  <text x="215" y="206" font-size="10" fill="#16192A" font-weight="600">Maidstone</text>
+  <circle cx="290" cy="248" r="5" fill="#F472B6"/>
+  <text x="300" y="244" font-size="10" fill="#16192A" font-weight="600">Ashford</text>
+  <circle cx="330" cy="295" r="5" fill="#F59E0B"/>
+  <text x="270" y="311" font-size="10" fill="#16192A" font-weight="600">Folkestone</text>
 
-  <!-- person with magnifying glass inspecting agencies -->
-  <path d="M440 480 C440 400 468 360 495 360 C522 360 550 400 550 480 Z" fill="#0EA5A0"/>
-  <circle cx="495" cy="322" r="34" fill="#F0C39E"/>
-  <path d="M462 320 a33 33 0 0 1 66 -9 q-8 -8 -18 -6 q-8 -13 -28 -9 q-18 4 -20 24 Z" fill="#2B2019"/>
-  <!-- arm holding magnifying glass -->
-  <path d="M530 356 q30 8 36 44" stroke="#16192A" stroke-width="9" fill="none" stroke-linecap="round"/>
-  <circle cx="580" cy="410" r="24" fill="none" stroke="#16192A" stroke-width="5"/>
-  <circle cx="580" cy="410" r="18" fill="rgba(14,165,160,0.15)"/>
-  <line x1="598" y1="428" x2="614" y2="448" stroke="#16192A" stroke-width="5" stroke-linecap="round"/>
+  <!-- person with magnifying glass -->
+  <path d="M430 420 C430 350 458 310 485 310 C512 310 540 350 540 420 Z" fill="#0EA5A0"/>
+  <circle cx="485" cy="275" r="32" fill="#F0C39E"/>
+  <path d="M454 273 a32 32 0 0 1 62 -9 q-8 -8 -17 -6 q-8 -12 -26 -8 q-17 4 -19 23 Z" fill="#2B2019"/>
+  <path d="M518 306 q28 8 34 40" stroke="#16192A" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <circle cx="564" cy="356" r="22" fill="none" stroke="#16192A" stroke-width="5"/>
+  <circle cx="564" cy="356" r="16" fill="rgba(14,165,160,0.15)"/>
+  <line x1="580" y1="372" x2="596" y2="392" stroke="#16192A" stroke-width="5" stroke-linecap="round"/>
 
-  <!-- floating agency comparison cards -->
+  <!-- floating cards -->
   <g>
-    <rect x="490" y="130" width="220" height="60" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <circle cx="517" cy="156" r="12" fill="#E5F7F1"/>
-    <path d="M511 156l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="536" y="153" font-size="12.5" font-weight="700" fill="#16192A">Case studies verified</text>
-    <text x="536" y="170" font-size="11" fill="#8A8371">real rankings, not promises</text>
-  </g>
-  <g>
-    <rect x="490" y="202" width="220" height="60" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <circle cx="517" cy="228" r="12" fill="#FDF3E2"/>
-    <path d="M517 221v10M517 235v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
-    <text x="536" y="225" font-size="12.5" font-weight="700" fill="#16192A">Transparent reporting</text>
-    <text x="536" y="242" font-size="11" fill="#8A8371">monthly progress updates</text>
+    <rect x="490" y="100" width="220" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="517" cy="124" r="12" fill="#E5F7F1"/>
+    <path d="M511 124l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="536" y="121" font-size="12.5" font-weight="700" fill="#16192A">Case studies verified</text>
+    <text x="536" y="138" font-size="11" fill="#8A8371">real rankings, not promises</text>
   </g>
   <g>
-    <rect x="490" y="274" width="220" height="60" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <path d="M505 297v-8a12 12 0 0 1 24 0v8" fill="none" stroke="#16192A" stroke-width="2.4"/>
-    <text x="536" y="297" font-size="12.5" font-weight="700" fill="#16192A">Kent, UK</text>
-    <text x="536" y="314" font-size="11" fill="#8A8371">8 agencies compared</text>
+    <rect x="490" y="168" width="220" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="517" cy="192" r="12" fill="#FDF3E2"/>
+    <path d="M517 185v10M517 199v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="536" y="189" font-size="12.5" font-weight="700" fill="#16192A">Transparent reporting</text>
+    <text x="536" y="206" font-size="11" fill="#8A8371">monthly progress updates</text>
+  </g>
+  <g>
+    <rect x="490" y="236" width="220" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <path d="M505 259v-8a12 12 0 0 1 24 0v8" fill="none" stroke="#16192A" stroke-width="2.4"/>
+    <text x="536" y="259" font-size="12.5" font-weight="700" fill="#16192A">Kent, UK</text>
+    <text x="536" y="276" font-size="11" fill="#8A8371">8 agencies compared</text>
   </g>
 
-  <text x="60" y="520" font-size="20" font-weight="700" fill="#16192A">Best SEO Companies in Kent</text>
+  <text x="60" y="455" font-size="20" font-weight="700" fill="#16192A">Best SEO Companies in Kent</text>
 </svg>

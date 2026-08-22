@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="Inter, -apple-system, sans-serif">
-  <rect width="760" height="560" fill="#FDFAF5"/>
-  <circle cx="650" cy="120" r="130" fill="rgba(149,213,120,0.10)"/>
-  <circle cx="90" cy="470" r="140" fill="rgba(20,184,166,0.06)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="650" cy="100" r="130" fill="rgba(149,213,120,0.10)"/>
+  <circle cx="90" cy="410" r="140" fill="rgba(20,184,166,0.06)"/>
 
   <g>
-    <circle cx="46" cy="46" r="17" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <g transform="translate(29,29) scale(0.7083)">
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
       <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
       <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
       <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
@@ -15,51 +15,50 @@
       <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
       <circle cx="24" cy="24" r="2" fill="#16192A"/>
     </g>
-    <text x="72" y="52" font-size="16" font-weight="700" fill="#16192A">Contomatix</text>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
   </g>
 
-  <ellipse cx="260" cy="480" rx="120" ry="16" fill="rgba(23,20,44,0.06)"/>
+  <ellipse cx="260" cy="420" rx="120" ry="14" fill="rgba(23,20,44,0.06)"/>
 
   <!-- storefront counter -->
-  <rect x="140" y="400" width="280" height="80" rx="10" fill="#95D578"/>
-  <rect x="140" y="400" width="280" height="16" rx="6" fill="#7CC162"/>
+  <rect x="140" y="348" width="280" height="72" rx="10" fill="#95D578"/>
+  <rect x="140" y="348" width="280" height="14" rx="6" fill="#7CC162"/>
 
   <!-- shopkeeper person -->
-  <path d="M330 400 C330 340 355 306 378 306 C401 306 426 340 426 400 Z" fill="#F97316"/>
-  <circle cx="378" cy="278" r="32" fill="#F0C39E"/>
-  <path d="M347 276 a31 31 0 0 1 62 -10 q-8 -8 -18 -6 q-8 -12 -26 -8 q-16 4 -18 24 Z" fill="#2B2019"/>
-  <path d="M403 320 q22 10 20 40" stroke="#16192A" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M330 348 C330 292 355 260 378 260 C401 260 426 292 426 348 Z" fill="#F97316"/>
+  <circle cx="378" cy="234" r="30" fill="#F0C39E"/>
+  <path d="M349 232 a29 29 0 0 1 58 -9 q-7 -8 -16 -6 q-7 -12 -24 -8 q-15 4 -18 23 Z" fill="#2B2019"/>
+  <path d="M403 272 q20 10 18 38" stroke="#16192A" stroke-width="8" fill="none" stroke-linecap="round"/>
 
-  <!-- shopping bag on counter -->
+  <!-- shopping bag -->
   <g>
-    <path d="M170 350 h60 l6 50 h-72Z" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
-    <path d="M182 350 v-16a18 18 0 0 1 36 0v16" fill="none" stroke="#0EA5A0" stroke-width="4"/>
+    <path d="M170 302 h60 l6 46 h-72Z" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <path d="M182 302 v-14a18 18 0 0 1 36 0v14" fill="none" stroke="#0EA5A0" stroke-width="4"/>
   </g>
 
-  <!-- laptop showing storefront -->
+  <!-- laptop -->
   <g>
-    <rect x="470" y="330" width="220" height="140" rx="10" fill="#16192A"/>
-    <rect x="482" y="342" width="196" height="104" rx="4" fill="#F3ECE1"/>
-    <rect x="496" y="356" width="70" height="50" rx="4" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <rect x="574" y="356" width="70" height="50" rx="4" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <rect x="496" y="414" width="148" height="8" rx="4" fill="#D9CDBB"/>
-    <rect x="580" y="454" width="500" height="0"/>
+    <rect x="470" y="285" width="220" height="132" rx="10" fill="#16192A"/>
+    <rect x="482" y="297" width="196" height="96" rx="4" fill="#F3ECE1"/>
+    <rect x="496" y="310" width="70" height="46" rx="4" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <rect x="574" y="310" width="70" height="46" rx="4" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <rect x="496" y="364" width="148" height="8" rx="4" fill="#D9CDBB"/>
   </g>
 
   <g>
-    <rect x="470" y="150" width="230" height="60" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <circle cx="497" cy="178" r="12" fill="#E5F7F1"/>
-    <path d="M491 178l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="516" y="175" font-size="12.5" font-weight="700" fill="#16192A">Unique product copy</text>
-    <text x="516" y="192" font-size="11" fill="#8A8371">not the manufacturer's</text>
+    <rect x="470" y="120" width="230" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="497" cy="144" r="12" fill="#E5F7F1"/>
+    <path d="M491 144l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="516" y="141" font-size="12.5" font-weight="700" fill="#16192A">Unique product copy</text>
+    <text x="516" y="158" font-size="11" fill="#8A8371">not the manufacturer's</text>
   </g>
   <g>
-    <rect x="470" y="222" width="230" height="60" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <circle cx="497" cy="250" r="12" fill="#FDF3E2"/>
-    <path d="M497 243v10M497 257v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
-    <text x="516" y="247" font-size="12.5" font-weight="700" fill="#16192A">Apps: audited</text>
-    <text x="516" y="264" font-size="11" fill="#8A8371">3 unused apps removed</text>
+    <rect x="470" y="188" width="230" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="497" cy="212" r="12" fill="#FDF3E2"/>
+    <path d="M497 205v10M497 219v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="516" y="209" font-size="12.5" font-weight="700" fill="#16192A">Apps: audited</text>
+    <text x="516" y="226" font-size="11" fill="#8A8371">3 unused apps removed</text>
   </g>
 
-  <text x="60" y="510" font-size="20" font-weight="700" fill="#16192A">Shopify SEO Consultant Guide</text>
+  <text x="60" y="455" font-size="20" font-weight="700" fill="#16192A">Shopify SEO Consultant Guide</text>
 </svg>
