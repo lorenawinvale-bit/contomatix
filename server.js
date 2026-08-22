@@ -7,6 +7,7 @@ const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 
 const services = require('./data/services');
+const locations = require('./data/locations');
 const blogStore = require('./lib/blogStore');
 const team = require('./data/team');
 const site = require('./data/site');
@@ -112,8 +113,9 @@ app.use((req, res, next) => {
 app.get('/sitemap.xml', (req, res) => {
   const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms'];
   const servicePaths = services.map(s => `/services/${s.slug}`);
+  const locationPaths = locations.map(l => `/services/${l.slug}`);
   const blogPaths = blogStore.getAll().map(p => `/blog/${p.slug}`);
-  const urls = [...staticPaths, ...servicePaths, ...blogPaths];
+  const urls = [...staticPaths, ...servicePaths, ...locationPaths, ...blogPaths];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -147,6 +149,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/services/:slug', (req, res) => {
+  const loc = locations.find(l => l.slug === req.params.slug);
+  if (loc) {
+    return res.render('pages/service-location', {
+      title: `${loc.title} — Contomatix`,
+      description: loc.summary,
+      pageClass: 'page-service',
+      loc
+    });
+  }
   const service = services.find(s => s.slug === req.params.slug);
   if (!service) return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
   res.render('pages/service', {

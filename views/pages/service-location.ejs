@@ -1,0 +1,86 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow"><%= loc.city %>, <%= loc.state %></span>
+    <h1><%= loc.heading %></h1>
+    <p><%= loc.summary %></p>
+    <div class="hero-actions" style="margin-top: 22px;">
+      <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+      <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp us</a>
+    </div>
+  </div>
+</section>
+
+<div class="container post-layout">
+  <article class="post-content">
+    <%- loc.content %>
+  </article>
+  <aside class="post-toc-rail"></aside>
+</div>
+
+<% if (loc.faqs && loc.faqs.length) { %>
+<section>
+  <div class="container service-single">
+    <h2 style="margin-top: 0;"><%= loc.city %> SEO FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <% loc.faqs.forEach(function(f) { %>
+        <details>
+          <summary><%= f.q %><span class="faq-icon"></span></summary>
+          <p><%= f.a %></p>
+        </details>
+      <% }); %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<section>
+  <div class="container">
+    <div class="cta-band">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Ready to grow your <span class="grad-text"><%= loc.city %></span> business?</h2>
+      <p>Get a free keyword and backlink audit — no obligation, no pressure.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: loc.title,
+    description: loc.summary,
+    serviceType: 'SEO Services',
+    areaServed: {
+      '@type': 'City',
+      name: loc.city + ', ' + loc.state
+    },
+    provider: {
+      '@type': 'Organization',
+      name: 'Contomatix',
+      url: site.baseUrl
+    },
+    url: site.baseUrl + '/services/' + loc.slug
+  }) %>
+</script>
+
+<% if (loc.faqs && loc.faqs.length) { %>
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: loc.faqs.map(function(f) {
+      return {
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a }
+      };
+    })
+  }) %>
+</script>
+<% } %>
