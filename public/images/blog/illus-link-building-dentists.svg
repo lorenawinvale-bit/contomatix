@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="90" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="90" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="270" cy="420" rx="160" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- dental building / clinic -->
+  <g>
+    <rect x="150" y="220" width="240" height="200" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <rect x="150" y="220" width="240" height="30" fill="#0EA5A0"/>
+    <!-- tooth icon on the awning -->
+    <path d="M262 231 c-5 -6 -16 -6 -19 2 c-2 5 -1 10 1 14 c1 3 3 8 3 12 c0 3 3 3 4 0 c1 -4 2 -8 4 -8 c2 0 3 4 4 8 c1 3 4 3 4 0 c0 -4 2 -9 3 -12 c2 -4 3 -9 1 -14 c-3 -8 -14 -8 -19 -2 Z" fill="#FFFFFF"/>
+    <!-- door -->
+    <rect x="248" y="340" width="44" height="80" rx="3" fill="#E5F7F1" stroke="#0EA5A0" stroke-width="2"/>
+    <!-- windows -->
+    <rect x="175" y="270" width="50" height="45" rx="4" fill="#E5F7F1" stroke="#0EA5A0" stroke-width="2"/>
+    <line x1="200" y1="270" x2="200" y2="315" stroke="#0EA5A0" stroke-width="1.5"/>
+    <rect x="315" y="270" width="50" height="45" rx="4" fill="#E5F7F1" stroke="#0EA5A0" stroke-width="2"/>
+    <line x1="340" y1="270" x2="340" y2="315" stroke="#0EA5A0" stroke-width="1.5"/>
+    <!-- cross/plus sign -->
+    <rect x="360" y="200" width="8" height="26" rx="2" fill="#F97316"/>
+    <rect x="349" y="211" width="30" height="8" rx="2" fill="#F97316"/>
+  </g>
+
+  <!-- backlink chain flying toward clinic -->
+  <g stroke="#0EA5A0" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M480 140 a16 16 0 1 1 22 22 l-12 12"/>
+    <path d="M502 162 a16 16 0 1 1 -22 -22 l12 -12" transform="translate(24,24)"/>
+  </g>
+  <g stroke="#F5A623" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M555 220 a16 16 0 1 1 22 22 l-12 12"/>
+    <path d="M577 242 a16 16 0 1 1 -22 -22 l12 -12" transform="translate(24,24)"/>
+  </g>
+  <path d="M470 190 q-30 25 -70 25" stroke="#C9BBA9" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+  <path d="M552 278 q-55 25 -140 15" stroke="#C9BBA9" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="470" y="308" width="230" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="496" cy="334" r="12" fill="#E5F7F1"/>
+    <path d="M490 334l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="515" y="330" font-size="12.5" font-weight="700" fill="#16192A">Local pack visibility</text>
+    <text x="515" y="347" font-size="11" fill="#8A8371">NAP citations + directories</text>
+  </g>
+  <g>
+    <rect x="470" y="370" width="230" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="496" cy="396" r="12" fill="#FDF3E2"/>
+    <path d="M496 389v9m0 4v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="515" y="392" font-size="12.5" font-weight="700" fill="#16192A">More new patients</text>
+    <text x="515" y="409" font-size="11" fill="#8A8371">booked from organic search</text>
+  </g>
+
+  <text x="60" y="455" font-size="20" font-weight="700" fill="#16192A">Link Building for Dentists</text>
+</svg>
