@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="90" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="90" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="270" cy="420" rx="160" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- HVAC condenser unit -->
+  <g>
+    <rect x="160" y="300" width="200" height="120" rx="10" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <!-- fan grille circle -->
+    <circle cx="260" cy="360" r="42" fill="#E5F7F1" stroke="#0EA5A0" stroke-width="3"/>
+    <circle cx="260" cy="360" r="30" fill="none" stroke="#0EA5A0" stroke-width="2"/>
+    <g stroke="#0EA5A0" stroke-width="2.5" stroke-linecap="round">
+      <line x1="260" y1="330" x2="260" y2="390"/>
+      <line x1="230" y1="360" x2="290" y2="360"/>
+      <line x1="239" y1="339" x2="281" y2="381"/>
+      <line x1="281" y1="339" x2="239" y2="381"/>
+    </g>
+    <!-- side vents -->
+    <line x1="175" y1="315" x2="175" y2="405" stroke="#EAE0D2" stroke-width="2"/>
+    <line x1="185" y1="315" x2="185" y2="405" stroke="#EAE0D2" stroke-width="2"/>
+  </g>
+
+  <!-- snowflake + flame duality (heating/cooling) -->
+  <g transform="translate(300,235)">
+    <circle cx="0" cy="0" r="26" fill="#FFFFFF" stroke="#0EA5A0" stroke-width="2"/>
+    <g stroke="#0EA5A0" stroke-width="2.2" stroke-linecap="round">
+      <line x1="0" y1="-14" x2="0" y2="14"/>
+      <line x1="-12" y1="-7" x2="12" y2="7"/>
+      <line x1="-12" y1="7" x2="12" y2="-7"/>
+    </g>
+  </g>
+  <g transform="translate(354,205)">
+    <circle cx="0" cy="0" r="24" fill="#FFFFFF" stroke="#F97316" stroke-width="2"/>
+    <path d="M0 -12 c6 7 8 12 4 17 c1 -4 -1 -6 -3 -6 c1 4 -1 8 -4 8 c-4 0 -6 -4 -5 -8 c-3 3 -3 7 -1 10 c-5 -3 -6 -9 -3 -14 c1 3 2 3 3 1 c-1 -4 2 -6 9 -8Z" fill="#F97316"/>
+  </g>
+
+  <!-- backlink chain -->
+  <g stroke="#0EA5A0" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M480 150 a16 16 0 1 1 22 22 l-12 12"/>
+    <path d="M502 172 a16 16 0 1 1 -22 -22 l12 -12" transform="translate(24,24)"/>
+  </g>
+  <g stroke="#F5A623" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M555 230 a16 16 0 1 1 22 22 l-12 12"/>
+    <path d="M577 252 a16 16 0 1 1 -22 -22 l12 -12" transform="translate(24,24)"/>
+  </g>
+  <path d="M470 200 q-35 30 -75 45" stroke="#C9BBA9" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+  <path d="M552 288 q-60 25 -140 20" stroke="#C9BBA9" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="470" y="310" width="230" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="496" cy="336" r="12" fill="#E5F7F1"/>
+    <path d="M490 336l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="515" y="332" font-size="12.5" font-weight="700" fill="#16192A">Manufacturer directories</text>
+    <text x="515" y="349" font-size="11" fill="#8A8371">Carrier, Trane, Lennox locators</text>
+  </g>
+  <g>
+    <rect x="470" y="372" width="230" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="496" cy="398" r="12" fill="#FDF3E2"/>
+    <path d="M496 391v9m0 4v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="515" y="394" font-size="12.5" font-weight="700" fill="#16192A">A full service calendar</text>
+    <text x="515" y="411" font-size="11" fill="#8A8371">booked from organic search</text>
+  </g>
+
+  <text x="60" y="458" font-size="20" font-weight="700" fill="#16192A">Link Building for HVAC</text>
+</svg>
