@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="90" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="90" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="270" cy="425" rx="170" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- house with prominent roof -->
+  <g>
+    <!-- roof -->
+    <polygon points="130,250 270,150 410,250" fill="#F97316" stroke="#D45A08" stroke-width="2"/>
+    <!-- roof shingle lines -->
+    <line x1="165" y1="225" x2="375" y2="225" stroke="#D45A08" stroke-width="1.4"/>
+    <line x1="148" y1="238" x2="392" y2="238" stroke="#D45A08" stroke-width="1.4"/>
+    <line x1="183" y1="212" x2="357" y2="212" stroke="#D45A08" stroke-width="1.4"/>
+    <line x1="201" y1="199" x2="339" y2="199" stroke="#D45A08" stroke-width="1.4"/>
+    <line x1="219" y1="186" x2="321" y2="186" stroke="#D45A08" stroke-width="1.4"/>
+    <line x1="237" y1="173" x2="303" y2="173" stroke="#D45A08" stroke-width="1.4"/>
+    <!-- chimney -->
+    <rect x="330" y="165" width="28" height="55" fill="#B8A78F" stroke="#8A8371"/>
+    <!-- body -->
+    <rect x="155" y="250" width="230" height="170" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <!-- door -->
+    <rect x="245" y="330" width="50" height="90" rx="4" fill="#0EA5A0"/>
+    <circle cx="285" cy="378" r="3" fill="#FDFAF5"/>
+    <!-- windows -->
+    <rect x="180" y="280" width="44" height="40" rx="4" fill="#E5F7F1" stroke="#0EA5A0" stroke-width="2"/>
+    <line x1="202" y1="280" x2="202" y2="320" stroke="#0EA5A0" stroke-width="1.5"/>
+    <rect x="316" y="280" width="44" height="40" rx="4" fill="#E5F7F1" stroke="#0EA5A0" stroke-width="2"/>
+    <line x1="338" y1="280" x2="338" y2="320" stroke="#0EA5A0" stroke-width="1.5"/>
+  </g>
+
+  <!-- chain links flying to the roof (backlinks) -->
+  <g stroke="#0EA5A0" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M480 130 a16 16 0 1 1 22 22 l-12 12"/>
+    <path d="M502 152 a16 16 0 1 1 -22 -22 l12 -12" transform="translate(24,24)"/>
+  </g>
+  <g stroke="#F5A623" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M560 210 a16 16 0 1 1 22 22 l-12 12"/>
+    <path d="M582 232 a16 16 0 1 1 -22 -22 l12 -12" transform="translate(24,24)"/>
+  </g>
+  <path d="M470 180 q-25 30 -60 20" stroke="#C9BBA9" stroke-width="2" fill="none" stroke-dasharray="5 5" marker-end="none"/>
+  <path d="M556 268 q-50 30 -140 10" stroke="#C9BBA9" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+
+  <!-- floating result cards -->
+  <g>
+    <rect x="470" y="310" width="230" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="496" cy="336" r="12" fill="#E5F7F1"/>
+    <path d="M490 336l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="515" y="332" font-size="12.5" font-weight="700" fill="#16192A">Local pack rankings</text>
+    <text x="515" y="349" font-size="11" fill="#8A8371">maps + organic visibility</text>
+  </g>
+  <g>
+    <rect x="470" y="372" width="230" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="496" cy="398" r="12" fill="#FDF3E2"/>
+    <path d="M496 391v9m0 4v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="515" y="394" font-size="12.5" font-weight="700" fill="#16192A">More roofing jobs</text>
+    <text x="515" y="411" font-size="11" fill="#8A8371">calls from real customers</text>
+  </g>
+
+  <text x="60" y="458" font-size="20" font-weight="700" fill="#16192A">Link Building for Roofers</text>
+</svg>
