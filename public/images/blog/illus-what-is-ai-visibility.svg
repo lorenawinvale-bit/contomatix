@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="300" cy="420" rx="150" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- gauge / dashboard representing a visibility score -->
+  <g transform="translate(230,255)">
+    <path d="M -110 0 A 110 110 0 0 1 110 0" fill="none" stroke="#F1EDE3" stroke-width="18" stroke-linecap="round"/>
+    <path d="M -110 0 A 110 110 0 0 1 40 -103" fill="none" stroke="#0EA5A0" stroke-width="18" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="55" y2="-88" stroke="#16192A" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="8" fill="#16192A"/>
+    <text x="0" y="40" font-size="26" font-weight="700" fill="#16192A" text-anchor="middle">62%</text>
+    <text x="0" y="60" font-size="11" fill="#8A8371" text-anchor="middle">Visibility Score</text>
+  </g>
+
+  <!-- three stacked metric bars -->
+  <g>
+    <text x="440" y="150" font-size="11" font-weight="700" fill="#8A8371">CITATION SHARE</text>
+    <rect x="440" y="160" width="240" height="16" rx="8" fill="#F1EDE3"/>
+    <rect x="440" y="160" width="170" height="16" rx="8" fill="#0EA5A0"/>
+
+    <text x="440" y="200" font-size="11" font-weight="700" fill="#8A8371">SHARE OF VOICE</text>
+    <rect x="440" y="210" width="240" height="16" rx="8" fill="#F1EDE3"/>
+    <rect x="440" y="210" width="120" height="16" rx="8" fill="#F5A623"/>
+
+    <text x="440" y="250" font-size="11" font-weight="700" fill="#8A8371">SENTIMENT ACCURACY</text>
+    <rect x="440" y="260" width="240" height="16" rx="8" fill="#F1EDE3"/>
+    <rect x="440" y="260" width="200" height="16" rx="8" fill="#14B8A6"/>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="120" y="325" width="230" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="146" cy="351" r="12" fill="#E5F7F1"/>
+    <path d="M140 351l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="165" y="347" font-size="12.5" font-weight="700" fill="#16192A">Mentions inside answers</text>
+    <text x="165" y="364" font-size="11" fill="#8A8371">not ranked links</text>
+  </g>
+  <g>
+    <rect x="440" y="325" width="230" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="351" r="12" fill="#FDF3E2"/>
+    <path d="M466 344v9m0 4v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="485" y="347" font-size="12.5" font-weight="700" fill="#16192A">Non-deterministic</text>
+    <text x="485" y="364" font-size="11" fill="#8A8371">same prompt, different answer</text>
+  </g>
+
+  <text x="120" y="425" font-size="18" font-weight="700" fill="#16192A">What Is AI Visibility?</text>
+</svg>
