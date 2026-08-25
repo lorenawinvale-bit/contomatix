@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="300" cy="420" rx="150" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- house with a "for sale" sign, backlink chain feeding in -->
+  <g>
+    <polygon points="220,220 300,160 380,220" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <rect x="235" y="220" width="130" height="110" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <rect x="255" y="250" width="30" height="30" rx="4" fill="#E5F7F1"/>
+    <rect x="315" y="250" width="30" height="30" rx="4" fill="#E5F7F1"/>
+    <rect x="280" y="290" width="40" height="40" fill="#FDF3E2"/>
+    <circle cx="300" cy="185" r="8" fill="#F5A623"/>
+  </g>
+  <g>
+    <line x1="180" y1="330" x2="180" y2="290" stroke="#8A8371" stroke-width="4"/>
+    <rect x="150" y="266" width="60" height="26" rx="4" fill="#0EA5A0"/>
+    <text x="180" y="284" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">SOLD</text>
+  </g>
+
+  <!-- backlink chain -->
+  <g stroke="#0EA5A0" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M470 200 a16 16 0 1 1 22 22 l-12 12"/>
+    <path d="M492 222 a16 16 0 1 1 -22 -22 l12 -12" transform="translate(24,24)"/>
+  </g>
+  <path d="M420 240 q40 10 55 15" stroke="#C9BBA9" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="450" y="255" width="250" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="476" cy="281" r="12" fill="#E5F7F1"/>
+    <path d="M470 281l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="495" y="277" font-size="12.5" font-weight="700" fill="#16192A">Chamber of Commerce</text>
+    <text x="495" y="294" font-size="11" fill="#8A8371">beats 10 national blog links</text>
+  </g>
+  <g>
+    <rect x="450" y="317" width="250" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="476" cy="343" r="12" fill="#FDF3E2"/>
+    <path d="M476 336v9m0 4v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="495" y="339" font-size="12.5" font-weight="700" fill="#16192A">Digital PR wins</text>
+    <text x="495" y="356" font-size="11" fill="#8A8371">journalists need housing sources</text>
+  </g>
+
+  <text x="120" y="420" font-size="18" font-weight="700" fill="#16192A">Link Building for Real Estate</text>
+</svg>
