@@ -136,6 +136,7 @@ Sitemap: ${site.baseUrl}/sitemap.xml`);
 app.get('/', (req, res) => {
   const allPosts = blogStore.getAll();
   const latestPosts = [...allPosts]
+    .reverse()
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
     .slice(0, 6);
   res.render('pages/home', {
@@ -175,7 +176,7 @@ app.get('/blog', (req, res) => {
   const categories = ['All', ...new Set(blogPosts.map(p => p.category))];
   // Newest first. Posts are appended to data/blog.js as they're written, so
   // without this the most recent work ends up on the last page of the listing.
-  const byNewest = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  const byNewest = [...blogPosts].reverse().sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
   let filtered = category === 'All' ? byNewest : byNewest.filter(p => p.category === category);
   if (search) {
     const q = search.toLowerCase();
@@ -325,7 +326,7 @@ app.get('/admin/logout', (req, res) => {
 });
 
 app.get('/admin', requireAdmin, (req, res) => {
-  const posts = [...blogStore.getAll()].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  const posts = [...blogStore.getAll()].reverse().sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
   res.render('admin/dashboard', {
     title: 'Posts',
     layout: 'admin/layout',
