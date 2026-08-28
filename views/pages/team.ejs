@@ -29,3 +29,22 @@
     <% }); %>
   </div>
 </section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Contomatix Team',
+    itemListElement: team.map(function(m, i) {
+      var person = {
+        '@type': 'Person',
+        name: m.name,
+        jobTitle: m.role,
+        description: m.bio,
+        worksFor: { '@id': site.baseUrl + '/#organization' }
+      };
+      if (m.linkedin) person.sameAs = [m.linkedin];
+      return { '@type': 'ListItem', position: i + 1, item: person };
+    })
+  }) %>
+</script>

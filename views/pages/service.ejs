@@ -62,15 +62,22 @@
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: service.title,
-    description: service.summary,
+    description: service.description,
     serviceType: service.title,
     areaServed: 'Worldwide',
-    provider: {
-      '@type': 'Organization',
-      name: 'Contomatix',
-      url: site.baseUrl
-    },
+    provider: { '@id': site.baseUrl + '/#organization' },
     url: site.baseUrl + '/services/' + service.slug
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: service.title, item: site.baseUrl + '/services/' + service.slug }
+    ]
   }) %>
 </script>
 

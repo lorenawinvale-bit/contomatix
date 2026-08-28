@@ -162,7 +162,7 @@ app.get('/services/:slug', (req, res) => {
   const service = services.find(s => s.slug === req.params.slug);
   if (!service) return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
   res.render('pages/service', {
-    title: `${service.title} — Contomatix`,
+    title: `${service.title} Services — Contomatix`,
     description: service.summary,
     pageClass: 'page-service',
     service
@@ -226,8 +226,8 @@ app.get('/blog/:slug', (req, res) => {
 
 app.get('/team', (req, res) => {
   res.render('pages/team', {
-    title: 'Our Team — Contomatix',
-    description: 'Meet the team behind Contomatix.',
+    title: 'Meet the Contomatix Team — SEO & Link Building Experts',
+    description: 'Meet the SEO strategists and link building specialists behind Contomatix — the people who plan and run every campaign.',
     pageClass: 'page-team',
     team: team.map(withPhotoCheck)
   });
@@ -236,7 +236,7 @@ app.get('/team', (req, res) => {
 app.get('/about', (req, res) => {
   const blogPosts = blogStore.getAll();
   res.render('pages/about', {
-    title: 'About Us — Contomatix',
+    title: 'About Contomatix — White-Hat SEO & Link Building Agency',
     description: 'Learn what Contomatix does and how we help brands rank higher.',
     pageClass: 'page-about',
     team: team.map(withPhotoCheck),

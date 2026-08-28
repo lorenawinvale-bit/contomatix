@@ -192,6 +192,43 @@
   </script>
 </section>
 
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Contomatix',
+    url: site.baseUrl,
+    description: 'Contomatix helps brands grow organic traffic through link building, guest posting, on-page & off-page SEO, and keyword research.',
+    publisher: { '@id': site.baseUrl + '/#organization' },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: site.baseUrl + '/blog?q={search_term_string}' },
+      'query-input': 'required name=search_term_string'
+    }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Contomatix Core Services',
+    itemListElement: services.map(function(s, i) {
+      return {
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'Service',
+          name: s.title,
+          description: s.summary,
+          url: site.baseUrl + '/services/' + s.slug,
+          provider: { '@id': site.baseUrl + '/#organization' }
+        }
+      };
+    })
+  }) %>
+</script>
+
 <section class="cta">
   <div class="container">
     <div class="cta-band">

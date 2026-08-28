@@ -40,10 +40,13 @@
     <%- JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
+      '@id': site.baseUrl + '/#organization',
       name: 'Contomatix',
       url: site.baseUrl,
       logo: site.baseUrl + '/images/favicon.svg',
+      image: site.baseUrl + '/images/favicon.svg',
       description: 'Contomatix provides white-hat link building, guest posting, on-page SEO, off-page SEO, and keyword research services.',
+      knowsAbout: ['Link Building', 'Guest Posting', 'On-Page SEO', 'Off-Page SEO', 'Keyword Research'],
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer service',
