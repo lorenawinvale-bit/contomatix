@@ -1,4 +1,36 @@
 /* ============================
+   Self-hosted fonts (variable, latin subset)
+   Previously loaded from Google Fonts via a deferred stylesheet, which
+   delayed the font swap until well after page load and re-triggered the
+   LCP candidate on mobile. Hosting the three variable woff2 files locally
+   (with preloads in the layout) lets text reach its final paint early.
+   ============================ */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/space-grotesk-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ============================
    Contomatix - Design Tokens (warm light theme)
    ============================ */
 :root {
@@ -178,15 +210,18 @@ h1, h2, h3, h4 {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: none; }
 }
-.hero-center > * {
+/* The h1 is excluded on purpose: it's the LCP element on mobile, and
+   animating it in from opacity:0 pushes the Largest Contentful Paint
+   back by the animation delay + duration for purely cosmetic gain. */
+.hero-center > *:not(h1) {
   opacity: 0;
   animation: fadeUp 0.45s cubic-bezier(0.22, 0.9, 0.35, 1) forwards;
 }
-.hero-center > *:nth-child(1) { animation-delay: 0.02s; }
-.hero-center > *:nth-child(2) { animation-delay: 0.08s; }
-.hero-center > *:nth-child(3) { animation-delay: 0.15s; }
-.hero-center > *:nth-child(4) { animation-delay: 0.22s; }
-.hero-center > *:nth-child(5) { animation-delay: 0.3s; }
+.hero-center > *:nth-child(1):not(h1) { animation-delay: 0.02s; }
+.hero-center > *:nth-child(2):not(h1) { animation-delay: 0.08s; }
+.hero-center > *:nth-child(3):not(h1) { animation-delay: 0.15s; }
+.hero-center > *:nth-child(4):not(h1) { animation-delay: 0.22s; }
+.hero-center > *:nth-child(5):not(h1) { animation-delay: 0.3s; }
 .hero-shot {
   /* No entrance-delay animation here on purpose: this image is the page's
      LCP element, and animating it in from opacity:0 directly delays the
