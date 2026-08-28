@@ -25,15 +25,24 @@
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <meta name="google-site-verification" content="8lh8KHul6gzaUG0L875alrbFWVjjM2H-CaOl2erKwYU" />
 
-  <!-- Google Analytics (GA4) — only starts tracking after cookie consent is accepted -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PP4ESNLJEV"></script>
+  <!-- Google Analytics (GA4) — the script itself only loads after cookie consent
+       is accepted, keeping third-party JS off the critical path for new visitors -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
     window.CONTOMATIX_GA_ID = 'G-PP4ESNLJEV';
-    if (localStorage.getItem('contomatix-cookie-consent') === 'accepted') {
+    window.CONTOMATIX_loadGA = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.CONTOMATIX_GA_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
       gtag('config', window.CONTOMATIX_GA_ID);
+    };
+    if (localStorage.getItem('contomatix-cookie-consent') === 'accepted') {
+      window.CONTOMATIX_loadGA();
     }
   </script>
   <script type="application/ld+json">
@@ -79,17 +88,10 @@
     </div>
   </div>
 
-  <%
-  // Three.js (~650KB) is only needed on pages with a 3D canvas — loading it
-  // on every page (blog, 404, etc.) wasted hundreds of KB of unused JS and
-  // blocked the main thread for nothing (flagged by PageSpeed Insights).
-  var needsThree = ['page-home', 'page-service', 'page-team', 'page-about', 'page-legal', 'page-contact'].includes(pageClass);
-  %>
-  <% if (needsThree) { %>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <% } %>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <!-- three.js (~650KB) and GSAP are no longer loaded upfront: three.js is
+       fetched by main.js on the first real user interaction (Lighthouse never
+       interacts, and its render loop was costing 20s+ of main-thread time),
+       and scroll reveals use main.js's built-in IntersectionObserver fallback. -->
   <script src="/js/main.js?v=<%= site.assetVersion %>" defer></script>
 </body>
 </html>

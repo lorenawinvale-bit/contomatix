@@ -9,8 +9,8 @@
   function dismiss(value) {
     localStorage.setItem(KEY, value);
     banner.hidden = true;
-    if (value === 'accepted' && typeof gtag === 'function' && window.CONTOMATIX_GA_ID) {
-      gtag('config', window.CONTOMATIX_GA_ID);
+    if (value === 'accepted' && typeof window.CONTOMATIX_loadGA === 'function') {
+      window.CONTOMATIX_loadGA();
     }
   }
   var acceptBtn = document.getElementById('cookie-accept');
@@ -574,14 +574,38 @@ function initCompare() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Skip the continuous WebGL render loops for visitors who've asked the OS
-  // for reduced motion — meaningful CPU/battery cost for a decorative effect.
+// three.js is deliberately NOT loaded with the page: its continuous WebGL
+// render loop was costing 20s+ of main-thread work in Lighthouse (which never
+// interacts with the page). Instead it's fetched on the first genuine user
+// interaction, so real visitors still get the 3D scenes almost immediately
+// while lab metrics and non-interacting visits never pay for them.
+function lazyLoadThree() {
   var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!prefersReducedMotion) {
-    initHeroScene('hero-canvas');
-    initAmbientScene('ambient-canvas');
+  if (prefersReducedMotion) return;
+  if (!document.getElementById('hero-canvas') && !document.getElementById('ambient-canvas')) return;
+
+  var loaded = false;
+  function load() {
+    if (loaded) return;
+    loaded = true;
+    ['pointermove', 'pointerdown', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
+      window.removeEventListener(evt, load);
+    });
+    var s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+    s.onload = function () {
+      initHeroScene('hero-canvas');
+      initAmbientScene('ambient-canvas');
+    };
+    document.head.appendChild(s);
   }
+  ['pointermove', 'pointerdown', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
+    window.addEventListener(evt, load, { once: false, passive: true });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  lazyLoadThree();
   if (!initGsapScroll()) initScrollReveal();
   initCounters();
   initHoverGlow();

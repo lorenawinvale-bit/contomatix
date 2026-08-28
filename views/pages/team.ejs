@@ -19,7 +19,7 @@
         <% } else { %>
           <div class="team-avatar"><%= member.name.split(' ').map(function(w){ return w[0]; }).join('') %></div>
         <% } %>
-        <h3><%= member.name %></h3>
+        <h2><%= member.name %></h2>
         <div class="role"><%= member.role %></div>
         <p class="bio"><%= member.bio %></p>
         <% if (member.linkedin) { %>

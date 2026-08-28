@@ -11,13 +11,13 @@
 
   --text: #16192A;
   --text-dim: #565E6E;
-  --text-faint: #8B93A3;
+  --text-faint: #5F6878;
 
   --accent-teal: #0EA5A0;
   --accent-teal-bright: #14B8A6;
-  --accent-teal-dim: #0B807C;
+  --accent-teal-dim: #0A6E69;
   --accent-amber: #F59E0B;
-  --accent-amber-dim: #C77F08;
+  --accent-amber-dim: #B45309;
   --accent-orange: #F97316;
   --accent-pink: #F472B6;
 
@@ -114,7 +114,7 @@ h1, h2, h3, h4 {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-teal);
+  color: var(--accent-teal-dim);
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -764,6 +764,7 @@ section { padding: 84px 0; }
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .process-step:hover { transform: translateY(-3px); border-color: rgba(245,158,11,0.5); box-shadow: var(--shadow-card); }
+.process-step h3 { font-size: 1rem; }
 .process-step .step-num {
   font-family: var(--font-mono);
   color: var(--accent-amber-dim);
@@ -1120,7 +1121,7 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
   -webkit-backdrop-filter: blur(6px);
 }
 .cta-band .btn-glass:hover { transform: translateY(-2px); background: rgba(255,255,255,0.14); border-color: rgba(94,234,212,0.6); }
-.cta-note { margin-top: 22px; font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+.cta-note { margin-top: 22px; font-size: 0.82rem; color: rgba(255,255,255,0.78); }
 
 /* ============================
    Blog listing
@@ -1214,7 +1215,7 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
   display: inline-block;
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--accent-orange);
+  color: var(--accent-amber-dim);
   margin-bottom: 8px;
 }
 .story-date { color: var(--text-faint); font-size: 0.78rem; }
@@ -1658,7 +1659,7 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
   box-shadow: 0 0 0 3px var(--surface), 0 6px 14px -6px rgba(23,20,44,0.35);
   display: flex; align-items: center; justify-content: center;
 }
-.team-card h3 { font-size: 1.05rem; margin-bottom: 2px; }
+.team-card h3, .team-card h2 { font-size: 1.05rem; margin-bottom: 2px; }
 .team-card .role { color: var(--accent-teal-dim); font-size: 0.82rem; font-family: var(--font-mono); margin-bottom: 10px; }
 .team-card p.bio { color: var(--text-dim); font-size: 0.88rem; }
 .team-linkedin {
@@ -1784,7 +1785,7 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
   gap: 32px;
   padding-bottom: 52px;
 }
-.footer-col h4 { font-size: 1rem; color: var(--text); margin-bottom: 18px; }
+.footer-col h2 { font-size: 1rem; color: var(--text); margin-bottom: 18px; }
 .footer-col ul { display: grid; gap: 12px; }
 .footer-col a { color: var(--text-dim); font-size: 0.9rem; display: inline-block; transition: color 0.15s ease, transform 0.15s ease; }
 .footer-col a:hover { color: var(--accent-teal-dim); transform: translateX(3px); }

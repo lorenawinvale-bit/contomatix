@@ -72,6 +72,9 @@ app.set('layout', 'partials/layout');
 
 // Static assets
 app.use(express.static(path.join(__dirname, 'public'), {
+  // Images, SVGs and other static assets change rarely and are referenced by
+  // stable URLs — a 30-day cache keeps repeat views fast (flagged by PSI).
+  maxAge: '30d',
   setHeaders: (res, filePath) => {
     // Some hosting/CDN layers drop the charset param from static responses,
     // which can make browsers mis-decode non-ASCII bytes (e.g. em-dashes in
