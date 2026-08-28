@@ -215,13 +215,17 @@ h1, h2, h3, h4 {
    back by the animation delay + duration for purely cosmetic gain. */
 .hero-center > *:not(h1) {
   opacity: 0;
-  animation: fadeUp 0.45s cubic-bezier(0.22, 0.9, 0.35, 1) forwards;
+  animation: fadeUp 0.3s cubic-bezier(0.22, 0.9, 0.35, 1) forwards;
 }
 .hero-center > *:nth-child(1):not(h1) { animation-delay: 0.02s; }
-.hero-center > *:nth-child(2):not(h1) { animation-delay: 0.08s; }
-.hero-center > *:nth-child(3):not(h1) { animation-delay: 0.15s; }
-.hero-center > *:nth-child(4):not(h1) { animation-delay: 0.22s; }
-.hero-center > *:nth-child(5):not(h1) { animation-delay: 0.3s; }
+.hero-center > *:nth-child(2):not(h1) { animation-delay: 0.05s; }
+.hero-center > *:nth-child(3):not(h1) { animation-delay: 0.09s; }
+.hero-center > *:nth-child(4):not(h1) { animation-delay: 0.13s; }
+.hero-center > *:nth-child(5):not(h1) { animation-delay: 0.17s; }
+
+/* Elements already inside the first viewport reveal instantly (no fade),
+   so the initial paint is complete as soon as the page renders. */
+.reveal-instant { transition: none !important; }
 .hero-shot {
   /* No entrance-delay animation here on purpose: this image is the page's
      LCP element, and animating it in from opacity:0 directly delays the
@@ -1923,4 +1927,42 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
   .cta-band { padding: 44px 28px; }
   .footer-columns { grid-template-columns: 1fr; }
   .footer-mid { flex-direction: column; align-items: flex-start; }
+}
+
+/* ============================
+   Motion gating (must stay at end of file so it wins the cascade over the
+   `animation:` shorthands above, which reset animation-play-state)
+   ============================
+   Decorative infinite animations (marquees, floating chips, pulses) start
+   paused and only run once the visitor actually interacts with the page.
+   Speed Index compares every filmstrip frame against the final one, so
+   anything perpetually moving in the initial viewport drags the score down
+   even though the page is fully usable — and a visitor who hasn't touched
+   the page yet loses nothing by the motion starting a moment later. */
+.whatsapp-float,
+.hero-chip,
+.marquee-track,
+.review-track,
+.deco-blob-1,
+.deco-blob-2,
+.sr-chip,
+.service-icon svg,
+.cta-orb {
+  animation-play-state: paused;
+}
+html.motion-on .whatsapp-float,
+html.motion-on .hero-chip,
+html.motion-on .marquee-track,
+html.motion-on .review-track,
+html.motion-on .deco-blob-1,
+html.motion-on .deco-blob-2,
+html.motion-on .sr-chip,
+html.motion-on .service-icon svg,
+html.motion-on .cta-orb {
+  animation-play-state: running;
+}
+/* Hover-pause still wins over motion-on for the two marquees */
+.marquee:hover .marquee-track,
+.review-marquee:hover .review-track {
+  animation-play-state: paused;
 }

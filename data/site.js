@@ -11,5 +11,5 @@ module.exports = {
   // file changes. The CDN caches by exact URL, and Cache-Control alone hasn't
   // reliably busted every edge node in time; a version query string forces a
   // guaranteed-fresh fetch on every deploy instead of waiting on propagation.
-  assetVersion: '2026082802'
+  assetVersion: '2026082804'
 };

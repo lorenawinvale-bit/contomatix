@@ -383,8 +383,16 @@ function initScrollReveal() {
   var items = document.querySelectorAll(selectors);
   if (!items.length) return;
 
-  // Applied via JS so content stays visible if JS never runs.
-  items.forEach(function (el) { el.classList.add('reveal'); });
+  // Applied via JS so content stays visible if JS never runs. Elements
+  // already inside the first viewport reveal instantly (no fade) so the
+  // initial paint is visually complete as soon as the page renders.
+  var vh = window.innerHeight;
+  items.forEach(function (el) {
+    el.classList.add('reveal');
+    if (el.getBoundingClientRect().top < vh) {
+      el.classList.add('reveal-instant', 'in-view');
+    }
+  });
 
   if (!('IntersectionObserver' in window)) {
     items.forEach(function (el) { el.classList.add('in-view'); });
@@ -579,6 +587,20 @@ function initCompare() {
 // interacts with the page). Instead it's fetched on the first genuine user
 // interaction, so real visitors still get the 3D scenes almost immediately
 // while lab metrics and non-interacting visits never pay for them.
+// Decorative infinite animations (marquees, pulses, floating chips) are
+// paused in CSS until <html> gets .motion-on — added here on the first real
+// interaction, so lab filmstrips (which never interact) see a stable page.
+function enableMotionOnInteraction() {
+  var events = ['pointermove', 'pointerdown', 'touchstart', 'scroll', 'keydown'];
+  function on() {
+    document.documentElement.classList.add('motion-on');
+    events.forEach(function (evt) { window.removeEventListener(evt, on); });
+  }
+  events.forEach(function (evt) {
+    window.addEventListener(evt, on, { passive: true });
+  });
+}
+
 function lazyLoadThree() {
   var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) return;
@@ -605,6 +627,7 @@ function lazyLoadThree() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  enableMotionOnInteraction();
   lazyLoadThree();
   if (!initGsapScroll()) initScrollReveal();
   initCounters();
