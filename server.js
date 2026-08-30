@@ -136,6 +136,29 @@ Disallow: /admin
 Sitemap: ${site.baseUrl}/sitemap.xml`);
 });
 
+// llms.txt: a plain-language summary for AI assistants and LLM crawlers,
+// separate from robots.txt (which only governs crawl permissions). Purely
+// additive/descriptive — doesn't change what's crawled or indexed.
+app.get('/llms.txt', (req, res) => {
+  const serviceLines = services.map(s => `- [${s.title}](${site.baseUrl}/services/${s.slug}): ${s.summary}`).join('\n');
+  res.type('text/plain').send(`# Contomatix
+
+> Contomatix is a white-hat link building and SEO agency. We help brands grow organic traffic through link building, guest posting, on-page SEO, off-page SEO, and keyword research.
+
+## Services
+${serviceLines}
+
+## Company
+- [About](${site.baseUrl}/about)
+- [Team](${site.baseUrl}/team)
+- [Contact](${site.baseUrl}/contact)
+
+## Content
+- [Blog](${site.baseUrl}/blog): SEO strategy, link building tactics, and hand-verified local-agency guides.
+- [Sitemap](${site.baseUrl}/sitemap.xml)
+`);
+});
+
 app.get('/', (req, res) => {
   const allPosts = blogStore.getAll();
   const latestPosts = [...allPosts]
