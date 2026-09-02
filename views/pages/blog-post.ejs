@@ -8,7 +8,7 @@ var shareUrl = encodeURIComponent(postUrl);
     <nav class="post-breadcrumb" aria-label="Breadcrumb">
       <a href="/blog">Blog</a>
       <span class="post-breadcrumb-sep">&rsaquo;</span>
-      <a href="/blog?category=<%= encodeURIComponent(post.category) %>"><%= post.category %></a>
+      <a href="/blog?category=<%= categorySlug %>"><%= post.category %></a>
       <span class="post-breadcrumb-sep">&rsaquo;</span>
       <span class="post-breadcrumb-current"><%= post.title %></span>
     </nav>

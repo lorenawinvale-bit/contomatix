@@ -197,9 +197,16 @@ app.get('/services/:slug', (req, res) => {
 
 app.get('/blog', (req, res) => {
   const blogPosts = blogStore.getAll();
-  const category = req.query.category || 'All';
+  const categoryNames = [...new Set(blogPosts.map(p => p.category))];
+  const categoryBySlug = new Map(categoryNames.map(c => [blogStore.slugify(c), c]));
+  const requestedSlug = (req.query.category || 'all').toLowerCase();
+  const category = requestedSlug === 'all' ? 'All' : (categoryBySlug.get(requestedSlug) || 'All');
+  const activeCategorySlug = category === 'All' ? 'all' : requestedSlug;
   const search = (req.query.q || '').trim();
-  const categories = ['All', ...new Set(blogPosts.map(p => p.category))];
+  const categories = ['All', ...categoryNames].map(name => ({
+    name,
+    slug: name === 'All' ? 'all' : blogStore.slugify(name)
+  }));
   // Newest first. Posts are appended to data/blog.js as they're written, so
   // without this the most recent work ends up on the last page of the listing.
   const byNewest = [...blogPosts].reverse().sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
@@ -227,6 +234,7 @@ app.get('/blog', (req, res) => {
     posts,
     categories,
     activeCategory: category,
+    activeCategorySlug,
     search,
     page,
     totalPages
@@ -244,6 +252,7 @@ app.get('/blog/:slug', (req, res) => {
     description: post.excerpt,
     pageClass: 'page-blog-post',
     post,
+    categorySlug: blogStore.slugify(post.category),
     author: author ? withPhotoCheck(author) : null,
     readMinutes,
     faqs: extractFaqs(post.content)

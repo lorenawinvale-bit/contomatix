@@ -8,11 +8,11 @@
 <div class="container blog-toolbar">
   <div class="category-tabs">
     <% categories.forEach(function(cat) { %>
-      <a class="category-tab <%= cat === activeCategory ? 'active' : '' %>" href="/blog?category=<%= encodeURIComponent(cat) %><%= search ? '&q=' + encodeURIComponent(search) : '' %>"><%= cat %></a>
+      <a class="category-tab <%= cat.name === activeCategory ? 'active' : '' %>" href="/blog?category=<%= cat.slug %><%= search ? '&q=' + encodeURIComponent(search) : '' %>"><%= cat.name %></a>
     <% }); %>
   </div>
   <form class="search-form" method="get" action="/blog">
-    <% if (activeCategory && activeCategory !== 'All') { %><input type="hidden" name="category" value="<%= activeCategory %>"><% } %>
+    <% if (activeCategory && activeCategory !== 'All') { %><input type="hidden" name="category" value="<%= activeCategorySlug %>"><% } %>
     <input class="search-box" type="search" name="q" placeholder="Search..." value="<%= search || '' %>">
   </form>
 </div>
@@ -79,17 +79,17 @@
 <div class="container">
   <div class="pagination">
     <% if (page > 1) { %>
-      <a href="/blog?category=<%= encodeURIComponent(activeCategory) %><%= qParam %>&page=<%= page - 1 %>" class="page-link">&laquo; Prev</a>
+      <a href="/blog?category=<%= activeCategorySlug %><%= qParam %>&page=<%= page - 1 %>" class="page-link">&laquo; Prev</a>
     <% } %>
     <% for (let i = 1; i <= totalPages; i++) { %>
       <% if (i === page) { %>
         <span class="current"><%= i %></span>
       <% } else { %>
-        <a href="/blog?category=<%= encodeURIComponent(activeCategory) %><%= qParam %>&page=<%= i %>"><%= i %></a>
+        <a href="/blog?category=<%= activeCategorySlug %><%= qParam %>&page=<%= i %>"><%= i %></a>
       <% } %>
     <% } %>
     <% if (page < totalPages) { %>
-      <a href="/blog?category=<%= encodeURIComponent(activeCategory) %><%= qParam %>&page=<%= page + 1 %>" class="page-link">Next &raquo;</a>
+      <a href="/blog?category=<%= activeCategorySlug %><%= qParam %>&page=<%= page + 1 %>" class="page-link">Next &raquo;</a>
     <% } %>
   </div>
 </div>
