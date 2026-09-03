@@ -20,7 +20,7 @@
 
   <ellipse cx="300" cy="420" rx="150" ry="14" fill="rgba(23,20,44,0.06)"/>
 
-  <!-- Mansfield, TX: DFW suburb -- cul-de-sac rooftops on one side, a distribution warehouse + truck on the other -->
+  <!-- Mansfield, TX: DFW suburb, cul-de-sac rooftops on one side, a distribution warehouse + truck on the other -->
   <path d="M60 360 Q210 340 340 358 T620 352 L620 390 L60 390 Z" fill="#E5F7F1"/>
   <line x1="90" y1="378" x2="232" y2="378" stroke="#0EA5A0" stroke-width="2" opacity="0.4" stroke-dasharray="6 6"/>
   <g fill="none" stroke="#0EA5A0" stroke-width="3" opacity="0.5" stroke-linejoin="round">
