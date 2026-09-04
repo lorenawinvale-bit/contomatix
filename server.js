@@ -116,7 +116,7 @@ app.use((req, res, next) => {
 // ---------- Routes ----------
 
 app.get('/sitemap.xml', (req, res) => {
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker'];
   const servicePaths = services.map(s => `/services/${s.slug}`);
   const locationPaths = locations.map(l => `/services/${l.slug}`);
   const blogPaths = blogStore.getAll().map(p => `/blog/${p.slug}`);
@@ -225,6 +225,14 @@ app.get('/tools/serp-snippet-preview', (req, res) => {
   res.render('pages/serp-snippet-preview', {
     title: 'Free SERP Snippet Preview Tool — Google Search Preview | Contomatix',
     description: 'See exactly how your title and meta description will look in Google search results, with live character-count warnings, for free.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/readability-checker', (req, res) => {
+  res.render('pages/readability-checker', {
+    title: 'Free Readability & Content Score Checker | Contomatix',
+    description: 'Check your content\'s Flesch Reading Ease score, word/sentence counts, keyword density, and passive voice usage for free, instantly.',
     pageClass: 'page-tool'
   });
 });

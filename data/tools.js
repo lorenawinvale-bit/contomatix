@@ -15,5 +15,10 @@ module.exports = [
     slug: 'serp-snippet-preview',
     title: 'SERP Snippet Preview',
     summary: 'See exactly how your title and meta description will look in Google search results, with live character-count warnings.'
+  },
+  {
+    slug: 'readability-checker',
+    title: 'Readability Checker',
+    summary: 'Check your Flesch Reading Ease score, word/sentence counts, keyword density, and passive voice usage instantly.'
   }
 ];

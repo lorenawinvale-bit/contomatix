@@ -1,0 +1,265 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Readability &amp; Content Score Checker</h1>
+    <p>This <strong>free readability checker</strong> scores your content's reading ease, word and sentence counts, keyword density, and passive-voice usage instantly. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="rd-form" onsubmit="return false;" aria-label="Readability checker form">
+        <div>
+          <label for="rd-content">Paste your content</label>
+          <textarea id="rd-content" style="min-height: 260px;" placeholder="Paste a paragraph, blog post, or any text you want scored for readability."></textarea>
+        </div>
+        <div>
+          <label for="rd-keyword">Target keyword (optional)</label>
+          <input type="text" id="rd-keyword" placeholder="roof repair cost">
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Content score</strong>
+        <span id="rd-status" class="llms-status">Paste content to analyze</span>
+      </div>
+      <div id="rd-results" class="rd-results">
+        <div class="rd-score-row">
+          <div class="rd-score-circle" id="rd-score-circle">
+            <span id="rd-score-num">–</span>
+          </div>
+          <div>
+            <div id="rd-score-label" class="rd-score-label">No content yet</div>
+            <div id="rd-score-sub" class="llms-hint" style="margin:0;">Paste content on the left to see your score</div>
+          </div>
+        </div>
+        <div class="rd-stats-grid">
+          <div class="rd-stat"><span id="rd-words">0</span><label>Words</label></div>
+          <div class="rd-stat"><span id="rd-sentences">0</span><label>Sentences</label></div>
+          <div class="rd-stat"><span id="rd-avg-words">0</span><label>Words / sentence</label></div>
+          <div class="rd-stat"><span id="rd-reading-time">0 min</span><label>Reading time</label></div>
+          <div class="rd-stat"><span id="rd-density">–</span><label>Keyword density</label></div>
+          <div class="rd-stat"><span id="rd-passive">0</span><label>Possible passive sentences</label></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What Is a Readability Score?</h2>
+    <p>A readability score estimates how easy a piece of text is to read, based on measurable factors like sentence length and word complexity. This tool uses the <strong>Flesch Reading Ease</strong> formula, one of the most widely used readability metrics, scored from 0 (very difficult, academic/legal text) to 100 (very easy, plain conversational text).</p>
+
+    <h2>How to Read Your Score</h2>
+    <div style="overflow-x: auto;">
+      <table style="width:100%; border-collapse:collapse; margin:16px 0; font-size:0.95rem;">
+        <thead>
+          <tr style="border-bottom:2px solid currentColor;">
+            <th style="text-align:left; padding:10px 8px;">Score</th>
+            <th style="text-align:left; padding:10px 8px;">Reading level</th>
+            <th style="text-align:left; padding:10px 8px;">Typical audience</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">90&#8211;100</td><td style="padding:10px 8px;">Very easy</td><td style="padding:10px 8px;">11-year-old student</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">60&#8211;70</td><td style="padding:10px 8px;">Plain English</td><td style="padding:10px 8px;">13&#8211;15-year-old student, general public</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">30&#8211;50</td><td style="padding:10px 8px;">Fairly difficult</td><td style="padding:10px 8px;">College-level reader</td></tr>
+          <tr><td style="padding:10px 8px;">0&#8211;30</td><td style="padding:10px 8px;">Very difficult</td><td style="padding:10px 8px;">College graduate, specialist reader</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Most blog content aims for the 60&#8211;70 range — easy enough to skim on a phone, without sounding dumbed down. See our guide to <a href="/blog/seo-content-writing-guide-2026">SEO content writing</a> for how readability fits into a broader content strategy.</p>
+
+    <h2>Why Readability Affects SEO</h2>
+    <p>Readability isn't a direct Google ranking factor, but it drives the metrics that are: time on page, scroll depth, and whether a reader finishes the article instead of bouncing back to the search results. Content that's needlessly dense for its topic loses readers before they reach the answer they came for &#8212; and a high bounce-back rate is a signal search engines do pick up on over time.</p>
+
+    <h2>What This Tool Checks</h2>
+    <ul class="service-points">
+      <li><strong>Flesch Reading Ease score</strong> — based on average sentence length and syllables per word</li>
+      <li><strong>Word and sentence counts</strong> — plus average words per sentence, a quick signal for overly long, run-on writing</li>
+      <li><strong>Estimated reading time</strong> — based on a 200 words-per-minute average adult reading speed</li>
+      <li><strong>Keyword density</strong> — how often your target keyword appears relative to total word count, if you provide one</li>
+      <li><strong>Possible passive-voice sentences</strong> — flagged using common passive-construction patterns (a heuristic, not a grammar-perfect check)</li>
+    </ul>
+
+    <h2>How to Improve a Low Readability Score</h2>
+    <ul class="service-points">
+      <li>Break long sentences into two shorter ones wherever a natural pause exists</li>
+      <li>Replace multi-syllable words with simpler alternatives where meaning doesn't suffer</li>
+      <li>Cut filler phrases that add length without adding information</li>
+      <li>Read a paragraph out loud — if you run out of breath before the period, the sentence is too long</li>
+    </ul>
+
+    <h2>Free Readability Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>What is a good Flesch Reading Ease score for a blog post?<span class="faq-icon"></span></summary>
+        <p>Most successful blog content scores between 60 and 70 — easy enough for a broad general audience without feeling oversimplified. Technical or academic content can reasonably score lower.</p>
+      </details>
+      <details>
+        <summary>Is a lower readability score always bad?<span class="faq-icon"></span></summary>
+        <p>No. Legal, medical, and academic writing often needs precision that naturally lowers the score. Match the score to your actual audience and subject matter rather than chasing 100 for its own sake.</p>
+      </details>
+      <details>
+        <summary>How accurate is the passive-voice detection?<span class="faq-icon"></span></summary>
+        <p>It's a pattern-matching heuristic (common "to be" + past-participle constructions), not a full grammatical parse, so treat flagged sentences as worth a second look rather than a definitive verdict.</p>
+      </details>
+      <details>
+        <summary>Does keyword density affect my search ranking?<span class="faq-icon"></span></summary>
+        <p>Not as a direct ranking formula — modern search engines use semantic understanding, not keyword counting. Density here is a sanity check against accidental keyword stuffing, not a target to hit.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my content anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is calculated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want content written to actually rank?</h2>
+      <p>Contomatix writes and optimizes content for both readers and search engines.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Readability & Content Score Checker',
+    url: site.baseUrl + '/tools/readability-checker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Check your content\'s Flesch Reading Ease score, word/sentence counts, keyword density, and passive voice usage for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Readability Checker', item: site.baseUrl + '/tools/readability-checker' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What is a good Flesch Reading Ease score for a blog post?', acceptedAnswer: { '@type': 'Answer', text: 'Most successful blog content scores between 60 and 70 — easy enough for a broad general audience without feeling oversimplified.' } },
+      { '@type': 'Question', name: 'Is a lower readability score always bad?', acceptedAnswer: { '@type': 'Answer', text: 'No. Legal, medical, and academic writing often needs precision that naturally lowers the score. Match the score to your actual audience and subject matter.' } },
+      { '@type': 'Question', name: 'How accurate is the passive-voice detection?', acceptedAnswer: { '@type': 'Answer', text: "It's a pattern-matching heuristic, not a full grammatical parse, so treat flagged sentences as worth a second look rather than a definitive verdict." } },
+      { '@type': 'Question', name: 'Does keyword density affect my search ranking?', acceptedAnswer: { '@type': 'Answer', text: 'Not as a direct ranking formula — modern search engines use semantic understanding, not keyword counting.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my content anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is calculated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  function countSyllables(word) {
+    word = word.toLowerCase().replace(/[^a-z]/g, '');
+    if (!word) return 0;
+    if (word.length <= 3) return 1;
+    word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
+    word = word.replace(/^y/, '');
+    var matches = word.match(/[aeiouy]{1,2}/g);
+    return matches ? matches.length : 1;
+  }
+
+  function analyze(text) {
+    var words = (text.match(/[A-Za-z0-9'-]+/g) || []);
+    var sentences = (text.match(/[^.!?]+[.!?]+/g) || (text.trim() ? [text] : []));
+    var wordCount = words.length;
+    var sentenceCount = Math.max(sentences.length, wordCount ? 1 : 0);
+    var syllableCount = words.reduce(function (sum, w) { return sum + countSyllables(w); }, 0);
+    var avgWordsPerSentence = sentenceCount ? wordCount / sentenceCount : 0;
+    var avgSyllablesPerWord = wordCount ? syllableCount / wordCount : 0;
+    var flesch = wordCount && sentenceCount
+      ? 206.835 - 1.015 * avgWordsPerSentence - 84.6 * avgSyllablesPerWord
+      : null;
+    var passivePattern = /\b(is|are|was|were|be|been|being)\s+(?:\w+ly\s+){0,2}\w+ed\b/gi;
+    var passiveCount = (text.match(passivePattern) || []).length;
+    return {
+      wordCount: wordCount,
+      sentenceCount: sentenceCount,
+      avgWordsPerSentence: avgWordsPerSentence,
+      flesch: flesch,
+      passiveCount: passiveCount
+    };
+  }
+
+  function scoreLabel(score) {
+    if (score >= 90) return { label: 'Very easy to read', color: '#0EA5A0' };
+    if (score >= 60) return { label: 'Plain English', color: '#0EA5A0' };
+    if (score >= 30) return { label: 'Fairly difficult', color: '#F59E0B' };
+    return { label: 'Very difficult', color: '#D9534F' };
+  }
+
+  function build() {
+    var text = document.getElementById('rd-content').value;
+    var keyword = document.getElementById('rd-keyword').value.trim().toLowerCase();
+    var status = document.getElementById('rd-status');
+
+    if (!text.trim()) {
+      document.getElementById('rd-score-num').textContent = '–';
+      document.getElementById('rd-score-label').textContent = 'No content yet';
+      document.getElementById('rd-score-sub').textContent = 'Paste content on the left to see your score';
+      document.getElementById('rd-score-circle').style.borderColor = 'var(--border-light)';
+      ['rd-words', 'rd-sentences', 'rd-avg-words'].forEach(function (id) { document.getElementById(id).textContent = '0'; });
+      document.getElementById('rd-reading-time').textContent = '0 min';
+      document.getElementById('rd-density').textContent = '–';
+      document.getElementById('rd-passive').textContent = '0';
+      status.textContent = 'Paste content to analyze';
+      return;
+    }
+
+    var a = analyze(text);
+    var scoreRounded = a.flesch !== null ? Math.max(0, Math.min(100, Math.round(a.flesch))) : 0;
+    var info = scoreLabel(scoreRounded);
+
+    document.getElementById('rd-score-num').textContent = scoreRounded;
+    document.getElementById('rd-score-circle').style.borderColor = info.color;
+    document.getElementById('rd-score-label').textContent = info.label;
+    document.getElementById('rd-score-sub').textContent = 'Flesch Reading Ease: ' + scoreRounded + ' / 100';
+    document.getElementById('rd-words').textContent = a.wordCount;
+    document.getElementById('rd-sentences').textContent = a.sentenceCount;
+    document.getElementById('rd-avg-words').textContent = a.avgWordsPerSentence.toFixed(1);
+    document.getElementById('rd-reading-time').textContent = Math.max(1, Math.round(a.wordCount / 200)) + ' min';
+    document.getElementById('rd-passive').textContent = a.passiveCount;
+
+    if (keyword && a.wordCount) {
+      var kwWords = keyword.split(/\s+/).length;
+      var re = new RegExp(keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      var occurrences = (text.match(re) || []).length;
+      var density = ((occurrences * kwWords) / a.wordCount) * 100;
+      document.getElementById('rd-density').textContent = density.toFixed(1) + '% (' + occurrences + 'x)';
+    } else {
+      document.getElementById('rd-density').textContent = keyword ? '0%' : '–';
+    }
+
+    status.textContent = 'Updated';
+  }
+
+  document.getElementById('rd-content').addEventListener('input', build);
+  document.getElementById('rd-keyword').addEventListener('input', build);
+})();
+</script>
