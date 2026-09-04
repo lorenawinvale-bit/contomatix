@@ -1801,6 +1801,11 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 @media (max-width: 900px) {
   .llms-preview-card { position: static; }
 }
+/* .service-points reused inside a .post-content wrapper (free-tool pages) —
+   .post-content ul already adds a disc marker + padding, which would double
+   up with .service-points' own dot marker. Strip the inherited list styling
+   here rather than change .post-content globally. */
+.llms-explainer .service-points { list-style: none; padding-left: 0; }
 
 /* Cookie consent banner */
 .cookie-banner {
@@ -1857,7 +1862,7 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 }
 .footer-columns {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 32px;
   padding-bottom: 52px;
 }

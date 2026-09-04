@@ -22,9 +22,18 @@
       <h2>Resources</h2>
       <ul>
         <li><a href="/blog">Blog</a></li>
-        <li><a href="/tools/llms-txt-generator">Free llms.txt Generator</a></li>
         <li><a href="/contact">Support</a></li>
         <li><a href="/contact">Free SEO audit</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h2>Free Tools</h2>
+      <ul>
+        <li><a href="/tools">All Free Tools</a></li>
+        <% tools.forEach(function(t) { %>
+          <li><a href="/tools/<%= t.slug %>"><%= t.title %></a></li>
+        <% }); %>
       </ul>
     </div>
 

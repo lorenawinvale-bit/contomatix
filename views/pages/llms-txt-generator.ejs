@@ -3,14 +3,20 @@
   <div class="container page-hero-inner">
     <span class="eyebrow">Free Tool</span>
     <h1>Free llms.txt Generator</h1>
-    <p>Create a valid <code>llms.txt</code> file in seconds — a plain-language map of your site that helps ChatGPT, Claude, Perplexity, and other AI assistants understand and cite your business correctly.</p>
+    <p>This <strong>free llms.txt generator</strong> creates a valid <code>llms.txt</code> file in seconds — a plain-language map of your site that helps ChatGPT, Claude, Perplexity, and other AI assistants understand and cite your business correctly. No signup, no email required, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <img src="/images/tools/llms-txt-generator-preview.png" alt="Free llms.txt Generator tool interface on Contomatix, showing the input form and live llms.txt preview panel" width="1280" height="900" style="width:100%; height:auto; border-radius:12px; border:1px solid var(--border); box-shadow: var(--shadow-card);" loading="lazy">
   </div>
 </section>
 
 <section>
   <div class="container contact-grid llms-tool-grid">
     <div>
-      <form class="contact-form llms-form" id="llms-form" onsubmit="return false;">
+      <form class="contact-form llms-form" id="llms-form" onsubmit="return false;" aria-label="llms.txt generator form">
         <div>
           <label for="lt-name">Site or company name</label>
           <input type="text" id="lt-name" placeholder="Acme Roofing Co.">
@@ -50,14 +56,52 @@
 </section>
 
 <section>
-  <div class="container llms-explainer">
-    <h2>What is llms.txt?</h2>
-    <p style="color: var(--text-dim);"><code>llms.txt</code> is a plain-text file, written in simple Markdown, that sits at the root of your domain (like <code>robots.txt</code> or <code>sitemap.xml</code>) and gives AI assistants a short, structured summary of who you are and where your most important pages live. Unlike a sitemap, it isn't a crawl directive — it's a hand-written cheat sheet that helps an AI model describe your business accurately instead of guessing from whatever page it happens to land on.</p>
+  <div class="container llms-explainer post-content">
 
-    <h2>Why it matters for AI search</h2>
+    <h2>What Is llms.txt?</h2>
+    <p style="color: var(--text-dim);"><code>llms.txt</code> is a plain-text file, written in simple Markdown, that sits at the root of your domain (like <code>robots.txt</code> or <code>sitemap.xml</code>) and gives AI assistants a short, structured summary of who you are and where your most important pages live. Unlike a sitemap, it isn't a crawl directive — it's a hand-written cheat sheet that helps an AI model describe your business accurately instead of guessing from whatever page it happens to land on.</p>
+    <p style="color: var(--text-dim);">The format was proposed in 2024 by Jeremy Howard (Answer.AI) as a lightweight standard, and it's since been adopted by a growing list of developer tools, SaaS platforms, and documentation sites. It's still voluntary — no search engine or AI vendor requires it — but adoption is one-sided in cost: it takes minutes to add and there's no downside to having one.</p>
+
+    <h2>llms.txt vs. robots.txt vs. sitemap.xml</h2>
+    <p style="color: var(--text-dim);">These three root files are often confused because they all live in the same place, but they do completely different jobs:</p>
+    <div style="overflow-x: auto;">
+      <table style="width:100%; border-collapse:collapse; margin:16px 0; font-size:0.95rem;">
+        <thead>
+          <tr style="border-bottom:2px solid currentColor;">
+            <th style="text-align:left; padding:10px 8px;">File</th>
+            <th style="text-align:left; padding:10px 8px;">Purpose</th>
+            <th style="text-align:left; padding:10px 8px;">Audience</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;"><code>robots.txt</code></td><td style="padding:10px 8px;">Controls which pages crawlers are allowed to access</td><td style="padding:10px 8px;">Search engine &amp; AI crawlers</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;"><code>sitemap.xml</code></td><td style="padding:10px 8px;">Lists every indexable URL for discovery</td><td style="padding:10px 8px;">Search engine crawlers</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;"><code>llms.txt</code></td><td style="padding:10px 8px;">Summarizes who you are and what matters most, in plain language</td><td style="padding:10px 8px;">AI assistants &amp; LLMs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color: var(--text-dim);">None of the three replace the others — a well-optimized site typically has all three, each doing its own job.</p>
+
+    <h2>Why It Matters for AI Search</h2>
     <p style="color: var(--text-dim);">As more people ask ChatGPT, Claude, and Perplexity for recommendations instead of typing a Google query, being described correctly by those tools matters as much as ranking well in search results. See our guide to <a href="/blog/what-is-llm-seo-2026">LLM SEO</a> for the bigger picture, and <a href="/blog/how-to-get-cited-by-chatgpt-2026">how to get cited by ChatGPT</a> for what to do once your llms.txt is live.</p>
 
-    <h2>How to add it to your site</h2>
+    <h2>What Makes a Good llms.txt File</h2>
+    <p style="color: var(--text-dim);">A good file is short, accurate, and specific — not a copy-pasted homepage. Three things separate a useful llms.txt from a wasted one:</p>
+    <ul class="service-points">
+      <li><strong>A one-line summary that could stand alone</strong> — if an AI only reads that one line, it should still describe your business correctly</li>
+      <li><strong>Real page links, not just the homepage</strong> — point directly at the pages that answer specific questions (pricing, services, contact) rather than making the AI dig for them</li>
+      <li><strong>Plain language, no marketing fluff</strong> — "family-owned plumbing company serving Round Rock since 2004" beats "your trusted partner for all things plumbing"</li>
+    </ul>
+
+    <h2>Common Mistakes to Avoid</h2>
+    <ul class="service-points">
+      <li><strong>Copying your meta description verbatim</strong> — llms.txt should add context a meta tag can't fit, not repeat it</li>
+      <li><strong>Only listing the homepage</strong> — the whole point is pointing an AI straight at your most useful specific pages</li>
+      <li><strong>Never updating it</strong> — an llms.txt describing services you dropped two years ago actively misleads the AI reading it</li>
+      <li><strong>Placing it anywhere but the root</strong> — <code>yoursite.com/llms.txt</code> only, never in a subfolder</li>
+    </ul>
+
+    <h2>How to Add It to Your Site</h2>
     <ul class="service-points">
       <li>Fill in the form above and click Download</li>
       <li>Rename the file to exactly <code>llms.txt</code> if your browser changed the name</li>
@@ -81,8 +125,24 @@
         <p>No tool can guarantee that. llms.txt is still an emerging, voluntary convention that not every AI system reads yet — but it costs nothing to add and gives the ones that do read it accurate information instead of a guess.</p>
       </details>
       <details>
-        <summary>How often should I update my llms.txt file?</summary>
+        <summary>How often should I update my llms.txt file?<span class="faq-icon"></span></summary>
         <p>Whenever your key pages, services, or offerings change meaningfully — there's no fixed schedule, treat it like your sitemap or meta description.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything you type is processed entirely in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+      <details>
+        <summary>Can I have more than one page in the "Optional" section?<span class="faq-icon"></span></summary>
+        <p>Yes — add as many lines as you need, one page per line in the same <code>Label | URL | Description</code> format. The Optional section is meant for secondary pages an AI can skip if it's short on context.</p>
+      </details>
+      <details>
+        <summary>Does every AI assistant actually read llms.txt today?<span class="faq-icon"></span></summary>
+        <p>Not universally — adoption varies by vendor and is still evolving. Treat it the same way early adopters treated schema markup: not yet mandatory, but low-cost and forward-looking.</p>
+      </details>
+      <details>
+        <summary>Is this free tool a permanent part of Contomatix's site?<span class="faq-icon"></span></summary>
+        <p>Yes. It's one of several free SEO tools we're building — see the full, growing list at <a href="/tools">our free tools page</a>.</p>
       </details>
     </div>
 
@@ -116,12 +176,43 @@
 <script type="application/ld+json">
   <%- JSON.stringify({
     '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'llms.txt Generator', item: site.baseUrl + '/tools/llms-txt-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to add llms.txt to your site',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Generate the file', text: 'Fill in the form above and click Download.' },
+      { '@type': 'HowToStep', position: 2, name: 'Check the filename', text: 'Rename the file to exactly llms.txt if your browser changed the name.' },
+      { '@type': 'HowToStep', position: 3, name: 'Upload to your root directory', text: "Upload it to your site's root directory, the same place robots.txt lives." },
+      { '@type': 'HowToStep', position: 4, name: 'Confirm it loads', text: 'Confirm it loads at https://yoursite.com/llms.txt.' },
+      { '@type': 'HowToStep', position: 5, name: 'Keep it updated', text: 'Update it whenever your key pages or offerings change.' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Is llms.txt the same as robots.txt?', acceptedAnswer: { '@type': 'Answer', text: "No. robots.txt tells crawlers which pages they're allowed to access. llms.txt doesn't control access at all — it's a plain-language summary that helps AI assistants understand and describe your site once they've read it." } },
       { '@type': 'Question', name: 'Do I need to know how to code to add this?', acceptedAnswer: { '@type': 'Answer', text: "No. Download the generated file and upload it to your site's root folder using your host's file manager or FTP client — the same place your robots.txt or favicon.ico already lives." } },
       { '@type': 'Question', name: 'Will this guarantee ChatGPT or Claude mentions my business?', acceptedAnswer: { '@type': 'Answer', text: 'No tool can guarantee that. llms.txt is still an emerging, voluntary convention that not every AI system reads yet — but it costs nothing to add and gives the ones that do read it accurate information instead of a guess.' } },
-      { '@type': 'Question', name: 'How often should I update my llms.txt file?', acceptedAnswer: { '@type': 'Answer', text: "Whenever your key pages, services, or offerings change meaningfully — there's no fixed schedule, treat it like your sitemap or meta description." } }
+      { '@type': 'Question', name: 'How often should I update my llms.txt file?', acceptedAnswer: { '@type': 'Answer', text: "Whenever your key pages, services, or offerings change meaningfully — there's no fixed schedule, treat it like your sitemap or meta description." } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything you type is processed entirely in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Can I have more than one page in the Optional section?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — add as many lines as you need, one page per line in the same Label | URL | Description format. The Optional section is meant for secondary pages an AI can skip if it is short on context.' } },
+      { '@type': 'Question', name: 'Does every AI assistant actually read llms.txt today?', acceptedAnswer: { '@type': 'Answer', text: 'Not universally — adoption varies by vendor and is still evolving. Treat it the same way early adopters treated schema markup: not yet mandatory, but low-cost and forward-looking.' } },
+      { '@type': 'Question', name: "Is this free tool a permanent part of Contomatix's site?", acceptedAnswer: { '@type': 'Answer', text: "Yes. It's one of several free SEO tools being built — see the full, growing list on the free tools page." } }
     ]
   }) %>
 </script>

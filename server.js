@@ -7,6 +7,7 @@ const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 
 const services = require('./data/services');
+const tools = require('./data/tools');
 const locations = require('./data/locations');
 const blogStore = require('./lib/blogStore');
 const team = require('./data/team');
@@ -103,6 +104,7 @@ app.use(session({
 // Helper: pass common data to every view
 app.use((req, res, next) => {
   res.locals.services = services;
+  res.locals.tools = tools;
   res.locals.currentPath = req.path;
   res.locals.siteName = 'Contomatix';
   res.locals.site = site;
@@ -114,7 +116,7 @@ app.use((req, res, next) => {
 // ---------- Routes ----------
 
 app.get('/sitemap.xml', (req, res) => {
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools/llms-txt-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator'];
   const servicePaths = services.map(s => `/services/${s.slug}`);
   const locationPaths = locations.map(l => `/services/${l.slug}`);
   const blogPaths = blogStore.getAll().map(p => `/blog/${p.slug}`);
@@ -192,6 +194,14 @@ app.get('/services/:slug', (req, res) => {
     description: service.summary,
     pageClass: 'page-service',
     service
+  });
+});
+
+app.get('/tools', (req, res) => {
+  res.render('pages/tools', {
+    title: 'Free SEO Tools — Contomatix',
+    description: 'Free, no-signup SEO and AI-search tools from Contomatix — starting with a free llms.txt generator, with more tools on the way.',
+    pageClass: 'page-tools'
   });
 });
 

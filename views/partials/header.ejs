@@ -23,7 +23,19 @@
       </div>
 
       <a href="/blog" class="nav-link <%= currentPath.startsWith('/blog') ? 'active' : '' %>">Blog</a>
-      <a href="/tools/llms-txt-generator" class="nav-link <%= currentPath.startsWith('/tools') ? 'active' : '' %>">Free Tools</a>
+
+      <div class="nav-dropdown">
+        <button class="nav-link nav-dropdown-toggle" aria-expanded="false">
+          Tools
+          <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="/tools">All Free Tools</a>
+          <% tools.forEach(function(t) { %>
+            <a href="/tools/<%= t.slug %>"><%= t.title %></a>
+          <% }); %>
+        </div>
+      </div>
       <a href="/team" class="nav-link <%= currentPath === '/team' ? 'active' : '' %>">Team</a>
       <a href="/about" class="nav-link <%= currentPath === '/about' ? 'active' : '' %>">About</a>
       <a href="/contact" class="nav-link nav-cta <%= currentPath === '/contact' ? 'active' : '' %>">Get in touch</a>

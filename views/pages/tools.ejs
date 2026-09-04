@@ -1,0 +1,52 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tools</span>
+    <h1>Free SEO &amp; AI-Search Tools</h1>
+    <p>No signup, no paywall — practical tools built by Contomatix to help you get your site AI- and search-ready. More tools are added regularly.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="service-grid">
+      <% tools.forEach(function(t) { %>
+        <a class="service-card" href="/tools/<%= t.slug %>">
+          <h3><%= t.title %></h3>
+          <p><%= t.summary %></p>
+          <span class="service-card-link">Use tool &rarr;</span>
+        </a>
+      <% }); %>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Have a tool idea we should build?</h2>
+      <p>Tell us what would actually help your workflow — we're adding new free tools regularly.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Suggest a tool</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Free SEO & AI-Search Tools',
+    url: site.baseUrl + '/tools',
+    description: 'Free, no-signup SEO and AI-search tools from Contomatix.',
+    hasPart: tools.map(function(t) {
+      return {
+        '@type': 'WebApplication',
+        name: t.title,
+        url: site.baseUrl + '/tools/' + t.slug,
+        applicationCategory: 'BusinessApplication',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+      };
+    })
+  }) %>
+</script>
