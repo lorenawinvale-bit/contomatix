@@ -114,7 +114,7 @@ app.use((req, res, next) => {
 // ---------- Routes ----------
 
 app.get('/sitemap.xml', (req, res) => {
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools/llms-txt-generator'];
   const servicePaths = services.map(s => `/services/${s.slug}`);
   const locationPaths = locations.map(l => `/services/${l.slug}`);
   const blogPaths = blogStore.getAll().map(p => `/blog/${p.slug}`);
@@ -192,6 +192,14 @@ app.get('/services/:slug', (req, res) => {
     description: service.summary,
     pageClass: 'page-service',
     service
+  });
+});
+
+app.get('/tools/llms-txt-generator', (req, res) => {
+  res.render('pages/llms-txt-generator', {
+    title: 'Free llms.txt Generator — Create Your AI Crawler File | Contomatix',
+    description: 'Generate a valid llms.txt file for free in seconds — a plain-language summary of your site that helps ChatGPT, Claude, and Perplexity understand and cite your business.',
+    pageClass: 'page-tool'
   });
 });
 

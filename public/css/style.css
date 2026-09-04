@@ -1765,6 +1765,43 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 .contact-info-card .info-row strong { color: var(--text); display: block; font-size: 0.85rem; }
 .contact-info-card a:hover { color: var(--accent-teal-dim); }
 
+/* ============================
+   Free tools (llms.txt generator, etc.)
+   ============================ */
+.llms-tool-grid { align-items: start; }
+.llms-form textarea { min-height: 90px; }
+.llms-preview-card { position: sticky; top: 24px; }
+.llms-preview-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.llms-status { font-size: 0.78rem; color: var(--text-faint); }
+.llms-output {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 360px;
+  overflow-y: auto;
+  margin: 0 0 16px;
+}
+.llms-actions { display: flex; gap: 10px; margin-bottom: 14px; }
+.llms-hint { font-size: 0.82rem; color: var(--text-faint); margin: 0; }
+.llms-explainer code, .llms-form code, .llms-preview-card code {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+@media (max-width: 900px) {
+  .llms-preview-card { position: static; }
+}
+
 /* Cookie consent banner */
 .cookie-banner {
   position: fixed;

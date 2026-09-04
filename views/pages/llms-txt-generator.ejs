@@ -1,0 +1,196 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free llms.txt Generator</h1>
+    <p>Create a valid <code>llms.txt</code> file in seconds — a plain-language map of your site that helps ChatGPT, Claude, Perplexity, and other AI assistants understand and cite your business correctly.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="llms-form" onsubmit="return false;">
+        <div>
+          <label for="lt-name">Site or company name</label>
+          <input type="text" id="lt-name" placeholder="Acme Roofing Co.">
+        </div>
+        <div>
+          <label for="lt-summary">One-line summary</label>
+          <input type="text" id="lt-summary" placeholder="Acme Roofing Co. installs and repairs residential roofs across Austin, TX.">
+        </div>
+        <div>
+          <label for="lt-description">Longer description (optional)</label>
+          <textarea id="lt-description" placeholder="A short paragraph with any context an AI assistant should know — history, specialties, service area, or anything that helps it describe you accurately."></textarea>
+        </div>
+        <div>
+          <label for="lt-pages">Key pages — one per line: <code>Label | URL | Description</code></label>
+          <textarea id="lt-pages" placeholder="Roof Repair | https://example.com/roof-repair | Emergency and scheduled roof repair&#10;About Us | https://example.com/about | Company history and service area&#10;Contact | https://example.com/contact | Get a free quote"></textarea>
+        </div>
+        <div>
+          <label for="lt-optional">Optional / secondary pages (optional) — same format</label>
+          <textarea id="lt-optional" placeholder="Careers | https://example.com/careers | Open positions&#10;Blog | https://example.com/blog | Roofing tips and guides"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>llms.txt preview</strong>
+        <span id="lt-status" class="llms-status">Fill in the form to generate</span>
+      </div>
+      <pre id="lt-output" class="llms-output"># Your llms.txt will appear here</pre>
+      <div class="llms-actions">
+        <button type="button" class="btn btn-outline btn-sm" id="lt-copy">Copy</button>
+        <button type="button" class="btn btn-primary btn-sm" id="lt-download">Download llms.txt</button>
+      </div>
+      <p class="llms-hint">Upload the downloaded file to your site's root directory so it's reachable at <code>yoursite.com/llms.txt</code>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+    <h2>What is llms.txt?</h2>
+    <p style="color: var(--text-dim);"><code>llms.txt</code> is a plain-text file, written in simple Markdown, that sits at the root of your domain (like <code>robots.txt</code> or <code>sitemap.xml</code>) and gives AI assistants a short, structured summary of who you are and where your most important pages live. Unlike a sitemap, it isn't a crawl directive — it's a hand-written cheat sheet that helps an AI model describe your business accurately instead of guessing from whatever page it happens to land on.</p>
+
+    <h2>Why it matters for AI search</h2>
+    <p style="color: var(--text-dim);">As more people ask ChatGPT, Claude, and Perplexity for recommendations instead of typing a Google query, being described correctly by those tools matters as much as ranking well in search results. See our guide to <a href="/blog/what-is-llm-seo-2026">LLM SEO</a> for the bigger picture, and <a href="/blog/how-to-get-cited-by-chatgpt-2026">how to get cited by ChatGPT</a> for what to do once your llms.txt is live.</p>
+
+    <h2>How to add it to your site</h2>
+    <ul class="service-points">
+      <li>Fill in the form above and click Download</li>
+      <li>Rename the file to exactly <code>llms.txt</code> if your browser changed the name</li>
+      <li>Upload it to your site's root directory (the same place <code>robots.txt</code> lives)</li>
+      <li>Confirm it loads at <code>https://yoursite.com/llms.txt</code></li>
+      <li>Update it whenever your key pages or offerings change</li>
+    </ul>
+
+    <h2>Free llms.txt Generator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Is llms.txt the same as robots.txt?<span class="faq-icon"></span></summary>
+        <p>No. robots.txt tells crawlers which pages they're allowed to access. llms.txt doesn't control access at all — it's a plain-language summary that helps AI assistants understand and describe your site once they've read it.</p>
+      </details>
+      <details>
+        <summary>Do I need to know how to code to add this?<span class="faq-icon"></span></summary>
+        <p>No. Download the generated file and upload it to your site's root folder using your host's file manager or FTP client — the same place your <code>robots.txt</code> or <code>favicon.ico</code> already lives.</p>
+      </details>
+      <details>
+        <summary>Will this guarantee ChatGPT or Claude mentions my business?<span class="faq-icon"></span></summary>
+        <p>No tool can guarantee that. llms.txt is still an emerging, voluntary convention that not every AI system reads yet — but it costs nothing to add and gives the ones that do read it accurate information instead of a guess.</p>
+      </details>
+      <details>
+        <summary>How often should I update my llms.txt file?</summary>
+        <p>Whenever your key pages, services, or offerings change meaningfully — there's no fixed schedule, treat it like your sitemap or meta description.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want help beyond a single file?</h2>
+      <p>Contomatix builds full LLM SEO and AI-visibility strategies, not just the basics.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free llms.txt Generator',
+    url: site.baseUrl + '/tools/llms-txt-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Generate a valid llms.txt file for free — a plain-language summary of your site for ChatGPT, Claude, Perplexity and other AI assistants.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Is llms.txt the same as robots.txt?', acceptedAnswer: { '@type': 'Answer', text: "No. robots.txt tells crawlers which pages they're allowed to access. llms.txt doesn't control access at all — it's a plain-language summary that helps AI assistants understand and describe your site once they've read it." } },
+      { '@type': 'Question', name: 'Do I need to know how to code to add this?', acceptedAnswer: { '@type': 'Answer', text: "No. Download the generated file and upload it to your site's root folder using your host's file manager or FTP client — the same place your robots.txt or favicon.ico already lives." } },
+      { '@type': 'Question', name: 'Will this guarantee ChatGPT or Claude mentions my business?', acceptedAnswer: { '@type': 'Answer', text: 'No tool can guarantee that. llms.txt is still an emerging, voluntary convention that not every AI system reads yet — but it costs nothing to add and gives the ones that do read it accurate information instead of a guess.' } },
+      { '@type': 'Question', name: 'How often should I update my llms.txt file?', acceptedAnswer: { '@type': 'Answer', text: "Whenever your key pages, services, or offerings change meaningfully — there's no fixed schedule, treat it like your sitemap or meta description." } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  function parseRows(text) {
+    return text.split('\n').map(function (line) { return line.trim(); }).filter(Boolean).map(function (line) {
+      var parts = line.split('|').map(function (p) { return p.trim(); });
+      return { label: parts[0] || '', url: parts[1] || '', desc: parts[2] || '' };
+    });
+  }
+
+  function rowsToMarkdown(rows) {
+    return rows.filter(function (r) { return r.label && r.url; }).map(function (r) {
+      return '- [' + r.label + '](' + r.url + ')' + (r.desc ? ': ' + r.desc : '');
+    }).join('\n');
+  }
+
+  function build() {
+    var name = document.getElementById('lt-name').value.trim();
+    var summary = document.getElementById('lt-summary').value.trim();
+    var description = document.getElementById('lt-description').value.trim();
+    var pages = rowsToMarkdown(parseRows(document.getElementById('lt-pages').value));
+    var optional = rowsToMarkdown(parseRows(document.getElementById('lt-optional').value));
+
+    if (!name) {
+      document.getElementById('lt-output').textContent = '# Your llms.txt will appear here';
+      document.getElementById('lt-status').textContent = 'Fill in the form to generate';
+      return '';
+    }
+
+    var out = '# ' + name + '\n';
+    if (summary) out += '\n> ' + summary + '\n';
+    if (description) out += '\n' + description + '\n';
+    if (pages) out += '\n## Pages\n\n' + pages + '\n';
+    if (optional) out += '\n## Optional\n\n' + optional + '\n';
+
+    document.getElementById('lt-output').textContent = out.trim() + '\n';
+    document.getElementById('lt-status').textContent = 'Updated';
+    return out.trim() + '\n';
+  }
+
+  ['lt-name', 'lt-summary', 'lt-description', 'lt-pages', 'lt-optional'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', build);
+  });
+
+  document.getElementById('lt-copy').addEventListener('click', function () {
+    var text = document.getElementById('lt-output').textContent;
+    if (!text || text.indexOf('will appear here') !== -1) return;
+    navigator.clipboard.writeText(text).then(function () {
+      var status = document.getElementById('lt-status');
+      status.textContent = 'Copied!';
+      setTimeout(function () { status.textContent = 'Updated'; }, 1800);
+    });
+  });
+
+  document.getElementById('lt-download').addEventListener('click', function () {
+    var text = document.getElementById('lt-output').textContent;
+    if (!text || text.indexOf('will appear here') !== -1) return;
+    var blob = new Blob([text], { type: 'text/plain' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'llms.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+})();
+</script>
