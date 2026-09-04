@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="230" cy="400" rx="175" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Wichita motif: simplified Keeper of the Plains sculpture on a plaza at a river confluence -->
+  <g transform="translate(60,120)">
+    <path d="M-20 255 Q170 235 360 255" fill="none" stroke="#0EA5A0" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+    <path d="M-20 270 Q170 254 360 270" fill="none" stroke="#0EA5A0" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
+    <!-- plaza -->
+    <ellipse cx="160" cy="252" rx="80" ry="14" fill="#16192A" opacity="0.08"/>
+    <!-- sculpture: angular steel-plate figure, arms raised -->
+    <g transform="translate(120,60)">
+      <path d="M40 190 L34 120 L18 60 L30 62 L44 108 L48 62 L60 60 L50 120 L46 190 Z" fill="#C9682B"/>
+      <path d="M34 120 L2 40 L14 36 L42 104 Z" fill="#C9682B"/>
+      <path d="M48 62 L82 30 L92 38 L54 74 Z" fill="#C9682B"/>
+      <path d="M28 60 Q40 30 52 60 Q46 46 40 46 Q34 46 28 60 Z" fill="#C9682B"/>
+      <circle cx="40" cy="192" r="10" fill="#16192A" opacity="0.1"/>
+    </g>
+    <!-- gulls -->
+    <g stroke="#16192A" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45">
+      <path d="M240 60 q8 -8 16 0 q8 -8 16 0"/>
+      <path d="M270 90 q6 -6 12 0 q6 -6 12 0"/>
+    </g>
+  </g>
+
+  <g stroke="#14B8A6" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M300 268 Q322 262 340 250"/>
+    <path d="M306 285 Q330 285 348 280"/>
+    <path d="M300 302 Q322 312 336 320"/>
+  </g>
+  <g fill="#F5A623" opacity="0.8">
+    <circle cx="358" cy="248" r="4"/>
+    <circle cx="372" cy="278" r="5"/>
+    <circle cx="352" cy="316" r="4"/>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="440" y="150" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="176" r="12" fill="#E5F7F1"/>
+    <path d="M460 176l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="485" y="172" font-size="12.5" font-weight="700" fill="#16192A">6 agencies, independently verified</text>
+    <text x="485" y="189" font-size="11" fill="#8A8371">real Wichita offices only</text>
+  </g>
+  <g>
+    <rect x="440" y="212" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="238" r="12" fill="#FDF3E2"/>
+    <path d="M460 238h12M466 232v12" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="485" y="234" font-size="12.5" font-weight="700" fill="#16192A">A rival's top picks re-checked</text>
+    <text x="485" y="251" font-size="11" fill="#8A8371">its No.1 pick was in Missouri</text>
+  </g>
+
+  <text x="60" y="428" font-size="17" font-weight="700" fill="#16192A">Top Marketing Agencies in Wichita 2026</text>
+</svg>
