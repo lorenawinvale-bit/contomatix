@@ -116,7 +116,7 @@ app.use((req, res, next) => {
 // ---------- Routes ----------
 
 app.get('/sitemap.xml', (req, res) => {
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview'];
   const servicePaths = services.map(s => `/services/${s.slug}`);
   const locationPaths = locations.map(l => `/services/${l.slug}`);
   const blogPaths = blogStore.getAll().map(p => `/blog/${p.slug}`);
@@ -209,6 +209,22 @@ app.get('/tools/llms-txt-generator', (req, res) => {
   res.render('pages/llms-txt-generator', {
     title: 'Free llms.txt Generator — Create Your AI Crawler File | Contomatix',
     description: 'Generate a valid llms.txt file for free in seconds — a plain-language summary of your site that helps ChatGPT, Claude, and Perplexity understand and cite your business.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/schema-markup-generator', (req, res) => {
+  res.render('pages/schema-markup-generator', {
+    title: 'Free Schema Markup Generator — FAQ, HowTo & More | Contomatix',
+    description: 'Generate valid FAQ, HowTo, Local Business, or Article JSON-LD schema markup for free — ready to paste into your site, no signup required.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/serp-snippet-preview', (req, res) => {
+  res.render('pages/serp-snippet-preview', {
+    title: 'Free SERP Snippet Preview Tool — Google Search Preview | Contomatix',
+    description: 'See exactly how your title and meta description will look in Google search results, with live character-count warnings, for free.',
     pageClass: 'page-tool'
   });
 });

@@ -1,0 +1,242 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free SERP Snippet Preview Tool</h1>
+    <p>This <strong>free SERP snippet preview tool</strong> shows exactly how your title and meta description will look in Google search results, with live character-count warnings, before you publish. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="serp-form" onsubmit="return false;" aria-label="SERP snippet preview form">
+        <div>
+          <label for="sp-url">Page URL</label>
+          <input type="text" id="sp-url" placeholder="https://example.com/blog/roof-repair-cost-guide" value="https://example.com/blog/roof-repair-cost-guide">
+        </div>
+        <div>
+          <label for="sp-title">Page title <span id="sp-title-count" class="llms-status"></span></label>
+          <input type="text" id="sp-title" placeholder="Roof Repair Cost Guide: 2026 Pricing by Damage Type" value="Roof Repair Cost Guide: 2026 Pricing by Damage Type">
+        </div>
+        <div>
+          <label for="sp-desc">Meta description <span id="sp-desc-count" class="llms-status"></span></label>
+          <textarea id="sp-desc" placeholder="See real 2026 roof repair costs broken down by damage type, roof material, and region, plus what actually drives the price up or down.">See real 2026 roof repair costs broken down by damage type, roof material, and region, plus what actually drives the price up or down.</textarea>
+        </div>
+        <div>
+          <label>Preview mode</label>
+          <div style="display:flex; gap:10px;">
+            <button type="button" class="btn btn-outline btn-sm" id="sp-desktop-btn" data-mode="desktop">Desktop</button>
+            <button type="button" class="btn btn-outline btn-sm" id="sp-mobile-btn" data-mode="mobile">Mobile</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Google preview</strong>
+        <span id="sp-status" class="llms-status">Live</span>
+      </div>
+      <div id="sp-preview" class="serp-preview">
+        <div class="serp-site-row">
+          <img id="sp-favicon" class="serp-favicon" alt="" width="20" height="20">
+          <span id="sp-preview-sitename" class="serp-sitename"></span>
+        </div>
+        <div id="sp-preview-url" class="serp-url"></div>
+        <div id="sp-preview-title" class="serp-title"></div>
+        <div id="sp-preview-desc" class="serp-desc"></div>
+      </div>
+      <p class="llms-hint">This is an approximation — Google truncates by pixel width, not character count, and can rewrite your title or description entirely.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>Why a SERP Snippet Preview Matters</h2>
+    <p>Your title tag and meta description are the ad copy for your page — Google decides whether to rank you, but real people decide whether to click based on what they see in that snippet. A title that's a few characters too long gets cut off mid-word with an ellipsis, which looks unfinished and hurts click-through rate even on a page that ranks well.</p>
+
+    <h2>Recommended Length Guidelines</h2>
+    <div style="overflow-x: auto;">
+      <table style="width:100%; border-collapse:collapse; margin:16px 0; font-size:0.95rem;">
+        <thead>
+          <tr style="border-bottom:2px solid currentColor;">
+            <th style="text-align:left; padding:10px 8px;">Element</th>
+            <th style="text-align:left; padding:10px 8px;">Recommended length</th>
+            <th style="text-align:left; padding:10px 8px;">What happens if you go over</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">Title tag</td><td style="padding:10px 8px;">50&#8211;60 characters</td><td style="padding:10px 8px;">Truncated with an ellipsis, sometimes mid-word</td></tr>
+          <tr><td style="padding:10px 8px;">Meta description</td><td style="padding:10px 8px;">150&#8211;160 characters</td><td style="padding:10px 8px;">Cut off, or Google may replace it with page text entirely</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>These are guidelines, not hard rules — Google measures by pixel width, so a title full of narrow letters (like "i" and "l") can run longer than one full of wide letters (like "W" and "M") before it truncates.</p>
+
+    <h2>What Google Might Rewrite Anyway</h2>
+    <ul class="service-points">
+      <li><strong>Titles that don't match the page's actual content</strong> — Google increasingly rewrites titles using on-page H1s or content when it decides the tag is misleading or vague</li>
+      <li><strong>Duplicate or templated titles</strong> across many pages on the same site</li>
+      <li><strong>Meta descriptions that don't answer the query</strong> — Google often pulls a different snippet from the page body when this happens</li>
+      <li><strong>Keyword-stuffed titles</strong> that read as unnatural to Google's quality systems</li>
+    </ul>
+
+    <h2>How to Write a Title That Won't Get Cut Off</h2>
+    <ul class="service-points">
+      <li>Put your primary keyword and most important word near the start, not buried at the end</li>
+      <li>Keep it under 60 characters when possible, and always check the live preview before publishing</li>
+      <li>Avoid stacking multiple keywords separated by pipes just to fit more terms in</li>
+      <li>Write it for a human first — a title that reads naturally survives Google's rewrite systems better than one that reads like a keyword list</li>
+    </ul>
+
+    <h2>Free SERP Snippet Preview FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Is this exactly how my page will look in Google?<span class="faq-icon"></span></summary>
+        <p>It's a close approximation, not a guarantee. Google truncates by actual pixel width rather than character count, and can rewrite your title or description at will if it decides something else better matches the search query.</p>
+      </details>
+      <details>
+        <summary>Why does Google sometimes show a different description than what I wrote?<span class="faq-icon"></span></summary>
+        <p>Google dynamically generates the snippet it thinks best answers a specific search query, which can mean pulling a different sentence from your page body instead of your written meta description — especially for long-tail or highly specific queries.</p>
+      </details>
+      <details>
+        <summary>Does the meta description affect my search ranking?<span class="faq-icon"></span></summary>
+        <p>Not directly as a ranking factor, but it strongly affects click-through rate, and click-through rate is one of the signals Google's systems can pick up on over time.</p>
+      </details>
+      <details>
+        <summary>Should mobile and desktop titles be different?<span class="faq-icon"></span></summary>
+        <p>You only write one title tag — Google renders the same one on both, but mobile results generally show slightly less horizontal space, so a title optimized for desktop can occasionally truncate a bit earlier on mobile.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my content anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything runs in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want every page's on-page SEO handled?</h2>
+      <p>Contomatix audits and fixes titles, metas, and structure across your whole site.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free SERP Snippet Preview Tool',
+    url: site.baseUrl + '/tools/serp-snippet-preview',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Preview how your title and meta description will look in Google search results, with live character-count warnings.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'SERP Snippet Preview', item: site.baseUrl + '/tools/serp-snippet-preview' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Is this exactly how my page will look in Google?', acceptedAnswer: { '@type': 'Answer', text: 'It is a close approximation, not a guarantee. Google truncates by actual pixel width rather than character count, and can rewrite your title or description at will if it decides something else better matches the search query.' } },
+      { '@type': 'Question', name: 'Why does Google sometimes show a different description than what I wrote?', acceptedAnswer: { '@type': 'Answer', text: 'Google dynamically generates the snippet it thinks best answers a specific search query, which can mean pulling a different sentence from your page body instead of your written meta description.' } },
+      { '@type': 'Question', name: 'Does the meta description affect my search ranking?', acceptedAnswer: { '@type': 'Answer', text: "Not directly as a ranking factor, but it strongly affects click-through rate, and click-through rate is one of the signals Google's systems can pick up on over time." } },
+      { '@type': 'Question', name: 'Should mobile and desktop titles be different?', acceptedAnswer: { '@type': 'Answer', text: 'You only write one title tag — Google renders the same one on both, but mobile results generally show slightly less horizontal space.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my content anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything runs in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var mode = 'desktop';
+  var LIMITS = {
+    desktop: { title: 60, desc: 160 },
+    mobile: { title: 78, desc: 120 }
+  };
+
+  function truncate(text, max) {
+    if (text.length <= max) return text;
+    return text.slice(0, max - 1).trim() + '…';
+  }
+
+  function parseUrl(raw) {
+    try {
+      var u = new URL(raw);
+      var host = u.hostname.replace(/^www\./, '');
+      var parts = u.pathname.split('/').filter(Boolean);
+      var breadcrumb = [host].concat(parts).join(' › ');
+      var siteName = host.split('.')[0];
+      siteName = siteName.charAt(0).toUpperCase() + siteName.slice(1);
+      return { host: host, breadcrumb: breadcrumb, siteName: siteName, valid: true };
+    } catch (e) {
+      return { host: 'example.com', breadcrumb: raw || 'example.com', siteName: 'Example', valid: false };
+    }
+  }
+
+  function countLabel(len, max) {
+    var status = len === 0 ? '' : (len > max ? ' (over limit)' : ' / ' + max);
+    return len + status;
+  }
+
+  function build() {
+    var url = document.getElementById('sp-url').value.trim();
+    var title = document.getElementById('sp-title').value.trim();
+    var desc = document.getElementById('sp-desc').value.trim();
+    var limits = LIMITS[mode];
+
+    document.getElementById('sp-title-count').textContent = countLabel(title.length, limits.title);
+    document.getElementById('sp-desc-count').textContent = countLabel(desc.length, limits.desc);
+    document.getElementById('sp-title-count').style.color = title.length > limits.title ? '#B94340' : '';
+    document.getElementById('sp-desc-count').style.color = desc.length > limits.desc ? '#B94340' : '';
+
+    var parsed = parseUrl(url || 'https://example.com');
+    document.getElementById('sp-preview-sitename').textContent = parsed.siteName;
+    document.getElementById('sp-preview-url').textContent = parsed.breadcrumb;
+    document.getElementById('sp-favicon').src = 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(parsed.host) + '&sz=64';
+    document.getElementById('sp-preview-title').textContent = title ? truncate(title, limits.title) : 'Your page title will appear here';
+    document.getElementById('sp-preview-desc').textContent = desc ? truncate(desc, limits.desc) : 'Your meta description will appear here.';
+  }
+
+  document.querySelectorAll('#serp-form input, #serp-form textarea').forEach(function (el) {
+    el.addEventListener('input', build);
+  });
+
+  function setMode(newMode) {
+    mode = newMode;
+    document.getElementById('sp-desktop-btn').classList.toggle('btn-primary', mode === 'desktop');
+    document.getElementById('sp-desktop-btn').classList.toggle('btn-outline', mode !== 'desktop');
+    document.getElementById('sp-mobile-btn').classList.toggle('btn-primary', mode === 'mobile');
+    document.getElementById('sp-mobile-btn').classList.toggle('btn-outline', mode !== 'mobile');
+    document.getElementById('sp-preview').classList.toggle('serp-preview-mobile', mode === 'mobile');
+    build();
+  }
+
+  document.getElementById('sp-desktop-btn').addEventListener('click', function () { setMode('desktop'); });
+  document.getElementById('sp-mobile-btn').addEventListener('click', function () { setMode('mobile'); });
+
+  setMode('desktop');
+})();
+</script>

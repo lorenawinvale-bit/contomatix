@@ -1,0 +1,355 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Schema Markup Generator</h1>
+    <p>This <strong>free schema markup generator</strong> builds valid JSON-LD structured data — FAQ, HowTo, Local Business, or Article — ready to paste straight into your site's <code>&lt;head&gt;</code>. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="schema-form" onsubmit="return false;" aria-label="Schema markup generator form">
+        <div>
+          <label for="sc-type">Schema type</label>
+          <select id="sc-type">
+            <option value="faq">FAQ Page</option>
+            <option value="howto">How-To</option>
+            <option value="localbusiness">Local Business</option>
+            <option value="article">Article / Blog Post</option>
+          </select>
+        </div>
+
+        <div data-group="faq">
+          <label for="sc-faq-rows">Questions &amp; answers — one per line: <code>Question | Answer</code></label>
+          <textarea id="sc-faq-rows" placeholder="Do you offer free shipping? | Yes, on all orders over $50 within the US.&#10;What is your return policy? | 30-day returns on unused items in original packaging."></textarea>
+        </div>
+
+        <div data-group="howto" hidden>
+          <label for="sc-howto-name">Task name</label>
+          <input type="text" id="sc-howto-name" placeholder="How to Reset a Circuit Breaker">
+          <label for="sc-howto-desc" style="margin-top:14px;">Short description</label>
+          <textarea id="sc-howto-desc" placeholder="A quick guide to safely resetting a tripped circuit breaker at home."></textarea>
+          <label for="sc-howto-steps" style="margin-top:14px;">Steps — one per line: <code>Step Name | Step Text</code></label>
+          <textarea id="sc-howto-steps" placeholder="Locate the panel | Find your home's breaker panel, usually in a garage, basement, or utility closet.&#10;Find the tripped breaker | Look for a switch that sits in the middle instead of fully on or off.&#10;Reset it | Flip it fully off, then firmly back to on."></textarea>
+        </div>
+
+        <div data-group="localbusiness" hidden>
+          <label for="sc-lb-name">Business name</label>
+          <input type="text" id="sc-lb-name" placeholder="Acme Roofing Co.">
+          <label for="sc-lb-desc" style="margin-top:14px;">Description</label>
+          <textarea id="sc-lb-desc" placeholder="Family-owned roofing company serving Austin, TX since 2004."></textarea>
+          <label for="sc-lb-address" style="margin-top:14px;">Street address</label>
+          <input type="text" id="sc-lb-address" placeholder="123 Main St">
+          <label for="sc-lb-city" style="margin-top:14px;">City</label>
+          <input type="text" id="sc-lb-city" placeholder="Austin">
+          <label for="sc-lb-state" style="margin-top:14px;">State / region</label>
+          <input type="text" id="sc-lb-state" placeholder="TX">
+          <label for="sc-lb-zip" style="margin-top:14px;">Postal code</label>
+          <input type="text" id="sc-lb-zip" placeholder="78701">
+          <label for="sc-lb-country" style="margin-top:14px;">Country code</label>
+          <input type="text" id="sc-lb-country" placeholder="US">
+          <label for="sc-lb-phone" style="margin-top:14px;">Phone</label>
+          <input type="text" id="sc-lb-phone" placeholder="+1-512-555-0100">
+          <label for="sc-lb-url" style="margin-top:14px;">Website URL</label>
+          <input type="text" id="sc-lb-url" placeholder="https://example.com">
+        </div>
+
+        <div data-group="article" hidden>
+          <label for="sc-art-headline">Headline</label>
+          <input type="text" id="sc-art-headline" placeholder="10 Roof Maintenance Tips for Texas Summers">
+          <label for="sc-art-desc" style="margin-top:14px;">Description</label>
+          <textarea id="sc-art-desc" placeholder="A short summary of what the article covers."></textarea>
+          <label for="sc-art-author" style="margin-top:14px;">Author name</label>
+          <input type="text" id="sc-art-author" placeholder="Jane Smith">
+          <label for="sc-art-date" style="margin-top:14px;">Date published</label>
+          <input type="date" id="sc-art-date">
+          <label for="sc-art-image" style="margin-top:14px;">Image URL</label>
+          <input type="text" id="sc-art-image" placeholder="https://example.com/images/cover.jpg">
+          <label for="sc-art-url" style="margin-top:14px;">Article URL</label>
+          <input type="text" id="sc-art-url" placeholder="https://example.com/blog/roof-maintenance-tips">
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Schema preview</strong>
+        <span id="sc-status" class="llms-status">Fill in the form to generate</span>
+      </div>
+      <pre id="sc-output" class="llms-output">&lt;!-- Your schema markup will appear here --&gt;</pre>
+      <div class="llms-actions">
+        <button type="button" class="btn btn-outline btn-sm" id="sc-copy">Copy</button>
+        <button type="button" class="btn btn-primary btn-sm" id="sc-download">Download .html</button>
+      </div>
+      <p class="llms-hint">Paste this inside your page's <code>&lt;head&gt;</code>, or anywhere in <code>&lt;body&gt;</code> — search engines read it either way.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What Is Schema Markup?</h2>
+    <p>Schema markup (also called structured data) is a standardized code format — usually JSON-LD — that tells search engines exactly what your content means, not just what it says. A page of plain text says "we're open 9 to 5"; schema markup says <em>this is a LocalBusiness, and its openingHours is 09:00-17:00</em> in a format Google can parse with certainty.</p>
+    <p>Google, Bing, and increasingly AI answer engines use this data to build rich results: star ratings under a search listing, FAQ dropdowns directly in the SERP, step-by-step How-To carousels, and business info panels — all without a person having to read your page first.</p>
+
+    <h2>Which Schema Type Should You Use?</h2>
+    <div style="overflow-x: auto;">
+      <table style="width:100%; border-collapse:collapse; margin:16px 0; font-size:0.95rem;">
+        <thead>
+          <tr style="border-bottom:2px solid currentColor;">
+            <th style="text-align:left; padding:10px 8px;">Type</th>
+            <th style="text-align:left; padding:10px 8px;">Best for</th>
+            <th style="text-align:left; padding:10px 8px;">Possible rich result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">FAQPage</td><td style="padding:10px 8px;">Any page with a genuine Q&amp;A section</td><td style="padding:10px 8px;">Expandable FAQ dropdown in search results</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">HowTo</td><td style="padding:10px 8px;">Step-by-step instructions</td><td style="padding:10px 8px;">Numbered step carousel</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">LocalBusiness</td><td style="padding:10px 8px;">A physical business location</td><td style="padding:10px 8px;">Knowledge panel details, map integration</td></tr>
+          <tr><td style="padding:10px 8px;">Article</td><td style="padding:10px 8px;">Blog posts and news articles</td><td style="padding:10px 8px;">Author/date display, Top Stories eligibility</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Common Mistakes to Avoid</h2>
+    <ul class="service-points">
+      <li><strong>Marking up content that isn't visible on the page</strong> — Google's guidelines require structured data to reflect what a visitor can actually see and read</li>
+      <li><strong>Using FAQPage markup on marketing copy dressed up as questions</strong> — it should be genuine, distinct questions with real answers, not disguised ad copy</li>
+      <li><strong>Forgetting to update dates and prices</strong> — stale structured data (like an old price) can get a listing flagged or ignored</li>
+      <li><strong>Stacking multiple conflicting schema types on one page</strong> — only mark up what the page is actually about</li>
+    </ul>
+
+    <h2>How to Add This to Your Site</h2>
+    <ul class="service-points">
+      <li>Choose a schema type above and fill in the real details for your page</li>
+      <li>Copy the generated code or download it as an HTML snippet</li>
+      <li>Paste it into your page's <code>&lt;head&gt;</code> (or anywhere in <code>&lt;body&gt;</code>)</li>
+      <li>Test it with <a href="https://search.google.com/test/rich-results" target="_blank" rel="nofollow noopener">Google's Rich Results Test</a> before publishing</li>
+      <li>Update the markup whenever the underlying page content changes</li>
+    </ul>
+
+    <h2>Free Schema Markup Generator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Do I need to know how to code to use this?<span class="faq-icon"></span></summary>
+        <p>No. Fill in the plain-language form fields and the tool writes the correct JSON-LD syntax for you. Pasting the result onto your site is the only technical step, and it's the same as adding any other snippet of HTML.</p>
+      </details>
+      <details>
+        <summary>Will adding schema markup guarantee rich results in Google?<span class="faq-icon"></span></summary>
+        <p>No. Structured data makes your page eligible for rich results — it doesn't guarantee them. Google still decides whether and how to display them based on overall page quality and relevance.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is generated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+      <details>
+        <summary>Can I add more than one schema type to the same page?<span class="faq-icon"></span></summary>
+        <p>Yes, technically — a page can carry multiple <code>&lt;script type="application/ld+json"&gt;</code> blocks. Just make sure each one accurately describes real, visible content on that specific page.</p>
+      </details>
+      <details>
+        <summary>Where exactly should I paste the generated code?<span class="faq-icon"></span></summary>
+        <p>Anywhere in your page's HTML — the <code>&lt;head&gt;</code> is the most common convention, but search engines read JSON-LD from anywhere in the document.</p>
+      </details>
+      <details>
+        <summary>How do I check my schema markup is valid?<span class="faq-icon"></span></summary>
+        <p>Paste your page URL or the code directly into <a href="https://search.google.com/test/rich-results" target="_blank" rel="nofollow noopener">Google's Rich Results Test</a> — it flags syntax errors and shows which rich results your page qualifies for.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want your whole site technically optimized?</h2>
+      <p>Contomatix handles full on-page and technical SEO, not just structured data.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Schema Markup Generator',
+    url: site.baseUrl + '/tools/schema-markup-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Generate valid FAQ, HowTo, Local Business, or Article JSON-LD schema markup for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Schema Markup Generator', item: site.baseUrl + '/tools/schema-markup-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Do I need to know how to code to use this?', acceptedAnswer: { '@type': 'Answer', text: 'No. Fill in the plain-language form fields and the tool writes the correct JSON-LD syntax for you. Pasting the result onto your site is the only technical step, and it is the same as adding any other snippet of HTML.' } },
+      { '@type': 'Question', name: 'Will adding schema markup guarantee rich results in Google?', acceptedAnswer: { '@type': 'Answer', text: 'No. Structured data makes your page eligible for rich results — it does not guarantee them. Google still decides whether and how to display them based on overall page quality and relevance.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Can I add more than one schema type to the same page?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, technically — a page can carry multiple script type="application/ld+json" blocks. Just make sure each one accurately describes real, visible content on that specific page.' } },
+      { '@type': 'Question', name: 'Where exactly should I paste the generated code?', acceptedAnswer: { '@type': 'Answer', text: 'Anywhere in your page HTML — the head is the most common convention, but search engines read JSON-LD from anywhere in the document.' } },
+      { '@type': 'Question', name: 'How do I check my schema markup is valid?', acceptedAnswer: { '@type': 'Answer', text: "Paste your page URL or the code directly into Google's Rich Results Test — it flags syntax errors and shows which rich results your page qualifies for." } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+  function parseRows(text, cols) {
+    return text.split('\n').map(function (l) { return l.trim(); }).filter(Boolean).map(function (line) {
+      var parts = line.split('|').map(function (p) { return p.trim(); });
+      var out = {};
+      cols.forEach(function (c, i) { out[c] = parts[i] || ''; });
+      return out;
+    });
+  }
+
+  function buildFaq() {
+    var rows = parseRows(document.getElementById('sc-faq-rows').value, ['q', 'a']).filter(function (r) { return r.q && r.a; });
+    if (!rows.length) return null;
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: rows.map(function (r) {
+        return { '@type': 'Question', name: r.q, acceptedAnswer: { '@type': 'Answer', text: r.a } };
+      })
+    };
+  }
+
+  function buildHowto() {
+    var name = document.getElementById('sc-howto-name').value.trim();
+    if (!name) return null;
+    var desc = document.getElementById('sc-howto-desc').value.trim();
+    var steps = parseRows(document.getElementById('sc-howto-steps').value, ['name', 'text']).filter(function (r) { return r.name && r.text; });
+    var obj = { '@context': 'https://schema.org', '@type': 'HowTo', name: name };
+    if (desc) obj.description = desc;
+    if (steps.length) {
+      obj.step = steps.map(function (s, i) {
+        return { '@type': 'HowToStep', position: i + 1, name: s.name, text: s.text };
+      });
+    }
+    return obj;
+  }
+
+  function buildLocalBusiness() {
+    var name = document.getElementById('sc-lb-name').value.trim();
+    if (!name) return null;
+    var obj = { '@context': 'https://schema.org', '@type': 'LocalBusiness', name: name };
+    var desc = document.getElementById('sc-lb-desc').value.trim();
+    if (desc) obj.description = desc;
+    var street = document.getElementById('sc-lb-address').value.trim();
+    var city = document.getElementById('sc-lb-city').value.trim();
+    var state = document.getElementById('sc-lb-state').value.trim();
+    var zip = document.getElementById('sc-lb-zip').value.trim();
+    var country = document.getElementById('sc-lb-country').value.trim();
+    if (street || city || state || zip || country) {
+      obj.address = { '@type': 'PostalAddress' };
+      if (street) obj.address.streetAddress = street;
+      if (city) obj.address.addressLocality = city;
+      if (state) obj.address.addressRegion = state;
+      if (zip) obj.address.postalCode = zip;
+      if (country) obj.address.addressCountry = country;
+    }
+    var phone = document.getElementById('sc-lb-phone').value.trim();
+    if (phone) obj.telephone = phone;
+    var url = document.getElementById('sc-lb-url').value.trim();
+    if (url) obj.url = url;
+    return obj;
+  }
+
+  function buildArticle() {
+    var headline = document.getElementById('sc-art-headline').value.trim();
+    if (!headline) return null;
+    var obj = { '@context': 'https://schema.org', '@type': 'Article', headline: headline };
+    var desc = document.getElementById('sc-art-desc').value.trim();
+    if (desc) obj.description = desc;
+    var author = document.getElementById('sc-art-author').value.trim();
+    if (author) obj.author = { '@type': 'Person', name: author };
+    var date = document.getElementById('sc-art-date').value.trim();
+    if (date) obj.datePublished = date;
+    var image = document.getElementById('sc-art-image').value.trim();
+    if (image) obj.image = image;
+    var url = document.getElementById('sc-art-url').value.trim();
+    if (url) obj.mainEntityOfPage = url;
+    return obj;
+  }
+
+  var builders = { faq: buildFaq, howto: buildHowto, localbusiness: buildLocalBusiness, article: buildArticle };
+
+  function showGroup(type) {
+    ['faq', 'howto', 'localbusiness', 'article'].forEach(function (g) {
+      document.querySelector('[data-group="' + g + '"]').hidden = g !== type;
+    });
+  }
+
+  function build() {
+    var type = document.getElementById('sc-type').value;
+    var obj = builders[type]();
+    var output = document.getElementById('sc-output');
+    var status = document.getElementById('sc-status');
+    if (!obj) {
+      output.textContent = '<!-- Your schema markup will appear here -->';
+      status.textContent = 'Fill in the form to generate';
+      return;
+    }
+    var json = JSON.stringify(obj, null, 2);
+    output.textContent = '<script type="application/ld+json">\n' + json + '\n<\/script>';
+    status.textContent = 'Updated';
+  }
+
+  document.getElementById('sc-type').addEventListener('change', function (e) {
+    showGroup(e.target.value);
+    build();
+  });
+
+  document.querySelectorAll('#schema-form input, #schema-form textarea').forEach(function (el) {
+    el.addEventListener('input', build);
+  });
+
+  document.getElementById('sc-copy').addEventListener('click', function () {
+    var text = document.getElementById('sc-output').textContent;
+    if (!text || text.indexOf('will appear here') !== -1) return;
+    navigator.clipboard.writeText(text).then(function () {
+      var status = document.getElementById('sc-status');
+      status.textContent = 'Copied!';
+      setTimeout(function () { status.textContent = 'Updated'; }, 1800);
+    });
+  });
+
+  document.getElementById('sc-download').addEventListener('click', function () {
+    var text = document.getElementById('sc-output').textContent;
+    if (!text || text.indexOf('will appear here') !== -1) return;
+    var blob = new Blob([text], { type: 'text/html' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'schema-markup.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+})();
+</script>
