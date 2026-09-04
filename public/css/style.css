@@ -1801,10 +1801,17 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 @media (max-width: 900px) {
   .llms-preview-card { position: static; }
 }
-/* .service-points reused inside a .post-content wrapper (free-tool pages) —
-   .post-content ul already adds a disc marker + padding, which would double
-   up with .service-points' own dot marker. Strip the inherited list styling
-   here rather than change .post-content globally. */
+/* Standalone prose typography for free-tool explainer sections — deliberately
+   NOT reusing .post-content, since main.js's auto table-of-contents keys off
+   that exact class and renders unstyled outside a blog post's .post-toc-rail
+   layout. */
+.llms-explainer { color: var(--text-dim); padding-bottom: 40px; }
+.llms-explainer p { margin: 0 0 1.4em; }
+.llms-explainer h2 { color: var(--text); font-size: 1.5rem; margin: 1.6em 0 0.6em; }
+.llms-explainer h2:first-child { margin-top: 0; }
+.llms-explainer a { color: var(--accent-teal-dim); font-weight: 600; }
+.llms-explainer a:hover { color: var(--accent-teal); }
+.llms-explainer strong { color: var(--text); }
 .llms-explainer .service-points { list-style: none; padding-left: 0; }
 
 /* Cookie consent banner */
