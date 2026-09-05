@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="300" cy="420" rx="150" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Pioneer Valley / Connecticut River motif with a bridge -->
+  <path d="M50 372 Q210 350 330 368 T610 358 L610 394 L50 394 Z" fill="#E5F7F1"/>
+  <g fill="none" stroke="#0EA5A0" stroke-width="3" opacity="0.45">
+    <path d="M80 360 Q220 342 340 358 T570 348"/>
+  </g>
+
+  <!-- rolling Pioneer Valley hills behind the skyline -->
+  <path d="M40 316 Q120 288 210 312 T400 300 T600 314 L600 340 L40 340 Z" fill="#EFEAD9" opacity="0.9"/>
+
+  <!-- Springfield skyline: mill-brick buildings + a bridge over the river -->
+  <g>
+    <rect x="140" y="300" width="16" height="66" fill="#C9BBA9"/>
+    <rect x="164" y="272" width="20" height="94" fill="#B8A896"/>
+    <rect x="192" y="292" width="14" height="74" fill="#C9BBA9"/>
+    <rect x="214" y="256" width="22" height="110" fill="#9C8D7C"/>
+    <rect x="220" y="266" width="4" height="4" fill="#FDFAF5"/>
+    <rect x="228" y="266" width="4" height="4" fill="#FDFAF5"/>
+    <rect x="220" y="278" width="4" height="4" fill="#FDFAF5"/>
+    <rect x="228" y="278" width="4" height="4" fill="#FDFAF5"/>
+    <!-- domed civic building nod (Springfield Municipal Group campanile) -->
+    <rect x="244" y="298" width="14" height="68" fill="#C9BBA9"/>
+    <rect x="248" y="282" width="6" height="18" fill="#B8A896"/>
+    <path d="M248 282 L251 272 L254 282 Z" fill="#F5A623"/>
+  </g>
+
+  <!-- the river bridge (nod to Bridge Street / the Connecticut River crossings) -->
+  <g stroke="#0EA5A0" fill="none" stroke-width="3.5" opacity="0.8">
+    <path d="M270 366 Q330 320 392 366"/>
+    <line x1="292" y1="366" x2="292" y2="352"/>
+    <line x1="330" y1="366" x2="330" y2="334"/>
+    <line x1="368" y1="366" x2="368" y2="352"/>
+  </g>
+
+  <!-- info card baseline people mark -->
+  <g>
+    <rect x="100" y="150" width="210" height="26" rx="6" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="116" cy="163" r="9" fill="#0EA5A0"/>
+    <text x="116" y="167" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+    <rect x="134" y="157" width="150" height="10" rx="5" fill="#F1EDE3"/>
+  </g>
+  <g fill="#0EA5A0" opacity="0.85">
+    <circle cx="130" cy="215" r="7"/><path d="M118 238 Q130 224 142 238 Z"/>
+    <circle cx="160" cy="215" r="7"/><path d="M148 238 Q160 224 172 238 Z"/>
+    <circle cx="190" cy="215" r="7"/><path d="M178 238 Q190 224 202 238 Z"/>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="440" y="180" width="260" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="206" r="12" fill="#E5F7F1"/>
+    <path d="M460 206l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="485" y="202" font-size="12.5" font-weight="700" fill="#16192A">Honest Top 3, not padded</text>
+    <text x="485" y="219" font-size="11" fill="#8A8371">~20 candidates hand-checked</text>
+  </g>
+  <g>
+    <rect x="440" y="242" width="260" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="268" r="12" fill="#FDF3E2"/>
+    <path d="M466 261v9m0 4v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="485" y="264" font-size="12.5" font-weight="700" fill="#16192A">Pioneer Valley, Massachusetts</text>
+    <text x="485" y="281" font-size="11" fill="#8A8371">Connecticut River Valley hub</text>
+  </g>
+
+  <text x="60" y="425" font-size="17" font-weight="700" fill="#16192A">Top Recruiting Companies in Springfield, MA</text>
+</svg>
