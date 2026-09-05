@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <!-- sun over the ocean -->
+  <circle cx="600" cy="150" r="34" fill="#FDF3E2" stroke="#F5A623" stroke-width="2" opacity="0.9"/>
+  <circle cx="600" cy="150" r="22" fill="#F9A826" opacity="0.85"/>
+
+  <ellipse cx="300" cy="428" rx="180" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- ocean horizon band -->
+  <rect x="0" y="300" width="760" height="130" fill="#E5F7F1"/>
+  <g fill="none" stroke="#0EA5A0" stroke-width="3" opacity="0.4">
+    <path d="M0 316 Q80 308 160 316 T320 316 T480 316 T640 316 T800 316"/>
+    <path d="M0 336 Q80 328 160 336 T320 336 T480 336 T640 336 T800 336"/>
+  </g>
+
+  <!-- Deerfield Beach fishing pier stretching into the ocean -->
+  <g>
+    <!-- pier deck -->
+    <rect x="330" y="292" width="300" height="14" rx="2" fill="#B8A896"/>
+    <!-- pier pilings -->
+    <rect x="340" y="306" width="6" height="30" fill="#9C8D7C"/>
+    <rect x="390" y="306" width="6" height="34" fill="#9C8D7C"/>
+    <rect x="440" y="306" width="6" height="38" fill="#9C8D7C"/>
+    <rect x="490" y="306" width="6" height="42" fill="#9C8D7C"/>
+    <rect x="540" y="306" width="6" height="46" fill="#9C8D7C"/>
+    <rect x="590" y="306" width="6" height="50" fill="#9C8D7C"/>
+    <!-- pier railing -->
+    <rect x="330" y="284" width="300" height="4" fill="#C9BBA9"/>
+    <g stroke="#C9BBA9" stroke-width="2">
+      <line x1="340" y1="284" x2="340" y2="292"/>
+      <line x1="380" y1="284" x2="380" y2="292"/>
+      <line x1="420" y1="284" x2="420" y2="292"/>
+      <line x1="460" y1="284" x2="460" y2="292"/>
+      <line x1="500" y1="284" x2="500" y2="292"/>
+      <line x1="540" y1="284" x2="540" y2="292"/>
+      <line x1="580" y1="284" x2="580" y2="292"/>
+      <line x1="620" y1="284" x2="620" y2="292"/>
+    </g>
+    <!-- pier end pavilion -->
+    <rect x="596" y="270" width="40" height="20" rx="2" fill="#EFE7D8" stroke="#B8A896" stroke-width="1.5"/>
+    <path d="M592 270 L616 256 L640 270 Z" fill="#0B807C"/>
+  </g>
+
+  <!-- beach sand foreground -->
+  <path d="M0 366 Q180 344 340 366 T760 360 L760 430 L0 430 Z" fill="#F1EDE3"/>
+
+  <!-- palm trees -->
+  <g>
+    <path d="M96 402 C93 372 100 348 108 330" fill="none" stroke="#9C8D7C" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#0EA5A0" opacity="0.85">
+      <path d="M108 330 C90 320 74 322 62 314 C78 312 96 314 108 322 Z"/>
+      <path d="M108 330 C96 314 92 298 88 286 C100 296 108 312 112 326 Z"/>
+      <path d="M108 330 C112 312 122 298 132 288 C126 304 120 318 114 328 Z"/>
+      <path d="M108 330 C124 320 140 320 154 312 C140 316 122 320 110 326 Z"/>
+      <path d="M108 330 C104 314 108 300 116 288 C118 302 116 318 112 328 Z"/>
+    </g>
+  </g>
+  <g>
+    <path d="M660 412 C665 388 660 366 650 350" fill="none" stroke="#9C8D7C" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#14B8A6" opacity="0.85">
+      <path d="M650 350 C636 342 622 344 612 336 C626 335 640 337 650 344 Z"/>
+      <path d="M650 350 C642 336 640 322 636 312 C646 320 652 334 654 346 Z"/>
+      <path d="M650 350 C654 334 662 322 670 314 C666 328 660 340 654 348 Z"/>
+      <path d="M650 350 C664 342 676 342 688 336 C676 340 662 344 652 348 Z"/>
+    </g>
+  </g>
+
+  <!-- info card baseline people mark -->
+  <g>
+    <rect x="90" y="150" width="200" height="26" rx="6" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="106" cy="163" r="9" fill="#0EA5A0"/>
+    <text x="106" y="167" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+    <rect x="124" y="157" width="140" height="10" rx="5" fill="#F1EDE3"/>
+  </g>
+  <g fill="#0EA5A0" opacity="0.85">
+    <circle cx="120" cy="215" r="7"/><path d="M108 238 Q120 224 132 238 Z"/>
+    <circle cx="150" cy="215" r="7"/><path d="M138 238 Q150 224 162 238 Z"/>
+    <circle cx="180" cy="215" r="7"/><path d="M168 238 Q180 224 192 238 Z"/>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="440" y="86" width="260" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="112" r="12" fill="#E5F7F1"/>
+    <path d="M460 112l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="485" y="108" font-size="12.5" font-weight="700" fill="#16192A">Hand-checked, not scraped</text>
+    <text x="485" y="125" font-size="11" fill="#8A8371">real Deerfield Beach offices verified</text>
+  </g>
+  <g>
+    <rect x="60" y="60" width="248" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="86" cy="86" r="12" fill="#FDF3E2"/>
+    <path d="M86 79v9m0 4v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="105" y="82" font-size="12.5" font-weight="700" fill="#16192A">Locum tenens &amp; construction</text>
+    <text x="105" y="99" font-size="11" fill="#8A8371">niche recruiting on the coast</text>
+  </g>
+
+  <text x="60" y="460" font-size="17" font-weight="700" fill="#16192A">Top Recruiting Companies in Deerfield Beach</text>
+</svg>
