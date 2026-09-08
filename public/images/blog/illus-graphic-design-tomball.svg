@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="270" cy="420" rx="170" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Tomball small-town Main Street motif, distinct from the sister SEO-post SVG: a single storefront reworked as a design studio sign (paintbrush + swatch on the awning), paired with a fanned color-swatch stack and drafting pencil to signal the "design lives inside a full-service marketing shop" honest framing -->
+  <g>
+    <!-- ground line / sidewalk -->
+    <line x1="50" y1="392" x2="300" y2="392" stroke="#EAE0D2" stroke-width="3"/>
+
+    <!-- single storefront, wider, standing in for a full-service marketing agency with a design studio inside -->
+    <rect x="94" y="256" width="130" height="136" fill="#FFFFFF" stroke="#16192A" stroke-width="1.5"/>
+    <polygon points="86,256 232,256 159,220" fill="#0EA5A0"/>
+    <rect x="140" y="348" width="40" height="44" fill="#FDF3E2" stroke="#F5A623" stroke-width="1.5"/>
+    <g stroke="#16192A" stroke-width="1" opacity="0.4">
+      <rect x="106" y="270" width="24" height="28" fill="none"/>
+      <rect x="192" y="270" width="24" height="28" fill="none"/>
+    </g>
+    <!-- awning with a paintbrush + swatch mark, standing in for "design service inside" -->
+    <path d="M96 270 L222 270 L215 292 L103 292 Z" fill="#F5A623" opacity="0.9"/>
+    <g transform="translate(140,272)">
+      <rect x="0" y="6" width="40" height="10" rx="3" fill="#FFFFFF" opacity="0.9"/>
+      <circle cx="7" cy="11" r="3.2" fill="#EF6461"/>
+      <circle cx="18" cy="11" r="3.2" fill="#0EA5A0"/>
+      <circle cx="29" cy="11" r="3.2" fill="#16192A"/>
+    </g>
+    <!-- small marquee sign above door, nod to storefront-turned-agency -->
+    <rect x="140" y="330" width="40" height="14" rx="3" fill="#E5F7F1" stroke="#0B807C" stroke-width="1.2"/>
+
+    <!-- lampposts flanking the street, small-town touch -->
+    <line x1="50" y1="392" x2="50" y2="347" stroke="#8A8371" stroke-width="2.5"/>
+    <circle cx="50" cy="342" r="6" fill="#F5A623" opacity="0.8"/>
+    <line x1="282" y1="392" x2="282" y2="347" stroke="#8A8371" stroke-width="2.5"/>
+    <circle cx="282" cy="342" r="6" fill="#F5A623" opacity="0.8"/>
+
+    <!-- a couple of trees for the small-town feel -->
+    <circle cx="36" cy="382" r="9" fill="#0EA5A0" opacity="0.5"/>
+    <rect x="34" y="388" width="4" height="8" fill="#8A8371"/>
+    <circle cx="296" cy="380" r="9" fill="#0EA5A0" opacity="0.5"/>
+    <rect x="294" y="386" width="4" height="8" fill="#8A8371"/>
+  </g>
+
+  <!-- fanned swatch cards + pencil, design-industry motif, tucked beside the storefront -->
+  <g transform="translate(30,150)">
+    <g transform="translate(10,190) rotate(-15)">
+      <rect x="0" y="0" width="52" height="76" rx="8" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+      <rect x="8" y="9" width="36" height="26" rx="4" fill="#F5A623"/>
+    </g>
+    <g transform="translate(30,180) rotate(-3)">
+      <rect x="0" y="0" width="52" height="76" rx="8" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+      <rect x="8" y="9" width="36" height="26" rx="4" fill="#14B8A6"/>
+    </g>
+    <g transform="translate(50,186) rotate(10)">
+      <rect x="0" y="0" width="52" height="76" rx="8" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+      <rect x="8" y="9" width="36" height="26" rx="4" fill="#EF6461"/>
+    </g>
+    <!-- small drafting pencil crossing the swatches -->
+    <g transform="translate(6,60) rotate(40)">
+      <rect x="0" y="0" width="80" height="10" rx="2" fill="#F5A623"/>
+      <rect x="0" y="0" width="80" height="3" rx="1.5" fill="#FBC96B"/>
+      <rect x="80" y="0" width="10" height="10" fill="#EAE0D2"/>
+      <path d="M90 0 L100 5 L90 10 Z" fill="#3A2E22"/>
+    </g>
+  </g>
+
+  <!-- ranked list card, honest count of 2, echoing the sister SEO post's framing -->
+  <g>
+    <rect x="118" y="150" width="176" height="26" rx="6" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="134" cy="163" r="9" fill="#0EA5A0"/>
+    <text x="134" y="167" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <rect x="152" y="157" width="126" height="10" rx="5" fill="#F1EDE3"/>
+  </g>
+  <g>
+    <rect x="118" y="184" width="176" height="26" rx="6" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="134" cy="197" r="9" fill="#F5A623"/>
+    <text x="134" y="201" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <rect x="152" y="191" width="106" height="10" rx="5" fill="#F1EDE3"/>
+  </g>
+
+  <!-- floating info cards -->
+  <g>
+    <rect x="440" y="180" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="206" r="12" fill="#E5F7F1"/>
+    <path d="M460 206l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="485" y="202" font-size="12.5" font-weight="700" fill="#16192A">Full-service agencies, not studios</text>
+    <text x="485" y="219" font-size="11" fill="#8A8371">an honest Tomball finding</text>
+  </g>
+  <g>
+    <rect x="440" y="242" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="268" r="12" fill="#FDF3E2"/>
+    <path d="M466 261v9m0 4v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="485" y="264" font-size="12.5" font-weight="700" fill="#16192A">2 of 18+ candidates verified</text>
+    <text x="485" y="281" font-size="11" fill="#8A8371">real Tomball design offerings only</text>
+  </g>
+
+  <text x="60" y="425" font-size="17" font-weight="700" fill="#16192A">Top 2 Graphic Design Companies in Tomball</text>
+</svg>
