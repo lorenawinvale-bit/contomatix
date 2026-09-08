@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="255" cy="410" rx="185" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- The Woodlands web-design motif: pine treeline behind a browser window showing a code element, reflecting the master-planned forest community + web-development identity -->
+  <g>
+    <!-- treeline -->
+    <path d="M40 392 l15 -32 15 32 z" fill="#0EA5A0" opacity="0.5"/>
+    <path d="M55 392 l15 -44 15 44 z" fill="#0B807C" opacity="0.5"/>
+    <path d="M70 392 l13 -28 13 28 z" fill="#0EA5A0" opacity="0.38"/>
+    <path d="M355 392 l15 -38 15 38 z" fill="#0EA5A0" opacity="0.46"/>
+    <path d="M370 392 l13 -48 13 48 z" fill="#0B807C" opacity="0.5"/>
+    <path d="M383 392 l15 -30 15 30 z" fill="#0EA5A0" opacity="0.38"/>
+  </g>
+
+  <!-- winding pathway motif (master-planned community waterway/trail) -->
+  <path d="M50 392 C 130 372, 170 404, 250 392 S 380 372, 470 392" fill="none" stroke="#F5A623" stroke-width="3" opacity="0.32" stroke-linecap="round" stroke-dasharray="1 10"/>
+
+  <!-- browser window rising above the treeline -->
+  <g transform="translate(140,150)">
+    <rect x="0" y="0" width="230" height="164" rx="10" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="26" rx="10" fill="#F2ECE0"/>
+    <rect x="0" y="16" width="230" height="10" fill="#F2ECE0"/>
+    <circle cx="16" cy="13" r="4.5" fill="#F5A623"/>
+    <circle cx="32" cy="13" r="4.5" fill="#14B8A6"/>
+    <circle cx="48" cy="13" r="4.5" fill="#0EA5A0"/>
+    <rect x="70" y="8" width="130" height="10" rx="5" fill="#FDFAF5"/>
+
+    <!-- code brackets -->
+    <text x="34" y="108" font-size="46" font-weight="700" fill="#0EA5A0">&lt;</text>
+    <text x="176" y="108" font-size="46" font-weight="700" fill="#F5A623">&gt;</text>
+    <rect x="86" y="70" width="58" height="9" rx="4.5" fill="#E5F7F1"/>
+    <rect x="96" y="86" width="50" height="9" rx="4.5" fill="#FDF3E2"/>
+    <rect x="86" y="102" width="40" height="9" rx="4.5" fill="#E5F7F1"/>
+
+    <!-- cursor slash -->
+    <rect x="128" y="120" width="3" height="22" fill="#16192A" opacity="0.6"/>
+  </g>
+
+  <g stroke="#14B8A6" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M300 258 Q322 252 340 240"/>
+    <path d="M306 275 Q330 275 348 270"/>
+    <path d="M300 292 Q322 302 336 310"/>
+  </g>
+  <g fill="#F5A623" opacity="0.8">
+    <circle cx="358" cy="238" r="4"/>
+    <circle cx="372" cy="268" r="5"/>
+    <circle cx="352" cy="306" r="4"/>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="440" y="160" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="186" r="12" fill="#E5F7F1"/>
+    <path d="M460 186l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="485" y="182" font-size="12.5" font-weight="700" fill="#16192A">2 of 30+, hand-verified</text>
+    <text x="485" y="199" font-size="11" fill="#8A8371">real Woodlands offices only</text>
+  </g>
+  <g>
+    <rect x="440" y="222" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="248" r="12" fill="#FDF3E2"/>
+    <path d="M466 241v9m0 4v.5" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="485" y="244" font-size="12.5" font-weight="700" fill="#16192A">No virtual-office traps</text>
+    <text x="485" y="261" font-size="11" fill="#8A8371">Regus, Lucid &amp; mail-drop free</text>
+  </g>
+
+  <text x="70" y="440" font-size="16" font-weight="700" fill="#16192A">Top 2 Web Design Companies in The Woodlands</text>
+</svg>
