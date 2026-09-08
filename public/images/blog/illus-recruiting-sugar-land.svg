@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <!-- Sugar Land corporate-suburb motif: a low skyline of office towers along Southwest Freeway/Commerce Green corridor, meeting at a handshake -->
+  <!-- ground band -->
+  <g>
+    <path d="M0 340 Q 190 326 380 340 T 760 340 L 760 360 Q 570 348 380 360 T 0 360 Z" fill="rgba(14,165,160,0.14)"/>
+    <path d="M0 355 L760 355 L760 380 L0 380 Z" fill="rgba(22,25,42,0.05)"/>
+  </g>
+
+  <!-- office towers, left cluster -->
+  <g transform="translate(40,150)">
+    <rect x="0" y="60" width="54" height="145" rx="3" fill="#16192A" opacity="0.85"/>
+    <rect x="66" y="30" width="60" height="175" rx="3" fill="#0B807C" opacity="0.9"/>
+    <rect x="138" y="80" width="46" height="125" rx="3" fill="#16192A" opacity="0.7"/>
+    <!-- windows -->
+    <g fill="#FDFAF5" opacity="0.55">
+      <g>
+        <rect x="8" y="72" width="10" height="12"/><rect x="24" y="72" width="10" height="12"/><rect x="40" y="72" width="10" height="12"/>
+        <rect x="8" y="94" width="10" height="12"/><rect x="24" y="94" width="10" height="12"/><rect x="40" y="94" width="10" height="12"/>
+        <rect x="8" y="116" width="10" height="12"/><rect x="24" y="116" width="10" height="12"/><rect x="40" y="116" width="10" height="12"/>
+        <rect x="8" y="138" width="10" height="12"/><rect x="24" y="138" width="10" height="12"/><rect x="40" y="138" width="10" height="12"/>
+        <rect x="8" y="160" width="10" height="12"/><rect x="24" y="160" width="10" height="12"/><rect x="40" y="160" width="10" height="12"/>
+      </g>
+      <g>
+        <rect x="74" y="42" width="11" height="13"/><rect x="92" y="42" width="11" height="13"/><rect x="110" y="42" width="11" height="13"/>
+        <rect x="74" y="66" width="11" height="13"/><rect x="92" y="66" width="11" height="13"/><rect x="110" y="66" width="11" height="13"/>
+        <rect x="74" y="90" width="11" height="13"/><rect x="92" y="90" width="11" height="13"/><rect x="110" y="90" width="11" height="13"/>
+        <rect x="74" y="114" width="11" height="13"/><rect x="92" y="114" width="11" height="13"/><rect x="110" y="114" width="11" height="13"/>
+        <rect x="74" y="138" width="11" height="13"/><rect x="92" y="138" width="11" height="13"/><rect x="110" y="138" width="11" height="13"/>
+        <rect x="74" y="162" width="11" height="13"/><rect x="92" y="162" width="11" height="13"/><rect x="110" y="162" width="11" height="13"/>
+      </g>
+      <g>
+        <rect x="146" y="92" width="9" height="11"/><rect x="160" y="92" width="9" height="11"/>
+        <rect x="146" y="112" width="9" height="11"/><rect x="160" y="112" width="9" height="11"/>
+        <rect x="146" y="132" width="9" height="11"/><rect x="160" y="132" width="9" height="11"/>
+        <rect x="146" y="152" width="9" height="11"/><rect x="160" y="152" width="9" height="11"/>
+        <rect x="146" y="172" width="9" height="11"/><rect x="160" y="172" width="9" height="11"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- office towers, right cluster (mirrored, slightly shorter, evoking Commerce Green / Southwest Fwy corridor) -->
+  <g transform="translate(560,170)">
+    <rect x="0" y="70" width="48" height="115" rx="3" fill="#16192A" opacity="0.7"/>
+    <rect x="60" y="20" width="58" height="165" rx="3" fill="#F5A623" opacity="0.85"/>
+    <rect x="130" y="55" width="52" height="130" rx="3" fill="#16192A" opacity="0.85"/>
+    <g fill="#FDFAF5" opacity="0.55">
+      <g>
+        <rect x="8" y="82" width="9" height="11"/><rect x="22" y="82" width="9" height="11"/><rect x="36" y="82" width="9" height="11"/>
+        <rect x="8" y="102" width="9" height="11"/><rect x="22" y="102" width="9" height="11"/><rect x="36" y="102" width="9" height="11"/>
+        <rect x="8" y="122" width="9" height="11"/><rect x="22" y="122" width="9" height="11"/><rect x="36" y="122" width="9" height="11"/>
+        <rect x="8" y="142" width="9" height="11"/><rect x="22" y="142" width="9" height="11"/><rect x="36" y="142" width="9" height="11"/>
+      </g>
+      <g>
+        <rect x="68" y="32" width="10" height="12"/><rect x="84" y="32" width="10" height="12"/><rect x="100" y="32" width="10" height="12"/>
+        <rect x="68" y="56" width="10" height="12"/><rect x="84" y="56" width="10" height="12"/><rect x="100" y="56" width="10" height="12"/>
+        <rect x="68" y="80" width="10" height="12"/><rect x="84" y="80" width="10" height="12"/><rect x="100" y="80" width="10" height="12"/>
+        <rect x="68" y="104" width="10" height="12"/><rect x="84" y="104" width="10" height="12"/><rect x="100" y="104" width="10" height="12"/>
+        <rect x="68" y="128" width="10" height="12"/><rect x="84" y="128" width="10" height="12"/><rect x="100" y="128" width="10" height="12"/>
+        <rect x="68" y="152" width="10" height="12"/><rect x="84" y="152" width="10" height="12"/><rect x="100" y="152" width="10" height="12"/>
+      </g>
+      <g>
+        <rect x="138" y="67" width="9" height="11"/><rect x="152" y="67" width="9" height="11"/><rect x="166" y="67" width="9" height="11"/>
+        <rect x="138" y="87" width="9" height="11"/><rect x="152" y="87" width="9" height="11"/><rect x="166" y="87" width="9" height="11"/>
+        <rect x="138" y="107" width="9" height="11"/><rect x="152" y="107" width="9" height="11"/><rect x="166" y="107" width="9" height="11"/>
+        <rect x="138" y="127" width="9" height="11"/><rect x="152" y="127" width="9" height="11"/><rect x="166" y="127" width="9" height="11"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- handshake at the meeting point between the two office clusters -->
+  <g transform="translate(380,300)">
+    <circle cx="0" cy="0" r="28" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(-15,-9)">
+      <path d="M0 9 L11 2 L19 6 L30 0" fill="none" stroke="#F5A623" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 9 L6 17 L15 21 L21 17 L30 13" fill="none" stroke="#0EA5A0" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <g fill="#F5A623" opacity="0.7">
+    <circle cx="315" cy="360" r="4"/>
+    <circle cx="500" cy="360" r="4"/>
+    <circle cx="408" cy="382" r="4.5"/>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="60" y="90" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="86" cy="116" r="12" fill="#E5F7F1"/>
+    <path d="M80 116l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="105" y="112" font-size="12.5" font-weight="700" fill="#16192A">5 agencies, hand-verified</text>
+    <text x="105" y="129" font-size="11" fill="#8A8371">real Sugar Land offices only</text>
+  </g>
+  <g>
+    <rect x="430" y="90" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="456" cy="116" r="12" fill="#FDF3E2"/>
+    <path d="M450 116h12M456 110v12" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="475" y="112" font-size="12.5" font-weight="700" fill="#16192A">Corporate-suburb staffing</text>
+    <text x="475" y="129" font-size="11" fill="#8A8371">19 candidates reviewed, 5 cleared</text>
+  </g>
+
+  <text x="45" y="428" font-size="16.5" font-weight="700" fill="#16192A">Top Recruiting Companies in Sugar Land, TX</text>
+</svg>
