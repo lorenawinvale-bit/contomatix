@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <!-- Ship channel water line with gentle waves -->
+  <rect x="0" y="360" width="760" height="65" fill="#E5F7F1" opacity="0.55"/>
+  <g stroke="#0EA5A0" stroke-width="2" fill="none" opacity="0.35" stroke-linecap="round">
+    <path d="M0 372 Q20 366 40 372 T80 372 T120 372 T160 372 T200 372 T240 372 T280 372 T320 372"/>
+    <path d="M0 392 Q20 386 40 392 T80 392 T120 392 T160 392 T200 392 T240 392 T280 392 T320 392"/>
+  </g>
+
+  <!-- Distant refinery skyline silhouette, friendly/soft not grim -->
+  <g opacity="0.9">
+    <rect x="30" y="290" width="10" height="80" fill="#16192A" opacity="0.12"/>
+    <rect x="52" y="270" width="10" height="100" fill="#16192A" opacity="0.12"/>
+    <rect x="74" y="305" width="14" height="65" fill="#16192A" opacity="0.14"/>
+    <circle cx="79" cy="298" r="7" fill="none" stroke="#16192A" stroke-width="2" opacity="0.14"/>
+    <rect x="100" y="255" width="8" height="115" fill="#16192A" opacity="0.12"/>
+    <rect x="120" y="315" width="46" height="55" fill="#16192A" opacity="0.10"/>
+    <rect x="176" y="300" width="8" height="70" fill="#16192A" opacity="0.12"/>
+    <rect x="196" y="285" width="10" height="85" fill="#16192A" opacity="0.13"/>
+    <!-- soft smoke wisps, kept light and non-grim -->
+    <g fill="none" stroke="#C9BBA9" stroke-width="2.5" opacity="0.5" stroke-linecap="round">
+      <path d="M35 288 Q42 276 34 266 Q28 258 36 248"/>
+      <path d="M57 268 Q64 256 56 246 Q50 238 58 228"/>
+    </g>
+  </g>
+
+  <ellipse cx="300" cy="415" rx="150" ry="12" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Contomatix ranked "1 of 40" badge card, echoing the honest single-result finding -->
+  <g>
+    <rect x="70" y="150" width="230" height="30" rx="8" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="90" cy="165" r="10" fill="#0EA5A0"/>
+    <text x="90" y="169" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <rect x="110" y="158" width="150" height="9" rx="4.5" fill="#F1EDE3"/>
+    <rect x="110" y="171" width="90" height="7" rx="3.5" fill="#F1EDE3" opacity="0.7"/>
+  </g>
+
+  <!-- small tugboat on the channel, keeps the motif welcoming -->
+  <g transform="translate(230,368)">
+    <path d="M0 18 L50 18 L44 30 L6 30 Z" fill="#FFFFFF" stroke="#0B807C" stroke-width="1.5"/>
+    <rect x="14" y="4" width="14" height="16" rx="2" fill="#E5F7F1" stroke="#0B807C" stroke-width="1.2"/>
+    <line x1="21" y1="4" x2="21" y2="-8" stroke="#8A8371" stroke-width="1.5"/>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="420" y="170" width="280" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="447" cy="198" r="13" fill="#FDF3E2"/>
+    <path d="M441 198h12M447 192v12" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="468" y="194" font-size="12.5" font-weight="700" fill="#16192A">~40 candidates checked</text>
+    <text x="468" y="211" font-size="11" fill="#8A8371">1 genuinely Pasadena, TX-based</text>
+  </g>
+  <g>
+    <rect x="420" y="234" width="280" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="447" cy="262" r="13" fill="#E5F7F1"/>
+    <path d="M441 262l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="468" y="258" font-size="12.5" font-weight="700" fill="#16192A">Not Pasadena, California</text>
+    <text x="468" y="275" font-size="11" fill="#8A8371">Houston Ship Channel, Harris County TX</text>
+  </g>
+
+  <text x="60" y="450" font-size="17" font-weight="700" fill="#16192A">Top SEO Company in Pasadena, TX</text>
+</svg>
