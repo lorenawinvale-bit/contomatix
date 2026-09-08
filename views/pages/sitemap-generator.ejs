@@ -1,0 +1,212 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free XML Sitemap Generator</h1>
+    <p>This <strong>free sitemap generator</strong> turns a plain list of URLs into a valid sitemap.xml file in seconds — no crawler, no software install. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="sm-form" onsubmit="return false;" aria-label="Sitemap generator form">
+        <div>
+          <label for="sm-urls">Your page URLs — one per line</label>
+          <textarea id="sm-urls" style="min-height: 240px;" placeholder="https://example.com/&#10;https://example.com/about&#10;https://example.com/blog&#10;https://example.com/blog/first-post">https://example.com/
+https://example.com/about
+https://example.com/contact</textarea>
+        </div>
+        <div>
+          <label for="sm-changefreq">Change frequency (optional)</label>
+          <select id="sm-changefreq">
+            <option value="">Don't include</option>
+            <option value="always">Always</option>
+            <option value="hourly">Hourly</option>
+            <option value="daily">Daily</option>
+            <option value="weekly" selected>Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+            <option value="never">Never</option>
+          </select>
+        </div>
+        <div>
+          <label for="sm-priority">Priority for the homepage (optional)</label>
+          <select id="sm-priority">
+            <option value="">Don't include</option>
+            <option value="1.0">1.0 (homepage default)</option>
+            <option value="0.8">0.8</option>
+            <option value="0.5" selected>0.5</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>sitemap.xml preview</strong>
+        <span id="sm-status" class="llms-status">Live</span>
+      </div>
+      <pre id="sm-output" class="llms-output" style="max-height:320px;"></pre>
+      <div class="llms-actions">
+        <button type="button" class="btn btn-outline btn-sm" id="sm-copy">Copy</button>
+        <button type="button" class="btn btn-primary btn-sm" id="sm-download">Download sitemap.xml</button>
+      </div>
+      <p class="llms-hint">Upload this to your site's root directory and reference it in your <a href="/tools/robots-txt-generator">robots.txt</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What Is a Sitemap For?</h2>
+    <p>An XML sitemap is a file listing every page you want search engines to know about. It doesn't force indexing — Google still decides what to index based on quality and other signals — but it speeds up discovery, especially for new sites, large sites, or pages that aren't well linked internally. It's a discovery aid, not a ranking factor by itself.</p>
+
+    <h2>What Actually Belongs in a Sitemap</h2>
+    <ul class="service-points">
+      <li><strong>Canonical, indexable pages only</strong> — leave out redirect targets, noindexed pages, and duplicate URL parameters</li>
+      <li><strong>Absolute URLs</strong> — always the full <code>https://</code> address, never a relative path</li>
+      <li><strong>Only pages you actually want ranked</strong> — including thin or low-value pages just dilutes crawl attention</li>
+    </ul>
+
+    <h2>Do Priority and Changefreq Still Matter?</h2>
+    <p>Google has stated it largely ignores <code>&lt;priority&gt;</code> and <code>&lt;changefreq&gt;</code> values, treating them as unreliable since site owners rarely keep them accurate. They're still valid sitemap protocol fields and some other crawlers do use them, but don't expect them to meaningfully influence how Google crawls your site — <code>&lt;lastmod&gt;</code> (last modified date) is the one still worth keeping accurate if you can.</p>
+
+    <h2>Free Sitemap Generator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does a sitemap guarantee my pages get indexed?<span class="faq-icon"></span></summary>
+        <p>No. A sitemap only helps search engines discover your pages faster — indexing still depends on content quality, crawl budget, and other ranking signals.</p>
+      </details>
+      <details>
+        <summary>How many URLs can one sitemap file contain?<span class="faq-icon"></span></summary>
+        <p>The sitemap protocol caps a single file at 50,000 URLs or 50MB uncompressed. Larger sites use a sitemap index file that links to multiple smaller sitemaps.</p>
+      </details>
+      <details>
+        <summary>Where do I submit my sitemap to Google?<span class="faq-icon"></span></summary>
+        <p>Upload it to your site's root, then submit the URL under the Sitemaps section of Google Search Console. You can also reference it directly in your robots.txt file.</p>
+      </details>
+      <details>
+        <summary>Should I include images or just pages?<span class="faq-icon"></span></summary>
+        <p>This tool generates a standard page sitemap. Image and video sitemaps use additional XML tags and are typically handled as a separate, more advanced sitemap type.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is generated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Need your whole site properly crawled and indexed?</h2>
+      <p>Contomatix handles full technical SEO audits, not just a single file.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free XML Sitemap Generator',
+    url: site.baseUrl + '/tools/sitemap-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Turn a list of URLs into a valid sitemap.xml file for free, in your browser.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Sitemap Generator', item: site.baseUrl + '/tools/sitemap-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does a sitemap guarantee my pages get indexed?', acceptedAnswer: { '@type': 'Answer', text: 'No. A sitemap only helps search engines discover pages faster - indexing still depends on content quality and other signals.' } },
+      { '@type': 'Question', name: 'How many URLs can one sitemap file contain?', acceptedAnswer: { '@type': 'Answer', text: 'The sitemap protocol caps a single file at 50,000 URLs or 50MB uncompressed. Larger sites use a sitemap index file.' } },
+      { '@type': 'Question', name: 'Where do I submit my sitemap to Google?', acceptedAnswer: { '@type': 'Answer', text: 'Upload it to your site root, then submit the URL under the Sitemaps section of Google Search Console.' } },
+      { '@type': 'Question', name: 'Should I include images or just pages?', acceptedAnswer: { '@type': 'Answer', text: 'This tool generates a standard page sitemap. Image and video sitemaps use additional tags as a separate sitemap type.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  function esc(s) { return (s || '').replace(/&/g, '&amp;'); }
+
+  function build() {
+    var lines = document.getElementById('sm-urls').value.split('\n').map(function (l) { return l.trim(); }).filter(Boolean);
+    var changefreq = document.getElementById('sm-changefreq').value;
+    var priority = document.getElementById('sm-priority').value;
+
+    if (!lines.length) {
+      document.getElementById('sm-output').textContent = '<!-- Add at least one URL to generate a sitemap -->';
+      document.getElementById('sm-status').textContent = 'Add URLs to generate';
+      return;
+    }
+
+    var entries = lines.map(function (url, i) {
+      var parts = ['  <url>', '    <loc>' + esc(url) + '</loc>'];
+      if (changefreq) parts.push('    <changefreq>' + changefreq + '</changefreq>');
+      if (priority) parts.push('    <priority>' + (i === 0 ? priority : '0.5') + '</priority>');
+      parts.push('  </url>');
+      return parts.join('\n');
+    });
+
+    var xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + entries.join('\n') + '\n</urlset>';
+    document.getElementById('sm-output').textContent = xml;
+    document.getElementById('sm-status').textContent = 'Updated';
+  }
+
+  document.querySelectorAll('#sm-form textarea, #sm-form select').forEach(function (el) {
+    el.addEventListener('input', build);
+    el.addEventListener('change', build);
+  });
+
+  document.getElementById('sm-copy').addEventListener('click', function () {
+    var text = document.getElementById('sm-output').textContent;
+    if (!text || text.indexOf('Add at least one') !== -1) return;
+    navigator.clipboard.writeText(text).then(function () {
+      var status = document.getElementById('sm-status');
+      status.textContent = 'Copied!';
+      setTimeout(function () { status.textContent = 'Updated'; }, 1800);
+    });
+  });
+
+  document.getElementById('sm-download').addEventListener('click', function () {
+    var text = document.getElementById('sm-output').textContent;
+    if (!text || text.indexOf('Add at least one') !== -1) return;
+    var blob = new Blob([text], { type: 'application/xml' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'sitemap.xml';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+
+  build();
+})();
+</script>

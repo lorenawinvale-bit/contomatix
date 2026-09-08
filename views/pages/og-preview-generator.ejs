@@ -1,0 +1,241 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Social Share Preview Generator</h1>
+    <p>This <strong>free social share preview tool</strong> shows exactly how your link will look when shared on Facebook, LinkedIn, and X (Twitter) — plus the exact Open Graph tags to paste into your page. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="og-form" onsubmit="return false;" aria-label="Social share preview form">
+        <div>
+          <label for="og-url">Page URL</label>
+          <input type="text" id="og-url" placeholder="https://example.com/blog/post" value="https://contomatix.com/">
+        </div>
+        <div>
+          <label for="og-title">Title</label>
+          <input type="text" id="og-title" placeholder="Your page title" value="Contomatix — Link Building & SEO Services">
+        </div>
+        <div>
+          <label for="og-desc">Description</label>
+          <textarea id="og-desc" placeholder="A one to two sentence summary of the page.">Contomatix helps brands grow organic traffic through link building, guest posting, on-page and off-page SEO, and keyword research.</textarea>
+        </div>
+        <div>
+          <label for="og-image">Image URL</label>
+          <input type="text" id="og-image" placeholder="https://example.com/images/cover.jpg">
+        </div>
+        <div>
+          <label>Preview platform</label>
+          <div style="display:flex; gap:10px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-primary btn-sm" id="og-btn-facebook" data-platform="facebook">Facebook</button>
+            <button type="button" class="btn btn-outline btn-sm" id="og-btn-linkedin" data-platform="linkedin">LinkedIn</button>
+            <button type="button" class="btn btn-outline btn-sm" id="og-btn-twitter" data-platform="twitter">X / Twitter</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong id="og-platform-label">Facebook preview</strong>
+        <span id="og-status" class="llms-status">Live</span>
+      </div>
+      <div id="og-card" class="og-card">
+        <div id="og-card-image" class="og-card-image">No image set</div>
+        <div class="og-card-body">
+          <div id="og-card-domain" class="og-card-domain">example.com</div>
+          <div id="og-card-title" class="og-card-title">Your title will appear here</div>
+          <div id="og-card-desc" class="og-card-desc">Your description will appear here.</div>
+        </div>
+      </div>
+      <p class="llms-hint" style="margin-top:14px;">Generated tags:</p>
+      <pre id="og-output" class="llms-output" style="max-height:180px;"></pre>
+      <div class="llms-actions">
+        <button type="button" class="btn btn-outline btn-sm" id="og-copy">Copy Tags</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What Are Open Graph Tags?</h2>
+    <p>Open Graph tags are meta tags (originally created by Facebook, now used by nearly every platform) that control how your page appears when someone shares its link — the title, description, and image shown in the preview card. Without them, platforms fall back to guessing from your page's regular title tag and a random image, which often looks broken or unappealing.</p>
+
+    <h2>Why the Preview Card Matters</h2>
+    <p>A link with a missing or ugly preview gets fewer clicks than one with a clear title, compelling description, and a real image — this is true across social platforms, Slack, WhatsApp, and even some search engines that surface OG data. Since the card is often the only thing a scrolling user sees before deciding to click, it functions as free ad copy for every share your content gets.</p>
+
+    <h2>Image Size Recommendations</h2>
+    <ul class="service-points">
+      <li><strong>Minimum: 1200 x 630px</strong> — the current standard recommended by Facebook and LinkedIn for a crisp, non-cropped card</li>
+      <li><strong>Aspect ratio: 1.91:1</strong> — images with a different ratio get cropped unpredictably by different platforms</li>
+      <li><strong>Keep text off the edges</strong> — some platforms crop image corners on certain devices; keep any text or logos centered</li>
+      <li><strong>Use an absolute URL</strong> — a relative image path (like "/images/cover.jpg") will not resolve correctly when a crawler outside your domain reads it</li>
+    </ul>
+
+    <h2>Free Social Share Preview FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Why does my link still show an old preview after I updated the tags?<span class="faq-icon"></span></summary>
+        <p>Most platforms cache the preview the first time a link is shared and won't re-check it automatically. Use each platform's own debugging tool (Facebook Sharing Debugger, LinkedIn Post Inspector) to force a re-scrape after changes.</p>
+      </details>
+      <details>
+        <summary>Do I need separate tags for Twitter/X?<span class="faq-icon"></span></summary>
+        <p>X reads its own <code>twitter:card</code> meta tags but falls back to standard Open Graph tags if those aren't present. Adding both gives you more control over how the X-specific card renders.</p>
+      </details>
+      <details>
+        <summary>Does this affect my SEO or search rankings?<span class="faq-icon"></span></summary>
+        <p>Not directly — Open Graph tags aren't a ranking factor. They do affect click-through rate on social shares, which can indirectly support traffic and engagement signals.</p>
+      </details>
+      <details>
+        <summary>What happens if I don't set an og:image?<span class="faq-icon"></span></summary>
+        <p>Most platforms will either show no image at all, or attempt to auto-select an image from the page — often with unpredictable and unflattering results. Always set one explicitly.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is generated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want every share of your content to convert?</h2>
+      <p>Contomatix optimizes on-page and social metadata across your whole site.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Social Share Preview Generator',
+    url: site.baseUrl + '/tools/og-preview-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Preview how your link looks on Facebook, LinkedIn, and X, and generate the Open Graph tags to make it look right, for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Social Share Preview Generator', item: site.baseUrl + '/tools/og-preview-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Why does my link still show an old preview after I updated the tags?', acceptedAnswer: { '@type': 'Answer', text: 'Most platforms cache the preview and will not re-check automatically. Use the platform own debugging tool (Facebook Sharing Debugger, LinkedIn Post Inspector) to force a re-scrape.' } },
+      { '@type': 'Question', name: 'Do I need separate tags for Twitter/X?', acceptedAnswer: { '@type': 'Answer', text: 'X reads its own twitter:card meta tags but falls back to standard Open Graph tags if those are not present.' } },
+      { '@type': 'Question', name: 'Does this affect my SEO or search rankings?', acceptedAnswer: { '@type': 'Answer', text: 'Not directly. Open Graph tags are not a ranking factor but affect click-through rate on social shares.' } },
+      { '@type': 'Question', name: 'What happens if I do not set an og:image?', acceptedAnswer: { '@type': 'Answer', text: 'Most platforms will show no image or auto-select one from the page with unpredictable results. Always set one explicitly.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var platform = 'facebook';
+  var LABELS = { facebook: 'Facebook preview', linkedin: 'LinkedIn preview', twitter: 'X / Twitter preview' };
+  var LIMITS = {
+    facebook: { title: 60, desc: 110 },
+    linkedin: { title: 70, desc: 100 },
+    twitter: { title: 70, desc: 125 }
+  };
+
+  function truncate(text, max) {
+    if (!text) return '';
+    if (text.length <= max) return text;
+    return text.slice(0, max - 1).trim() + '…';
+  }
+
+  function domainOf(raw) {
+    try { return new URL(raw).hostname.replace(/^www\./, ''); } catch (e) { return 'example.com'; }
+  }
+
+  function build() {
+    var url = document.getElementById('og-url').value.trim();
+    var title = document.getElementById('og-title').value.trim();
+    var desc = document.getElementById('og-desc').value.trim();
+    var image = document.getElementById('og-image').value.trim();
+    var limits = LIMITS[platform];
+
+    document.getElementById('og-card-domain').textContent = domainOf(url || 'https://example.com');
+    document.getElementById('og-card-title').textContent = title ? truncate(title, limits.title) : 'Your title will appear here';
+    document.getElementById('og-card-desc').textContent = desc ? truncate(desc, limits.desc) : 'Your description will appear here.';
+    var imgEl = document.getElementById('og-card-image');
+    if (image) {
+      imgEl.style.backgroundImage = 'url(' + JSON.stringify(image).slice(1, -1) + ')';
+      imgEl.textContent = '';
+    } else {
+      imgEl.style.backgroundImage = 'none';
+      imgEl.textContent = 'No image set';
+    }
+
+    var tags = [
+      '<meta property="og:type" content="website">',
+      '<meta property="og:url" content="' + (url || '') + '">',
+      '<meta property="og:title" content="' + (title || '') + '">',
+      '<meta property="og:description" content="' + (desc || '') + '">',
+      '<meta property="og:image" content="' + (image || '') + '">',
+      '<meta name="twitter:card" content="summary_large_image">',
+      '<meta name="twitter:title" content="' + (title || '') + '">',
+      '<meta name="twitter:description" content="' + (desc || '') + '">',
+      '<meta name="twitter:image" content="' + (image || '') + '">'
+    ].join('\n');
+    document.getElementById('og-output').textContent = tags;
+    document.getElementById('og-status').textContent = 'Updated';
+  }
+
+  function setPlatform(p) {
+    platform = p;
+    document.getElementById('og-platform-label').textContent = LABELS[p];
+    ['facebook', 'linkedin', 'twitter'].forEach(function (key) {
+      var btn = document.getElementById('og-btn-' + key);
+      btn.classList.toggle('btn-primary', key === p);
+      btn.classList.toggle('btn-outline', key !== p);
+    });
+    document.getElementById('og-card').classList.toggle('og-card-linkedin', p === 'linkedin');
+    document.getElementById('og-card').classList.toggle('og-card-twitter', p === 'twitter');
+    build();
+  }
+
+  document.querySelectorAll('#og-form input, #og-form textarea').forEach(function (el) {
+    el.addEventListener('input', build);
+  });
+  document.getElementById('og-btn-facebook').addEventListener('click', function () { setPlatform('facebook'); });
+  document.getElementById('og-btn-linkedin').addEventListener('click', function () { setPlatform('linkedin'); });
+  document.getElementById('og-btn-twitter').addEventListener('click', function () { setPlatform('twitter'); });
+
+  document.getElementById('og-copy').addEventListener('click', function () {
+    navigator.clipboard.writeText(document.getElementById('og-output').textContent).then(function () {
+      var status = document.getElementById('og-status');
+      status.textContent = 'Copied!';
+      setTimeout(function () { status.textContent = 'Updated'; }, 1800);
+    });
+  });
+
+  setPlatform('facebook');
+})();
+</script>

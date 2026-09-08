@@ -1,0 +1,207 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Hreflang Tag Generator</h1>
+    <p>This <strong>free hreflang generator</strong> builds correct language and region annotations for multi-language sites in seconds — a common source of international SEO errors. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="hf-form" onsubmit="return false;" aria-label="Hreflang generator form">
+        <div>
+          <label for="hf-rows">Language versions — one per line: <code>Language[-Region] | URL</code></label>
+          <textarea id="hf-rows" style="min-height: 200px;" placeholder="en | https://example.com/&#10;en-GB | https://example.com/uk/&#10;fr | https://example.com/fr/&#10;es-MX | https://example.com/mx/">en | https://example.com/
+en-GB | https://example.com/uk/
+fr | https://example.com/fr/
+es-MX | https://example.com/mx/</textarea>
+        </div>
+        <div>
+          <label for="hf-default" style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+            <input type="checkbox" id="hf-default" style="width:auto;" checked>
+            Add an x-default fallback (uses the first row's URL)
+          </label>
+        </div>
+        <div>
+          <label for="hf-format">Output format</label>
+          <select id="hf-format">
+            <option value="html">HTML &lt;link&gt; tags (for the page &lt;head&gt;)</option>
+            <option value="xml">XML sitemap annotations</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>hreflang output</strong>
+        <span id="hf-status" class="llms-status">Live</span>
+      </div>
+      <pre id="hf-output" class="llms-output" style="max-height:320px;"></pre>
+      <div class="llms-actions">
+        <button type="button" class="btn btn-outline btn-sm" id="hf-copy">Copy</button>
+      </div>
+      <p class="llms-hint">If using HTML tags, paste the full set into the <code>&lt;head&gt;</code> of <strong>every</strong> language version listed — not just one page.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What Hreflang Actually Does</h2>
+    <p>Hreflang tells search engines which version of a page to show a searcher based on their language and location — French speakers in France get the <code>fr</code> page, French speakers in Canada get <code>fr-CA</code> if it exists. Without it, Google guesses using signals like server location and on-page language, which frequently sends the wrong regional version to the wrong audience, or lets one version outrank the others.</p>
+
+    <h2>The Rule Almost Everyone Gets Wrong</h2>
+    <p>Hreflang tags must be <strong>reciprocal</strong> — if your English page links to your French page via hreflang, the French page must link back to the English page (and to every other language version) the same way. A one-directional hreflang tag is invalid and Google will typically ignore the entire set for that page. This is the single most common reason hreflang implementations silently fail.</p>
+
+    <h2>Language and Region Codes</h2>
+    <ul class="service-points">
+      <li><strong>Language only</strong> (e.g. <code>en</code>, <code>fr</code>, <code>es</code>) — targets all speakers of that language regardless of country, using ISO 639-1 codes</li>
+      <li><strong>Language + region</strong> (e.g. <code>en-GB</code>, <code>es-MX</code>) — targets a specific country using an ISO 3166-1 Alpha-2 region code, always language first</li>
+      <li><strong>x-default</strong> — a special value marking the fallback page shown to visitors who don't match any listed language/region</li>
+    </ul>
+
+    <h2>Free Hreflang Generator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Do I need hreflang if my site is only in one language?<span class="faq-icon"></span></summary>
+        <p>No. Hreflang is only relevant once you have two or more language or regional versions of the same content.</p>
+      </details>
+      <details>
+        <summary>What happens if my hreflang tags aren't reciprocal?<span class="faq-icon"></span></summary>
+        <p>Google's documentation states non-reciprocal hreflang annotations may be ignored entirely, meaning none of the language-targeting signals get applied even though the tags are present in your code.</p>
+      </details>
+      <details>
+        <summary>Should hreflang tags be in the HTML or the sitemap?<span class="faq-icon"></span></summary>
+        <p>Either works, but not both at once for the same URLs — pick one method per site. Sitemap annotations are often easier to maintain at scale since they don't require editing every page's HTML.</p>
+      </details>
+      <details>
+        <summary>Do I need an x-default page?<span class="faq-icon"></span></summary>
+        <p>It's optional but recommended — without it, visitors whose language doesn't match any listed version may be shown search results inconsistently rather than a sensible fallback.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is generated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Running SEO across multiple countries?</h2>
+      <p>Contomatix handles full international SEO strategy, not just hreflang tags.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Hreflang Tag Generator',
+    url: site.baseUrl + '/tools/hreflang-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Generate correct, reciprocal hreflang tags for multi-language and multi-region sites, for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Hreflang Generator', item: site.baseUrl + '/tools/hreflang-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Do I need hreflang if my site is only in one language?', acceptedAnswer: { '@type': 'Answer', text: 'No. Hreflang is only relevant once you have two or more language or regional versions of the same content.' } },
+      { '@type': 'Question', name: 'What happens if my hreflang tags are not reciprocal?', acceptedAnswer: { '@type': 'Answer', text: 'Non-reciprocal hreflang annotations may be ignored entirely by Google, meaning none of the language-targeting signals get applied.' } },
+      { '@type': 'Question', name: 'Should hreflang tags be in the HTML or the sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'Either works, but not both at once for the same URLs. Sitemap annotations are often easier to maintain at scale.' } },
+      { '@type': 'Question', name: 'Do I need an x-default page?', acceptedAnswer: { '@type': 'Answer', text: 'It is optional but recommended as a sensible fallback for visitors whose language does not match any listed version.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  function esc(s) { return (s || '').replace(/&/g, '&amp;'); }
+
+  function parseRows(text) {
+    return text.split('\n').map(function (l) { return l.trim(); }).filter(Boolean).map(function (line) {
+      var parts = line.split('|').map(function (p) { return p.trim(); });
+      return { lang: parts[0] || '', url: parts[1] || '' };
+    }).filter(function (r) { return r.lang && r.url; });
+  }
+
+  function build() {
+    var rows = parseRows(document.getElementById('hf-rows').value);
+    var addDefault = document.getElementById('hf-default').checked;
+    var format = document.getElementById('hf-format').value;
+    var output = document.getElementById('hf-output');
+    var status = document.getElementById('hf-status');
+
+    if (!rows.length) {
+      output.textContent = '<!-- Add at least one Language | URL row to generate hreflang tags -->';
+      status.textContent = 'Add rows to generate';
+      return;
+    }
+
+    var allRows = rows.slice();
+    if (addDefault) allRows.push({ lang: 'x-default', url: rows[0].url });
+
+    var text;
+    if (format === 'html') {
+      text = allRows.map(function (r) {
+        return '<link rel="alternate" hreflang="' + esc(r.lang) + '" href="' + esc(r.url) + '">';
+      }).join('\n');
+    } else {
+      text = rows.map(function (r) {
+        var alts = allRows.map(function (a) {
+          return '      <xhtml:link rel="alternate" hreflang="' + esc(a.lang) + '" href="' + esc(a.url) + '"/>';
+        }).join('\n');
+        return '  <url>\n    <loc>' + esc(r.url) + '</loc>\n' + alts + '\n  </url>';
+      }).join('\n');
+      text = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + text + '\n</urlset>';
+    }
+
+    output.textContent = text;
+    status.textContent = 'Updated';
+  }
+
+  document.querySelectorAll('#hf-form textarea, #hf-form select, #hf-form input[type="checkbox"]').forEach(function (el) {
+    el.addEventListener('input', build);
+    el.addEventListener('change', build);
+  });
+
+  document.getElementById('hf-copy').addEventListener('click', function () {
+    var text = document.getElementById('hf-output').textContent;
+    if (!text || text.indexOf('Add at least one') !== -1) return;
+    navigator.clipboard.writeText(text).then(function () {
+      var status = document.getElementById('hf-status');
+      status.textContent = 'Copied!';
+      setTimeout(function () { status.textContent = 'Updated'; }, 1800);
+    });
+  });
+
+  build();
+})();
+</script>

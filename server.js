@@ -116,7 +116,7 @@ app.use((req, res, next) => {
 // ---------- Routes ----------
 
 app.get('/sitemap.xml', (req, res) => {
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator'];
   const servicePaths = services.map(s => `/services/${s.slug}`);
   const locationPaths = locations.map(l => `/services/${l.slug}`);
   const blogPaths = blogStore.getAll().map(p => `/blog/${p.slug}`);
@@ -233,6 +233,54 @@ app.get('/tools/readability-checker', (req, res) => {
   res.render('pages/readability-checker', {
     title: 'Free Readability & Content Score Checker | Contomatix',
     description: 'Check your content\'s Flesch Reading Ease score, word/sentence counts, keyword density, and passive voice usage for free, instantly.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/robots-txt-generator', (req, res) => {
+  res.render('pages/robots-txt-generator', {
+    title: 'Free Robots.txt Generator — Create Yours in Seconds | Contomatix',
+    description: 'Generate a valid robots.txt file for free — control crawler access, block AI bots, and reference your sitemap, all in your browser.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/utm-builder', (req, res) => {
+  res.render('pages/utm-builder', {
+    title: 'Free UTM Campaign URL Builder — Track Every Link | Contomatix',
+    description: 'Build properly tagged UTM campaign URLs for Google Analytics in seconds, for free — no more guessing parameter names.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/og-preview-generator', (req, res) => {
+  res.render('pages/og-preview-generator', {
+    title: 'Free Social Share Preview Generator — OG Tags | Contomatix',
+    description: 'See how your link looks on Facebook, LinkedIn, and X, and generate the Open Graph tags to fix it, for free.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/meta-tag-generator', (req, res) => {
+  res.render('pages/meta-tag-generator', {
+    title: 'Free Meta Tag Generator — Complete HTML Head Block | Contomatix',
+    description: 'Generate a complete, ready-to-paste HTML head block of meta tags — title, description, canonical, robots, and more — for free.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/sitemap-generator', (req, res) => {
+  res.render('pages/sitemap-generator', {
+    title: 'Free XML Sitemap Generator — From a URL List | Contomatix',
+    description: 'Turn a plain list of URLs into a valid sitemap.xml file in seconds, for free — no crawler or software needed.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/hreflang-generator', (req, res) => {
+  res.render('pages/hreflang-generator', {
+    title: 'Free Hreflang Tag Generator — International SEO | Contomatix',
+    description: 'Generate correct, reciprocal hreflang tags for multi-language and multi-region sites, for free, in seconds.',
     pageClass: 'page-tool'
   });
 });

@@ -20,5 +20,35 @@ module.exports = [
     slug: 'readability-checker',
     title: 'Readability Checker',
     summary: 'Check your Flesch Reading Ease score, word/sentence counts, keyword density, and passive voice usage instantly.'
+  },
+  {
+    slug: 'robots-txt-generator',
+    title: 'Robots.txt Generator',
+    summary: 'Build a valid robots.txt file in seconds — control crawler access, block AI bots, and reference your sitemap.'
+  },
+  {
+    slug: 'utm-builder',
+    title: 'UTM Campaign URL Builder',
+    summary: 'Build properly tagged UTM campaign URLs for Google Analytics tracking in seconds.'
+  },
+  {
+    slug: 'og-preview-generator',
+    title: 'Social Share Preview Generator',
+    summary: 'See how your link looks on Facebook, LinkedIn, and X, and generate the Open Graph tags to fix it.'
+  },
+  {
+    slug: 'meta-tag-generator',
+    title: 'Meta Tag Generator',
+    summary: 'Generate a complete, ready-to-paste HTML head block of meta tags in seconds.'
+  },
+  {
+    slug: 'sitemap-generator',
+    title: 'XML Sitemap Generator',
+    summary: 'Turn a plain list of URLs into a valid sitemap.xml file in seconds.'
+  },
+  {
+    slug: 'hreflang-generator',
+    title: 'Hreflang Tag Generator',
+    summary: 'Generate correct, reciprocal hreflang tags for multi-language and multi-region sites.'
   }
 ];

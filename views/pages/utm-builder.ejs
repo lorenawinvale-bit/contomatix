@@ -1,0 +1,217 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free UTM Campaign URL Builder</h1>
+    <p>This <strong>free UTM builder</strong> creates properly tagged campaign URLs for Google Analytics in seconds — no more guessing parameter names or fixing broken tracking links. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="utm-form" onsubmit="return false;" aria-label="UTM builder form">
+        <div>
+          <label for="utm-url">Website URL <span class="llms-status">(required)</span></label>
+          <input type="text" id="utm-url" placeholder="https://example.com/landing-page" value="https://contomatix.com/">
+        </div>
+        <div>
+          <label for="utm-source">Campaign source <span class="llms-status">(required)</span></label>
+          <input type="text" id="utm-source" placeholder="newsletter, facebook, google">
+        </div>
+        <div>
+          <label for="utm-medium">Campaign medium <span class="llms-status">(required)</span></label>
+          <input type="text" id="utm-medium" placeholder="email, cpc, social, referral">
+        </div>
+        <div>
+          <label for="utm-campaign">Campaign name <span class="llms-status">(required)</span></label>
+          <input type="text" id="utm-campaign" placeholder="spring_sale_2026">
+        </div>
+        <div>
+          <label for="utm-term">Campaign term (optional)</label>
+          <input type="text" id="utm-term" placeholder="paid keyword, e.g. running+shoes">
+        </div>
+        <div>
+          <label for="utm-content">Campaign content (optional)</label>
+          <input type="text" id="utm-content" placeholder="e.g. logolink or textlink, to A/B test ads">
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Your tagged URL</strong>
+        <span id="utm-status" class="llms-status">Fill in the required fields</span>
+      </div>
+      <pre id="utm-output" class="llms-output">Fill in Website URL, Source, Medium, and Campaign to generate your link.</pre>
+      <div class="llms-actions">
+        <button type="button" class="btn btn-outline btn-sm" id="utm-copy">Copy Link</button>
+      </div>
+      <p class="llms-hint">Paste this exact link wherever the campaign runs — the ad, the email, the social post — so Google Analytics can attribute traffic correctly.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What Are UTM Parameters?</h2>
+    <p>UTM (Urchin Tracking Module) parameters are small tags added to the end of a URL that tell Google Analytics exactly where a visitor came from. Without them, Analytics can only guess at traffic sources using referrer data — which breaks down completely for email, social apps, and offline campaigns (QR codes, print ads) that don't pass a referrer at all.</p>
+
+    <h2>The Five UTM Parameters Explained</h2>
+    <div style="overflow-x: auto;">
+      <table style="width:100%; border-collapse:collapse; margin:16px 0; font-size:0.95rem;">
+        <thead>
+          <tr style="border-bottom:2px solid currentColor;">
+            <th style="text-align:left; padding:10px 8px;">Parameter</th>
+            <th style="text-align:left; padding:10px 8px;">Answers</th>
+            <th style="text-align:left; padding:10px 8px;">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;"><code>utm_source</code></td><td style="padding:10px 8px;">Which site or platform sent the traffic</td><td style="padding:10px 8px;">newsletter, facebook, google</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;"><code>utm_medium</code></td><td style="padding:10px 8px;">What type of traffic it is</td><td style="padding:10px 8px;">email, cpc, social, referral</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;"><code>utm_campaign</code></td><td style="padding:10px 8px;">Which specific campaign or promotion</td><td style="padding:10px 8px;">spring_sale_2026</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;"><code>utm_term</code></td><td style="padding:10px 8px;">Which paid keyword triggered the ad</td><td style="padding:10px 8px;">running+shoes</td></tr>
+          <tr><td style="padding:10px 8px;"><code>utm_content</code></td><td style="padding:10px 8px;">Which specific ad or link variant, for A/B tests</td><td style="padding:10px 8px;">logolink vs. textlink</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Common UTM Mistakes</h2>
+    <ul class="service-points">
+      <li><strong>Inconsistent capitalization or spelling</strong> — "Facebook", "facebook", and "FB" all show up as three separate sources in your reports instead of one</li>
+      <li><strong>Spaces in parameter values</strong> — use underscores or hyphens instead (spaces get encoded as "%20" and become hard to read in reports)</li>
+      <li><strong>Tagging internal links</strong> — never add UTM parameters to links between pages on your own site; it resets the visitor's original session source in Analytics</li>
+      <li><strong>No naming convention</strong> — agree on a source/medium/campaign naming standard before a team starts tagging links, or your reports fragment into dozens of near-duplicate labels</li>
+    </ul>
+
+    <h2>Free UTM Builder FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Do UTM parameters affect my SEO or page ranking?<span class="faq-icon"></span></summary>
+        <p>No. UTM-tagged URLs are just for analytics tracking and have no effect on search rankings. Just make sure your page has a proper canonical tag so search engines don't treat the tagged URL as a separate page from the clean one.</p>
+      </details>
+      <details>
+        <summary>Which fields are actually required?<span class="faq-icon"></span></summary>
+        <p>Google Analytics needs source, medium, and campaign to attribute traffic properly. Term and content are optional and mainly useful for paid search and A/B testing specific ad variations.</p>
+      </details>
+      <details>
+        <summary>Should I use UTM links for internal navigation?<span class="faq-icon"></span></summary>
+        <p>No — UTM parameters are meant for links coming from outside your site (ads, emails, social posts). Adding them to internal links can overwrite the visitor's original traffic source in Analytics.</p>
+      </details>
+      <details>
+        <summary>Will a long UTM URL look unprofessional in an email or ad?<span class="faq-icon"></span></summary>
+        <p>It can. Many marketers run the final tagged URL through a link shortener for anything customer-facing, while keeping the full UTM link for their own tracking records.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. The URL is built entirely in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want your campaigns tracked and optimized end to end?</h2>
+      <p>Contomatix sets up full analytics and attribution, not just individual links.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free UTM Campaign URL Builder',
+    url: site.baseUrl + '/tools/utm-builder',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Build properly tagged UTM campaign URLs for Google Analytics tracking, for free, in your browser.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'UTM Builder', item: site.baseUrl + '/tools/utm-builder' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Do UTM parameters affect my SEO or page ranking?', acceptedAnswer: { '@type': 'Answer', text: 'No. UTM-tagged URLs are just for analytics tracking and have no effect on search rankings, as long as the page has a proper canonical tag.' } },
+      { '@type': 'Question', name: 'Which fields are actually required?', acceptedAnswer: { '@type': 'Answer', text: 'Google Analytics needs source, medium, and campaign to attribute traffic properly. Term and content are optional.' } },
+      { '@type': 'Question', name: 'Should I use UTM links for internal navigation?', acceptedAnswer: { '@type': 'Answer', text: 'No, UTM parameters are meant for links coming from outside your site. Adding them to internal links can overwrite the visitor original traffic source.' } },
+      { '@type': 'Question', name: 'Will a long UTM URL look unprofessional in an email or ad?', acceptedAnswer: { '@type': 'Answer', text: 'It can. Many marketers run the final tagged URL through a link shortener for customer-facing use while keeping the full link for tracking.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The URL is built entirely in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  function build() {
+    var url = document.getElementById('utm-url').value.trim();
+    var source = document.getElementById('utm-source').value.trim();
+    var medium = document.getElementById('utm-medium').value.trim();
+    var campaign = document.getElementById('utm-campaign').value.trim();
+    var term = document.getElementById('utm-term').value.trim();
+    var content = document.getElementById('utm-content').value.trim();
+    var output = document.getElementById('utm-output');
+    var status = document.getElementById('utm-status');
+
+    if (!url || !source || !medium || !campaign) {
+      output.textContent = 'Fill in Website URL, Source, Medium, and Campaign to generate your link.';
+      status.textContent = 'Fill in the required fields';
+      return;
+    }
+
+    var parsed;
+    try {
+      parsed = new URL(url);
+    } catch (e) {
+      output.textContent = 'That URL doesn\'t look valid. Include the protocol, e.g. https://example.com';
+      status.textContent = 'Fix the URL';
+      return;
+    }
+
+    parsed.searchParams.set('utm_source', source);
+    parsed.searchParams.set('utm_medium', medium);
+    parsed.searchParams.set('utm_campaign', campaign);
+    if (term) parsed.searchParams.set('utm_term', term);
+    if (content) parsed.searchParams.set('utm_content', content);
+
+    output.textContent = parsed.toString();
+    status.textContent = 'Updated';
+  }
+
+  document.querySelectorAll('#utm-form input').forEach(function (el) {
+    el.addEventListener('input', build);
+  });
+
+  document.getElementById('utm-copy').addEventListener('click', function () {
+    var text = document.getElementById('utm-output').textContent;
+    if (!text || text.indexOf('Fill in') === 0 || text.indexOf("doesn't look valid") !== -1) return;
+    navigator.clipboard.writeText(text).then(function () {
+      var status = document.getElementById('utm-status');
+      status.textContent = 'Copied!';
+      setTimeout(function () { status.textContent = 'Updated'; }, 1800);
+    });
+  });
+})();
+</script>
