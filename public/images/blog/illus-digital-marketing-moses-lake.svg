@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="245" cy="405" rx="185" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Moses Lake digital marketing motif: gentle lake waves along the base, with a laptop (ad performance chart), a phone (social feed with a like icon), and an envelope (email marketing) rising above the water like docked devices -->
+  <g transform="translate(55,140)">
+    <!-- lake waves -->
+    <path d="M-15 250 Q60 234 130 250 Q200 266 270 250 Q320 238 360 248" fill="none" stroke="#0EA5A0" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+    <path d="M-15 266 Q60 254 130 266 Q200 278 270 266 Q320 257 360 264" fill="none" stroke="#0EA5A0" stroke-width="3.5" stroke-linecap="round" opacity="0.32"/>
+    <path d="M-15 282 Q60 273 130 282 Q200 291 270 282 Q320 275 360 280" fill="none" stroke="#14B8A6" stroke-width="3" stroke-linecap="round" opacity="0.22"/>
+
+    <!-- laptop, tilted slightly, sitting just above the waterline -->
+    <g transform="translate(30,120)">
+      <rect x="0" y="58" width="150" height="10" rx="3" fill="#C9BBA9"/>
+      <rect x="8" y="0" width="134" height="60" rx="6" fill="#16192A"/>
+      <rect x="14" y="6" width="122" height="48" rx="2" fill="#FDFAF5"/>
+      <!-- little bar chart on the laptop screen -->
+      <rect x="24" y="36" width="10" height="14" fill="#0EA5A0"/>
+      <rect x="40" y="28" width="10" height="22" fill="#F5A623"/>
+      <rect x="56" y="18" width="10" height="32" fill="#14B8A6"/>
+      <rect x="72" y="24" width="10" height="26" fill="#F5A623"/>
+      <path d="M22 34 L38 24 L54 30 L70 14 L84 20" fill="none" stroke="#EF6461" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- phone with a social "like" bubble, propped beside the laptop -->
+    <g transform="translate(196,74) rotate(-6)">
+      <rect x="0" y="0" width="58" height="104" rx="10" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2.5"/>
+      <rect x="6" y="10" width="46" height="76" rx="3" fill="#FDFAF5"/>
+      <rect x="12" y="18" width="34" height="6" rx="3" fill="#C9BBA9" opacity="0.7"/>
+      <rect x="12" y="30" width="34" height="24" rx="4" fill="#E5F7F1"/>
+      <circle cx="41" cy="60" r="9" fill="#EF6461"/>
+      <path d="M41 64.5 c-3.4 -2.4 -6 -4.4 -6 -7.4 c0 -2 1.6 -3.6 3.5 -3.6 c1.1 0 2.1 0.55 2.5 1.4 c0.4 -0.85 1.4 -1.4 2.5 -1.4 c1.9 0 3.5 1.6 3.5 3.6 c0 3 -2.6 5 -6 7.4 z" fill="#FFFFFF"/>
+      <circle cx="29" cy="8" r="2" fill="#C9BBA9"/>
+    </g>
+
+    <!-- envelope for email marketing, floating just above the water to the right -->
+    <g transform="translate(268,150) rotate(5)">
+      <rect x="0" y="0" width="70" height="46" rx="6" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2.5"/>
+      <path d="M2 4 L35 30 L68 4" fill="none" stroke="#F5A623" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <g stroke="#14B8A6" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M300 258 Q322 252 340 240"/>
+    <path d="M306 275 Q330 275 348 270"/>
+    <path d="M300 292 Q322 302 336 310"/>
+  </g>
+  <g fill="#F5A623" opacity="0.8">
+    <circle cx="358" cy="238" r="4"/>
+    <circle cx="372" cy="268" r="5"/>
+    <circle cx="352" cy="306" r="4"/>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="440" y="150" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="176" r="12" fill="#E5F7F1"/>
+    <path d="M460 176l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="485" y="172" font-size="12.5" font-weight="700" fill="#16192A">2 digital-channel shops verified</text>
+    <text x="485" y="189" font-size="11" fill="#8A8371">real Moses Lake offices only</text>
+  </g>
+  <g>
+    <rect x="440" y="212" width="270" height="52" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="466" cy="238" r="12" fill="#FDF3E2"/>
+    <path d="M460 238h12M466 232v12" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="485" y="234" font-size="12.5" font-weight="700" fill="#16192A">~20 candidates reviewed</text>
+    <text x="485" y="251" font-size="11" fill="#8A8371">templated national pages excluded</text>
+  </g>
+
+  <text x="55" y="428" font-size="16" font-weight="700" fill="#16192A">Top Digital Marketing Agencies in Moses Lake</text>
+</svg>
