@@ -103,6 +103,12 @@ function cdpSend(ws, id, method, params = {}) {
     const evalResult = await cdpSend(ws, id++, 'Runtime.evaluate', { expression: dismissScript, returnByValue: true });
     console.error('Dismiss attempt result:', evalResult.result && evalResult.result.value);
 
+    // Some sites load pre-scrolled (a broken anchor/focus jump on their own page,
+    // e.g. staffing-texas.com opens scrolled to the footer contact form on a
+    // fresh load with no URL hash) -- force back to the top before capturing so
+    // the screenshot always shows the actual homepage hero, not the footer.
+    await cdpSend(ws, id++, 'Runtime.evaluate', { expression: 'window.scrollTo(0, 0);' });
+
     // poll up to ~25s, retaking the screenshot every 2.5s, until no obvious spinner/loader element remains
     let finalShotData = null;
     for (let attempt = 0; attempt < 10; attempt++) {
