@@ -84,7 +84,15 @@ function cdpSend(ws, id, method, params = {}) {
         const candidates = Array.from(document.querySelectorAll('button, a, [role="button"]'));
         for (const el of candidates) {
           const t = (el.innerText || el.textContent || '').trim().toLowerCase();
-          if (texts.some(x => t === x || t.includes(x))) {
+          // Word-boundary match only (not substring) -- a plain .includes() check
+          // false-matched "ok" inside unrelated text like "Facebook", which once
+          // caused this script to click a social-icon link instead of a real
+          // cookie-consent button and capture the wrong page entirely.
+          // (none of the phrases below contain regex-special characters, so no
+          // escaping is needed before building the word-boundary pattern)
+          if (t.length > 0 && t.length < 40 && texts.some(function(x) {
+            return new RegExp('(^|[^a-z])' + x + '([^a-z]|$)').test(t);
+          })) {
             el.click();
             return 'clicked: ' + t;
           }
