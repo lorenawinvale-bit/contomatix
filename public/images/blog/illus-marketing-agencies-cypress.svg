@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="645" cy="75" r="145" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="95" cy="410" r="135" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <ellipse cx="215" cy="422" rx="175" ry="14" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Suburban-subdivision mailbox-and-cul-de-sac motif, standing in for Cypress's residential,
+       home-based-agency character (distinct from the Chamber-bulletin-board motif used for Tomball
+       and the storefront-street motif used for SEO posts) -->
+  <g>
+    <!-- cul-de-sac road -->
+    <ellipse cx="195" cy="360" rx="150" ry="52" fill="#E9E2D4"/>
+    <ellipse cx="195" cy="360" rx="150" ry="52" fill="none" stroke="#C9BBA9" stroke-width="2" stroke-dasharray="10 8"/>
+
+    <!-- two home-based-office houses on the cul-de-sac, echoing the honest Top-2 count -->
+    <g transform="translate(110,242)">
+      <rect x="0" y="30" width="80" height="58" fill="#FFFFFF" stroke="#0EA5A0" stroke-width="2.4"/>
+      <polygon points="-8,30 88,30 40,-4" fill="#0B807C"/>
+      <rect x="32" y="58" width="20" height="30" fill="#E5F7F1" stroke="#0B807C" stroke-width="1.5"/>
+      <rect x="10" y="42" width="14" height="14" fill="#E5F7F1"/>
+      <rect x="56" y="42" width="14" height="14" fill="#E5F7F1"/>
+      <!-- small pinned "home office" sign -->
+      <rect x="-4" y="92" width="30" height="14" rx="3" fill="#FFFFFF" stroke="#0B807C" stroke-width="1.4"/>
+      <text x="-1" y="102" font-size="7.5" font-weight="700" fill="#0B807C">HOME</text>
+    </g>
+
+    <g transform="translate(250,254)">
+      <rect x="0" y="26" width="72" height="52" fill="#FDF3E2" stroke="#F5A623" stroke-width="2.4"/>
+      <polygon points="-7,26 79,26 36,-6" fill="#F5A623"/>
+      <rect x="28" y="52" width="18" height="26" fill="#FFFFFF" stroke="#F5A623" stroke-width="1.5"/>
+      <rect x="8" y="36" width="12" height="12" fill="#FFFFFF"/>
+      <rect x="52" y="36" width="12" height="12" fill="#FFFFFF"/>
+      <rect x="-2" y="82" width="30" height="14" rx="3" fill="#FFFFFF" stroke="#F5A623" stroke-width="1.4"/>
+      <text x="1" y="92" font-size="7.5" font-weight="700" fill="#B5790E">HOME</text>
+    </g>
+
+    <!-- mailboxes at the curb -->
+    <g transform="translate(150,332)">
+      <rect x="-4" y="0" width="8" height="20" fill="#8A8371"/>
+      <rect x="-11" y="-14" width="22" height="16" rx="4" fill="#16192A"/>
+      <rect x="7" y="-9" width="4" height="6" fill="#EF4444"/>
+    </g>
+    <g transform="translate(275,340)">
+      <rect x="-4" y="0" width="8" height="18" fill="#8A8371"/>
+      <rect x="-11" y="-13" width="22" height="15" rx="4" fill="#16192A"/>
+      <rect x="7" y="-8" width="4" height="6" fill="#EF4444"/>
+    </g>
+
+    <!-- greyed-out "everyone else" faded houses further back, representing the many home addresses,
+         UPS-store fronts, and out-of-town claims checked and set aside -->
+    <rect x="90" y="378" width="220" height="8" rx="4" fill="#E5D9C8" opacity="0.6"/>
+    <rect x="90" y="392" width="180" height="8" rx="4" fill="#E5D9C8" opacity="0.5"/>
+  </g>
+
+  <!-- magnifying glass verifying the property record, cross-check motif -->
+  <g transform="translate(320,300)">
+    <circle cx="0" cy="0" r="30" fill="rgba(253,250,245,0.9)" stroke="#16192A" stroke-width="4"/>
+    <line x1="21" y1="21" x2="42" y2="42" stroke="#16192A" stroke-width="7" stroke-linecap="round"/>
+    <path d="M-14 0 l8 8 l14 -16" fill="none" stroke="#0EA5A0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- briefcase icon, agency/services motif -->
+  <g transform="translate(560,230)">
+    <rect x="-24" y="-6" width="48" height="34" rx="5" fill="#FFFFFF" stroke="#16192A" stroke-width="2.4"/>
+    <rect x="-24" y="-6" width="48" height="10" fill="#0EA5A0"/>
+    <path d="M-10 -6 v-8 a6 6 0 0 1 6 -6 h8 a6 6 0 0 1 6 6 v8" fill="none" stroke="#16192A" stroke-width="2.4"/>
+    <line x1="-24" y1="10" x2="24" y2="10" stroke="#16192A" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- floating info cards -->
+  <g>
+    <rect x="392" y="60" width="290" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="418" cy="86" r="12" fill="#E5F7F1"/>
+    <path d="M412 86l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="437" y="82" font-size="12.5" font-weight="700" fill="#16192A">Verified against property records</text>
+    <text x="437" y="99" font-size="11" fill="#8A8371">Real Cypress addresses, not UPS mailboxes</text>
+  </g>
+  <g>
+    <rect x="392" y="126" width="290" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="418" cy="152" r="12" fill="#FDF3E2"/>
+    <path d="M413 152a5 5 0 1 1 10 0a5 5 0 1 1 -10 0" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <path d="M418 147v10" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+    <text x="437" y="148" font-size="12.5" font-weight="700" fill="#16192A">Both home-based, honestly disclosed</text>
+    <text x="437" y="165" font-size="11" fill="#8A8371">Cypress's agency market is genuinely this small</text>
+  </g>
+
+  <text x="60" y="440" font-size="17" font-weight="700" fill="#16192A">Top 2 Marketing Agencies in Cypress, TX</text>
+</svg>
