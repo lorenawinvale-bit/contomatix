@@ -74,6 +74,27 @@ module.exports = [
     ]
   },
   {
+    slug: 'white-label-seo',
+    title: 'White-Label SEO',
+    icon: 'whitelabel',
+    summary: 'Full SEO delivery for your agency\'s clients — audits, link building, content, and reporting, running quietly behind your brand.',
+    description: 'We become your agency\'s SEO department behind the curtain. You keep the client relationship, the branding, and the margin; we handle the execution — technical audits, on-page fixes, content, and link building — on a schedule and under a name of your choosing. No co-branding, no Contomatix mentions in any deliverable, and no direct contact with your clients. It\'s how agencies that don\'t want to hire an in-house SEO team (or don\'t want to risk a subcontractor poaching a client) still offer full-service SEO.',
+    points: [
+      'Fully white-labeled reporting — your logo, your agency name, zero Contomatix branding',
+      'End-to-end execution: technical audits, on-page fixes, content, and link building',
+      'We never contact your clients directly — all communication stays with you',
+      'Flexible retainer or per-project pricing built around your resale margin',
+      'Scales up or down with your client roster, no hiring or firing on your end'
+    ],
+    faqs: [
+      { q: 'What is white-label SEO?', a: 'It\'s SEO work performed by one company (us) and delivered to the end client under another company\'s brand (yours). Your client sees your agency name on every report and email; the execution behind it is ours.' },
+      { q: 'Will my client ever find out Contomatix is involved?', a: 'No. We don\'t contact your clients, don\'t appear on reports, and don\'t reference our involvement anywhere client-facing. The partnership is between your agency and us only.' },
+      { q: 'What if I don\'t have in-house SEO expertise?', a: 'That\'s the point of the arrangement. You handle the client relationship and sales conversation; we handle the strategy and execution, and hand you plain-language summaries you can relay or rebrand as your own.' },
+      { q: 'How is pricing structured?', a: 'We quote a wholesale rate per client or per deliverable; you set your own markup for what you charge the client. Most partner agencies work on a monthly retainer per client site.' },
+      { q: 'Can you take on just overflow work, not my whole client list?', a: 'Yes — some partners send us every client, others only the ones they don\'t have bandwidth for. Volume can flex month to month.' }
+    ]
+  },
+  {
     slug: 'keyword-research',
     title: 'Keyword Research',
     icon: 'keyword',
