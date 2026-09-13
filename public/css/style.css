@@ -1962,10 +1962,10 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 
 @media print {
   @page { margin: 12mm; }
+  html, body { background: #fff !important; }
   .site-header, .site-footer, .whatsapp-float, .cookie-banner, .invoice-no-print { display: none !important; }
-  body, .container, .contact-grid { display: block !important; margin: 0 !important; padding: 0 !important; max-width: none !important; }
-  .contact-info-card.llms-preview-card { border: none; box-shadow: none; padding: 0; position: static; }
-  #invoice-preview { box-shadow: none; border: none; border-radius: 0; margin: 0; padding: 0; }
+  .contact-info-card.llms-preview-card { border: none; box-shadow: none; padding: 0; position: static; background: #fff; }
+  #invoice-preview { box-shadow: none; border: none; border-radius: 0; margin: 0; padding: 0; background: #fff; }
 }
 
 /* Cookie consent banner */
