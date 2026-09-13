@@ -116,7 +116,7 @@ app.use((req, res, next) => {
 // ---------- Routes ----------
 
 app.get('/sitemap.xml', (req, res) => {
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/invoice-generator'];
   const servicePaths = services.map(s => `/services/${s.slug}`);
   const locationPaths = locations.map(l => `/services/${l.slug}`);
   const blogPaths = blogStore.getAll().map(p => `/blog/${p.slug}`);
@@ -281,6 +281,14 @@ app.get('/tools/hreflang-generator', (req, res) => {
   res.render('pages/hreflang-generator', {
     title: 'Free Hreflang Tag Generator — International SEO | Contomatix',
     description: 'Generate correct, reciprocal hreflang tags for multi-language and multi-region sites, for free, in seconds.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/invoice-generator', (req, res) => {
+  res.render('pages/invoice-generator', {
+    title: 'Free Invoice Generator — No Sign Up, Download PDF | Contomatix',
+    description: 'Create a professional, itemized invoice and download it as a PDF in seconds. Free invoice generator, no signup, nothing leaves your browser.',
     pageClass: 'page-tool'
   });
 });
