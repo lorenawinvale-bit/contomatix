@@ -165,7 +165,7 @@ City, ST 67890</textarea>
         <button type="button" class="btn btn-primary btn-sm" id="inv-download">Download PDF</button>
         <button type="button" class="btn btn-outline btn-sm" id="inv-reset">Reset</button>
       </div>
-      <p class="llms-hint invoice-no-print">Click Download PDF, choose "Save as PDF" as the destination, then open "More settings" and turn off "Headers and footers" so the date/title line doesn't print — no plugin or account needed. Most browsers remember this setting after the first time.</p>
+      <p class="llms-hint invoice-no-print">Click Download PDF to save it directly — no print dialog, no browser settings to change.</p>
     </div>
   </div>
 </section>
@@ -213,7 +213,7 @@ City, ST 67890</textarea>
       </details>
       <details>
         <summary>What file format do I get?<span class="faq-icon"></span></summary>
-        <p>The Download PDF button opens your browser's print dialog with the invoice pre-formatted — choose "Save as PDF" as the destination to get a standard PDF file. This works the same way in Chrome, Edge, Firefox, and Safari with no extra software.</p>
+        <p>A standard PDF file, generated directly in your browser and downloaded with one click — no print dialog, no settings to change, and no extra software needed.</p>
       </details>
       <details>
         <summary>Can I use this for recurring invoices?<span class="faq-icon"></span></summary>
@@ -284,7 +284,7 @@ City, ST 67890</textarea>
       { '@type': 'Question', name: 'Is this invoice generator really free, with no signup?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. There is no account, no email gate, and no watermark on the downloaded PDF.' } },
       { '@type': 'Question', name: 'Does this tool store or send my invoice data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated entirely in your browser with JavaScript. Nothing is uploaded, logged, or stored on any server, including ours.' } },
       { '@type': 'Question', name: 'Can I add my own logo?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, using the logo upload field. It is processed locally in your browser and never uploaded anywhere.' } },
-      { '@type': 'Question', name: 'What file format do I get?', acceptedAnswer: { '@type': 'Answer', text: 'The Download PDF button opens your browser print dialog pre-formatted; choose Save as PDF as the destination to get a standard PDF file.' } },
+      { '@type': 'Question', name: 'What file format do I get?', acceptedAnswer: { '@type': 'Answer', text: 'A standard PDF file, generated directly in your browser and downloaded with one click, with no print dialog or settings to change.' } },
       { '@type': 'Question', name: 'Can I use this for recurring invoices?', acceptedAnswer: { '@type': 'Answer', text: 'You can reuse the same session for multiple invoices by updating the invoice number, dates, and line items between downloads.' } },
       { '@type': 'Question', name: 'Does it support currencies other than USD?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, the currency dropdown covers USD, EUR, GBP, CAD, AUD, PKR, INR, and AED.' } },
       { '@type': 'Question', name: 'Is an invoice from this tool legally valid?', acceptedAnswer: { '@type': 'Answer', text: 'The format follows standard invoicing conventions, but tax and legal requirements vary by country, so check your local requirements.' } },
@@ -294,6 +294,7 @@ City, ST 67890</textarea>
   }) %>
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 (function () {
   var CURRENCY_SYMBOLS = { USD: '$', EUR: '€', GBP: '£', CAD: 'CA$', AUD: 'AU$', PKR: '₨', INR: '₹', AED: 'AED ' };
@@ -429,7 +430,155 @@ City, ST 67890</textarea>
     reader.readAsDataURL(file);
   });
 
-  document.getElementById('inv-download').addEventListener('click', function () { window.print(); });
+  function buildPdf() {
+    var symbol = CURRENCY_SYMBOLS[document.getElementById('inv-currency').value] || '$';
+    var doc = new jspdf.jsPDF({ unit: 'pt', format: 'a4' });
+    var pageWidth = doc.internal.pageSize.getWidth();
+    var pageHeight = doc.internal.pageSize.getHeight();
+    var margin = 48;
+    var y = margin;
+
+    var fromName = document.getElementById('inv-from-name').value.trim() || 'Your Company Name';
+    var fromAddress = document.getElementById('inv-from-address').value.trim();
+    var fromEmail = document.getElementById('inv-from-email').value.trim();
+    var fromPhone = document.getElementById('inv-from-phone').value.trim();
+    var toName = document.getElementById('inv-to-name').value.trim() || 'Client Name';
+    var toAddress = document.getElementById('inv-to-address').value.trim();
+    var toEmail = document.getElementById('inv-to-email').value.trim();
+    var number = document.getElementById('inv-number').value.trim() || 'INV-0001';
+    var issueDateFmt = formatDate(document.getElementById('inv-issue-date').value);
+    var dueDateFmt = formatDate(document.getElementById('inv-due-date').value);
+    var notes = document.getElementById('inv-notes').value.trim();
+
+    // Logo (top-left), if uploaded
+    var logoWrap = document.getElementById('inv-prev-logo-wrap');
+    var logoImg = document.getElementById('inv-prev-logo');
+    var fromX = margin;
+    if (!logoWrap.hidden && logoImg.src) {
+      try {
+        var props = doc.getImageProperties(logoImg.src);
+        var logoW = 80, logoH = (props.height / props.width) * logoW;
+        doc.addImage(logoImg.src, props.fileType, margin, y, logoW, logoH);
+        y += logoH + 12;
+      } catch (e) { /* unreadable image data, skip logo in PDF */ }
+    }
+
+    // From block (left)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(20, 20, 20);
+    doc.text(fromName, fromX, y + 12);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(90, 90, 90);
+    var fromLines = fromAddress.split('\n').filter(Boolean).concat([fromEmail, fromPhone].filter(Boolean));
+    var fromBlockBottom = y + 12;
+    fromLines.forEach(function (line, i) {
+      doc.text(line, fromX, y + 30 + i * 13);
+      fromBlockBottom = y + 30 + i * 13;
+    });
+
+    // INVOICE meta (right, same top line)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(22); doc.setTextColor(20, 20, 20);
+    doc.text('INVOICE', pageWidth - margin, y + 14, { align: 'right' });
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(90, 90, 90);
+    doc.text('#' + number, pageWidth - margin, y + 32, { align: 'right' });
+    doc.setFont('helvetica', 'bold');
+    doc.text('Issued:', pageWidth - margin - 78, y + 47, { align: 'right' });
+    doc.text('Due:', pageWidth - margin - 78, y + 62, { align: 'right' });
+    doc.setFont('helvetica', 'normal');
+    doc.text(issueDateFmt, pageWidth - margin, y + 47, { align: 'right' });
+    doc.text(dueDateFmt, pageWidth - margin, y + 62, { align: 'right' });
+
+    y = Math.max(fromBlockBottom, y + 62) + 28;
+
+    // Bill To
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(140, 140, 140);
+    doc.text('BILL TO', margin, y);
+    y += 16;
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); doc.setTextColor(40, 40, 40);
+    var toLines = [toName].concat(toAddress.split('\n').filter(Boolean)).concat(toEmail ? [toEmail] : []);
+    toLines.forEach(function (line, i) { doc.text(line, margin, y + i * 14); });
+    y += toLines.length * 14 + 22;
+
+    // Table
+    var col = { desc: margin, qty: pageWidth - margin - 170, rate: pageWidth - margin - 110, amount: pageWidth - margin };
+    var colWidth = { desc: col.qty - margin - 20 };
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(140, 140, 140);
+    doc.text('DESCRIPTION', col.desc, y);
+    doc.text('QTY', col.qty, y, { align: 'right' });
+    doc.text('RATE', col.rate, y, { align: 'right' });
+    doc.text('AMOUNT', col.amount, y, { align: 'right' });
+    y += 8;
+    doc.setDrawColor(210, 210, 210);
+    doc.line(margin, y, pageWidth - margin, y);
+    y += 16;
+
+    var subtotal = 0;
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(40, 40, 40);
+    document.querySelectorAll('#inv-items .invoice-line-item').forEach(function (row) {
+      var desc = row.querySelector('.inv-item-desc').value.trim() || 'Item';
+      var qty = parseFloat(row.querySelector('.inv-item-qty').value) || 0;
+      var rate = parseFloat(row.querySelector('.inv-item-rate').value) || 0;
+      var amount = qty * rate;
+      subtotal += amount;
+
+      var descLines = doc.splitTextToSize(desc, colWidth.desc);
+      var rowHeight = Math.max(descLines.length, 1) * 13;
+
+      if (y + rowHeight > pageHeight - 160) { doc.addPage(); y = margin; }
+
+      descLines.forEach(function (line, i) { doc.text(line, col.desc, y + i * 13); });
+      doc.text(String(qty), col.qty, y, { align: 'right' });
+      doc.text(symbol + money(rate), col.rate, y, { align: 'right' });
+      doc.text(symbol + money(amount), col.amount, y, { align: 'right' });
+      y += rowHeight + 8;
+      doc.setDrawColor(238, 238, 238);
+      doc.line(margin, y - 6, pageWidth - margin, y - 6);
+    });
+
+    var discountPct = parseFloat(document.getElementById('inv-discount').value) || 0;
+    var taxPct = parseFloat(document.getElementById('inv-tax').value) || 0;
+    var discountAmt = subtotal * (discountPct / 100);
+    var afterDiscount = subtotal - discountAmt;
+    var taxAmt = afterDiscount * (taxPct / 100);
+    var total = afterDiscount + taxAmt;
+
+    y += 12;
+    if (y > pageHeight - 140) { doc.addPage(); y = margin; }
+    var totalsX = pageWidth - margin - 170;
+    doc.setFontSize(10);
+    doc.setTextColor(60, 60, 60);
+    doc.text('Subtotal', totalsX, y);
+    doc.text(symbol + money(subtotal), pageWidth - margin, y, { align: 'right' });
+    y += 18;
+    if (discountPct > 0) {
+      doc.text('Discount (' + discountPct + '%)', totalsX, y);
+      doc.text('-' + symbol + money(discountAmt), pageWidth - margin, y, { align: 'right' });
+      y += 18;
+    }
+    if (taxPct > 0) {
+      doc.text('Tax (' + taxPct + '%)', totalsX, y);
+      doc.text(symbol + money(taxAmt), pageWidth - margin, y, { align: 'right' });
+      y += 18;
+    }
+    doc.setDrawColor(20, 20, 20);
+    doc.line(totalsX, y - 4, pageWidth - margin, y - 4);
+    y += 12;
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(12); doc.setTextColor(20, 20, 20);
+    doc.text('Total', totalsX, y);
+    doc.text(symbol + money(total), pageWidth - margin, y, { align: 'right' });
+
+    if (notes) {
+      y += 40;
+      if (y > pageHeight - 80) { doc.addPage(); y = margin; }
+      doc.setDrawColor(230, 230, 230);
+      doc.line(margin, y - 16, pageWidth - margin, y - 16);
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9.5); doc.setTextColor(90, 90, 90);
+      var noteLines = doc.splitTextToSize(notes, pageWidth - margin * 2);
+      noteLines.forEach(function (line, i) { doc.text(line, margin, y + i * 13); });
+    }
+
+    doc.save((number || 'invoice').replace(/[^a-z0-9-_]/gi, '_') + '.pdf');
+  }
+
+  document.getElementById('inv-download').addEventListener('click', buildPdf);
   document.getElementById('inv-reset').addEventListener('click', function () {
     if (confirm('Reset the form? This clears everything you\'ve entered.')) location.reload();
   });
