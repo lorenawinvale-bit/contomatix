@@ -1909,17 +1909,20 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 .invoice-form-section-label:first-child { margin-top: 0; }
 .invoice-form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .invoice-line-header, .invoice-line-item {
-  display: grid; grid-template-columns: 1fr 56px 88px 88px 28px; gap: 8px; align-items: center;
+  display: grid; grid-template-columns: 1fr 56px 88px 88px 28px; gap: 8px; align-items: start;
 }
 .invoice-line-header {
   font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); margin-bottom: 6px;
+  align-items: center;
 }
 .invoice-line-item { margin-bottom: 8px; }
-.invoice-line-item input {
+.invoice-line-item .invoice-line-amount, .invoice-line-item .invoice-remove-line { padding-top: 9px; }
+.invoice-line-item input, .invoice-line-item textarea {
   width: 100%; padding: 9px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);
   background: var(--surface); color: var(--text); font-family: inherit; font-size: 0.85rem;
 }
-.invoice-line-item input:focus { outline: none; border-color: var(--accent-teal); box-shadow: 0 0 0 3px rgba(20,184,166,0.16); }
+.invoice-line-item textarea { resize: none; overflow: hidden; line-height: 1.4; }
+.invoice-line-item input:focus, .invoice-line-item textarea:focus { outline: none; border-color: var(--accent-teal); box-shadow: 0 0 0 3px rgba(20,184,166,0.16); }
 .invoice-line-amount { font-size: 0.85rem; color: var(--text-dim); text-align: right; padding-right: 4px; }
 .invoice-remove-line {
   background: none; border: none; color: var(--text-faint); cursor: pointer; font-size: 1.15rem; line-height: 1; padding: 4px;
@@ -1948,6 +1951,7 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
   padding: 8px 6px; border-bottom: 2px solid #ddd;
 }
 .invoice-doc-table td { padding: 10px 6px; font-size: 0.87rem; color: #333; border-bottom: 1px solid #eee; }
+.invoice-doc-table td:first-child { white-space: pre-wrap; }
 .invoice-doc-table th:nth-child(2), .invoice-doc-table td:nth-child(2),
 .invoice-doc-table th:nth-child(3), .invoice-doc-table td:nth-child(3),
 .invoice-doc-table th:nth-child(4), .invoice-doc-table td:nth-child(4) { text-align: right; white-space: nowrap; }
@@ -1957,10 +1961,11 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 .invoice-doc-notes { margin-top: 26px; padding-top: 16px; border-top: 1px solid #eee; font-size: 0.82rem; color: #555; white-space: pre-wrap; }
 
 @media print {
-  body * { visibility: hidden; }
-  #invoice-preview, #invoice-preview * { visibility: visible; }
-  #invoice-preview { position: absolute; left: 0; top: 0; width: 100%; margin: 0; padding: 24px; box-shadow: none; border: none; border-radius: 0; }
-  .invoice-no-print { display: none !important; }
+  @page { margin: 12mm; }
+  .site-header, .site-footer, .whatsapp-float, .cookie-banner, .invoice-no-print { display: none !important; }
+  body, .container, .contact-grid { display: block !important; margin: 0 !important; padding: 0 !important; max-width: none !important; }
+  .contact-info-card.llms-preview-card { border: none; box-shadow: none; padding: 0; position: static; }
+  #invoice-preview { box-shadow: none; border: none; border-radius: 0; margin: 0; padding: 0; }
 }
 
 /* Cookie consent banner */

@@ -1,4 +1,4 @@
-<section class="page-hero">
+<section class="page-hero invoice-no-print">
   <div id="ambient-canvas" class="ambient-canvas"></div>
   <div class="container page-hero-inner">
     <span class="eyebrow">Free Tool</span>
@@ -9,7 +9,7 @@
 
 <section>
   <div class="container contact-grid llms-tool-grid">
-    <div>
+    <div class="invoice-no-print">
       <form class="contact-form llms-form" id="inv-form" onsubmit="return false;" aria-label="Invoice generator form">
         <p class="invoice-form-section-label">Your business</p>
         <div>
@@ -111,7 +111,7 @@ City, ST 67890</textarea>
     </div>
 
     <div class="contact-info-card llms-preview-card">
-      <div class="llms-preview-head">
+      <div class="llms-preview-head invoice-no-print">
         <strong>Live invoice preview</strong>
         <span id="inv-status" class="llms-status">Live</span>
       </div>
@@ -165,12 +165,12 @@ City, ST 67890</textarea>
         <button type="button" class="btn btn-primary btn-sm" id="inv-download">Download PDF</button>
         <button type="button" class="btn btn-outline btn-sm" id="inv-reset">Reset</button>
       </div>
-      <p class="llms-hint invoice-no-print">Click Download PDF, then choose "Save as PDF" as the destination in the print dialog — no plugin or account needed.</p>
+      <p class="llms-hint invoice-no-print">Click Download PDF, choose "Save as PDF" as the destination, then open "More settings" and turn off "Headers and footers" so the date/title line doesn't print — no plugin or account needed. Most browsers remember this setting after the first time.</p>
     </div>
   </div>
 </section>
 
-<section>
+<section class="invoice-no-print">
   <div class="container llms-explainer">
 
     <h2>What Should a Professional Invoice Include?</h2>
@@ -311,19 +311,26 @@ City, ST 67890</textarea>
     return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
   }
 
+  function autoGrow(el) {
+    el.rows = Math.max(el.value.split('\n').length, 1);
+  }
+
   function addLineItem(desc, qty, rate) {
     itemSeq++;
     var row = document.createElement('div');
     row.className = 'invoice-line-item';
     row.dataset.id = itemSeq;
     row.innerHTML =
-      '<input type="text" class="inv-item-desc" placeholder="Service or product" value="' + (desc || '').replace(/"/g, '&quot;') + '">' +
+      '<textarea class="inv-item-desc" rows="1" placeholder="Service or product (Shift+Enter for a new line)">' + (desc || '') + '</textarea>' +
       '<input type="number" class="inv-item-qty" min="0" step="1" value="' + (qty != null ? qty : 1) + '">' +
       '<input type="number" class="inv-item-rate" min="0" step="0.01" value="' + (rate != null ? rate : 0) + '">' +
       '<span class="invoice-line-amount">0.00</span>' +
       '<button type="button" class="invoice-remove-line" aria-label="Remove line item">&times;</button>';
     document.getElementById('inv-items').appendChild(row);
-    row.querySelectorAll('input').forEach(function (el) { el.addEventListener('input', render); });
+    var desc_el = row.querySelector('.inv-item-desc');
+    autoGrow(desc_el);
+    row.querySelectorAll('input, textarea').forEach(function (el) { el.addEventListener('input', render); });
+    desc_el.addEventListener('input', function () { autoGrow(desc_el); });
     row.querySelector('.invoice-remove-line').addEventListener('click', function () {
       row.remove();
       render();
