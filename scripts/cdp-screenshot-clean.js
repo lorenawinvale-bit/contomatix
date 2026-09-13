@@ -19,6 +19,8 @@ const chrome = spawn(chromePath, [
   '--autoplay-policy=no-user-gesture-required',
   '--enable-gpu-rasterization',
   '--ignore-gpu-blocklist',
+  '--ignore-certificate-errors',
+  '--ignore-ssl-errors',
   `--user-data-dir=${userDataDir}`,
   `--remote-debugging-port=${port}`,
   'about:blank'
