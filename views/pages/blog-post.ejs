@@ -71,6 +71,31 @@ var shareUrl = encodeURIComponent(postUrl);
 <div class="container post-layout">
   <article class="post-content">
     <%- post.content %>
+
+    <% if (author) { %>
+      <div class="post-author-box">
+        <div class="post-author-box-avatar">
+          <% if (author.hasPhoto) { %>
+            <img src="<%= author.photo %>" alt="<%= author.name %>" width="64" height="64">
+          <% } else { %>
+            <%= author.name.split(' ').map(function(w){ return w[0]; }).join('') %>
+          <% } %>
+        </div>
+        <div>
+          <span class="post-author-box-label">About the author</span>
+          <p class="post-author-box-name"><%= author.name %></p>
+          <% if (author.role) { %><p class="post-author-box-role"><%= author.role %></p><% } %>
+          <% if (author.bio) { %><p class="post-author-box-bio"><%= author.bio %></p><% } %>
+          <div>
+            <a href="/team" class="post-author-box-linkedin">More about our team &rarr;</a>
+            <% if (author.linkedin) { %>
+              <span style="color: var(--border-light); margin: 0 8px;">&#183;</span>
+              <a href="<%= author.linkedin %>" target="_blank" rel="noopener" class="post-author-box-linkedin">LinkedIn</a>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    <% } %>
   </article>
   <aside class="post-toc-rail"></aside>
 </div>
