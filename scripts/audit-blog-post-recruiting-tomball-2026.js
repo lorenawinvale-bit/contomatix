@@ -190,6 +190,20 @@ check(
 );
 
 // ---------------------------------------------------------------------------
+// 8b. No external link within the first 10% of content
+// ---------------------------------------------------------------------------
+const first10PctForExternalCheck = content.slice(0, Math.ceil(content.length * 0.10));
+const hasEarlyExternalLink = /href="https?:/.test(first10PctForExternalCheck);
+check(
+  'No external link in first 10% of content',
+  !hasEarlyExternalLink,
+  hasEarlyExternalLink
+    ? 'an external link appears before the 10% mark — move it later, or strip the tag and add a "Source:" citation line near the end instead'
+    : 'OK'
+);
+
+
+// ---------------------------------------------------------------------------
 // 9. Image exists on disk
 // ---------------------------------------------------------------------------
 const imagePath = draft.image ? path.join(ROOT, 'public', draft.image.replace(/^\//, '')) : null;
