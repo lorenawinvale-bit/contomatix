@@ -1590,6 +1590,28 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 .post-content a { color: var(--accent-teal-dim); font-weight: 600; }
 .post-content a:hover { color: var(--accent-teal); }
 .post-content strong { color: var(--text); }
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.6em;
+  font-size: 0.92rem;
+}
+.post-content table th,
+.post-content table td {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+.post-content table th {
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 700;
+}
+.post-content table tbody tr:nth-child(even) td { background: rgba(243,236,225,0.35); }
+@media (max-width: 640px) {
+  .post-content table { display: block; overflow-x: auto; white-space: nowrap; }
+}
 .post-content .post-faq { display: grid; gap: 12px; margin: 0 0 1.4em; }
 .post-content .post-faq details {
   background: var(--surface);
