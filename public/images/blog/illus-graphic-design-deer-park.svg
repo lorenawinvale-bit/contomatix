@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <!-- Houston Ship Channel water line, gentle waves -->
+  <rect x="0" y="360" width="760" height="65" fill="#E5F7F1" opacity="0.55"/>
+  <g stroke="#0EA5A0" stroke-width="2" fill="none" opacity="0.35" stroke-linecap="round">
+    <path d="M0 372 Q20 366 40 372 T80 372 T120 372 T160 372 T200 372 T240 372 T280 372 T320 372"/>
+    <path d="M0 392 Q20 386 40 392 T80 392 T120 392 T160 392 T200 392 T240 392 T280 392 T320 392"/>
+  </g>
+
+  <!-- Petrochemical/refinery skyline silhouette: distillation towers + storage tanks, Deer Park's Ship Channel industrial corridor -->
+  <g opacity="0.9">
+    <rect x="26" y="300" width="9" height="70" fill="#16192A" opacity="0.12"/>
+    <circle cx="30" cy="292" r="7" fill="none" stroke="#16192A" stroke-width="2" opacity="0.14"/>
+    <rect x="48" y="272" width="9" height="98" fill="#16192A" opacity="0.13"/>
+    <rect x="66" y="312" width="30" height="58" rx="2" fill="#16192A" opacity="0.10"/>
+    <circle cx="81" cy="330" r="9" fill="none" stroke="#16192A" stroke-width="1.6" opacity="0.14"/>
+    <rect x="104" y="255" width="8" height="115" fill="#16192A" opacity="0.12"/>
+    <rect x="120" y="295" width="7" height="75" fill="#16192A" opacity="0.12"/>
+    <!-- distillation tower with cross-bracing -->
+    <g opacity="0.13">
+      <line x1="150" y1="240" x2="150" y2="370" stroke="#16192A" stroke-width="3"/>
+      <line x1="150" y1="270" x2="164" y2="290" stroke="#16192A" stroke-width="1.4"/>
+      <line x1="150" y1="290" x2="164" y2="270" stroke="#16192A" stroke-width="1.4"/>
+      <line x1="150" y1="310" x2="164" y2="330" stroke="#16192A" stroke-width="1.4"/>
+      <line x1="150" y1="330" x2="164" y2="310" stroke="#16192A" stroke-width="1.4"/>
+    </g>
+    <rect x="172" y="318" width="26" height="52" fill="#16192A" opacity="0.10"/>
+    <!-- soft smoke/steam wisps, kept light -->
+    <g fill="none" stroke="#C9BBA9" stroke-width="2.5" opacity="0.5" stroke-linecap="round">
+      <path d="M31 288 Q38 276 30 266 Q24 258 32 248"/>
+      <path d="M53 264 Q60 252 52 242 Q46 234 54 224"/>
+      <path d="M152 236 Q159 224 151 214 Q145 206 153 196"/>
+    </g>
+  </g>
+
+  <!-- small print-shop storefront, civic/commercial counterweight to the refinery skyline (Deer Park's real print/blueprint shops) -->
+  <g transform="translate(215,332)">
+    <rect x="0" y="0" width="48" height="32" rx="3" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="1.5"/>
+    <rect x="-3" y="-8" width="54" height="9" rx="3" fill="#0EA5A0" opacity="0.8"/>
+    <rect x="6" y="7" width="14" height="14" fill="none" stroke="#16192A" stroke-width="1" opacity="0.35"/>
+    <rect x="24" y="7" width="14" height="14" fill="none" stroke="#16192A" stroke-width="1" opacity="0.35"/>
+    <rect x="6" y="24" width="36" height="6" fill="#F1EDE3"/>
+  </g>
+
+  <ellipse cx="255" cy="415" rx="185" ry="12" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Graphic design motif: fanned color-swatch cards with a drafting pencil, sitting empty/unclaimed -->
+  <g transform="translate(56,120)">
+    <g transform="translate(30,205) rotate(-18)">
+      <rect x="0" y="0" width="66" height="94" rx="9" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+      <rect x="9" y="11" width="48" height="32" rx="4" fill="#F1EDE3"/>
+    </g>
+    <g transform="translate(58,190) rotate(-6)">
+      <rect x="0" y="0" width="66" height="94" rx="9" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+      <rect x="9" y="11" width="48" height="32" rx="4" fill="#F1EDE3"/>
+    </g>
+    <g transform="translate(88,187) rotate(7)">
+      <rect x="0" y="0" width="66" height="94" rx="9" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+      <rect x="9" y="11" width="48" height="32" rx="4" fill="#F1EDE3"/>
+    </g>
+    <g transform="translate(118,197) rotate(19)">
+      <rect x="0" y="0" width="66" height="94" rx="9" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+      <rect x="9" y="11" width="48" height="32" rx="4" fill="#F1EDE3"/>
+    </g>
+
+    <!-- a question mark where a logo would normally sit, signaling the empty-agency finding -->
+    <text x="94" y="255" font-size="34" font-weight="700" fill="#C9BBA9" text-anchor="middle">?</text>
+
+    <!-- pencil resting unused above the swatches -->
+    <g transform="translate(24,42) rotate(38)">
+      <rect x="0" y="0" width="140" height="15" rx="3" fill="#EAE0D2"/>
+      <rect x="0" y="0" width="140" height="5" rx="2" fill="#F1EDE3"/>
+      <rect x="140" y="0" width="17" height="15" fill="#DCD0BC"/>
+      <path d="M157 0 L174 7.5 L157 15 Z" fill="#8A8371"/>
+    </g>
+  </g>
+
+  <g stroke="#C9BBA9" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6" stroke-dasharray="2,7">
+    <path d="M290 258 Q312 252 330 240"/>
+    <path d="M296 275 Q320 275 338 270"/>
+    <path d="M290 292 Q312 302 326 310"/>
+  </g>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="420" y="150" width="280" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="447" cy="178" r="13" fill="#FDF3E2"/>
+    <path d="M441 178h12M447 172v12" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="468" y="174" font-size="12.5" font-weight="700" fill="#16192A">20+ candidates checked</text>
+    <text x="468" y="191" font-size="11" fill="#8A8371">zero dedicated design agencies found</text>
+  </g>
+  <g>
+    <rect x="420" y="214" width="280" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="447" cy="242" r="13" fill="#E5F7F1"/>
+    <path d="M441 242l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="468" y="238" font-size="12.5" font-weight="700" fill="#16192A">Harris County, Ship Channel corridor</text>
+    <text x="468" y="255" font-size="11" fill="#8A8371">petrochemical suburb, not California</text>
+  </g>
+
+  <text x="56" y="450" font-size="16" font-weight="700" fill="#16192A">Top Graphic Design Companies in Deer Park, TX: The Honest Answer</text>
+</svg>

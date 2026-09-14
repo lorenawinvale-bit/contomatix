@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <!-- Houston Ship Channel water band -->
+  <rect x="0" y="368" width="760" height="107" fill="#E5F7F1"/>
+  <path d="M0 368 C 90 356, 180 380, 270 368 C 360 356, 450 380, 540 368 C 630 356, 700 374, 760 366 L 760 475 L 0 475 Z" fill="#CFEFE8"/>
+  <g stroke="#0EA5A0" stroke-width="1.4" opacity="0.4" fill="none">
+    <path d="M20 405 q20 -8 40 0 q20 8 40 0"/>
+    <path d="M140 420 q20 -8 40 0 q20 8 40 0"/>
+    <path d="M40 440 q20 -8 40 0 q20 8 40 0"/>
+    <path d="M170 450 q20 -8 40 0 q20 8 40 0"/>
+  </g>
+
+  <!-- Petrochemical / refinery skyline: storage tanks, distillation towers, a flare stack -->
+  <g opacity="0.92">
+    <!-- storage tanks -->
+    <rect x="52" y="322" width="46" height="48" rx="3" fill="#16192A" opacity="0.12"/>
+    <ellipse cx="75" cy="322" rx="23" ry="6" fill="#16192A" opacity="0.16"/>
+    <rect x="104" y="336" width="38" height="34" rx="3" fill="#16192A" opacity="0.10"/>
+    <ellipse cx="123" cy="336" rx="19" ry="5" fill="#16192A" opacity="0.14"/>
+
+    <!-- distillation tower -->
+    <rect x="168" y="270" width="14" height="100" fill="#16192A" opacity="0.14"/>
+    <rect x="164" y="262" width="22" height="10" fill="#16192A" opacity="0.16"/>
+    <g stroke="#16192A" stroke-width="1.6" opacity="0.14">
+      <line x1="168" y1="286" x2="182" y2="286"/>
+      <line x1="168" y1="304" x2="182" y2="304"/>
+      <line x1="168" y1="322" x2="182" y2="322"/>
+      <line x1="168" y1="340" x2="182" y2="340"/>
+    </g>
+
+    <!-- second, shorter tower with connecting pipe -->
+    <rect x="200" y="300" width="11" height="70" fill="#16192A" opacity="0.12"/>
+    <line x1="182" y1="330" x2="200" y2="330" stroke="#16192A" stroke-width="3" opacity="0.14"/>
+
+    <!-- flare stack with a soft flame -->
+    <rect x="238" y="250" width="6" height="120" fill="#16192A" opacity="0.14"/>
+    <path d="M241 250 c-6 -10 -2 -18 0 -22 c2 4 6 12 0 22 z" fill="#F5A623" opacity="0.8"/>
+    <circle cx="241" cy="232" r="3" fill="#F59E0B" opacity="0.7"/>
+
+    <!-- more distant tanks, fading right -->
+    <rect x="270" y="340" width="34" height="30" rx="3" fill="#16192A" opacity="0.08"/>
+    <ellipse cx="287" cy="340" rx="17" ry="4.5" fill="#16192A" opacity="0.11"/>
+  </g>
+
+  <ellipse cx="255" cy="415" rx="185" ry="12" fill="rgba(23,20,44,0.06)"/>
+
+  <!-- Directory-trap motif: a business-listing card with a broken/garbled address, echoing the
+       Unrivaled Marketing "no real address published" and mismatched real-estate-record cases -->
+  <g transform="translate(56,150)">
+    <rect x="0" y="0" width="150" height="112" rx="8" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <rect x="14" y="14" width="90" height="10" rx="5" fill="#F1EDE3"/>
+    <rect x="14" y="32" width="122" height="8" rx="4" fill="#F1EDE3"/>
+    <rect x="14" y="46" width="70" height="8" rx="4" fill="#FDF3E2" stroke="#F5A623" stroke-width="1.2"/>
+    <rect x="14" y="62" width="122" height="8" rx="4" fill="#F1EDE3"/>
+    <rect x="14" y="76" width="96" height="8" rx="4" fill="#F1EDE3"/>
+    <text x="94" y="102" font-size="30" font-weight="700" fill="#C9BBA9" text-anchor="middle">?</text>
+  </g>
+
+  <g stroke="#C9BBA9" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6" stroke-dasharray="2,7">
+    <path d="M270 224 Q300 216 320 206"/>
+    <path d="M276 244 Q306 246 330 240"/>
+  </g>
+
+  <!-- magnifying glass over an empty checklist, "zero verified" motif -->
+  <g transform="translate(360,300)">
+    <rect x="-34" y="-42" width="68" height="80" rx="8" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <line x1="-22" y1="-24" x2="22" y2="-24" stroke="#F1EDE3" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-22" y1="-8" x2="22" y2="-8" stroke="#F1EDE3" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-22" y1="8" x2="10" y2="8" stroke="#F1EDE3" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(14,30) rotate(45)">
+      <circle cx="0" cy="0" r="17" fill="none" stroke="#8A8371" stroke-width="4.5"/>
+      <line x1="12" y1="12" x2="26" y2="26" stroke="#8A8371" stroke-width="5.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- floating stat cards -->
+  <g>
+    <rect x="420" y="150" width="280" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="447" cy="178" r="13" fill="#FDF3E2"/>
+    <path d="M441 178h12M447 172v12" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round"/>
+    <text x="468" y="174" font-size="12.5" font-weight="700" fill="#16192A">17+ candidates checked</text>
+    <text x="468" y="191" font-size="11" fill="#8A8371">zero genuine full-service HQs found</text>
+  </g>
+  <g>
+    <rect x="420" y="214" width="280" height="56" rx="14" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="447" cy="242" r="13" fill="#E5F7F1"/>
+    <path d="M441 242l4 4 8-8" stroke="#0B807C" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="468" y="238" font-size="12.5" font-weight="700" fill="#16192A">Harris County, TX</text>
+    <text x="468" y="255" font-size="11" fill="#8A8371">on the Houston Ship Channel</text>
+  </g>
+
+  <text x="56" y="450" font-size="16" font-weight="700" fill="#16192A">Marketing Agencies in Deer Park, TX: The Honest Answer</text>
+</svg>
