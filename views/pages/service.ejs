@@ -31,6 +31,33 @@
         <% }); %>
       </ul>
 
+      <% if (service.process && service.process.length) { %>
+        <h2 style="margin-top: 1.8em;">How It Works</h2>
+        <ol class="service-process">
+          <% service.process.forEach(function(step, i) { %>
+            <li>
+              <span class="service-process-num"><%= i + 1 %></span>
+              <div>
+                <strong><%= step.title %></strong>
+                <p style="color: var(--text-dim); margin-top: 4px;"><%= step.text %></p>
+              </div>
+            </li>
+          <% }); %>
+        </ol>
+      <% } %>
+
+      <% if (service.types && service.types.length) { %>
+        <h2 style="margin-top: 1.8em;"><%= service.typesHeading || 'Types We Cover' %></h2>
+        <div class="service-types-grid">
+          <% service.types.forEach(function(t) { %>
+            <div class="service-type-card">
+              <strong><%= t.title %></strong>
+              <p style="color: var(--text-dim); margin-top: 4px;"><%= t.text %></p>
+            </div>
+          <% }); %>
+        </div>
+      <% } %>
+
       <% if (service.faqs && service.faqs.length) { %>
         <h2 style="margin-top: 1.8em;"><%= service.title %> FAQs</h2>
         <div class="faq-list" style="margin-top: 22px;">

@@ -1704,6 +1704,25 @@ body.page-blog-post .container { max-width: 1400px; }
   margin-top: 8px;
   flex-shrink: 0;
 }
+.service-process { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 18px; }
+.service-process li { display: flex; gap: 16px; align-items: flex-start; }
+.service-process-num {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9em;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.service-types-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 24px 0; }
+.service-type-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+}
 .service-sidebar {
   background: var(--surface);
   border: 1px solid var(--border);

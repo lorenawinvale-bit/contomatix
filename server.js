@@ -250,7 +250,7 @@ app.get('/', (req, res) => {
     .slice(0, 6);
   res.render('pages/home', {
     title: 'Contomatix — Link Building & SEO Services',
-    description: 'Contomatix helps brands grow organic traffic through link building, guest posting, on-page & off-page SEO, and keyword research.',
+    description: 'Contomatix helps brands grow organic traffic and AI search visibility through link building, technical & on-page SEO, and AI SEO.',
     pageClass: 'page-home',
     postCount: allPosts.length,
     marketCount: allPosts.filter(p => p.slug.startsWith('best-seo-companies-in-')).length,
@@ -261,7 +261,7 @@ app.get('/', (req, res) => {
 app.get('/services', (req, res) => {
   res.render('pages/services', {
     title: 'SEO & Link Building Services — Contomatix',
-    description: 'Link building, guest posting, on-page and off-page SEO, white-label SEO, and keyword research — six services built around one connected strategy.',
+    description: 'Link building, guest posting, on-page, off-page, technical, and AI SEO, white-label SEO, and keyword research — one connected strategy.',
     pageClass: 'page-services'
   });
 });
