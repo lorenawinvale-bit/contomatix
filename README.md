@@ -64,3 +64,4 @@ If SMTP is not configured, submissions are logged to the server console (visible
 5. Set the `PORT` environment variable if Hostinger requires a specific port (the app already reads `process.env.PORT`).
 6. Every future `git push` to `main` will redeploy the site automatically once Hostinger's Git auto-deploy is enabled.
 
+
