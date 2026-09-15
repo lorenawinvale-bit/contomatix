@@ -17,6 +17,10 @@
         <div class="contact-error" role="alert"><%= error %></div>
       <% } %>
       <form class="contact-form" method="POST" action="/contact">
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
         <div>
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required value="<%= (typeof form !== 'undefined' && form.name) || '' %>">
@@ -54,4 +58,65 @@
       </div>
     </div>
   </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">Before you reach out</span>
+      <h2>What happens after you send a message</h2>
+      <p>A quick idea of the process, so there's no guessing while you wait to hear back.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h3>We review your site first</h3>
+        <p>Before replying, we take a first look at your site, current rankings, and backlink profile — so the reply is specific to your situation, not a generic template.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h3>You get a free audit summary</h3>
+        <p>We reply with what we found: the gaps most worth fixing first, roughly what a realistic timeline looks like, and whether link building, on-page work, or both should come first.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h3>A plan, not a pitch</h3>
+        <p>If it makes sense to work together, we send a scoped plan and pricing. If it doesn't — wrong stage, wrong budget, wrong fit — we'll say so directly instead of wasting your time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <%
+  var contactFaqs = [
+    { q: 'How fast will I actually hear back?', a: 'Almost always within 24 hours, often same-day if you reach out on WhatsApp during business hours.' },
+    { q: 'Is the audit really free, with no obligation?', a: "Yes. You'll get a real assessment of your site whether or not you decide to work with us afterward." },
+    { q: 'What should I include in my message to get a useful reply?', a: 'Your website URL, what you sell or who you serve, and roughly what you\'ve tried already (if anything) — that\'s usually enough for a specific first response instead of generic questions back.' },
+    { q: 'Do you work with businesses outside the US?', a: 'Yes — link building and SEO work the same regardless of location, and we\'ve run campaigns for sites well beyond the US markets covered on this blog.' }
+  ];
+  %>
+  <div class="container faq-inner">
+    <div class="section-head centered">
+      <span class="eyebrow">FAQs</span>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq-list">
+      <% contactFaqs.forEach(function(f) { %>
+        <details>
+          <summary><%= f.q %><span class="faq-icon"></span></summary>
+          <p><%= f.a %></p>
+        </details>
+      <% }); %>
+    </div>
+  </div>
+  <script type="application/ld+json">
+    <%- JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: contactFaqs.map(function(f) {
+        return { '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } };
+      })
+    }) %>
+  </script>
 </section>
