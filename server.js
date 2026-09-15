@@ -81,9 +81,11 @@ app.use((req, res, next) => {
   const canonicalHost = host.replace(/^www\./, '');
   const wantsHttps = isProd && req.protocol !== 'https';
   const hasUpperPath = req.path !== req.path.toLowerCase() && !req.path.startsWith('/admin');
-  if (host !== canonicalHost || wantsHttps || hasUpperPath) {
+  const hasTrailingSlash = req.path.length > 1 && req.path.endsWith('/');
+  if (host !== canonicalHost || wantsHttps || hasUpperPath || hasTrailingSlash) {
     const targetHost = canonicalHost || host;
-    const targetPath = hasUpperPath ? req.path.toLowerCase() : req.path;
+    let targetPath = hasUpperPath ? req.path.toLowerCase() : req.path;
+    if (hasTrailingSlash) targetPath = targetPath.replace(/\/+$/, '');
     const targetProtocol = isProd ? 'https' : req.protocol;
     const qs = req.url.slice(req.path.length);
     return res.redirect(301, `${targetProtocol}://${targetHost}${targetPath}${qs}`);
@@ -142,13 +144,29 @@ app.use(express.static(path.join(__dirname, 'public'), {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // A missing SESSION_SECRET in production should never take the whole site
-// down — generate a random one for this process instead of crashing on boot.
-// It just means existing admin sessions won't survive a restart; add a real
-// SESSION_SECRET to the host's env vars when convenient.
-if (isProd && !process.env.SESSION_SECRET) {
-  console.warn('[server] SESSION_SECRET is not set — using a random secret for this process only. Set SESSION_SECRET in the environment to keep admin sessions stable across restarts.');
+// down — but a fresh random secret on every restart logs every admin session
+// out each time the process restarts. Persist a generated one to a local,
+// gitignored file instead, so it only changes if that file is ever removed.
+// Adding a real SESSION_SECRET to the host's env vars is still preferable —
+// this is just a safety net for when that hasn't been done.
+function getOrCreateSessionSecret() {
+  if (process.env.SESSION_SECRET) return process.env.SESSION_SECRET;
+  if (!isProd) return 'dev-only-insecure-secret';
+  const secretFile = path.join(__dirname, '.session-secret');
+  try {
+    return fs.readFileSync(secretFile, 'utf8').trim();
+  } catch {
+    const generated = require('crypto').randomBytes(32).toString('hex');
+    try {
+      fs.writeFileSync(secretFile, generated, { mode: 0o600 });
+    } catch (err) {
+      console.warn('[server] Could not persist a generated SESSION_SECRET to disk — a new one will be generated on every restart:', err.message);
+    }
+    console.warn('[server] SESSION_SECRET is not set — generated and saved one to .session-secret. Set a real SESSION_SECRET in the environment when convenient.');
+    return generated;
+  }
 }
-const sessionSecret = process.env.SESSION_SECRET || (isProd ? require('crypto').randomBytes(32).toString('hex') : 'dev-only-insecure-secret');
+const sessionSecret = getOrCreateSessionSecret();
 app.use(session({
   secret: sessionSecret,
   resave: false,
@@ -401,7 +419,7 @@ app.get('/blog', (req, res) => {
     };
   });
   res.render('pages/blog', {
-    title: page > 1 ? `Blog — Page ${page} — Contomatix` : 'Blog — Contomatix',
+    title: page > 1 ? `Blog — Page ${page} — Contomatix` : 'Blog — SEO & Link Building Insights | Contomatix',
     description: 'SEO strategy, link building tactics, and content marketing insights from Contomatix.',
     pageClass: 'page-blog',
     posts,
@@ -449,7 +467,7 @@ app.get('/about', (req, res) => {
   const blogPosts = blogStore.getAll();
   res.render('pages/about', {
     title: 'About Contomatix — White-Hat SEO & Link Building Agency',
-    description: 'Learn what Contomatix does and how we help brands rank higher.',
+    description: 'Learn what Contomatix does, how the team works, and how we help brands rank higher through white-hat SEO.',
     pageClass: 'page-about',
     team: team.map(withPhotoCheck),
     services,
