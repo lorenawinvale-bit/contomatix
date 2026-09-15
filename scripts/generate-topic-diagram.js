@@ -1,21 +1,60 @@
 #!/usr/bin/env node
 /**
- * Generates a "topic wheel" hero diagram for a blog post: a central topic
- * label with a colored arc and short pill labels branching off to the side
- * for each main section — the style referenced from a competitor's blog
- * hero (never named in any published content), reskinned to Contomatix's
- * own brand colors and mark. Used only for posts that opt in via a
- * `heroDiagram` field in data/blog.json — existing posts are untouched.
+ * Generates a blog post hero diagram: a short topic label plus short labels
+ * for each main section, in one of three distinct visual styles so posts
+ * don't all look like copies of each other — the general concept (a topic
+ * overview graphic) was referenced from a competitor's blog hero (never
+ * named in any published content), reskinned to Contomatix's own brand
+ * colors and mark. Used only for posts that opt in via a `heroDiagram`
+ * field in data/blog.json — existing posts are untouched.
  *
- * Usage: node scripts/generate-topic-diagram.js <output-path> '<topic>' '<label1>' '<label2>' ...
- * Or require() it directly: buildTopicDiagramSvg({ topic, sections })
+ * Usage: node scripts/generate-topic-diagram.js <output-path> <style> '<topic>' '<label1>' '<label2>' ...
+ *   style: wheel | timeline | ring
+ * Or require() it directly: buildTopicDiagramSvg({ style, topic, sections })
  */
 const fs = require('fs');
-const path = require('path');
 
 const PALETTE = ['#0EA5A0', '#14B8A6', '#FBBF24', '#F5A623', '#5EEAD4'];
 
-function buildTopicDiagramSvg({ topic, sections }) {
+function escapeXml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function brandMark(x, y) {
+  return `<g transform="translate(${x}, ${y})">
+    <rect width="120" height="30" rx="8" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="18" cy="15" r="9" fill="none" stroke="#0EA5A0" stroke-width="3"/>
+    <circle cx="18" cy="15" r="3" fill="#FBBF24"/>
+    <text x="34" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>`;
+}
+
+// Greedily wraps text to fit a given pixel width, picking the largest font
+// size (within a range) that keeps the result to maxLines.
+function wrapToFit(text, { maxWidth, maxSize, minSize, maxLines, charWidthFactor }) {
+  charWidthFactor = charWidthFactor || 0.72;
+  const words = String(text).toUpperCase().split(' ');
+  function linesAt(size) {
+    const maxChars = maxWidth / (charWidthFactor * size);
+    const lines = [];
+    let current = '';
+    words.forEach(w => {
+      const candidate = current ? current + ' ' + w : w;
+      if (candidate.length > maxChars && current) { lines.push(current); current = w; }
+      else current = candidate;
+    });
+    if (current) lines.push(current);
+    return lines;
+  }
+  for (let size = maxSize; size >= minSize; size -= 1) {
+    const lines = linesAt(size);
+    if (lines.length <= maxLines) return { size, lines };
+  }
+  return { size: minSize, lines: linesAt(minSize) };
+}
+
+// ---------- Style 1: radial wheel (arc + pills branching right) ----------
+function buildWheelSvg({ topic, sections }) {
   const W = 700, H = 620;
   const cx = 170, cy = H / 2;
   const rArc = 150;
@@ -35,21 +74,18 @@ function buildTopicDiagramSvg({ topic, sections }) {
   const [ax2, ay2] = toXY(arcEndDeg, rArc);
   const largeArc = arcSpan > 180 ? 1 : 0;
 
-  let pills = '';
-  let connectors = '';
+  let pills = '', connectors = '';
   sections.forEach((label, i) => {
     const py = startY + i * (pillH + pillGap);
     const color = PALETTE[i % PALETTE.length];
     const deg = arcStartDeg + (arcSpan / (sections.length - 1 || 1)) * i;
     const [dotX, dotY] = toXY(deg, rArc);
     const [tickX, tickY] = toXY(deg, rArc + 26);
-
     connectors += `
       <circle cx="${dotX.toFixed(1)}" cy="${dotY.toFixed(1)}" r="5" fill="${color}"/>
       <line x1="${dotX.toFixed(1)}" y1="${dotY.toFixed(1)}" x2="${tickX.toFixed(1)}" y2="${tickY.toFixed(1)}" stroke="${color}" stroke-width="2"/>
-      <line x1="${tickX.toFixed(1)}" y1="${tickY.toFixed(1)}" x2="${pillX}" y2="${(py).toFixed(1)}" stroke="${color}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+      <line x1="${tickX.toFixed(1)}" y1="${tickY.toFixed(1)}" x2="${pillX}" y2="${py.toFixed(1)}" stroke="${color}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
     `;
-
     pills += `
       <g>
         <rect x="${pillX}" y="${(py - pillH / 2).toFixed(1)}" width="${pillW}" height="${pillH}" rx="${pillH / 2}" fill="${color}"/>
@@ -60,6 +96,10 @@ function buildTopicDiagramSvg({ topic, sections }) {
     `;
   });
 
+  const { size, lines } = wrapToFit(topic, { maxWidth: 190, maxSize: 22, minSize: 13, maxLines: 3 });
+  const lineHeight = size * 1.15;
+  const centerText = lines.map((l, i) => `<tspan x="${cx}"${i > 0 ? ` dy="${lineHeight.toFixed(0)}"` : ''}>${escapeXml(l)}</tspan>`).join('');
+
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}">
   <rect width="${W}" height="${H}" fill="#FAF5EF"/>
   <circle cx="${cx}" cy="${cy}" r="${rArc + 40}" fill="#F3ECE1" opacity="0.5"/>
@@ -69,64 +109,141 @@ function buildTopicDiagramSvg({ topic, sections }) {
         fill="none" stroke="#0B807C" stroke-width="14" stroke-linecap="round"/>
   ${connectors}
   <text x="${cx}" y="${cy - 34}" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#8A8371">WHAT IS</text>
-  <text x="${cx}" y="${cy - 2}" text-anchor="middle" font-family="Arial, sans-serif" font-size="${centerFontSize(topic)}" font-weight="800" fill="#16192A">${wrapCenterText(topic)}</text>
-  <g transform="translate(${cx - 60}, ${cy + 46})">
-    <rect width="120" height="30" rx="8" fill="#FFFFFF" stroke="#EAE0D2"/>
-    <circle cx="18" cy="15" r="9" fill="none" stroke="#0EA5A0" stroke-width="3"/>
-    <circle cx="18" cy="15" r="3" fill="#FBBF24"/>
-    <text x="34" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A">Contomatix</text>
-  </g>
+  <text x="${cx}" y="${cy - 2}" text-anchor="middle" font-family="Arial, sans-serif" font-size="${size}" font-weight="800" fill="#16192A">${centerText}</text>
+  ${brandMark(cx - 60, cy + 46)}
   ${pills}
 </svg>`;
 }
 
-function escapeXml(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// ---------- Style 2: vertical timeline (alternating left/right cards) ----------
+function buildTimelineSvg({ topic, sections }) {
+  const W = 620;
+  const rowH = 108;
+  const lineX = W / 2;
+  const cardW = 240;
+  const badgeR = 24;
+
+  const { size: titleSize, lines: titleLines } = wrapToFit(topic, { maxWidth: 460, maxSize: 26, minSize: 16, maxLines: 2 });
+  const titleLineHeight = titleSize * 1.2;
+  const titleText = titleLines.map((l, i) => `<tspan x="${lineX}"${i > 0 ? ` dy="${titleLineHeight.toFixed(0)}"` : ''}>${escapeXml(l)}</tspan>`).join('');
+  const titleFirstBaseline = 70 + titleSize;
+  const titleLastBaseline = titleFirstBaseline + (titleLines.length - 1) * titleLineHeight;
+  const brandMarkY = titleLastBaseline + 20;
+  const topPad = brandMarkY + 30 + 40;
+  const H = topPad + sections.length * rowH + 40;
+
+  let rows = '';
+  sections.forEach((label, i) => {
+    const cy = topPad + i * rowH + rowH / 2;
+    const color = PALETTE[i % PALETTE.length];
+    const onLeft = i % 2 === 0;
+    const cardX = onLeft ? lineX - 40 - cardW : lineX + 40;
+    const stubX2 = onLeft ? lineX - 40 : lineX + 40;
+    const stubX1 = onLeft ? lineX - badgeR : lineX + badgeR;
+    const textAnchor = onLeft ? 'end' : 'start';
+    const textX = onLeft ? cardX + cardW - 20 : cardX + 20;
+
+    rows += `
+      <line x1="${stubX1}" y1="${cy}" x2="${stubX2}" y2="${cy}" stroke="${color}" stroke-width="3"/>
+      <rect x="${cardX}" y="${(cy - 30).toFixed(1)}" width="${cardW}" height="60" rx="14" fill="#FFFFFF" stroke="${color}" stroke-width="2"/>
+      <text x="${textX}" y="${(cy + 6).toFixed(1)}" text-anchor="${textAnchor}" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#16192A">${escapeXml(label)}</text>
+      <circle cx="${lineX}" cy="${cy}" r="${badgeR}" fill="${color}"/>
+      <text x="${lineX}" y="${(cy + 6).toFixed(1)}" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#FAF5EF">${i + 1}</text>
+    `;
+  });
+
+  const lineTop = topPad - 10;
+  const lineBottom = topPad + sections.length * rowH - rowH / 2 + 10;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}">
+  <rect width="${W}" height="${H}" fill="#FAF5EF"/>
+  <text x="${lineX}" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-style="italic" font-weight="700" fill="#8A8371">A QUICK OVERVIEW OF</text>
+  <text x="${lineX}" y="${titleFirstBaseline.toFixed(0)}" text-anchor="middle" font-family="Arial, sans-serif" font-size="${titleSize}" font-weight="800" fill="#16192A">${titleText}</text>
+  ${brandMark(lineX - 60, brandMarkY)}
+  <line x1="${lineX}" y1="${lineTop}" x2="${lineX}" y2="${lineBottom}" stroke="#D6C5AA" stroke-width="3" stroke-dasharray="2 6"/>
+  ${rows}
+</svg>`;
 }
 
-// Greedily wraps a topic phrase to fit a ~230px-wide circle, picking the
-// largest font size (down to a floor) that fits within 3 lines.
-const MAX_WIDTH = 190;
-function wrapLines(words, fontSize) {
-  const maxChars = MAX_WIDTH / (0.72 * fontSize);
-  const lines = [];
-  let current = '';
-  words.forEach(w => {
-    const candidate = current ? current + ' ' + w : w;
-    if (candidate.length > maxChars && current) {
-      lines.push(current);
-      current = w;
-    } else {
-      current = candidate;
-    }
-  });
-  if (current) lines.push(current);
-  return lines;
-}
-function centerFontSize(topic) {
-  const words = String(topic).toUpperCase().split(' ');
-  for (let size = 22; size >= 13; size -= 1) {
-    if (wrapLines(words, size).length <= 3) return size;
+// ---------- Style 3: full ring / donut with two-sided callouts ----------
+function buildRingSvg({ topic, sections }) {
+  const W = 700, H = 560;
+  const cx = W / 2, cy = H / 2;
+  const rOuter = 130, rInner = 86;
+  const n = sections.length;
+  const gapDeg = 4;
+  const segDeg = 360 / n - gapDeg;
+
+  function arcPath(startDeg, endDeg, r1, r2) {
+    const toXY = (deg, r) => {
+      const rad = ((deg - 90) * Math.PI) / 180;
+      return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+    };
+    const large = endDeg - startDeg > 180 ? 1 : 0;
+    const [x1, y1] = toXY(startDeg, r2);
+    const [x2, y2] = toXY(endDeg, r2);
+    const [x3, y3] = toXY(endDeg, r1);
+    const [x4, y4] = toXY(startDeg, r1);
+    return `M ${x1.toFixed(1)} ${y1.toFixed(1)} A ${r2} ${r2} 0 ${large} 1 ${x2.toFixed(1)} ${y2.toFixed(1)} L ${x3.toFixed(1)} ${y3.toFixed(1)} A ${r1} ${r1} 0 ${large} 0 ${x4.toFixed(1)} ${y4.toFixed(1)} Z`;
   }
-  return 15;
-}
-function wrapCenterText(topic) {
-  const words = String(topic).toUpperCase().split(' ');
-  const size = centerFontSize(topic);
-  const lines = wrapLines(words, size);
+  const midXY = (deg, r) => {
+    const rad = ((deg - 90) * Math.PI) / 180;
+    return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+  };
+
+  let segments = '', callouts = '';
+  sections.forEach((label, i) => {
+    const start = i * (segDeg + gapDeg);
+    const end = start + segDeg;
+    const mid = (start + end) / 2;
+    const color = PALETTE[i % PALETTE.length];
+    segments += `<path d="${arcPath(start, end, rInner, rOuter)}" fill="${color}"/>`;
+
+    const [dotX, dotY] = midXY(mid, rOuter + 4);
+    const onRight = Math.cos(((mid - 90) * Math.PI) / 180) >= 0;
+    const labelR = rOuter + 70;
+    const [labelAnchorX] = midXY(mid, labelR);
+    const boxW = 190, boxH = 42;
+    const boxX = onRight ? Math.min(labelAnchorX, W - boxW - 10) : Math.max(10, labelAnchorX - boxW);
+    const [midX, midY] = midXY(mid, labelR);
+    const boxY = Math.min(Math.max(midY - boxH / 2, 10), H - boxH - 10);
+
+    callouts += `
+      <line x1="${dotX.toFixed(1)}" y1="${dotY.toFixed(1)}" x2="${(onRight ? boxX : boxX + boxW).toFixed(1)}" y2="${(boxY + boxH / 2).toFixed(1)}" stroke="${color}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.7"/>
+      <rect x="${boxX.toFixed(1)}" y="${boxY.toFixed(1)}" width="${boxW}" height="${boxH}" rx="10" fill="#FFFFFF" stroke="${color}" stroke-width="2"/>
+      <circle cx="${(boxX + 22).toFixed(1)}" cy="${(boxY + boxH / 2).toFixed(1)}" r="8" fill="${color}"/>
+      <text x="${(boxX + 40).toFixed(1)}" y="${(boxY + boxH / 2 + 5).toFixed(1)}" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#16192A">${escapeXml(label)}</text>
+    `;
+  });
+
+  const { size, lines } = wrapToFit(topic, { maxWidth: rInner * 1.7, maxSize: 20, minSize: 12, maxLines: 3 });
   const lineHeight = size * 1.15;
-  return lines.map((line, i) => `<tspan x="170"${i > 0 ? ` dy="${lineHeight.toFixed(0)}"` : ''}>${escapeXml(line)}</tspan>`).join('');
+  const centerText = lines.map((l, i) => `<tspan x="${cx}"${i > 0 ? ` dy="${lineHeight.toFixed(0)}"` : ''}>${escapeXml(l)}</tspan>`).join('');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}">
+  <rect width="${W}" height="${H}" fill="#FAF5EF"/>
+  ${segments}
+  <circle cx="${cx}" cy="${cy}" r="${rInner - 6}" fill="#FAF5EF"/>
+  <text x="${cx}" y="${cy - lineHeight * (lines.length - 1) / 2 - 6}" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#8A8371">OVERVIEW</text>
+  <text x="${cx}" y="${cy + 16}" text-anchor="middle" font-family="Arial, sans-serif" font-size="${size}" font-weight="800" fill="#16192A">${centerText}</text>
+  ${callouts}
+</svg>`;
+}
+
+function buildTopicDiagramSvg({ style, topic, sections }) {
+  if (style === 'timeline') return buildTimelineSvg({ topic, sections });
+  if (style === 'ring') return buildRingSvg({ topic, sections });
+  return buildWheelSvg({ topic, sections });
 }
 
 if (require.main === module) {
-  const [, , outPath, topic, ...sections] = process.argv;
-  if (!outPath || !topic || sections.length < 2) {
-    console.error("Usage: node generate-topic-diagram.js <output.svg> '<topic>' '<label1>' '<label2>' ...");
+  const [, , outPath, style, topic, ...sections] = process.argv;
+  if (!outPath || !['wheel', 'timeline', 'ring'].includes(style) || !topic || sections.length < 2) {
+    console.error("Usage: node generate-topic-diagram.js <output.svg> <wheel|timeline|ring> '<topic>' '<label1>' '<label2>' ...");
     process.exit(1);
   }
-  const svg = buildTopicDiagramSvg({ topic, sections });
-  fs.writeFileSync(outPath, svg);
+  fs.writeFileSync(outPath, buildTopicDiagramSvg({ style, topic, sections }));
   console.log('wrote', outPath);
 }
 
-module.exports = { buildTopicDiagramSvg };
+module.exports = { buildTopicDiagramSvg, buildWheelSvg, buildTimelineSvg, buildRingSvg };
