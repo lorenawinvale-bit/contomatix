@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 620">
+  <rect width="700" height="620" fill="#FAF5EF"/>
+  <circle cx="170" cy="310" r="190" fill="#F3ECE1" opacity="0.5"/>
+  <path d="M 29.0 361.3 A 150 150 0 1 1 311.0 361.3"
+        fill="none" stroke="#5EEAD4" stroke-width="14" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 29.0 361.3 A 150 150 0 0 1 170 160"
+        fill="none" stroke="#0B807C" stroke-width="14" stroke-linecap="round"/>
+  
+      <circle cx="29.0" cy="361.3" r="5" fill="#0EA5A0"/>
+      <line x1="29.0" y1="361.3" x2="4.6" y2="370.2" stroke="#0EA5A0" stroke-width="2"/>
+      <line x1="4.6" y1="370.2" x2="260" y2="122.0" stroke="#0EA5A0" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+      <circle cx="47.1" cy="224.0" r="5" fill="#14B8A6"/>
+      <line x1="47.1" y1="224.0" x2="25.8" y2="209.1" stroke="#14B8A6" stroke-width="2"/>
+      <line x1="25.8" y1="209.1" x2="260" y2="216.0" stroke="#14B8A6" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+      <circle cx="170.0" cy="160.0" r="5" fill="#FBBF24"/>
+      <line x1="170.0" y1="160.0" x2="170.0" y2="134.0" stroke="#FBBF24" stroke-width="2"/>
+      <line x1="170.0" y1="134.0" x2="260" y2="310.0" stroke="#FBBF24" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+      <circle cx="292.9" cy="224.0" r="5" fill="#F5A623"/>
+      <line x1="292.9" y1="224.0" x2="314.2" y2="209.1" stroke="#F5A623" stroke-width="2"/>
+      <line x1="314.2" y1="209.1" x2="260" y2="404.0" stroke="#F5A623" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+      <circle cx="311.0" cy="361.3" r="5" fill="#5EEAD4"/>
+      <line x1="311.0" y1="361.3" x2="335.4" y2="370.2" stroke="#5EEAD4" stroke-width="2"/>
+      <line x1="335.4" y1="370.2" x2="260" y2="498.0" stroke="#5EEAD4" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+  <text x="170" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#8A8371">WHAT IS</text>
+  <text x="170" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="800" fill="#16192A"><tspan x="170">WHY LEAGUE CITY,</tspan><tspan x="170" dy="16">TX HAS NO VERIFIED</tspan><tspan x="170" dy="16">SEO COMPANIES</tspan></text>
+  <g transform="translate(110, 356)">
+    <rect width="120" height="30" rx="8" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="18" cy="15" r="9" fill="none" stroke="#0EA5A0" stroke-width="3"/>
+    <circle cx="18" cy="15" r="3" fill="#FBBF24"/>
+    <text x="34" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+  
+      <g>
+        <rect x="260" y="85.0" width="400" height="74" rx="30" fill="#0EA5A0"/>
+        <circle cx="298" cy="122.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 122.0 l 5 5 l 10 -11" stroke="#0EA5A0" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="117.5" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">A Third Mail-Drop</tspan><tspan x="330" dy="23">Listing: Creativ93</tspan></text>
+      </g>
+    
+      <g>
+        <rect x="260" y="179.0" width="400" height="74" rx="30" fill="#14B8A6"/>
+        <circle cx="298" cy="216.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 216.0 l 5 5 l 10 -11" stroke="#14B8A6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="211.5" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">A Fabricated Listing</tspan><tspan x="330" dy="23">Worth Flagging: "Agency…</tspan></text>
+      </g>
+    
+      <g>
+        <rect x="260" y="273.0" width="400" height="74" rx="30" fill="#FBBF24"/>
+        <circle cx="298" cy="310.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 310.0 l 5 5 l 10 -11" stroke="#FBBF24" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="305.5" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">What the BBB's Own</tspan><tspan x="330" dy="23">Directory Confirms</tspan></text>
+      </g>
+    
+      <g>
+        <rect x="260" y="367.0" width="400" height="74" rx="30" fill="#F5A623"/>
+        <circle cx="298" cy="404.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 404.0 l 5 5 l 10 -11" stroke="#F5A623" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="399.5" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">How This Was</tspan><tspan x="330" dy="23">Researched</tspan></text>
+      </g>
+    
+      <g>
+        <rect x="260" y="461.0" width="400" height="74" rx="30" fill="#5EEAD4"/>
+        <circle cx="298" cy="498.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 498.0 l 5 5 l 10 -11" stroke="#5EEAD4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="493.5" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">How to Verify a</tspan><tspan x="330" dy="23">"League City SEO…</tspan></text>
+      </g>
+    
+</svg>

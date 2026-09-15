@@ -37,7 +37,36 @@ function truncateToFit(text, maxWidth, fontSize, charWidthFactor) {
   const maxChars = Math.floor(maxWidth / (charWidthFactor * fontSize));
   const s = String(text);
   if (s.length <= maxChars) return s;
-  return s.slice(0, Math.max(1, maxChars - 1)).trimEnd() + '…';
+  const cut = s.slice(0, Math.max(1, maxChars - 1));
+  // Always break on a whole word — "Build Local…" reads fine, "Build Local
+  // Sponso…" (mid-word) reads as broken. Falls back to the raw cut only if
+  // there's no space at all (a single very long word).
+  const lastSpace = cut.lastIndexOf(' ');
+  const wordSafe = lastSpace > Math.floor(maxChars * 0.4) ? cut.slice(0, lastSpace) : cut;
+  return wordSafe.trimEnd() + '…';
+}
+
+// Wraps a section label into up to 2 lines at a given font size (word-
+// boundary safe via the same greedy logic as wrapToFit), then ellipsis-
+// truncates only the second line if a genuinely long heading still doesn't
+// fit — real post H2s run much longer than short hand-picked demo labels,
+// so 2 lines handles the vast majority without needing to shrink meaning
+// down to 2-3 words.
+function wrapLabelLines(text, maxWidth, fontSize, charWidthFactor) {
+  // wrapToFit upper-cases internally (built for the center-circle use case);
+  // section labels should keep their original casing, so wrap manually here.
+  const words = String(text).split(' ');
+  const maxChars = maxWidth / ((charWidthFactor || 0.72) * fontSize);
+  const wrapped = [];
+  let current = '';
+  words.forEach(w => {
+    const candidate = current ? current + ' ' + w : w;
+    if (candidate.length > maxChars && current) { wrapped.push(current); current = w; }
+    else current = candidate;
+  });
+  if (current) wrapped.push(current);
+  if (wrapped.length <= 2) return wrapped;
+  return [wrapped[0], truncateToFit(wrapped.slice(1).join(' '), maxWidth, fontSize, charWidthFactor)];
 }
 
 // Greedily wraps text to fit a given pixel width, picking the largest font
@@ -69,7 +98,7 @@ function buildWheelSvg({ topic, sections }) {
   const W = 700, H = 620;
   const cx = 170, cy = H / 2;
   const rArc = 150;
-  const pillW = 400, pillH = 64, pillGap = 20;
+  const pillW = 400, pillH = 74, pillGap = 20;
   const totalPillsHeight = sections.length * pillH + (sections.length - 1) * pillGap;
   const startY = cy - totalPillsHeight / 2 + pillH / 2;
   const pillX = 260;
@@ -97,12 +126,17 @@ function buildWheelSvg({ topic, sections }) {
       <line x1="${dotX.toFixed(1)}" y1="${dotY.toFixed(1)}" x2="${tickX.toFixed(1)}" y2="${tickY.toFixed(1)}" stroke="${color}" stroke-width="2"/>
       <line x1="${tickX.toFixed(1)}" y1="${tickY.toFixed(1)}" x2="${pillX}" y2="${py.toFixed(1)}" stroke="${color}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
     `;
+    const wheelLabelLines = wrapLabelLines(label, pillW - 90, 20);
+    const wheelLineHeight = 23;
+    const wheelTextStartY = py + 7 - ((wheelLabelLines.length - 1) * wheelLineHeight) / 2;
+    const wheelLabelTspans = wheelLabelLines.map((l, li) => `<tspan x="${pillX + 70}"${li > 0 ? ` dy="${wheelLineHeight}"` : ''}>${escapeXml(l)}</tspan>`).join('');
+
     pills += `
       <g>
-        <rect x="${pillX}" y="${(py - pillH / 2).toFixed(1)}" width="${pillW}" height="${pillH}" rx="${pillH / 2}" fill="${color}"/>
+        <rect x="${pillX}" y="${(py - pillH / 2).toFixed(1)}" width="${pillW}" height="${pillH}" rx="30" fill="${color}"/>
         <circle cx="${pillX + 38}" cy="${py.toFixed(1)}" r="20" fill="#FAF5EF"/>
         <path d="M ${pillX + 30} ${py.toFixed(1)} l 5 5 l 10 -11" stroke="${color}" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="${pillX + 70}" y="${(py + 7).toFixed(1)}" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#16192A">${escapeXml(truncateToFit(label, pillW - 90, 21))}</text>
+        <text x="${pillX + 70}" y="${wheelTextStartY.toFixed(1)}" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A">${wheelLabelTspans}</text>
       </g>
     `;
   });
@@ -154,10 +188,15 @@ function buildTimelineSvg({ topic, sections }) {
     const textAnchor = onLeft ? 'end' : 'start';
     const textX = onLeft ? cardX + cardW - 20 : cardX + 20;
 
+    const labelLines = wrapLabelLines(label, cardW - 40, 18);
+    const lineHeight = 21;
+    const textStartY = cy + 6 - ((labelLines.length - 1) * lineHeight) / 2;
+    const labelTspans = labelLines.map((l, li) => `<tspan x="${textX}"${li > 0 ? ` dy="${lineHeight}"` : ''}>${escapeXml(l)}</tspan>`).join('');
+
     rows += `
       <line x1="${stubX1}" y1="${cy}" x2="${stubX2}" y2="${cy}" stroke="${color}" stroke-width="3"/>
       <rect x="${cardX}" y="${(cy - 30).toFixed(1)}" width="${cardW}" height="60" rx="14" fill="#FFFFFF" stroke="${color}" stroke-width="2"/>
-      <text x="${textX}" y="${(cy + 6).toFixed(1)}" text-anchor="${textAnchor}" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#16192A">${escapeXml(truncateToFit(label, cardW - 40, 19))}</text>
+      <text x="${textX}" y="${textStartY.toFixed(1)}" text-anchor="${textAnchor}" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#16192A">${labelTspans}</text>
       <circle cx="${lineX}" cy="${cy}" r="${badgeR}" fill="${color}"/>
       <text x="${lineX}" y="${(cy + 6).toFixed(1)}" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#FAF5EF">${i + 1}</text>
     `;
@@ -214,16 +253,21 @@ function buildRingSvg({ topic, sections }) {
     const onRight = Math.cos(((mid - 90) * Math.PI) / 180) >= 0;
     const labelR = rOuter + 70;
     const [labelAnchorX] = midXY(mid, labelR);
-    const boxW = 215, boxH = 42;
+    const boxW = 215, boxH = 54;
     const boxX = onRight ? Math.min(labelAnchorX, W - boxW - 10) : Math.max(10, labelAnchorX - boxW);
     const [midX, midY] = midXY(mid, labelR);
     const boxY = Math.min(Math.max(midY - boxH / 2, 10), H - boxH - 10);
+
+    const ringLabelLines = wrapLabelLines(label, boxW - 50, 13);
+    const ringLineHeight = 15;
+    const ringTextStartY = boxY + boxH / 2 + 5 - ((ringLabelLines.length - 1) * ringLineHeight) / 2;
+    const ringLabelTspans = ringLabelLines.map((l, li) => `<tspan x="${(boxX + 40).toFixed(1)}"${li > 0 ? ` dy="${ringLineHeight}"` : ''}>${escapeXml(l)}</tspan>`).join('');
 
     callouts += `
       <line x1="${dotX.toFixed(1)}" y1="${dotY.toFixed(1)}" x2="${(onRight ? boxX : boxX + boxW).toFixed(1)}" y2="${(boxY + boxH / 2).toFixed(1)}" stroke="${color}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.7"/>
       <rect x="${boxX.toFixed(1)}" y="${boxY.toFixed(1)}" width="${boxW}" height="${boxH}" rx="10" fill="#FFFFFF" stroke="${color}" stroke-width="2"/>
       <circle cx="${(boxX + 22).toFixed(1)}" cy="${(boxY + boxH / 2).toFixed(1)}" r="8" fill="${color}"/>
-      <text x="${(boxX + 40).toFixed(1)}" y="${(boxY + boxH / 2 + 5).toFixed(1)}" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#16192A">${escapeXml(truncateToFit(label, boxW - 50, 14))}</text>
+      <text x="${(boxX + 40).toFixed(1)}" y="${ringTextStartY.toFixed(1)}" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A">${ringLabelTspans}</text>
     `;
   });
 

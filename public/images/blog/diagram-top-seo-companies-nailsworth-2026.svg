@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 620">
+  <rect width="700" height="620" fill="#FAF5EF"/>
+  <circle cx="170" cy="310" r="190" fill="#F3ECE1" opacity="0.5"/>
+  <path d="M 22.3 284.0 A 150 150 0 0 1 317.7 284.0"
+        fill="none" stroke="#5EEAD4" stroke-width="14" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 22.3 284.0 A 150 150 0 0 1 170 160"
+        fill="none" stroke="#0B807C" stroke-width="14" stroke-linecap="round"/>
+  
+      <circle cx="22.3" cy="284.0" r="5" fill="#0EA5A0"/>
+      <line x1="22.3" y1="284.0" x2="-3.3" y2="279.4" stroke="#0EA5A0" stroke-width="2"/>
+      <line x1="-3.3" y1="279.4" x2="260" y2="216.0" stroke="#0EA5A0" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+      <circle cx="170.0" cy="160.0" r="5" fill="#14B8A6"/>
+      <line x1="170.0" y1="160.0" x2="170.0" y2="134.0" stroke="#14B8A6" stroke-width="2"/>
+      <line x1="170.0" y1="134.0" x2="260" y2="310.0" stroke="#14B8A6" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+      <circle cx="317.7" cy="284.0" r="5" fill="#FBBF24"/>
+      <line x1="317.7" y1="284.0" x2="343.3" y2="279.4" stroke="#FBBF24" stroke-width="2"/>
+      <line x1="343.3" y1="279.4" x2="260" y2="404.0" stroke="#FBBF24" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+  <text x="170" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#8A8371">WHAT IS</text>
+  <text x="170" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="800" fill="#16192A"><tspan x="170">TOP SEO COMPANIES IN</tspan><tspan x="170" dy="15">NAILSWORTH,</tspan><tspan x="170" dy="15">GLOUCESTERSHIRE:</tspan><tspan x="170" dy="15">2026</tspan></text>
+  <g transform="translate(110, 356)">
+    <rect width="120" height="30" rx="8" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="18" cy="15" r="9" fill="none" stroke="#0EA5A0" stroke-width="3"/>
+    <circle cx="18" cy="15" r="3" fill="#FBBF24"/>
+    <text x="34" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+  
+      <g>
+        <rect x="260" y="179.0" width="400" height="74" rx="30" fill="#0EA5A0"/>
+        <circle cx="298" cy="216.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 216.0 l 5 5 l 10 -11" stroke="#0EA5A0" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="211.5" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">Why Nailsworth's</tspan><tspan x="330" dy="23">Market Is Distinct</tspan></text>
+      </g>
+    
+      <g>
+        <rect x="260" y="273.0" width="400" height="74" rx="30" fill="#14B8A6"/>
+        <circle cx="298" cy="310.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 310.0 l 5 5 l 10 -11" stroke="#14B8A6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="317.0" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">Mono Studio</tspan></text>
+      </g>
+    
+      <g>
+        <rect x="260" y="367.0" width="400" height="74" rx="30" fill="#FBBF24"/>
+        <circle cx="298" cy="404.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 404.0 l 5 5 l 10 -11" stroke="#FBBF24" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="411.0" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">Tangy Media</tspan></text>
+      </g>
+    
+</svg>

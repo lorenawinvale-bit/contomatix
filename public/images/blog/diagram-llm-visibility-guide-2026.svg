@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 781.8">
+  <rect width="620" height="781.8" fill="#FAF5EF"/>
+  <text x="310" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-style="italic" font-weight="700" fill="#8A8371">A QUICK OVERVIEW OF</text>
+  <text x="310" y="89" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="800" fill="#16192A"><tspan x="310">LLM VISIBILITY IN 2026: A</tspan><tspan x="310" dy="23">PRACTICAL GUIDE TO GETTING CITED</tspan></text>
+  <g transform="translate(250, 131.8)">
+    <rect width="120" height="30" rx="8" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="18" cy="15" r="9" fill="none" stroke="#0EA5A0" stroke-width="3"/>
+    <circle cx="18" cy="15" r="3" fill="#FBBF24"/>
+    <text x="34" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+  <line x1="310" y1="191.8" x2="310" y2="697.8" stroke="#D6C5AA" stroke-width="3" stroke-dasharray="2 6"/>
+  
+      <line x1="286" y1="255.8" x2="270" y2="255.8" stroke="#0EA5A0" stroke-width="3"/>
+      <rect x="10" y="225.8" width="260" height="60" rx="14" fill="#FFFFFF" stroke="#0EA5A0" stroke-width="2"/>
+      <text x="250" y="251.3" text-anchor="end" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#16192A"><tspan x="250">What LLM</tspan><tspan x="250" dy="21">Visibility Actually…</tspan></text>
+      <circle cx="310" cy="255.8" r="24" fill="#0EA5A0"/>
+      <text x="310" y="261.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#FAF5EF">1</text>
+    
+      <line x1="334" y1="363.8" x2="350" y2="363.8" stroke="#14B8A6" stroke-width="3"/>
+      <rect x="350" y="333.8" width="260" height="60" rx="14" fill="#FFFFFF" stroke="#14B8A6" stroke-width="2"/>
+      <text x="370" y="359.3" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#16192A"><tspan x="370">Why It Isn't the</tspan><tspan x="370" dy="21">Same as Ranking</tspan></text>
+      <circle cx="310" cy="363.8" r="24" fill="#14B8A6"/>
+      <text x="310" y="369.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#FAF5EF">2</text>
+    
+      <line x1="286" y1="471.8" x2="270" y2="471.8" stroke="#FBBF24" stroke-width="3"/>
+      <rect x="10" y="441.8" width="260" height="60" rx="14" fill="#FFFFFF" stroke="#FBBF24" stroke-width="2"/>
+      <text x="250" y="467.3" text-anchor="end" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#16192A"><tspan x="250">How AI Engines</tspan><tspan x="250" dy="21">Decide What to Cite</tspan></text>
+      <circle cx="310" cy="471.8" r="24" fill="#FBBF24"/>
+      <text x="310" y="477.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#FAF5EF">3</text>
+    
+      <line x1="334" y1="579.8" x2="350" y2="579.8" stroke="#F5A623" stroke-width="3"/>
+      <rect x="350" y="549.8" width="260" height="60" rx="14" fill="#FFFFFF" stroke="#F5A623" stroke-width="2"/>
+      <text x="370" y="575.3" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#16192A"><tspan x="370">How Much Is</tspan><tspan x="370" dy="21">Actually at Stake</tspan></text>
+      <circle cx="310" cy="579.8" r="24" fill="#F5A623"/>
+      <text x="310" y="585.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#FAF5EF">4</text>
+    
+      <line x1="286" y1="687.8" x2="270" y2="687.8" stroke="#5EEAD4" stroke-width="3"/>
+      <rect x="10" y="657.8" width="260" height="60" rx="14" fill="#FFFFFF" stroke="#5EEAD4" stroke-width="2"/>
+      <text x="250" y="683.3" text-anchor="end" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#16192A"><tspan x="250">How to Measure</tspan><tspan x="250" dy="21">Your Own Visibility…</tspan></text>
+      <circle cx="310" cy="687.8" r="24" fill="#5EEAD4"/>
+      <text x="310" y="693.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#FAF5EF">5</text>
+    
+</svg>

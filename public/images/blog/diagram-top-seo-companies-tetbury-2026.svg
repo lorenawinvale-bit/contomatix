@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560">
+  <rect width="760" height="560" fill="#FAF5EF"/>
+  <path d="M 380.0 150.0 A 130 130 0 0 1 496.8 337.0 L 457.3 317.7 A 86 86 0 0 0 380.0 194.0 Z" fill="#0EA5A0"/><path d="M 492.6 345.0 A 130 130 0 0 1 272.2 352.7 L 308.7 328.1 A 86 86 0 0 0 454.5 323.0 Z" fill="#14B8A6"/><path d="M 267.4 345.0 A 130 130 0 0 1 370.9 150.3 L 374.0 194.2 A 86 86 0 0 0 305.5 323.0 Z" fill="#FBBF24"/>
+  <circle cx="380" cy="280" r="80" fill="#FAF5EF"/>
+  <text x="380" y="246.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#8A8371">OVERVIEW</text>
+  <text x="380" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="800" fill="#16192A"><tspan x="380">TOP SEO</tspan><tspan x="380" dy="14">COMPANIES IN</tspan><tspan x="380" dy="14">TETBURY,</tspan><tspan x="380" dy="14">GLOUCESTERSHIRE:</tspan><tspan x="380" dy="14">2026</tspan></text>
+  
+      <line x1="493.6" y1="209.0" x2="535.0" y2="174.0" stroke="#0EA5A0" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.7"/>
+      <rect x="535.0" y="147.0" width="215" height="54" rx="10" fill="#FFFFFF" stroke="#0EA5A0" stroke-width="2"/>
+      <circle cx="557.0" cy="174.0" r="8" fill="#0EA5A0"/>
+      <text x="575.0" y="171.5" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A"><tspan x="575.0">Why Tetbury's</tspan><tspan x="575.0" dy="15">Market Is Distinct</tspan></text>
+    
+      <line x1="384.7" y1="413.9" x2="387.0" y2="479.9" stroke="#14B8A6" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.7"/>
+      <rect x="387.0" y="452.9" width="215" height="54" rx="10" fill="#FFFFFF" stroke="#14B8A6" stroke-width="2"/>
+      <circle cx="409.0" cy="479.9" r="8" fill="#14B8A6"/>
+      <text x="427.0" y="477.4" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A"><tspan x="427.0">How This List Was</tspan><tspan x="427.0" dy="15">Researched</tspan></text>
+    
+      <line x1="261.7" y1="217.1" x2="225.0" y2="186.1" stroke="#FBBF24" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.7"/>
+      <rect x="10.0" y="159.1" width="215" height="54" rx="10" fill="#FFFFFF" stroke="#FBBF24" stroke-width="2"/>
+      <circle cx="32.0" cy="186.1" r="8" fill="#FBBF24"/>
+      <text x="50.0" y="183.6" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A"><tspan x="50.0">What This Means</tspan><tspan x="50.0" dy="15">If You're Hiring in…</tspan></text>
+    
+</svg>

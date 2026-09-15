@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 620">
+  <rect width="700" height="620" fill="#FAF5EF"/>
+  <circle cx="170" cy="310" r="190" fill="#F3ECE1" opacity="0.5"/>
+  <path d="M 22.3 336.0 A 150 150 0 1 1 317.7 336.0"
+        fill="none" stroke="#5EEAD4" stroke-width="14" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 22.3 336.0 A 150 150 0 0 1 170 160"
+        fill="none" stroke="#0B807C" stroke-width="14" stroke-linecap="round"/>
+  
+      <circle cx="22.3" cy="336.0" r="5" fill="#0EA5A0"/>
+      <line x1="22.3" y1="336.0" x2="-3.3" y2="340.6" stroke="#0EA5A0" stroke-width="2"/>
+      <line x1="-3.3" y1="340.6" x2="260" y2="169.0" stroke="#0EA5A0" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+      <circle cx="87.6" cy="184.7" r="5" fill="#14B8A6"/>
+      <line x1="87.6" y1="184.7" x2="73.3" y2="163.0" stroke="#14B8A6" stroke-width="2"/>
+      <line x1="73.3" y1="163.0" x2="260" y2="263.0" stroke="#14B8A6" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+      <circle cx="252.4" cy="184.7" r="5" fill="#FBBF24"/>
+      <line x1="252.4" y1="184.7" x2="266.7" y2="163.0" stroke="#FBBF24" stroke-width="2"/>
+      <line x1="266.7" y1="163.0" x2="260" y2="357.0" stroke="#FBBF24" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+      <circle cx="317.7" cy="336.0" r="5" fill="#F5A623"/>
+      <line x1="317.7" y1="336.0" x2="343.3" y2="340.6" stroke="#F5A623" stroke-width="2"/>
+      <line x1="343.3" y1="340.6" x2="260" y2="451.0" stroke="#F5A623" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+    
+  <text x="170" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#8A8371">WHAT IS</text>
+  <text x="170" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="800" fill="#16192A"><tspan x="170">SEO</tspan><tspan x="170" dy="24">COMPANIES IN</tspan><tspan x="170" dy="24">BEAUMONT, TX</tspan></text>
+  <g transform="translate(110, 356)">
+    <rect width="120" height="30" rx="8" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <circle cx="18" cy="15" r="9" fill="none" stroke="#0EA5A0" stroke-width="3"/>
+    <circle cx="18" cy="15" r="3" fill="#FBBF24"/>
+    <text x="34" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+  
+      <g>
+        <rect x="260" y="132.0" width="400" height="74" rx="30" fill="#0EA5A0"/>
+        <circle cx="298" cy="169.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 169.0 l 5 5 l 10 -11" stroke="#0EA5A0" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="164.5" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">Why Beaumont's Market</tspan><tspan x="330" dy="23">Is Distinct</tspan></text>
+      </g>
+    
+      <g>
+        <rect x="260" y="226.0" width="400" height="74" rx="30" fill="#14B8A6"/>
+        <circle cx="298" cy="263.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 263.0 l 5 5 l 10 -11" stroke="#14B8A6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="258.5" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">Americom Marketing,</tspan><tspan x="330" dy="23">LP</tspan></text>
+      </g>
+    
+      <g>
+        <rect x="260" y="320.0" width="400" height="74" rx="30" fill="#FBBF24"/>
+        <circle cx="298" cy="357.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 357.0 l 5 5 l 10 -11" stroke="#FBBF24" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="364.0" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">Ark Marketing</tspan></text>
+      </g>
+    
+      <g>
+        <rect x="260" y="414.0" width="400" height="74" rx="30" fill="#F5A623"/>
+        <circle cx="298" cy="451.0" r="20" fill="#FAF5EF"/>
+        <path d="M 290 451.0 l 5 5 l 10 -11" stroke="#F5A623" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="330" y="446.5" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#16192A"><tspan x="330">How These 2 Agencies</tspan><tspan x="330" dy="23">Compare</tspan></text>
+      </g>
+    
+</svg>
