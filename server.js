@@ -141,11 +141,16 @@ app.use(express.static(path.join(__dirname, 'public'), {
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// A missing SESSION_SECRET in production should never take the whole site
+// down — generate a random one for this process instead of crashing on boot.
+// It just means existing admin sessions won't survive a restart; add a real
+// SESSION_SECRET to the host's env vars when convenient.
 if (isProd && !process.env.SESSION_SECRET) {
-  throw new Error('SESSION_SECRET must be set in production — refusing to start with the dev fallback secret.');
+  console.warn('[server] SESSION_SECRET is not set — using a random secret for this process only. Set SESSION_SECRET in the environment to keep admin sessions stable across restarts.');
 }
+const sessionSecret = process.env.SESSION_SECRET || (isProd ? require('crypto').randomBytes(32).toString('hex') : 'dev-only-insecure-secret');
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'dev-only-insecure-secret',
+  secret: sessionSecret,
   resave: false,
   saveUninitialized: false,
   cookie: {
