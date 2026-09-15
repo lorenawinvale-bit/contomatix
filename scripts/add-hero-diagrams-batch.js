@@ -31,7 +31,14 @@ const BATCH = [
   { slug: 'wordpress-seo-consultant-guide-2026', style: 'timeline', topic: 'WordPress SEO Consulting', sections: ['Why It Needs This', '2026 Changes', 'What It Involves', 'The Plugin Stack', 'Content & Structure'] },
   { slug: 'shopify-seo-consultant-guide-2026', style: 'ring', topic: 'Shopify SEO Consulting', sections: ['Why It Needs This', '2026 Changes', 'What It Involves', 'App Bloat Problem', 'Product Pages'] },
   { slug: 'answer-engine-optimization-aeo-guide-2026', style: 'wheel', topic: 'Answer Engine Optimization', sections: ['What AEO Means', 'AEO vs SEO', "What's Actually New", 'Answer First', 'Question Headings'] },
-  { slug: 'how-is-ranking-different-ppc-vs-seo-2026', style: 'timeline', topic: 'PPC vs SEO Ranking', sections: ['The Core Difference', 'PPC Ranking', 'Ad Rank Thresholds', 'SEO Ranking', 'Minutes vs. Months'] }
+  { slug: 'how-is-ranking-different-ppc-vs-seo-2026', style: 'timeline', topic: 'PPC vs SEO Ranking', sections: ['The Core Difference', 'PPC Ranking', 'Ad Rank Thresholds', 'SEO Ranking', 'Minutes vs. Months'] },
+  { slug: 'top-recruiting-companies-deer-park-2026', style: 'wheel', topic: 'Recruiting Companies in Deer Park, TX', sections: ["Deer Park's Market", 'ProSource Staffing', 'Employee Staffing', 'Meador Staffing', 'ResourceMFG'] },
+  { slug: 'top-web-design-companies-deer-park-2026', style: 'timeline', topic: 'Web Design in Deer Park, TX', sections: ["Deer Park's Market", 'Our Verified Pick', 'How We Verified It', 'Watch for Traps'] },
+  { slug: 'how-to-find-competitor-backlinks-2026', style: 'ring', topic: 'Finding Competitor Backlinks', sections: ['Why It Pays Off', 'Pick Competitors', 'Backlink Gap Tools', 'Free Manual Method', 'Outreach Next'] },
+  { slug: 'backlink-analysis-tools-2026', style: 'wheel', topic: 'Backlink Analysis Tools', sections: ['What They Measure', 'Why Numbers Differ', 'Tool Categories', '2026 Pricing', 'Reading Reports'] },
+  { slug: 'automated-link-building-2026', style: 'timeline', topic: 'Automated Link Building', sections: ['What It Means', "Google's Guidelines", 'The Real Risks', 'Safe vs Not Safe', 'The Hybrid Approach'] },
+  { slug: 'top-recruiting-companies-league-city-2026', style: 'ring', topic: 'Recruiting in League City, TX', sections: ["League City's Market", 'Spherion Staffing', 'BIC Recruiting', 'How We Verified'] },
+  { slug: 'top-web-design-companies-league-city-2026', style: 'wheel', topic: 'Web Design in League City, TX', sections: ["League City's Market", 'Our Verified Pick', 'How We Verified It', 'Watch for Traps'] }
 ];
 
 const posts = JSON.parse(fs.readFileSync(FILE, 'utf8'));
