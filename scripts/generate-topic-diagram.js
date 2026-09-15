@@ -29,6 +29,17 @@ function brandMark(x, y) {
   </g>`;
 }
 
+// Truncates a single-line label to fit a pixel width at a given font size,
+// adding an ellipsis — a safety net for real post headings that run longer
+// than the short hand-picked demo labels the layouts were tuned against.
+function truncateToFit(text, maxWidth, fontSize, charWidthFactor) {
+  charWidthFactor = charWidthFactor || 0.58;
+  const maxChars = Math.floor(maxWidth / (charWidthFactor * fontSize));
+  const s = String(text);
+  if (s.length <= maxChars) return s;
+  return s.slice(0, Math.max(1, maxChars - 1)).trimEnd() + '…';
+}
+
 // Greedily wraps text to fit a given pixel width, picking the largest font
 // size (within a range) that keeps the result to maxLines.
 function wrapToFit(text, { maxWidth, maxSize, minSize, maxLines, charWidthFactor }) {
@@ -91,7 +102,7 @@ function buildWheelSvg({ topic, sections }) {
         <rect x="${pillX}" y="${(py - pillH / 2).toFixed(1)}" width="${pillW}" height="${pillH}" rx="${pillH / 2}" fill="${color}"/>
         <circle cx="${pillX + 38}" cy="${py.toFixed(1)}" r="20" fill="#FAF5EF"/>
         <path d="M ${pillX + 30} ${py.toFixed(1)} l 5 5 l 10 -11" stroke="${color}" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="${pillX + 70}" y="${(py + 7).toFixed(1)}" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#16192A">${escapeXml(label)}</text>
+        <text x="${pillX + 70}" y="${(py + 7).toFixed(1)}" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#16192A">${escapeXml(truncateToFit(label, pillW - 90, 21))}</text>
       </g>
     `;
   });
@@ -120,7 +131,7 @@ function buildTimelineSvg({ topic, sections }) {
   const W = 620;
   const rowH = 108;
   const lineX = W / 2;
-  const cardW = 240;
+  const cardW = 260;
   const badgeR = 24;
 
   const { size: titleSize, lines: titleLines } = wrapToFit(topic, { maxWidth: 460, maxSize: 26, minSize: 16, maxLines: 2 });
@@ -146,7 +157,7 @@ function buildTimelineSvg({ topic, sections }) {
     rows += `
       <line x1="${stubX1}" y1="${cy}" x2="${stubX2}" y2="${cy}" stroke="${color}" stroke-width="3"/>
       <rect x="${cardX}" y="${(cy - 30).toFixed(1)}" width="${cardW}" height="60" rx="14" fill="#FFFFFF" stroke="${color}" stroke-width="2"/>
-      <text x="${textX}" y="${(cy + 6).toFixed(1)}" text-anchor="${textAnchor}" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#16192A">${escapeXml(label)}</text>
+      <text x="${textX}" y="${(cy + 6).toFixed(1)}" text-anchor="${textAnchor}" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#16192A">${escapeXml(truncateToFit(label, cardW - 40, 19))}</text>
       <circle cx="${lineX}" cy="${cy}" r="${badgeR}" fill="${color}"/>
       <text x="${lineX}" y="${(cy + 6).toFixed(1)}" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#FAF5EF">${i + 1}</text>
     `;
@@ -167,7 +178,7 @@ function buildTimelineSvg({ topic, sections }) {
 
 // ---------- Style 3: full ring / donut with two-sided callouts ----------
 function buildRingSvg({ topic, sections }) {
-  const W = 700, H = 560;
+  const W = 760, H = 560;
   const cx = W / 2, cy = H / 2;
   const rOuter = 130, rInner = 86;
   const n = sections.length;
@@ -203,7 +214,7 @@ function buildRingSvg({ topic, sections }) {
     const onRight = Math.cos(((mid - 90) * Math.PI) / 180) >= 0;
     const labelR = rOuter + 70;
     const [labelAnchorX] = midXY(mid, labelR);
-    const boxW = 190, boxH = 42;
+    const boxW = 215, boxH = 42;
     const boxX = onRight ? Math.min(labelAnchorX, W - boxW - 10) : Math.max(10, labelAnchorX - boxW);
     const [midX, midY] = midXY(mid, labelR);
     const boxY = Math.min(Math.max(midY - boxH / 2, 10), H - boxH - 10);
@@ -212,7 +223,7 @@ function buildRingSvg({ topic, sections }) {
       <line x1="${dotX.toFixed(1)}" y1="${dotY.toFixed(1)}" x2="${(onRight ? boxX : boxX + boxW).toFixed(1)}" y2="${(boxY + boxH / 2).toFixed(1)}" stroke="${color}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.7"/>
       <rect x="${boxX.toFixed(1)}" y="${boxY.toFixed(1)}" width="${boxW}" height="${boxH}" rx="10" fill="#FFFFFF" stroke="${color}" stroke-width="2"/>
       <circle cx="${(boxX + 22).toFixed(1)}" cy="${(boxY + boxH / 2).toFixed(1)}" r="8" fill="${color}"/>
-      <text x="${(boxX + 40).toFixed(1)}" y="${(boxY + boxH / 2 + 5).toFixed(1)}" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#16192A">${escapeXml(label)}</text>
+      <text x="${(boxX + 40).toFixed(1)}" y="${(boxY + boxH / 2 + 5).toFixed(1)}" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#16192A">${escapeXml(truncateToFit(label, boxW - 50, 14))}</text>
     `;
   });
 
