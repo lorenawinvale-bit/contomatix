@@ -1381,6 +1381,18 @@ details[open] .faq-icon::before, details[open] .faq-icon::after { background: #F
 .post-hero h1 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); max-width: 26ch; margin: 18px 0 22px; line-height: 1.12; }
 .post-meta { color: var(--text-faint); font-size: 0.85rem; }
 
+.post-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 440px;
+  gap: 40px;
+  align-items: center;
+}
+.post-hero-diagram img { width: 100%; height: auto; display: block; }
+@media (max-width: 900px) {
+  .post-hero-grid { grid-template-columns: 1fr; }
+  .post-hero-diagram { order: -1; max-width: 420px; margin: 0 auto; }
+}
+
 .post-breadcrumb {
   display: flex;
   align-items: center;
