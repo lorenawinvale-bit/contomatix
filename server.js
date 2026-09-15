@@ -200,7 +200,7 @@ app.get('/sitemap.xml', (req, res) => {
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
     ...locations.map(l => ({ loc: `/services/${l.slug}`, lastmod: today })),
-    ...blogStore.getAll().map(p => ({ loc: `/blog/${p.slug}`, lastmod: p.date }))
+    ...blogStore.getPublished().map(p => ({ loc: `/blog/${p.slug}`, lastmod: p.date }))
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -243,7 +243,7 @@ ${serviceLines}
 });
 
 app.get('/', (req, res) => {
-  const allPosts = blogStore.getAll();
+  const allPosts = blogStore.getPublished();
   const latestPosts = [...allPosts]
     .reverse()
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
@@ -383,7 +383,7 @@ app.get('/tools/invoice-generator', (req, res) => {
 });
 
 app.get('/blog', (req, res) => {
-  const blogPosts = blogStore.getAll();
+  const blogPosts = blogStore.getPublished();
   const categoryNames = [...new Set(blogPosts.map(p => p.category))];
   const categoryBySlug = new Map(categoryNames.map(c => [blogStore.slugify(c), c]));
   const requestedSlug = (req.query.category || 'all').toLowerCase();
@@ -445,6 +445,11 @@ app.get('/blog', (req, res) => {
 app.get('/blog/:slug', (req, res) => {
   const post = blogStore.getBySlug(req.params.slug);
   if (!post) return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
+  // A scheduled (future-dated) post stays 404 for the public until its date
+  // arrives; an admin can still open the link directly to preview it.
+  if (!blogStore.isPublished(post) && !(req.session && req.session.isAdmin)) {
+    return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
+  }
   const author = post.author ? team.find(m => m.name === post.author) : null;
   const wordCount = post.content.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).length;
   const readMinutes = Math.max(1, Math.round(wordCount / 200));
@@ -474,7 +479,7 @@ app.get('/team', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  const blogPosts = blogStore.getAll();
+  const blogPosts = blogStore.getPublished();
   res.render('pages/about', {
     title: 'About Contomatix — White-Hat SEO & Link Building Agency',
     description: 'Learn what Contomatix does, how the team works, and how we help brands rank higher through white-hat SEO.',
@@ -596,6 +601,7 @@ app.get('/admin', requireAdmin, (req, res) => {
     title: 'Posts',
     layout: 'admin/layout',
     posts,
+    today: new Date().toISOString().slice(0, 10),
     success: req.query.success || null,
     error: req.query.error || null
   });
@@ -620,7 +626,8 @@ app.post('/admin/posts/new', requireAdmin, (req, res) => {
   const posts = blogStore.getAll();
   try {
     blogStore.create({ slug: cleanSlug, title, category, excerpt, date, author, image: image || '', content });
-    res.redirect('/admin?success=' + encodeURIComponent('Post published.'));
+    const msg = blogStore.isPublished({ date }) ? 'Post published.' : `Post scheduled — goes live automatically on ${date}.`;
+    res.redirect('/admin?success=' + encodeURIComponent(msg));
   } catch (err) {
     res.render('admin/post-form', {
       title: 'New Post',
@@ -655,7 +662,8 @@ app.post('/admin/posts/:slug/edit', requireAdmin, (req, res) => {
   const posts = blogStore.getAll();
   try {
     blogStore.update(req.params.slug, { slug: cleanSlug, title, category, excerpt, date, author, image: image || '', content });
-    res.redirect('/admin?success=' + encodeURIComponent('Changes saved.'));
+    const msg = blogStore.isPublished({ date }) ? 'Changes saved.' : `Changes saved — scheduled to go live automatically on ${date}.`;
+    res.redirect('/admin?success=' + encodeURIComponent(msg));
   } catch (err) {
     res.render('admin/post-form', {
       title: 'Edit Post',

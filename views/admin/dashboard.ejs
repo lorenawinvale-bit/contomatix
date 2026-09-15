@@ -28,7 +28,10 @@
             <div class="muted">/blog/<%= p.slug %></div>
           </td>
           <td><span class="pill"><%= p.category %></span></td>
-          <td class="muted"><%= p.date %></td>
+          <td class="muted">
+            <%= p.date %>
+            <% if (p.date > today) { %><span class="pill pill-scheduled">Scheduled</span><% } %>
+          </td>
           <td class="muted"><%= p.author %></td>
           <td class="actions">
             <a href="/blog/<%= p.slug %>" target="_blank" class="btn btn-outline btn-sm">View</a>
