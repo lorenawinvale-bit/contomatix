@@ -195,7 +195,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -255,6 +255,14 @@ app.get('/', (req, res) => {
     postCount: allPosts.length,
     marketCount: allPosts.filter(p => p.slug.startsWith('best-seo-companies-in-')).length,
     latestPosts
+  });
+});
+
+app.get('/services', (req, res) => {
+  res.render('pages/services', {
+    title: 'SEO & Link Building Services — Contomatix',
+    description: 'Link building, guest posting, on-page and off-page SEO, white-label SEO, and keyword research — six services built around one connected strategy.',
+    pageClass: 'page-services'
   });
 });
 
@@ -445,6 +453,8 @@ app.get('/blog/:slug', (req, res) => {
     description: post.excerpt,
     pageClass: 'page-blog-post',
     image: post.image,
+    ogType: 'article',
+    articlePublishedTime: post.date + 'T00:00:00Z',
     post,
     categorySlug: blogStore.slugify(post.category),
     author: author ? withPhotoCheck(author) : null,

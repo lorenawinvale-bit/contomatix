@@ -10,7 +10,7 @@
   <% } %>
   <link rel="canonical" href="<%= site.baseUrl %><%= (typeof canonicalPath !== 'undefined' && canonicalPath) ? canonicalPath : (currentPath === '/' ? '' : currentPath) %>">
   <% var ogImageUrl = site.baseUrl + (typeof image !== 'undefined' && image ? image : '/images/og-default.png'); %>
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="<%= typeof ogType !== 'undefined' ? ogType : 'website' %>">
   <meta property="og:site_name" content="<%= siteName %>">
   <meta property="og:title" content="<%= title %>">
   <meta property="og:description" content="<%= description %>">
@@ -18,6 +18,9 @@
   <meta property="og:image" content="<%= ogImageUrl %>">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <% if (typeof articlePublishedTime !== 'undefined' && articlePublishedTime) { %>
+  <meta property="article:published_time" content="<%= articlePublishedTime %>">
+  <% } %>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= title %>">
   <meta name="twitter:description" content="<%= description %>">
@@ -64,6 +67,10 @@
       image: site.baseUrl + '/images/favicon-512.png',
       description: 'Contomatix provides white-hat link building, guest posting, on-page SEO, off-page SEO, and keyword research services.',
       knowsAbout: ['Link Building', 'Guest Posting', 'On-Page SEO', 'Off-Page SEO', 'Keyword Research'],
+      sameAs: [
+        'https://www.facebook.com/profile.php?id=61594091741317',
+        'https://www.linkedin.com/company/contomatix/'
+      ],
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer service',

@@ -1,0 +1,70 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Services</span>
+    <h1>SEO and link building services built around one connected strategy</h1>
+    <p>Six services that compound with each other rather than working in isolation: research finds the right targets, content and links build authority, and on-page work makes sure that authority actually converts into rankings.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="service-rows">
+      <% services.forEach(function(s, i) { %>
+        <div class="service-row <%= i % 2 === 1 ? 'flip' : '' %>">
+          <div class="sr-copy">
+            <span class="sr-badge"><span class="sr-num">0<%= i + 1 %></span> <%= i === 0 ? '★ Flagship service' : 'Core service' %></span>
+            <h2><%= s.title %></h2>
+            <p class="sr-lead"><%= s.summary %></p>
+            <ul class="sr-points">
+              <% s.points.slice(0, 4).forEach(function(pt) { %>
+                <li><%= pt %></li>
+              <% }); %>
+            </ul>
+            <div class="sr-actions">
+              <a href="/services/<%= s.slug %>" class="btn btn-primary">Explore <%= s.title %> &rarr;</a>
+              <a href="/contact" class="btn btn-outline">Get a free audit</a>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-band">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <span class="cta-orb cta-orb-3"></span>
+      <h2>Not sure which service you need?</h2>
+      <p>Send us your site and goals — we'll tell you honestly which of these actually moves the needle for you first.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Contomatix Services',
+    itemListElement: services.map(function(s, i) {
+      return {
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'Service',
+          name: s.title,
+          description: s.summary,
+          url: site.baseUrl + '/services/' + s.slug,
+          provider: { '@id': site.baseUrl + '/#organization' }
+        }
+      };
+    })
+  }) %>
+</script>

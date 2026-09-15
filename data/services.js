@@ -3,7 +3,7 @@ module.exports = [
     slug: 'link-building',
     title: 'Link Building',
     icon: 'link',
-    summary: 'Earn high-authority backlinks that move your rankings, not just your link count.',
+    summary: 'Earn high-authority backlinks that move your rankings, not just your link count — vetted by hand, no PBNs or automation.',
     description: 'We build editorial, white-hat backlinks from relevant, high-authority sites in your niche — through outreach-earned placements and link insertions in already-ranking content. Every link is manually vetted for domain authority, topical relevance, and traffic — no PBNs, no link farms. Most campaigns start with a backlink gap analysis against the sites already outranking you, so the first placements target the exact links doing the most work in your niche rather than whatever happens to be available that month.',
     points: [
       'Manual outreach to relevant, high-DA publishers',
@@ -27,7 +27,7 @@ module.exports = [
     slug: 'guest-posting',
     title: 'Guest Posting',
     icon: 'post',
-    summary: 'Original content published on relevant blogs, with a natural link back to your site.',
+    summary: 'Original content published on relevant blogs, with a natural link back to your site — written by us, reviewed by their editors.',
     description: 'We write and place original, high-quality guest articles on real, relevant publications in your industry — building both authority and referral traffic alongside your backlink profile. Every target site is vetted for real organic traffic and an active, engaged readership before outreach even starts, so the placement earns you readers as well as a link — not just a line item on a backlink report.',
     points: [
       'Hand-picked, niche-relevant publishers',
@@ -50,7 +50,7 @@ module.exports = [
     slug: 'on-page-seo',
     title: 'On-Page SEO',
     icon: 'onpage',
-    summary: 'Structure, content, and technical fixes that help search engines understand your pages.',
+    summary: 'Structure, content, and technical fixes that help search engines understand your pages and rank them for the terms that matter.',
     description: 'From title tags and header structure to internal linking and content optimization, we tune every element on your page so it is built to rank for the terms that matter to your business. On-page work is usually where we start a new engagement, because it fixes the things a backlink can\'t: pages that rank on page two despite decent authority almost always have a fixable on-page gap holding them back, and closing it is faster and cheaper than any amount of additional link building.',
     points: [
       'Title, meta & header optimization',
@@ -73,7 +73,7 @@ module.exports = [
     slug: 'off-page-seo',
     title: 'Off-Page SEO',
     icon: 'offpage',
-    summary: 'Everything outside your site that builds trust, authority, and visibility with search engines.',
+    summary: 'Everything outside your site that builds trust, authority, and visibility with search engines — links, mentions, citations, and PR.',
     description: 'Off-page SEO covers the signals search engines use to judge your site\'s credibility — backlinks, brand mentions, citations, and digital PR — all managed with a long-term authority-building strategy. Where our link building service focuses on individual placements, off-page SEO is the strategy layer above it: deciding which authority signals matter most for your specific niche and competitive gap, then coordinating link building, citations, and digital PR toward the same target keywords instead of working in isolation.',
     points: [
       'Backlink & authority strategy',
@@ -119,7 +119,7 @@ module.exports = [
     slug: 'keyword-research',
     title: 'Keyword Research',
     icon: 'keyword',
-    summary: 'Find the exact terms your customers search for — and the gaps your competitors missed.',
+    summary: 'Find the exact terms your customers search for and the gaps your competitors missed — mapped to a page and a plan.',
     description: 'We research search volume, intent, and competition to build a keyword roadmap that prioritizes terms you can realistically rank for and that actually drive qualified traffic. The output is deliberately practical: every keyword is mapped to a specific page and a specific reason it was prioritized, so it plugs directly into a content calendar or link-target list instead of sitting in a spreadsheet nobody acts on.',
     points: [
       'Search intent & volume analysis',
