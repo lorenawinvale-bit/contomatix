@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
   <meta name="description" content="<%= description %>">
-  <link rel="canonical" href="<%= site.baseUrl %><%= currentPath === '/' ? '' : currentPath %>">
+  <% if (typeof noIndex !== 'undefined' && noIndex) { %>
+  <meta name="robots" content="noindex,follow">
+  <% } %>
+  <link rel="canonical" href="<%= site.baseUrl %><%= (typeof canonicalPath !== 'undefined' && canonicalPath) ? canonicalPath : (currentPath === '/' ? '' : currentPath) %>">
+  <% var ogImageUrl = site.baseUrl + (typeof image !== 'undefined' && image ? image : '/images/og-default.png'); %>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="<%= siteName %>">
   <meta property="og:title" content="<%= title %>">
   <meta property="og:description" content="<%= description %>">
   <meta property="og:url" content="<%= site.baseUrl %><%= currentPath === '/' ? '' : currentPath %>">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="<%= ogImageUrl %>">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= title %>">
   <meta name="twitter:description" content="<%= description %>">
+  <meta name="twitter:image" content="<%= ogImageUrl %>">
   <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css?v=<%= site.assetVersion %>">
@@ -21,6 +29,8 @@
   <link rel="preload" as="image" href="/images/hero-dashboard.svg" fetchpriority="high">
   <% } %>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <meta name="google-site-verification" content="8lh8KHul6gzaUG0L875alrbFWVjjM2H-CaOl2erKwYU" />
 
   <!-- Google Analytics (GA4) — the script itself only loads after cookie consent
@@ -50,8 +60,8 @@
       '@id': site.baseUrl + '/#organization',
       name: 'Contomatix',
       url: site.baseUrl,
-      logo: site.baseUrl + '/images/favicon.svg',
-      image: site.baseUrl + '/images/favicon.svg',
+      logo: site.baseUrl + '/images/favicon-512.png',
+      image: site.baseUrl + '/images/favicon-512.png',
       description: 'Contomatix provides white-hat link building, guest posting, on-page SEO, off-page SEO, and keyword research services.',
       knowsAbout: ['Link Building', 'Guest Posting', 'On-Page SEO', 'Off-Page SEO', 'Keyword Research'],
       contactPoint: {

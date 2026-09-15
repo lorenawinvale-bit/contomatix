@@ -9,9 +9,9 @@
       <a href="/services/link-building" class="btn btn-outline">Explore services</a>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><span class="num">5</span><span class="label">Core services</span></div>
+      <div class="hero-stat"><span class="num"><%= services.length %></span><span class="label">Core services</span></div>
       <div class="hero-stat"><span class="num">100%</span><span class="label">White-hat</span></div>
-      <div class="hero-stat"><span class="num">24/7</span><span class="label">Support</span></div>
+      <div class="hero-stat"><span class="num">&lt;24h</span><span class="label">Reply time</span></div>
     </div>
   </div>
   <div class="hero-shot">
@@ -88,7 +88,7 @@
     <div class="section-head centered">
       <span class="eyebrow">The difference</span>
       <h2>Before vs. with Contomatix</h2>
-      <p>Drag the slider — this is what a sustained white-hat campaign does to a site's analytics.</p>
+      <p>Drag the slider — an illustrative example of what a sustained white-hat campaign is meant to do to a site's analytics.</p>
     </div>
     <%- include('../partials/compare') %>
   </div>
@@ -117,10 +117,10 @@
       <p>Rather than cite client results you can't verify, here's our own public output.</p>
     </div>
     <div class="stats-grid">
-      <div class="stat-big"><span class="num" data-count="<%= postCount %>">0</span><span class="suffix">+</span><label>Guides published</label></div>
-      <div class="stat-big"><span class="num" data-count="<%= marketCount %>">0</span><span class="suffix"></span><label>Markets hand-verified</label></div>
-      <div class="stat-big"><span class="num" data-count="<%= services.length %>">0</span><span class="suffix"></span><label>Core services</label></div>
-      <div class="stat-big"><span class="num" data-count="100">0</span><span class="suffix">%</span><label>White-hat, always</label></div>
+      <div class="stat-big"><span class="num" data-count="<%= postCount %>"><%= postCount %></span><span class="suffix">+</span><label>Guides published</label></div>
+      <div class="stat-big"><span class="num" data-count="<%= marketCount %>"><%= marketCount %></span><span class="suffix"></span><label>Markets hand-verified</label></div>
+      <div class="stat-big"><span class="num" data-count="<%= services.length %>"><%= services.length %></span><span class="suffix"></span><label>Core services</label></div>
+      <div class="stat-big"><span class="num" data-count="100">100</span><span class="suffix">%</span><label>White-hat, always</label></div>
     </div>
   </div>
 </section>
@@ -136,7 +136,7 @@
       <% latestPosts.forEach(function(p) { %>
         <a class="story-card" href="/blog/<%= p.slug %>">
           <div class="story-thumb">
-            <% if (p.image) { %><img src="<%= p.image %>" alt="" width="192" height="152" loading="lazy"><% } %>
+            <% if (p.image) { %><img src="<%= p.image %>" alt="<%= p.title %>" width="192" height="152" loading="lazy"><% } %>
           </div>
           <div>
             <span class="story-tag"><%= p.category %></span>

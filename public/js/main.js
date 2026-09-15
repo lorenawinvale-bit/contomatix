@@ -488,6 +488,9 @@ function initBigCounters() {
     var target = parseInt(el.getAttribute('data-count'), 10);
     var start = null;
     var duration = 1400;
+    // The server renders the real number so it's correct without JS (SEO,
+    // no-JS); only reset to 0 here, at animation time, for the count-up effect.
+    el.textContent = '0';
     function tick(ts) {
       if (!start) start = ts;
       var p = Math.min((ts - start) / duration, 1);

@@ -15,6 +15,7 @@ const site = require('./data/site');
 const { sendContactEmail, smtpConfigured } = require('./lib/mailer');
 const { checkLogin, requireAdmin } = require('./lib/adminAuth');
 const multer = require('multer');
+const rateLimit = require('express-rate-limit');
 
 const BLOG_IMAGES_DIR = path.join(__dirname, 'public', 'images', 'blog');
 const upload = multer({
@@ -64,6 +65,52 @@ function withPhotoCheck(member) {
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const isProd = process.env.NODE_ENV === 'production';
+
+// Hostinger terminates TLS in front of this app — without this, req.secure and
+// req.protocol always read "http" even on a real https:// request, which would
+// break the https redirect below and mark secure cookies as never-sendable.
+app.set('trust proxy', 1);
+app.disable('x-powered-by');
+
+// Canonical host + protocol: fold www / http / mixed-case paths onto one
+// canonical URL before any route runs, so the site never serves the same
+// content at two different addresses (a duplicate-content SEO issue).
+app.use((req, res, next) => {
+  const host = (req.headers.host || '').toLowerCase();
+  const canonicalHost = host.replace(/^www\./, '');
+  const wantsHttps = isProd && req.protocol !== 'https';
+  const hasUpperPath = req.path !== req.path.toLowerCase() && !req.path.startsWith('/admin');
+  if (host !== canonicalHost || wantsHttps || hasUpperPath) {
+    const targetHost = canonicalHost || host;
+    const targetPath = hasUpperPath ? req.path.toLowerCase() : req.path;
+    const targetProtocol = isProd ? 'https' : req.protocol;
+    const qs = req.url.slice(req.path.length);
+    return res.redirect(301, `${targetProtocol}://${targetHost}${targetPath}${qs}`);
+  }
+  next();
+});
+
+// Security headers (no extra dependency needed for a handful of static values).
+app.use((req, res, next) => {
+  if (isProd) res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  next();
+});
+
+// None of the public pages are personalized (no per-visitor content), so a
+// short, CDN-cacheable window is safe. Admin (session-gated) and every
+// non-GET request (the /contact submit handler) are excluded — those must
+// never be served from a shared cache.
+app.use((req, res, next) => {
+  if (req.method === 'GET' && !req.path.startsWith('/admin')) {
+    res.setHeader('Cache-Control', 'public, max-age=60, s-maxage=600, stale-while-revalidate=86400');
+  }
+  next();
+});
 
 // View engine
 app.set('view engine', 'ejs');
@@ -94,11 +141,19 @@ app.use(express.static(path.join(__dirname, 'public'), {
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+if (isProd && !process.env.SESSION_SECRET) {
+  throw new Error('SESSION_SECRET must be set in production — refusing to start with the dev fallback secret.');
+}
 app.use(session({
   secret: process.env.SESSION_SECRET || 'dev-only-insecure-secret',
   resave: false,
   saveUninitialized: false,
-  cookie: { httpOnly: true, maxAge: 1000 * 60 * 60 * 8 } // 8 hours
+  cookie: {
+    httpOnly: true,
+    secure: isProd,
+    sameSite: 'lax',
+    maxAge: 1000 * 60 * 60 * 8 // 8 hours
+  }
 }));
 
 // Helper: pass common data to every view
@@ -116,15 +171,18 @@ app.use((req, res, next) => {
 // ---------- Routes ----------
 
 app.get('/sitemap.xml', (req, res) => {
+  const today = new Date().toISOString().slice(0, 10);
   const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/invoice-generator'];
-  const servicePaths = services.map(s => `/services/${s.slug}`);
-  const locationPaths = locations.map(l => `/services/${l.slug}`);
-  const blogPaths = blogStore.getAll().map(p => `/blog/${p.slug}`);
-  const urls = [...staticPaths, ...servicePaths, ...locationPaths, ...blogPaths];
+  const urls = [
+    ...staticPaths.map(u => ({ loc: u, lastmod: today })),
+    ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
+    ...locations.map(l => ({ loc: `/services/${l.slug}`, lastmod: today })),
+    ...blogStore.getAll().map(p => ({ loc: `/blog/${p.slug}`, lastmod: p.date }))
+  ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(u => `  <url><loc>${site.baseUrl}${u}</loc></url>`).join('\n')}
+${urls.map(u => `  <url><loc>${site.baseUrl}${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`).join('\n')}
 </urlset>`;
 
   res.type('application/xml').send(xml);
@@ -199,7 +257,7 @@ app.get('/services/:slug', (req, res) => {
 
 app.get('/tools', (req, res) => {
   res.render('pages/tools', {
-    title: 'Free SEO Tools — Contomatix',
+    title: 'Free SEO Tools & Generators — Contomatix',
     description: 'Free, no-signup SEO and AI-search tools from Contomatix — starting with a free llms.txt generator, with more tools on the way.',
     pageClass: 'page-tools'
   });
@@ -207,15 +265,15 @@ app.get('/tools', (req, res) => {
 
 app.get('/tools/llms-txt-generator', (req, res) => {
   res.render('pages/llms-txt-generator', {
-    title: 'Free llms.txt Generator — Create Your AI Crawler File | Contomatix',
-    description: 'Generate a valid llms.txt file for free in seconds — a plain-language summary of your site that helps ChatGPT, Claude, and Perplexity understand and cite your business.',
+    title: 'Free llms.txt Generator | Contomatix',
+    description: 'Generate a valid llms.txt file for free in seconds — a plain-language site summary that helps AI assistants understand and cite your business.',
     pageClass: 'page-tool'
   });
 });
 
 app.get('/tools/schema-markup-generator', (req, res) => {
   res.render('pages/schema-markup-generator', {
-    title: 'Free Schema Markup Generator — FAQ, HowTo & More | Contomatix',
+    title: 'Free Schema Markup Generator | Contomatix',
     description: 'Generate valid FAQ, HowTo, Local Business, or Article JSON-LD schema markup for free — ready to paste into your site, no signup required.',
     pageClass: 'page-tool'
   });
@@ -223,7 +281,7 @@ app.get('/tools/schema-markup-generator', (req, res) => {
 
 app.get('/tools/serp-snippet-preview', (req, res) => {
   res.render('pages/serp-snippet-preview', {
-    title: 'Free SERP Snippet Preview Tool — Google Search Preview | Contomatix',
+    title: 'Free SERP Snippet Preview Tool | Contomatix',
     description: 'See exactly how your title and meta description will look in Google search results, with live character-count warnings, for free.',
     pageClass: 'page-tool'
   });
@@ -239,7 +297,7 @@ app.get('/tools/readability-checker', (req, res) => {
 
 app.get('/tools/robots-txt-generator', (req, res) => {
   res.render('pages/robots-txt-generator', {
-    title: 'Free Robots.txt Generator — Create Yours in Seconds | Contomatix',
+    title: 'Free Robots.txt Generator | Contomatix',
     description: 'Generate a valid robots.txt file for free — control crawler access, block AI bots, and reference your sitemap, all in your browser.',
     pageClass: 'page-tool'
   });
@@ -247,7 +305,7 @@ app.get('/tools/robots-txt-generator', (req, res) => {
 
 app.get('/tools/utm-builder', (req, res) => {
   res.render('pages/utm-builder', {
-    title: 'Free UTM Campaign URL Builder — Track Every Link | Contomatix',
+    title: 'Free UTM Builder — Track Every Link | Contomatix',
     description: 'Build properly tagged UTM campaign URLs for Google Analytics in seconds, for free — no more guessing parameter names.',
     pageClass: 'page-tool'
   });
@@ -263,7 +321,7 @@ app.get('/tools/og-preview-generator', (req, res) => {
 
 app.get('/tools/meta-tag-generator', (req, res) => {
   res.render('pages/meta-tag-generator', {
-    title: 'Free Meta Tag Generator — Complete HTML Head Block | Contomatix',
+    title: 'Free Meta Tag Generator | Contomatix',
     description: 'Generate a complete, ready-to-paste HTML head block of meta tags — title, description, canonical, robots, and more — for free.',
     pageClass: 'page-tool'
   });
@@ -287,7 +345,7 @@ app.get('/tools/hreflang-generator', (req, res) => {
 
 app.get('/tools/invoice-generator', (req, res) => {
   res.render('pages/invoice-generator', {
-    title: 'Free Invoice Generator — No Sign Up, Download PDF | Contomatix',
+    title: 'Free Invoice Generator — Download PDF | Contomatix',
     description: 'Create a professional, itemized invoice and download it as a PDF in seconds. Free invoice generator, no signup, nothing leaves your browser.',
     pageClass: 'page-tool'
   });
@@ -315,7 +373,19 @@ app.get('/blog', (req, res) => {
   }
   const perPage = 12;
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
-  const page = Math.min(totalPages, Math.max(1, parseInt(req.query.page, 10) || 1));
+
+  const rawPage = req.query.page;
+  const parsedPage = parseInt(rawPage, 10);
+  if (rawPage !== undefined && (!Number.isInteger(parsedPage) || parsedPage < 1 || parsedPage > totalPages)) {
+    return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
+  }
+  const page = parsedPage || 1;
+  // Filtered/searched views are combinatorial and not meant to be indexed
+  // individually; a bare paginated page (no filter) is real, unique content
+  // and gets its own self-referencing canonical instead of pointing at page 1.
+  const isFiltered = category !== 'All' || Boolean(search);
+  const noIndex = isFiltered;
+  const canonicalPath = page > 1 ? `/blog?page=${page}` : '/blog';
   const posts = filtered.slice((page - 1) * perPage, page * perPage).map(p => {
     const wordCount = p.content.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).length;
     const authorMember = team.find(m => m.name === p.author);
@@ -326,7 +396,7 @@ app.get('/blog', (req, res) => {
     };
   });
   res.render('pages/blog', {
-    title: 'Blog — Contomatix',
+    title: page > 1 ? `Blog — Page ${page} — Contomatix` : 'Blog — Contomatix',
     description: 'SEO strategy, link building tactics, and content marketing insights from Contomatix.',
     pageClass: 'page-blog',
     posts,
@@ -335,7 +405,9 @@ app.get('/blog', (req, res) => {
     activeCategorySlug,
     search,
     page,
-    totalPages
+    totalPages,
+    noIndex,
+    canonicalPath
   });
 });
 
@@ -349,11 +421,13 @@ app.get('/blog/:slug', (req, res) => {
     title: post.title,
     description: post.excerpt,
     pageClass: 'page-blog-post',
+    image: post.image,
     post,
     categorySlug: blogStore.slugify(post.category),
     author: author ? withPhotoCheck(author) : null,
     readMinutes,
-    faqs: extractFaqs(post.content)
+    faqs: extractFaqs(post.content),
+    relatedPosts: blogStore.getRelated(post.slug, 3)
   });
 });
 
@@ -381,24 +455,24 @@ app.get('/about', (req, res) => {
 
 app.get('/privacy-policy', (req, res) => {
   res.render('pages/privacy', {
-    title: 'Privacy Policy — Contomatix',
-    description: 'How Contomatix collects, uses, and protects your information.',
+    title: 'Privacy Policy | Contomatix.com SEO Agency',
+    description: 'How Contomatix collects, uses, and protects your information across our website and services.',
     pageClass: 'page-legal'
   });
 });
 
 app.get('/terms', (req, res) => {
   res.render('pages/terms', {
-    title: 'Terms of Service — Contomatix',
-    description: 'The terms governing use of contomatix.com and Contomatix services.',
+    title: 'Terms of Service — Contomatix.com',
+    description: 'The terms governing use of contomatix.com and Contomatix\'s link building and SEO services.',
     pageClass: 'page-legal'
   });
 });
 
 app.get('/contact', (req, res) => {
   res.render('pages/contact', {
-    title: 'Contact Us — Contomatix',
-    description: 'Get in touch with Contomatix for link building and SEO services.',
+    title: 'Contact Contomatix — Get a Free SEO Audit',
+    description: 'Get in touch with Contomatix for link building and SEO services — free audit, reply within 24 hours.',
     pageClass: 'page-contact',
     submitted: false,
     error: null,
@@ -411,9 +485,22 @@ app.post('/contact', async (req, res) => {
   const email = (req.body.email || '').trim();
   const message = (req.body.message || '').trim();
 
+  // Honeypot: a real visitor never sees or fills this field (hidden off-screen).
+  // A bot that fills every input trips it — pretend success without sending.
+  if ((req.body.website || '').trim()) {
+    return res.render('pages/contact', {
+      title: 'Contact Contomatix — Get a Free SEO Audit',
+      description: 'Get in touch with Contomatix for link building and SEO services — free audit, reply within 24 hours.',
+      pageClass: 'page-contact',
+      submitted: true,
+      error: null,
+      form: {}
+    });
+  }
+
   const renderContact = (state) => res.render('pages/contact', {
-    title: 'Contact Us — Contomatix',
-    description: 'Get in touch with Contomatix for link building and SEO services.',
+    title: 'Contact Contomatix — Get a Free SEO Audit',
+    description: 'Get in touch with Contomatix for link building and SEO services — free audit, reply within 24 hours.',
     pageClass: 'page-contact',
     submitted: false,
     error: null,
@@ -440,12 +527,24 @@ app.post('/contact', async (req, res) => {
 
 // ---------- Admin dashboard ----------
 
+const adminLoginLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 5,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: 'Too many login attempts. Please try again in 15 minutes.',
+  handler: (req, res) => res.status(429).render('admin/login', {
+    title: 'Log in', layout: 'admin/layout', hideNav: true,
+    error: 'Too many login attempts. Please try again in 15 minutes.'
+  })
+});
+
 app.get('/admin/login', (req, res) => {
   if (req.session.isAdmin) return res.redirect('/admin');
   res.render('admin/login', { title: 'Log in', layout: 'admin/layout', hideNav: true, error: null });
 });
 
-app.post('/admin/login', (req, res) => {
+app.post('/admin/login', adminLoginLimiter, (req, res) => {
   const { username, password } = req.body;
   if (checkLogin(username, password)) {
     req.session.isAdmin = true;
