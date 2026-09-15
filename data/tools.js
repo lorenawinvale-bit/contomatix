@@ -13,7 +13,7 @@ module.exports = [
   },
   {
     slug: 'serp-snippet-preview',
-    title: 'SERP Snippet Preview',
+    title: 'SERP Snippet Checker',
     summary: 'See exactly how your title and meta description will look in Google search results, with live character-count warnings.'
   },
   {
@@ -28,7 +28,7 @@ module.exports = [
   },
   {
     slug: 'utm-builder',
-    title: 'UTM Campaign URL Builder',
+    title: 'UTM Tag Generator',
     summary: 'Build properly tagged UTM campaign URLs for Google Analytics tracking in seconds.'
   },
   {
@@ -48,7 +48,7 @@ module.exports = [
   },
   {
     slug: 'hreflang-generator',
-    title: 'Hreflang Tag Generator',
+    title: 'Hreflang Generator',
     summary: 'Generate correct, reciprocal hreflang tags for multi-language and multi-region sites.'
   },
   {

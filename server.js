@@ -312,7 +312,7 @@ app.get('/tools/schema-markup-generator', (req, res) => {
 
 app.get('/tools/serp-snippet-preview', (req, res) => {
   res.render('pages/serp-snippet-preview', {
-    title: 'Free SERP Snippet Preview Tool | Contomatix',
+    title: 'Free SERP Snippet Checker & Preview Tool | Contomatix',
     description: 'See exactly how your title and meta description will look in Google search results, with live character-count warnings, for free.',
     pageClass: 'page-tool'
   });
@@ -336,7 +336,7 @@ app.get('/tools/robots-txt-generator', (req, res) => {
 
 app.get('/tools/utm-builder', (req, res) => {
   res.render('pages/utm-builder', {
-    title: 'Free UTM Builder — Track Every Link | Contomatix',
+    title: 'Free UTM Tag Generator & Campaign URL Builder | Contomatix',
     description: 'Build properly tagged UTM campaign URLs for Google Analytics in seconds, for free — no more guessing parameter names.',
     pageClass: 'page-tool'
   });
@@ -368,7 +368,7 @@ app.get('/tools/sitemap-generator', (req, res) => {
 
 app.get('/tools/hreflang-generator', (req, res) => {
   res.render('pages/hreflang-generator', {
-    title: 'Free Hreflang Tag Generator — International SEO | Contomatix',
+    title: 'Free Hreflang Generator — International SEO Tags | Contomatix',
     description: 'Generate correct, reciprocal hreflang tags for multi-language and multi-region sites, for free, in seconds.',
     pageClass: 'page-tool'
   });
