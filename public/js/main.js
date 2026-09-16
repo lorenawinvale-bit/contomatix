@@ -103,16 +103,16 @@ function initTableOfContents() {
     toggle.setAttribute('aria-expanded', open);
   });
 
-  var dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-  var dropdown = document.querySelector('.nav-dropdown');
-  if (dropdownToggle && dropdown) {
+  document.querySelectorAll('.nav-dropdown').forEach(function (dropdown) {
+    var dropdownToggle = dropdown.querySelector('.nav-dropdown-toggle');
+    if (!dropdownToggle) return;
     dropdownToggle.addEventListener('click', function (e) {
       if (window.innerWidth <= 640) {
         e.preventDefault();
         dropdown.classList.toggle('open');
       }
     });
-  }
+  });
 })();
 
 // ---------- Hero 3D scene: rotating link/node network ----------
