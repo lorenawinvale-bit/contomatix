@@ -20,6 +20,6 @@ module.exports = [
     role: 'Content Manager',
     bio: 'Reyan manages content production at Contomatix, from the editorial calendar and keyword-to-page mapping to making sure every post clears the site’s own quality bar before it ships. He works closely with the SEO team to keep new content tied to real search demand rather than publishing for volume.',
     photo: '',
-    linkedin: 'https://www.linkedin.com/in/muhammad-reyan-nizami'
+    linkedin: 'https://www.linkedin.com/in/muhammad-reyan-nizami-10974b26b/'
   }
 ];
