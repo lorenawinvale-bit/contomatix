@@ -12,6 +12,14 @@ module.exports = [
     name: 'Hamza Siddiqui',
     role: 'Managing Director',
     bio: 'Hamza oversees operations and client delivery at Contomatix, making sure the work promised in a strategy call is the work that actually ships. He handles account direction, resourcing, and the reporting clients see every month.',
-    photo: ''
+    photo: '',
+    linkedin: 'https://www.linkedin.com/in/hamza-siddiqui-12b11412b/'
+  },
+  {
+    name: 'Muhammad Reyan Nizami',
+    role: 'Content Manager',
+    bio: 'Reyan manages content production at Contomatix, from the editorial calendar and keyword-to-page mapping to making sure every post clears the site’s own quality bar before it ships. He works closely with the SEO team to keep new content tied to real search demand rather than publishing for volume.',
+    photo: '',
+    linkedin: 'https://www.linkedin.com/in/muhammad-reyan-nizami'
   }
 ];
