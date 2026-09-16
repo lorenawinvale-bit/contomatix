@@ -376,8 +376,8 @@ app.get('/tools/hreflang-generator', (req, res) => {
 
 app.get('/tools/invoice-generator', (req, res) => {
   res.render('pages/invoice-generator', {
-    title: 'Free Invoice Generator — Download PDF | Contomatix',
-    description: 'Create a professional, itemized invoice and download it as a PDF in seconds. Free invoice generator, no signup, nothing leaves your browser.',
+    title: 'Free Invoice Generator & Freelance Invoice Template | Contomatix',
+    description: 'A free, ready-to-use freelance invoice template — fill it in, download as a PDF in seconds. No signup, nothing leaves your browser.',
     pageClass: 'page-tool'
   });
 });

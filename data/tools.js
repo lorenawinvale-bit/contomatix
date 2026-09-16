@@ -53,7 +53,7 @@ module.exports = [
   },
   {
     slug: 'invoice-generator',
-    title: 'Free Invoice Generator',
-    summary: 'Create a professional, itemized invoice and download it as a PDF in seconds — no signup, nothing leaves your browser.'
+    title: 'Invoice Generator & Template',
+    summary: 'A free freelance invoice template that generates a professional, itemized PDF in seconds — no signup, nothing leaves your browser.'
   }
 ];
