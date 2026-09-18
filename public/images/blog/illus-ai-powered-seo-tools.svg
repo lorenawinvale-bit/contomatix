@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <!-- central hub with 4 category cards, "what job does each do" framing -->
+  <g>
+    <circle cx="380" cy="230" r="52" fill="#16192A"/>
+    <text x="380" y="222" font-size="11" font-weight="700" fill="#5EEAD4" text-anchor="middle">WHICH JOB</text>
+    <text x="380" y="239" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">DOES EACH</text>
+    <text x="380" y="255" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO WELL?</text>
+  </g>
+
+  <line x1="331" y1="200" x2="220" y2="150" stroke="#C9BBA9" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <line x1="331" y1="230" x2="150" y2="230" stroke="#C9BBA9" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <line x1="331" y1="260" x2="220" y2="322" stroke="#C9BBA9" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <line x1="429" y1="200" x2="540" y2="150" stroke="#C9BBA9" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <line x1="429" y1="260" x2="540" y2="322" stroke="#C9BBA9" stroke-width="1.5" stroke-dasharray="3 4"/>
+
+  <g>
+    <rect x="60" y="118" width="164" height="58" rx="12" fill="#FFFFFF" stroke="#0EA5A0" stroke-width="2"/>
+    <circle cx="86" cy="147" r="12" fill="#0EA5A0"/>
+    <text x="86" y="151" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="106" y="143" font-size="11.5" font-weight="700" fill="#16192A">Topic clustering</text>
+    <text x="106" y="158" font-size="10" fill="#8A8371">groups keywords by intent</text>
+  </g>
+
+  <g>
+    <rect x="10" y="202" width="164" height="58" rx="12" fill="#FFFFFF" stroke="#14B8A6" stroke-width="2"/>
+    <circle cx="36" cy="231" r="12" fill="#14B8A6"/>
+    <text x="36" y="235" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="56" y="227" font-size="11.5" font-weight="700" fill="#16192A">Content briefs</text>
+    <text x="56" y="242" font-size="10" fill="#8A8371">structure, not full drafts</text>
+  </g>
+
+  <g>
+    <rect x="60" y="294" width="164" height="58" rx="12" fill="#FFFFFF" stroke="#F5A623" stroke-width="2"/>
+    <circle cx="86" cy="323" r="12" fill="#F5A623"/>
+    <text x="86" y="327" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="106" y="319" font-size="11.5" font-weight="700" fill="#16192A">Technical audits</text>
+    <text x="106" y="334" font-size="10" fill="#8A8371">pattern-matching at scale</text>
+  </g>
+
+  <g>
+    <rect x="536" y="118" width="164" height="58" rx="12" fill="#FFFFFF" stroke="#8A8371" stroke-width="2"/>
+    <circle cx="562" cy="147" r="12" fill="#8A8371"/>
+    <text x="562" y="151" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="582" y="143" font-size="11.5" font-weight="700" fill="#16192A">Internal linking</text>
+    <text x="582" y="158" font-size="10" fill="#8A8371">suggests, doesn't decide</text>
+  </g>
+
+  <g>
+    <rect x="536" y="294" width="164" height="58" rx="12" fill="#FFFFFF" stroke="#5EEAD4" stroke-width="2"/>
+    <circle cx="562" cy="323" r="12" fill="#0EA5A0"/>
+    <text x="562" y="327" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+    <text x="582" y="319" font-size="11.5" font-weight="700" fill="#16192A">AI visibility tracking</text>
+    <text x="582" y="334" font-size="10" fill="#8A8371">citations, not rankings</text>
+  </g>
+
+  <text x="90" y="425" font-size="20" font-weight="700" fill="#16192A">AI-Powered SEO Tools</text>
+</svg>
