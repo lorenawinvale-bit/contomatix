@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <rect x="596" y="34" width="120" height="28" rx="14" fill="#FDF3E2" stroke="#F5A623"/>
+  <text x="656" y="52" font-size="11" font-weight="700" fill="#B5730E" text-anchor="middle">SEO NEWS · SEP 2026</text>
+
+  <!-- a Discover-style card with two tap targets -->
+  <g>
+    <rect x="70" y="120" width="220" height="190" rx="16" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <rect x="86" y="136" width="188" height="70" rx="10" fill="#F1EDE3"/>
+    <polygon points="164,156 164,186 190,171" fill="#C9BBA9"/>
+    <rect x="86" y="218" width="150" height="8" rx="4" fill="#E2D8C6"/>
+    <rect x="86" y="234" width="110" height="8" rx="4" fill="#E2D8C6"/>
+
+    <rect x="86" y="256" width="86" height="32" rx="16" fill="#FFFFFF" stroke="#C9BBA9" stroke-width="1.5"/>
+    <text x="129" y="276" font-size="11" font-weight="700" fill="#8A8371" text-anchor="middle">Open article</text>
+
+    <rect x="180" y="256" width="94" height="32" rx="16" fill="#0EA5A0"/>
+    <text x="227" y="276" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Dive deeper</text>
+  </g>
+
+  <!-- normal path to the publisher: dashed, dimmed -->
+  <path d="M129 288 C 129 350, 300 360, 372 360" stroke="#C9BBA9" stroke-width="2" stroke-dasharray="4 5" fill="none"/>
+  <g opacity="0.85">
+    <rect x="372" y="336" width="130" height="48" rx="12" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="1.5"/>
+    <text x="437" y="357" font-size="11.5" font-weight="700" fill="#8A8371" text-anchor="middle">Publisher page</text>
+    <text x="437" y="373" font-size="10" fill="#8A8371" text-anchor="middle">the click it used to get</text>
+  </g>
+
+  <!-- new path: Dive deeper -> Google-hosted AI summary -->
+  <path d="M275 272 C 330 272, 340 225, 400 225" stroke="#0EA5A0" stroke-width="2.5" fill="none"/>
+  <polygon points="398,219 412,225 398,231" fill="#0EA5A0"/>
+
+  <g>
+    <rect x="416" y="140" width="290" height="170" rx="16" fill="#FFFFFF" stroke="#0EA5A0" stroke-width="2.5"/>
+    <text x="436" y="166" font-size="10.5" font-weight="700" fill="#0B807C">GOOGLE-HOSTED AI SUMMARY</text>
+    <rect x="436" y="180" width="240" height="8" rx="4" fill="#F1EDE3"/>
+    <rect x="436" y="196" width="220" height="8" rx="4" fill="#F1EDE3"/>
+    <rect x="436" y="212" width="180" height="8" rx="4" fill="#F1EDE3"/>
+    <rect x="436" y="240" width="72" height="42" rx="8" fill="#F6F2EA" stroke="#EAE0D2"/>
+    <rect x="514" y="240" width="72" height="42" rx="8" fill="#F6F2EA" stroke="#EAE0D2"/>
+    <rect x="592" y="240" width="72" height="42" rx="8" fill="#F6F2EA" stroke="#EAE0D2"/>
+    <text x="436" y="298" font-size="9.5" fill="#8A8371">small link cards to sources</text>
+  </g>
+
+  <text x="70" y="425" font-size="20" font-weight="700" fill="#16192A">Google Tests "Dive Deeper" in Discover</text>
+</svg>
