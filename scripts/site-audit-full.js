@@ -53,8 +53,8 @@ for (const p of posts) {
   const plainText = stripTags(content);
   const wordCount = plainText.split(/\s+/).filter(Boolean).length;
 
-  // --- word count sanity (site's own template floor is 2200) ---
-  if (wordCount < 1500) flag('WARN', slug, `low word count (${wordCount}) — below the 2200 template floor`);
+  // --- word count sanity (site's own template floor is 2200; news posts are short by design) ---
+  if (wordCount < 1500 && p.category !== 'SEO News & Google Updates') flag('WARN', slug, `low word count (${wordCount}) — below the 2200 template floor`);
 
   // --- featured image exists ---
   if (p.image) {
