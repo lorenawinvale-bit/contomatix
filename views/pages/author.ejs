@@ -1,0 +1,99 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner author-hero">
+    <% if (member.hasPhoto) { %>
+      <div class="team-avatar team-avatar-photo">
+        <img src="<%= member.photo %>" alt="<%= member.name %>" width="88" height="88">
+      </div>
+    <% } else { %>
+      <div class="team-avatar"><%= member.name.split(' ').map(function(w){ return w[0]; }).join('') %></div>
+    <% } %>
+    <div>
+      <span class="eyebrow"><%= member.role %></span>
+      <h1><%= member.name %></h1>
+      <p><%= member.bio %></p>
+      <p class="author-meta">
+        <strong><%= postCount %></strong> <%= postCount === 1 ? 'article' : 'articles' %> on the Contomatix blog
+        <% if (member.linkedin) { %>
+          &middot; <a href="<%= member.linkedin %>" class="team-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+        <% } %>
+        &middot; <a href="/team" class="team-linkedin">All authors &rarr;</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<% if (posts.length) { %>
+<div class="container">
+  <div class="post-grid post-grid-main">
+    <% posts.forEach(function(p) { %>
+      <a class="post-card" href="/blog/<%= p.slug %>">
+        <div class="post-image">
+          <% if (p.image) { %><img src="<%= p.image %>" alt="<%= p.title %>" width="360" height="225" loading="lazy"><% } %>
+        </div>
+        <div class="post-body">
+          <span class="story-tag"><%= p.category %></span>
+          <h2><%= p.title %></h2>
+          <div class="post-byline">
+            <% if (p.authorInfo.hasPhoto) { %>
+              <img class="post-byline-avatar" src="<%= p.authorInfo.photo %>" alt="" width="24" height="24">
+            <% } else { %>
+              <span class="post-byline-avatar post-byline-initials"><%= p.authorInfo.name.split(' ').map(function(w){ return w[0]; }).join('') %></span>
+            <% } %>
+            <span class="post-byline-name"><%= p.authorInfo.name %></span>
+            <span class="post-byline-sep">&middot;</span>
+            <span class="post-byline-date"><%= p.date %></span>
+            <span class="post-byline-sep">&middot;</span>
+            <span class="post-byline-read"><%= p.readMinutes %> min read</span>
+          </div>
+        </div>
+      </a>
+    <% }); %>
+  </div>
+</div>
+<% } else { %>
+<div class="container">
+  <p style="color:var(--text-dim); padding: 40px 0;">No published posts yet — check back soon.</p>
+</div>
+<% } %>
+
+<%
+  function pageHref(n) {
+    return '/team/' + member.slug + (n > 1 ? '?page=' + n : '');
+  }
+%>
+<% if (totalPages > 1) { %>
+<div class="container">
+  <div class="pagination">
+    <% if (page > 1) { %>
+      <a href="<%= pageHref(page - 1) %>" class="page-link">&laquo; Prev</a>
+    <% } %>
+    <% for (let i = 1; i <= totalPages; i++) { %>
+      <% if (i === page) { %>
+        <span class="current"><%= i %></span>
+      <% } else { %>
+        <a href="<%= pageHref(i) %>"><%= i %></a>
+      <% } %>
+    <% } %>
+    <% if (page < totalPages) { %>
+      <a href="<%= pageHref(page + 1) %>" class="page-link">Next &raquo;</a>
+    <% } %>
+  </div>
+</div>
+<% } %>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    mainEntity: {
+      '@type': 'Person',
+      name: member.name,
+      jobTitle: member.role,
+      description: member.bio,
+      url: site.baseUrl + '/team/' + member.slug,
+      worksFor: { '@id': site.baseUrl + '/#organization' },
+      sameAs: member.linkedin ? [member.linkedin] : undefined
+    }
+  }) %>
+</script>

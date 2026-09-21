@@ -34,7 +34,7 @@ var shareUrl = encodeURIComponent(postUrl);
 
         <div class="post-byline">
           <% if (author) { %>
-            <a href="/team" class="post-byline-author">
+            <a href="/team/<%= author.slug %>" class="post-byline-author">
               <% if (author.hasPhoto) { %>
                 <span class="post-author-avatar post-author-avatar-photo">
                   <img src="<%= author.photo %>" alt="<%= author.name %>" width="40" height="40">
@@ -163,7 +163,8 @@ var shareUrl = encodeURIComponent(postUrl);
     dateModified: post.date,
     author: {
       '@type': 'Person',
-      name: post.author
+      name: post.author,
+      url: author ? site.baseUrl + '/team/' + author.slug : undefined
     },
     publisher: {
       '@type': 'Organization',

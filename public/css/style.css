@@ -2224,3 +2224,12 @@ html.motion-on .cta-orb {
 .review-marquee:hover .review-track {
   animation-play-state: paused;
 }
+
+/* Author archive pages */
+.team-card .team-linkedin + .team-linkedin { margin-left: 14px; }
+.author-hero { display: flex; align-items: center; gap: 28px; }
+.author-hero .team-avatar { flex-shrink: 0; margin: 0; }
+.author-hero p { max-width: 62ch; }
+.author-meta { margin-top: 14px; font-size: 0.9rem; color: var(--text-dim); }
+.author-meta .team-linkedin { margin-top: 0; }
+@media (max-width: 640px) { .author-hero { flex-direction: column; align-items: flex-start; gap: 16px; } }

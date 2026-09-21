@@ -22,6 +22,7 @@
         <h2><%= member.name %></h2>
         <div class="role"><%= member.role %></div>
         <p class="bio"><%= member.bio %></p>
+        <a href="/team/<%= member.slug %>" class="team-linkedin">Read posts (<%= member.postCount %>) &rarr;</a>
         <% if (member.linkedin) { %>
           <a href="<%= member.linkedin %>" class="team-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
         <% } %>
@@ -73,6 +74,7 @@
         name: m.name,
         jobTitle: m.role,
         description: m.bio,
+        url: site.baseUrl + '/team/' + m.slug,
         worksFor: { '@id': site.baseUrl + '/#organization' }
       };
       if (m.linkedin) person.sameAs = [m.linkedin];

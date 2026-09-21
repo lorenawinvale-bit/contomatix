@@ -59,7 +59,8 @@ function extractFaqs(html) {
 function withPhotoCheck(member) {
   return {
     ...member,
-    hasPhoto: Boolean(member.photo && fs.existsSync(path.join(__dirname, 'public', member.photo)))
+    hasPhoto: Boolean(member.photo && fs.existsSync(path.join(__dirname, 'public', member.photo))),
+    slug: blogStore.slugify(member.name)
   };
 }
 
@@ -200,7 +201,8 @@ app.get('/sitemap.xml', (req, res) => {
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
     ...locations.map(l => ({ loc: `/services/${l.slug}`, lastmod: today })),
-    ...blogStore.getPublished().map(p => ({ loc: `/blog/${p.slug}`, lastmod: p.date }))
+    ...blogStore.getPublished().map(p => ({ loc: `/blog/${p.slug}`, lastmod: p.date })),
+    ...team.map(m => ({ loc: `/team/${blogStore.slugify(m.name)}`, lastmod: today }))
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -470,11 +472,44 @@ app.get('/blog/:slug', (req, res) => {
 });
 
 app.get('/team', (req, res) => {
+  const published = blogStore.getPublished();
   res.render('pages/team', {
     title: 'Meet the Contomatix Team — SEO & Link Building Experts',
     description: 'Meet the SEO strategists and link building specialists behind Contomatix — the people who plan and run every campaign.',
     pageClass: 'page-team',
-    team: team.map(withPhotoCheck)
+    team: team.map(withPhotoCheck).map(m => ({ ...m, postCount: published.filter(p => p.author === m.name).length }))
+  });
+});
+
+// Author archive: every published post by one team member, newest first.
+app.get('/team/:slug', (req, res) => {
+  const member = team.map(withPhotoCheck).find(m => m.slug === req.params.slug);
+  if (!member) return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
+  const mine = blogStore.getPublished()
+    .filter(p => p.author === member.name)
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  const perPage = 12;
+  const totalPages = Math.max(1, Math.ceil(mine.length / perPage));
+  const rawPage = req.query.page;
+  const parsedPage = parseInt(rawPage, 10);
+  if (rawPage !== undefined && (!Number.isInteger(parsedPage) || parsedPage < 1 || parsedPage > totalPages)) {
+    return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
+  }
+  const page = parsedPage || 1;
+  const posts = mine.slice((page - 1) * perPage, page * perPage).map(p => {
+    const wordCount = p.content.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).length;
+    return { ...p, readMinutes: Math.max(1, Math.round(wordCount / 200)), authorInfo: member };
+  });
+  res.render('pages/author', {
+    title: page > 1 ? `Posts by ${member.name} — Page ${page} — Contomatix` : `Posts by ${member.name} — Contomatix`,
+    description: `${member.name}, ${member.role} at Contomatix. Read all ${mine.length} articles written by ${member.name} on SEO, link building, and content.`,
+    pageClass: 'page-author',
+    member,
+    posts,
+    postCount: mine.length,
+    page,
+    totalPages,
+    canonicalPath: page > 1 ? `/team/${member.slug}?page=${page}` : `/team/${member.slug}`
   });
 });
 
