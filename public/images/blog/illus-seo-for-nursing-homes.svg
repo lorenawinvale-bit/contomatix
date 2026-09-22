@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 475" font-family="Inter, -apple-system, sans-serif">
+  <rect width="760" height="475" fill="#FDFAF5"/>
+  <circle cx="640" cy="80" r="140" fill="rgba(20,184,166,0.06)"/>
+  <circle cx="100" cy="400" r="130" fill="rgba(249,115,22,0.06)"/>
+
+  <g>
+    <circle cx="52" cy="48" r="22" fill="#FFFFFF" stroke="#EAE0D2"/>
+    <g transform="translate(30,26) scale(0.9167)">
+      <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/>
+      <circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/>
+      <circle cx="35.52" cy="13.63" r="1.1" fill="#FFFFFF"/>
+      <circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/>
+      <circle cx="35.52" cy="34.37" r="1.1" fill="#FFFFFF"/>
+      <circle cx="24" cy="24" r="2" fill="#16192A"/>
+    </g>
+    <text x="82" y="55" font-size="18" font-weight="700" fill="#16192A">Contomatix</text>
+  </g>
+
+  <rect x="596" y="34" width="150" height="28" rx="14" fill="#E5F7F1" stroke="#0EA5A0"/>
+  <text x="671" y="52" font-size="11" font-weight="700" fill="#0B807C" text-anchor="middle">LOCAL SEO GUIDE</text>
+
+  <!-- search bar -->
+  <g>
+    <rect x="90" y="110" width="330" height="46" rx="23" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="1.5"/>
+    <circle cx="116" cy="133" r="7" fill="none" stroke="#8A8371" stroke-width="2.2"/>
+    <line x1="121" y1="138" x2="126" y2="143" stroke="#8A8371" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="140" y="139" font-size="14" fill="#16192A">nursing home near me</text>
+  </g>
+
+  <!-- local pack card -->
+  <g>
+    <rect x="90" y="178" width="330" height="150" rx="14" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="1.5"/>
+    <rect x="90" y="178" width="330" height="150" rx="14" fill="none" stroke="#0EA5A0" stroke-width="2"/>
+    <circle cx="118" cy="210" r="16" fill="#E5F7F1"/>
+    <path d="M110 210h16M118 202v16" stroke="#0B807C" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="144" y="206" font-size="13.5" font-weight="700" fill="#16192A">West Oaks Care Center</text>
+    <text x="144" y="222" font-size="11.5" fill="#8A8371">&#9733;&#9733;&#9733;&#9733;&#9733; (117) &#183; Open 24 hours</text>
+
+    <line x1="102" y1="240" x2="408" y2="240" stroke="#F1EDE3" stroke-width="1.5"/>
+
+    <circle cx="118" cy="264" r="16" fill="#FDF3E2"/>
+    <path d="M110 264h16M118 256v16" stroke="#B5730E" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="144" y="260" font-size="13.5" font-weight="700" fill="#16192A">Barton Valley Rehab</text>
+    <text x="144" y="276" font-size="11.5" fill="#8A8371">&#9733;&#9733;&#9733;&#9733; (89) &#183; 4501 Dudmar Dr</text>
+
+    <line x1="102" y1="294" x2="408" y2="294" stroke="#F1EDE3" stroke-width="1.5"/>
+
+    <circle cx="118" cy="309" r="7" fill="none" stroke="#C9BBA9" stroke-width="2"/>
+    <text x="135" y="313" font-size="11" fill="#8A8371">Live local pack &#8212; September 2026</text>
+  </g>
+
+  <!-- medicare care compare badge -->
+  <g>
+    <rect x="452" y="178" width="220" height="150" rx="14" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="1.5"/>
+    <circle cx="562" cy="222" r="26" fill="#E5F7F1"/>
+    <path d="M550 222l8 8 16-16" stroke="#0B807C" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="562" y="270" font-size="12.5" font-weight="700" fill="#16192A" text-anchor="middle">Medicare</text>
+    <text x="562" y="286" font-size="12.5" font-weight="700" fill="#16192A" text-anchor="middle">Care Compare</text>
+    <text x="562" y="304" font-size="10.5" fill="#8A8371" text-anchor="middle">the record families check</text>
+  </g>
+
+  <text x="90" y="400" font-size="22" font-weight="700" fill="#16192A">SEO for Nursing Homes</text>
+  <text x="90" y="424" font-size="13" fill="#8A8371">How to fill more beds online</text>
+</svg>

@@ -297,7 +297,7 @@ City, ST 67890</textarea>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 (function () {
-  var CURRENCY_SYMBOLS = { USD: '$', EUR: '€', GBP: '£', CAD: 'CA$', AUD: 'AU$', PKR: '₨', INR: '₹', AED: 'AED ' };
+  var CURRENCY_SYMBOLS = { USD: '$', EUR: '€', GBP: '£', CAD: 'CA$', AUD: 'AU$', PKR: 'PKR ', INR: 'INR ', AED: 'AED ' };
   var itemSeq = 0;
 
   function money(n) {
@@ -498,7 +498,7 @@ City, ST 67890</textarea>
     y += toLines.length * 14 + 22;
 
     // Table
-    var col = { desc: margin, qty: pageWidth - margin - 170, rate: pageWidth - margin - 110, amount: pageWidth - margin };
+    var col = { desc: margin, qty: pageWidth - margin - 230, rate: pageWidth - margin - 120, amount: pageWidth - margin };
     var colWidth = { desc: col.qty - margin - 20 };
     doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(140, 140, 140);
     doc.text('DESCRIPTION', col.desc, y);
