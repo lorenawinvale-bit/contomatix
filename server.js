@@ -94,6 +94,15 @@ app.use((req, res, next) => {
   next();
 });
 
+// Permanent redirects for merged or retired URLs (e.g. two blog posts that
+// competed for the same keyword, folded into one). Keeps any query string.
+const permanentRedirects = require('./data/redirects.json');
+app.use((req, res, next) => {
+  const target = permanentRedirects[req.path];
+  if (target) return res.redirect(301, target + req.url.slice(req.path.length));
+  next();
+});
+
 // Security headers (no extra dependency needed for a handful of static values).
 app.use((req, res, next) => {
   if (isProd) res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
