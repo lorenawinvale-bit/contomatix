@@ -73,7 +73,7 @@ var shareUrl = encodeURIComponent(postUrl);
 <% if (post.image && !post.heroDiagram) { %>
   <div class="container">
     <div class="post-cover">
-      <img src="<%= post.image %>" alt="<%= post.title %>" width="760" height="475" loading="eager" fetchpriority="high">
+      <picture><source srcset="<%= post.image.replace(/\.png$/, '.webp') %>" type="image/webp"><img src="<%= post.image %>" alt="<%= post.title %>" width="760" height="475" loading="eager" fetchpriority="high"></picture>
     </div>
   </div>
 <% } %>
@@ -121,7 +121,7 @@ var shareUrl = encodeURIComponent(postUrl);
       <% relatedPosts.forEach(function(p) { %>
         <a class="story-card" href="/blog/<%= p.slug %>">
           <div class="story-thumb">
-            <% if (p.image) { %><img src="<%= p.image %>" alt="<%= p.title %>" width="192" height="152" loading="lazy"><% } %>
+            <% if (p.image) { %><picture><source srcset="<%= p.image.replace(/\.png$/, '.webp') %>" type="image/webp"><img src="<%= p.image %>" alt="<%= p.title %>" width="192" height="152" loading="lazy"></picture><% } %>
           </div>
           <div>
             <span class="story-tag"><%= p.category %></span>
