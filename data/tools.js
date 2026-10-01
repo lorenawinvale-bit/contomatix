@@ -52,6 +52,11 @@ module.exports = [
     summary: 'Generate correct, reciprocal hreflang tags for multi-language and multi-region sites.'
   },
   {
+    slug: 'sitemap-validator',
+    title: 'Sitemap Validator',
+    summary: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates, and limit violations — for free, in seconds.'
+  },
+  {
     slug: 'invoice-generator',
     title: 'Invoice Generator & Template',
     summary: 'A free freelance invoice template that generates a professional, itemized PDF in seconds — no signup, nothing leaves your browser.'
