@@ -1,0 +1,225 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free LLM SEO Checker — AI Crawler Access Audit</h1>
+    <p>Paste your <strong>robots.txt</strong> and this <strong>free LLM SEO checker</strong> shows exactly which AI crawlers — ChatGPT, Claude, Perplexity, Gemini, Apple Intelligence — can actually read your site. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="lc-form" onsubmit="return false;" aria-label="LLM SEO checker form">
+        <div>
+          <label for="lc-input">Paste your robots.txt contents</label>
+          <textarea id="lc-input" style="min-height: 280px;" placeholder="User-agent: *&#10;Allow: /&#10;&#10;User-agent: GPTBot&#10;Disallow: /"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>AI crawler access</strong>
+        <span id="lc-status" class="llms-status">Waiting for input</span>
+      </div>
+      <div id="lc-output" class="llms-output" style="max-height:360px; overflow-y:auto;">Paste a robots.txt file to check it.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What This Checks</h2>
+    <p>This tool parses your pasted robots.txt against the real, documented crawler names each major AI company publishes for its own bots — not a guess, and not the regular search crawler (Googlebot, Bingbot) you're probably already allowing. It tells you, bot by bot, whether your current rules allow, block, or simply don't mention each one — and what that default actually means.</p>
+
+    <h2>The Crawlers Checked</h2>
+    <table class="service-table" style="width:100%; border-collapse:collapse; margin:20px 0;">
+      <thead><tr style="text-align:left; border-bottom:2px solid #EAE0D2;"><th style="padding:8px 12px;">Crawler</th><th style="padding:8px 12px;">Company</th><th style="padding:8px 12px;">Purpose</th></tr></thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>GPTBot</code></td><td style="padding:8px 12px;">OpenAI</td><td style="padding:8px 12px;">Model training</td></tr>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>OAI-SearchBot</code></td><td style="padding:8px 12px;">OpenAI</td><td style="padding:8px 12px;">ChatGPT search citations</td></tr>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>ChatGPT-User</code></td><td style="padding:8px 12px;">OpenAI</td><td style="padding:8px 12px;">Live user requests in ChatGPT</td></tr>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>ClaudeBot</code></td><td style="padding:8px 12px;">Anthropic</td><td style="padding:8px 12px;">Model training</td></tr>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>Claude-SearchBot</code></td><td style="padding:8px 12px;">Anthropic</td><td style="padding:8px 12px;">Search result quality</td></tr>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>Claude-User</code></td><td style="padding:8px 12px;">Anthropic</td><td style="padding:8px 12px;">Live user requests in Claude</td></tr>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>PerplexityBot</code></td><td style="padding:8px 12px;">Perplexity</td><td style="padding:8px 12px;">Indexing and crawling</td></tr>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>Perplexity-User</code></td><td style="padding:8px 12px;">Perplexity</td><td style="padding:8px 12px;">Live user requests</td></tr>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>Google-Extended</code></td><td style="padding:8px 12px;">Google</td><td style="padding:8px 12px;">Gemini training and AI features grounding</td></tr>
+        <tr style="border-bottom:1px solid #EAE0D2;"><td style="padding:8px 12px;"><code>Applebot-Extended</code></td><td style="padding:8px 12px;">Apple</td><td style="padding:8px 12px;">Apple Intelligence training</td></tr>
+        <tr><td style="padding:8px 12px;"><code>CCBot</code></td><td style="padding:8px 12px;">Common Crawl</td><td style="padding:8px 12px;">Open dataset used by many AI labs</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why "Not Mentioned" Isn't the Same as "Blocked"</h2>
+    <p>Robots.txt works on explicit rules. If a crawler isn't named anywhere in the file, it falls back to whatever the wildcard <code>User-agent: *</code> block allows — and if there's no wildcard block either, the default is to allow everything. A site that never updated its robots.txt for AI crawlers is almost always fully open to all of them by default, not blocked, which surprises most people checking this for the first time.</p>
+
+    <h2>Google-Extended Is Different From the Rest</h2>
+    <p>Google-Extended isn't a crawler that visits your site — it's a control token read by the regular Googlebot. Blocking it doesn't stop Googlebot from crawling and indexing your pages normally; it only opts that already-crawled content out of being used to train Gemini or ground Google's AI features. Every other bot on this list is a separate crawler with its own distinct visits and its own IP ranges.</p>
+
+    <h2>LLM SEO Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does blocking these bots remove my site from ChatGPT or Claude's existing answers?<span class="faq-icon"></span></summary>
+        <p>No. Blocking a crawler stops future crawling, but it doesn't retroactively remove content a model may have already been trained on in a prior crawl.</p>
+      </details>
+      <details>
+        <summary>If I block GPTBot, am I also blocking ChatGPT-User?<span class="faq-icon"></span></summary>
+        <p>No — each company runs separate bots for training versus live user requests versus search indexing, and blocking one does not block the others. Each needs its own rule if you want it blocked specifically.</p>
+      </details>
+      <details>
+        <summary>Does ChatGPT-User or Claude-User respect robots.txt at all?<span class="faq-icon"></span></summary>
+        <p>These user-triggered bots generally fetch a specific page because a person asked a direct question, and the companies' own documentation notes robots.txt may not apply the same way it does to autonomous crawling bots like GPTBot or ClaudeBot.</p>
+      </details>
+      <details>
+        <summary>Is there a downside to blocking all AI crawlers?<span class="faq-icon"></span></summary>
+        <p>Blocking training bots (GPTBot, ClaudeBot) has no visibility downside since they don't power live answers. Blocking search/citation bots (OAI-SearchBot, PerplexityBot, Claude-SearchBot) does mean your pages won't be cited or linked in those tools' answers.</p>
+      </details>
+      <details>
+        <summary>Does this tool fetch my live robots.txt for me?</summary>
+        <p>No — paste the contents directly. Fetching an arbitrary external URL from inside your browser is blocked by cross-origin browser security for most sites, so pasting keeps the check reliable and keeps your data off any server, including ours.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?</summary>
+        <p>No. Everything is checked in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a full AI search visibility strategy?</h2>
+      <p>Contomatix handles AI SEO end to end, not just crawler access rules.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free LLM SEO Checker',
+    url: site.baseUrl + '/tools/llm-seo-checker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended) your robots.txt allows or blocks, for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'LLM SEO Checker', item: site.baseUrl + '/tools/llm-seo-checker' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does blocking these bots remove my site from ChatGPT or Claude existing answers?', acceptedAnswer: { '@type': 'Answer', text: 'No. Blocking a crawler stops future crawling, but does not retroactively remove content a model may have already been trained on.' } },
+      { '@type': 'Question', name: 'If I block GPTBot, am I also blocking ChatGPT-User?', acceptedAnswer: { '@type': 'Answer', text: 'No, each company runs separate bots for training versus live user requests versus search indexing, and blocking one does not block the others.' } },
+      { '@type': 'Question', name: 'Does ChatGPT-User or Claude-User respect robots.txt at all?', acceptedAnswer: { '@type': 'Answer', text: 'These user-triggered bots fetch a page because a person asked a direct question, and robots.txt may not apply the same way it does to autonomous crawling bots.' } },
+      { '@type': 'Question', name: 'Is there a downside to blocking all AI crawlers?', acceptedAnswer: { '@type': 'Answer', text: 'Blocking training bots has no visibility downside. Blocking search and citation bots means your pages will not be cited in those tools answers.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var BOTS = [
+    { token: 'GPTBot', company: 'OpenAI', purpose: 'Model training' },
+    { token: 'OAI-SearchBot', company: 'OpenAI', purpose: 'ChatGPT search citations' },
+    { token: 'ChatGPT-User', company: 'OpenAI', purpose: 'Live user requests' },
+    { token: 'ClaudeBot', company: 'Anthropic', purpose: 'Model training' },
+    { token: 'Claude-SearchBot', company: 'Anthropic', purpose: 'Search result quality' },
+    { token: 'Claude-User', company: 'Anthropic', purpose: 'Live user requests' },
+    { token: 'PerplexityBot', company: 'Perplexity', purpose: 'Indexing and crawling' },
+    { token: 'Perplexity-User', company: 'Perplexity', purpose: 'Live user requests' },
+    { token: 'Google-Extended', company: 'Google', purpose: 'Gemini training / AI grounding' },
+    { token: 'Applebot-Extended', company: 'Apple', purpose: 'Apple Intelligence training' },
+    { token: 'CCBot', company: 'Common Crawl', purpose: 'Open dataset for many AI labs' }
+  ];
+
+  function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+  function parseRobots(text) {
+    var lines = text.split('\n').map(function (l) { return l.trim(); });
+    var groups = [];
+    var current = null;
+    lines.forEach(function (line) {
+      if (!line || line.indexOf('#') === 0) return;
+      var idx = line.indexOf(':');
+      if (idx === -1) return;
+      var field = line.slice(0, idx).trim().toLowerCase();
+      var value = line.slice(idx + 1).trim();
+      if (field === 'user-agent') {
+        if (!current || current.rules.length) { current = { agents: [], rules: [] }; groups.push(current); }
+        current.agents.push(value);
+      } else if ((field === 'disallow' || field === 'allow') && current) {
+        current.rules.push({ type: field, path: value });
+      }
+    });
+    return groups;
+  }
+
+  function statusFor(token, groups) {
+    var exact = groups.find(function (g) { return g.agents.some(function (a) { return a.toLowerCase() === token.toLowerCase(); }); });
+    var group = exact;
+    var usedWildcard = false;
+    if (!group) {
+      group = groups.find(function (g) { return g.agents.indexOf('*') !== -1; });
+      usedWildcard = true;
+    }
+    if (!group || !group.rules.length) return { blocked: false, usedWildcard: usedWildcard, noRule: true };
+    var blocksRoot = group.rules.some(function (r) { return r.type === 'disallow' && (r.path === '/' || r.path === ''); });
+    var allowsRoot = group.rules.some(function (r) { return r.type === 'allow' && (r.path === '/' || r.path === ''); });
+    if (blocksRoot && !allowsRoot) return { blocked: true, usedWildcard: usedWildcard, noRule: false };
+    return { blocked: false, usedWildcard: usedWildcard, noRule: false };
+  }
+
+  function run() {
+    var text = document.getElementById('lc-input').value.trim();
+    var output = document.getElementById('lc-output');
+    var status = document.getElementById('lc-status');
+
+    if (!text) {
+      output.textContent = 'Paste a robots.txt file to check it.';
+      status.textContent = 'Waiting for input';
+      return;
+    }
+
+    var groups = parseRobots(text);
+    var blockedCount = 0;
+    var rows = BOTS.map(function (bot) {
+      var r = statusFor(bot.token, groups);
+      if (r.blocked) blockedCount++;
+      var badge, note;
+      if (r.blocked) { badge = '<span style="color:#B5730E;font-weight:700;">BLOCKED</span>'; note = r.usedWildcard ? 'via wildcard (*) rule' : 'named directly'; }
+      else if (r.noRule) { badge = '<span style="color:#0B807C;font-weight:700;">ALLOWED</span>'; note = 'no matching rule — default allow'; }
+      else { badge = '<span style="color:#0B807C;font-weight:700;">ALLOWED</span>'; note = r.usedWildcard ? 'via wildcard (*) rule' : 'named directly'; }
+      return '<div style="display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #EAE0D2;"><div><strong>' + esc(bot.token) + '</strong><div style="font-size:0.8rem;color:#8A8371;">' + esc(bot.company) + ' — ' + esc(bot.purpose) + '</div></div><div style="text-align:right;white-space:nowrap;">' + badge + '<div style="font-size:0.75rem;color:#8A8371;">' + note + '</div></div></div>';
+    });
+
+    output.innerHTML = rows.join('');
+    status.textContent = (BOTS.length - blockedCount) + ' of ' + BOTS.length + ' AI crawlers allowed';
+  }
+
+  document.getElementById('lc-input').addEventListener('input', run);
+  run();
+})();
+</script>

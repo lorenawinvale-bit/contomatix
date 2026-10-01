@@ -57,6 +57,11 @@ module.exports = [
     summary: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates, and limit violations — for free, in seconds.'
   },
   {
+    slug: 'llm-seo-checker',
+    title: 'LLM SEO Checker',
+    summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks — for free, in seconds.'
+  },
+  {
     slug: 'invoice-generator',
     title: 'Invoice Generator & Template',
     summary: 'A free freelance invoice template that generates a professional, itemized PDF in seconds — no signup, nothing leaves your browser.'
