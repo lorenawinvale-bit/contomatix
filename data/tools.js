@@ -57,6 +57,11 @@ module.exports = [
     summary: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates, and limit violations — for free, in seconds.'
   },
   {
+    slug: 'hreflang-sitemap-validator',
+    title: 'Hreflang Sitemap Validator',
+    summary: 'Check hreflang annotations in a sitemap.xml for missing self-references, missing return links, and invalid language or region codes.'
+  },
+  {
     slug: 'llm-seo-checker',
     title: 'LLM SEO Checker',
     summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks — for free, in seconds.'

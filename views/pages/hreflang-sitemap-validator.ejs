@@ -1,0 +1,266 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Hreflang Sitemap Validator — Check Annotations for Errors</h1>
+    <p>Paste a <strong>sitemap.xml with hreflang annotations</strong> and this <strong>free hreflang sitemap validator</strong> checks the rules Google actually enforces — the xhtml namespace, a self-reference on every URL, reciprocal return links and valid language and region codes. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="hv-form" onsubmit="return false;" aria-label="Hreflang sitemap validator form">
+        <div>
+          <label for="hv-input">Paste your hreflang sitemap.xml contents</label>
+          <textarea id="hv-input" style="min-height: 300px;" placeholder="<urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot; xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot;>&#10;  <url>&#10;    <loc>https://example.com/en/</loc>&#10;    <xhtml:link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://example.com/en/&quot;/>&#10;    <xhtml:link rel=&quot;alternate&quot; hreflang=&quot;fr&quot; href=&quot;https://example.com/fr/&quot;/>&#10;  </url>&#10;  ...&#10;</urlset>"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Validation results</strong>
+        <span id="hv-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="hv-output" class="llms-output" style="max-height:340px;">Paste a sitemap to check it.</pre>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What This Checks</h2>
+    <ul class="service-points">
+      <li><strong>Valid XML and a <code>&lt;urlset&gt;</code> root</strong> — the file has to parse before anything else can be checked</li>
+      <li><strong>The xhtml namespace</strong> — Google's documentation requires <code>xmlns:xhtml="http://www.w3.org/1999/xhtml"</code> on the root element</li>
+      <li><strong>A self-reference</strong> — each <code>&lt;url&gt;</code> must list every alternate version of the page, including itself</li>
+      <li><strong>Return links</strong> — if two pages don't both point to each other, Google ignores the tags, so every alternate must list the page back</li>
+      <li><strong>Alternates that have their own entry</strong> — every alternate URL should appear as its own <code>&lt;url&gt;</code> with its own annotations</li>
+      <li><strong>Valid codes</strong> — a language code (ISO 639-1), optionally with a region (ISO 3166-1 Alpha 2), or <code>x-default</code>; codes such as <code>es-419</code> are not supported</li>
+      <li><strong>Duplicates and conflicts</strong> — the same hreflang value repeated, or pointing to different URLs, within one entry</li>
+      <li><strong>Absolute URLs</strong> — every <code>href</code> needs a full protocol and host</li>
+    </ul>
+
+    <h2>Why Sitemap Annotations Fail Quietly</h2>
+    <p>Google's rule for sitemap hreflang is unforgiving: if two pages don't both point to each other, the tags are ignored. That protects your pages from anyone naming themselves as an alternative version of your content, but it also means a single missing return link silently switches off the annotation for that pair. Nothing breaks on the page, no error shows in a browser, and the wrong country version simply keeps ranking.</p>
+    <p>Sitemap annotations also get stale in a particular way. A URL changes in one language version, the sitemap generator is updated for that entry only, and the other versions now point at an address that redirects or no longer exists. Pasting the file here after any URL change catches that kind of drift before Google does.</p>
+
+    <h2>Hreflang Sitemap Validator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does every URL need to list itself?<span class="faq-icon"></span></summary>
+        <p>Yes. Google's documentation says each <code>&lt;url&gt;</code> element must have child <code>xhtml:link</code> elements that list every alternate version of the page, including itself.</p>
+      </details>
+      <details>
+        <summary>What happens if a return link is missing?<span class="faq-icon"></span></summary>
+        <p>Google states that if two pages don't both point to each other, the tags will be ignored. The pair loses its hreflang relationship even though the markup looks fine.</p>
+      </details>
+      <details>
+        <summary>Can I use hreflang in the HTML and the sitemap together?<span class="faq-icon"></span></summary>
+        <p>Google says you can combine methods, but there is no benefit in Search and it is harder to manage than picking one. If both exist, they need to match exactly.</p>
+      </details>
+      <details>
+        <summary>Is es-419 a valid hreflang value?<span class="faq-icon"></span></summary>
+        <p>No. Google only supports ISO 639-1 language codes and ISO 3166-1 Alpha 2 region codes, and names es-419 as an example of an unsupported code.</p>
+      </details>
+      <details>
+        <summary>Does this tool fetch my sitemap for me?<span class="faq-icon"></span></summary>
+        <p>No. Paste the contents. Fetching another site's file from the browser is blocked by cross-origin rules for most sites, and pasting keeps your data off every server, including ours.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is checked in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Running SEO across several countries?</h2>
+      <p>Contomatix handles full international SEO, not just hreflang checks.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Hreflang Sitemap Validator',
+    url: site.baseUrl + '/tools/hreflang-sitemap-validator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Check the hreflang annotations in a sitemap.xml for missing self-references, missing return links, invalid codes and namespace errors, for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Hreflang Sitemap Validator', item: site.baseUrl + '/tools/hreflang-sitemap-validator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does every URL need to list itself?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Google documentation says each url element must list every alternate version of the page, including itself.' } },
+      { '@type': 'Question', name: 'What happens if a return link is missing?', acceptedAnswer: { '@type': 'Answer', text: 'Google states that if two pages do not both point to each other, the tags will be ignored.' } },
+      { '@type': 'Question', name: 'Can I use hreflang in the HTML and the sitemap together?', acceptedAnswer: { '@type': 'Answer', text: 'Google says you can combine methods, but there is no benefit in Search and it is harder to manage than picking one.' } },
+      { '@type': 'Question', name: 'Is es-419 a valid hreflang value?', acceptedAnswer: { '@type': 'Answer', text: 'No. Google only supports ISO 639-1 language codes and ISO 3166-1 Alpha 2 region codes, and names es-419 as unsupported.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var LANGS = 'aa ab ae af ak am an ar as av ay az ba be bg bh bi bm bn bo br bs ca ce ch co cr cs cu cv cy da de dv dz ee el en eo es et eu fa ff fi fj fo fr fy ga gd gl gn gu gv ha he hi ho hr ht hu hy hz ia id ie ig ii ik io is it iu ja jv ka kg ki kj kk kl km kn ko kr ks ku kv kw ky la lb lg li ln lo lt lu lv mg mh mi mk ml mn mr ms mt my na nb nd ne ng nl nn no nr nv ny oc oj om or os pa pi pl ps pt qu rm rn ro ru rw sa sc sd se sg si sk sl sm sn so sq sr ss st su sv sw ta te tg th ti tk tl tn to tr ts tt tw ty ug uk ur uz ve vi vo wa wo xh yi yo za zh zu'.split(' ');
+  var XHTML_NS = 'http://www.w3.org/1999/xhtml';
+
+  function isAbsolute(u) { return /^https?:\/\//i.test(u); }
+  function norm(u) { return (u || '').trim(); }
+
+  function checkCode(code) {
+    var c = code.trim();
+    if (c.toLowerCase() === 'x-default') return null;
+    var m = /^([A-Za-z]{2,3})(?:-([A-Za-z]{4}))?(?:-([A-Za-z]{2}|[0-9]{3}))?$/.exec(c);
+    if (!m) return 'is not a valid language[-region] code';
+    var lang = m[1].toLowerCase();
+    var region = m[3];
+    if (LANGS.indexOf(lang) === -1) {
+      if (region === undefined && /^[A-Za-z]{2}$/.test(c)) return 'is not an ISO 639-1 language code (a country code on its own is not allowed)';
+      return 'starts with "' + m[1] + '", which is not an ISO 639-1 language code';
+    }
+    if (region !== undefined) {
+      if (/^[0-9]{3}$/.test(region)) return 'uses the numeric region "' + region + '", which is not an ISO 3166-1 Alpha 2 code, so Google does not support it';
+      var r = region.toUpperCase();
+      if (r === 'UK') return 'uses region UK, but the ISO 3166-1 code for the United Kingdom is GB';
+      if (r === 'EU') return 'uses region EU, which is not a supported ISO 3166-1 Alpha 2 country code';
+    }
+    return null;
+  }
+
+  function validate(xmlText) {
+    var errors = [], warnings = [], info = [];
+    var doc = new DOMParser().parseFromString(xmlText, 'application/xml');
+    var pe = doc.getElementsByTagName('parsererror')[0];
+    if (pe) {
+      errors.push('The file is not valid XML: ' + pe.textContent.split('\n')[0]);
+      return { errors: errors, warnings: warnings, info: info };
+    }
+    var root = doc.documentElement;
+    var rootName = root.localName || root.tagName;
+    if (rootName !== 'urlset') {
+      errors.push('Root element is <' + rootName + '>, expected <urlset>. Check each child sitemap on its own if this is an index file.');
+      return { errors: errors, warnings: warnings, info: info };
+    }
+    var hasNs = false;
+    for (var i = 0; i < root.attributes.length; i++) {
+      var a = root.attributes[i];
+      if (a.value === XHTML_NS) hasNs = true;
+    }
+    if (!hasNs) errors.push('The <urlset> element is missing xmlns:xhtml="' + XHTML_NS + '", which Google requires for hreflang annotations.');
+
+    var urls = Array.prototype.slice.call(root.getElementsByTagNameNS('*', 'url'));
+    if (!urls.length) { errors.push('No <url> entries found.'); return { errors: errors, warnings: warnings, info: info }; }
+
+    var entries = {};
+    var order = [];
+    var withLinks = 0;
+    urls.forEach(function (u, idx) {
+      var locEl = u.getElementsByTagNameNS('*', 'loc')[0];
+      var loc = locEl ? norm(locEl.textContent) : '';
+      if (!loc) { errors.push('<url> #' + (idx + 1) + ' has no <loc>.'); return; }
+      if (!isAbsolute(loc)) errors.push('<loc> is not an absolute URL: ' + loc);
+      var links = Array.prototype.slice.call(u.getElementsByTagNameNS(XHTML_NS, 'link'));
+      var alts = [];
+      var seenCodes = {};
+      links.forEach(function (l) {
+        if ((l.getAttribute('rel') || '').toLowerCase() !== 'alternate') return;
+        var code = l.getAttribute('hreflang');
+        var href = norm(l.getAttribute('href'));
+        if (!code) { errors.push(loc + ': an xhtml:link has no hreflang attribute.'); return; }
+        if (!href) { errors.push(loc + ': hreflang "' + code + '" has no href.'); return; }
+        if (!isAbsolute(href)) errors.push(loc + ': hreflang "' + code + '" href is not an absolute URL (' + href + ').');
+        var bad = checkCode(code);
+        if (bad) errors.push(loc + ': hreflang "' + code + '" ' + bad + '.');
+        var key = code.toLowerCase();
+        if (seenCodes[key] && seenCodes[key] !== href) errors.push(loc + ': hreflang "' + code + '" points to two different URLs.');
+        else if (seenCodes[key]) warnings.push(loc + ': hreflang "' + code + '" is listed more than once.');
+        seenCodes[key] = href;
+        alts.push({ code: code, href: href });
+      });
+      if (alts.length) withLinks++;
+      entries[loc] = alts;
+      order.push(loc);
+    });
+
+    if (!withLinks) {
+      warnings.push('No xhtml:link hreflang annotations found in any <url>.');
+      return { errors: errors, warnings: warnings, info: info };
+    }
+
+    order.forEach(function (loc) {
+      var alts = entries[loc];
+      if (!alts.length) { warnings.push(loc + ': has no hreflang annotations, but other entries do.'); return; }
+      var selfListed = alts.some(function (a) { return a.href === loc; });
+      if (!selfListed) errors.push(loc + ': does not list itself as one of its alternates.');
+      var hasDefault = alts.some(function (a) { return a.code.toLowerCase() === 'x-default'; });
+      if (!hasDefault) info.push(loc + ': no x-default (optional).');
+      alts.forEach(function (a) {
+        if (a.href === loc) return;
+        if (!entries.hasOwnProperty(a.href)) {
+          warnings.push(loc + ': alternate ' + a.href + ' (' + a.code + ') has no <url> entry of its own, so it cannot link back.');
+          return;
+        }
+        var back = entries[a.href].some(function (b) { return b.href === loc; });
+        if (!back) errors.push('Missing return link: ' + loc + ' points to ' + a.href + ' (' + a.code + '), but that page does not point back, so Google ignores the pair.');
+      });
+    });
+
+    info.unshift('Checked ' + order.length + ' URL(s), ' + withLinks + ' with hreflang annotations.');
+    return { errors: errors, warnings: warnings, info: info.slice(0, 12) };
+  }
+
+  function render(r) {
+    var out = document.getElementById('hv-output');
+    var status = document.getElementById('hv-status');
+    var lines = [];
+    var cap = function (arr) { return arr.length > 40 ? arr.slice(0, 40).concat(['…and ' + (arr.length - 40) + ' more']) : arr; };
+    status.textContent = r.errors.length ? r.errors.length + ' error(s) found' : 'No errors found';
+    if (r.errors.length) { lines.push('ERRORS'); cap(r.errors).forEach(function (e) { lines.push('  ✗ ' + e); }); }
+    if (r.warnings.length) { lines.push(''); lines.push('WARNINGS'); cap(r.warnings).forEach(function (w) { lines.push('  ! ' + w); }); }
+    if (r.info.length) { lines.push(''); lines.push('INFO'); r.info.forEach(function (i) { lines.push('  · ' + i); }); }
+    out.textContent = lines.join('\n');
+  }
+
+  function run() {
+    var text = document.getElementById('hv-input').value.trim();
+    if (!text) {
+      document.getElementById('hv-output').textContent = 'Paste a sitemap to check it.';
+      document.getElementById('hv-status').textContent = 'Waiting for input';
+      return;
+    }
+    render(validate(text));
+  }
+
+  document.getElementById('hv-input').addEventListener('input', run);
+  run();
+})();
+</script>

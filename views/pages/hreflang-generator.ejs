@@ -76,7 +76,7 @@ es-MX | https://example.com/mx/</textarea>
       </details>
       <details>
         <summary>Should hreflang tags be in the HTML or the sitemap?<span class="faq-icon"></span></summary>
-        <p>Either works, but not both at once for the same URLs — pick one method per site. Sitemap annotations are often easier to maintain at scale since they don't require editing every page's HTML.</p>
+        <p>Either works. Google says you can combine HTML, header and sitemap methods, but there is no benefit in Search and it is harder to manage, so pick one if you can. Sitemap annotations are often easier to maintain at scale since they don't require editing every page's HTML.</p>
       </details>
       <details>
         <summary>Do I need an x-default page?<span class="faq-icon"></span></summary>
@@ -134,7 +134,7 @@ es-MX | https://example.com/mx/</textarea>
     mainEntity: [
       { '@type': 'Question', name: 'Do I need hreflang if my site is only in one language?', acceptedAnswer: { '@type': 'Answer', text: 'No. Hreflang is only relevant once you have two or more language or regional versions of the same content.' } },
       { '@type': 'Question', name: 'What happens if my hreflang tags are not reciprocal?', acceptedAnswer: { '@type': 'Answer', text: 'Non-reciprocal hreflang annotations may be ignored entirely by Google, meaning none of the language-targeting signals get applied.' } },
-      { '@type': 'Question', name: 'Should hreflang tags be in the HTML or the sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'Either works, but not both at once for the same URLs. Sitemap annotations are often easier to maintain at scale.' } },
+      { '@type': 'Question', name: 'Should hreflang tags be in the HTML or the sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'Either works. Google says combining methods has no benefit in Search and is harder to manage, so pick one if you can. Sitemap annotations are often easier to maintain at scale.' } },
       { '@type': 'Question', name: 'Do I need an x-default page?', acceptedAnswer: { '@type': 'Answer', text: 'It is optional but recommended as a sensible fallback for visitors whose language does not match any listed version.' } },
       { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
     ]
