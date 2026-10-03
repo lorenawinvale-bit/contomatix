@@ -62,6 +62,11 @@ module.exports = [
     summary: 'Check hreflang annotations in a sitemap.xml for missing self-references, missing return links, and invalid language or region codes.'
   },
   {
+    slug: 'slug-generator',
+    title: 'Slug Generator',
+    summary: 'Turn any page title into a clean, lowercase, hyphen-separated URL slug — accents stripped, stop words optional.'
+  },
+  {
     slug: 'llm-seo-checker',
     title: 'LLM SEO Checker',
     summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks — for free, in seconds.'

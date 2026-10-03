@@ -1,0 +1,211 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free URL Slug Generator — Turn Any Title into a Clean Slug</h1>
+    <p>Type or paste a page title and this <strong>free slug generator</strong> turns it into a clean, readable <strong>URL slug</strong> — lowercase, hyphen-separated, accents removed and stop words trimmed if you want. Do one title or a whole list. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="sg-form" onsubmit="return false;" aria-label="Slug generator form">
+        <div>
+          <label for="sg-input">Page titles (one per line)</label>
+          <textarea id="sg-input" style="min-height: 180px;" placeholder="10 Best Résumé Tips for 2026&#10;What's the Difference Between SEO &amp; SEM?&#10;Über uns – Our Story"></textarea>
+        </div>
+        <div>
+          <label for="sg-sep">Separator</label>
+          <select id="sg-sep">
+            <option value="-">Hyphen ( - )  recommended</option>
+            <option value="_">Underscore ( _ )</option>
+          </select>
+        </div>
+        <div>
+          <label for="sg-max">Maximum length in characters (optional)</label>
+          <input type="number" id="sg-max" min="10" max="200" placeholder="e.g. 60">
+        </div>
+        <div>
+          <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" id="sg-lower" checked> Convert to lowercase</label>
+        </div>
+        <div>
+          <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" id="sg-accents" checked> Turn accented letters into plain ones (é → e, ü → u)</label>
+        </div>
+        <div>
+          <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" id="sg-stop"> Remove common stop words (a, the, of, and…)</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Generated slugs</strong>
+        <span id="sg-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="sg-output" class="llms-output" style="max-height:340px;">Type a title to generate its slug.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="sg-copy">Copy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What This Does</h2>
+    <ul class="service-points">
+      <li><strong>Strips punctuation and symbols</strong> — apostrophes, question marks, ampersands and brackets never end up in the address</li>
+      <li><strong>Separates words with hyphens</strong> — the separator Google recommends over underscores</li>
+      <li><strong>Lowercases everything</strong> — so <code>/Apple</code> and <code>/apple</code> never become two different pages</li>
+      <li><strong>Removes accents</strong> — é, ü, ñ and ç become e, u, n and c, with ß written as ss</li>
+      <li><strong>Trims stop words</strong> (optional) — drops small filler words such as <em>the</em>, <em>and</em> and <em>of</em> to keep the slug short</li>
+      <li><strong>Caps the length</strong> (optional) — shortens at a word boundary so a slug is never cut in the middle of a word</li>
+      <li><strong>Handles a list</strong> — paste a column of titles and get one slug per line</li>
+    </ul>
+
+    <h2>What Makes a Good URL Slug</h2>
+    <p>The slug is the last part of a page address, the bit after the final slash. Google's URL structure guidance asks for readable words rather than long ID numbers, a simple structure and as few parameters as possible. It also recommends hyphens instead of underscores to separate words, because that helps people and search engines identify the concepts in the URL.</p>
+    <p>Case matters too. Google treats <code>/APPLE</code> and <code>/apple</code> as distinct URLs, so mixed-case slugs invite duplicate pages if a link is ever typed or generated in a different case. Picking one case, usually lowercase, and sticking to it removes the problem.</p>
+    <p>Google also says characters outside the ASCII range should be percent-encoded. That is why this tool offers to turn accented letters into plain ones. Scripts with no Latin equivalent, such as Arabic or Japanese, stay as they are and are flagged, since they need percent-encoding in the final address.</p>
+
+    <h2>Slug Generator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Should I use hyphens or underscores in a slug?<span class="faq-icon"></span></summary>
+        <p>Hyphens. Google's documentation recommends hyphens instead of underscores to separate words in URLs.</p>
+      </details>
+      <details>
+        <summary>Does capitalization matter in a URL?<span class="faq-icon"></span></summary>
+        <p>Yes. Google treats <code>/APPLE</code> and <code>/apple</code> as different URLs, so using one case throughout, usually lowercase, avoids accidental duplicates.</p>
+      </details>
+      <details>
+        <summary>Should I remove stop words from a slug?<span class="faq-icon"></span></summary>
+        <p>It is a style choice rather than a rule. Removing words like <em>the</em> and <em>of</em> makes slugs shorter, but a slug that still reads naturally to a person is just as good. Use the option when a title is long.</p>
+      </details>
+      <details>
+        <summary>How long should a slug be?<span class="faq-icon"></span></summary>
+        <p>There is no fixed limit in Google's guidance, which asks for simple, readable URLs. A few meaningful words is usually enough, and the optional length cap here helps keep long titles in check.</p>
+      </details>
+      <details>
+        <summary>What happens to non-Latin characters?<span class="faq-icon"></span></summary>
+        <p>They are kept as typed and the tool warns you. Google says non-ASCII characters should be percent-encoded in the final URL, which most CMS platforms and browsers handle for you.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is processed in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Rebuilding your site structure?</h2>
+      <p>Contomatix handles on-page and technical SEO, including URL structure and redirects.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free URL Slug Generator',
+    url: site.baseUrl + '/tools/slug-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Turn any page title into a clean, lowercase, hyphen-separated URL slug, with optional stop-word removal and length cap, for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Slug Generator', item: site.baseUrl + '/tools/slug-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Should I use hyphens or underscores in a slug?', acceptedAnswer: { '@type': 'Answer', text: 'Hyphens. Google documentation recommends hyphens instead of underscores to separate words in URLs.' } },
+      { '@type': 'Question', name: 'Does capitalization matter in a URL?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Google treats /APPLE and /apple as different URLs, so using one case throughout, usually lowercase, avoids accidental duplicates.' } },
+      { '@type': 'Question', name: 'Should I remove stop words from a slug?', acceptedAnswer: { '@type': 'Answer', text: 'It is a style choice rather than a rule. Removing words like the and of makes slugs shorter, but a slug that reads naturally to a person is just as good.' } },
+      { '@type': 'Question', name: 'What happens to non-Latin characters?', acceptedAnswer: { '@type': 'Answer', text: 'They are kept as typed and the tool warns you. Google says non-ASCII characters should be percent-encoded in the final URL.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is processed in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var STOP = 'a an the and or but of to in on at for with by from as is are was were be been it its this that these those'.split(' ');
+  var MAP = { 'ß': 'ss', 'æ': 'ae', 'Æ': 'AE', 'œ': 'oe', 'Œ': 'OE', 'ø': 'o', 'Ø': 'O', 'đ': 'd', 'Đ': 'D', 'ł': 'l', 'Ł': 'L', 'þ': 'th', 'ð': 'd' };
+  var current = '';
+
+  function slugify(title, o) {
+    var s = title.trim();
+    if (o.accents) {
+      s = s.replace(/[ßæÆœŒøØđĐłŁþð]/g, function (c) { return MAP[c]; });
+      s = s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+    }
+    s = s.replace(/['’‘]/g, '');
+    if (o.lower) s = s.toLowerCase();
+    var words = s.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+    if (o.stop) {
+      var kept = words.filter(function (w) { return STOP.indexOf(w.toLowerCase()) === -1; });
+      if (kept.length) words = kept;
+    }
+    if (o.max) {
+      var out = [], len = 0;
+      for (var i = 0; i < words.length; i++) {
+        var add = words[i].length + (out.length ? 1 : 0);
+        if (len + add > o.max) break;
+        out.push(words[i]); len += add;
+      }
+      if (!out.length && words.length) out.push(words[0].slice(0, o.max));
+      words = out;
+    }
+    return words.join(o.sep);
+  }
+
+  function run() {
+    var text = $('sg-input').value;
+    var out = $('sg-output'), status = $('sg-status');
+    current = '';
+    var titles = text.split('\n').map(function (t) { return t.trim(); }).filter(Boolean);
+    if (!titles.length) { out.textContent = 'Type a title to generate its slug.'; status.textContent = 'Waiting for input'; return; }
+    var max = parseInt($('sg-max').value, 10);
+    var o = { sep: $('sg-sep').value, lower: $('sg-lower').checked, accents: $('sg-accents').checked, stop: $('sg-stop').checked, max: max > 0 ? max : 0 };
+    var slugs = titles.map(function (t) { return slugify(t, o); });
+    current = slugs.join('\n');
+    var nonAscii = slugs.filter(function (s) { return /[^\x00-\x7f]/.test(s); }).length;
+    status.textContent = slugs.length + ' slug' + (slugs.length === 1 ? '' : 's') + (nonAscii ? ' · ' + nonAscii + ' with non-ASCII characters' : '');
+    out.textContent = slugs.map(function (s) { return s || '(empty: no letters or numbers found)'; }).join('\n') + (nonAscii ? '\n\nNote: Google says non-ASCII characters in a URL should be percent-encoded.' : '');
+  }
+
+  ['sg-input', 'sg-max'].forEach(function (id) { $(id).addEventListener('input', run); });
+  ['sg-sep', 'sg-lower', 'sg-accents', 'sg-stop'].forEach(function (id) { $(id).addEventListener('change', run); });
+  $('sg-copy').addEventListener('click', function () {
+    if (!current) return;
+    var b = $('sg-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(current).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  run();
+})();
+</script>
