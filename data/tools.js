@@ -67,6 +67,11 @@ module.exports = [
     summary: 'Turn any page title into a clean, lowercase, hyphen-separated URL slug — accents stripped, stop words optional.'
   },
   {
+    slug: 'heading-checker',
+    title: 'Heading Checker',
+    summary: 'See a page H1-H6 outline and flag skipped levels, empty headings, a missing H1 and repeated heading text.'
+  },
+  {
     slug: 'llm-seo-checker',
     title: 'LLM SEO Checker',
     summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks — for free, in seconds.'

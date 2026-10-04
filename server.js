@@ -205,7 +205,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -405,6 +405,14 @@ app.get('/tools/slug-generator', (req, res) => {
   res.render('pages/slug-generator', {
     title: 'Free URL Slug Generator — Clean SEO Slugs | Contomatix',
     description: 'Turn any page title into a clean, lowercase, hyphen-separated URL slug. Strips accents, removes stop words, caps length. Free, no signup.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/heading-checker', (req, res) => {
+  res.render('pages/heading-checker', {
+    title: 'Free Heading Checker — H1-H6 Outline Tool | Contomatix',
+    description: 'Paste a page HTML to see its H1-H6 heading outline and flag skipped levels, empty headings, a missing H1 and repeated text. Free, no signup.',
     pageClass: 'page-tool'
   });
 });

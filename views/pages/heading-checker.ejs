@@ -1,0 +1,194 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Heading Checker — See Your H1–H6 Outline and Fix Problems</h1>
+    <p>Paste a page's HTML and this <strong>free heading checker</strong> pulls out every <strong>H1–H6 heading tag</strong>, shows them as an indented outline and flags skipped levels, empty headings, a missing H1 and repeated text. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="hc-form" onsubmit="return false;" aria-label="Heading checker form">
+        <div>
+          <label for="hc-input">Paste your page HTML</label>
+          <textarea id="hc-input" style="min-height: 330px;" placeholder="<h1>Page title</h1>&#10;<h2>First section</h2>&#10;<h3>A sub-point</h3>&#10;<h2>Second section</h2>&#10;&#10;Tip: right-click the page, choose View Page Source, copy it and paste it here."></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Heading outline and checks</strong>
+        <span id="hc-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="hc-output" class="llms-output" style="max-height:380px;">Paste some HTML to see its headings.</pre>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What This Checks</h2>
+    <ul class="service-points">
+      <li><strong>The full outline</strong> — every <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> in page order, indented by level so the structure is visible at a glance</li>
+      <li><strong>Skipped levels</strong> — an <code>&lt;h2&gt;</code> followed directly by an <code>&lt;h4&gt;</code>, which the W3C accessibility guidance says to avoid where possible</li>
+      <li><strong>A missing H1</strong> or a page whose first heading is not a top-level heading</li>
+      <li><strong>More than one H1</strong> — reported as a note, because it is allowed; it is just worth knowing about</li>
+      <li><strong>Empty headings</strong> — a heading tag with no text, which screen readers still announce</li>
+      <li><strong>Repeated heading text</strong> — two headings with identical wording, which usually means a section needs a more specific title</li>
+      <li><strong>Very long headings</strong> — a style tip for any heading over 70 characters</li>
+    </ul>
+
+    <h2>Do Headings Matter for SEO?</h2>
+    <p>Less than most checklists suggest, and the reason is worth knowing. Google's SEO Starter Guide says there is no magical, ideal number of headings a page should have, and that from a Google Search perspective it does not matter if headings are used out of order. In other words, you will not be penalised for a skipped level or a second H1.</p>
+    <p>The case for tidy headings is mostly about people. The same guide notes that headings in semantic order are fantastic for screen readers, and the W3C accessibility tutorial advises against skipping heading ranks because it can confuse people who navigate by headings. A clear outline also makes a long page easier for any reader to scan. That is why this tool labels each finding as an accessibility issue or a style note, rather than a ranking error.</p>
+
+    <h2>Heading Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Can a page have more than one H1?<span class="faq-icon"></span></summary>
+        <p>Yes. Google does not prescribe a number of headings, and a second H1 does not break anything for Search. Many teams still use one H1 per page so the main topic is obvious, which is why the tool reports extra H1s as a note rather than an error.</p>
+      </details>
+      <details>
+        <summary>Does skipping a heading level hurt rankings?<span class="faq-icon"></span></summary>
+        <p>Google says it does not matter for Search if headings are used out of order. The W3C does advise avoiding skipped ranks, because it can confuse people using assistive technology, so it is worth fixing for accessibility.</p>
+      </details>
+      <details>
+        <summary>Should headings contain keywords?<span class="faq-icon"></span></summary>
+        <p>Use words that describe the section honestly. A heading that reads naturally and tells the reader what follows will usually contain the relevant terms without forcing them in.</p>
+      </details>
+      <details>
+        <summary>Why does the tool want me to paste HTML instead of a URL?<span class="faq-icon"></span></summary>
+        <p>Browsers block most cross-site requests to other people's pages, and pasting also keeps your page off every server, including ours. Use View Page Source on the page, copy it and paste it here.</p>
+      </details>
+      <details>
+        <summary>Does it read headings that are added by JavaScript?<span class="faq-icon"></span></summary>
+        <p>Only if they are in the HTML you paste. View Page Source shows the HTML as the server sent it, so headings built later by scripts will not appear. To include them, copy the rendered HTML from your browser's developer tools instead.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is checked in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a full on-page review?</h2>
+      <p>Contomatix reviews page structure, content and technical basics together.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Heading Checker',
+    url: site.baseUrl + '/tools/heading-checker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste a page HTML to see its H1-H6 heading outline and flag skipped levels, empty headings, a missing H1 and repeated heading text, for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Heading Checker', item: site.baseUrl + '/tools/heading-checker' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Can a page have more than one H1?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Google does not prescribe a number of headings, and a second H1 does not break anything for Search. Many teams still use one H1 per page so the main topic is obvious.' } },
+      { '@type': 'Question', name: 'Does skipping a heading level hurt rankings?', acceptedAnswer: { '@type': 'Answer', text: 'Google says it does not matter for Search if headings are used out of order. The W3C advises avoiding skipped ranks because it can confuse people using assistive technology.' } },
+      { '@type': 'Question', name: 'Should headings contain keywords?', acceptedAnswer: { '@type': 'Answer', text: 'Use words that describe the section honestly. A heading that reads naturally will usually contain the relevant terms without forcing them in.' } },
+      { '@type': 'Question', name: 'Does it read headings that are added by JavaScript?', acceptedAnswer: { '@type': 'Answer', text: 'Only if they are in the HTML you paste. To include script-built headings, copy the rendered HTML from your browser developer tools.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+
+  function analyse(html) {
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var nodes = Array.prototype.slice.call(doc.querySelectorAll('h1,h2,h3,h4,h5,h6'));
+    var heads = nodes.map(function (n) {
+      return { level: parseInt(n.tagName.charAt(1), 10), text: (n.textContent || '').replace(/\s+/g, ' ').trim() };
+    });
+    var access = [], notes = [];
+    if (!heads.length) return { heads: heads, access: access, notes: notes };
+
+    var h1s = heads.filter(function (h) { return h.level === 1; });
+    if (!h1s.length) access.push('No <h1> found. Add one heading that names what the page is about.');
+    else if (heads[0].level !== 1) access.push('The first heading on the page is an <h' + heads[0].level + '>, not an <h1>.');
+    if (h1s.length > 1) notes.push(h1s.length + ' <h1> headings found. Allowed, but check it is intentional.');
+
+    heads.forEach(function (h, i) {
+      if (!h.text) access.push('Heading #' + (i + 1) + ' (<h' + h.level + '>) is empty.');
+      if (i > 0) {
+        var prev = heads[i - 1];
+        if (h.level > prev.level + 1) {
+          access.push('Skipped level: <h' + prev.level + '> "' + short(prev.text) + '" is followed by <h' + h.level + '> "' + short(h.text) + '".');
+        }
+      }
+      if (h.text.length > 70) notes.push('Long heading (' + h.text.length + ' characters): "' + short(h.text) + '".');
+    });
+
+    var seen = {};
+    heads.forEach(function (h) {
+      var k = h.text.toLowerCase();
+      if (!k) return;
+      seen[k] = (seen[k] || 0) + 1;
+    });
+    Object.keys(seen).forEach(function (k) {
+      if (seen[k] > 1) notes.push('Repeated heading text (' + seen[k] + ' times): "' + short(k) + '".');
+    });
+    return { heads: heads, access: access, notes: notes };
+  }
+
+  function short(s) { return s.length > 48 ? s.slice(0, 45) + '…' : s; }
+
+  function run() {
+    var text = $('hc-input').value.trim();
+    var out = $('hc-output'), status = $('hc-status');
+    if (!text) { out.textContent = 'Paste some HTML to see its headings.'; status.textContent = 'Waiting for input'; return; }
+    var r = analyse(text);
+    if (!r.heads.length) { out.textContent = 'No <h1>–<h6> headings found in this HTML.'; status.textContent = 'No headings'; return; }
+    var lines = ['OUTLINE (' + r.heads.length + ' headings)'];
+    r.heads.forEach(function (h) {
+      var pad = new Array(h.level).join('  ');
+      lines.push(pad + 'H' + h.level + '  ' + (h.text || '(empty)'));
+    });
+    if (r.access.length) { lines.push(''); lines.push('ACCESSIBILITY ISSUES'); r.access.slice(0, 30).forEach(function (a) { lines.push('  ✗ ' + a); }); }
+    if (r.notes.length) { lines.push(''); lines.push('NOTES'); r.notes.slice(0, 30).forEach(function (a) { lines.push('  ! ' + a); }); }
+    if (!r.access.length && !r.notes.length) { lines.push(''); lines.push('No problems found.'); }
+    out.textContent = lines.join('\n');
+    status.textContent = r.access.length ? r.access.length + ' issue' + (r.access.length === 1 ? '' : 's') + ' found' : (r.notes.length ? 'No issues · ' + r.notes.length + ' note' + (r.notes.length === 1 ? '' : 's') : 'No problems found');
+  }
+
+  $('hc-input').addEventListener('input', run);
+  run();
+})();
+</script>
