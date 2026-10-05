@@ -1,0 +1,297 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free GMB Rank Checker Grid — Plan and Score a Local Geo-Grid Check</h1>
+    <p>This <strong>free GMB rank checker grid</strong> builds a map of check points around your business, gives you a Google Maps link for each one, and scores the ranks you type in as an average, a top-3 coverage figure and a colour heatmap. It is a manual check, so there is no signup and nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="gg-form" onsubmit="return false;" aria-label="Geo-grid rank planner form">
+        <div>
+          <label for="gg-kw">Keyword to check</label>
+          <input type="text" id="gg-kw" placeholder="e.g. emergency plumber">
+        </div>
+        <div>
+          <label for="gg-center">Centre point (latitude, longitude)</label>
+          <input type="text" id="gg-center" placeholder="e.g. 32.7767, -96.7970">
+          <p style="font-size:0.85rem;color:#6b6459;margin:6px 0 0;">In Google Maps, right-click your business and click the numbers at the top of the menu to copy them.</p>
+        </div>
+        <div>
+          <label for="gg-size">Grid size</label>
+          <select id="gg-size">
+            <option value="3">3 × 3 (9 points)</option>
+            <option value="5" selected>5 × 5 (25 points)</option>
+            <option value="7">7 × 7 (49 points)</option>
+          </select>
+        </div>
+        <div>
+          <label for="gg-gap">Distance between points</label>
+          <div style="display:flex;gap:10px;">
+            <input type="number" id="gg-gap" min="0.1" step="0.1" value="1" style="flex:1;">
+            <select id="gg-unit" style="width:120px;">
+              <option value="km">km</option>
+              <option value="mi" selected>miles</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="gg-zoom">Map zoom on each point</label>
+          <select id="gg-zoom">
+            <option value="13">13 — wide</option>
+            <option value="14" selected>14 — standard</option>
+            <option value="15">15 — close</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Your grid</strong>
+        <span id="gg-status" class="llms-status">Waiting for input</span>
+      </div>
+      <p style="font-size:0.85rem;color:#6b6459;margin:0 0 10px;">Open each point, find your business in the <strong>organic</strong> results (skip anything marked Sponsored) and type its position. Leave a point empty if you are not in the top 20 and tick "not found".</p>
+      <div id="gg-grid" style="display:grid;gap:6px;"></div>
+      <div id="gg-stats" style="margin-top:14px;font-size:0.92rem;line-height:1.6;"></div>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="gg-copy">Copy results</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>How to Use This Grid</h2>
+    <ul class="service-points">
+      <li><strong>Enter your keyword and centre point.</strong> The centre is usually your business address. In Google Maps, right-click it and click the coordinates at the top of the menu to copy them.</li>
+      <li><strong>Choose a grid.</strong> A 5 × 5 grid with 1 mile between points covers about 4 miles in each direction. Use a wider gap for a service-area business and a smaller one for a shop that serves its own neighbourhood.</li>
+      <li><strong>Open every point.</strong> Each cell links to Google Maps, centred on that point, searching your keyword.</li>
+      <li><strong>Type your rank.</strong> Count only the organic results. Paid listings are labelled Sponsored and sit above them, so skip those.</li>
+      <li><strong>Read the score.</strong> The tool gives an average rank, how many points you are in the top 3 and top 10, and a heatmap you can screenshot for a client or a before-and-after comparison.</li>
+    </ul>
+
+    <h2>What This Tool Does Not Do</h2>
+    <p>This is not an automatic rank tracker. Reading live Google Maps results needs a data source that a browser page cannot reach, so you do the checking and the tool does the layout and the maths. The numbers are a snapshot: your own Google account, device, location and the time of day can all change what you see, so use the grid to compare like with like, for example the same keyword and the same grid before and after a change.</p>
+
+    <h2>Why Rank Changes From Place to Place</h2>
+    <p>Google says local results are based mainly on relevance, distance and prominence. Distance is how far each business is from the person searching, and if someone does not share where they are, Google uses what it knows about their location. That is why a business can sit first beside its own front door and nowhere on the other side of town. Google also says there is no way to request or pay for a better local ranking, so a grid like this is best used to find weak areas and track the effect of real improvements.</p>
+
+    <h2>Geo-Grid Rank Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does this tool check my rank automatically?<span class="faq-icon"></span></summary>
+        <p>No. It builds the grid and the Google Maps links, and you type in the rank you see at each point. It then calculates the average, the top-3 and top-10 coverage and the heatmap.</p>
+      </details>
+      <details>
+        <summary>Do sponsored results count as my rank?<span class="faq-icon"></span></summary>
+        <p>No. Paid listings are labelled Sponsored and appear above the normal results. Count your position among the organic listings only.</p>
+      </details>
+      <details>
+        <summary>Why do I get a different rank from someone else?<span class="faq-icon"></span></summary>
+        <p>Local results depend on where the searcher is, and can also vary with the device, account and time. Treat a grid as a snapshot and compare checks made in the same way.</p>
+      </details>
+      <details>
+        <summary>How do I find my latitude and longitude?<span class="faq-icon"></span></summary>
+        <p>Open Google Maps, right-click your business location and click the pair of numbers at the top of the menu. They are copied, and you can paste them straight into the centre field.</p>
+      </details>
+      <details>
+        <summary>What grid size should I use?<span class="faq-icon"></span></summary>
+        <p>3 × 3 is quick for a small check. 5 × 5 is a good default for most local businesses. 7 × 7 gives more detail but means 49 manual checks.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is calculated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours. The map links open Google Maps in a new tab.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want local rankings improved, not just measured?</h2>
+      <p>Contomatix helps local businesses with Google Business Profile and local SEO.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free GMB Rank Checker Grid',
+    url: site.baseUrl + '/tools/geo-grid-rank-planner',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Build a local geo-grid of Google Maps check points around a business, then score the ranks you enter with an average, top-3 coverage and a heatmap. Manual check, free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Geo-Grid Rank Planner', item: site.baseUrl + '/tools/geo-grid-rank-planner' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does this tool check my rank automatically?', acceptedAnswer: { '@type': 'Answer', text: 'No. It builds the grid and the Google Maps links, and you type in the rank you see at each point. It then calculates the average, the top-3 and top-10 coverage and the heatmap.' } },
+      { '@type': 'Question', name: 'Do sponsored results count as my rank?', acceptedAnswer: { '@type': 'Answer', text: 'No. Paid listings are labelled Sponsored and appear above the normal results. Count your position among the organic listings only.' } },
+      { '@type': 'Question', name: 'Why do I get a different rank from someone else?', acceptedAnswer: { '@type': 'Answer', text: 'Local results depend on where the searcher is, and can also vary with the device, account and time. Treat a grid as a snapshot and compare checks made in the same way.' } },
+      { '@type': 'Question', name: 'How do I find my latitude and longitude?', acceptedAnswer: { '@type': 'Answer', text: 'Open Google Maps, right-click your business location and click the pair of numbers at the top of the menu. They are copied, and you can paste them into the centre field.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is calculated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var ranks = {};      // "r,c" -> number | 'nf'
+  var points = [];
+  var KM_PER_DEG = 111.32;
+
+  function parseCenter(s) {
+    var m = /^\s*(-?\d+(?:\.\d+)?)\s*[,;\s]\s*(-?\d+(?:\.\d+)?)\s*$/.exec(s || '');
+    if (!m) return null;
+    var lat = parseFloat(m[1]), lng = parseFloat(m[2]);
+    if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return null;
+    return { lat: lat, lng: lng };
+  }
+
+  function build() {
+    var kw = $('gg-kw').value.trim();
+    var c = parseCenter($('gg-center').value);
+    var n = parseInt($('gg-size').value, 10);
+    var gap = parseFloat($('gg-gap').value);
+    var km = $('gg-unit').value === 'mi' ? gap * 1.609344 : gap;
+    points = [];
+    if (!kw || !c || !(km > 0)) return false;
+    var dLat = km / KM_PER_DEG;
+    var dLng = km / (KM_PER_DEG * Math.cos(c.lat * Math.PI / 180));
+    var half = (n - 1) / 2, z = $('gg-zoom').value;
+    for (var r = 0; r < n; r++) {
+      for (var col = 0; col < n; col++) {
+        var lat = c.lat + (half - r) * dLat;
+        var lng = c.lng + (col - half) * dLng;
+        points.push({
+          key: r + ',' + col, r: r, c: col,
+          lat: lat, lng: lng,
+          url: 'https://www.google.com/maps/search/' + encodeURIComponent(kw) + '/@' + lat.toFixed(5) + ',' + lng.toFixed(5) + ',' + z + 'z'
+        });
+      }
+    }
+    return true;
+  }
+
+  function colour(v) {
+    if (v === 'nf') return '#f4c7c3';
+    if (v === undefined || v === '') return '#f3eee6';
+    if (v <= 3) return '#b7e1c1';
+    if (v <= 10) return '#fbe7a1';
+    return '#f9cfa5';
+  }
+
+  function render() {
+    var grid = $('gg-grid'), status = $('gg-status');
+    grid.innerHTML = '';
+    if (!build()) {
+      status.textContent = 'Waiting for input';
+      $('gg-stats').textContent = '';
+      return;
+    }
+    var n = parseInt($('gg-size').value, 10);
+    grid.style.gridTemplateColumns = 'repeat(' + n + ', minmax(0, 1fr))';
+    points.forEach(function (p) {
+      var cell = document.createElement('div');
+      cell.style.cssText = 'border:1px solid #e3d8c8;border-radius:8px;padding:5px;text-align:center;font-size:0.72rem;';
+      var v = ranks[p.key];
+      cell.style.background = colour(v);
+      var a = document.createElement('a');
+      a.href = p.url; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = 'Open ↗';
+      a.style.cssText = 'display:block;margin-bottom:4px;color:#0f766e;font-weight:600;';
+      var inp = document.createElement('input');
+      inp.type = 'number'; inp.min = 1; inp.max = 20; inp.placeholder = '#';
+      inp.style.cssText = 'width:100%;padding:3px;text-align:center;border:1px solid #d8cdbb;border-radius:5px;';
+      if (typeof v === 'number') inp.value = v;
+      var nf = document.createElement('label');
+      nf.style.cssText = 'display:flex;gap:3px;justify-content:center;align-items:center;margin-top:3px;font-size:0.68rem;';
+      var cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = v === 'nf';
+      nf.appendChild(cb); nf.appendChild(document.createTextNode('not found'));
+      inp.addEventListener('input', function () {
+        var x = parseInt(inp.value, 10);
+        if (x >= 1 && x <= 20) { ranks[p.key] = x; cb.checked = false; } else { delete ranks[p.key]; }
+        cell.style.background = colour(ranks[p.key]); stats();
+      });
+      cb.addEventListener('change', function () {
+        if (cb.checked) { ranks[p.key] = 'nf'; inp.value = ''; } else { delete ranks[p.key]; }
+        cell.style.background = colour(ranks[p.key]); stats();
+      });
+      cell.appendChild(a); cell.appendChild(inp); cell.appendChild(nf);
+      grid.appendChild(cell);
+    });
+    status.textContent = points.length + ' points';
+    stats();
+  }
+
+  function stats() {
+    var total = points.length, nums = [], nf = 0;
+    points.forEach(function (p) {
+      var v = ranks[p.key];
+      if (typeof v === 'number') nums.push(v); else if (v === 'nf') nf++;
+    });
+    var checked = nums.length + nf;
+    var out = $('gg-stats');
+    if (!checked) { out.textContent = 'Checked 0 of ' + total + ' points.'; return; }
+    var avg = nums.length ? (nums.reduce(function (a, b) { return a + b; }, 0) / nums.length).toFixed(1) : '—';
+    var t3 = nums.filter(function (x) { return x <= 3; }).length;
+    var t10 = nums.filter(function (x) { return x <= 10; }).length;
+    out.innerHTML = 'Checked <strong>' + checked + '</strong> of ' + total + ' points<br>' +
+      'Average rank (where found): <strong>' + avg + '</strong><br>' +
+      'Top 3: <strong>' + t3 + '</strong> (' + Math.round(t3 / checked * 100) + '% of checked) · Top 10: <strong>' + t10 + '</strong> (' + Math.round(t10 / checked * 100) + '%)<br>' +
+      'Not found in top 20: <strong>' + nf + '</strong>';
+  }
+
+  function copyText() {
+    if (!points.length) return;
+    var n = parseInt($('gg-size').value, 10), lines = ['Keyword: ' + $('gg-kw').value.trim()];
+    for (var r = 0; r < n; r++) {
+      var row = [];
+      for (var c = 0; c < n; c++) {
+        var v = ranks[r + ',' + c];
+        row.push(typeof v === 'number' ? String(v) : (v === 'nf' ? '20+' : '-'));
+      }
+      lines.push(row.join('\t'));
+    }
+    var text = lines.join('\n') + '\n' + $('gg-stats').textContent;
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () {
+      var b = $('gg-copy'); b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy results'; }, 1500);
+    });
+  }
+
+  ['gg-kw', 'gg-center', 'gg-gap'].forEach(function (id) { $(id).addEventListener('input', function () { ranks = {}; render(); }); });
+  ['gg-size', 'gg-unit', 'gg-zoom'].forEach(function (id) { $(id).addEventListener('change', function () { if (id === 'gg-size') ranks = {}; render(); }); });
+  $('gg-copy').addEventListener('click', copyText);
+  render();
+})();
+</script>

@@ -72,6 +72,11 @@ module.exports = [
     summary: 'See a page H1-H6 outline and flag skipped levels, empty headings, a missing H1 and repeated heading text.'
   },
   {
+    slug: 'geo-grid-rank-planner',
+    title: 'Geo-Grid Rank Planner',
+    summary: 'Plan a local geo-grid check around your business, enter the ranks you see on Google Maps, and get an average, top-3 coverage and a heatmap.'
+  },
+  {
     slug: 'llm-seo-checker',
     title: 'LLM SEO Checker',
     summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks — for free, in seconds.'

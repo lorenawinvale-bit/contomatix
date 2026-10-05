@@ -205,7 +205,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -413,6 +413,14 @@ app.get('/tools/heading-checker', (req, res) => {
   res.render('pages/heading-checker', {
     title: 'Free Heading Checker — H1-H6 Outline Tool | Contomatix',
     description: 'Paste a page HTML to see its H1-H6 heading outline and flag skipped levels, empty headings, a missing H1 and repeated text. Free, no signup.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/geo-grid-rank-planner', (req, res) => {
+  res.render('pages/geo-grid-rank-planner', {
+    title: 'Free GMB Rank Checker Grid — Local Geo-Grid Planner | Contomatix',
+    description: 'Build a geo-grid of Google Maps check points around your business, enter the ranks you see, and get an average, top-3 coverage and a heatmap. Free, no signup.',
     pageClass: 'page-tool'
   });
 });
