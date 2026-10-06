@@ -1,0 +1,285 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free SEO Proposal Generator — Build a Client-Ready Proposal in Minutes</h1>
+    <p>Fill in your client, scope, timeline and fees and this <strong>free SEO proposal generator</strong> writes a clean, structured proposal you can copy, download or print to PDF. It never invents numbers: every price and date comes from you. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="sp-form" onsubmit="return false;" aria-label="SEO proposal generator form">
+        <div>
+          <label for="sp-agency">Your agency or name</label>
+          <input type="text" id="sp-agency" placeholder="e.g. Acme SEO">
+        </div>
+        <div>
+          <label for="sp-client">Client name</label>
+          <input type="text" id="sp-client" placeholder="e.g. Riverside Dental">
+        </div>
+        <div>
+          <label for="sp-site">Client website</label>
+          <input type="text" id="sp-site" placeholder="e.g. riversidedental.com">
+        </div>
+        <div>
+          <label for="sp-goal">Main goal</label>
+          <select id="sp-goal">
+            <option value="more qualified enquiries from organic search">More qualified enquiries</option>
+            <option value="more online sales from organic search">More online sales</option>
+            <option value="better visibility in local search and Google Maps">Better local visibility</option>
+            <option value="recovering lost organic traffic">Recover lost traffic</option>
+            <option value="a technically healthy site that search engines can crawl and index">A technically healthy site</option>
+          </select>
+        </div>
+        <div>
+          <label>Services included</label>
+          <div style="display:grid;gap:6px;">
+            <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" class="sp-svc" value="audit" checked> Technical and on-page audit</label>
+            <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" class="sp-svc" value="keywords" checked> Keyword research and page mapping</label>
+            <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" class="sp-svc" value="onpage" checked> On-page optimisation</label>
+            <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" class="sp-svc" value="content"> Content creation</label>
+            <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" class="sp-svc" value="links"> Link building and digital PR</label>
+            <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" class="sp-svc" value="local"> Local SEO and Google Business Profile</label>
+            <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" class="sp-svc" value="reporting" checked> Monthly reporting</label>
+          </div>
+        </div>
+        <div>
+          <label for="sp-months">Engagement length</label>
+          <select id="sp-months">
+            <option value="3">3 months</option>
+            <option value="6" selected>6 months</option>
+            <option value="12">12 months</option>
+          </select>
+        </div>
+        <div>
+          <label for="sp-fee">Fee, as you want it written (optional)</label>
+          <input type="text" id="sp-fee" placeholder="e.g. $1,500 per month, billed monthly">
+        </div>
+        <div>
+          <label for="sp-start">Proposed start date (optional)</label>
+          <input type="text" id="sp-start" placeholder="e.g. 1 November 2026">
+        </div>
+        <div>
+          <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" id="sp-noguar" checked> Include a "no ranking guarantees" clause</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Your proposal</strong>
+        <span id="sp-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="sp-output" class="llms-output" style="max-height:420px;white-space:pre-wrap;">Fill in your agency and client name to start.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="sp-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="sp-download">Download .txt</button>
+        <button type="button" class="btn btn-glass" id="sp-print">Print / Save as PDF</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What This Proposal Includes</h2>
+    <ul class="service-points">
+      <li><strong>An executive summary</strong> that states the client's goal in their own terms</li>
+      <li><strong>A scope section</strong> with the deliverables for each service you tick, so nothing is vague</li>
+      <li><strong>A phased timeline</strong> that fits the engagement length you choose, starting with an audit and setup phase</li>
+      <li><strong>Reporting and communication</strong> so the client knows what they will see and when</li>
+      <li><strong>Investment and terms</strong> using exactly the fee and start date you type in, with no suggested prices</li>
+      <li><strong>An honest results section</strong> that explains how progress is measured without promising a ranking</li>
+    </ul>
+
+    <h2>Why a Proposal Should Not Promise Rankings</h2>
+    <p>Google's own guidance for people hiring an SEO is blunt: no one can guarantee a number-one ranking, and anyone claiming a special relationship with Google should be treated with caution. A proposal that promises a position is therefore a warning sign to an informed client. The better approach is to promise work (the audit, the fixes, the content, the reports) and to define how results will be measured, for example impressions, clicks, enquiries and the pages that move.</p>
+    <p>The template here follows that approach. It lists deliverables and a reporting rhythm, leaves your price and dates to you, and includes an optional clause saying results depend on factors outside anyone's control. Treat the output as a strong first draft: read it through, add the client's specifics and have it checked against your own contract terms before you send it.</p>
+
+    <h2>SEO Proposal Generator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does the tool suggest prices?<span class="faq-icon"></span></summary>
+        <p>No. It uses only the fee text you type. SEO pricing depends on scope, competition and your costs, so the figure has to be yours.</p>
+      </details>
+      <details>
+        <summary>Is the proposal a legal contract?<span class="faq-icon"></span></summary>
+        <p>No. It is a business proposal. Once the client agrees, put the terms into a proper contract or statement of work and have that reviewed where needed.</p>
+      </details>
+      <details>
+        <summary>Should I promise rankings in a proposal?<span class="faq-icon"></span></summary>
+        <p>No. Google says nobody can guarantee a number-one ranking. Promise the work and the reporting, and agree how success will be measured.</p>
+      </details>
+      <details>
+        <summary>How do I turn it into a PDF?<span class="faq-icon"></span></summary>
+        <p>Click Print / Save as PDF and choose Save as PDF as the destination in your browser's print window.</p>
+      </details>
+      <details>
+        <summary>Can I edit the text?<span class="faq-icon"></span></summary>
+        <p>Yes. Copy it into your document editor and change anything you like. The generator is a starting point, not a locked template.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is written in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Need a hand with the SEO itself?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free SEO Proposal Generator',
+    url: site.baseUrl + '/tools/seo-proposal-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Generate a structured, client-ready SEO proposal with scope, timeline, reporting and terms. Copy, download or print to PDF. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'SEO Proposal Generator', item: site.baseUrl + '/tools/seo-proposal-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does the tool suggest prices?', acceptedAnswer: { '@type': 'Answer', text: 'No. It uses only the fee text you type. SEO pricing depends on scope, competition and your costs, so the figure has to be yours.' } },
+      { '@type': 'Question', name: 'Is the proposal a legal contract?', acceptedAnswer: { '@type': 'Answer', text: 'No. It is a business proposal. Once the client agrees, put the terms into a proper contract or statement of work.' } },
+      { '@type': 'Question', name: 'Should I promise rankings in a proposal?', acceptedAnswer: { '@type': 'Answer', text: 'No. Google says nobody can guarantee a number-one ranking. Promise the work and the reporting, and agree how success will be measured.' } },
+      { '@type': 'Question', name: 'How do I turn it into a PDF?', acceptedAnswer: { '@type': 'Answer', text: 'Click Print / Save as PDF and choose Save as PDF as the destination in your browser print window.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is written in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+
+  var SVC = {
+    audit: ['Technical and on-page audit', ['Crawl and indexing review (robots.txt, sitemap, status codes, canonicals)', 'Page speed and Core Web Vitals review', 'Title, heading and content review of key pages', 'A prioritised list of fixes with an owner for each']],
+    keywords: ['Keyword research and page mapping', ['Research into the search terms customers use', 'Grouping keywords by intent', 'A map of keywords to existing and new pages']],
+    onpage: ['On-page optimisation', ['Title tags, meta descriptions and headings for priority pages', 'Internal linking improvements', 'Structured data where Google supports it for the content']],
+    content: ['Content creation', ['A content plan based on the keyword map', 'Original articles or service pages written to the agreed brief', 'Review and publishing support']],
+    links: ['Link building and digital PR', ['Prospecting relevant sites and partners', 'Outreach for editorial and partner links', 'A monthly log of links secured, with no paid link schemes']],
+    local: ['Local SEO and Google Business Profile', ['Google Business Profile setup and clean-up', 'Category, service and photo review', 'A review-request process within Google policy', 'Citation and NAP consistency check']],
+    reporting: ['Monthly reporting', ['A plain-language report each month', 'Impressions, clicks, enquiries and the pages that moved', 'Next-month priorities and a call to discuss them']]
+  };
+
+  function phases(m) {
+    if (m === 3) return [['Month 1', 'Audit, keyword research and agreed priorities; quick fixes begin'], ['Month 2', 'On-page and technical work on priority pages; first content or links'], ['Month 3', 'Continue delivery, review results and agree what comes next']];
+    if (m === 6) return [['Month 1', 'Audit, keyword research and agreed priorities'], ['Months 2-3', 'Technical fixes and on-page work on priority pages'], ['Months 4-5', 'Content and link work; refine from early data'], ['Month 6', 'Review results against the agreed measures and plan the next phase']];
+    return [['Months 1-2', 'Audit, keyword research, priorities and quick fixes'], ['Months 3-5', 'Technical and on-page work across priority pages'], ['Months 6-9', 'Content and link work; refine from the data'], ['Months 10-12', 'Review results, report on the year and plan the next one']];
+  }
+
+  function build() {
+    var agency = $('sp-agency').value.trim(), client = $('sp-client').value.trim();
+    if (!agency || !client) return '';
+    var site = $('sp-site').value.trim(), goal = $('sp-goal').value, m = parseInt($('sp-months').value, 10);
+    var fee = $('sp-fee').value.trim(), start = $('sp-start').value.trim();
+    var chosen = Array.prototype.slice.call(document.querySelectorAll('.sp-svc')).filter(function (c) { return c.checked; }).map(function (c) { return c.value; });
+    var L = [];
+    L.push('SEO PROPOSAL');
+    L.push('Prepared for ' + client + (site ? ' (' + site + ')' : ''));
+    L.push('Prepared by ' + agency);
+    L.push('');
+    L.push('1. SUMMARY');
+    L.push('This proposal sets out how ' + agency + ' will help ' + client + ' work towards ' + goal + ' through a ' + m + '-month SEO engagement. It lists what we will do, when, how we will report, and the investment.');
+    L.push('');
+    L.push('2. SCOPE OF WORK');
+    if (!chosen.length) L.push('(Tick at least one service to build the scope.)');
+    chosen.forEach(function (k, i) {
+      L.push('2.' + (i + 1) + ' ' + SVC[k][0]);
+      SVC[k][1].forEach(function (d) { L.push('   - ' + d); });
+    });
+    L.push('');
+    L.push('3. TIMELINE');
+    phases(m).forEach(function (p) { L.push(p[0] + ': ' + p[1]); });
+    if (start) L.push('Proposed start: ' + start);
+    L.push('');
+    L.push('4. HOW WE MEASURE PROGRESS');
+    L.push('We will agree the measures at the start. They usually include search impressions and clicks from Google Search Console, organic enquiries or sales, and the ranking pages that improve. We report on these every month.');
+    L.push('');
+    L.push('5. INVESTMENT');
+    L.push(fee ? fee : '(Add your fee in the form.)');
+    L.push('');
+    L.push('6. TERMS AND ASSUMPTIONS');
+    L.push('- ' + client + ' provides timely access to the website, analytics and Search Console.');
+    L.push('- Work outside the agreed scope is quoted separately before it starts.');
+    L.push('- Changes to the website are agreed with ' + client + ' before they go live.');
+    if ($('sp-noguar').checked) L.push('- No one can guarantee a specific ranking or traffic figure. Results depend on factors outside our control, including competitors and changes to search engines. We commit to the work and reporting listed above.');
+    L.push('');
+    L.push('7. NEXT STEPS');
+    L.push('1) Confirm scope and fee. 2) Sign the agreement. 3) Share access. 4) Kick-off call' + (start ? ' on or before ' + start : '') + '.');
+    return L.join('\n');
+  }
+
+  function run() {
+    var t = build();
+    current = t;
+    $('sp-output').textContent = t || 'Fill in your agency and client name to start.';
+    $('sp-status').textContent = t ? 'Draft ready' : 'Waiting for input';
+  }
+
+  Array.prototype.slice.call($('sp-form').querySelectorAll('input,select')).forEach(function (e) {
+    e.addEventListener('input', run); e.addEventListener('change', run);
+  });
+
+  $('sp-copy').addEventListener('click', function () {
+    if (!current) return;
+    var b = $('sp-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(current).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  $('sp-download').addEventListener('click', function () {
+    if (!current) return;
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([current], { type: 'text/plain' }));
+    a.download = 'seo-proposal.txt';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  $('sp-print').addEventListener('click', function () {
+    if (!current) return;
+    var f = document.createElement('iframe');
+    f.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0;';
+    document.body.appendChild(f);
+    var d = f.contentWindow.document;
+    d.open();
+    d.write('<!doctype html><html><head><meta charset="utf-8"><title>SEO Proposal</title><style>body{font:14px/1.6 Arial,sans-serif;margin:40px;color:#111;white-space:pre-wrap;}</style></head><body></body></html>');
+    d.close();
+    d.body.textContent = current;
+    f.contentWindow.focus();
+    f.contentWindow.print();
+    setTimeout(function () { f.remove(); }, 2000);
+  });
+  run();
+})();
+</script>

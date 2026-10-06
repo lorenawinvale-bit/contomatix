@@ -77,6 +77,11 @@ module.exports = [
     summary: 'Plan a local geo-grid check around your business, enter the ranks you see on Google Maps, and get an average, top-3 coverage and a heatmap.'
   },
   {
+    slug: 'seo-proposal-generator',
+    title: 'SEO Proposal Generator',
+    summary: 'Build a structured, client-ready SEO proposal with scope, timeline, reporting and terms — copy, download or print to PDF.'
+  },
+  {
     slug: 'llm-seo-checker',
     title: 'LLM SEO Checker',
     summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks — for free, in seconds.'
