@@ -205,7 +205,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -429,6 +429,14 @@ app.get('/tools/seo-proposal-generator', (req, res) => {
   res.render('pages/seo-proposal-generator', {
     title: 'Free SEO Proposal Generator — Client-Ready Template | Contomatix',
     description: 'Build a structured SEO proposal with scope, timeline, reporting and terms. Uses only the fee and dates you enter. Copy, download or print to PDF. Free, no signup.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/internal-link-checker', (req, res) => {
+  res.render('pages/internal-link-checker', {
+    title: 'Free Internal Link Checker — Anchors and Crawlability | Contomatix',
+    description: 'Paste a page HTML to sort its links into internal, external and non-crawlable, and flag empty, generic and nofollowed anchors. Free, no signup.',
     pageClass: 'page-tool'
   });
 });

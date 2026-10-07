@@ -82,6 +82,11 @@ module.exports = [
     summary: 'Build a structured, client-ready SEO proposal with scope, timeline, reporting and terms — copy, download or print to PDF.'
   },
   {
+    slug: 'internal-link-checker',
+    title: 'Internal Link Checker',
+    summary: 'Sort a page links into internal, external and non-crawlable, and flag empty, generic and nofollowed anchors.'
+  },
+  {
     slug: 'llm-seo-checker',
     title: 'LLM SEO Checker',
     summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks — for free, in seconds.'

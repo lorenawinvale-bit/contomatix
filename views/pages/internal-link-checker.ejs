@@ -1,0 +1,233 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Internal Link Checker — Audit a Page's Links, Anchors and Crawlability</h1>
+    <p>Paste a page's HTML and this <strong>free internal link checker</strong> sorts every link into internal, external and non-crawlable, then flags empty, generic and nofollowed anchors. It checks the links on one page you paste, with no signup, and nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="il-form" onsubmit="return false;" aria-label="Internal link checker form">
+        <div>
+          <label for="il-url">The page's own URL</label>
+          <input type="text" id="il-url" placeholder="e.g. https://example.com/blog/my-post/">
+          <p style="font-size:0.85rem;color:#6b6459;margin:6px 0 0;">Used to tell internal links from external ones and to resolve relative links.</p>
+        </div>
+        <div>
+          <label for="il-html">Paste the page HTML</label>
+          <textarea id="il-html" style="min-height: 260px;" placeholder="<a href=&quot;/pricing&quot;>Pricing</a>&#10;<a href=&quot;https://other.com&quot; rel=&quot;nofollow&quot;>Partner</a>&#10;<a href=&quot;/about&quot;>click here</a>&#10;&#10;Tip: right-click the page, choose View Page Source, copy it and paste it here."></textarea>
+        </div>
+        <div>
+          <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" id="il-body" checked> Ignore links in header, nav and footer (focus on body content)</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Link report</strong>
+        <span id="il-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="il-output" class="llms-output" style="max-height:400px;white-space:pre-wrap;">Enter the page URL and paste its HTML to see its links.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="il-copy">Copy report</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What This Checks</h2>
+    <ul class="service-points">
+      <li><strong>Internal vs external</strong> — links that stay on the same host as the page URL you enter, and links that leave it</li>
+      <li><strong>Crawlable links</strong> — Google says it can only crawl a link that is an <code>&lt;a&gt;</code> element with an <code>href</code>, so <code>javascript:</code> links, bare <code>#</code> links and anchors with no href are listed separately</li>
+      <li><strong>Anchor text</strong> — empty anchors, image links with no alt text and generic phrases such as "click here" and "read more"</li>
+      <li><strong>rel attributes</strong> — internal links marked nofollow, and external links marked sponsored, ugc or nofollow</li>
+      <li><strong>Repeated links</strong> — the same address linked more than once, shown with every anchor used</li>
+      <li><strong>Self-links</strong> — links on the page that point back to the same page</li>
+    </ul>
+
+    <h2>Why Internal Links Deserve a Check</h2>
+    <p>Internal links are how both visitors and search engines move around a site. Google's link best practices say a link can only be crawled if it is an <code>&lt;a&gt;</code> element with an <code>href</code> attribute, and that good anchor text is descriptive, reasonably concise and relevant to the page it points to. A menu built from clickable <code>&lt;span&gt;</code> elements or script-only links can look fine to a visitor and still lead Google nowhere.</p>
+    <p>Anchor text is the other half. Generic text such as "read more" tells neither people nor search engines what is on the other side, while a short descriptive phrase does. This tool reads one page at a time, so use it on the pages that matter most, like your home page, service pages and top posts, and fix what it flags: replace script links with real links, rewrite vague anchors and remove stray nofollow from links to your own pages.</p>
+
+    <h2>Internal Link Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does this tool crawl my whole site?<span class="faq-icon"></span></summary>
+        <p>No. It checks the single page whose HTML you paste. Crawling a whole site needs a server, and pasting keeps your pages off every server, including ours.</p>
+      </details>
+      <details>
+        <summary>What makes a link crawlable?<span class="faq-icon"></span></summary>
+        <p>Google says it can only crawl a link that is an <code>&lt;a&gt;</code> element with an <code>href</code> attribute. Links that rely only on JavaScript events or other tags are unreliable for crawling.</p>
+      </details>
+      <details>
+        <summary>What is bad anchor text?<span class="faq-icon"></span></summary>
+        <p>Google recommends anchor text that is descriptive, reasonably concise and relevant to the page. Generic phrases like "click here" or "read more" do not say what the linked page is about.</p>
+      </details>
+      <details>
+        <summary>Should internal links be nofollow?<span class="faq-icon"></span></summary>
+        <p>Usually not. Google advises using nofollow selectively, for links you do not trust, and the tool flags nofollow on links to your own pages so you can check it was intentional.</p>
+      </details>
+      <details>
+        <summary>Why ignore header, nav and footer links?<span class="faq-icon"></span></summary>
+        <p>Those links repeat on every page. Ignoring them lets you focus on the contextual links inside the content, which is where most internal linking decisions are made. Untick the option to include them.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is checked in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a full link and site structure review?</h2>
+      <p>Contomatix reviews internal linking, crawlability and on-page basics together.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Internal Link Checker',
+    url: site.baseUrl + '/tools/internal-link-checker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste a page HTML to sort its links into internal, external and non-crawlable, and flag empty, generic and nofollowed anchors, for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Internal Link Checker', item: site.baseUrl + '/tools/internal-link-checker' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does this tool crawl my whole site?', acceptedAnswer: { '@type': 'Answer', text: 'No. It checks the single page whose HTML you paste. Crawling a whole site needs a server, and pasting keeps your pages off every server.' } },
+      { '@type': 'Question', name: 'What makes a link crawlable?', acceptedAnswer: { '@type': 'Answer', text: 'Google says it can only crawl a link that is an a element with an href attribute. Links that rely only on JavaScript events or other tags are unreliable for crawling.' } },
+      { '@type': 'Question', name: 'What is bad anchor text?', acceptedAnswer: { '@type': 'Answer', text: 'Google recommends anchor text that is descriptive, reasonably concise and relevant to the page. Generic phrases like click here or read more do not say what the linked page is about.' } },
+      { '@type': 'Question', name: 'Should internal links be nofollow?', acceptedAnswer: { '@type': 'Answer', text: 'Usually not. Google advises using nofollow selectively, for links you do not trust.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+  var GENERIC = /^(click here|here|read more|learn more|more|this|link|this link|click|see more|continue|details|view more|read this)$/i;
+
+  function short(s, n) { s = (s || '').replace(/\s+/g, ' ').trim(); n = n || 50; return s.length > n ? s.slice(0, n - 1) + '…' : s; }
+
+  function analyse(html, pageUrl, skipChrome) {
+    var base = null;
+    try { base = new URL(pageUrl); } catch (e) { base = null; }
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var all = Array.prototype.slice.call(doc.querySelectorAll('a'));
+    var res = { internal: [], external: [], noncrawl: [], specials: 0, total: 0, skipped: 0, issues: [], rel: [], self: [], dup: [] };
+    all.forEach(function (a) {
+      if (skipChrome && a.closest('header, nav, footer, [role="navigation"], [role="banner"], [role="contentinfo"]')) { res.skipped++; return; }
+      res.total++;
+      var href = a.getAttribute('href');
+      var text = (a.textContent || '').replace(/\s+/g, ' ').trim();
+      var img = a.querySelector('img');
+      var anchor = text || (img ? (img.getAttribute('alt') || '') : '');
+      var label = anchor || '(no anchor text)';
+      if (href === null) { res.noncrawl.push('<a> with no href: "' + short(label) + '"'); return; }
+      var h = href.trim();
+      if (h === '' || h === '#' || /^javascript:/i.test(h)) { res.noncrawl.push((h || '(empty href)') + ' — "' + short(label) + '"'); return; }
+      if (/^(mailto:|tel:|sms:)/i.test(h)) { res.specials++; return; }
+      if (h.charAt(0) === '#') { res.specials++; return; }
+      var u;
+      try { u = new URL(h, base || undefined); } catch (e) { res.noncrawl.push('Unreadable href "' + short(h) + '"'); return; }
+      if (!/^https?:$/.test(u.protocol)) { res.specials++; return; }
+      var rel = (a.getAttribute('rel') || '').toLowerCase();
+      var isInternal = base ? u.hostname.replace(/^www\./, '') === base.hostname.replace(/^www\./, '') : !/^https?:\/\//i.test(h);
+      var item = { href: u.href, anchor: anchor, label: label, rel: rel };
+      if (!anchor) res.issues.push('Empty anchor text (link to ' + short(u.href, 60) + ')' + (img ? ' — image link with no alt text' : ''));
+      else if (GENERIC.test(anchor)) res.issues.push('Generic anchor "' + anchor + '" (link to ' + short(u.href, 60) + ')');
+      if (isInternal) {
+        res.internal.push(item);
+        if (/nofollow/.test(rel)) res.rel.push('Internal link marked nofollow: ' + short(u.href, 70));
+        if (base && u.href.split('#')[0] === base.href.split('#')[0]) res.self.push('Links to this same page: "' + short(label) + '"');
+      } else {
+        res.external.push(item);
+      }
+    });
+    var map = {};
+    res.internal.forEach(function (i) { var k = i.href.split('#')[0]; (map[k] = map[k] || []).push(i.label); });
+    Object.keys(map).forEach(function (k) { if (map[k].length > 1) res.dup.push(short(k, 70) + ' — ' + map[k].length + '× (anchors: ' + map[k].map(function (x) { return '"' + short(x, 30) + '"'; }).slice(0, 4).join(', ') + ')'); });
+    return res;
+  }
+
+  function section(lines, title, arr, max) {
+    if (!arr.length) return;
+    lines.push(''); lines.push(title + ' (' + arr.length + ')');
+    arr.slice(0, max || 25).forEach(function (x) { lines.push('  - ' + x); });
+    if (arr.length > (max || 25)) lines.push('  …and ' + (arr.length - (max || 25)) + ' more');
+  }
+
+  function run() {
+    var html = $('il-html').value.trim();
+    var out = $('il-output'), status = $('il-status');
+    current = '';
+    if (!html) { out.textContent = 'Enter the page URL and paste its HTML to see its links.'; status.textContent = 'Waiting for input'; return; }
+    var pageUrl = $('il-url').value.trim();
+    var r = analyse(html, pageUrl, $('il-body').checked);
+    var lines = [];
+    var urlOk = true;
+    try { new URL(pageUrl); } catch (e) { urlOk = false; }
+    if (!urlOk) lines.push('Note: enter the full page URL (https://…) so links can be sorted into internal and external. Until then, only absolute external links are counted as external.', '');
+    lines.push('SUMMARY');
+    lines.push('  Links checked: ' + r.total + (r.skipped ? ' (' + r.skipped + ' in header/nav/footer ignored)' : ''));
+    lines.push('  Internal: ' + r.internal.length + ' · External: ' + r.external.length + ' · Not crawlable: ' + r.noncrawl.length + ' · mailto/tel/# anchors: ' + r.specials);
+    var problems = r.noncrawl.length + r.issues.length + r.rel.length;
+    section(lines, 'NOT CRAWLABLE (Google needs an <a> with an href)', r.noncrawl);
+    section(lines, 'ANCHOR TEXT ISSUES', r.issues);
+    section(lines, 'NOFOLLOW ON YOUR OWN PAGES', r.rel);
+    section(lines, 'SAME PAGE LINKED TO ITSELF', r.self, 10);
+    section(lines, 'INTERNAL URLS LINKED MORE THAN ONCE', r.dup, 15);
+    var ext = r.external.filter(function (x) { return !/nofollow|sponsored|ugc/.test(x.rel); }).length;
+    lines.push(''); lines.push('EXTERNAL LINKS: ' + r.external.length + ' total, ' + ext + ' without a rel attribute, ' + (r.external.length - ext) + ' with nofollow/sponsored/ugc');
+    if (!problems) { lines.push(''); lines.push('No crawlability or anchor problems found.'); }
+    current = lines.join('\n');
+    out.textContent = current;
+    status.textContent = problems ? problems + ' thing' + (problems === 1 ? '' : 's') + ' to review' : 'No problems found';
+  }
+
+  ['il-url', 'il-html'].forEach(function (id) { $(id).addEventListener('input', run); });
+  $('il-body').addEventListener('change', run);
+  $('il-copy').addEventListener('click', function () {
+    if (!current) return;
+    var b = $('il-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(current).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy report'; }, 1500); });
+  });
+  run();
+})();
+</script>
