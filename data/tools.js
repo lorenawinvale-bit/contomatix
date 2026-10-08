@@ -87,6 +87,11 @@ module.exports = [
     summary: 'Sort a page links into internal, external and non-crawlable, and flag empty, generic and nofollowed anchors.'
   },
   {
+    slug: 'keyword-mapping-tool',
+    title: 'Keyword Mapping Tool',
+    summary: 'Match keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords — export to CSV.'
+  },
+  {
     slug: 'llm-seo-checker',
     title: 'LLM SEO Checker',
     summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks — for free, in seconds.'

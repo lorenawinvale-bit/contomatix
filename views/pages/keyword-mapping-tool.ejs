@@ -1,0 +1,232 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Keyword Mapping Tool — Match Keywords to Pages and Spot the Gaps</h1>
+    <p>Paste your keywords and your page URLs and this <strong>free keyword mapping tool</strong> matches each keyword to the page it fits best, flags keywords that need a new page, and warns about near-duplicate keywords that could compete with each other. Export the result as a CSV. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="km-form" onsubmit="return false;" aria-label="Keyword mapping tool form">
+        <div>
+          <label for="km-kw">Keywords (one per line, optional volume after a comma)</label>
+          <textarea id="km-kw" style="min-height: 190px;" placeholder="local seo for restaurants, 1400&#10;restaurant seo&#10;seo for restaurants&#10;google business profile for restaurants, 300&#10;menu schema markup"></textarea>
+        </div>
+        <div>
+          <label for="km-urls">Your page URLs (one per line, optional title after a pipe)</label>
+          <textarea id="km-urls" style="min-height: 150px;" placeholder="https://example.com/blog/local-seo-for-restaurants | Local SEO for Restaurants&#10;https://example.com/services/local-seo&#10;https://example.com/blog/google-business-profile-guide"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Keyword map</strong>
+        <span id="km-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="km-output" class="llms-output" style="max-height:420px;white-space:pre-wrap;">Paste keywords and page URLs to build the map.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="km-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="km-csv">Download CSV</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>How the Matching Works</h2>
+    <ul class="service-points">
+      <li><strong>Word overlap with the URL and title.</strong> Each keyword is compared word by word with the words in a page's URL and, if you add one, its title. Stop words are ignored and simple plurals are treated as the same word.</li>
+      <li><strong>Three outcomes.</strong> A strong match is mapped, a partial match is marked for review, and no match means the keyword probably needs a new page.</li>
+      <li><strong>Near-duplicate keywords.</strong> Keywords made of the same words in a different order, such as "seo for restaurants" and "restaurant seo", are grouped so you can target them with one page.</li>
+      <li><strong>Pages with no keyword.</strong> Any URL that no keyword matched is listed, which often points to thin pages or pages that could be merged.</li>
+      <li><strong>Suggested slugs.</strong> For keywords that need a page, the tool proposes a clean URL slug.</li>
+    </ul>
+
+    <h2>What a Keyword Map Is For</h2>
+    <p>A keyword map links each search term you want to win to one page that should answer it. It prevents two common problems: leaving good keywords without a page, and publishing several pages that chase the same search. Neither is a Google rule; it is a planning habit that keeps a site tidy as it grows, and it is easiest to do before you write rather than after.</p>
+    <p>This tool does the first pass using words alone, so it cannot judge search intent. A keyword like "plumber salary" shares a word with "plumber near me" but needs a different kind of page. Treat the results as a draft, check anything marked for review against what the page actually says, and use the grouped duplicates to decide which single page should own a topic.</p>
+
+    <h2>Keyword Mapping Tool FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does the tool check what is on my pages?<span class="faq-icon"></span></summary>
+        <p>No. It matches keywords to the words in each URL and optional title you provide. It does not fetch your pages, so it cannot see the content or the search intent.</p>
+      </details>
+      <details>
+        <summary>Should every keyword get its own page?<span class="faq-icon"></span></summary>
+        <p>No. Close variations of the same search, like "seo for restaurants" and "restaurant seo", usually belong on one page. The tool groups those so you can pick a single owner page.</p>
+      </details>
+      <details>
+        <summary>What does "needs a new page" mean?<span class="faq-icon"></span></summary>
+        <p>No existing URL shares enough words with the keyword. It may mean a real content gap, or that your URLs are named differently from how people search, so check before creating anything.</p>
+      </details>
+      <details>
+        <summary>Can I include search volume?<span class="faq-icon"></span></summary>
+        <p>Yes. Add a comma and a number after a keyword and it appears in the table and the CSV, and keywords are listed with the biggest first inside each group.</p>
+      </details>
+      <details>
+        <summary>How many keywords can I paste?<span class="faq-icon"></span></summary>
+        <p>The tool has no limit of its own, but very long lists may feel slow in the browser. A few hundred keywords and pages work comfortably.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is matched in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a content plan built from your keyword map?</h2>
+      <p>Contomatix plans, writes and optimises pages around the searches that matter.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Keyword Mapping Tool',
+    url: site.baseUrl + '/tools/keyword-mapping-tool',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Match a list of keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords. Export to CSV. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Keyword Mapping Tool', item: site.baseUrl + '/tools/keyword-mapping-tool' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does the tool check what is on my pages?', acceptedAnswer: { '@type': 'Answer', text: 'No. It matches keywords to the words in each URL and optional title you provide. It does not fetch your pages, so it cannot see the content or the search intent.' } },
+      { '@type': 'Question', name: 'Should every keyword get its own page?', acceptedAnswer: { '@type': 'Answer', text: 'No. Close variations of the same search usually belong on one page. The tool groups those so you can pick a single owner page.' } },
+      { '@type': 'Question', name: 'What does needs a new page mean?', acceptedAnswer: { '@type': 'Answer', text: 'No existing URL shares enough words with the keyword. It may mean a real content gap, or that your URLs are named differently from how people search.' } },
+      { '@type': 'Question', name: 'Can I include search volume?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Add a comma and a number after a keyword and it appears in the table and the CSV.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is matched in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var STOP = 'a an the and or of to in on at for with by from as is are be it its this that your my our how what why best top free near me vs'.split(' ');
+  var rowsOut = [];
+  var text = '';
+
+  function stem(w) {
+    if (w.length > 4 && /ies$/.test(w)) return w.slice(0, -3) + 'y';
+    if (w.length > 3 && /(ses|xes|ches|shes)$/.test(w)) return w.slice(0, -2);
+    if (w.length > 3 && /s$/.test(w) && !/ss$/.test(w)) return w.slice(0, -1);
+    return w;
+  }
+  function tokens(s) {
+    return (s || '').toLowerCase().replace(/&/g, ' and ').split(/[^a-z0-9]+/).filter(Boolean)
+      .filter(function (w) { return STOP.indexOf(w) === -1; }).map(stem);
+  }
+  function unique(a) { return a.filter(function (x, i) { return a.indexOf(x) === i; }); }
+  function slugOf(k) { return tokens(k).concat([]).join('-') || 'new-page'; }
+  function csv(v) { v = String(v == null ? '' : v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+  function pathOf(u) { try { var x = new URL(u); return x.pathname + x.search; } catch (e) { return u; } }
+
+  function parseKeywords(t) {
+    return t.split('\n').map(function (l) { return l.trim(); }).filter(Boolean).map(function (l) {
+      var m = /^(.*?)[,\t;]\s*([\d.,]+[kK]?)\s*$/.exec(l);
+      var kw = m ? m[1].trim() : l, vol = '';
+      if (m) { vol = m[2]; }
+      var n = parseFloat(String(vol).replace(/,/g, '')); if (/k$/i.test(vol)) n = n * 1000;
+      return { kw: kw, vol: vol, n: isNaN(n) ? 0 : n, tok: unique(tokens(kw)) };
+    }).filter(function (k) { return k.kw; });
+  }
+  function parseUrls(t) {
+    return t.split('\n').map(function (l) { return l.trim(); }).filter(Boolean).map(function (l) {
+      var p = l.split('|'), u = p[0].trim(), title = (p[1] || '').trim();
+      var path = pathOf(u);
+      return { url: u, title: title, tok: unique(tokens(path.replace(/\.[a-z]+$/, '') + ' ' + title)) };
+    });
+  }
+
+  function run() {
+    var kws = parseKeywords($('km-kw').value), urls = parseUrls($('km-urls').value);
+    var out = $('km-output'), status = $('km-status');
+    rowsOut = []; text = '';
+    if (!kws.length) { out.textContent = 'Paste keywords and page URLs to build the map.'; status.textContent = 'Waiting for input'; return; }
+    var groups = {};
+    kws.forEach(function (k) { var key = k.tok.slice().sort().join(' '); (groups[key] = groups[key] || []).push(k); });
+    var used = {};
+    var mapped = 0, review = 0, need = 0;
+    var results = kws.map(function (k) {
+      var best = null, bs = 0;
+      urls.forEach(function (u) {
+        if (!k.tok.length) return;
+        var hit = k.tok.filter(function (t) { return u.tok.indexOf(t) !== -1; }).length;
+        var s = hit / k.tok.length;
+        if (s > bs || (s === bs && best && pathOf(u.url).length < pathOf(best.url).length)) { bs = s; best = u; }
+      });
+      var st, url = '';
+      if (best && bs >= 0.67) { st = 'Mapped'; url = best.url; mapped++; used[best.url] = true; }
+      else if (best && bs >= 0.34) { st = 'Review'; url = best.url; review++; used[best.url] = true; }
+      else { st = 'Needs new page'; need++; }
+      var dups = groups[k.tok.slice().sort().join(' ')];
+      return { kw: k.kw, vol: k.vol, n: k.n, url: url, score: Math.round(bs * 100), st: st, grp: dups.length > 1 ? dups.map(function (d) { return d.kw; }).filter(function (x) { return x !== k.kw; }).join('; ') : '', slug: st === 'Needs new page' ? '/' + slugOf(k.kw) : '' };
+    });
+    results.sort(function (a, b) { return b.n - a.n; });
+    rowsOut = results;
+    var lines = ['SUMMARY: ' + kws.length + ' keywords · ' + mapped + ' mapped · ' + review + ' to review · ' + need + ' need a new page', ''];
+    results.forEach(function (r) {
+      var l = r.kw + (r.vol ? ' (' + r.vol + ')' : '') + '\n    → ' + (r.url ? pathOf(r.url) + '  [' + r.st + ', ' + r.score + '% word match]' : 'NEEDS A NEW PAGE — suggested ' + r.slug);
+      if (r.grp) l += '\n    ! Same words as: ' + r.grp + ' — target with one page';
+      lines.push(l);
+    });
+    var orphans = urls.filter(function (u) { return !used[u.url]; });
+    if (orphans.length) { lines.push(''); lines.push('PAGES WITH NO MATCHING KEYWORD (' + orphans.length + ')'); orphans.slice(0, 20).forEach(function (u) { lines.push('  - ' + pathOf(u.url)); }); }
+    if (!urls.length) { lines.push(''); lines.push('Add your page URLs to see which keywords already have a page.'); }
+    text = lines.join('\n');
+    out.textContent = text;
+    status.textContent = need + ' need a page' + (review ? ' · ' + review + ' to review' : '');
+  }
+
+  ['km-kw', 'km-urls'].forEach(function (id) { $(id).addEventListener('input', run); });
+  $('km-copy').addEventListener('click', function () {
+    if (!text) return;
+    var b = $('km-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  $('km-csv').addEventListener('click', function () {
+    if (!rowsOut.length) return;
+    var lines = ['keyword,volume,status,mapped_url,word_match_percent,suggested_slug,same_words_as'];
+    rowsOut.forEach(function (r) { lines.push([r.kw, r.vol, r.st, r.url, r.score, r.slug, r.grp].map(csv).join(',')); });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([lines.join('\n')], { type: 'text/csv' }));
+    a.download = 'keyword-map.csv';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  run();
+})();
+</script>

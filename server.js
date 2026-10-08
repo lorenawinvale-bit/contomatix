@@ -205,7 +205,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -437,6 +437,14 @@ app.get('/tools/internal-link-checker', (req, res) => {
   res.render('pages/internal-link-checker', {
     title: 'Free Internal Link Checker — Anchors and Crawlability | Contomatix',
     description: 'Paste a page HTML to sort its links into internal, external and non-crawlable, and flag empty, generic and nofollowed anchors. Free, no signup.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/keyword-mapping-tool', (req, res) => {
+  res.render('pages/keyword-mapping-tool', {
+    title: 'Free Keyword Mapping Tool — Match Keywords to Pages | Contomatix',
+    description: 'Match your keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords. Export to CSV. Free, no signup.',
     pageClass: 'page-tool'
   });
 });
