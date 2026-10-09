@@ -1,0 +1,236 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Canonical Tag Checker — Find Canonical Errors in Your Page Source</h1>
+    <p>Paste a page's URL and its HTML source and this <strong>free canonical tag checker</strong> finds the canonical link, flags missing, duplicate, relative or misplaced tags, and compares it with the page URL. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="ct-form" onsubmit="return false;" aria-label="Canonical tag checker form">
+        <div>
+          <label for="ct-url">Page URL (the address you opened)</label>
+          <input id="ct-url" type="text" placeholder="https://example.com/blog/my-post/" autocomplete="off">
+        </div>
+        <div>
+          <label for="ct-html">Page HTML source (view-source, copy all, paste)</label>
+          <textarea id="ct-html" style="min-height: 210px;" placeholder="&lt;html&gt;&#10;&lt;head&gt;&#10;  &lt;title&gt;My post&lt;/title&gt;&#10;  &lt;link rel=&quot;canonical&quot; href=&quot;https://example.com/blog/my-post/&quot;&gt;&#10;&lt;/head&gt;"></textarea>
+        </div>
+        <div>
+          <label for="ct-header">HTTP Link header (optional)</label>
+          <input id="ct-header" type="text" placeholder="&lt;https://example.com/blog/my-post/&gt;; rel=&quot;canonical&quot;" autocomplete="off">
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Canonical report</strong>
+        <span id="ct-status" class="llms-status" role="status" aria-live="polite">Waiting for input</span>
+      </div>
+      <pre id="ct-output" class="llms-output" style="max-height:420px;white-space:pre-wrap;">Paste the page URL and its HTML source to check the canonical tag.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="ct-copy">Copy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Checker Looks For</h2>
+    <ul class="service-points">
+      <li><strong>Missing canonical.</strong> No <code>rel="canonical"</code> link was found. Google can still pick a canonical on its own, but a tag states your preference.</li>
+      <li><strong>More than one canonical.</strong> Several tags, especially pointing at different URLs, give conflicting signals and may be ignored.</li>
+      <li><strong>Canonical outside the head.</strong> The tag belongs inside <code>&lt;head&gt;</code>. One that lands in the body is not a valid placement.</li>
+      <li><strong>Empty, relative or odd URLs.</strong> An empty href, a relative path, a fragment (<code>#</code>) or a non-http scheme is flagged.</li>
+      <li><strong>Canonical versus page URL.</strong> The tool compares protocol, host, path and query, so you can see whether the page points to itself or somewhere else.</li>
+      <li><strong>Mixed signals.</strong> A canonical alongside a <code>noindex</code> robots meta tag, or a different canonical in the HTTP header, is called out.</li>
+    </ul>
+
+    <h2>How to Get the Page Source</h2>
+    <p>Open the page in your browser, press <code>Ctrl+U</code> (or <code>Cmd+Option+U</code> on Mac) to open the source, select everything and paste it into the box above. Use the raw source rather than the Elements panel when you can, because it shows what the server sent before any JavaScript changed it. If the canonical is added by JavaScript, check it in the URL Inspection tool in Search Console as well.</p>
+    <p>This tool reads only what you paste. It does not fetch the page, so it cannot see redirects, the rendered page or what Google actually chose as the canonical. A canonical is a hint, not a command, and Google may select a different URL.</p>
+
+    <h2>Canonical Tag Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Why do I need to paste the source instead of entering a URL?<span class="faq-icon"></span></summary>
+        <p>Browsers block a page from reading another site's HTML, and fetching it through a server would mean sending your data to us. Pasting keeps everything in your browser.</p>
+      </details>
+      <details>
+        <summary>Should every page have a self-referencing canonical?<span class="faq-icon"></span></summary>
+        <p>It is a common and safe practice, because it states the preferred URL when the same page can be reached with tracking parameters or different casing. It is not required.</p>
+      </details>
+      <details>
+        <summary>Is a relative canonical URL wrong?<span class="faq-icon"></span></summary>
+        <p>Relative paths can work, but an absolute URL leaves less room for error, so the tool recommends the absolute form.</p>
+      </details>
+      <details>
+        <summary>What if the canonical points to a different page?<span class="faq-icon"></span></summary>
+        <p>That is valid when the page is a duplicate or near-duplicate of the target. The tool lists the differences so you can confirm it is intentional and not a copied template.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. The source is parsed in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a full technical audit of your site?</h2>
+      <p>Contomatix checks canonicals, indexing and crawl issues across every page that matters.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Canonical Tag Checker',
+    url: site.baseUrl + '/tools/canonical-tag-checker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste a page URL and its HTML source to find missing, duplicate, relative or misplaced canonical tags and compare the canonical with the page URL. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Canonical Tag Checker', item: site.baseUrl + '/tools/canonical-tag-checker' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Why do I need to paste the source instead of entering a URL?', acceptedAnswer: { '@type': 'Answer', text: 'Browsers block a page from reading another site HTML, and fetching it through a server would mean sending your data to us. Pasting keeps everything in your browser.' } },
+      { '@type': 'Question', name: 'Should every page have a self-referencing canonical?', acceptedAnswer: { '@type': 'Answer', text: 'It is a common and safe practice, because it states the preferred URL when the same page can be reached with tracking parameters or different casing. It is not required.' } },
+      { '@type': 'Question', name: 'Is a relative canonical URL wrong?', acceptedAnswer: { '@type': 'Answer', text: 'Relative paths can work, but an absolute URL leaves less room for error, so the tool recommends the absolute form.' } },
+      { '@type': 'Question', name: 'What if the canonical points to a different page?', acceptedAnswer: { '@type': 'Answer', text: 'That is valid when the page is a duplicate or near-duplicate of the target. The tool lists the differences so you can confirm it is intentional.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The source is parsed in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var text = '';
+
+  function parse(u, base) { try { return new URL(u, base || undefined); } catch (e) { return null; } }
+
+  function run() {
+    var pageUrl = $('ct-url').value.trim(), html = $('ct-html').value, header = $('ct-header').value.trim();
+    var out = $('ct-output'), status = $('ct-status');
+    text = '';
+    if (!html.trim()) { out.textContent = 'Paste the page URL and its HTML source to check the canonical tag.'; status.textContent = 'Waiting for input'; return; }
+    var page = pageUrl ? parse(pageUrl) : null;
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var links = Array.prototype.slice.call(doc.querySelectorAll('link[rel]')).filter(function (l) {
+      return (l.getAttribute('rel') || '').toLowerCase().split(/\s+/).indexOf('canonical') !== -1;
+    });
+    var errors = [], warns = [], infos = [], lines = [];
+
+    if (pageUrl && !page) warns.push('The page URL could not be read, so the canonical was not compared with it. Include https://.');
+    if (!pageUrl) infos.push('No page URL entered, so the canonical was not compared with the page address.');
+
+    if (!links.length) warns.push('No <link rel="canonical"> found in the source. Google can still choose a canonical itself, but you are not stating one.');
+    var inHead = links.filter(function (l) { return !!l.closest('head'); });
+    var outside = links.length - inHead.length;
+    if (outside) errors.push(outside + ' canonical tag' + (outside > 1 ? 's' : '') + ' found outside <head>. The canonical link must sit in the head; one in the body is not valid.');
+
+    var hrefs = links.map(function (l) { return (l.getAttribute('href') || '').trim(); });
+    var distinct = hrefs.filter(function (h, i) { return hrefs.indexOf(h) === i; });
+    if (links.length > 1) {
+      if (distinct.length > 1) errors.push(links.length + ' canonical tags pointing at ' + distinct.length + ' different URLs. Conflicting canonicals may be ignored, so keep one.');
+      else warns.push(links.length + ' identical canonical tags. Keep a single one.');
+    }
+
+    var target = null;
+    if (links.length) {
+      var first = hrefs[0];
+      lines.push('Canonical found: ' + (first || '(empty)'));
+      if (!first) errors.push('The canonical href is empty.');
+      else {
+        var isRel = !/^[a-z][a-z0-9+.-]*:/i.test(first) && first.indexOf('//') !== 0;
+        target = parse(first, page ? page.href : 'https://placeholder.invalid/');
+        if (!target) errors.push('The canonical href is not a valid URL.');
+        else {
+          if (!/^https?:$/.test(target.protocol)) errors.push('The canonical uses the "' + target.protocol.replace(':', '') + '" scheme. Use an http or https URL.');
+          if (first.indexOf('//') === 0) warns.push('The canonical is protocol-relative (starts with //). Use a full https:// URL.');
+          if (isRel) warns.push('The canonical is a relative URL. It is resolved against the page URL here; an absolute URL is safer.');
+          if (first.indexOf('#') !== -1) warns.push('The canonical contains a fragment (#). Fragments are not part of the page address, so remove it.');
+          if (page && /^https?:$/.test(target.protocol) && !isRel) {
+            var diffs = [];
+            if (target.protocol !== page.protocol) diffs.push('protocol (' + page.protocol.replace(':', '') + ' vs ' + target.protocol.replace(':', '') + ')');
+            if (target.host !== page.host) diffs.push('host (' + page.host + ' vs ' + target.host + ')');
+            if (target.pathname !== page.pathname) {
+              var note = target.pathname.replace(/\/$/, '') === page.pathname.replace(/\/$/, '') ? 'trailing slash' : (target.pathname.toLowerCase() === page.pathname.toLowerCase() ? 'letter case' : 'path');
+              diffs.push(note + ' (' + page.pathname + ' vs ' + target.pathname + ')');
+            }
+            if (target.search !== page.search) diffs.push('query string (' + (page.search || 'none') + ' vs ' + (target.search || 'none') + ')');
+            if (!diffs.length) infos.push('Self-referencing: the canonical matches the page URL.');
+            else infos.push('The canonical differs from the page URL in: ' + diffs.join('; ') + '. Confirm this is intentional.');
+          } else if (page && isRel && /^https?:$/.test(target.protocol)) {
+            if (target.pathname === page.pathname && target.search === page.search) infos.push('Self-referencing once resolved against the page URL.');
+            else infos.push('Resolves to ' + target.href + ', which differs from the page URL.');
+          }
+        }
+      }
+    }
+
+    var robots = Array.prototype.slice.call(doc.querySelectorAll('meta[name]')).filter(function (m) { return /^(robots|googlebot)$/i.test(m.getAttribute('name')); });
+    var noindex = robots.some(function (m) { return /noindex/i.test(m.getAttribute('content') || ''); });
+    if (noindex && links.length) warns.push('The page has a noindex robots meta tag and a canonical. These send mixed signals: noindex says drop the page, canonical says treat another URL as the main one.');
+
+    if (header) {
+      var hm = /<([^>]+)>\s*;\s*rel\s*=\s*"?canonical"?/i.exec(header);
+      if (!hm) warns.push('The HTTP Link header does not contain a rel="canonical" entry.');
+      else {
+        lines.push('HTTP header canonical: ' + hm[1]);
+        if (links.length && hm[1].trim() !== (hrefs[0] || '')) warns.push('The HTTP header canonical (' + hm[1].trim() + ') differs from the HTML canonical (' + (hrefs[0] || 'none') + ').');
+        else if (!links.length) infos.push('A canonical is set only in the HTTP header.');
+      }
+    }
+
+    var verdict = errors.length ? errors.length + ' error' + (errors.length > 1 ? 's' : '') : (warns.length ? warns.length + ' warning' + (warns.length > 1 ? 's' : '') : 'No problems found');
+    var res = ['RESULT: ' + verdict, ''];
+    if (lines.length) res = res.concat(lines, ['']);
+    if (errors.length) { res.push('ERRORS'); errors.forEach(function (x) { res.push('  ✗ ' + x); }); res.push(''); }
+    if (warns.length) { res.push('WARNINGS'); warns.forEach(function (x) { res.push('  ! ' + x); }); res.push(''); }
+    if (infos.length) { res.push('NOTES'); infos.forEach(function (x) { res.push('  - ' + x); }); }
+    text = res.join('\n').trim();
+    out.textContent = text;
+    status.textContent = verdict;
+  }
+
+  ['ct-url', 'ct-html', 'ct-header'].forEach(function (id) { $(id).addEventListener('input', run); });
+  $('ct-copy').addEventListener('click', function () {
+    if (!text) return;
+    var b = $('ct-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  run();
+})();
+</script>

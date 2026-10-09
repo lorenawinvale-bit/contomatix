@@ -87,6 +87,11 @@ module.exports = [
     summary: 'Sort a page links into internal, external and non-crawlable, and flag empty, generic and nofollowed anchors.'
   },
   {
+    slug: 'canonical-tag-checker',
+    title: 'Canonical Tag Checker',
+    summary: 'Paste a page URL and its HTML source to find missing, duplicate, relative or misplaced canonical tags and compare them with the page URL.'
+  },
+  {
     slug: 'keyword-mapping-tool',
     title: 'Keyword Mapping Tool',
     summary: 'Match keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords — export to CSV.'
