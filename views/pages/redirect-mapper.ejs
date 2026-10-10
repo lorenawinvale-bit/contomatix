@@ -1,0 +1,268 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Redirect Mapper — Match Old URLs to New URLs for a Site Move</h1>
+    <p>Paste your old URLs and your new URLs and this <strong>free redirect mapper</strong> matches each old page to its closest new page, flags weak matches and chains, and gives you ready-to-paste 301 rules for Apache or Nginx plus a CSV. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="rm-form" onsubmit="return false;" aria-label="Redirect mapper form">
+        <div>
+          <label for="rm-old">Old URLs (one per line)</label>
+          <textarea id="rm-old" style="min-height: 170px;" placeholder="https://old-site.com/services/seo-audit.html&#10;https://old-site.com/blog/2019/link-building-tips&#10;https://old-site.com/about-us"></textarea>
+        </div>
+        <div>
+          <label for="rm-new">New URLs (one per line)</label>
+          <textarea id="rm-new" style="min-height: 170px;" placeholder="https://new-site.com/services/seo-audit/&#10;https://new-site.com/blog/link-building-tips/&#10;https://new-site.com/about/"></textarea>
+        </div>
+        <div>
+          <label for="rm-format">Output format</label>
+          <select id="rm-format">
+            <option value="report">Match report</option>
+            <option value="apache">Apache (.htaccess) 301 rules</option>
+            <option value="nginx">Nginx 301 rules</option>
+            <option value="csv">CSV preview</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Redirect map</strong>
+        <span id="rm-status" class="llms-status" role="status" aria-live="polite">Waiting for input</span>
+      </div>
+      <pre id="rm-output" class="llms-output" style="max-height:420px;white-space:pre-wrap;">Paste old and new URLs to build the map.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="rm-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="rm-csv">Download CSV</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>How the Matching Works</h2>
+    <ul class="service-points">
+      <li><strong>Path clean-up first.</strong> Each URL is reduced to its path. The domain, query string, fragment, letter case, trailing slash and common extensions such as <code>.html</code> and <code>.php</code> are ignored.</li>
+      <li><strong>Same path.</strong> If an old path appears unchanged in the new list, it is an exact match and scores 100.</li>
+      <li><strong>Same page name, new folder.</strong> When the last part of the path is identical but the folder changed, the match is strong.</li>
+      <li><strong>Word overlap.</strong> Otherwise the tool compares the words in the two paths, ignoring common filler words, and picks the new URL with the highest overlap.</li>
+      <li><strong>Three outcomes.</strong> A strong match is marked <em>Match</em>, a partial one is marked <em>Review</em>, and anything weaker is marked <em>No match</em> so you decide it by hand instead of sending it somewhere irrelevant.</li>
+      <li><strong>Chain and merge warnings.</strong> The tool flags a target that is itself an old URL, which would create a redirect chain, and counts how many old pages point at the same new page.</li>
+    </ul>
+
+    <h2>What a Redirect Map Is For</h2>
+    <p>When URLs change, a redirect map says which new page each old page should send visitors and search engines to. Google distinguishes between permanent and temporary redirects: with a permanent redirect it treats the new target as the canonical page, while a temporary one can leave the old page in results. For a site move it recommends permanent server-side redirects wherever possible.</p>
+    <p>Google's site move guidance also says not to send many old URLs to one irrelevant destination such as the new homepage, which can be treated as a soft 404, and to keep redirects for as long as possible, generally at least a year. That is why this tool leaves weak matches unmatched instead of filling every row.</p>
+    <p>The matching uses words in the URL only. It does not read your pages, so it cannot tell whether two pages cover the same topic. Treat the result as a first draft, check every Review and No match row, and test a sample of the final redirects before launch.</p>
+
+    <h2>Redirect Mapper FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does the mapper look at the content of my pages?<span class="faq-icon"></span></summary>
+        <p>No. It compares only the words in the URLs you paste, so it cannot see page content or intent. Review the weaker matches against the actual pages.</p>
+      </details>
+      <details>
+        <summary>Which redirect type do the rules use?<span class="faq-icon"></span></summary>
+        <p>301, a permanent redirect, which is what Google recommends for a permanent move. Change the code yourself if you need a temporary redirect.</p>
+      </details>
+      <details>
+        <summary>Why are some old URLs left unmatched?<span class="faq-icon"></span></summary>
+        <p>No new URL shared enough words with them. Redirecting them to an unrelated page, especially the homepage, is discouraged, so they are listed for you to map by hand or retire.</p>
+      </details>
+      <details>
+        <summary>Can several old URLs point to one new URL?<span class="faq-icon"></span></summary>
+        <p>Yes, when old pages were merged into one. The tool counts these so you can confirm that the merge was intended.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my URLs anywhere?<span class="faq-icon"></span></summary>
+        <p>No. The matching runs in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Planning a site move or redesign?</h2>
+      <p>Contomatix maps URLs, checks redirects and monitors indexing through the move.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Redirect Mapper',
+    url: site.baseUrl + '/tools/redirect-mapper',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Match old URLs to new URLs for a site move, flag weak matches and redirect chains, and export Apache or Nginx 301 rules and a CSV. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Redirect Mapper', item: site.baseUrl + '/tools/redirect-mapper' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does the mapper look at the content of my pages?', acceptedAnswer: { '@type': 'Answer', text: 'No. It compares only the words in the URLs you paste, so it cannot see page content or intent. Review the weaker matches against the actual pages.' } },
+      { '@type': 'Question', name: 'Which redirect type do the rules use?', acceptedAnswer: { '@type': 'Answer', text: '301, a permanent redirect, which is what Google recommends for a permanent move. Change the code yourself if you need a temporary redirect.' } },
+      { '@type': 'Question', name: 'Why are some old URLs left unmatched?', acceptedAnswer: { '@type': 'Answer', text: 'No new URL shared enough words with them. Redirecting them to an unrelated page, especially the homepage, is discouraged, so they are listed for you to map by hand or retire.' } },
+      { '@type': 'Question', name: 'Can several old URLs point to one new URL?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, when old pages were merged into one. The tool counts these so you can confirm that the merge was intended.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my URLs anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The matching runs in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var STOP = 'a an the and or of to in on at for with by from as is are be it its this that your my our how what why index home page pages html htm php asp aspx jsp www'.split(' ');
+  var rows = [], outText = '';
+
+  function lines(t) { return t.split(/\r?\n/).map(function (l) { return l.trim(); }).filter(Boolean); }
+  function pathOf(u) {
+    var p = u;
+    try { p = new URL(/^[a-z][a-z0-9+.-]*:\/\//i.test(u) ? u : 'https://x.invalid' + (u.charAt(0) === '/' ? '' : '/') + u).pathname; } catch (e) { p = u.split(/[?#]/)[0]; }
+    try { p = decodeURI(p); } catch (e2) {}
+    return p || '/';
+  }
+  function hostOf(u) {
+    if (!/^[a-z][a-z0-9+.-]*:\/\//i.test(u)) return '';
+    try { return new URL(u).host.toLowerCase().replace(/^www\./, ''); } catch (e) { return ''; }
+  }
+  function norm(p) {
+    p = p.toLowerCase().replace(/\.(html?|php\d?|aspx?|jsp)$/, '').replace(/\/index$/, '').replace(/\/+$/, '');
+    return p || '/';
+  }
+  function stem(w) {
+    if (w.length > 4 && /ies$/.test(w)) return w.slice(0, -3) + 'y';
+    if (w.length > 3 && /s$/.test(w) && !/ss$/.test(w)) return w.slice(0, -1);
+    return w;
+  }
+  function tokens(p) {
+    return p.replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(function (w) { return w && !/^\d{1,4}$/.test(w) && STOP.indexOf(w) === -1; }).map(stem);
+  }
+  function lastSeg(p) { var s = p.split('/'); return s[s.length - 1] || ''; }
+  function uniq(a) { return a.filter(function (x, i) { return a.indexOf(x) === i; }); }
+  function jaccard(a, b) {
+    if (!a.length || !b.length) return 0;
+    var inter = a.filter(function (x) { return b.indexOf(x) !== -1; }).length;
+    return inter / (a.length + b.length - inter);
+  }
+  function csvCell(v) { v = String(v == null ? '' : v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+  function nginxEsc(p) { return p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+  function build() {
+    var olds = lines($('rm-old').value), news = lines($('rm-new').value);
+    var out = $('rm-output'), status = $('rm-status');
+    rows = []; outText = '';
+    if (!olds.length || !news.length) { out.textContent = 'Paste old and new URLs to build the map.'; status.textContent = 'Waiting for input'; return; }
+    var N = news.map(function (u) { var p = pathOf(u); var n = norm(p); return { url: u, path: p, n: n, last: lastSeg(n), tok: uniq(tokens(n)) }; });
+    var newSet = {}; N.forEach(function (x) { newSet[x.n] = x; });
+    var oldSet = {}; olds.forEach(function (u) { oldSet[norm(pathOf(u))] = true; });
+    var counts = {};
+    rows = olds.map(function (u) {
+      var p = pathOf(u), n = norm(p), tok = uniq(tokens(n)), last = lastSeg(n);
+      var best = null, score = 0, why = '';
+      if (newSet[n]) { best = newSet[n]; score = 100; why = 'Same path'; }
+      else {
+        N.forEach(function (x) {
+          var s = jaccard(tok, x.tok);
+          if (last && x.last === last && x.last.length > 2) s = Math.max(s, 0.9);
+          if (s > score || (s === score && best && x.n.length < best.n.length)) { score = s; best = x; }
+        });
+        score = Math.round(score * 100);
+        why = score >= 90 && best && lastSeg(best.n) === last ? 'Same page name, new folder' : 'Word overlap';
+      }
+      var st = score >= 60 ? 'Match' : score >= 34 ? 'Review' : 'No match';
+      var target = st === 'No match' ? '' : best.path;
+      if (target) counts[target] = (counts[target] || 0) + 1;
+      var note = [];
+      if (n === '/') { note.push('Homepage: confirm this is intended'); }
+      var tUrl = st === 'No match' ? '' : best.url;
+      var sameUrl = !!target && target === p && (!hostOf(u) || !hostOf(tUrl) || hostOf(u) === hostOf(tUrl));
+      return { old: u, oldPath: p, target: target, targetUrl: tUrl, score: score, st: st, why: st === 'No match' ? '' : why, note: note, same: sameUrl, hostChange: !!target && hostOf(u) && hostOf(tUrl) && hostOf(u) !== hostOf(tUrl) };
+    });
+    var matched = 0, review = 0, none = 0, chains = 0;
+    rows.forEach(function (r) {
+      if (r.st === 'Match') matched++; else if (r.st === 'Review') review++; else none++;
+      if (r.target && !r.same && oldSet[norm(r.target)] && norm(r.target) !== norm(r.oldPath)) { r.note.push('Chain risk: target is also an old URL'); chains++; }
+      if (r.same) r.note.push('Same URL on both sides: no redirect needed');
+      else if (r.target && r.hostChange && r.target === r.oldPath) r.note.push('Same path on a new domain');
+      if (r.target && counts[r.target] > 1) r.note.push(counts[r.target] + ' old URLs point here');
+    });
+    var fmt = $('rm-format').value, L = [];
+    var usable = rows.filter(function (r) { return r.target && !r.same; });
+    if (fmt === 'apache') {
+      L.push('# 301 redirects, generated by the Contomatix Redirect Mapper. Review before use.');
+      usable.forEach(function (r) { L.push('Redirect 301 ' + r.oldPath + ' ' + r.targetUrl); });
+      if (!usable.length) L.push('# No redirect rules to write yet.');
+    } else if (fmt === 'nginx') {
+      L.push('# 301 redirects, generated by the Contomatix Redirect Mapper. Review before use.');
+      usable.forEach(function (r) { L.push('rewrite ^' + nginxEsc(r.oldPath) + '$ ' + r.targetUrl + ' permanent;'); });
+      if (!usable.length) L.push('# No redirect rules to write yet.');
+    } else if (fmt === 'csv') {
+      L.push('old_url,new_url,status,match_percent,reason,notes');
+      rows.forEach(function (r) { L.push([r.old, r.targetUrl, r.st, r.score, r.why, r.note.join('; ')].map(csvCell).join(',')); });
+    } else {
+      L.push('SUMMARY: ' + olds.length + ' old URLs · ' + matched + ' match · ' + review + ' to review · ' + none + ' with no match' + (chains ? ' · ' + chains + ' chain risk' : ''));
+      L.push('');
+      rows.forEach(function (r) {
+        L.push(r.oldPath + '\n    → ' + (r.target ? r.target + '  [' + r.st + ', ' + r.score + '% · ' + r.why + ']' : 'NO MATCH: map by hand or retire'));
+        r.note.forEach(function (x) { L.push('    ! ' + x); });
+      });
+      var used = {}; rows.forEach(function (r) { if (r.target) used[norm(r.target)] = true; });
+      var spare = N.filter(function (x) { return !used[x.n]; });
+      if (spare.length) { L.push(''); L.push('NEW URLS WITH NO OLD URL POINTING AT THEM (' + spare.length + ')'); spare.slice(0, 25).forEach(function (x) { L.push('  - ' + x.path); }); }
+    }
+    outText = L.join('\n');
+    out.textContent = outText;
+    status.textContent = matched + ' match · ' + review + ' review · ' + none + ' none';
+  }
+
+  ['rm-old', 'rm-new'].forEach(function (id) { $(id).addEventListener('input', build); });
+  $('rm-format').addEventListener('change', build);
+  $('rm-copy').addEventListener('click', function () {
+    if (!outText) return;
+    var b = $('rm-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(outText).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  $('rm-csv').addEventListener('click', function () {
+    if (!rows.length) return;
+    var L = ['old_url,new_url,status,match_percent,reason,notes'];
+    rows.forEach(function (r) { L.push([r.old, r.targetUrl, r.st, r.score, r.why, r.note.join('; ')].map(csvCell).join(',')); });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([L.join('\n')], { type: 'text/csv' }));
+    a.download = 'redirect-map.csv';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  build();
+})();
+</script>

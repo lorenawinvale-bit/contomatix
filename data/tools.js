@@ -92,6 +92,11 @@ module.exports = [
     summary: 'Paste a page URL and its HTML source to find missing, duplicate, relative or misplaced canonical tags and compare them with the page URL.'
   },
   {
+    slug: 'redirect-mapper',
+    title: 'Redirect Mapper',
+    summary: 'Match old URLs to new URLs for a site move, flag weak matches and chains, and export Apache or Nginx 301 rules and a CSV.'
+  },
+  {
     slug: 'keyword-mapping-tool',
     title: 'Keyword Mapping Tool',
     summary: 'Match keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords — export to CSV.'
