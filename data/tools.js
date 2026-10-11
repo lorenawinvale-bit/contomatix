@@ -92,6 +92,11 @@ module.exports = [
     summary: 'Paste a page URL and its HTML source to find missing, duplicate, relative or misplaced canonical tags and compare them with the page URL.'
   },
   {
+    slug: 'sitemap-url-extractor',
+    title: 'Sitemap URL Extractor',
+    summary: 'Pull every URL out of a sitemap.xml into a clean list or CSV, with last-modified dates and a path filter. Reads sitemap index files too.'
+  },
+  {
     slug: 'redirect-mapper',
     title: 'Redirect Mapper',
     summary: 'Match old URLs to new URLs for a site move, flag weak matches and chains, and export Apache or Nginx 301 rules and a CSV.'

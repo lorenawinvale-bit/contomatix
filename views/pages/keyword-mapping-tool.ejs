@@ -143,7 +143,8 @@
   function stem(w) {
     if (w.length > 4 && /ies$/.test(w)) return w.slice(0, -3) + 'y';
     if (w.length > 3 && /(ses|xes|ches|shes)$/.test(w)) return w.slice(0, -2);
-    if (w.length > 3 && /s$/.test(w) && !/ss$/.test(w)) return w.slice(0, -1);
+    if (/^(saas|bias|gas|atlas|canvas|alias|lens|plus|bonus|focus|status|analysis|basis|thesis|campus|virus|chaos)$/.test(w)) return w;
+    if (w.length > 3 && /s$/.test(w) && !/(ss|is|us)$/.test(w)) return w.slice(0, -1);
     return w;
   }
   function tokens(s) {
@@ -151,7 +152,9 @@
       .filter(function (w) { return STOP.indexOf(w) === -1; }).map(stem);
   }
   function unique(a) { return a.filter(function (x, i) { return a.indexOf(x) === i; }); }
-  function slugOf(k) { return tokens(k).concat([]).join('-') || 'new-page'; }
+  function slugOf(k) {
+    return String(k).toLowerCase().replace(/&/g, ' and ').split(/[^a-z0-9]+/).filter(function (w) { return w && STOP.indexOf(w) === -1; }).join('-') || 'new-page';
+  }
   function csv(v) { v = String(v == null ? '' : v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
   function pathOf(u) { try { var x = new URL(u); return x.pathname + x.search; } catch (e) { return u; } }
 

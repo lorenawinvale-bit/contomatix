@@ -1,0 +1,214 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Sitemap URL Extractor — Pull Every URL From a sitemap.xml</h1>
+    <p>Paste a <strong>sitemap.xml</strong> and this <strong>free sitemap URL extractor</strong> turns it into a clean list of URLs you can copy or download as CSV, with optional last-modified dates. Works on sitemap index files too. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="se-form" onsubmit="return false;" aria-label="Sitemap URL extractor form">
+        <div>
+          <label for="se-input">Paste your sitemap.xml contents</label>
+          <textarea id="se-input" style="min-height: 260px;" placeholder="<urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;>&#10;  <url>&#10;    <loc>https://example.com/</loc>&#10;    <lastmod>2026-10-01</lastmod>&#10;  </url>&#10;  <url>&#10;    <loc>https://example.com/about</loc>&#10;  </url>&#10;</urlset>"></textarea>
+        </div>
+        <div>
+          <label for="se-format">Output format</label>
+          <select id="se-format">
+            <option value="list">One URL per line</option>
+            <option value="csv">CSV (url, lastmod)</option>
+          </select>
+        </div>
+        <div>
+          <label for="se-filter">Only keep URLs containing (optional)</label>
+          <input type="text" id="se-filter" placeholder="/blog/">
+        </div>
+        <div>
+          <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" style="width:auto;flex:none;margin:0;" id="se-dedupe" checked> Remove duplicate URLs</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Extracted URLs</strong>
+        <span id="se-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="se-output" class="llms-output" style="max-height:340px;">Paste a sitemap to extract its URLs.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="se-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="se-download">Download .txt / .csv</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What This Does</h2>
+    <ul class="service-points">
+      <li><strong>Pulls every <code>&lt;loc&gt;</code></strong> from a <code>&lt;urlset&gt;</code> sitemap into a plain list, ready for a spreadsheet, a crawler or a redirect map</li>
+      <li><strong>Reads sitemap index files</strong> — if the root is <code>&lt;sitemapindex&gt;</code>, it lists the child sitemap addresses so you know which files to paste next</li>
+      <li><strong>Keeps <code>&lt;lastmod&gt;</code></strong> in CSV mode, so you can sort by the date each page was last changed</li>
+      <li><strong>Filters by path</strong> — keep only URLs containing text such as <code>/blog/</code> or <code>/products/</code></li>
+      <li><strong>Removes duplicates</strong> and counts what is left</li>
+      <li><strong>Decodes XML entities</strong> — an <code>&amp;amp;</code> in the file comes out as a normal <code>&amp;</code> in the list</li>
+    </ul>
+
+    <h2>When Pulling URLs Out of a Sitemap Helps</h2>
+    <p>A sitemap is machine-readable, which makes it awkward to read by eye. Once the addresses are a plain list you can paste them into a spreadsheet and count pages by folder, compare them with a crawl to find pages that are in the sitemap but not linked internally, or build a redirect map before a migration. It is also a quick way to see how many URLs you are really asking Google to look at.</p>
+    <p>Sitemaps have size limits: a single file can hold up to 50,000 URLs and 50MB uncompressed, so large sites split theirs into several files listed in a sitemap index. If you paste an index here, the tool shows the child sitemap addresses instead of page URLs. Open each child file, paste it, and extract from there.</p>
+
+    <h2>Sitemap URL Extractor FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does this tool fetch my sitemap from a URL?<span class="faq-icon"></span></summary>
+        <p>No. Paste the contents. Browsers block most cross-site requests to other people's files, and pasting keeps your data off every server, including ours.</p>
+      </details>
+      <details>
+        <summary>What if my sitemap is a sitemap index?<span class="faq-icon"></span></summary>
+        <p>The tool detects a <code>&lt;sitemapindex&gt;</code> root and lists the child sitemap locations. Each child file then needs to be pasted separately to get its page URLs.</p>
+      </details>
+      <details>
+        <summary>Can I get the last modified dates too?<span class="faq-icon"></span></summary>
+        <p>Yes. Switch the output format to CSV and each row will include the <code>&lt;lastmod&gt;</code> value when the sitemap provides one.</p>
+      </details>
+      <details>
+        <summary>Does it work with compressed .xml.gz sitemaps?<span class="faq-icon"></span></summary>
+        <p>Not directly. Unzip the file first and paste the XML text.</p>
+      </details>
+      <details>
+        <summary>Is there a limit on how many URLs I can paste?<span class="faq-icon"></span></summary>
+        <p>The tool has no limit of its own. Very large files may feel slow in the text box, since everything runs in your browser.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is processed in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want someone to act on what the sitemap shows?</h2>
+      <p>Contomatix runs technical SEO audits and fixes the issues they find.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Sitemap URL Extractor',
+    url: site.baseUrl + '/tools/sitemap-url-extractor',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Extract every URL from a sitemap.xml into a clean list or CSV, with optional last-modified dates, for free.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Sitemap URL Extractor', item: site.baseUrl + '/tools/sitemap-url-extractor' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does this tool fetch my sitemap from a URL?', acceptedAnswer: { '@type': 'Answer', text: 'No. Paste the contents. Browsers block most cross-site requests to other sites files, and pasting keeps your data off every server.' } },
+      { '@type': 'Question', name: 'What if my sitemap is a sitemap index?', acceptedAnswer: { '@type': 'Answer', text: 'The tool detects a sitemapindex root and lists the child sitemap locations. Each child file then needs to be pasted separately to get its page URLs.' } },
+      { '@type': 'Question', name: 'Can I get the last modified dates too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Switch the output format to CSV and each row includes the lastmod value when the sitemap provides one.' } },
+      { '@type': 'Question', name: 'Does it work with compressed .xml.gz sitemaps?', acceptedAnswer: { '@type': 'Answer', text: 'Not directly. Unzip the file first and paste the XML text.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is processed in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = { text: '', ext: 'txt' };
+
+  function csvCell(v) { v = v || ''; return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+
+  function extract(xmlText) {
+    var doc = new DOMParser().parseFromString(xmlText, 'application/xml');
+    var pe = doc.getElementsByTagName('parsererror')[0];
+    if (pe) return { error: 'The file is not valid XML. Check for unclosed tags, a missing root element or an unescaped & character.' };
+    var root = doc.documentElement;
+    var name = root.localName || root.tagName;
+    var itemTag = name === 'sitemapindex' ? 'sitemap' : name === 'urlset' ? 'url' : null;
+    if (!itemTag) return { error: 'Root element is <' + name + '>, expected <urlset> or <sitemapindex>.' };
+    var items = Array.prototype.slice.call(root.getElementsByTagNameNS('*', itemTag));
+    var rows = [];
+    items.forEach(function (el) {
+      var loc = el.getElementsByTagNameNS('*', 'loc')[0];
+      var lm = el.getElementsByTagNameNS('*', 'lastmod')[0];
+      var u = loc ? loc.textContent.trim() : '';
+      if (u) rows.push({ url: u, lastmod: lm ? lm.textContent.trim() : '' });
+    });
+    return { kind: name, rows: rows };
+  }
+
+  function run() {
+    var text = $('se-input').value.trim();
+    var out = $('se-output'), status = $('se-status');
+    current = { text: '', ext: 'txt' };
+    if (!text) { out.textContent = 'Paste a sitemap to extract its URLs.'; status.textContent = 'Waiting for input'; return; }
+    var r = extract(text);
+    if (r.error) { out.textContent = r.error; status.textContent = 'Error'; return; }
+    var rows = r.rows, total = rows.length;
+    var f = $('se-filter').value.trim();
+    if (f) rows = rows.filter(function (x) { return x.url.indexOf(f) !== -1; });
+    if ($('se-dedupe').checked) {
+      var seen = {};
+      rows = rows.filter(function (x) { if (seen[x.url]) return false; seen[x.url] = 1; return true; });
+    }
+    var csv = $('se-format').value === 'csv';
+    var lines = csv ? ['url,lastmod'].concat(rows.map(function (x) { return csvCell(x.url) + ',' + csvCell(x.lastmod); })) : rows.map(function (x) { return x.url; });
+    current = { text: lines.join('\n'), ext: csv ? 'csv' : 'txt' };
+    var label = r.kind === 'sitemapindex' ? 'child sitemap' : 'URL';
+    status.textContent = rows.length + ' ' + label + (rows.length === 1 ? '' : 's') + (rows.length !== total ? ' (of ' + total + ')' : '');
+    var note = r.kind === 'sitemapindex' ? '# Sitemap index: these are child sitemaps, paste each one to get page URLs\n' : '';
+    out.textContent = rows.length ? note + current.text : 'No URLs match.';
+  }
+
+  ['se-input', 'se-filter'].forEach(function (id) { $(id).addEventListener('input', run); });
+  ['se-format', 'se-dedupe'].forEach(function (id) { $(id).addEventListener('change', run); });
+
+  $('se-copy').addEventListener('click', function () {
+    if (!current.text) return;
+    var b = $('se-copy');
+    var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); };
+    if (navigator.clipboard) navigator.clipboard.writeText(current.text).then(done);
+  });
+  $('se-download').addEventListener('click', function () {
+    if (!current.text) return;
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([current.text], { type: 'text/plain' }));
+    a.download = 'sitemap-urls.' + current.ext;
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  run();
+})();
+</script>
