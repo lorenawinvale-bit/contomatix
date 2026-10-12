@@ -1,0 +1,246 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Robots.txt Tester — Check If a URL Is Allowed or Blocked</h1>
+    <p>Paste your robots.txt, choose a crawler and list the URLs you want to check. This <strong>free robots.txt tester</strong> applies Google's matching rules, shows which rule decided each URL and flags lines Google ignores. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="rt-form" onsubmit="return false;" aria-label="Robots.txt tester form">
+        <div>
+          <label for="rt-file">Your robots.txt (paste the contents)</label>
+          <textarea id="rt-file" style="min-height: 200px;" placeholder="User-agent: *&#10;Disallow: /admin&#10;Disallow: /search?&#10;Allow: /admin/help&#10;&#10;User-agent: GPTBot&#10;Disallow: /&#10;&#10;Sitemap: https://example.com/sitemap.xml"></textarea>
+        </div>
+        <div>
+          <label for="rt-ua">Crawler to test</label>
+          <input type="text" id="rt-ua" list="rt-ua-list" value="Googlebot" autocomplete="off">
+          <datalist id="rt-ua-list">
+            <option value="Googlebot"></option><option value="Googlebot-Image"></option><option value="Bingbot"></option><option value="GPTBot"></option><option value="ClaudeBot"></option><option value="PerplexityBot"></option><option value="*"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="rt-urls">URLs or paths to check (one per line)</label>
+          <textarea id="rt-urls" style="min-height: 120px;" placeholder="https://example.com/admin/settings&#10;/admin/help/faq&#10;/blog/my-post&#10;/search?q=shoes"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Test results</strong>
+        <span id="rt-status" class="llms-status" role="status" aria-live="polite">Waiting for input</span>
+      </div>
+      <pre id="rt-output" class="llms-output" style="max-height:420px;white-space:pre-wrap;">Paste a robots.txt and add URLs to test.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="rt-copy">Copy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>How the Tester Decides</h2>
+    <ul class="service-points">
+      <li><strong>One group applies.</strong> Google uses the group whose user agent is the most specific match for the crawler. Rules from groups for the same agent are combined, and the <code>*</code> group is used only when no specific group matches.</li>
+      <li><strong>The longest matching rule wins.</strong> Each Allow or Disallow path is compared with the start of the URL path, and the most specific rule, judged by path length, decides.</li>
+      <li><strong>A tie goes to Allow.</strong> When an Allow and a Disallow match with the same length, Google uses the least restrictive rule.</li>
+      <li><strong>Wildcards.</strong> <code>*</code> matches any run of characters and <code>$</code> marks the end of the URL.</li>
+      <li><strong>Paths are case-sensitive.</strong> <code>/Admin</code> and <code>/admin</code> are different rules.</li>
+      <li><strong>Empty Disallow blocks nothing.</strong> A rule with no path is ignored.</li>
+    </ul>
+
+    <h2>What a Robots.txt Test Can and Cannot Tell You</h2>
+    <p>The result tells you whether a crawler that follows these rules may fetch a URL. It does not tell you whether the page is indexed. A URL blocked by robots.txt can still appear in search results if other pages link to it, and a page you allow may still be left out of the index for other reasons. If the page must stay out of search, a noindex rule on a crawlable page is the right tool.</p>
+    <p>The tool follows the rules Google documents. Other crawlers can differ in small ways, so treat a result for a non-Google crawler as a close guide, and check that crawler's own documentation if the outcome matters. Google also supports only the user-agent, allow, disallow and sitemap fields and ignores others, such as crawl-delay, and it enforces a size limit of 500 KiB on the file.</p>
+
+    <h2>Robots.txt Tester FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does the tester fetch my live robots.txt?<span class="faq-icon"></span></summary>
+        <p>No. Paste the contents. Browsers block most cross-site requests to other people's files, and pasting keeps your data off every server, including ours.</p>
+      </details>
+      <details>
+        <summary>Which rule wins when Allow and Disallow both match?<span class="faq-icon"></span></summary>
+        <p>The longer, more specific path wins. If both are the same length, Google uses the least restrictive rule, which is Allow.</p>
+      </details>
+      <details>
+        <summary>Why does my URL show as allowed when I have a Disallow for its folder?<span class="faq-icon"></span></summary>
+        <p>A longer Allow rule may be overriding it, or the rule may sit in a group for a different crawler. The result lists the rule that decided each URL so you can see which one it was.</p>
+      </details>
+      <details>
+        <summary>Can I test a crawler like GPTBot or ClaudeBot?<span class="faq-icon"></span></summary>
+        <p>Yes. Type the crawler's name in the crawler field. If your file has no group for it, the tester falls back to the <code>*</code> group, as Google does.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. The rules are applied in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Not sure what your robots.txt should block?</h2>
+      <p>Contomatix reviews crawl rules as part of a technical SEO check.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Robots.txt Tester',
+    url: site.baseUrl + '/tools/robots-txt-tester',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste a robots.txt, choose a crawler and test URLs against it using Google matching rules. See which rule decided each URL. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Robots.txt Tester', item: site.baseUrl + '/tools/robots-txt-tester' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does the tester fetch my live robots.txt?', acceptedAnswer: { '@type': 'Answer', text: 'No. Paste the contents. Browsers block most cross-site requests to other sites files, and pasting keeps your data off every server, including ours.' } },
+      { '@type': 'Question', name: 'Which rule wins when Allow and Disallow both match?', acceptedAnswer: { '@type': 'Answer', text: 'The longer, more specific path wins. If both are the same length, Google uses the least restrictive rule, which is Allow.' } },
+      { '@type': 'Question', name: 'Why does my URL show as allowed when I have a Disallow for its folder?', acceptedAnswer: { '@type': 'Answer', text: 'A longer Allow rule may be overriding it, or the rule may sit in a group for a different crawler. The result lists the rule that decided each URL.' } },
+      { '@type': 'Question', name: 'Can I test a crawler like GPTBot or ClaudeBot?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Type the crawler name in the crawler field. If your file has no group for it, the tester falls back to the star group, as Google does.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The rules are applied in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var text = '';
+
+  function parseFile(src) {
+    var groups = [], cur = null, lastWasUA = false, notes = [], sitemaps = 0;
+    var lines = src.split(/\r?\n/);
+    lines.forEach(function (raw, i) {
+      var l = raw.replace(/#.*/, '').trim();
+      if (!l) return;
+      var m = /^([A-Za-z-]+)\s*:\s*(.*)$/.exec(l);
+      if (!m) { notes.push('Line ' + (i + 1) + ': not a "field: value" line, ignored (' + l.slice(0, 40) + ')'); return; }
+      var f = m[1].toLowerCase(), v = m[2].trim();
+      if (f === 'user-agent') {
+        if (!lastWasUA || !cur) { cur = { agents: [], rules: [] }; groups.push(cur); }
+        cur.agents.push(v.toLowerCase());
+        lastWasUA = true;
+      } else if (f === 'allow' || f === 'disallow') {
+        lastWasUA = false;
+        if (!cur) { notes.push('Line ' + (i + 1) + ': ' + f + ' appears before any user-agent line, so it applies to no crawler'); return; }
+        cur.rules.push({ type: f, path: v, line: i + 1 });
+      } else if (f === 'sitemap') {
+        sitemaps++;
+      } else {
+        notes.push('Line ' + (i + 1) + ': "' + m[1] + '" is not supported by Google and is ignored');
+      }
+    });
+    return { groups: groups, notes: notes, sitemaps: sitemaps, bytes: new Blob([src]).size };
+  }
+
+  function chooseRules(parsed, ua) {
+    var token = ua.toLowerCase();
+    var best = -1, bestName = '';
+    parsed.groups.forEach(function (g) {
+      g.agents.forEach(function (a) {
+        if (a !== '*' && token.indexOf(a) === 0 && a.length > best) { best = a.length; bestName = a; }
+      });
+    });
+    var name = best >= 0 ? bestName : '*';
+    var rules = [];
+    parsed.groups.forEach(function (g) { if (g.agents.indexOf(name) !== -1) rules = rules.concat(g.rules); });
+    var exists = parsed.groups.some(function (g) { return g.agents.indexOf(name) !== -1; });
+    return { name: name, rules: rules, exists: exists };
+  }
+
+  function toRegex(path) {
+    var end = false;
+    if (path.charAt(path.length - 1) === '$') { end = true; path = path.slice(0, -1); }
+    var re = path.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*');
+    return new RegExp('^' + re + (end ? '$' : ''));
+  }
+
+  function pathOf(u) {
+    u = u.trim();
+    if (!u) return '';
+    try { if (/^[a-z][a-z0-9+.-]*:\/\//i.test(u)) { var x = new URL(u); return x.pathname + x.search; } } catch (e) {}
+    return u.charAt(0) === '/' ? u : '/' + u;
+  }
+
+  function decide(rules, path) {
+    var best = null;
+    rules.forEach(function (r) {
+      if (!r.path) return;
+      if (!toRegex(r.path).test(path)) return;
+      var len = r.path.replace(/\$$/, '').length;
+      if (!best || len > best.len || (len === best.len && r.type === 'allow' && best.type !== 'allow')) best = { type: r.type, path: r.path, line: r.line, len: len };
+    });
+    return best;
+  }
+
+  function run() {
+    var src = $('rt-file').value, ua = $('rt-ua').value.trim() || '*';
+    var urls = $('rt-urls').value.split(/\r?\n/).map(function (s) { return s.trim(); }).filter(Boolean);
+    var out = $('rt-output'), status = $('rt-status');
+    text = '';
+    if (!src.trim()) { out.textContent = 'Paste a robots.txt and add URLs to test.'; status.textContent = 'Waiting for input'; return; }
+    var parsed = parseFile(src);
+    var sel = chooseRules(parsed, ua);
+    var L = [];
+    L.push('Crawler: ' + ua + '  ->  group used: ' + (sel.exists ? 'User-agent: ' + sel.name : 'none (no matching group, everything is allowed)'));
+    if (parsed.bytes > 500 * 1024) L.push('! File is ' + Math.round(parsed.bytes / 1024) + ' KiB. Google ignores content beyond 500 KiB.');
+    L.push('');
+    var blocked = 0, allowed = 0;
+    if (!urls.length) L.push('Add URLs or paths on the left to test them.');
+    urls.forEach(function (u) {
+      var p = pathOf(u), d = decide(sel.rules, p);
+      var isBlocked = !!d && d.type === 'disallow';
+      if (isBlocked) blocked++; else allowed++;
+      L.push((isBlocked ? 'BLOCKED  ' : 'ALLOWED  ') + p);
+      L.push('         ' + (d ? 'decided by line ' + d.line + ': ' + (d.type === 'allow' ? 'Allow: ' : 'Disallow: ') + d.path : (sel.exists ? 'no rule matches this path' : 'no group applies to this crawler')));
+    });
+    if (parsed.notes.length) { L.push(''); L.push('NOTES'); parsed.notes.slice(0, 15).forEach(function (n) { L.push('  - ' + n); }); }
+    if (!parsed.groups.length) { L.push(''); L.push('! No user-agent group found, so this file blocks nothing.'); }
+    text = L.join('\n');
+    out.textContent = text;
+    status.textContent = urls.length ? blocked + ' blocked · ' + allowed + ' allowed' : 'Rules parsed';
+  }
+
+  ['rt-file', 'rt-ua', 'rt-urls'].forEach(function (id) { $(id).addEventListener('input', run); });
+  $('rt-copy').addEventListener('click', function () {
+    if (!text) return;
+    var b = $('rt-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  run();
+})();
+</script>
