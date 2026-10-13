@@ -1,0 +1,195 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Dofollow Link Checker — Find Nofollow, Sponsored and UGC Links in Any HTML</h1>
+    <p>Paste a page's HTML and this <strong>free dofollow link checker</strong> lists every link with its rel attribute: followed, nofollow, sponsored or ugc, internal or external. It also catches a page-level robots nofollow that changes every link. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="dl-form" onsubmit="return false;" aria-label="Dofollow link checker form">
+        <div>
+          <label for="dl-html">Page HTML (view source, copy, paste)</label>
+          <textarea id="dl-html" style="min-height: 260px;" placeholder="&lt;a href=&quot;https://example.com/guide&quot;&gt;A guide&lt;/a&gt;&#10;&lt;a href=&quot;https://partner.com&quot; rel=&quot;sponsored&quot;&gt;Partner&lt;/a&gt;&#10;&lt;a href=&quot;https://forum.com/x&quot; rel=&quot;nofollow ugc&quot;&gt;Comment link&lt;/a&gt;"></textarea>
+        </div>
+        <div>
+          <label for="dl-domain">Your domain (optional, to separate internal from external)</label>
+          <input type="text" id="dl-domain" placeholder="example.com" autocomplete="off">
+        </div>
+        <div>
+          <label><input type="checkbox" id="dl-only"> Show only external links</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Link report</strong>
+        <span id="dl-status" class="llms-status" role="status" aria-live="polite">Waiting for input</span>
+      </div>
+      <pre id="dl-output" class="llms-output" style="max-height:480px;white-space:pre-wrap;">Paste HTML to list its links.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="dl-copy">Copy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Checker Reports</h2>
+    <ul class="service-points">
+      <li><strong>Followed.</strong> A link with no rel value of nofollow, sponsored or ugc. People call these dofollow links, but "dofollow" is not an HTML value. A link is simply followed unless you mark it otherwise.</li>
+      <li><strong>Nofollow, sponsored and ugc.</strong> The three rel values Google documents. Sponsored marks paid placements, ugc marks user-generated content, and nofollow is the general hint.</li>
+      <li><strong>Internal or external.</strong> Enter your domain and each link is labelled by whether it stays on your site.</li>
+      <li><strong>Page-level nofollow.</strong> A robots meta tag containing nofollow applies to every link on the page, even those without a rel value. The checker flags it.</li>
+      <li><strong>Skipped links.</strong> Anchors that are not web links, such as mailto, tel, javascript and in-page fragments, are counted separately.</li>
+    </ul>
+
+    <h2>How to Use the Report</h2>
+    <p>Run it on a page that links out to a partner, a sponsor or a forum, and check that each link carries the value you intended. Run it on a page where you earned a link to confirm that the link pointing to you is followed. The tool reads the HTML you paste, which is the same source a crawler receives for a static page. If your page builds links with JavaScript, copy the rendered HTML from the browser's element inspector instead of the page source.</p>
+    <p>A few things sit outside the HTML and cannot be seen here. An X-Robots-Tag HTTP header can set nofollow for a whole file, and a link inside a blocked or noindexed page may not pass what you expect. Treat the report as a check of the markup, and use a crawler or Search Console to confirm the rest.</p>
+
+    <h2>Dofollow Link Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Is "dofollow" an official HTML attribute?<span class="faq-icon"></span></summary>
+        <p>No. There is no dofollow value. A link is followed by default and becomes nofollow, sponsored or ugc only when the rel attribute says so.</p>
+      </details>
+      <details>
+        <summary>Can this tool check the backlinks pointing to my site?<span class="faq-icon"></span></summary>
+        <p>It checks the HTML you paste. To check a backlink, open the page that links to you, copy its HTML, paste it here and enter your domain. The report shows how that link is marked.</p>
+      </details>
+      <details>
+        <summary>Why is a link without rel still marked nofollow?<span class="faq-icon"></span></summary>
+        <p>The page has a robots meta tag containing nofollow, which applies to all links on the page. The checker shows this as a page-level setting.</p>
+      </details>
+      <details>
+        <summary>What is the difference between sponsored, ugc and nofollow?<span class="faq-icon"></span></summary>
+        <p>Sponsored is for paid or compensated links, ugc is for user-generated content such as comments and forum posts, and nofollow is the general hint when neither applies. Google treats all three as hints.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. The HTML is parsed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want your backlink profile reviewed?</h2>
+      <p>Contomatix checks link quality, attributes and anchors as part of a link audit.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Dofollow Link Checker',
+    url: site.baseUrl + '/tools/dofollow-link-checker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste a page HTML and list every link with its rel attribute: followed, nofollow, sponsored or ugc, internal or external. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Dofollow Link Checker', item: site.baseUrl + '/tools/dofollow-link-checker' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Is dofollow an official HTML attribute?', acceptedAnswer: { '@type': 'Answer', text: 'No. There is no dofollow value. A link is followed by default and becomes nofollow, sponsored or ugc only when the rel attribute says so.' } },
+      { '@type': 'Question', name: 'Can this tool check the backlinks pointing to my site?', acceptedAnswer: { '@type': 'Answer', text: 'It checks the HTML you paste. To check a backlink, open the page that links to you, copy its HTML, paste it here and enter your domain. The report shows how that link is marked.' } },
+      { '@type': 'Question', name: 'Why is a link without rel still marked nofollow?', acceptedAnswer: { '@type': 'Answer', text: 'The page has a robots meta tag containing nofollow, which applies to all links on the page. The checker shows this as a page-level setting.' } },
+      { '@type': 'Question', name: 'What is the difference between sponsored, ugc and nofollow?', acceptedAnswer: { '@type': 'Answer', text: 'Sponsored is for paid or compensated links, ugc is for user-generated content such as comments and forum posts, and nofollow is the general hint when neither applies. Google treats all three as hints.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The HTML is parsed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var text = '';
+
+  function hostOf(h) { return String(h || '').toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[\/?#].*$/, ''); }
+
+  function run() {
+    var src = $('dl-html').value, out = $('dl-output'), status = $('dl-status');
+    var mine = hostOf($('dl-domain').value), onlyExt = $('dl-only').checked;
+    text = '';
+    if (!src.trim()) { out.textContent = 'Paste HTML to list its links.'; status.textContent = 'Waiting for input'; return; }
+    var doc = new DOMParser().parseFromString(src, 'text/html');
+    var pageNofollow = false;
+    doc.querySelectorAll('meta[name]').forEach(function (m) {
+      var n = (m.getAttribute('name') || '').toLowerCase();
+      if ((n === 'robots' || n === 'googlebot') && /nofollow|none/i.test(m.getAttribute('content') || '')) pageNofollow = true;
+    });
+    var counts = { followed: 0, nofollow: 0, sponsored: 0, ugc: 0, internal: 0, external: 0, skipped: 0 };
+    var rows = [];
+    doc.querySelectorAll('a[href]').forEach(function (a) {
+      var href = (a.getAttribute('href') || '').trim();
+      var label = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 50) || (a.querySelector('img') ? '[image link]' : '[no anchor text]');
+      if (!href || /^(#|mailto:|tel:|javascript:|sms:)/i.test(href)) { counts.skipped++; return; }
+      var rel = (a.getAttribute('rel') || '').toLowerCase().split(/\s+/).filter(Boolean);
+      var kinds = [];
+      ['nofollow', 'sponsored', 'ugc'].forEach(function (k) { if (rel.indexOf(k) !== -1) { kinds.push(k); counts[k]++; } });
+      var isAbs = /^(https?:)?\/\//i.test(href);
+      var scope = !isAbs ? 'internal' : (mine && hostOf(href.replace(/^\/\//, '')) === mine ? 'internal' : 'external');
+      counts[scope]++;
+      var followed = !kinds.length && !pageNofollow;
+      if (followed) counts.followed++;
+      if (onlyExt && scope === 'internal') return;
+      rows.push({ followed: followed, kinds: kinds, scope: scope, href: href, label: label });
+    });
+    var L = [];
+    var total = doc.querySelectorAll('a[href]').length - counts.skipped;
+    L.push('Web links: ' + total + '   Followed: ' + counts.followed + '   Nofollow: ' + counts.nofollow + '   Sponsored: ' + counts.sponsored + '   UGC: ' + counts.ugc);
+    L.push('Internal: ' + counts.internal + '   External: ' + counts.external + '   Skipped (mailto, tel, #, javascript): ' + counts.skipped);
+    if (pageNofollow) { L.push(''); L.push('! A robots meta tag with nofollow is present, so every link on this page is treated as nofollow.'); }
+    L.push('');
+    if (!rows.length) L.push('No web links to show.');
+    rows.forEach(function (r) {
+      var tag = r.followed ? 'FOLLOWED ' : (r.kinds.length ? r.kinds.join('+').toUpperCase() : 'NOFOLLOW (page-level)');
+      L.push(tag + '  [' + r.scope + ']  ' + r.href);
+      L.push('         anchor: ' + r.label);
+    });
+    text = L.join('\n');
+    out.textContent = text;
+    status.textContent = counts.followed + ' followed · ' + (total - counts.followed) + ' not followed';
+  }
+
+  ['dl-html', 'dl-domain'].forEach(function (id) { $(id).addEventListener('input', run); });
+  $('dl-only').addEventListener('change', run);
+  $('dl-copy').addEventListener('click', function () {
+    if (!text) return;
+    var b = $('dl-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  run();
+})();
+</script>
