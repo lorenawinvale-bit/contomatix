@@ -6,7 +6,8 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 
-const services = require('./data/services');
+const serviceExtras = require('./data/service-extras');
+const services = require('./data/services').map(s => Object.assign({}, s, serviceExtras[s.slug] || {}));
 const tools = require('./data/tools');
 const locations = require('./data/locations');
 const blogStore = require('./lib/blogStore');
@@ -290,8 +291,8 @@ app.get('/services/:slug', (req, res) => {
   const service = services.find(s => s.slug === req.params.slug);
   if (!service) return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
   res.render('pages/service', {
-    title: `${service.title} Services — Contomatix`,
-    description: service.summary,
+    title: service.metaTitle || `${service.title} Services — Contomatix`,
+    description: service.metaDescription || service.summary,
     pageClass: 'page-service',
     service
   });
