@@ -1,0 +1,234 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Technical SEO Audit Tool — Check Any Page's HTML in Seconds</h1>
+    <p>Paste a page's HTML and this <strong>technical SEO audit tool</strong> checks its title, meta description, headings, canonical, robots meta tag, hreflang, structured data, images and links. Each finding says what was found and why it matters. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="ta-form" onsubmit="return false;" aria-label="Technical SEO audit form">
+        <div>
+          <label for="ta-html">Page HTML (view source, copy, paste)</label>
+          <textarea id="ta-html" style="min-height: 280px;" placeholder="&lt;!doctype html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;&lt;head&gt;&#10;&lt;title&gt;Your page title&lt;/title&gt;&#10;&lt;meta name=&quot;description&quot; content=&quot;...&quot;&gt;&#10;&lt;link rel=&quot;canonical&quot; href=&quot;https://example.com/page&quot;&gt;"></textarea>
+        </div>
+        <div>
+          <label for="ta-url">The page's URL (optional, to compare canonical and hreflang)</label>
+          <input type="text" id="ta-url" placeholder="https://example.com/page" autocomplete="off">
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Audit findings</strong>
+        <span id="ta-status" class="llms-status" role="status" aria-live="polite">Waiting for input</span>
+      </div>
+      <pre id="ta-output" class="llms-output" style="max-height:520px;white-space:pre-wrap;">Paste HTML to audit it.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="ta-copy">Copy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Audit Checks</h2>
+    <ul class="service-points">
+      <li><strong>Title and meta description.</strong> Present, not duplicated within the page, and a length you can read at a glance. Google can rewrite either, so treat length as a guide.</li>
+      <li><strong>Headings.</strong> The first H1, the count of H1 elements and any skipped heading levels.</li>
+      <li><strong>Canonical and robots.</strong> A single canonical, whether it is absolute and whether it matches the URL you enter, plus noindex or nofollow in a robots meta tag.</li>
+      <li><strong>Language and hreflang.</strong> The html lang value, and each hreflang annotation with a self-reference check when you give the URL.</li>
+      <li><strong>Social tags.</strong> Open Graph and Twitter card tags used when the page is shared.</li>
+      <li><strong>Structured data.</strong> Each JSON-LD block is parsed, and its types are listed. Broken JSON is flagged.</li>
+      <li><strong>Images and links.</strong> Missing alt attributes, missing dimensions, empty anchors and nofollow counts.</li>
+    </ul>
+
+    <h2>What a Single-Page HTML Audit Cannot See</h2>
+    <p>The audit reads only the HTML you paste. It cannot see HTTP status codes or headers such as X-Robots-Tag, how the page renders after JavaScript runs, page speed, redirects, whether the URL is indexed, or how other pages link to it. Use it as a fast first pass on a template or a single URL, then confirm with Search Console's URL Inspection and a crawler for the whole site. If your content is built in the browser, copy the rendered HTML from the element inspector, not the page source.</p>
+
+    <h2>Technical SEO Audit Tool FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does the tool fetch my page for me?<span class="faq-icon"></span></summary>
+        <p>No. You paste the HTML. Browsers block most cross-site requests to other people's pages, and pasting keeps your data off every server, including ours.</p>
+      </details>
+      <details>
+        <summary>Is there a perfect title or meta description length?<span class="faq-icon"></span></summary>
+        <p>No. Google does not set a fixed length and may rewrite both. The tool flags very short and very long values because they are more likely to be cut off or to say too little.</p>
+      </details>
+      <details>
+        <summary>Should a page have only one H1?<span class="faq-icon"></span></summary>
+        <p>One clear H1 is the usual pattern, but HTML allows more than one and Google handles them. The tool reports the count so you can decide whether it is intentional.</p>
+      </details>
+      <details>
+        <summary>Why does it ask for the page URL?<span class="faq-icon"></span></summary>
+        <p>With the URL, the tool can check that the canonical points to the same page and that an hreflang set includes the page itself, which are common technical faults.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. The HTML is parsed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want the whole site audited?</h2>
+      <p>Contomatix runs full technical audits and turns the findings into a prioritised plan.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Technical SEO Audit Tool',
+    url: site.baseUrl + '/tools/technical-seo-audit-tool',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste a page HTML and check its title, meta description, headings, canonical, robots meta, hreflang, structured data, images and links. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Technical SEO Audit Tool', item: site.baseUrl + '/tools/technical-seo-audit-tool' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does the tool fetch my page for me?', acceptedAnswer: { '@type': 'Answer', text: 'No. You paste the HTML. Browsers block most cross-site requests to other sites pages, and pasting keeps your data off every server, including ours.' } },
+      { '@type': 'Question', name: 'Is there a perfect title or meta description length?', acceptedAnswer: { '@type': 'Answer', text: 'No. Google does not set a fixed length and may rewrite both. The tool flags very short and very long values because they are more likely to be cut off or to say too little.' } },
+      { '@type': 'Question', name: 'Should a page have only one H1?', acceptedAnswer: { '@type': 'Answer', text: 'One clear H1 is the usual pattern, but HTML allows more than one and Google handles them. The tool reports the count so you can decide whether it is intentional.' } },
+      { '@type': 'Question', name: 'Why does it ask for the page URL?', acceptedAnswer: { '@type': 'Answer', text: 'With the URL, the tool can check that the canonical points to the same page and that an hreflang set includes the page itself, which are common technical faults.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The HTML is parsed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var text = '';
+  function norm(u) { return String(u || '').trim().replace(/#.*$/, '').replace(/\/+$/, '').toLowerCase(); }
+
+  function run() {
+    var src = $('ta-html').value, url = $('ta-url').value.trim();
+    var out = $('ta-output'), status = $('ta-status');
+    text = '';
+    if (!src.trim()) { out.textContent = 'Paste HTML to audit it.'; status.textContent = 'Waiting for input'; return; }
+    var d = new DOMParser().parseFromString(src, 'text/html');
+    var F = [], counts = { fail: 0, warn: 0, pass: 0 };
+    function add(level, label, msg) { counts[level]++; F.push((level === 'fail' ? 'FAIL  ' : level === 'warn' ? 'WARN  ' : 'PASS  ') + label + ': ' + msg); }
+
+    var titles = d.querySelectorAll('head title, title');
+    var t = titles.length ? titles[0].textContent.replace(/\s+/g, ' ').trim() : '';
+    if (!t) add('fail', 'Title', 'missing or empty');
+    else {
+      if (titles.length > 1) add('warn', 'Title', titles.length + ' title elements found, only one is expected');
+      add(t.length < 20 ? 'warn' : t.length > 65 ? 'warn' : 'pass', 'Title', t.length + ' characters' + (t.length < 20 ? ' (short, may say too little)' : t.length > 65 ? ' (long, may be cut off in results)' : '') + ' - "' + t.slice(0, 70) + '"');
+    }
+
+    var md = d.querySelector('meta[name="description" i]');
+    var mdv = md ? (md.getAttribute('content') || '').trim() : '';
+    if (!md || !mdv) add('warn', 'Meta description', 'missing, Google will generate a snippet from the page');
+    else add(mdv.length < 50 ? 'warn' : mdv.length > 170 ? 'warn' : 'pass', 'Meta description', mdv.length + ' characters' + (mdv.length < 50 ? ' (short)' : mdv.length > 170 ? ' (long, likely truncated)' : ''));
+
+    var h1 = d.querySelectorAll('h1');
+    if (!h1.length) add('warn', 'H1', 'no H1 found');
+    else add(h1.length > 1 ? 'warn' : 'pass', 'H1', h1.length + ' found' + (h1.length > 1 ? ' (allowed, check it is intentional)' : '') + ' - "' + h1[0].textContent.replace(/\s+/g, ' ').trim().slice(0, 70) + '"');
+    var prev = 0, skipped = false;
+    d.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function (h) { var n = +h.tagName.charAt(1); if (prev && n > prev + 1) skipped = true; prev = n; });
+    if (skipped) add('warn', 'Heading order', 'a heading level is skipped (for example H2 to H4)');
+
+    var can = d.querySelectorAll('link[rel~="canonical" i]');
+    if (!can.length) add('warn', 'Canonical', 'no canonical link element');
+    else {
+      var ch = can[0].getAttribute('href') || '';
+      if (can.length > 1) add('fail', 'Canonical', can.length + ' canonical elements, Google may ignore them');
+      if (!/^https?:\/\//i.test(ch)) add('warn', 'Canonical', 'not an absolute URL: ' + ch);
+      else if (url && norm(ch) !== norm(url)) add('warn', 'Canonical', 'points to a different URL than the page: ' + ch);
+      else add('pass', 'Canonical', ch);
+    }
+
+    var rb = [].slice.call(d.querySelectorAll('meta[name="robots" i], meta[name="googlebot" i]')).map(function (m) { return (m.getAttribute('content') || '').toLowerCase(); }).join(',');
+    if (/noindex|none/.test(rb)) add('fail', 'Robots meta', 'noindex present: "' + rb + '", this page asks not to be indexed');
+    else if (/nofollow/.test(rb)) add('warn', 'Robots meta', 'nofollow present: "' + rb + '", links on this page are not followed');
+    else add('pass', 'Robots meta', rb ? rb : 'none set, defaults apply');
+
+    add(d.querySelector('meta[name="viewport" i]') ? 'pass' : 'warn', 'Viewport', d.querySelector('meta[name="viewport" i]') ? 'present' : 'missing, the page may not display well on phones');
+    var lang = d.documentElement.getAttribute('lang');
+    add(lang ? 'pass' : 'warn', 'Language', lang ? 'html lang="' + lang + '"' : 'no lang attribute on the html element');
+
+    var hl = [].slice.call(d.querySelectorAll('link[rel="alternate" i][hreflang]'));
+    if (hl.length) {
+      var codes = hl.map(function (l) { return l.getAttribute('hreflang'); });
+      var bad = hl.filter(function (l) { return !/^https?:\/\//i.test(l.getAttribute('href') || ''); }).length;
+      add(bad ? 'fail' : 'pass', 'Hreflang', hl.length + ' annotations (' + codes.join(', ') + ')' + (bad ? ', ' + bad + ' not fully qualified' : ''));
+      if (url) { var self = hl.some(function (l) { return norm(l.getAttribute('href')) === norm(url); }); add(self ? 'pass' : 'fail', 'Hreflang self-reference', self ? 'page lists itself' : 'the page URL is not in its own hreflang set'); }
+    }
+
+    var og = ['og:title', 'og:description', 'og:image'].filter(function (p) { return !d.querySelector('meta[property="' + p + '" i]'); });
+    add(og.length ? 'warn' : 'pass', 'Open Graph', og.length ? 'missing ' + og.join(', ') : 'title, description and image present');
+    add(d.querySelector('meta[name="twitter:card" i]') ? 'pass' : 'warn', 'Twitter card', d.querySelector('meta[name="twitter:card" i]') ? 'present' : 'twitter:card missing (optional)');
+
+    var ld = d.querySelectorAll('script[type="application/ld+json" i]');
+    if (!ld.length) add('warn', 'Structured data', 'no JSON-LD found (optional, useful for supported rich results)');
+    else {
+      var types = [], broken = 0;
+      ld.forEach(function (s) { try { (function w(n) { if (!n || typeof n !== 'object') return; if (Array.isArray(n)) return n.forEach(w); if (n['@type']) [].concat(n['@type']).forEach(function (x) { if (types.indexOf(x) < 0) types.push(x); }); Object.keys(n).forEach(function (k) { w(n[k]); }); })(JSON.parse(s.textContent)); } catch (e) { broken++; } });
+      add(broken ? 'fail' : 'pass', 'Structured data', ld.length + ' JSON-LD block(s)' + (broken ? ', ' + broken + ' with invalid JSON' : '') + (types.length ? ', types: ' + types.join(', ') : ''));
+    }
+
+    var imgs = d.querySelectorAll('img');
+    if (imgs.length) {
+      var noAlt = [].filter.call(imgs, function (i) { return !i.hasAttribute('alt'); }).length;
+      var noDim = [].filter.call(imgs, function (i) { return !(i.getAttribute('width') && i.getAttribute('height')); }).length;
+      add(noAlt ? 'warn' : 'pass', 'Image alt', noAlt + ' of ' + imgs.length + ' images have no alt attribute');
+      add(noDim ? 'warn' : 'pass', 'Image size', noDim + ' of ' + imgs.length + ' images lack width and height (can cause layout shift)');
+    }
+
+    var as = d.querySelectorAll('a[href]'), empty = 0, nof = 0;
+    as.forEach(function (a) { if (!(a.textContent || '').trim() && !a.querySelector('img[alt]:not([alt=""])') && !a.getAttribute('aria-label')) empty++; if (/\bnofollow\b/i.test(a.getAttribute('rel') || '')) nof++; });
+    add(empty ? 'warn' : 'pass', 'Links', as.length + ' links, ' + empty + ' with no anchor text, ' + nof + ' nofollow');
+
+    var words = (d.body ? d.body.textContent : '').replace(/\s+/g, ' ').trim().split(' ').filter(Boolean).length;
+    F.push('INFO  Body text: about ' + words + ' words');
+
+    text = 'Technical SEO audit: ' + counts.fail + ' fail, ' + counts.warn + ' warn, ' + counts.pass + ' pass\n\n' + F.join('\n');
+    out.textContent = text;
+    status.textContent = counts.fail + ' fail · ' + counts.warn + ' warn · ' + counts.pass + ' pass';
+  }
+
+  ['ta-html', 'ta-url'].forEach(function (id) { $(id).addEventListener('input', run); });
+  $('ta-copy').addEventListener('click', function () {
+    if (!text) return;
+    var b = $('ta-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  run();
+})();
+</script>
