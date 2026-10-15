@@ -92,6 +92,11 @@ module.exports = [
     summary: 'Paste a page URL and its HTML source to find missing, duplicate, relative or misplaced canonical tags and compare them with the page URL.'
   },
   {
+    slug: 'schema-markup-validator',
+    title: 'Schema Markup Validator',
+    summary: 'Paste JSON-LD or page HTML and check syntax plus the required and recommended properties Google documents for FAQ, Breadcrumb, Article, Product, LocalBusiness and Organization markup.'
+  },
+  {
     slug: 'technical-seo-audit-tool',
     title: 'Technical SEO Audit Tool',
     summary: 'Paste a page HTML and check its title, meta description, headings, canonical, robots meta, hreflang, structured data, images and links.'

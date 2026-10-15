@@ -206,7 +206,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -446,6 +446,14 @@ app.get('/tools/robots-txt-tester', (req, res) => {
   res.render('pages/robots-txt-tester', {
     title: 'Free Robots.txt Tester — Check If a URL Is Blocked | Contomatix',
     description: 'Paste your robots.txt, choose a crawler and test URLs with Google matching rules. See which rule allows or blocks each URL. Free, no signup.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/schema-markup-validator', (req, res) => {
+  res.render('pages/schema-markup-validator', {
+    title: 'Free Schema Markup Validator: Check JSON-LD | Contomatix',
+    description: 'Paste JSON-LD or page HTML and validate syntax plus the required and recommended properties Google documents for FAQ, Breadcrumb, Article, Product and LocalBusiness markup. Free.',
     pageClass: 'page-tool'
   });
 });

@@ -1,0 +1,261 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Schema Markup Validator — Check JSON-LD Syntax and Required Properties</h1>
+    <p>Paste JSON-LD or a page's HTML and this <strong>free schema markup validator</strong> parses every block, finds syntax errors and checks the properties Google documents for FAQ, Breadcrumb, Article, Product, LocalBusiness and Organization markup. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="sv-form" onsubmit="return false;" aria-label="Schema markup validator form">
+        <div>
+          <label for="sv-input">JSON-LD or page HTML (paste either)</label>
+          <textarea id="sv-input" style="min-height: 300px;" placeholder='{&#10;  "@context": "https://schema.org",&#10;  "@type": "FAQPage",&#10;  "mainEntity": [{&#10;    "@type": "Question",&#10;    "name": "What is a sitemap?",&#10;    "acceptedAnswer": { "@type": "Answer", "text": "A file that lists the URLs of a site." }&#10;  }]&#10;}'></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Validation results</strong>
+        <span id="sv-status" class="llms-status" role="status" aria-live="polite">Waiting for input</span>
+      </div>
+      <pre id="sv-output" class="llms-output" style="max-height:520px;white-space:pre-wrap;">Paste JSON-LD to validate it.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="sv-copy">Copy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Validator Checks</h2>
+    <ul class="service-points">
+      <li><strong>Syntax.</strong> Every JSON-LD block is parsed. Trailing commas, unquoted keys and broken quotes are reported with the parser's message.</li>
+      <li><strong>Context and type.</strong> Each block needs an <code>@context</code> that points at schema.org and an <code>@type</code> on every node, including nodes inside <code>@graph</code>.</li>
+      <li><strong>Google's documented properties.</strong> For FAQPage, BreadcrumbList, Article, BlogPosting, NewsArticle, Product, LocalBusiness (and its subtypes) and Organization, the tool checks required and recommended properties from Google's structured data documentation.</li>
+      <li><strong>Values.</strong> URL properties should be absolute, dates should be ISO 8601 and text values should not be empty.</li>
+      <li><strong>Other types.</strong> Types without Google-specific rules are checked for syntax and basic shape only.</li>
+    </ul>
+
+    <h2>What This Validator Cannot Tell You</h2>
+    <p>The tool checks the markup you paste, with rules taken from Google's documentation. It is not Google's Rich Results Test, and it cannot confirm that Google will show a rich result. Eligibility also depends on whether the markup matches visible page content, whether the page is indexed and, for some features, on the site itself. For example, Google says FAQ rich results are only shown for well-known, authoritative government and health websites. Use this validator to catch mistakes quickly, then confirm important pages with the Rich Results Test and the URL Inspection tool.</p>
+
+    <h2>Schema Markup Validator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does this tool fetch my live page?<span class="faq-icon"></span></summary>
+        <p>No. You paste JSON-LD or the page's HTML. Browsers block most cross-site requests, and pasting keeps your data off every server, including ours.</p>
+      </details>
+      <details>
+        <summary>Is this the same as Google's Rich Results Test?<span class="faq-icon"></span></summary>
+        <p>No. This tool applies the documented required and recommended properties and checks syntax. Google's Rich Results Test is the authority on whether a page is eligible for a rich result.</p>
+      </details>
+      <details>
+        <summary>Why does it say "no Google-specific rules" for my type?<span class="faq-icon"></span></summary>
+        <p>The type is valid schema.org vocabulary but has no rules built into this tool. Syntax and basic shape are still checked.</p>
+      </details>
+      <details>
+        <summary>Can I paste a whole page's HTML?<span class="faq-icon"></span></summary>
+        <p>Yes. The tool extracts every <code>application/ld+json</code> script block and validates each one separately. Microdata and RDFa are not read.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. The markup is parsed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want structured data done properly across your site?</h2>
+      <p>Contomatix implements and validates schema as part of technical SEO work.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Schema Markup Validator',
+    url: site.baseUrl + '/tools/schema-markup-validator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste JSON-LD or page HTML and validate syntax plus the required and recommended properties Google documents for FAQ, Breadcrumb, Article, Product, LocalBusiness and Organization markup. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Schema Markup Validator', item: site.baseUrl + '/tools/schema-markup-validator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does this tool fetch my live page?', acceptedAnswer: { '@type': 'Answer', text: 'No. You paste JSON-LD or the page HTML. Browsers block most cross-site requests, and pasting keeps your data off every server, including ours.' } },
+      { '@type': 'Question', name: 'Is this the same as Google\'s Rich Results Test?', acceptedAnswer: { '@type': 'Answer', text: 'No. This tool applies the documented required and recommended properties and checks syntax. Google\'s Rich Results Test is the authority on whether a page is eligible for a rich result.' } },
+      { '@type': 'Question', name: 'Why does it say no Google-specific rules for my type?', acceptedAnswer: { '@type': 'Answer', text: 'The type is valid schema.org vocabulary but has no rules built into this tool. Syntax and basic shape are still checked.' } },
+      { '@type': 'Question', name: 'Can I paste a whole page\'s HTML?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The tool extracts every application/ld+json script block and validates each one separately. Microdata and RDFa are not read.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The markup is parsed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var text = '';
+  var LB = ['LocalBusiness', 'Restaurant', 'Store', 'Dentist', 'Electrician', 'Plumber', 'RoofingContractor', 'HVACBusiness', 'Physician', 'MedicalClinic', 'ProfessionalService', 'LegalService', 'RealEstateAgent', 'AutomotiveBusiness', 'HomeAndConstructionBusiness', 'FinancialService', 'AccountingService', 'HealthAndBeautyBusiness', 'FoodEstablishment', 'LodgingBusiness', 'Hotel'];
+  var ART = ['Article', 'BlogPosting', 'NewsArticle'];
+  var URLP = ['url', 'image', 'logo', 'item', '@id', 'sameAs', 'contentUrl'];
+  var DATEP = ['datePublished', 'dateModified', 'startDate', 'endDate', 'dateCreated', 'uploadDate'];
+
+  function arr(v) { return v === undefined || v === null ? [] : (Array.isArray(v) ? v : [v]); }
+  function types(n) { return arr(n['@type']).map(String); }
+  function has(n, k) { var v = n[k]; if (v === undefined || v === null) return false; if (typeof v === 'string') return v.trim() !== ''; if (Array.isArray(v)) return v.length > 0; return true; }
+  function isAbs(u) { return /^https?:\/\//i.test(String(u)); }
+  function isIso(d) { return /^\d{4}-\d{2}-\d{2}([T ]\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:?\d{2})?)?$/.test(String(d).trim()); }
+
+  function extract(src) {
+    var blocks = [];
+    if (/<script/i.test(src)) {
+      var re = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi, m;
+      while ((m = re.exec(src))) blocks.push(m[1].trim());
+    } else blocks.push(src.trim());
+    return blocks.filter(Boolean);
+  }
+
+  function run() {
+    var src = $('sv-input').value, out = $('sv-output'), status = $('sv-status');
+    text = '';
+    if (!src.trim()) { out.textContent = 'Paste JSON-LD to validate it.'; status.textContent = 'Waiting for input'; return; }
+    var L = [], c = { fail: 0, warn: 0, pass: 0 };
+    function add(lv, path, msg) { c[lv]++; L.push((lv === 'fail' ? 'FAIL  ' : lv === 'warn' ? 'WARN  ' : 'PASS  ') + path + ': ' + msg); }
+    var blocks = extract(src);
+    if (!blocks.length) { out.textContent = 'No application/ld+json block found in the pasted HTML.'; status.textContent = 'Nothing to validate'; return; }
+    blocks.forEach(function (b, bi) {
+      var label = 'Block ' + (bi + 1);
+      var data;
+      try { data = JSON.parse(b); } catch (e) { add('fail', label, 'invalid JSON - ' + e.message); return; }
+      var roots = Array.isArray(data) ? data : [data];
+      var rootCtxOk = true;
+      roots.forEach(function (root, ri) {
+        if (!root || typeof root !== 'object') { add('fail', label, 'expected a JSON object'); return; }
+        var ctx = JSON.stringify(root['@context'] || '');
+        if (!ctx || ctx.indexOf('schema.org') === -1) { add('fail', label + (roots.length > 1 ? '[' + ri + ']' : ''), '@context missing or not schema.org'); rootCtxOk = false; }
+        else if (/http:\/\/schema\.org/.test(ctx)) add('warn', label, '@context uses http://schema.org, https://schema.org is preferred');
+        var nodes = root['@graph'] ? arr(root['@graph']) : [root];
+        nodes.forEach(function (n, ni) { walk(n, label + (nodes.length > 1 ? ' node ' + (ni + 1) : ''), true); });
+      });
+    });
+
+    function walk(n, path, top) {
+      if (!n || typeof n !== 'object') return;
+      if (Array.isArray(n)) { n.forEach(function (x, i) { walk(x, path + '[' + i + ']', false); }); return; }
+      var t = types(n);
+      if (!t.length) { if (top) add('fail', path, '@type missing'); }
+      Object.keys(n).forEach(function (k) {
+        var v = n[k];
+        if (k.charAt(0) === '@' && k !== '@id') return;
+        if (typeof v === 'string' && v.trim() === '') add('warn', path + '.' + k, 'empty string');
+        if (URLP.indexOf(k) !== -1) arr(v).forEach(function (u) { if (typeof u === 'string' && u && !isAbs(u) && k !== '@id') add('warn', path + '.' + k, 'not an absolute URL: ' + u); });
+        if (DATEP.indexOf(k) !== -1 && typeof v === 'string' && !isIso(v)) add('warn', path + '.' + k, 'not ISO 8601: ' + v);
+      });
+      if (t.length) rules(n, t, path);
+      Object.keys(n).forEach(function (k) { if (k.charAt(0) !== '@' && n[k] && typeof n[k] === 'object') walk(n[k], path + '.' + k, false); });
+    }
+
+    function rules(n, t, p) {
+      var name = t.join(', ');
+      if (t.indexOf('FAQPage') !== -1) {
+        var qs = arr(n.mainEntity);
+        if (!qs.length) add('fail', p, 'FAQPage needs mainEntity with Question items');
+        else {
+          var bad = 0;
+          qs.forEach(function (q, i) {
+            if (types(q).indexOf('Question') === -1) { add('fail', p + '.mainEntity[' + i + ']', '@type should be Question'); bad++; return; }
+            if (!has(q, 'name')) { add('fail', p + '.mainEntity[' + i + ']', 'Question.name missing'); bad++; }
+            var a = q.acceptedAnswer;
+            if (!a || !has(a, 'text')) { add('fail', p + '.mainEntity[' + i + ']', 'acceptedAnswer.text missing'); bad++; }
+          });
+          if (!bad) add('pass', p, 'FAQPage with ' + qs.length + ' valid question(s). Note: Google shows FAQ rich results only for well-known government and health sites.');
+        }
+      } else if (t.indexOf('BreadcrumbList') !== -1) {
+        var items = arr(n.itemListElement);
+        if (!items.length) add('fail', p, 'BreadcrumbList needs itemListElement');
+        else {
+          var ok = true;
+          items.forEach(function (it, i) {
+            var last = i === items.length - 1;
+            if (!has(it, 'position')) { add('fail', p + '.itemListElement[' + i + ']', 'position missing'); ok = false; }
+            var nm = has(it, 'name') || (it.item && typeof it.item === 'object' && has(it.item, 'name'));
+            if (!nm) { add('fail', p + '.itemListElement[' + i + ']', 'name missing'); ok = false; }
+            if (!has(it, 'item') && !last) { add('warn', p + '.itemListElement[' + i + ']', 'item (URL) missing, only the last breadcrumb may omit it'); ok = false; }
+          });
+          if (ok) add('pass', p, 'BreadcrumbList with ' + items.length + ' item(s)');
+        }
+      } else if (t.some(function (x) { return ART.indexOf(x) !== -1; })) {
+        var miss = ['headline', 'image', 'datePublished', 'dateModified', 'author'].filter(function (k) { return !has(n, k); });
+        if (miss.length) add('warn', p, name + ' has no required properties in Google docs, recommended but missing: ' + miss.join(', '));
+        else add('pass', p, name + ' has the recommended properties');
+        if (has(n, 'author')) arr(n.author).forEach(function (a) { if (typeof a === 'object' && !has(a, 'name')) add('warn', p + '.author', 'author.name missing'); });
+      } else if (t.indexOf('Product') !== -1) {
+        if (!has(n, 'name')) add('fail', p, 'Product.name missing (required)');
+        if (!has(n, 'review') && !has(n, 'aggregateRating') && !has(n, 'offers')) add('fail', p, 'Product needs one of review, aggregateRating or offers');
+        else if (has(n, 'name')) add('pass', p, 'Product has name and one of review, aggregateRating or offers');
+        arr(n.offers).forEach(function (o, i) { if (o && typeof o === 'object') { if (!has(o, 'price') && !has(o, 'priceSpecification')) add('warn', p + '.offers[' + i + ']', 'price missing'); if (!has(o, 'priceCurrency') && !has(o, 'priceSpecification')) add('warn', p + '.offers[' + i + ']', 'priceCurrency missing'); } });
+      } else if (t.some(function (x) { return LB.indexOf(x) !== -1; })) {
+        var m = ['name', 'address'].filter(function (k) { return !has(n, k); });
+        if (m.length) add('fail', p, name + ' is missing required: ' + m.join(', '));
+        else add('pass', p, name + ' has name and address');
+        var rec = ['telephone', 'openingHoursSpecification', 'url', 'image', 'geo'].filter(function (k) { return !has(n, k) && !(k === 'openingHoursSpecification' && has(n, 'openingHours')); });
+        if (rec.length) add('warn', p, 'recommended but missing: ' + rec.join(', '));
+        if (has(n, 'address') && typeof n.address === 'object') { var am = ['streetAddress', 'addressLocality', 'addressCountry'].filter(function (k) { return !has(n.address, k); }); if (am.length) add('warn', p + '.address', 'missing ' + am.join(', ')); }
+      } else if (t.indexOf('Organization') !== -1) {
+        var om = ['name', 'url', 'logo'].filter(function (k) { return !has(n, k); });
+        if (om.length) add('warn', p, 'Organization has no required properties in Google docs, recommended but missing: ' + om.join(', '));
+        else add('pass', p, 'Organization has name, url and logo');
+      } else if (t.indexOf('WebSite') !== -1) {
+        if (!has(n, 'name') && !has(n, 'url')) add('warn', p, 'WebSite should have name and url');
+        else add('pass', p, 'WebSite markup parsed');
+      } else if (['ListItem', 'Question', 'Answer', 'Person', 'ImageObject', 'Offer', 'PostalAddress', 'ContactPoint', 'AggregateRating', 'Review', 'Rating'].indexOf(t[0]) === -1) {
+        add('pass', p, name + ': valid syntax, no Google-specific rules built into this tool');
+      }
+    }
+
+    text = 'Schema validation: ' + c.fail + ' fail, ' + c.warn + ' warn, ' + c.pass + ' pass (' + blocks.length + ' block' + (blocks.length > 1 ? 's' : '') + ')\n\n' + L.join('\n');
+    out.textContent = text;
+    status.textContent = c.fail + ' fail · ' + c.warn + ' warn · ' + c.pass + ' pass';
+  }
+
+  $('sv-input').addEventListener('input', run);
+  $('sv-copy').addEventListener('click', function () {
+    if (!text) return;
+    var b = $('sv-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  run();
+})();
+</script>
