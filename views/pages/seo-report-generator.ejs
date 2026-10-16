@@ -1,0 +1,356 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free SEO Report Generator — Turn Search Console Numbers Into a Client Report</h1>
+    <p>Type in this month's and last month's Search Console figures and this <strong>free SEO report generator</strong> writes a plain-language monthly report: changes worked out for you, a short "what stood out" section, top pages, work done and next priorities. It only uses the numbers you enter. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="sr-form" onsubmit="return false;" aria-label="SEO report generator form">
+        <div>
+          <label for="sr-client">Client name</label>
+          <input type="text" id="sr-client" placeholder="e.g. Riverside Dental">
+        </div>
+        <div>
+          <label for="sr-site">Website</label>
+          <input type="text" id="sr-site" placeholder="e.g. riversidedental.com">
+        </div>
+        <div>
+          <label for="sr-by">Prepared by (optional)</label>
+          <input type="text" id="sr-by" placeholder="e.g. Acme SEO">
+        </div>
+        <div>
+          <label for="sr-period">This period</label>
+          <input type="text" id="sr-period" placeholder="e.g. September 2026">
+        </div>
+        <div>
+          <label for="sr-prevperiod">Compared with</label>
+          <input type="text" id="sr-prevperiod" placeholder="e.g. August 2026">
+        </div>
+        <div>
+          <label for="sr-clicks">Clicks: this period</label>
+          <input type="number" min="0" id="sr-clicks" placeholder="from Search Console, Performance">
+        </div>
+        <div>
+          <label for="sr-clicks-p">Clicks: previous period</label>
+          <input type="number" min="0" id="sr-clicks-p">
+        </div>
+        <div>
+          <label for="sr-imp">Impressions: this period</label>
+          <input type="number" min="0" id="sr-imp">
+        </div>
+        <div>
+          <label for="sr-imp-p">Impressions: previous period</label>
+          <input type="number" min="0" id="sr-imp-p">
+        </div>
+        <div>
+          <label for="sr-pos">Average position: this period</label>
+          <input type="number" min="0" step="0.1" id="sr-pos">
+        </div>
+        <div>
+          <label for="sr-pos-p">Average position: previous period</label>
+          <input type="number" min="0" step="0.1" id="sr-pos-p">
+        </div>
+        <div>
+          <label for="sr-convname">Business result you track (optional)</label>
+          <input type="text" id="sr-convname" placeholder="e.g. contact form enquiries">
+        </div>
+        <div>
+          <label for="sr-conv">Result: this period</label>
+          <input type="number" min="0" id="sr-conv">
+        </div>
+        <div>
+          <label for="sr-conv-p">Result: previous period</label>
+          <input type="number" min="0" id="sr-conv-p">
+        </div>
+        <div>
+          <label for="sr-links">New links secured this period (optional)</label>
+          <input type="number" min="0" id="sr-links">
+        </div>
+        <div>
+          <label for="sr-pages">Top pages (one per line: page, clicks, impressions)</label>
+          <textarea id="sr-pages" rows="4" placeholder="/services/implants, 120, 4100&#10;/blog/dental-checkup-cost, 80, 6200"></textarea>
+        </div>
+        <div>
+          <label for="sr-done">Work completed (one item per line)</label>
+          <textarea id="sr-done" rows="4" placeholder="Rewrote titles on 6 service pages&#10;Fixed 14 broken internal links"></textarea>
+        </div>
+        <div>
+          <label for="sr-next">Next period priorities (one item per line)</label>
+          <textarea id="sr-next" rows="3" placeholder="Publish two location FAQ pages&#10;Outreach for 5 partner links"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Your report</strong>
+        <span id="sr-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="sr-output" class="llms-output" style="max-height:520px;white-space:pre-wrap;">Fill in the client name, the period and at least the clicks and impressions to start.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="sr-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="sr-download">Download .txt</button>
+        <button type="button" class="btn btn-glass" id="sr-print">Print / Save as PDF</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What This SEO Report Template Includes</h2>
+    <ul class="service-points">
+      <li><strong>Search Console headline numbers</strong>: clicks, impressions, click-through rate and average position, each with the change against the previous period</li>
+      <li><strong>CTR worked out for you</strong>: clicks divided by impressions, so you never copy a rounded figure from a chart</li>
+      <li><strong>A "what stood out" section</strong> written from your numbers only, such as impressions growing faster than clicks</li>
+      <li><strong>Top pages</strong> sorted by clicks, with each page's own click-through rate</li>
+      <li><strong>The business result</strong> you track, like enquiries or sales, next to the traffic figures</li>
+      <li><strong>Work done and next priorities</strong> in your own words, so the client can see what the fee bought</li>
+    </ul>
+
+    <h2>Where to Get Each Number</h2>
+    <p>Open Google Search Console, go to Performance, choose Search results and set the date range to the month you are reporting on. The totals for clicks, impressions, average CTR and average position sit above the chart. Switch the date range to the previous month (or use Compare) and note the same four figures. For top pages, open the Pages tab and copy the page, clicks and impressions for the rows you want to highlight. The Search Console numbers are rounded in the interface, so a total can differ slightly from the sum of its rows, and the report treats whatever you type as the truth.</p>
+
+    <h2>How to Read an SEO Report</h2>
+    <p>Start with clicks, because they are visits from Google. Then look at impressions: if impressions rise but clicks do not, your pages are being shown more often without being chosen more often, which usually points at titles, descriptions or a drop in rank for the best terms. Average position is an average across every query, so a new batch of low-ranking queries can push it the wrong way even when your best pages improved. Last, compare the traffic with the business result. A report that shows traffic up and enquiries flat is more useful than one that celebrates clicks alone.</p>
+    <p>If you want to build the same report in a spreadsheet or in Looker Studio, use the same fields in the same order: the four Search Console totals for this period and the last, the top pages, then work done and next steps. The structure matters more than the tool you use to draw it.</p>
+
+    <h2>Honest Reporting Rules the Generator Follows</h2>
+    <p>It never estimates a metric you left blank, it never calls a small change a trend, and it flags a figure that fell as clearly as one that rose. If a number is missing the line is simply left out. Position changes are described correctly: a lower number is a better position. Because the "what stood out" lines come from simple rules, treat them as a first draft and add the human explanation (a seasonal dip, a site migration, a Google update) before you send the report.</p>
+
+    <h2>SEO Report Generator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Is this a replacement for Looker Studio or a spreadsheet template?<span class="faq-icon"></span></summary>
+        <p>No. It is a fast way to produce a written monthly summary from numbers you already have. If you want live charts, build a dashboard in Looker Studio or a spreadsheet with the same fields and paste this summary above it.</p>
+      </details>
+      <details>
+        <summary>Does it connect to my Search Console account?<span class="faq-icon"></span></summary>
+        <p>No. You type or paste the figures. That keeps the tool free, private and independent of any login.</p>
+      </details>
+      <details>
+        <summary>How is CTR calculated?<span class="faq-icon"></span></summary>
+        <p>Clicks divided by impressions, shown as a percentage to one decimal place. It will be close to the average CTR Search Console shows but can differ by a rounding digit.</p>
+      </details>
+      <details>
+        <summary>What if I do not have last month's numbers?<span class="faq-icon"></span></summary>
+        <p>Leave the previous-period fields blank. The report then shows this period's figures without a comparison and skips the change lines.</p>
+      </details>
+      <details>
+        <summary>Can I send the report as a PDF?<span class="faq-icon"></span></summary>
+        <p>Yes. Click Print / Save as PDF and choose Save as PDF as the destination in your browser's print window.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is written in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want the SEO work behind the report done for you?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free SEO Report Generator',
+    url: site.baseUrl + '/tools/seo-report-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Turn Search Console figures into a plain-language monthly SEO report with changes, CTR, top pages, work done and next priorities. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'SEO Report Generator', item: site.baseUrl + '/tools/seo-report-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Is this a replacement for Looker Studio or a spreadsheet template?', acceptedAnswer: { '@type': 'Answer', text: 'No. It is a fast way to produce a written monthly summary from numbers you already have. For live charts, build a dashboard in Looker Studio or a spreadsheet with the same fields and paste this summary above it.' } },
+      { '@type': 'Question', name: 'Does it connect to my Search Console account?', acceptedAnswer: { '@type': 'Answer', text: 'No. You type or paste the figures. That keeps the tool free, private and independent of any login.' } },
+      { '@type': 'Question', name: 'How is CTR calculated?', acceptedAnswer: { '@type': 'Answer', text: 'Clicks divided by impressions, shown as a percentage to one decimal place. It can differ from Search Console by a rounding digit.' } },
+      { '@type': 'Question', name: 'What if I do not have last month numbers?', acceptedAnswer: { '@type': 'Answer', text: 'Leave the previous-period fields blank. The report then shows this period figures without a comparison.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is written in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+
+  function num(id) {
+    var v = $(id).value.trim();
+    if (v === '') return null;
+    var n = parseFloat(v);
+    return isNaN(n) ? null : n;
+  }
+  function fmt(n) { return Math.round(n).toLocaleString('en-US'); }
+  function pct(cur, prev) {
+    if (prev === null || prev === 0 || cur === null) return null;
+    return (cur - prev) / prev * 100;
+  }
+  function sign(n) { return (n > 0 ? '+' : '') + n.toFixed(1) + '%'; }
+  function lines(id) {
+    return $(id).value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
+  }
+  function change(cur, prev) {
+    var p = pct(cur, prev);
+    return p === null ? '' : ' (previous ' + fmt(prev) + ', ' + sign(p) + ')';
+  }
+
+  function build() {
+    var client = $('sr-client').value.trim(), period = $('sr-period').value.trim();
+    var clicks = num('sr-clicks'), imp = num('sr-imp');
+    if (!client || !period || clicks === null || imp === null) return '';
+    var site = $('sr-site').value.trim(), by = $('sr-by').value.trim(), prevPeriod = $('sr-prevperiod').value.trim();
+    var clicksP = num('sr-clicks-p'), impP = num('sr-imp-p');
+    var pos = num('sr-pos'), posP = num('sr-pos-p');
+    var conv = num('sr-conv'), convP = num('sr-conv-p'), convName = $('sr-convname').value.trim() || 'conversions';
+    var links = num('sr-links');
+    var ctr = imp > 0 ? clicks / imp * 100 : null;
+    var ctrP = (clicksP !== null && impP) ? clicksP / impP * 100 : null;
+    var cmp = prevPeriod ? ' compared with ' + prevPeriod : '';
+
+    var L = [];
+    L.push('SEO REPORT: ' + period.toUpperCase());
+    L.push(client + (site ? ' (' + site + ')' : ''));
+    if (by) L.push('Prepared by ' + by);
+    L.push('');
+    L.push('1. SEARCH PERFORMANCE' + (clicksP !== null || impP !== null ? cmp.toUpperCase() : ''));
+    L.push('Clicks: ' + fmt(clicks) + change(clicks, clicksP));
+    L.push('Impressions: ' + fmt(imp) + change(imp, impP));
+    if (ctr !== null) L.push('Click-through rate: ' + ctr.toFixed(1) + '%' + (ctrP !== null ? ' (previous ' + ctrP.toFixed(1) + '%, ' + (ctr - ctrP >= 0 ? '+' : '') + (ctr - ctrP).toFixed(1) + ' points)' : ''));
+    if (pos !== null) {
+      var pd = posP !== null ? pos - posP : null;
+      var pn = '';
+      if (pd !== null) pn = Math.abs(pd) < 0.05 ? ' (previous ' + posP.toFixed(1) + ', unchanged)' : ' (previous ' + posP.toFixed(1) + ', ' + (pd < 0 ? 'improved by ' : 'worse by ') + Math.abs(pd).toFixed(1) + ' positions)';
+      L.push('Average position: ' + pos.toFixed(1) + pn);
+    }
+    if (conv !== null) L.push(convName.charAt(0).toUpperCase() + convName.slice(1) + ': ' + fmt(conv) + change(conv, convP));
+    if (links !== null) L.push('New links secured: ' + fmt(links));
+    L.push('');
+
+    var notes = [];
+    var pc = pct(clicks, clicksP), pi = pct(imp, impP);
+    if (pc !== null) {
+      if (pc >= 10) notes.push('Clicks grew ' + pc.toFixed(1) + '%, so more people are choosing the site in results.');
+      else if (pc <= -10) notes.push('Clicks fell ' + Math.abs(pc).toFixed(1) + '%. Check which pages and queries lost clicks before deciding why.');
+      else notes.push('Clicks were broadly steady (' + sign(pc) + ').');
+    }
+    if (pc !== null && pi !== null) {
+      if (pi >= 10 && pc < pi - 10) notes.push('Impressions grew faster than clicks. The pages are being shown more often but chosen less often than before, so review titles and descriptions on the pages gaining impressions.');
+      if (pi <= -10 && pc > pi + 10) notes.push('Impressions fell more than clicks, which suggests the loss is in low-click queries rather than the pages that bring visits.');
+    }
+    if (pos !== null && posP !== null && posP - pos >= 1) notes.push('Average position improved by ' + (posP - pos).toFixed(1) + ' places. Remember this is an average across all queries.');
+    if (pos !== null && posP !== null && pos - posP >= 1) notes.push('Average position slipped by ' + (pos - posP).toFixed(1) + ' places. New low-ranking queries can cause this even when top pages hold steady.');
+    var pcv = pct(conv, convP);
+    if (pcv !== null && pc !== null) {
+      if (pc > 0 && pcv <= 0) notes.push('Traffic rose but ' + convName + ' did not. Look at whether the new visits land on pages that can convert.');
+      if (pc <= 0 && pcv > 0) notes.push(convName.charAt(0).toUpperCase() + convName.slice(1) + ' rose while clicks did not, a sign the visits that remain are well matched.');
+    }
+    if (notes.length) {
+      L.push('2. WHAT STOOD OUT');
+      notes.forEach(function (n) { L.push('- ' + n); });
+      L.push('');
+    }
+
+    var rows = lines('sr-pages').map(function (l) {
+      var p = l.split(/[,\t]+/).map(function (s) { return s.trim(); });
+      return { page: p[0], c: parseFloat((p[1] || '').replace(/,/g, '')), i: parseFloat((p[2] || '').replace(/,/g, '')) };
+    }).filter(function (r) { return r.page && !isNaN(r.c); }).sort(function (a, b) { return b.c - a.c; });
+    if (rows.length) {
+      L.push('3. TOP PAGES BY CLICKS');
+      rows.forEach(function (r, k) {
+        L.push((k + 1) + '. ' + r.page + ': ' + fmt(r.c) + ' clicks' + (!isNaN(r.i) && r.i > 0 ? ', ' + fmt(r.i) + ' impressions, ' + (r.c / r.i * 100).toFixed(1) + '% CTR' : ''));
+      });
+      L.push('');
+    }
+
+    var done = lines('sr-done');
+    if (done.length) {
+      L.push('4. WORK COMPLETED');
+      done.forEach(function (d) { L.push('- ' + d); });
+      L.push('');
+    }
+    var next = lines('sr-next');
+    if (next.length) {
+      L.push('5. NEXT PERIOD PRIORITIES');
+      next.forEach(function (d) { L.push('- ' + d); });
+      L.push('');
+    }
+    L.push('Source: Google Search Console, Performance report, Search results. Figures are as entered by the preparer.');
+    return L.join('\n');
+  }
+
+  function run() {
+    var t = build();
+    current = t;
+    $('sr-output').textContent = t || 'Fill in the client name, the period and at least the clicks and impressions to start.';
+    $('sr-status').textContent = t ? 'Report ready' : 'Waiting for input';
+  }
+
+  Array.prototype.slice.call($('sr-form').querySelectorAll('input,select,textarea')).forEach(function (e) {
+    e.addEventListener('input', run); e.addEventListener('change', run);
+  });
+
+  $('sr-copy').addEventListener('click', function () {
+    if (!current) return;
+    var b = $('sr-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(current).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  $('sr-download').addEventListener('click', function () {
+    if (!current) return;
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([current], { type: 'text/plain' }));
+    a.download = 'seo-report.txt';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  $('sr-print').addEventListener('click', function () {
+    if (!current) return;
+    var f = document.createElement('iframe');
+    f.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0;';
+    document.body.appendChild(f);
+    var d = f.contentWindow.document;
+    d.open();
+    d.write('<!doctype html><html><head><meta charset="utf-8"><title>SEO Report</title><style>body{font:14px/1.6 Arial,sans-serif;margin:40px;color:#111;white-space:pre-wrap;}</style></head><body></body></html>');
+    d.close();
+    d.body.textContent = current;
+    f.contentWindow.focus();
+    f.contentWindow.print();
+    setTimeout(function () { f.remove(); }, 2000);
+  });
+  run();
+})();
+</script>

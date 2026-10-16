@@ -102,6 +102,11 @@ module.exports = [
     summary: 'Paste a page HTML and check its title, meta description, headings, canonical, robots meta, hreflang, structured data, images and links.'
   },
   {
+    slug: 'seo-report-generator',
+    title: 'SEO Report Generator',
+    summary: 'Type in Search Console figures for two periods and get a plain-language monthly SEO report with changes, CTR, top pages, work done and next priorities.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'
