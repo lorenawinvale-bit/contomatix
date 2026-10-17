@@ -11,6 +11,7 @@ const cap = (html, out, w, h, sel) => execFileSync(process.execPath, [path.join(
   cap(path.join(sc, `infographic-${slug}.html`), path.join(img, `infographic-${slug}.png`), 1376, 790);
   const m = await sharp(path.join(img, `infographic-${slug}.png`)).metadata(); console.log('infographic', m.width, m.height);
   for (const t of tables) {
+    if (t.startsWith('q:')) { const n = t.slice(2); const out = path.join(img, 'proof', slug + '-' + n + '.png'); cap(path.join(sc, 'quote-' + slug + '-' + n + '.html'), out, 880, 900, '.box'); const qm = await sharp(out).metadata(); console.log('quote', n, qm.width, qm.height); continue; }
     const out = path.join(img, 'proof', `${slug}-${t}.png`);
     cap(path.join(sc, `table-${slug}-${t}.html`), out, 1280, 1500, 'body');
     const tm = await sharp(out).metadata(); console.log('table', t, tm.width, tm.height);

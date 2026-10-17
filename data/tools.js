@@ -107,6 +107,11 @@ module.exports = [
     summary: 'Type in Search Console figures for two periods and get a plain-language monthly SEO report with changes, CTR, top pages, work done and next priorities.'
   },
   {
+    slug: 'outreach-email-generator',
+    title: 'Link Building Outreach Email Generator',
+    summary: 'Write a short outreach email, three subject lines and a follow-up for resource pages, broken links, link insertions, guest pitches and unlinked mentions, with a spam-phrase check.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'
