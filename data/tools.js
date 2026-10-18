@@ -112,6 +112,11 @@ module.exports = [
     summary: 'Write a short outreach email, three subject lines and a follow-up for resource pages, broken links, link insertions, guest pitches and unlinked mentions, with a spam-phrase check.'
   },
   {
+    slug: 'html-sitemap-generator',
+    title: 'HTML Sitemap Generator',
+    summary: 'Paste URLs or an XML sitemap and get a grouped, visitor-friendly HTML sitemap page: copy the HTML or download the page.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'

@@ -206,7 +206,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -478,6 +478,14 @@ app.get('/tools/outreach-email-generator', (req, res) => {
   res.render('pages/outreach-email-generator', {
     title: 'Free Link Building Outreach Email Generator | Contomatix',
     description: 'Write a short link building outreach email, subject lines and a follow-up for resource pages, broken links, link insertions and guest pitches. Free, no signup.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/html-sitemap-generator', (req, res) => {
+  res.render('pages/html-sitemap-generator', {
+    title: 'Free HTML Sitemap Generator: URL List to Page | Contomatix',
+    description: 'Paste URLs or an XML sitemap and get a grouped HTML sitemap page for visitors. Copy the HTML or download the page. Free, no signup.',
     pageClass: 'page-tool'
   });
 });

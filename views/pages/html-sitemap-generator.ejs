@@ -1,0 +1,257 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free HTML Sitemap Generator — Turn a URL List or XML Sitemap Into a Visitor Sitemap Page</h1>
+    <p>Paste your URLs, or the contents of an XML sitemap, and this <strong>HTML sitemap generator</strong> builds a clean, grouped page of links for your visitors: ready-to-paste HTML or a full downloadable page. It never fetches your site: it only uses what you paste. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="hs-form" onsubmit="return false;" aria-label="HTML sitemap generator form">
+        <div>
+          <label for="hs-input">URLs, or XML sitemap contents</label>
+          <textarea id="hs-input" rows="9" placeholder="https://example.com/&#10;https://example.com/services/seo-audit | SEO Audit&#10;https://example.com/blog/how-to-write-a-brief&#10;&#10;Or paste a whole XML sitemap with &lt;loc&gt; tags"></textarea>
+          <small style="display:block;margin-top:6px;color:#6b6459;">One URL per line. Add <code>| Custom title</code> to set a link title. Page titles are otherwise made from the URL slug.</small>
+        </div>
+        <div>
+          <label for="hs-site">Site name (page heading)</label>
+          <input type="text" id="hs-site" placeholder="e.g. Acme Analytics">
+        </div>
+        <div>
+          <label for="hs-group">Group links by</label>
+          <select id="hs-group">
+            <option value="folder">First folder in the URL (services, blog, ...)</option>
+            <option value="none">No grouping (one list)</option>
+          </select>
+        </div>
+        <div>
+          <label for="hs-exclude">Skip URLs containing (comma separated, optional)</label>
+          <input type="text" id="hs-exclude" placeholder="e.g. /tag/, /author/, ?replytocom">
+        </div>
+        <div style="display:grid;gap:6px;">
+          <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" style="width:auto;flex:none;margin:0;" id="hs-relative" checked> Use relative links when the URL matches the first URL's domain</label>
+          <label style="display:flex;gap:8px;align-items:center;font-weight:500;"><input type="checkbox" style="width:auto;flex:none;margin:0;" id="hs-sort" checked> Sort links A to Z inside each group</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Your HTML sitemap</strong>
+        <span id="hs-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="hs-output" class="llms-output" style="max-height:420px;white-space:pre-wrap;">Paste some URLs to start.</pre>
+      <div id="hs-summary" style="margin-top:12px;font-size:0.92rem;line-height:1.6;"></div>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="hs-copy">Copy HTML</button>
+        <button type="button" class="btn btn-glass" id="hs-download">Download .html page</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What an HTML Sitemap Is, and How It Differs From an XML Sitemap</h2>
+    <p>An <strong>HTML sitemap</strong> is an ordinary web page of links that helps visitors find content. An <strong>XML sitemap</strong> is a file written for search engines. They solve different problems, and having one does not replace the other. Google's own sitemap documentation covers the XML format only: it describes the file you submit, its size limits of 50MB uncompressed or 50,000 URLs per sitemap, and the tags it reads. An HTML sitemap is a navigation and usability choice, and a useful one on large sites where a visitor may struggle to find a page through menus alone.</p>
+
+    <h2>What This HTML Sitemap Generator Produces</h2>
+    <ul class="service-points">
+      <li><strong>A grouped list of links</strong> using a clean, semantic <code>nav</code> element with one heading and list per section</li>
+      <li><strong>Readable link titles</strong> made from each URL slug, or from the custom title you type after a <code>|</code></li>
+      <li><strong>Relative links</strong> when a URL belongs to the same domain, so the page works on staging and live</li>
+      <li><strong>A full page download</strong> if you want a standalone file, or just the snippet to paste into your CMS</li>
+    </ul>
+
+    <h2>Who Should Build an HTML Sitemap</h2>
+    <p>Sites with many pages, deep category trees or content that menus do not surface get the most value. A small brochure site with ten pages rarely needs one. If you do build one, keep it to pages that visitors should reach, link it from the footer, and keep it current. Do not list noindex, redirected or error pages, since an HTML sitemap with dead links frustrates the visitors it is meant to help. Check each link before you publish.</p>
+
+    <h2>How to Use the Output</h2>
+    <ol>
+      <li>Paste your URLs or an XML sitemap into the box. Use the skip field to drop tag, author or filter URLs.</li>
+      <li>Edit the titles you want to improve by adding <code>| Custom title</code> to a line.</li>
+      <li>Copy the HTML and paste it into a page in your CMS, or download the full page.</li>
+      <li>Link the page from your footer and add it to your XML sitemap only if you want it indexed.</li>
+      <li>Validate your XML file separately with the <a href="/tools/sitemap-validator">sitemap validator</a>, and generate one with the <a href="/tools/sitemap-generator">XML sitemap generator</a> if you do not have it.</li>
+    </ol>
+
+    <h2>HTML Sitemap Generator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Is an HTML sitemap the same as an XML sitemap?<span class="faq-icon"></span></summary>
+        <p>No. An XML sitemap is a file for search engines. An HTML sitemap is a normal page of links for visitors.</p>
+      </details>
+      <details>
+        <summary>Does my site need an HTML sitemap?<span class="faq-icon"></span></summary>
+        <p>Large or deep sites benefit most. Small sites with clear navigation rarely need one. It is a usability choice, not a requirement.</p>
+      </details>
+      <details>
+        <summary>Does the tool crawl my website?<span class="faq-icon"></span></summary>
+        <p>No. It only uses the URLs or XML you paste, so you decide exactly what is listed.</p>
+      </details>
+      <details>
+        <summary>How do I make a visual sitemap?<span class="faq-icon"></span></summary>
+        <p>A visual sitemap is a diagram of site structure used in planning. This tool builds the live, linked HTML page. The grouped output shows your structure as sections and links.</p>
+      </details>
+      <details>
+        <summary>Where should I put the HTML sitemap?<span class="faq-icon"></span></summary>
+        <p>Link it from the footer of every page so visitors and crawlers can find it.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is written in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Need a technical SEO check?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free HTML Sitemap Generator',
+    url: site.baseUrl + '/tools/html-sitemap-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Turn a list of URLs or an XML sitemap into a grouped HTML sitemap page for visitors. Copy the HTML or download the page. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'HTML Sitemap Generator', item: site.baseUrl + '/tools/html-sitemap-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Is an HTML sitemap the same as an XML sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'No. An XML sitemap is a file for search engines. An HTML sitemap is a normal page of links for visitors.' } },
+      { '@type': 'Question', name: 'Does my site need an HTML sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'Large or deep sites benefit most. Small sites with clear navigation rarely need one. It is a usability choice, not a requirement.' } },
+      { '@type': 'Question', name: 'Does the tool crawl my website?', acceptedAnswer: { '@type': 'Answer', text: 'No. It only uses the URLs or XML you paste, so you decide exactly what is listed.' } },
+      { '@type': 'Question', name: 'Where should I put the HTML sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'Link it from the footer of every page so visitors and crawlers can find it.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is written in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '', fullPage = '';
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function titleCase(s) {
+    return s.replace(/[-_]+/g, ' ').replace(/\.(html?|php|aspx?)$/i, '').replace(/\b([a-z])/g, function (m) { return m.toUpperCase(); }).replace(/\b(Seo|Faq|Ppc|Api|Ai|Css|Html|Cta|Roi|Kpi|Usa|Uk|B2b|B2c|Url|Ux|Ui)\b/g, function (m) { return m.toUpperCase(); }).trim();
+  }
+
+  function parse() {
+    var raw = $('hs-input').value;
+    var out = [], seen = {};
+    var locs = raw.match(/<loc>\s*([^<\s]+)\s*<\/loc>/gi);
+    var lines = [];
+    if (locs && locs.length) {
+      locs.forEach(function (m) { lines.push(m.replace(/<\/?loc>/gi, '').trim()); });
+    } else {
+      raw.split('\n').forEach(function (l) { l = l.trim(); if (l) lines.push(l); });
+    }
+    var skip = $('hs-exclude').value.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+    lines.forEach(function (line) {
+      var parts = line.split('|'), url = parts[0].trim(), custom = (parts[1] || '').trim();
+      if (!/^https?:\/\//i.test(url)) return;
+      if (/\.xml(\.gz)?$/i.test(url)) return;
+      if (skip.some(function (s) { return url.indexOf(s) !== -1; })) return;
+      var key = url.replace(/#.*$/, '').replace(/\/$/, '');
+      if (seen[key]) return; seen[key] = 1;
+      var u; try { u = new URL(url); } catch (e) { return; }
+      var segs = u.pathname.split('/').filter(Boolean);
+      var last = segs.length ? decodeURIComponent(segs[segs.length - 1]) : '';
+      out.push({ url: url, u: u, segs: segs, title: custom || (segs.length ? titleCase(last) : 'Home') });
+    });
+    return out;
+  }
+
+  function build() {
+    var items = parse();
+    if (!items.length) return null;
+    var origin = items[0].u.origin, rel = $('hs-relative').checked, group = $('hs-group').value, doSort = $('hs-sort').checked;
+    var skippedCross = 0;
+    var groups = {}, order = [];
+    items.forEach(function (it) {
+      var href = it.url;
+      if (rel && it.u.origin === origin) href = it.u.pathname + it.u.search;
+      it.href = href;
+      var g = group === 'folder' ? (it.segs.length > 1 ? titleCase(it.segs[0]) : (it.segs.length === 1 ? 'Main pages' : 'Main pages')) : 'All pages';
+      if (!groups[g]) { groups[g] = []; order.push(g); }
+      groups[g].push(it);
+    });
+    if (group === 'folder') {
+      order.sort(function (a, b) { if (a === 'Main pages') return -1; if (b === 'Main pages') return 1; return a.localeCompare(b); });
+    }
+    var site = $('hs-site').value.trim();
+    var h = [];
+    h.push('<nav aria-label="Sitemap" class="html-sitemap">');
+    order.forEach(function (g) {
+      var list = groups[g].slice();
+      if (doSort) list.sort(function (a, b) { return a.title.localeCompare(b.title); });
+      if (group === 'folder' || order.length > 1) h.push('  <h2>' + esc(g) + '</h2>');
+      h.push('  <ul>');
+      list.forEach(function (it) { h.push('    <li><a href="' + esc(it.href) + '">' + esc(it.title) + '</a></li>'); });
+      h.push('  </ul>');
+    });
+    h.push('</nav>');
+    var snippet = h.join('\n');
+    var page = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>' + esc(site ? site + ' Sitemap' : 'Sitemap') + '</title>\n<style>body{font:16px/1.6 Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;color:#111}h1{font-size:1.8rem}h2{font-size:1.2rem;margin-top:1.6rem}a{color:#0b6b66}</style>\n</head>\n<body>\n<h1>' + esc(site ? site + ' sitemap' : 'Sitemap') + '</h1>\n' + snippet + '\n</body>\n</html>\n';
+    return { snippet: snippet, page: page, count: items.length, groups: order.length, rel: rel };
+  }
+
+  function run() {
+    var r = build();
+    current = r ? r.snippet : ''; fullPage = r ? r.page : '';
+    $('hs-output').textContent = r ? r.snippet : 'Paste some URLs to start.';
+    $('hs-status').textContent = r ? r.count + ' links ready' : 'Waiting for input';
+    $('hs-summary').innerHTML = r ? '&#10003; ' + r.count + ' unique links in ' + r.groups + ' section' + (r.groups === 1 ? '' : 's') + '. XML files and duplicates were skipped.<br>&#9888; Check each link returns a 200 before you publish: an HTML sitemap with dead links frustrates visitors.' : '';
+  }
+
+  Array.prototype.slice.call($('hs-form').querySelectorAll('input,select,textarea')).forEach(function (e) {
+    e.addEventListener('input', run); e.addEventListener('change', run);
+  });
+  $('hs-copy').addEventListener('click', function () {
+    if (!current) return;
+    var b = $('hs-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(current).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy HTML'; }, 1500); });
+  });
+  $('hs-download').addEventListener('click', function () {
+    if (!fullPage) return;
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([fullPage], { type: 'text/html' }));
+    a.download = 'sitemap.html';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  run();
+})();
+</script>
