@@ -179,7 +179,7 @@ const content = `<p class="article-updated" style="color: #6b6459; font-size: 0.
 </details>
 </div>
 `;
-const title = 'Editorial Backlinks: What Our Own 24 Links Reveal';
+const title = 'Editorial Backlinks: What Our 24 Links Show and How to Earn';
 const excerpt = `Editorial backlinks explained with real data: only ${edit} of our ${total} links are editorial. How to spot, earn and verify them, plus what ${D.ok} ranking pages say.`;
 const out = content.replace('@@OWNH@@', hh('editorial-backlinks-own.png')).replace('@@TWOH@@', hh('editorial-backlinks-two.png')).replace('@@SERPH@@', hh('editorial-backlinks-serp.png'));
 const post = { slug: SLUG, title, category: 'Link Building', author: 'Umaira Liaquat', date: '2026-10-19', excerpt,
