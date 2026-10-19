@@ -1,0 +1,263 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Link Building Cost Calculator — Work Out What Each Live Backlink Really Costs</h1>
+    <p>Enter what you pay (per link, a monthly retainer, or your own time) and this <strong>link building cost calculator</strong> shows the total spend, the cost per live link after losses, and the cost per target page. It uses only the numbers you type: no invented averages. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="lc-form" onsubmit="return false;" aria-label="Link building cost calculator form">
+        <div>
+          <label for="lc-model">How you pay</label>
+          <select id="lc-model">
+            <option value="perlink">Per link or placement</option>
+            <option value="retainer">Monthly retainer for a set number of links</option>
+            <option value="inhouse">In-house (my own or my team's time)</option>
+          </select>
+        </div>
+        <div>
+          <label for="lc-months">Campaign length (months)</label>
+          <input type="number" min="1" id="lc-months" value="3">
+        </div>
+        <div>
+          <label for="lc-links">Links per month you are buying or building</label>
+          <input type="number" min="0" id="lc-links" value="4">
+        </div>
+        <div id="lc-row-price">
+          <label for="lc-price">Price per link (per-link model)</label>
+          <input type="number" min="0" step="1" id="lc-price" placeholder="e.g. 250">
+        </div>
+        <div id="lc-row-retainer">
+          <label for="lc-retainer">Monthly retainer fee (retainer model)</label>
+          <input type="number" min="0" step="1" id="lc-retainer" placeholder="e.g. 1200">
+        </div>
+        <div id="lc-row-hours">
+          <label for="lc-hours">Hours per month (in-house model)</label>
+          <input type="number" min="0" step="0.5" id="lc-hours" placeholder="e.g. 20">
+        </div>
+        <div id="lc-row-rate">
+          <label for="lc-rate">Hourly cost of that time (in-house model)</label>
+          <input type="number" min="0" step="1" id="lc-rate" placeholder="e.g. 30">
+        </div>
+        <div>
+          <label for="lc-content">Content or asset cost per month (optional)</label>
+          <input type="number" min="0" step="1" id="lc-content" placeholder="e.g. 300">
+        </div>
+        <div>
+          <label for="lc-tools">Tools and software per month (optional)</label>
+          <input type="number" min="0" step="1" id="lc-tools" placeholder="e.g. 99">
+        </div>
+        <div>
+          <label for="lc-loss">Share of links you expect not to go live or to be removed, % (optional)</label>
+          <input type="number" min="0" max="95" step="1" id="lc-loss" placeholder="e.g. 10">
+        </div>
+        <div>
+          <label for="lc-pages">Number of target pages you want to lift (optional)</label>
+          <input type="number" min="1" step="1" id="lc-pages" placeholder="e.g. 3">
+        </div>
+        <div>
+          <label for="lc-currency">Currency symbol</label>
+          <input type="text" id="lc-currency" value="$" maxlength="3">
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Your cost breakdown</strong>
+        <span id="lc-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="lc-output" class="llms-output" style="max-height:520px;white-space:pre-wrap;">Enter the links per month and a price, retainer or hours to start.</pre>
+      <div id="lc-notes" style="margin-top:12px;font-size:0.92rem;line-height:1.6;"></div>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="lc-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="lc-download">Download .txt</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>How the Link Building Cost Calculator Works</h2>
+    <ul class="service-points">
+      <li><strong>Total cost</strong> is the link fees (or retainer, or your time) plus any content and tool costs, over the campaign length</li>
+      <li><strong>Planned links</strong> are the links per month multiplied by the months</li>
+      <li><strong>Expected live links</strong> subtract the share you expect to lose or never see go live</li>
+      <li><strong>Cost per live link</strong> is the total cost divided by expected live links, which is the honest number to compare between providers</li>
+      <li><strong>Cost per target page</strong> divides the total by the number of pages you want to lift, so a campaign aimed at three pages is not judged like one aimed at thirty</li>
+    </ul>
+
+    <h2>Why Cost Per Live Link Beats the Price on the Quote</h2>
+    <p>A quote shows what you pay, not what you get. A retainer of $1,200 for four links looks different from $300 per link plus content costs, a replacement policy and a share of links that never go live. The calculator puts every model on the same footing by dividing the full spend by the links you expect to keep. It also lets you add the cost of your own time, which is the cost most people forget when they build links themselves.</p>
+
+    <h2>What Published Prices Look Like</h2>
+    <p>When we read the SaaS link building pages that rank on Google US in October 2026, the prices they published worked out to roughly $100 to $300 per link, with monthly plans ranging from about $170 to $300 per link depending on volume. That is a snapshot of one niche on one day, not a benchmark for your market, and it is why the calculator never fills in a price for you. Our guide to <a href="/blog/saas-link-building-services">SaaS link building services</a> shows how those figures were worked out.</p>
+
+    <h2>What Cost Does Not Tell You</h2>
+    <p>Cost per link says nothing about quality. A cheap link on an unrelated site may cost more in the long run than an expensive link on a relevant page, and links bought or traded for ranking purposes can break Google's link spam policy unless they are qualified with <code>nofollow</code> or <code>sponsored</code>. Use the figure to compare offers, then judge each offer on relevance, reporting and policy. The <a href="/blog/link-building-campaign">link building campaign guide</a> covers KPIs and a 90-day plan so you can tell whether the spend produced anything.</p>
+
+    <h2>Link Building Cost Calculator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>How much does link building cost?<span class="faq-icon"></span></summary>
+        <p>It depends on how you buy it: per link, a retainer or your own time. In the SaaS pages we read, published prices came to roughly $100 to $300 per link, but your niche and the quality of sites will change that. Use the calculator with your own quotes.</p>
+      </details>
+      <details>
+        <summary>Does the calculator suggest a price?<span class="faq-icon"></span></summary>
+        <p>No. It only uses the numbers you enter. Prices vary with niche, site quality and what the provider includes, so any default would mislead.</p>
+      </details>
+      <details>
+        <summary>Why include the share of links that do not go live?<span class="faq-icon"></span></summary>
+        <p>Links can be rejected, delayed or removed. Dividing by the links you expect to keep gives a more honest cost per link than dividing by the links you plan.</p>
+      </details>
+      <details>
+        <summary>How do I price my own time?<span class="faq-icon"></span></summary>
+        <p>Use an hourly figure for the person doing the work, such as their salary cost or the rate you would pay a freelancer. Add the hours spent on research, outreach and reporting.</p>
+      </details>
+      <details>
+        <summary>Is the cheapest cost per link the best?<span class="faq-icon"></span></summary>
+        <p>No. Cost per link ignores relevance, reporting and risk. Compare the number, then check the quality of the sites and how links are marked.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is calculated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a quote for editorial links?</h2>
+      <p>Contomatix builds relevant, editorial links for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Link Building Cost Calculator',
+    url: site.baseUrl + '/tools/link-building-cost-calculator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Work out the total cost, cost per live link and cost per target page of a link building campaign from your own quotes, retainer or time. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Link Building Cost Calculator', item: site.baseUrl + '/tools/link-building-cost-calculator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'How much does link building cost?', acceptedAnswer: { '@type': 'Answer', text: 'It depends on how you buy it: per link, a retainer or your own time. In the SaaS pages we read, published prices came to roughly $100 to $300 per link, but your niche and site quality will change that. Use the calculator with your own quotes.' } },
+      { '@type': 'Question', name: 'Does the calculator suggest a price?', acceptedAnswer: { '@type': 'Answer', text: 'No. It only uses the numbers you enter, because prices vary with niche, site quality and what the provider includes.' } },
+      { '@type': 'Question', name: 'Why include the share of links that do not go live?', acceptedAnswer: { '@type': 'Answer', text: 'Links can be rejected, delayed or removed. Dividing by the links you expect to keep gives a more honest cost per link.' } },
+      { '@type': 'Question', name: 'Is the cheapest cost per link the best?', acceptedAnswer: { '@type': 'Answer', text: 'No. Cost per link ignores relevance, reporting and risk. Compare the number, then check the quality of the sites and how links are marked.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is calculated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+  function num(id) { var v = $(id).value.trim(); if (v === '') return null; var n = parseFloat(v); return isNaN(n) ? null : n; }
+  function money(n) { var c = $('lc-currency').value || '$'; return c + Math.round(n).toLocaleString('en-US'); }
+  function money2(n) { var c = $('lc-currency').value || '$'; return c + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+
+  function toggle() {
+    var m = $('lc-model').value;
+    $('lc-row-price').style.display = m === 'perlink' ? '' : 'none';
+    $('lc-row-retainer').style.display = m === 'retainer' ? '' : 'none';
+    $('lc-row-hours').style.display = m === 'inhouse' ? '' : 'none';
+    $('lc-row-rate').style.display = m === 'inhouse' ? '' : 'none';
+  }
+
+  function build() {
+    var m = $('lc-model').value, months = num('lc-months'), links = num('lc-links');
+    if (!months || !links) return null;
+    var content = num('lc-content') || 0, tools = num('lc-tools') || 0, loss = num('lc-loss') || 0, pages = num('lc-pages');
+    var fees = null, label = '';
+    if (m === 'perlink') { var p = num('lc-price'); if (p === null) return null; fees = p * links * months; label = money(p) + ' per link x ' + links + ' links x ' + months + ' months'; }
+    if (m === 'retainer') { var r = num('lc-retainer'); if (r === null) return null; fees = r * months; label = money(r) + ' retainer x ' + months + ' months'; }
+    if (m === 'inhouse') { var h = num('lc-hours'), rate = num('lc-rate'); if (h === null || rate === null) return null; fees = h * rate * months; label = h + ' hours x ' + money(rate) + ' x ' + months + ' months'; }
+    var extras = (content + tools) * months;
+    var total = fees + extras;
+    var planned = links * months, live = planned * (1 - loss / 100);
+    var out = [];
+    out.push('LINK BUILDING COST');
+    out.push('');
+    out.push('Model: ' + ({ perlink: 'per link', retainer: 'monthly retainer', inhouse: 'in-house' })[m]);
+    out.push('Link fees or time: ' + money(fees) + ' (' + label + ')');
+    if (content) out.push('Content or assets: ' + money(content * months) + ' (' + money(content) + ' x ' + months + ' months)');
+    if (tools) out.push('Tools and software: ' + money(tools * months) + ' (' + money(tools) + ' x ' + months + ' months)');
+    out.push('TOTAL COST: ' + money(total));
+    out.push('');
+    out.push('Links planned: ' + planned);
+    out.push('Links expected to go live and stay' + (loss ? ' (' + loss + '% lost)' : '') + ': ' + (Math.round(live * 10) / 10));
+    if (live > 0) {
+      out.push('Cost per planned link: ' + money2(total / planned));
+      out.push('COST PER LIVE LINK: ' + money2(total / live));
+    }
+    if (pages) out.push('Cost per target page (' + pages + ' pages): ' + money(total / pages) + ', about ' + (Math.round(live / pages * 10) / 10) + ' live links each');
+    out.push('Cost per month: ' + money(total / months));
+    return { text: out.join('\n'), total: total, planned: planned, live: live, m: m, loss: loss, extras: extras, fees: fees };
+  }
+
+  function notes(r) {
+    var n = [];
+    if (r.extras > 0 && r.fees > 0 && r.extras / r.total >= 0.3) n.push('Content and tools are ' + Math.round(r.extras / r.total * 100) + '% of the total: compare quotes with the same inclusions.');
+    if (!r.loss) n.push('You set no loss rate. If links can be rejected or removed, add an expected share to see a more honest cost per live link.');
+    if (r.m === 'inhouse') n.push('In-house cost uses your time only. Add tools and content costs if you buy them.');
+    n.push('Cost per link does not measure quality. Check relevance and how paid links are marked before you compare prices.');
+    $('lc-notes').innerHTML = n.map(function (t) { return '<div>&#9888; ' + t.replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</div>'; }).join('');
+  }
+
+  function run() {
+    toggle();
+    var r = build();
+    current = r ? r.text : '';
+    $('lc-output').textContent = r ? r.text : 'Enter the links per month and a price, retainer or hours to start.';
+    $('lc-status').textContent = r ? 'Calculated' : 'Waiting for input';
+    if (r) notes(r); else $('lc-notes').innerHTML = '';
+  }
+
+  Array.prototype.slice.call($('lc-form').querySelectorAll('input,select')).forEach(function (e) { e.addEventListener('input', run); e.addEventListener('change', run); });
+  $('lc-copy').addEventListener('click', function () {
+    if (!current) return; var b = $('lc-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(current).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  $('lc-download').addEventListener('click', function () {
+    if (!current) return;
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([current], { type: 'text/plain' })); a.download = 'link-building-cost.txt';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  run();
+})();
+</script>

@@ -117,6 +117,11 @@ module.exports = [
     summary: 'Paste URLs or an XML sitemap and get a grouped, visitor-friendly HTML sitemap page: copy the HTML or download the page.'
   },
   {
+    slug: 'link-building-cost-calculator',
+    title: 'Link Building Cost Calculator',
+    summary: 'Enter per-link prices, a retainer or your own time and get the total cost, cost per live link after losses, and cost per target page.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'
