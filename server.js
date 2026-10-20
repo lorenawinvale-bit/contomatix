@@ -206,7 +206,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -494,6 +494,22 @@ app.get('/tools/link-building-cost-calculator', (req, res) => {
   res.render('pages/link-building-cost-calculator', {
     title: 'Free Link Building Cost Calculator: Cost per Live Link | Contomatix',
     description: 'Enter per-link prices, a retainer or your own time and get the total cost, cost per live link after losses and cost per target page. Free, no signup.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/sitemap-finder', (req, res) => {
+  res.render('pages/sitemap-finder', {
+    title: 'Free Sitemap Finder: Find a Website XML Sitemap | Contomatix',
+    description: 'Enter a domain to see where its XML sitemap lives, open each location in one click, and check the Sitemap lines of a pasted robots.txt. Free, no signup.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/content-marketing-roi-calculator', (req, res) => {
+  res.render('pages/content-marketing-roi-calculator', {
+    title: 'Free Content Marketing ROI Calculator | Contomatix',
+    description: 'Work out content marketing ROI, payback, cost per lead and break-even from your own costs, leads, close rate and revenue. Free, no signup.',
     pageClass: 'page-tool'
   });
 });

@@ -122,6 +122,16 @@ module.exports = [
     summary: 'Enter per-link prices, a retainer or your own time and get the total cost, cost per live link after losses, and cost per target page.'
   },
   {
+    slug: 'sitemap-finder',
+    title: 'Sitemap Finder',
+    summary: 'Enter a domain to see every common place its XML sitemap lives, with one-click links and Google searches, and extract the Sitemap lines from a pasted robots.txt.'
+  },
+  {
+    slug: 'content-marketing-roi-calculator',
+    title: 'Content Marketing ROI Calculator',
+    summary: 'Enter content costs, leads, close rate and revenue to get ROI, payback, cost per lead and break-even, using only your own numbers.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'

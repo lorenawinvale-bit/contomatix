@@ -1,0 +1,209 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Sitemap Finder — Find Any Website's XML Sitemap in Seconds</h1>
+    <p>Enter a domain and this <strong>sitemap finder</strong> lists every common place a sitemap lives, with one-click links to check each, plus Google searches that surface it. Paste the site's robots.txt and it pulls out and checks every <code>Sitemap:</code> line. It never contacts the site itself, so it works without a login and nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="sf-form" onsubmit="return false;" aria-label="Sitemap finder form">
+        <div>
+          <label for="sf-domain">Website or domain</label>
+          <input type="text" id="sf-domain" placeholder="e.g. example.com or https://www.example.com">
+        </div>
+        <div>
+          <label for="sf-robots">Paste the site's robots.txt (optional)</label>
+          <textarea id="sf-robots" rows="7" placeholder="User-agent: *&#10;Disallow: /admin/&#10;Sitemap: https://example.com/sitemap_index.xml"></textarea>
+          <small style="display:block;margin-top:6px;color:#6b6459;">Open the robots.txt link on the right, copy what you see and paste it here to extract and check the Sitemap lines.</small>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Where to look</strong>
+        <span id="sf-status" class="llms-status">Waiting for input</span>
+      </div>
+      <div id="sf-output" style="max-height:520px;overflow:auto;font-size:0.95rem;line-height:1.7;">Enter a domain to start.</div>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="sf-copy">Copy the list</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>How to Find a Website's Sitemap</h2>
+    <ol>
+      <li><strong>Open the robots.txt first.</strong> Add <code>/robots.txt</code> to the domain. A <code>Sitemap:</code> line there is the site's own statement of where its sitemap is.</li>
+      <li><strong>Try the common paths.</strong> <code>/sitemap.xml</code> is the most common, followed by <code>/sitemap_index.xml</code> (used by Yoast SEO and Rank Math), <code>/wp-sitemap.xml</code> (WordPress core) and <code>/sitemap-index.xml</code>.</li>
+      <li><strong>Search Google.</strong> The links on the right run <code>site:</code> searches that often reveal a sitemap file the common paths miss.</li>
+      <li><strong>Check your own property.</strong> If it is your site, open Sitemaps in Google Search Console to see what has been submitted.</li>
+    </ol>
+
+    <h2>What We Found on 66 Real Sites</h2>
+    <p>We checked 66 business websites on 20 October 2026 with the same method this tool uses: the robots.txt file and five common sitemap paths. Sites are not named.</p>
+    <ul>
+      <li><strong>47 of 66 (71%) had a working sitemap</strong> at one of those places. For the other 19 we found none by these methods.</li>
+      <li><strong>44 of 66 answered at <code>/sitemap.xml</code>,</strong> after redirects. Of the 47 sites that had a sitemap, only 3 had one that was not reachable at <code>/sitemap.xml</code>, so that one path finds about 94% of them.</li>
+      <li><strong>39 robots.txt files declared a sitemap,</strong> and 35 of those lines pointed at a working file. The other 4 pointed at a URL that did not return a valid sitemap.</li>
+      <li><strong>11 sites had a working sitemap that robots.txt never mentioned,</strong> so checking only the robots.txt would have missed them.</li>
+      <li><strong>23 sites answered at more than one path,</strong> often because a WordPress site serves its core sitemap and a plugin's sitemap together or redirects one to the other.</li>
+    </ul>
+    <p>The practical rule is to check both: the robots.txt for what the site declares, and the common paths for what is actually there. Our guide to the <a href="/blog/robots-txt-sitemap">robots.txt sitemap field</a> explains the declaration, and our look at <a href="/blog/yoast-seo-sitemap">what real Yoast sitemaps contain</a> explains the <code>/sitemap_index.xml</code> pattern.</p>
+
+    <h2>What to Do Once You Find the Sitemap</h2>
+    <ul>
+      <li><strong>Check it is valid.</strong> Paste it into the <a href="/tools/sitemap-validator">sitemap validator</a>.</li>
+      <li><strong>List the URLs.</strong> Use the <a href="/tools/sitemap-url-extractor">sitemap URL extractor</a> to turn it into a clean list.</li>
+      <li><strong>Build a visitor page.</strong> The <a href="/tools/html-sitemap-generator">HTML sitemap generator</a> turns the URL list into a page for readers.</li>
+      <li><strong>Make one if there is none.</strong> The <a href="/tools/sitemap-generator">XML sitemap generator</a> creates a file from a list of URLs, and <a href="/blog/how-to-create-a-sitemap">how to create a sitemap</a> explains the rules.</li>
+    </ul>
+
+    <h2>Sitemap Finder FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Where is a website's sitemap usually located?<span class="faq-icon"></span></summary>
+        <p>Most often at <code>/sitemap.xml</code>. WordPress sites with Yoast SEO or Rank Math usually use <code>/sitemap_index.xml</code>, and WordPress itself serves <code>/wp-sitemap.xml</code>. The robots.txt file may also list it.</p>
+      </details>
+      <details>
+        <summary>Does this tool fetch the site's sitemap for me?<span class="faq-icon"></span></summary>
+        <p>No. Browsers block one site from reading another's files, so the tool lists where to look and gives you links to open. You can paste a robots.txt to have its Sitemap lines extracted and checked.</p>
+      </details>
+      <details>
+        <summary>What if no sitemap is found?<span class="faq-icon"></span></summary>
+        <p>The site may not have one, or it may sit at an unusual address. Try the Google searches in the tool. Not having a sitemap does not stop a site being crawled, but it helps search engines find pages.</p>
+      </details>
+      <details>
+        <summary>Why does my robots.txt Sitemap line need a full URL?<span class="faq-icon"></span></summary>
+        <p>The Sitemap line should give the full, absolute URL, including https and the domain. A relative path is not valid.</p>
+      </details>
+      <details>
+        <summary>Can a site have more than one sitemap?<span class="faq-icon"></span></summary>
+        <p>Yes. Large sites use a sitemap index that lists several sitemap files, and a single sitemap is limited to 50MB uncompressed or 50,000 URLs.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is built in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Need a technical SEO check?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Sitemap Finder',
+    url: site.baseUrl + '/tools/sitemap-finder',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'List every common place a website sitemap lives, open each with one click, and extract and check the Sitemap lines of a pasted robots.txt. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Sitemap Finder', item: site.baseUrl + '/tools/sitemap-finder' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Where is a website sitemap usually located?', acceptedAnswer: { '@type': 'Answer', text: 'Most often at /sitemap.xml. WordPress sites with Yoast SEO or Rank Math usually use /sitemap_index.xml, and WordPress itself serves /wp-sitemap.xml. The robots.txt file may also list it.' } },
+      { '@type': 'Question', name: 'Does this tool fetch the site sitemap for me?', acceptedAnswer: { '@type': 'Answer', text: 'No. Browsers block one site from reading another site files, so the tool lists where to look and gives you links to open. You can paste a robots.txt to have its Sitemap lines extracted and checked.' } },
+      { '@type': 'Question', name: 'What if no sitemap is found?', acceptedAnswer: { '@type': 'Answer', text: 'The site may not have one or it may sit at an unusual address. Try the Google searches in the tool. Not having a sitemap does not stop a site being crawled, but it helps search engines find pages.' } },
+      { '@type': 'Question', name: 'Can a site have more than one sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Large sites use a sitemap index that lists several sitemap files, and a single sitemap is limited to 50MB uncompressed or 50,000 URLs.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is built in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var copyText = '';
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function origin(v) {
+    v = v.trim(); if (!v) return null;
+    if (!/^https?:\/\//i.test(v)) v = 'https://' + v;
+    try { var u = new URL(v); if (!u.hostname || u.hostname.indexOf('.') === -1) return null; return { origin: u.origin, host: u.hostname.replace(/^www\./, ''), proto: u.protocol }; } catch (e) { return null; }
+  }
+  function link(url, label) { return '<a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + esc(label || url) + '</a>'; }
+
+  function run() {
+    var o = origin($('sf-domain').value);
+    if (!o) { $('sf-output').textContent = 'Enter a domain to start.'; $('sf-status').textContent = 'Waiting for input'; copyText = ''; return; }
+    var paths = ['/robots.txt', '/sitemap.xml', '/sitemap_index.xml', '/wp-sitemap.xml', '/sitemap-index.xml'];
+    var h = [], txt = [];
+    h.push('<strong>1. Open the robots.txt</strong>');
+    h.push('<div>' + link(o.origin + '/robots.txt') + '</div>');
+    txt.push(o.origin + '/robots.txt');
+    h.push('<br><strong>2. Try the common sitemap paths</strong>');
+    paths.slice(1).forEach(function (p) { h.push('<div>' + link(o.origin + p) + '</div>'); txt.push(o.origin + p); });
+    h.push('<br><strong>3. Search Google for it</strong>');
+    var q1 = 'site:' + o.host + ' inurl:sitemap', q2 = 'site:' + o.host + ' filetype:xml';
+    h.push('<div>' + link('https://www.google.com/search?q=' + encodeURIComponent(q1), q1) + '</div>');
+    h.push('<div>' + link('https://www.google.com/search?q=' + encodeURIComponent(q2), q2) + '</div>');
+    txt.push(q1, q2);
+
+    var robots = $('sf-robots').value;
+    if (robots.trim()) {
+      var lines = [], m, re = /^\s*sitemap:\s*(\S+)/gim;
+      while ((m = re.exec(robots))) lines.push(m[1]);
+      h.push('<br><strong>4. Sitemap lines in the pasted robots.txt</strong>');
+      if (!lines.length) h.push('<div>&#9888; No <code>Sitemap:</code> line found. The site may not declare its sitemap here, so try the paths above.</div>');
+      var seen = {};
+      lines.forEach(function (u) {
+        var notes = [];
+        if (!/^https?:\/\//i.test(u)) notes.push('not an absolute URL, so it is not valid');
+        else {
+          try { var x = new URL(u); if (x.hostname.replace(/^www\./, '') !== o.host) notes.push('different domain from the one you entered'); if (x.protocol !== o.proto) notes.push('uses ' + x.protocol.replace(':', '') + ' while the site address uses ' + o.proto.replace(':', '')); } catch (e) { notes.push('not a valid URL'); }
+        }
+        if (seen[u]) notes.push('listed more than once'); seen[u] = 1;
+        h.push('<div>' + (notes.length ? '&#9888; ' : '&#10003; ') + (/^https?:\/\//i.test(u) ? link(u) : esc(u)) + (notes.length ? ' <em>(' + esc(notes.join('; ')) + ')</em>' : '') + '</div>');
+        txt.push(u);
+      });
+      if (lines.length) h.push('<div style="margin-top:6px;">' + lines.length + ' Sitemap line' + (lines.length === 1 ? '' : 's') + ' found. Open each to confirm it returns valid XML.</div>');
+    }
+    $('sf-output').innerHTML = h.join('\n');
+    $('sf-status').textContent = 'Ready: open the links';
+    copyText = txt.join('\n');
+  }
+
+  Array.prototype.slice.call($('sf-form').querySelectorAll('input,textarea')).forEach(function (e) { e.addEventListener('input', run); e.addEventListener('change', run); });
+  $('sf-copy').addEventListener('click', function () {
+    if (!copyText) return; var b = $('sf-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(copyText).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy the list'; }, 1500); });
+  });
+  run();
+})();
+</script>

@@ -1,0 +1,256 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Content Marketing ROI Calculator — Measure Whether Your Content Pays Back</h1>
+    <p>Enter what your content costs and the leads or sales it produced, and this <strong>content marketing ROI calculator</strong> works out ROI, payback and cost per lead. It uses the standard formula and only your own numbers. It will not guess how much of a sale content deserves: you decide that. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="cr-form" onsubmit="return false;" aria-label="Content marketing ROI calculator form">
+        <div>
+          <label for="cr-months">Period measured (months)</label>
+          <input type="number" min="1" id="cr-months" value="6">
+        </div>
+        <div>
+          <label for="cr-create">Content creation cost in the period</label>
+          <input type="number" min="0" step="1" id="cr-create" placeholder="writers, designers, video">
+        </div>
+        <div>
+          <label for="cr-promo">Distribution and promotion cost</label>
+          <input type="number" min="0" step="1" id="cr-promo" placeholder="ads, outreach, sponsorships">
+        </div>
+        <div>
+          <label for="cr-tools">Tools and software cost</label>
+          <input type="number" min="0" step="1" id="cr-tools" placeholder="SEO, analytics, email">
+        </div>
+        <div>
+          <label for="cr-hours">Internal hours spent</label>
+          <input type="number" min="0" step="0.5" id="cr-hours" placeholder="e.g. 80">
+        </div>
+        <div>
+          <label for="cr-rate">Hourly cost of that time</label>
+          <input type="number" min="0" step="1" id="cr-rate" placeholder="e.g. 30">
+        </div>
+        <div>
+          <label for="cr-leads">Leads or sign-ups your content produced</label>
+          <input type="number" min="0" step="1" id="cr-leads" placeholder="from analytics, with attribution you trust">
+        </div>
+        <div>
+          <label for="cr-close">Share of those leads that become customers, %</label>
+          <input type="number" min="0" max="100" step="0.1" id="cr-close" placeholder="e.g. 10">
+        </div>
+        <div>
+          <label for="cr-value">Average revenue per customer (first year or your chosen window)</label>
+          <input type="number" min="0" step="1" id="cr-value" placeholder="e.g. 1500">
+        </div>
+        <div>
+          <label for="cr-direct">Direct revenue you can attribute to the content (optional)</label>
+          <input type="number" min="0" step="1" id="cr-direct" placeholder="e.g. sales from a guide">
+        </div>
+        <div>
+          <label for="cr-currency">Currency symbol</label>
+          <input type="text" id="cr-currency" value="$" maxlength="3">
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Your content ROI</strong>
+        <span id="cr-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="cr-output" class="llms-output" style="max-height:520px;white-space:pre-wrap;">Enter at least one cost and the leads, close rate and revenue per customer (or direct revenue) to start.</pre>
+      <div id="cr-notes" style="margin-top:12px;font-size:0.92rem;line-height:1.6;"></div>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="cr-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="cr-download">Download .txt</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>The Content Marketing ROI Formula</h2>
+    <p>Return on investment is the profit from content divided by what the content cost: <strong>ROI = (return − cost) ÷ cost</strong>, shown as a percentage. If content cost 5,000 and produced 8,000 of revenue, ROI is (8,000 − 5,000) ÷ 5,000 = 60%. The calculator adds the cost lines you enter, including the time of your own team, then works out the return from leads × close rate × revenue per customer, plus any revenue you can attribute directly.</p>
+
+    <h2>What This Calculator Reports</h2>
+    <ul class="service-points">
+      <li><strong>Total cost</strong> across creation, promotion, tools and internal time</li>
+      <li><strong>Total return</strong> from customers won (leads × close rate × revenue) plus direct revenue</li>
+      <li><strong>ROI</strong> as a percentage, and whether the content has paid back so far</li>
+      <li><strong>Cost per lead</strong> and <strong>cost per customer</strong>, which are easier to compare between channels than ROI</li>
+      <li><strong>Break-even</strong>: how many leads you would have needed at your close rate to cover the cost</li>
+    </ul>
+
+    <h2>Why Content ROI Is Hard to Pin Down</h2>
+    <p>Three things make content ROI slippery. First, <strong>attribution</strong>: a customer may read several pages, see a social post and then search your brand name. Giving the first or last page all the credit is a choice, not a fact. Second, <strong>timing</strong>: content often pays back over many months, so a short window understates it, while counting years of benefit against one quarter of cost overstates it. Third, <strong>cost</strong>: people often count writer fees and forget their own time, tools and promotion. Use the calculator for a defensible estimate, state your assumptions, and re-run it with a longer window as content ages.</p>
+
+    <h2>How to Get the Inputs</h2>
+    <ul>
+      <li><strong>Leads from content.</strong> In Google Analytics, count conversions from organic search and from the pages you want to measure. If you also use a CRM, check the lead source there.</li>
+      <li><strong>Close rate.</strong> Use your own history of leads that became customers, not an industry average.</li>
+      <li><strong>Revenue per customer.</strong> Choose a window, such as first-year revenue, and use it consistently.</li>
+      <li><strong>Search performance.</strong> Pair this with your monthly Search Console numbers using the <a href="/tools/seo-report-generator">SEO report generator</a>, so traffic and revenue sit side by side.</li>
+    </ul>
+    <p>If your content is meant to earn links, work out what that part costs with the <a href="/tools/link-building-cost-calculator">link building cost calculator</a> and add it to the promotion line here.</p>
+
+    <h2>Content Marketing ROI Calculator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>How do I calculate content marketing ROI?<span class="faq-icon"></span></summary>
+        <p>Subtract the total cost of content from the revenue it produced, divide by the cost and multiply by 100. Include creation, promotion, tools and your own time in the cost.</p>
+      </details>
+      <details>
+        <summary>What is a good content marketing ROI?<span class="faq-icon"></span></summary>
+        <p>Any positive ROI means the content has paid back in your measured window. What counts as good depends on your margins, your sales cycle and how long you are willing to wait. This calculator does not claim a benchmark.</p>
+      </details>
+      <details>
+        <summary>Does the tool estimate my close rate or customer value?<span class="faq-icon"></span></summary>
+        <p>No. It uses only what you enter. Defaults would hide the assumption that matters most.</p>
+      </details>
+      <details>
+        <summary>How long should I measure content for?<span class="faq-icon"></span></summary>
+        <p>Search content often takes months to rank and keeps working afterwards, so measure at several windows, such as 3, 6 and 12 months, and compare.</p>
+      </details>
+      <details>
+        <summary>Should I include my own time in the cost?<span class="faq-icon"></span></summary>
+        <p>Yes. Leaving it out makes ROI look better than it is. Use an hourly cost for the people who worked on the content.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is calculated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want content that earns links and leads?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Content Marketing ROI Calculator',
+    url: site.baseUrl + '/tools/content-marketing-roi-calculator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Work out content marketing ROI, payback, cost per lead and break-even from your own costs, leads, close rate and revenue. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Content Marketing ROI Calculator', item: site.baseUrl + '/tools/content-marketing-roi-calculator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'How do I calculate content marketing ROI?', acceptedAnswer: { '@type': 'Answer', text: 'Subtract the total cost of content from the revenue it produced, divide by the cost and multiply by 100. Include creation, promotion, tools and your own time in the cost.' } },
+      { '@type': 'Question', name: 'What is a good content marketing ROI?', acceptedAnswer: { '@type': 'Answer', text: 'Any positive ROI means the content has paid back in your measured window. What counts as good depends on your margins, your sales cycle and how long you are willing to wait.' } },
+      { '@type': 'Question', name: 'Does the tool estimate my close rate or customer value?', acceptedAnswer: { '@type': 'Answer', text: 'No. It uses only what you enter, because defaults would hide the assumption that matters most.' } },
+      { '@type': 'Question', name: 'Should I include my own time in the cost?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Leaving it out makes ROI look better than it is. Use an hourly cost for the people who worked on the content.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is calculated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+  function num(id) { var v = $(id).value.trim(); if (v === '') return null; var n = parseFloat(v); return isNaN(n) ? null : n; }
+  function money(n) { var c = $('cr-currency').value || '$'; return (n < 0 ? '-' : '') + c + Math.round(Math.abs(n)).toLocaleString('en-US'); }
+  function money2(n) { var c = $('cr-currency').value || '$'; return c + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+
+  function build() {
+    var months = num('cr-months');
+    var create = num('cr-create') || 0, promo = num('cr-promo') || 0, tools = num('cr-tools') || 0, hours = num('cr-hours') || 0, rate = num('cr-rate') || 0;
+    var leads = num('cr-leads'), close = num('cr-close'), value = num('cr-value'), direct = num('cr-direct') || 0;
+    var time = hours * rate, cost = create + promo + tools + time;
+    if (!months || cost <= 0) return null;
+    var customers = (leads !== null && close !== null) ? leads * close / 100 : null;
+    var fromLeads = (customers !== null && value !== null) ? customers * value : null;
+    if (fromLeads === null && !direct) return null;
+    var ret = (fromLeads || 0) + direct;
+    var roi = (ret - cost) / cost * 100;
+    var o = [];
+    o.push('CONTENT MARKETING ROI (' + months + ' month' + (months === 1 ? '' : 's') + ')');
+    o.push('');
+    o.push('COSTS');
+    if (create) o.push('Content creation: ' + money(create));
+    if (promo) o.push('Distribution and promotion: ' + money(promo));
+    if (tools) o.push('Tools and software: ' + money(tools));
+    if (time) o.push('Internal time: ' + money(time) + ' (' + hours + ' hours x ' + money(rate) + ')');
+    o.push('TOTAL COST: ' + money(cost));
+    o.push('');
+    o.push('RETURN');
+    if (fromLeads !== null) o.push('Customers from content leads: ' + (Math.round(customers * 100) / 100) + ' (' + leads + ' leads x ' + close + '%)');
+    if (fromLeads !== null) o.push('Revenue from those customers: ' + money(fromLeads));
+    if (direct) o.push('Direct revenue: ' + money(direct));
+    o.push('TOTAL RETURN: ' + money(ret));
+    o.push('');
+    o.push('ROI: ' + (Math.round(roi * 10) / 10) + '% ' + (roi > 0 ? '(paid back)' : roi === 0 ? '(break-even)' : '(not paid back yet)'));
+    o.push('Net result: ' + money(ret - cost));
+    if (leads) o.push('Cost per lead: ' + money2(cost / leads));
+    if (customers) o.push('Cost per customer: ' + money2(cost / customers));
+    if (close && value && close > 0) { var need = cost / (value * close / 100); o.push('Break-even leads at your close rate: ' + (Math.ceil(need * 10) / 10) + (leads ? ' (you had ' + leads + ')' : '')); }
+    return { text: o.join('\n'), roi: roi, hasTime: time > 0, direct: direct, fromLeads: fromLeads };
+  }
+
+  function notes(r) {
+    var n = [];
+    if (!r.hasTime) n.push('No internal time is included. If your team spent hours on the content, add them to see a fuller cost.');
+    if (r.fromLeads !== null && r.direct) n.push('Check that direct revenue and lead-based revenue do not count the same customers twice.');
+    n.push('ROI depends on how you attribute leads to content. State your attribution rule and keep it the same between periods.');
+    if (r.roi < 0) n.push('A negative ROI over a short window is common for search content, which can take months to rank. Re-run with a longer period.');
+    $('cr-notes').innerHTML = n.map(function (t) { return '<div>&#9888; ' + t.replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</div>'; }).join('');
+  }
+
+  function run() {
+    var r = build();
+    current = r ? r.text : '';
+    $('cr-output').textContent = r ? r.text : 'Enter at least one cost and the leads, close rate and revenue per customer (or direct revenue) to start.';
+    $('cr-status').textContent = r ? 'Calculated' : 'Waiting for input';
+    if (r) notes(r); else $('cr-notes').innerHTML = '';
+  }
+
+  Array.prototype.slice.call($('cr-form').querySelectorAll('input')).forEach(function (e) { e.addEventListener('input', run); e.addEventListener('change', run); });
+  $('cr-copy').addEventListener('click', function () {
+    if (!current) return; var b = $('cr-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(current).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  $('cr-download').addEventListener('click', function () {
+    if (!current) return;
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([current], { type: 'text/plain' })); a.download = 'content-marketing-roi.txt';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  run();
+})();
+</script>
