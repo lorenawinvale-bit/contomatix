@@ -7,7 +7,7 @@ const R = require('../../keyword-research/serp-free-seo-tools-2026-10-16.json');
 const TOOLS = require('../data/tools.js');
 const ok = R.filter(o => o.status === 200); const c = fn => ok.filter(fn).length; const t = n => ok.filter(o => o.tools.includes(n)).length;
 const D = { shown: R.length, ok: ok.length, median: ok.map(o => o.words).sort((a, b) => a - b)[Math.floor(ok.length / 2)], free: c(o => o.freeTier), limits: c(o => o.limits), report: c(o => o.report), price: c(o => o.price), gsc: t('Google Search Console'), ga: t('Google Analytics'), sf: t('Screaming Frog'), ahrefs: t('Ahrefs'), uber: t('Ubersuggest'), kp: t('Google Keyword Planner'), atp: t('AnswerThePublic'), trends: t('Google Trends'), moz: t('Moz'), mine: TOOLS.length };
-const exp = { shown: 8, ok: 6, median: 1526, free: 4, limits: 5, report: 5, price: 2, gsc: 3, ga: 2, sf: 2, ahrefs: 3, uber: 2, kp: 2, atp: 2, trends: 2, moz: 2, mine: 33 };
+const exp = { shown: 8, ok: 6, median: 1526, free: 4, limits: 5, report: 5, price: 2, gsc: 3, ga: 2, sf: 2, ahrefs: 3, uber: 2, kp: 2, atp: 2, trends: 2, moz: 2, mine: 34 };
 for (const k of Object.keys(exp)) if (D[k] !== exp[k]) throw new Error('data changed ' + k + ' ' + D[k]);
 console.log(JSON.stringify(D));
 const f = n => n.toLocaleString('en-US');
@@ -17,7 +17,7 @@ const groups = [
   ['Sitemaps and international SEO', ['sitemap-generator', 'sitemap-validator', 'sitemap-url-extractor', 'sitemap-finder', 'html-sitemap-generator', 'hreflang-generator', 'hreflang-sitemap-validator']],
   ['Titles, snippets and structured data', ['meta-tag-generator', 'serp-snippet-preview', 'og-preview-generator', 'slug-generator', 'schema-markup-generator', 'schema-markup-validator']],
   ['Content and keywords', ['keyword-mapping-tool', 'readability-checker']],
-  ['Links', ['dofollow-link-checker', 'outreach-email-generator', 'link-building-cost-calculator']],
+  ['Links', ['dofollow-link-checker', 'outreach-email-generator', 'link-prospect-scorer', 'link-building-cost-calculator']],
   ['AI SEO', ['llms-txt-generator', 'llm-seo-checker']],
   ['Reporting, proposals and tracking', ['seo-report-generator', 'content-marketing-roi-calculator', 'seo-proposal-generator', 'utm-builder', 'geo-grid-rank-planner', 'invoice-generator']]];
 const listed = groups.flatMap(g => g[1]); if (listed.length !== D.mine || new Set(listed).size !== D.mine || listed.some(s => !by[s])) throw new Error('groups do not cover tools.js');
@@ -75,7 +75,7 @@ const content = `<p class="article-updated" style="color: #6b6459; font-size: 0.
 </ol>
 
 <h2>All ${D.mine} Free SEO Tools on Contomatix, by Job</h2>
-<figure style="margin:20px 0;"><img src="/images/blog/proof/free-seo-tools-ours.png" alt="Table of the 33 free tools on contomatix.com by job: technical SEO and crawling 7, sitemaps and international 7, titles snippets and structured data 6, content and keywords 2, links 3, AI SEO 2, reporting proposals and tracking 6" width="1280" height="@@OH@@" style="width:100%;height:auto;border-radius:8px;border:1px solid #EAE0D2;" loading="lazy"></figure>
+<figure style="margin:20px 0;"><img src="/images/blog/proof/free-seo-tools-ours.png" alt="Table of the 34 free tools on contomatix.com by job: technical SEO and crawling 7, sitemaps and international 7, titles snippets and structured data 6, content and keywords 2, links 4, AI SEO 2, reporting proposals and tracking 6" width="1280" height="@@OH@@" style="width:100%;height:auto;border-radius:8px;border:1px solid #EAE0D2;" loading="lazy"></figure>
 <p>Every tool below runs in your browser. Nothing you paste is uploaded or stored, and there is no signup, usage cap or watermark. You can also browse them together on our <a href="/tools">free tools page</a>.</p>
 ${groupHtml}
 
@@ -172,7 +172,7 @@ ${groupHtml}
 </details>
 </div>
 `;
-const title = 'Free SEO Tools: 33 Tools by Job, and What 6 Pages Say';
+const title = 'Free SEO Tools: 34 Tools by Job, and What 6 Pages Say';
 const excerpt = `Free SEO tools in one place: what ${D.ok} ranking pages recommend, a free stack to use in order, and all ${D.mine} free Contomatix tools grouped by job. Check limits first.`;
 const pngSize = f => { const b = fs.readFileSync(f); return b.readUInt32BE(20); };
 const proof = path.join(root, 'public', 'images', 'blog', 'proof'); const hOf = n => fs.existsSync(path.join(proof, n)) ? pngSize(path.join(proof, n)) : 600;

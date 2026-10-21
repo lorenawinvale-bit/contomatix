@@ -1,0 +1,267 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Link Prospect Scorer — Decide Whether a Site Is Worth Pitching Before You Email It</h1>
+    <p>Answer a few questions about a page or site you are thinking of approaching and this <strong>link prospecting tool</strong> scores it out of 100, flags red lines such as a site that sells links, and tells you whether to pursue, hold or skip it. The scoring is our own working method, explained below. It never contacts the site, and nothing leaves your browser.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="lp-form" onsubmit="return false;" aria-label="Link prospect scorer form">
+        <div>
+          <label for="lp-site">Prospect page or site (for your notes)</label>
+          <input type="text" id="lp-site" placeholder="e.g. example.com/seo-resources">
+        </div>
+        <div>
+          <label for="lp-type">Where would your link sit?</label>
+          <select id="lp-type">
+            <option value="article">Inside an article, in the body text</option>
+            <option value="resource">On a curated resource or link list</option>
+            <option value="author">In an author bio or guest post byline</option>
+            <option value="directory">On a directory or listing page</option>
+            <option value="profile">On a profile or comment page</option>
+            <option value="footer">In a footer, sidebar or sitewide block</option>
+          </select>
+        </div>
+        <div>
+          <label for="lp-rel">How relevant is the page to your topic?</label>
+          <select id="lp-rel">
+            <option value="3">Covers my exact topic</option>
+            <option value="2">Covers a closely related topic</option>
+            <option value="1">Same industry, different topic</option>
+            <option value="0">Unrelated</option>
+          </select>
+        </div>
+        <div>
+          <label for="lp-readers">Does the site have real readers?</label>
+          <select id="lp-readers">
+            <option value="3">Yes: comments, shares or visible traffic</option>
+            <option value="2">Probably: active and regularly updated</option>
+            <option value="1">Unclear</option>
+            <option value="0">No sign of an audience</option>
+          </select>
+        </div>
+        <div>
+          <label for="lp-fresh">When was the page or site last updated?</label>
+          <select id="lp-fresh">
+            <option value="2">Within the last 6 months</option>
+            <option value="1">6 to 24 months ago</option>
+            <option value="0">More than 2 years ago, or unknown</option>
+          </select>
+        </div>
+        <div>
+          <label for="lp-out">How many external links are on the page?</label>
+          <select id="lp-out">
+            <option value="2">Fewer than 15</option>
+            <option value="1">15 to 50</option>
+            <option value="0">More than 50</option>
+          </select>
+        </div>
+        <div>
+          <label for="lp-indexed">Is the page indexed in Google?</label>
+          <select id="lp-indexed">
+            <option value="2">Yes (found with a site: search)</option>
+            <option value="1">Not checked</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+        <div>
+          <label for="lp-attr">Link attribute you expect</label>
+          <select id="lp-attr">
+            <option value="followed">Followed (no nofollow, sponsored or ugc)</option>
+            <option value="unknown">Not checked</option>
+            <option value="nofollow">nofollow, sponsored or ugc</option>
+          </select>
+        </div>
+        <div>
+          <label for="lp-contact">Can you find a named contact?</label>
+          <select id="lp-contact">
+            <option value="1">Yes, a named editor or owner</option>
+            <option value="0">Only a generic form or address</option>
+          </select>
+        </div>
+        <div>
+          <label for="lp-sells">Does the site advertise paid links, guest posts for a fee or link swaps?</label>
+          <select id="lp-sells">
+            <option value="no">No sign of it</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Prospect verdict</strong>
+        <span id="lp-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="lp-output" class="llms-output" style="max-height:520px;white-space:pre-wrap;">Answer the questions to see a score.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="lp-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="lp-download">Download .txt</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>How the Link Prospect Scorer Works</h2>
+    <p>Link prospecting is the step before outreach: listing sites where a link would make sense and checking each one. The scorer turns that check into a number so you can compare prospects quickly. It is our own working method, not a Google metric. Relevance carries the most weight (30 points), then audience (20), freshness (10), how many other links the page carries (10), indexing (10), placement (15) and a named contact (5). The link attribute adjusts the verdict, and a site that sells links or swaps them is flagged as a skip whatever its score.</p>
+
+    <h2>What the Verdict Means</h2>
+    <ul class="service-points">
+      <li><strong>Pursue (70 and above):</strong> a relevant, live page where an editorial link is plausible. Write a specific, short email.</li>
+      <li><strong>Hold (45 to 69):</strong> worth a closer look. Check relevance and readers again, or find a better page on the same site.</li>
+      <li><strong>Skip (under 45, or a red line):</strong> the effort is unlikely to pay back, or the site sits close to what Google calls link spam.</li>
+    </ul>
+
+    <h2>Why These Factors</h2>
+    <p>Google says it uses links as a signal when determining the relevancy of pages and to find new pages to crawl, so a link from a relevant page that Google has indexed is worth more than one from a page it has not. Real readers matter because a link on a page nobody visits sends no one. A page with dozens of other external links dilutes the attention each gets, and a curated list that has not been updated for years is less likely to be maintained. Google also lists buying or selling links for ranking purposes and excessive link exchanges as link spam, which is why the scorer treats a site that advertises paid links or swaps as a skip. Our guide to <a href="/blog/relevant-backlinks">relevant backlinks</a> explains the relevance check in detail.</p>
+
+    <h2>What to Do After You Score a Prospect</h2>
+    <ul>
+      <li><strong>Check the attribute.</strong> Use the <a href="/tools/dofollow-link-checker">dofollow link checker</a> on the page.</li>
+      <li><strong>Check indexing.</strong> Search Google for the exact URL with <code>site:</code>.</li>
+      <li><strong>Write the email.</strong> Draft it with the <a href="/tools/outreach-email-generator">outreach email generator</a>.</li>
+      <li><strong>Plan the work.</strong> Fit your list into a <a href="/blog/link-building-campaign">link building campaign</a> with goals and a report.</li>
+    </ul>
+
+    <h2>Link Prospect Scorer FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>What is link prospecting?<span class="faq-icon"></span></summary>
+        <p>It is finding and checking sites that could link to you, before you reach out. The aim is a short list of relevant, live pages instead of a long list of anything.</p>
+      </details>
+      <details>
+        <summary>Is the score a Google metric?<span class="faq-icon"></span></summary>
+        <p>No. It is our own checklist turned into points so prospects can be compared. Google does not publish a prospect score.</p>
+      </details>
+      <details>
+        <summary>Does the tool visit the site or check its authority?<span class="faq-icon"></span></summary>
+        <p>No. It uses only your answers. Authority scores come from third-party tools and are not part of the score, because relevance and readers say more about a link's value.</p>
+      </details>
+      <details>
+        <summary>Why is a site that sells links an automatic skip?<span class="faq-icon"></span></summary>
+        <p>Google's spam policy lists buying or selling links for ranking purposes and excessive link exchanges as link spam. A link from such a site carries risk whatever the rest of the score says.</p>
+      </details>
+      <details>
+        <summary>What score should I aim for?<span class="faq-icon"></span></summary>
+        <p>Pursue prospects at 70 or above, look again at 45 to 69 and skip the rest. Adjust the thresholds to your own results after a few campaigns.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is calculated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want vetted, relevant links built for you?</h2>
+      <p>Contomatix builds editorial, relevant links for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Link Prospect Scorer',
+    url: site.baseUrl + '/tools/link-prospect-scorer',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Score a link prospect out of 100 on relevance, audience, freshness, placement and more, and get a pursue, hold or skip verdict. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Link Prospect Scorer', item: site.baseUrl + '/tools/link-prospect-scorer' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What is link prospecting?', acceptedAnswer: { '@type': 'Answer', text: 'It is finding and checking sites that could link to you, before you reach out. The aim is a short list of relevant, live pages instead of a long list of anything.' } },
+      { '@type': 'Question', name: 'Is the score a Google metric?', acceptedAnswer: { '@type': 'Answer', text: 'No. It is our own checklist turned into points so prospects can be compared. Google does not publish a prospect score.' } },
+      { '@type': 'Question', name: 'Does the tool visit the site or check its authority?', acceptedAnswer: { '@type': 'Answer', text: 'No. It uses only your answers. Authority scores come from third-party tools and are not part of the score.' } },
+      { '@type': 'Question', name: 'Why is a site that sells links an automatic skip?', acceptedAnswer: { '@type': 'Answer', text: 'Google spam policy lists buying or selling links for ranking purposes and excessive link exchanges as link spam, so a link from such a site carries risk whatever the rest of the score says.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is calculated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+  var TYPE = { article: [15, 'Inside article text'], resource: [12, 'Curated resource list'], author: [8, 'Author bio or byline'], directory: [5, 'Directory or listing'], profile: [2, 'Profile or comment page'], footer: [0, 'Footer, sidebar or sitewide block'] };
+
+  function run() {
+    var rel = +$('lp-rel').value, readers = +$('lp-readers').value, fresh = +$('lp-fresh').value, out = +$('lp-out').value, idx = +$('lp-indexed').value;
+    var type = $('lp-type').value, attr = $('lp-attr').value, contact = +$('lp-contact').value, sells = $('lp-sells').value === 'yes';
+    var pts = { Relevance: rel * 10, Audience: Math.round(readers / 3 * 20), Freshness: fresh * 5, 'Few other links': out * 5, Indexed: idx * 5, Placement: TYPE[type][0], 'Named contact': contact * 5 };
+    var total = 0; Object.keys(pts).forEach(function (k) { total += pts[k]; });
+    var max = { Relevance: 30, Audience: 20, Freshness: 10, 'Few other links': 10, Indexed: 10, Placement: 15, 'Named contact': 5 };
+    var flags = [];
+    if (sells) flags.push('The site advertises paid links, paid guest posts or link swaps. Google lists buying or selling links for ranking purposes and excessive link exchanges as link spam.');
+    if (rel === 0) flags.push('The page is unrelated to your topic. Relevance is the first thing an editor checks.');
+    if (type === 'footer') flags.push('Footer, sidebar and sitewide links are the weakest placement and are named in Google\'s link spam examples when widely distributed.');
+    if (idx === 0) flags.push('The page is not indexed, so Google may never see the link.');
+    if (attr === 'nofollow') flags.push('The link would be qualified (nofollow, sponsored or ugc). It can still send visitors, but do not count on it passing credit.');
+    var verdict = sells || rel === 0 || type === 'footer' || idx === 0 ? 'SKIP' : total >= 70 ? 'PURSUE' : total >= 45 ? 'HOLD' : 'SKIP';
+    var site = $('lp-site').value.trim();
+    var L = [];
+    L.push('LINK PROSPECT SCORE' + (site ? ': ' + site : ''));
+    L.push('');
+    L.push('SCORE: ' + total + ' / 100');
+    L.push('VERDICT: ' + verdict + (verdict === 'PURSUE' ? ' (a relevant, live page where an editorial link is plausible)' : verdict === 'HOLD' ? ' (look again at relevance and readers, or find a better page on the same site)' : ' (unlikely to pay back, or too close to link spam)'));
+    L.push('');
+    L.push('BREAKDOWN');
+    Object.keys(pts).forEach(function (k) { L.push(k + ': ' + pts[k] + ' / ' + max[k]); });
+    L.push('Placement chosen: ' + TYPE[type][1]);
+    if (flags.length) { L.push(''); L.push('FLAGS'); flags.forEach(function (f) { L.push('- ' + f); }); }
+    L.push('');
+    L.push('NEXT STEP');
+    L.push(verdict === 'PURSUE' ? 'Check the link attribute, confirm the page is indexed, then write a short email that names something specific on the page.' : verdict === 'HOLD' ? 'Re-check relevance and audience, and look for a stronger page on the same site before you spend time on outreach.' : 'Move on to a better prospect.');
+    L.push('');
+    L.push('This score is a working method from Contomatix, not a Google metric.');
+    current = L.join('\n');
+    $('lp-output').textContent = current;
+    $('lp-status').textContent = verdict + ' (' + total + ')';
+  }
+
+  Array.prototype.slice.call($('lp-form').querySelectorAll('input,select')).forEach(function (e) { e.addEventListener('input', run); e.addEventListener('change', run); });
+  $('lp-copy').addEventListener('click', function () {
+    if (!current) return; var b = $('lp-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(current).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  $('lp-download').addEventListener('click', function () {
+    if (!current) return;
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([current], { type: 'text/plain' })); a.download = 'link-prospect-score.txt';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  run();
+})();
+</script>

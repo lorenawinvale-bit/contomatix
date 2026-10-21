@@ -132,6 +132,11 @@ module.exports = [
     summary: 'Enter content costs, leads, close rate and revenue to get ROI, payback, cost per lead and break-even, using only your own numbers.'
   },
   {
+    slug: 'link-prospect-scorer',
+    title: 'Link Prospect Scorer',
+    summary: 'Score a link prospect out of 100 on relevance, audience, freshness, placement and more, then get a pursue, hold or skip verdict before you send outreach.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'
