@@ -28,15 +28,15 @@
       </ul>
     </div>
 
-    <div class="footer-col footer-col-tools">
+    <div class="footer-col">
       <h2>Free Tools</h2>
       <% var featuredTools = ['technical-seo-audit-tool', 'schema-markup-generator', 'sitemap-generator', 'robots-txt-generator', 'llms-txt-generator', 'meta-tag-generator', 'seo-report-generator', 'sitemap-validator'];
-         var orderedTools = featuredTools.map(function (s) { return tools.find(function (t) { return t.slug === s; }); }).filter(Boolean).concat(tools.filter(function (t) { return featuredTools.indexOf(t.slug) === -1; })); %>
-      <ul class="footer-tools-list">
-        <li><a href="/tools"><strong>All Free Tools</strong></a></li>
-        <% orderedTools.forEach(function(t) { %>
+         var shownTools = featuredTools.map(function (s) { return tools.find(function (t) { return t.slug === s; }); }).filter(Boolean); %>
+      <ul>
+        <% shownTools.forEach(function(t) { %>
           <li><a href="/tools/<%= t.slug %>"><%= t.title %></a></li>
         <% }); %>
+        <li><a href="/tools"><strong>All <%= tools.length %> free tools &rarr;</strong></a></li>
       </ul>
     </div>
 
