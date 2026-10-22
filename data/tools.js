@@ -137,6 +137,11 @@ module.exports = [
     summary: 'Score a link prospect out of 100 on relevance, audience, freshness, placement and more, then get a pursue, hold or skip verdict before you send outreach.'
   },
   {
+    slug: 'anchor-text-checker',
+    title: 'Anchor Text Checker',
+    summary: 'Paste anchor texts or page HTML and sort every link text into branded, exact match, partial match, naked URL, generic or too long, with repeat counts and warnings.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'

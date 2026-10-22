@@ -1,0 +1,70 @@
+// Builds hero diagram + cover illustration + infographic HTML for the ai-tools-for-seo-keyword-research post. Local helper.
+const fs = require('fs'); const path = require('path');
+const img = path.join(__dirname, '..', 'public', 'images', 'blog'); const S = 'ai-tools-for-seo-keyword-research';
+
+// ---- hero diagram (clone of the donut template)
+let d = fs.readFileSync(path.join(img, 'diagram-blocked-by-robots-txt.svg'), 'utf8');
+const rep = (a, b) => { if (!d.includes(a)) throw new Error('missing ' + a); d = d.replace(a, b); };
+rep('<tspan x="380">BLOCKED BY</tspan><tspan x="380" dy="23">ROBOTS.TXT</tspan>', '<tspan x="380">AI KEYWORD</tspan><tspan x="380" dy="23">RESEARCH</tspan>');
+rep('<tspan x="531.8">Two Statuses,</tspan><tspan x="531.8" dy="15">Two Meanings</tspan>', '<tspan x="531.8">Brainstorm with</tspan><tspan x="531.8" dy="15">Specifics</tspan>');
+rep('<tspan x="575.0">Find the Rule</tspan>', '<tspan x="575.0">Verify Against Data</tspan>');
+rep('<tspan x="427.0">Common Causes</tspan>', '<tspan x="427.0">Cluster, Label Intent</tspan>');
+rep('<tspan x="50.0">Fix, Then</tspan><tspan x="50.0" dy="15">Validate</tspan>', '<tspan x="50.0">Map Clusters</tspan><tspan x="50.0" dy="15">to Pages</tspan>');
+rep('<tspan x="81.9">The noindex Trap</tspan>', '<tspan x="81.9">Read the Live Results</tspan>');
+fs.writeFileSync(path.join(img, `diagram-${S}.svg`), d);
+
+// ---- cover illustration (clone of the illus template)
+let c = fs.readFileSync(path.join(img, 'illus-blocked-by-robots-txt.svg'), 'utf8');
+const rc = (a, b) => { if (!c.includes(a)) throw new Error('missing ' + a); c = c.replace(a, b); };
+rc('SEARCH CONSOLE GUIDE', 'KEYWORD RESEARCH TEST');
+rc('x="596" y="34" width="150"', 'x="581" y="34" width="165"');
+rc('x="671" y="52"', 'x="663.5" y="52"');
+rc('>blocked by robots.txt<', '>ai tools for seo keyword research<');
+rc('Page indexing report', 'Blind volume check');
+rc('Status: Blocked by robots.txt', 'Keyword: will ai replace seo');
+rc('Crawled: no', 'AI guess: 1,500 a month');
+rc('Indexed: can still happen', 'Export: 200 a month');
+rc('Snippet: usually missing', 'Result: 7.5x too high');
+rc('Fix: narrow the rule', 'Rule: verify every number');
+rc('Then: validate the fix', 'Use AI for ideas, not counts');
+rc('>No crawl<', '>8 of 21<');
+rc('is not the same as no index', 'guesses within 2x');
+rc('noindex needs a crawl to work', 'checked against real data');
+rc('>Blocked by Robots.txt<', '>AI Tools for SEO Keyword Research<');
+rc('Diagnose and fix the two Search Console statuses', 'A blind test on 21 real keywords');
+fs.writeFileSync(path.join(img, `illus-${S}.svg`), c);
+
+// ---- infographic (HTML -> PNG with scripts/capture-page.js)
+const items = (arr, col) => arr.map(([t, s]) => `<li><span class="dot" style="background:${col}"></span><div><b>${t}</b><small>${s}</small></div></li>`).join('');
+const html = `<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}body{width:1376px;height:790px;background:#FAF5EF;font-family:'Segoe UI',Arial,sans-serif;color:#16192A;position:relative;overflow:hidden}
+.blob1{position:absolute;right:-120px;top:-140px;width:440px;height:440px;border-radius:50%;background:rgba(20,184,166,.07)}
+.blob2{position:absolute;left:-110px;bottom:-150px;width:420px;height:420px;border-radius:50%;background:rgba(249,115,22,.07)}
+.logo{position:absolute;left:50px;top:36px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:21px;color:#16192A}
+.logo i{width:38px;height:38px;border-radius:50%;border:5px solid #0EA5A0;border-right-color:transparent;display:inline-block}
+h1{position:absolute;left:0;right:0;top:46px;text-align:center;font-size:46px;font-weight:800;letter-spacing:-.5px}
+.sub{position:absolute;left:0;right:0;top:112px;text-align:center;font-size:22px;color:#6b6459}
+.col{position:absolute;top:176px;width:540px;height:430px;background:#fff;border-radius:22px;padding:30px 34px}
+.l{left:56px;border:3px solid #0EA5A0}.r{right:56px;border:3px solid #F5A623}
+.col h2{font-size:28px;font-weight:800;margin-bottom:6px}.l h2{color:#0B807C}.r h2{color:#B5730E}
+.tag{font-size:16px;color:#6b6459;margin-bottom:18px}
+ul{list-style:none;padding:0}li{display:flex;gap:16px;align-items:flex-start;margin-bottom:20px}
+.dot{width:16px;height:16px;border-radius:50%;margin-top:8px;flex:none}
+li b{display:block;font-size:24px;font-weight:700}li small{display:block;font-size:17px;color:#6b6459;margin-top:2px}
+.mid{position:absolute;left:626px;top:300px;width:124px;height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.mid .arrow{font-size:46px;color:#8A8371;line-height:1}.mid span{font-size:15px;font-weight:700;color:#8A8371;margin-top:8px;letter-spacing:.5px}
+.note{position:absolute;left:56px;right:56px;top:636px;height:100px;background:#16192A;color:#fff;border-radius:18px;display:flex;align-items:center;justify-content:center;gap:22px;padding:0 30px}
+.note b{font-size:50px;color:#5EEAD4;font-weight:800;white-space:nowrap}.note p{font-size:23px;line-height:1.35}
+.note p em{font-style:normal;color:#FBBF24;font-weight:700}
+</style></head><body>
+<div class="blob1"></div><div class="blob2"></div>
+<div class="logo"><svg width="44" height="44" viewBox="0 0 44 44" style="flex:none"><circle cx="22" cy="22" r="21" fill="#fff" stroke="#EAE0D2"/><g transform="translate(-0,-0) scale(0.9167)"><path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="4.2" stroke-linecap="round" transform="translate(0,0)"/><line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/><line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.2"/><circle cx="35.52" cy="13.63" r="3.1" fill="#F5A623"/><circle cx="35.52" cy="13.63" r="1.1" fill="#fff"/><circle cx="35.52" cy="34.37" r="3.1" fill="#14B8A6"/><circle cx="35.52" cy="34.37" r="1.1" fill="#fff"/><circle cx="24" cy="24" r="2" fill="#16192A"/></g></svg>Contomatix</div>
+<h1>AI or Data Tool? Who Does What</h1>
+<div class="sub">AI tools for SEO keyword research: split the job by what it needs</div>
+<div class="col l"><h2>An AI assistant does</h2><div class="tag">Language and sorting work</div><ul>${items([['Brainstorm phrases', 'and the questions customers ask'], ['Group into clusters', 'phrases one page can answer'], ['Label search intent', 'informational, commercial, transactional'], ['Spot missing pages', 'compare the list with your URLs']], '#0EA5A0')}</ul></div>
+<div class="mid"><div class="arrow">&#8644;</div><span>THEN CHECK</span></div>
+<div class="col r"><h2>A data source must supply</h2><div class="tag">Anything that has to be counted</div><ul>${items([['Search volume', 'from an export or keyword database'], ['Keyword difficulty', 'how hard page one is to beat'], ['Today\'s live results', 'who ranks and in what format'], ['Your own queries', 'Search Console impressions and position']], '#F5A623')}</ul></div>
+<div class="note"><b>8 of 21</b><p>blind AI volume guesses landed within 2x of the export, and <em>6 were off by 5x or more</em>.</p></div>
+</body></html>`;
+fs.writeFileSync(path.join(__dirname, 'infographic-ai-tools-keyword-research.html'), html);
+console.log('assets written');

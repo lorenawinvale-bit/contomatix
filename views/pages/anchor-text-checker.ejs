@@ -1,0 +1,239 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Anchor Text Checker — See Whether Your Link Text Is Descriptive, Generic or Over-Optimised</h1>
+    <p>Paste a list of anchor texts, or the HTML of a page, and this <strong>anchor text checker</strong> sorts every anchor into branded, exact match, partial match, naked URL, generic or too long, shows how often each repeats and flags what Google's guidance warns about. It runs in your browser: nothing is fetched and nothing leaves your device.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="at-form" onsubmit="return false;" aria-label="Anchor text checker form">
+        <div>
+          <label for="at-input">Anchor texts, or page HTML</label>
+          <textarea id="at-input" rows="10" placeholder="One anchor per line, for example:&#10;click here&#10;link building campaign&#10;Contomatix&#10;https://example.com/page&#10;&#10;Or paste the HTML of a page and the tool reads every link text."></textarea>
+        </div>
+        <div>
+          <label for="at-brand">Your brand name (optional)</label>
+          <input type="text" id="at-brand" placeholder="e.g. Contomatix">
+        </div>
+        <div>
+          <label for="at-kw">Keywords you want to rank for, comma separated (optional)</label>
+          <input type="text" id="at-kw" placeholder="e.g. link building, backlinks">
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Anchor text report</strong>
+        <span id="at-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="at-output" class="llms-output" style="max-height:520px;white-space:pre-wrap;">Paste some anchors to start.</pre>
+      <div id="at-notes" style="margin-top:12px;font-size:0.92rem;line-height:1.6;"></div>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="at-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="at-download">Download .txt</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>How the Anchor Text Checker Sorts Your Links</h2>
+    <ul class="service-points">
+      <li><strong>Branded:</strong> the anchor contains your brand name</li>
+      <li><strong>Exact match:</strong> the anchor is exactly one of the keywords you entered</li>
+      <li><strong>Partial match:</strong> the anchor contains a keyword you entered inside a longer phrase</li>
+      <li><strong>Naked URL:</strong> the anchor is a web address</li>
+      <li><strong>Generic:</strong> "click here", "read more", "website", "article" and similar, which Google lists as too generic</li>
+      <li><strong>Too long:</strong> ten or more words, a working limit of ours. Google's example of a "weirdly long" anchor is a whole sentence</li>
+      <li><strong>Descriptive:</strong> everything else, which is the group you generally want</li>
+    </ul>
+
+    <h2>What Google Says About Anchor Text</h2>
+    <p>Google's link best practices say good anchor text is descriptive, reasonably concise and relevant to the page it sits on and the page it links to. It gives "click here", "read more", "website" and "article" as examples of anchors that are too generic, and warns against cramming keywords into anchor text, noting that keyword stuffing violates its spam policies. It also suggests a simple test: read only the anchor text, out of context, and check that it makes sense by itself. Google gives no ideal percentage for each anchor type, so the tool reports counts and flags patterns instead of grading you against a ratio. Our guide to <a href="/blog/anchor-text-seo">anchor text SEO</a> shows what the anchors on a real site look like.</p>
+
+<h2>How to Get a List of Anchors to Check</h2>
+    <ul>
+      <li><strong>External anchors:</strong> open the Links report in Google Search Console and look at Top linking text, or paste the HTML of a page that links to you.</li>
+      <li><strong>Internal anchors:</strong> paste the HTML of a page on your own site. The tool reads every link text it finds.</li>
+      <li><strong>Competitor pages:</strong> view the source of a page, copy the HTML and paste it in. Nothing is sent anywhere.</li>
+    </ul>
+    <p>For a deeper look at a single page's links, use the <a href="/tools/internal-link-checker">internal link checker</a>, and use the <a href="/tools/dofollow-link-checker">dofollow link checker</a> to see which links are qualified.</p>
+
+    <h2>Anchor Text Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>What is anchor text?<span class="faq-icon"></span></summary>
+        <p>It is the visible, clickable text of a link. Google says it tells people and search engines something about the page you link to.</p>
+      </details>
+      <details>
+        <summary>What is a good anchor text distribution?<span class="faq-icon"></span></summary>
+        <p>Google gives no target percentages. Natural profiles tend to contain many branded and descriptive anchors and few exact-match ones. Use the tool to spot heavy repetition or generic anchors, not to chase a ratio.</p>
+      </details>
+      <details>
+        <summary>Does the tool fetch my backlinks?<span class="faq-icon"></span></summary>
+        <p>No. It analyses only the anchors or HTML you paste. Export your anchors from Search Console or paste a page's HTML.</p>
+      </details>
+      <details>
+        <summary>Why is "too long" set at ten words?<span class="faq-icon"></span></summary>
+        <p>It is our working limit, not a Google rule. Google calls an anchor that is a whole sentence "weirdly long", so the flag is a prompt to trim, not a penalty.</p>
+      </details>
+      <details>
+        <summary>Are exact match anchors bad?<span class="faq-icon"></span></summary>
+        <p>Not by themselves. Repeating the same keyword-rich anchor across many links, especially links you built, can look manipulative, and Google calls keyword stuffing a violation of its spam policies.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is analysed in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a link profile reviewed by a person?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Anchor Text Checker',
+    url: site.baseUrl + '/tools/anchor-text-checker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste anchor texts or page HTML and sort every link text into branded, exact match, partial match, naked URL, generic or too long, with repeat counts and warnings. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Anchor Text Checker', item: site.baseUrl + '/tools/anchor-text-checker' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What is anchor text?', acceptedAnswer: { '@type': 'Answer', text: 'It is the visible, clickable text of a link. Google says it tells people and search engines something about the page you link to.' } },
+      { '@type': 'Question', name: 'What is a good anchor text distribution?', acceptedAnswer: { '@type': 'Answer', text: 'Google gives no target percentages. Natural profiles tend to contain many branded and descriptive anchors and few exact-match ones. Use the tool to spot heavy repetition or generic anchors, not to chase a ratio.' } },
+      { '@type': 'Question', name: 'Does the tool fetch my backlinks?', acceptedAnswer: { '@type': 'Answer', text: 'No. It analyses only the anchors or HTML you paste. Export your anchors from Search Console or paste a page HTML.' } },
+      { '@type': 'Question', name: 'Are exact match anchors bad?', acceptedAnswer: { '@type': 'Answer', text: 'Not by themselves. Repeating the same keyword-rich anchor across many links can look manipulative, and Google calls keyword stuffing a violation of its spam policies.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is analysed in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+  var GENERIC = /^(click here|here|read more|learn more|more|more info|this|this link|link|website|our website|visit website|visit our website|article|this article|this post|this page|page|go|source|view|see more|continue reading|details|check it out)$/i;
+
+  function parseInput(raw) {
+    var anchors = [];
+    if (/<a\b[^>]*>/i.test(raw)) {
+      var re = /<a\b[^>]*>([\s\S]*?)<\/a>/gi, m;
+      while ((m = re.exec(raw))) {
+        var t = m[1].replace(/<img[^>]*alt=["']([^"']*)["'][^>]*>/gi, '$1').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+        anchors.push(t || '(empty or image without alt)');
+      }
+    } else {
+      raw.split('\n').forEach(function (l) { l = l.trim(); if (l) anchors.push(l); });
+    }
+    return anchors;
+  }
+
+  function classify(a, brand, kws) {
+    var low = a.toLowerCase(), words = a.split(/\s+/).length;
+    if (a.indexOf('(empty') === 0) return 'empty';
+    if (/^(https?:\/\/|www\.)\S+$/i.test(a) || /^[a-z0-9-]+(\.[a-z0-9-]+)+(\/\S*)?$/i.test(a)) return 'naked url';
+    if (GENERIC.test(a)) return 'generic';
+    if (brand && low.indexOf(brand) !== -1) return 'branded';
+    if (kws.length && kws.indexOf(low) !== -1) return 'exact match';
+    if (kws.length && kws.some(function (k) { return low.indexOf(k) !== -1; })) return 'partial match';
+    if (words >= 10) return 'too long';
+    return 'descriptive';
+  }
+
+  function build() {
+    var anchors = parseInput($('at-input').value);
+    if (!anchors.length) return null;
+    var brand = $('at-brand').value.trim().toLowerCase();
+    var kws = $('at-kw').value.split(',').map(function (s) { return s.trim().toLowerCase(); }).filter(Boolean);
+    var counts = {}, per = {}, longList = [];
+    anchors.forEach(function (a) {
+      var c = classify(a, brand, kws); counts[c] = (counts[c] || 0) + 1;
+      var k = a.toLowerCase(); per[k] = (per[k] || 0) + 1;
+      if (a.split(/\s+/).length >= 10 && c !== 'naked url') longList.push(a);
+    });
+    var n = anchors.length, order = ['descriptive', 'branded', 'partial match', 'exact match', 'naked url', 'generic', 'too long', 'empty'];
+    var uniq = Object.keys(per).length;
+    var top = Object.keys(per).sort(function (x, y) { return per[y] - per[x]; }).slice(0, 5).filter(function (k) { return per[k] > 1; });
+    var L = [];
+    L.push('ANCHOR TEXT REPORT');
+    L.push('');
+    L.push('Anchors checked: ' + n + ' (' + uniq + ' different)');
+    L.push('');
+    L.push('BY TYPE');
+    order.forEach(function (k) { if (counts[k]) L.push(k + ': ' + counts[k] + ' (' + (counts[k] / n * 100).toFixed(1) + '%)'); });
+    if (top.length) { L.push(''); L.push('MOST REPEATED'); top.forEach(function (k) { L.push('"' + k + '": ' + per[k] + ' times (' + (per[k] / n * 100).toFixed(1) + '%)'); }); }
+    if (longList.length) { L.push(''); L.push('TOO LONG (10+ words)'); longList.slice(0, 5).forEach(function (a) { L.push('- ' + (a.length > 90 ? a.slice(0, 87) + '...' : a)); }); }
+    return { text: L.join('\n'), n: n, counts: counts, per: per, top: top, kws: kws.length, brand: !!brand, uniq: uniq, longCount: longList.length };
+  }
+
+  function notes(r) {
+    var n = [], g = r.counts.generic || 0, e = r.counts['exact match'] || 0, tl = r.longCount || 0;
+    if (g) n.push(g + ' anchor' + (g === 1 ? ' is' : 's are') + ' generic. Google lists "click here", "read more", "website" and "article" as too generic: describe the destination instead.');
+    if (r.n >= 5 && e / r.n > 0.3) n.push('More than 30% of anchors are exact match. Repeating one keyword-rich anchor across many links can look manipulative; Google calls keyword stuffing a spam violation. This 30% flag is our own working threshold, not a Google rule.');
+    if (r.top.length && r.per[r.top[0]] / r.n > 0.25 && r.n >= 8) n.push('"' + r.top[0] + '" makes up over a quarter of your anchors. Check that the repeated wording fits every context.');
+    if (tl) n.push(tl + ' anchor' + (tl === 1 ? ' is' : 's are') + ' ten words or longer. Link only the phrase that names the destination.');
+    if (!r.kws) n.push('Add keywords to see exact and partial matches, and your brand name to see branded anchors.');
+    n.push('Google gives no ideal percentage for each anchor type. Use the counts to spot patterns, not to hit a ratio.');
+    $('at-notes').innerHTML = n.map(function (t) { return '<div>&#9888; ' + t.replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</div>'; }).join('');
+  }
+
+  function run() {
+    var r = build();
+    current = r ? r.text : '';
+    $('at-output').textContent = r ? r.text : 'Paste some anchors to start.';
+    $('at-status').textContent = r ? r.n + ' anchors checked' : 'Waiting for input';
+    if (r) notes(r); else $('at-notes').innerHTML = '';
+  }
+
+  Array.prototype.slice.call($('at-form').querySelectorAll('input,textarea')).forEach(function (e) { e.addEventListener('input', run); e.addEventListener('change', run); });
+  $('at-copy').addEventListener('click', function () {
+    if (!current) return; var b = $('at-copy');
+    if (navigator.clipboard) navigator.clipboard.writeText(current).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+  $('at-download').addEventListener('click', function () {
+    if (!current) return;
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([current], { type: 'text/plain' })); a.download = 'anchor-text-report.txt';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  run();
+})();
+</script>

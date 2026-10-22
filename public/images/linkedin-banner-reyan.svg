@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bnr-bg" x1="0" y1="0" x2="1584" y2="396" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FDFAF5"/>
+      <stop offset="1" stop-color="#F7F0E4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1584" height="396" fill="url(#bnr-bg)"/>
+  <circle cx="1500" cy="380" r="260" fill="rgba(20,184,166,0.08)"/>
+  <circle cx="-40" cy="40" r="200" fill="rgba(249,115,22,0.07)"/>
+  <path d="M0 396 L1584 396 L1584 350 Q 792 300 0 350 Z" fill="rgba(11,128,124,0.045)"/>
+
+  <!-- Logo: top-left corner, high enough to clear the profile-photo circle
+       (which sits lower, bottom-left) instead of overlapping it -->
+  <svg x="80" y="36" width="52" height="52" viewBox="0 0 48 48">
+    <defs>
+      <linearGradient id="bnr-ring" x1="10" y1="8" x2="38" y2="42" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#2DD4BF"/>
+        <stop offset="0.55" stop-color="#0EA5A0"/>
+        <stop offset="1" stop-color="#0B807C"/>
+      </linearGradient>
+      <linearGradient id="bnr-node" x1="30" y1="9" x2="41" y2="19" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#FBBF24"/>
+        <stop offset="1" stop-color="#F5A623"/>
+      </linearGradient>
+    </defs>
+    <path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="url(#bnr-ring)" stroke-width="6" stroke-linecap="round"/>
+    <line x1="35.52" y1="13.63" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.7"/>
+    <line x1="35.52" y1="34.37" x2="24" y2="24" stroke="#C9BBA9" stroke-width="1.7"/>
+    <circle cx="35.52" cy="13.63" r="4.4" fill="url(#bnr-node)"/>
+    <circle cx="35.52" cy="13.63" r="1.6" fill="#FFFFFF"/>
+    <circle cx="35.52" cy="34.37" r="4.4" fill="#14B8A6"/>
+    <circle cx="35.52" cy="34.37" r="1.6" fill="#FFFFFF"/>
+    <circle cx="24" cy="24" r="2.9" fill="#16192A"/>
+  </svg>
+  <text x="144" y="70" font-size="24" font-weight="700" fill="#16192A">Contomatix</text>
+
+  <!-- Headline block, unchanged from the previous layout -->
+  <text x="662" y="120" font-size="15" font-weight="700" letter-spacing="2" fill="#0B807C">CONTENT THAT PERFORMS</text>
+  <text x="660" y="175" font-size="40" font-weight="700" fill="#16192A">Crafting content that ranks</text>
+  <text x="660" y="222" font-size="40" font-weight="700" fill="#0B807C">&amp; gets cited by AI</text>
+  <text x="660" y="258" font-size="19" fill="#565E6E">Content strategy for organic search and AI answer engines</text>
+
+  <!-- Content-card motif, right side -->
+  <g transform="translate(1350,90)">
+    <rect x="0" y="0" width="150" height="190" rx="14" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2" transform="rotate(-6 75 95)"/>
+    <rect x="34" y="40" width="200" height="200" rx="14" fill="#FFFFFF" stroke="#EAE0D2" stroke-width="2"/>
+    <rect x="54" y="64" width="140" height="10" rx="5" fill="#0EA5A0"/>
+    <rect x="54" y="86" width="160" height="8" rx="4" fill="#F1EDE3"/>
+    <rect x="54" y="102" width="150" height="8" rx="4" fill="#F1EDE3"/>
+    <rect x="54" y="118" width="160" height="8" rx="4" fill="#F1EDE3"/>
+    <rect x="54" y="140" width="90" height="24" rx="12" fill="#E5F7F1"/>
+    <circle cx="70" cy="152" r="6" fill="#0B807C"/>
+    <path d="M67 152l2 2 4-4" stroke="#FFFFFF" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
