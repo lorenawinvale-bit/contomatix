@@ -1,0 +1,25 @@
+// One-off: read public pricing pages of 8 AI SEO tools (22 Oct 2026) + organic pages for "ai seo tools for small business"; save signals. Tools are not named in the published post.
+const fs = require('fs'); const path = require('path');
+const UA = { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130 Safari/537.36' };
+const txt = h => h.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&#x27;|&apos;|&#039;/g, "'").replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
+const get = async u => { const r = await fetch(u, { redirect: 'follow', headers: UA, signal: AbortSignal.timeout(25000) }); return { status: r.status, html: await r.text() }; };
+// type, url, [regexes that must match the page text to confirm each recorded fact]
+const T = [
+ ['all-in-one research suite', 'https://www.semrush.com/prices/', { entry: 139, basis: 'monthly', limit: '500 keywords' }, [/\$ 139 monthly/, /500 keywords to track daily/, /Try for free or subscribe/]],
+ ['backlink and research suite', 'https://ahrefs.com/pricing', { entry: 129, basis: 'monthly', limit: '750 tracked keywords' }, [/\$ 129 \/ mo/, /750 tracked keywords/]],
+ ['content editor', 'https://surferseo.com/pricing/', { entry: 82, basis: 'billed yearly', limit: '50 AI prompts' }, [/82 USD per month/, /Billed yearly/, /Track 50 AI Prompts/]],
+ ['content brief tool', 'https://www.frase.io/pricing', { entry: 49, basis: 'monthly', limit: '10 articles a month' }, [/\$49\/mo month to month/, /Free 7-day trial/, /10 articles and 50 audit pages each month/]],
+ ['NLP content optimizer', 'https://neuronwriter.com/pricing/', { entry: 23, basis: 'monthly', limit: '25 documents' }, [/\$ 23 \/mo/, /25 documents/]],
+ ['enterprise content grader', 'https://www.clearscope.io/pricing', { entry: 129, basis: 'monthly', limit: '50 pages' }, [/\$129 \/month/, /14 day free trial/, /50 Pages/]],
+ ['content production platform', 'https://www.scalenut.com/pricing', { entry: 59, basis: 'monthly', limit: '10 prompts' }, [/\$59\/mo/, /Track up to 10 prompts/]],
+ ['budget all-in-one platform', 'https://seranking.com/pricing.html', { entry: 129, basis: 'monthly', limit: '2k keywords' }, [/\$ 129\.00 \/mo/, /Start free 14-day trial/, /2k keywords/]]
+];
+const SERP = ['https://onelittleweb.com/top-tools/best-ai-seo-tools/', 'https://www.gomega.ai/blog/ai-seo-tools-for-small-business', 'https://saasylinks.com/blog/ai-seo-tools-for-small-business/', 'https://www.frizerly.com/best-ai-seo-tool-for-small-businesses.html', 'https://searchenginewatch.com/ai-seo-tools-for-small-business/', 'https://blog.hubspot.com/marketing/ai-seo-tools-for-small-business', 'https://searchengineland.com/guide/local-seo-tools'];
+const GOOGLE = ['https://developers.google.com/search/docs/fundamentals/using-gen-ai-content', 'https://developers.google.com/search/docs/appearance/ai-features', 'https://developers.google.com/search/docs/essentials/spam-policies'];
+(async () => {
+  const out = { date: '2026-10-22', tools: [], serp: [], google: [] };
+  for (const [type, u, fact, res] of T) { const o = { type, url: u, ...fact }; try { const r = await get(u); const t = txt(r.html); o.status = r.status; o.confirmed = res.map(x => x.test(t)); o.trial = /free (7|14)[- ]day trial|(7|14)[- ]day free trial|Try for free|Start for Free|free trial/i.test(t); o.aiPrompts = /\bAI (visibility|prompts|search)|prompts|ChatGPT|AI Overviews/i.test(t); o.cancel = /cancel/i.test(t); } catch (e) { o.error = e.message; } out.tools.push(o); console.log(type, o.status, o.confirmed && o.confirmed.join(','), 'trial', o.trial, 'ai', o.aiPrompts); }
+  for (const u of SERP) { const o = { url: u }; try { const r = await get(u); const t = txt(r.html); o.status = r.status; o.words = t.split(' ').length; o.price = (t.match(/\$\s?\d/g) || []).length; o.free = /\bfree\b/i.test(t); o.googleDoc = /developers\.google\.com|support\.google\.com|Search Central/i.test(r.html) ; o.budget = /budget|cheap|affordable|under \$/i.test(t); o.limit = /limit|credits|cap\b|per month/i.test(t); o.date = (t.match(/(updated|published)[^.]{0,40}20\d\d/i) || [''])[0]; o.cancel = /cancel/i.test(t); o.pct = (t.match(/\d+(\.\d+)?\s?%/g) || []).length; o.years = [...new Set(t.match(/\b20(2\d)\b/g) || [])]; } catch (e) { o.error = e.message; } out.serp.push(o); console.log(u.slice(8, 40), o.status, o.words, 'price', o.price, 'budget', o.budget, 'gdoc', o.googleDoc); }
+  for (const u of GOOGLE) { const o = { url: u }; try { const r = await get(u); const t = txt(r.html); o.status = r.status; o.len = t.length; const k = /generative AI|scaled content abuse|AI Overviews|special optimi[sz]ation|no additional requirements/ig; o.snips = [...new Set((t.match(new RegExp('.{120}(' + k.source + ').{200}', 'ig')) || []).slice(0, 6))]; } catch (e) { o.error = e.message; } out.google.push(o); console.log(u.slice(8, 80), o.status, o.len); }
+  fs.writeFileSync(path.join(__dirname, '..', '..', 'keyword-research', 'serp-ai-seo-small-business-2026-10-22.json'), JSON.stringify(out, null, 1));
+})();
