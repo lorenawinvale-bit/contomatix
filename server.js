@@ -206,7 +206,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/link-prospect-scorer', '/tools/anchor-text-checker', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/link-prospect-scorer', '/tools/anchor-text-checker', '/tools/outbound-link-checker', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -526,6 +526,14 @@ app.get('/tools/anchor-text-checker', (req, res) => {
   res.render('pages/anchor-text-checker', {
     title: 'Free Anchor Text Checker: Find Generic Anchors | Contomatix',
     description: 'Paste anchor texts or page HTML and sort every link text into branded, exact match, partial match, naked URL, generic or too long. Free, no signup.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/outbound-link-checker', (req, res) => {
+  res.render('pages/outbound-link-checker', {
+    title: 'Free Outbound Link Checker: List External Links by Domain | Contomatix',
+    description: 'Paste a page HTML and list every external link grouped by domain, with nofollow, sponsored and ugc status and flags for insecure and shortened links. Free.',
     pageClass: 'page-tool'
   });
 });

@@ -142,6 +142,11 @@ module.exports = [
     summary: 'Paste anchor texts or page HTML and sort every link text into branded, exact match, partial match, naked URL, generic or too long, with repeat counts and warnings.'
   },
   {
+    slug: 'outbound-link-checker',
+    title: 'Outbound Link Checker',
+    summary: 'Paste a page HTML and list every external link grouped by domain, with nofollow, sponsored and ugc status and flags for insecure, shortened and affiliate-looking links.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'

@@ -1,0 +1,227 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Outbound Link Checker — List Every External Link on a Page, Grouped by Domain</h1>
+    <p>Paste the HTML of a page and this <strong>outbound link checker</strong> lists every external link, groups them by domain, shows which carry nofollow, sponsored or ugc, and flags insecure, shortened, affiliate-looking and repeated links. It runs in your browser: nothing is uploaded.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="ol-form" onsubmit="return false;" aria-label="Outbound link checker form">
+        <div>
+          <label for="ol-input">Page HTML</label>
+          <textarea id="ol-input" rows="12" placeholder="Open the page, press Ctrl+U (view source), copy everything and paste it here. The tool reads every link on the page."></textarea>
+        </div>
+        <div>
+          <label for="ol-domain">Your domain (optional)</label>
+          <input type="text" id="ol-domain" placeholder="e.g. contomatix.com (leave blank to detect it from the page)">
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Outbound link report</strong>
+        <span id="ol-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="ol-output" class="llms-output" style="max-height:520px;white-space:pre-wrap;">Paste a page's HTML to start.</pre>
+      <div id="ol-notes" style="margin-top:12px;font-size:0.92rem;line-height:1.6;"></div>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="ol-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="ol-download">Download .txt</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Outbound Link Checker Looks For</h2>
+    <ul class="service-points">
+      <li><strong>External links by domain:</strong> every link that points to a different domain, counted and grouped, so you can see who you link to most</li>
+      <li><strong>Link status:</strong> followed, nofollow, sponsored or ugc, read from each link's <code>rel</code> attribute, plus a page-level robots nofollow if the page has one</li>
+      <li><strong>Insecure links:</strong> links that start with http instead of https</li>
+      <li><strong>Shortened links:</strong> bit.ly, t.co and similar, which hide the real destination</li>
+      <li><strong>Affiliate-looking links:</strong> links with parameters such as ref, aff or tag, or tracking-style paths. If you are paid for them, Google asks you to mark them sponsored</li>
+      <li><strong>Repeated and empty links:</strong> the same URL linked several times, and links with no visible text</li>
+    </ul>
+
+    <h2>What Google Says About Outbound Links</h2>
+    <p>Google's documentation on qualifying outbound links says regular links that you expect Google to fetch and parse need no <code>rel</code> attribute. For others, it asks you to use <code>rel="sponsored"</code> for advertisements and paid placements, <code>rel="ugc"</code> for user-generated content such as comments and forum posts, and <code>rel="nofollow"</code> when other values do not apply and you would rather Google did not associate your site with the linked page. Its spam policies also list buying or selling links for ranking purposes as link spam. This tool reads the attributes it finds. It does not judge whether a link was paid for, so use the results as a prompt to review.</p>
+
+    <h2>How to Use the Report</h2>
+    <ul>
+      <li><strong>Before publishing a sponsored post:</strong> paste the page and confirm every paid link is marked sponsored.</li>
+      <li><strong>When auditing an old article:</strong> look for http links, shortened links and domains that no longer match the page's topic.</li>
+      <li><strong>When checking a guest post you received:</strong> see how many outbound links it carries and where they point.</li>
+      <li><strong>For link attribute detail on every link,</strong> including internal ones, use the <a href="/tools/dofollow-link-checker">dofollow link checker</a>. For link text, use the <a href="/tools/anchor-text-checker">anchor text checker</a>.</li>
+    </ul>
+
+    <h2>Outbound Link Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>What is an outbound link?<span class="faq-icon"></span></summary>
+        <p>It is a link on your page that points to a page on a different domain. Links to other pages on your own domain are internal links.</p>
+      </details>
+      <details>
+        <summary>Should outbound links be nofollow?<span class="faq-icon"></span></summary>
+        <p>Not by default. Google says regular links you expect it to follow need no rel attribute. It asks for sponsored on paid links, ugc on user-generated links, and nofollow when you would rather not be associated with the page.</p>
+      </details>
+      <details>
+        <summary>Does the tool visit the links to see if they work?<span class="faq-icon"></span></summary>
+        <p>No. It reads only the HTML you paste and never fetches any URL, so it cannot tell whether a link is broken. Use it to list and review links, then test the important ones yourself.</p>
+      </details>
+      <details>
+        <summary>How many outbound links is too many?<span class="faq-icon"></span></summary>
+        <p>Google gives no limit. Link where it helps the reader, and use the report to spot a page where links look excessive or off-topic.</p>
+      </details>
+      <details>
+        <summary>How does it decide a link is affiliate-looking?<span class="faq-icon"></span></summary>
+        <p>It looks for common parameters such as ref, aff, affiliate and tag, and for paths such as /go/ and /out/. It is a prompt, not proof, so check any flagged link.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is analysed in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a link profile reviewed by a person?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Outbound Link Checker',
+    url: site.baseUrl + '/tools/outbound-link-checker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste a page HTML and list every external link grouped by domain, with nofollow, sponsored and ugc status and flags for insecure, shortened and affiliate-looking links. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Outbound Link Checker', item: site.baseUrl + '/tools/outbound-link-checker' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What is an outbound link?', acceptedAnswer: { '@type': 'Answer', text: 'It is a link on your page that points to a page on a different domain. Links to other pages on your own domain are internal links.' } },
+      { '@type': 'Question', name: 'Should outbound links be nofollow?', acceptedAnswer: { '@type': 'Answer', text: 'Not by default. Google says regular links you expect it to follow need no rel attribute. It asks for sponsored on paid links, ugc on user-generated links, and nofollow when you would rather not be associated with the page.' } },
+      { '@type': 'Question', name: 'Does the tool visit the links to see if they work?', acceptedAnswer: { '@type': 'Answer', text: 'No. It reads only the HTML you paste and never fetches any URL, so it cannot tell whether a link is broken.' } },
+      { '@type': 'Question', name: 'How many outbound links is too many?', acceptedAnswer: { '@type': 'Answer', text: 'Google gives no limit. Link where it helps the reader, and use the report to spot a page where links look excessive or off-topic.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is analysed in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+  var SHORT = /^(bit\.ly|t\.co|goo\.gl|tinyurl\.com|ow\.ly|buff\.ly|is\.gd|rebrand\.ly|cutt\.ly|t\.ly|lnkd\.in|shorturl\.at)$/i;
+  var AFF_Q = /[?&](ref|aff|affiliate|aff_id|tag|partner|clickid|subid|irclickid)=/i;
+  var AFF_P = /\/(go|out|recommends|refer|visit)\//i;
+
+  function host(u) { try { return new URL(u).hostname.replace(/^www\./, '').toLowerCase(); } catch (e) { return ''; } }
+  function attr(tag, name) { var m = tag.match(new RegExp('\\b' + name + '\\s*=\\s*("([^"]*)"|\'([^\']*)\'|([^\\s>]+))', 'i')); return m ? (m[2] !== undefined ? m[2] : (m[3] !== undefined ? m[3] : m[4])) : ''; }
+  function clean(s) { return s.replace(/<img[^>]*alt=["']([^"']*)["'][^>]*>/gi, '$1').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim(); }
+
+  function build() {
+    var raw = $('ol-input').value;
+    if (!/<a\b/i.test(raw)) return null;
+    var me = $('ol-domain').value.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '');
+    if (!me) {
+      var c = raw.match(/<link[^>]*rel=["']canonical["'][^>]*>/i) || raw.match(/<meta[^>]*property=["']og:url["'][^>]*>/i);
+      if (c) me = host(attr(c[0], 'href') || attr(c[0], 'content'));
+    }
+    var pageNofollow = /<meta[^>]*name=["']robots["'][^>]*content=["'][^"']*nofollow/i.test(raw);
+    var re = /<a\b([^>]*)>([\s\S]*?)<\/a>/gi, m, all = 0, ext = [], doms = {};
+    while ((m = re.exec(raw))) {
+      var tag = m[1], href = attr(tag, 'href');
+      if (!href || /^(#|mailto:|tel:|javascript:)/i.test(href)) continue;
+      all++;
+      if (!/^https?:\/\//i.test(href) && href.indexOf('//') !== 0) continue;
+      if (href.indexOf('//') === 0) href = 'https:' + href;
+      var h = host(href);
+      if (!h || (me && (h === me || h.slice(-(me.length + 1)) === '.' + me))) continue;
+      var rel = attr(tag, 'rel').toLowerCase();
+      var st = /sponsored/.test(rel) ? 'sponsored' : /ugc/.test(rel) ? 'ugc' : /nofollow/.test(rel) ? 'nofollow' : 'followed';
+      var text = clean(m[2]);
+      ext.push({ href: href, host: h, st: st, text: text });
+      var d = doms[h] || (doms[h] = { n: 0, followed: 0, qualified: 0 }); d.n++; if (st === 'followed') d.followed++; else d.qualified++;
+    }
+    return { all: all, ext: ext, doms: doms, me: me, pageNofollow: pageNofollow };
+  }
+
+  function render() {
+    var r = build();
+    if (!r) { $('ol-output').textContent = "Paste a page's HTML to start."; $('ol-notes').innerHTML = ''; $('ol-status').textContent = 'Waiting for input'; current = ''; return; }
+    var n = r.ext.length, names = Object.keys(r.doms).sort(function (a, b) { return r.doms[b].n - r.doms[a].n; });
+    var cnt = { followed: 0, nofollow: 0, sponsored: 0, ugc: 0 };
+    r.ext.forEach(function (e) { cnt[e.st]++; });
+    var http = r.ext.filter(function (e) { return /^http:\/\//i.test(e.href); });
+    var short = r.ext.filter(function (e) { return SHORT.test(e.host); });
+    var aff = r.ext.filter(function (e) { return AFF_Q.test(e.href) || AFF_P.test(e.href); });
+    var empty = r.ext.filter(function (e) { return !e.text; });
+    var seen = {}, dup = [];
+    r.ext.forEach(function (e) { var k = e.href.replace(/#.*$/, ''); seen[k] = (seen[k] || 0) + 1; });
+    Object.keys(seen).forEach(function (k) { if (seen[k] > 1) dup.push(k + ' (' + seen[k] + 'x)'); });
+    var L = [];
+    L.push('OUTBOUND LINK REPORT'); L.push('');
+    L.push('Your domain: ' + (r.me || 'not detected (all absolute links counted as external)'));
+    L.push('Links on page: ' + r.all + '   External: ' + n + '   Different domains: ' + names.length);
+    L.push('Followed: ' + cnt.followed + '   Nofollow: ' + cnt.nofollow + '   Sponsored: ' + cnt.sponsored + '   Ugc: ' + cnt.ugc);
+    if (r.pageNofollow) L.push('Page-level robots meta contains nofollow: links on this page are treated as nofollow.');
+    L.push(''); L.push('BY DOMAIN');
+    names.slice(0, 40).forEach(function (d) { var x = r.doms[d]; L.push(('  ' + d + '  ').slice(0, 40) + x.n + ' link' + (x.n > 1 ? 's' : '') + '  (' + x.followed + ' followed, ' + x.qualified + ' qualified)'); });
+    if (names.length > 40) L.push('  ... and ' + (names.length - 40) + ' more domains');
+    function list(title, a) { if (a.length) { L.push(''); L.push(title + ' (' + a.length + ')'); a.slice(0, 15).forEach(function (e) { L.push('  ' + (e.href || e)); }); } }
+    list('INSECURE (http) LINKS', http); list('SHORTENED LINKS', short); list('AFFILIATE-LOOKING LINKS', aff);
+    if (dup.length) { L.push(''); L.push('SAME URL LINKED MORE THAN ONCE (' + dup.length + ')'); dup.slice(0, 15).forEach(function (x) { L.push('  ' + x); }); }
+    if (empty.length) { L.push(''); L.push('LINKS WITH NO VISIBLE TEXT (' + empty.length + ')'); empty.slice(0, 10).forEach(function (e) { L.push('  ' + e.href); }); }
+    current = L.join('\n');
+    $('ol-output').textContent = current;
+    var notes = [];
+    if (!n) notes.push('No external links found. If you expected some, check that you pasted the full page source and that your domain is right.');
+    if (aff.length && aff.some(function (e) { return e.st === 'followed'; })) notes.push('<strong>Affiliate-looking links without sponsored.</strong> If you earn money from these, Google asks you to mark them <code>rel="sponsored"</code>.');
+    if (http.length) notes.push('<strong>' + http.length + ' link(s) use http.</strong> Check whether an https version exists.');
+    if (short.length) notes.push('<strong>' + short.length + ' shortened link(s).</strong> Replace them with the real destination so readers and crawlers can see it.');
+    if (n && !cnt.nofollow && !cnt.sponsored && !cnt.ugc) notes.push('All external links are followed. That is normal for editorial links; mark paid or user-submitted ones.');
+    $('ol-notes').innerHTML = notes.length ? '<ul style="padding-left:18px;margin:0;"><li>' + notes.join('</li><li>') + '</li></ul>' : '';
+    $('ol-status').textContent = n + ' external link' + (n === 1 ? '' : 's') + ' checked';
+  }
+
+  $('ol-input').addEventListener('input', render);
+  $('ol-domain').addEventListener('input', render);
+  $('ol-copy').addEventListener('click', function () { if (current && navigator.clipboard) navigator.clipboard.writeText(current); });
+  $('ol-download').addEventListener('click', function () { if (!current) return; var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([current], { type: 'text/plain' })); a.download = 'outbound-link-report.txt'; a.click(); });
+})();
+</script>
