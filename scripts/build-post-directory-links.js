@@ -12,7 +12,7 @@ console.log(JSON.stringify(D));
 build({
   slug: 'directory-links', category: 'Link Building', author: 'Umaira Liaquat', date: '2026-10-24',
   title: 'Directory Links: Do They Still Help? 9 Pages and Our Test',
-  excerpt: `Directory links tested: ${D.ok} top pages read, Google's rule on low-quality directories, and our own result: 22 of our 24 links are listings and the two we could read were nofollow.`,
+  excerpt: `Directory links tested: ${D.ok} top pages read, Google's rule on low-quality directories, and our result: 22 of 24 links are listings, two readable ones nofollow.`,
   donut: [['DIRECTORY', 'LINKS'], [['Pick Real', 'Directories'], 'Check the Link', ['Read Google', 'Rules'], 'Stay Selective', ['Track and', 'Review']]],
   cover: { badge: 'REAL SERP CHECK + OUR TEST', search: 'directory links', card: `Pages read: ${D.ok} of ${D.shown}`, lines: [`Mention risk or low quality: ${D.risk} of ${D.ok}`, `Name Google's policy: ${D.policy} of ${D.ok}`, 'Our links on listings: 22 of 24', 'Readable listings with nofollow: 2 of 2'], last: 'Few pages cite the rule', big: `${D.policy} of ${D.ok}`, k1: 'top pages name', k2: "Google's spam policy", title: 'Directory Links', sub: 'Do they still help?' },
   info: { title: `Directory Links: ${D.ok} Pages Read`, sub: 'Organic results for "directory links", Google US, 24 October 2026', leftTitle: 'What the pages cover', leftTag: `Number of the ${D.ok} readable pages`, max: D.ok,

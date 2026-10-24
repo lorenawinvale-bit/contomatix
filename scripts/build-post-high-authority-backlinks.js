@@ -12,7 +12,7 @@ console.log(JSON.stringify(D));
 build({
   slug: 'high-authority-backlinks', category: 'Link Building', author: 'Muhammad Reyan Nizami', date: '2026-10-24',
   title: "High Authority Backlinks: Why DA and DR Are Not Google's",
-  excerpt: `High authority backlinks explained: ${D.da} of ${D.ok} top pages define them by DA, yet DA, DR and authority score appear 0 times in ${D.gdocs} Google docs. A six-factor test to judge any link.`,
+  excerpt: `High authority backlinks explained: ${D.da} of ${D.ok} top pages rely on DA, yet DA and DR appear 0 times in ${D.gdocs} Google docs. A six-factor test.`,
   donut: [['HIGH AUTHORITY', 'BACKLINKS'], [['Know the', 'Metrics'], 'Read Google', ['Judge', 'Relevance'], 'Check the Audience', ['Verify Editorial', 'Placement']]],
   cover: { badge: 'REAL SERP CHECK', search: 'high authority backlinks', card: `Pages read: ${D.ok} of ${D.shown}`, lines: [`Define authority by DA: ${D.da} of ${D.ok}`, `Mention DR: ${D.dr} of ${D.ok}`, `Mention relevance: ${D.relevance} of ${D.ok}`, `Google docs using DA or DR: 0 of ${D.gdocs}`], last: "Metrics are third-party numbers", big: `0 of ${D.gdocs}`, k1: 'Google docs searched', k2: 'mention DA, DR or score', title: 'High Authority Backlinks', sub: "Why DA and DR are not Google's" },
   info: { title: `High Authority Backlinks: ${D.ok} Pages Read`, sub: 'Organic results for "high authority backlinks", Google US, 24 October 2026', leftTitle: 'What the pages lean on', leftTag: `Number of the ${D.ok} readable pages`, max: D.ok,
