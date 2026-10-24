@@ -1,0 +1,232 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Backlink Monitor Tool — Log Your Links, Check They Are Still Live and See Cost Per Live Link</h1>
+    <p>Keep a simple log of every backlink you earn, place or pay for. Paste a linking page's HTML to confirm your link is still there and read its rel attribute, and get live rate, referring domains and cost per live link. Your log stays in your browser: nothing is uploaded.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer" style="max-width:1100px;">
+    <form id="bm-form" onsubmit="return false;" class="contact-form llms-form" aria-label="Add a backlink" style="margin-bottom:22px;">
+      <h2 style="margin-top:0;">Add a backlink</h2>
+      <div><label for="bm-from">Linking page URL</label><input type="text" id="bm-from" placeholder="https://example.com/article"></div>
+      <div><label for="bm-to">Your page it links to</label><input type="text" id="bm-to" placeholder="https://yoursite.com/page"></div>
+      <div><label for="bm-anchor">Anchor text</label><input type="text" id="bm-anchor" placeholder="e.g. link building guide"></div>
+      <div><label for="bm-type">How you got it</label>
+        <select id="bm-type"><option value="placed">Placed by you (profile, listing)</option><option value="earned">Earned (editorial)</option><option value="paid">Paid / sponsored</option></select></div>
+      <div><label for="bm-cost">Cost in your currency (0 if free)</label><input type="number" id="bm-cost" min="0" step="any" value="0"></div>
+      <div><label for="bm-date">Date acquired</label><input type="date" id="bm-date"></div>
+      <div class="llms-actions" style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="bm-add">Add to log</button>
+        <button type="button" class="btn btn-glass" id="bm-csv">Download CSV</button>
+        <button type="button" class="btn btn-glass" id="bm-clear">Clear log</button>
+      </div>
+    </form>
+
+    <div class="contact-info-card llms-preview-card" style="margin-bottom:22px;">
+      <div class="llms-preview-head"><strong>Summary</strong><span id="bm-status" class="llms-status">Empty log</span></div>
+      <pre id="bm-summary" class="llms-output" style="white-space:pre-wrap;max-height:260px;">Add your first backlink to see totals.</pre>
+    </div>
+
+    <div class="contact-info-card llms-preview-card" style="margin-bottom:22px;overflow-x:auto;">
+      <div class="llms-preview-head"><strong>Your backlinks</strong><span class="llms-status">Saved in this browser</span></div>
+      <table id="bm-table" style="width:100%;border-collapse:collapse;font-size:0.9rem;"></table>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head"><strong>Check that a link is still live</strong><span id="bm-vstatus" class="llms-status">Pick a link</span></div>
+      <p style="font-size:0.92rem;">Open the linking page, press Ctrl+U, copy the page source and paste it here. The tool looks for a link to your page and reads its rel attribute. It never visits any URL.</p>
+      <select id="bm-pick" style="width:100%;margin-bottom:10px;"></select>
+      <textarea id="bm-html" rows="6" placeholder="Paste the linking page's HTML" style="width:100%;"></textarea>
+      <div class="llms-actions" style="margin-top:10px;"><button type="button" class="btn btn-primary" id="bm-verify">Check this link</button></div>
+      <div id="bm-vresult" style="margin-top:10px;font-size:0.92rem;line-height:1.6;"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Backlink Monitor Tool Tracks</h2>
+    <ul class="service-points">
+      <li><strong>Each link's source:</strong> placed by you, earned editorially or paid for, so your report never calls a listing an earned link</li>
+      <li><strong>Status:</strong> live, lost or not checked, updated when you paste the linking page's HTML</li>
+      <li><strong>Attribute:</strong> followed, nofollow, sponsored or ugc, read from the link's rel attribute</li>
+      <li><strong>Referring domains:</strong> the number of different sites, because ten links from one site are one source</li>
+      <li><strong>Cost per live link:</strong> total spend divided by links you have confirmed live</li>
+      <li><strong>Destination:</strong> how many links point to your home page and how many to inner pages</li>
+    </ul>
+
+    <h2>Why Log Links at All</h2>
+    <p>Google's Search Console shows a sample of the sites that link to you, but it does not tell you how a link was acquired, what it cost or whether a particular page still carries it. A log answers those questions. It also helps you follow Google's guidance: its spam policies list buying or selling links for ranking purposes as link spam, and its guidance on qualifying outbound links asks that paid placements carry <code>rel="sponsored"</code>. A record of which links were paid and how they are marked makes it easier to keep to that.</p>
+
+    <h2>How to Use the Log</h2>
+    <ul>
+      <li><strong>Add every link when you get it.</strong> Use the type that is true: placed, earned or paid.</li>
+      <li><strong>Check it after a few weeks.</strong> Open the linking page, paste its source into the checker and confirm it is live and what the rel says. Pages can change.</li>
+      <li><strong>Review monthly.</strong> Look at live rate, cost per live link and whether links point only at your home page.</li>
+      <li><strong>Download the CSV</strong> to keep a copy or to share with a client.</li>
+    </ul>
+    <p>For link attributes on a whole page, use the <a href="/tools/dofollow-link-checker">dofollow link checker</a> or the <a href="/tools/outbound-link-checker">outbound link checker</a>. For link text, use the <a href="/tools/anchor-text-checker">anchor text checker</a>, and to work out what a campaign costs before you start, use the <a href="/tools/link-building-cost-calculator">link building cost calculator</a>.</p>
+
+    <h2>Backlink Monitor Tool FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Does the tool find my backlinks automatically?<span class="faq-icon"></span></summary>
+        <p>No. It is a log. You add links you know about, for example from Search Console or your outreach sheet, and check them by pasting the linking page's HTML.</p>
+      </details>
+      <details>
+        <summary>Does it visit the linking pages?<span class="faq-icon"></span></summary>
+        <p>No. It never fetches any URL. It reads only the HTML you paste, so it cannot tell you about a page you have not pasted.</p>
+      </details>
+      <details>
+        <summary>Where is my log stored?<span class="faq-icon"></span></summary>
+        <p>In your browser's local storage on this device. Nothing is uploaded to any server, including ours. Clearing site data removes the log, so download the CSV for a backup.</p>
+      </details>
+      <details>
+        <summary>What is cost per live link?<span class="faq-icon"></span></summary>
+        <p>It is the total you spent divided by the number of links you have confirmed as live. It is more honest than cost per link ordered.</p>
+      </details>
+      <details>
+        <summary>Why record how a link was acquired?<span class="faq-icon"></span></summary>
+        <p>Because placed, earned and paid links carry different value and risk, and Google asks that paid placements be marked sponsored or nofollow. Keeping them apart avoids mislabelling.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything runs in your browser with JavaScript and is kept only in your own local storage.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a link profile reviewed by a person?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Backlink Monitor Tool',
+    url: site.baseUrl + '/tools/backlink-monitor-tool',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Log your backlinks, check a link is still live by pasting the linking page HTML, and see live rate, referring domains and cost per live link. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Backlink Monitor Tool', item: site.baseUrl + '/tools/backlink-monitor-tool' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Does the tool find my backlinks automatically?', acceptedAnswer: { '@type': 'Answer', text: 'No. It is a log. You add links you know about and check them by pasting the linking page HTML.' } },
+      { '@type': 'Question', name: 'Does it visit the linking pages?', acceptedAnswer: { '@type': 'Answer', text: 'No. It never fetches any URL. It reads only the HTML you paste.' } },
+      { '@type': 'Question', name: 'Where is my log stored?', acceptedAnswer: { '@type': 'Answer', text: 'In your browser local storage on this device. Nothing is uploaded to any server. Download the CSV for a backup.' } },
+      { '@type': 'Question', name: 'What is cost per live link?', acceptedAnswer: { '@type': 'Answer', text: 'It is the total you spent divided by the number of links you have confirmed as live.' } },
+      { '@type': 'Question', name: 'Why record how a link was acquired?', acceptedAnswer: { '@type': 'Answer', text: 'Placed, earned and paid links carry different value and risk, and Google asks that paid placements be marked sponsored or nofollow.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var KEY = 'ctx_backlink_log_v1', rows = [];
+  function load() { try { rows = JSON.parse(localStorage.getItem(KEY) || '[]') || []; } catch (e) { rows = []; } }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(rows)); } catch (e) {} }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function host(u) { try { return new URL(/^https?:\/\//i.test(u) ? u : 'https://' + u).hostname.replace(/^www\./, '').toLowerCase(); } catch (e) { return ''; } }
+  function isHome(u) { try { var p = new URL(/^https?:\/\//i.test(u) ? u : 'https://' + u); return p.pathname === '/' || p.pathname === ''; } catch (e) { return false; } }
+  function attr(tag, name) { var m = tag.match(new RegExp('\\b' + name + '\\s*=\\s*("([^"]*)"|\'([^\']*)\'|([^\\s>]+))', 'i')); return m ? (m[2] !== undefined ? m[2] : (m[3] !== undefined ? m[3] : m[4])) : ''; }
+
+  function summary() {
+    var n = rows.length;
+    if (!n) { $('bm-summary').textContent = 'Add your first backlink to see totals.'; $('bm-status').textContent = 'Empty log'; return; }
+    var live = rows.filter(function (r) { return r.status === 'live'; }).length;
+    var lost = rows.filter(function (r) { return r.status === 'lost'; }).length;
+    var doms = {}; rows.forEach(function (r) { var h = host(r.from); if (h) doms[h] = 1; });
+    var by = { placed: 0, earned: 0, paid: 0 }; rows.forEach(function (r) { by[r.type] = (by[r.type] || 0) + 1; });
+    var rel = { followed: 0, nofollow: 0, sponsored: 0, ugc: 0, unknown: 0 }; rows.forEach(function (r) { rel[r.rel || 'unknown'] = (rel[r.rel || 'unknown'] || 0) + 1; });
+    var cost = rows.reduce(function (a, r) { return a + (parseFloat(r.cost) || 0); }, 0);
+    var home = rows.filter(function (r) { return isHome(r.to); }).length;
+    var L = [];
+    L.push('Links logged: ' + n + '   Live: ' + live + '   Lost: ' + lost + '   Not checked: ' + (n - live - lost));
+    L.push('Live rate (of checked): ' + (live + lost ? Math.round(live / (live + lost) * 100) + '%' : 'n/a'));
+    L.push('Referring domains: ' + Object.keys(doms).length);
+    L.push('Placed: ' + by.placed + '   Earned: ' + by.earned + '   Paid: ' + by.paid);
+    L.push('Followed: ' + rel.followed + '   Nofollow: ' + rel.nofollow + '   Sponsored: ' + rel.sponsored + '   Ugc: ' + rel.ugc + '   Unknown: ' + rel.unknown);
+    L.push('Pointing to a home page: ' + home + ' of ' + n);
+    L.push('Total cost: ' + cost.toFixed(2) + '   Cost per live link: ' + (live ? (cost / live).toFixed(2) : 'n/a (no link confirmed live)'));
+    $('bm-summary').textContent = L.join('\n');
+    $('bm-status').textContent = n + ' link' + (n > 1 ? 's' : '') + ' logged';
+  }
+
+  function table() {
+    var h = '<tr style="text-align:left;border-bottom:1px solid #ddd;"><th>Linking page</th><th>Anchor</th><th>Type</th><th>Rel</th><th>Cost</th><th>Status</th><th>Checked</th><th></th></tr>';
+    rows.forEach(function (r, i) {
+      h += '<tr style="border-bottom:1px solid #eee;"><td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + esc(r.from) + '">' + esc(r.from) + '</td><td>' + esc(r.anchor || '') + '</td><td>' + esc(r.type) + '</td><td>' + esc(r.rel || '?') + '</td><td>' + esc(r.cost || 0) + '</td><td>' + esc(r.status || 'not checked') + '</td><td>' + esc(r.checked || '') + '</td><td><button type="button" data-del="' + i + '" class="btn btn-glass" style="padding:2px 8px;">x</button></td></tr>';
+    });
+    $('bm-table').innerHTML = rows.length ? h : '<tr><td>No links yet.</td></tr>';
+    var opts = rows.map(function (r, i) { return '<option value="' + i + '">' + esc(r.from) + '</option>'; }).join('');
+    $('bm-pick').innerHTML = opts || '<option value="">Add a link first</option>';
+  }
+
+  function redraw() { table(); summary(); }
+
+  $('bm-add').addEventListener('click', function () {
+    var from = $('bm-from').value.trim(), to = $('bm-to').value.trim();
+    if (!from || !to) { $('bm-status').textContent = 'Enter both URLs'; return; }
+    rows.push({ from: from, to: to, anchor: $('bm-anchor').value.trim(), type: $('bm-type').value, cost: parseFloat($('bm-cost').value) || 0, date: $('bm-date').value, rel: '', status: '', checked: '' });
+    save(); $('bm-from').value = ''; $('bm-anchor').value = ''; redraw();
+  });
+  $('bm-table').addEventListener('click', function (e) { var d = e.target.getAttribute && e.target.getAttribute('data-del'); if (d !== null && d !== undefined) { rows.splice(+d, 1); save(); redraw(); } });
+  $('bm-clear').addEventListener('click', function () { if (rows.length && confirm('Remove all links from the log?')) { rows = []; save(); redraw(); } });
+  $('bm-csv').addEventListener('click', function () {
+    if (!rows.length) return;
+    var q = function (s) { return '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"'; };
+    var out = ['linking_page,target_page,anchor,type,cost,date,rel,status,checked'].concat(rows.map(function (r) { return [r.from, r.to, r.anchor, r.type, r.cost, r.date, r.rel, r.status, r.checked].map(q).join(','); })).join('\n');
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([out], { type: 'text/csv' })); a.download = 'backlink-log.csv'; a.click();
+  });
+  $('bm-verify').addEventListener('click', function () {
+    var i = parseInt($('bm-pick').value, 10), html = $('bm-html').value;
+    if (isNaN(i) || !rows[i]) { $('bm-vresult').textContent = 'Add and pick a link first.'; return; }
+    if (!/<a\b/i.test(html)) { $('bm-vresult').textContent = 'Paste the linking page HTML (Ctrl+U on the page).'; return; }
+    var target = host(rows[i].to), re = /<a\b([^>]*)>([\s\S]*?)<\/a>/gi, m, found = null;
+    while ((m = re.exec(html))) { var hr = attr(m[1], 'href'); if (hr && /^https?:\/\//i.test(hr) && host(hr) === target) { found = { tag: m[1], text: m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() }; break; } }
+    var today = new Date().toISOString().slice(0, 10);
+    if (!found) { rows[i].status = 'lost'; rows[i].checked = today; $('bm-vresult').innerHTML = '<strong>No link to ' + esc(target) + ' found</strong> in the pasted HTML. Marked as lost. If the page loads links with JavaScript, copy the rendered HTML instead.'; $('bm-vstatus').textContent = 'Not found'; }
+    else {
+      var rel = attr(found.tag, 'rel').toLowerCase(); var st = /sponsored/.test(rel) ? 'sponsored' : /ugc/.test(rel) ? 'ugc' : /nofollow/.test(rel) ? 'nofollow' : 'followed';
+      rows[i].status = 'live'; rows[i].rel = st; rows[i].checked = today; if (!rows[i].anchor) rows[i].anchor = found.text;
+      var note = (rows[i].type === 'paid' && st === 'followed') ? ' <strong>This link is marked paid in your log but has no sponsored or nofollow attribute.</strong> Google asks for sponsored on paid placements.' : '';
+      $('bm-vresult').innerHTML = 'Link found. Anchor: "' + esc(found.text || '(empty)') + '". Attribute: <strong>' + st + '</strong>.' + note; $('bm-vstatus').textContent = 'Live';
+    }
+    save(); redraw();
+  });
+  load(); $('bm-date').value = new Date().toISOString().slice(0, 10); redraw();
+})();
+</script>

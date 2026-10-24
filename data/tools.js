@@ -147,6 +147,11 @@ module.exports = [
     summary: 'Paste a page HTML and list every external link grouped by domain, with nofollow, sponsored and ugc status and flags for insecure, shortened and affiliate-looking links.'
   },
   {
+    slug: 'backlink-monitor-tool',
+    title: 'Backlink Monitor Tool',
+    summary: 'Log your backlinks, check a link is still live by pasting the linking page HTML, and see live rate, referring domains and cost per live link.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'
