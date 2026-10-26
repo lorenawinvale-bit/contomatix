@@ -1,0 +1,202 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Link Building Management Tool — Track Every Prospect From First Email to Live Link</h1>
+    <p>Keep your whole outreach pipeline in one place: prospects, who you contacted, who replied, links agreed and links live. See your reply and win rates, get follow-ups that are due, and export a CSV. Everything is saved in your browser and nothing is uploaded.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer" style="max-width:1100px;">
+    <form id="lb-form" onsubmit="return false;" class="contact-form llms-form" aria-label="Add a prospect" style="margin-bottom:22px;">
+      <h2 style="margin-top:0;">Add a prospect</h2>
+      <div><label for="lb-url">Prospect page or site URL</label><input type="text" id="lb-url" placeholder="https://example.com/resources"></div>
+      <div><label for="lb-contact">Contact name or email (optional)</label><input type="text" id="lb-contact" placeholder="Name or email"></div>
+      <div><label for="lb-target">Your page you want linked</label><input type="text" id="lb-target" placeholder="https://yoursite.com/guide"></div>
+      <div><label for="lb-method">Method</label>
+        <select id="lb-method"><option>Resource page</option><option>Link reclamation</option><option>Guest post</option><option>Digital PR</option><option>Broken link</option><option>Partnership</option><option>Other</option></select></div>
+      <div><label for="lb-follow">Follow up on (optional)</label><input type="date" id="lb-follow"></div>
+      <div><label for="lb-notes">Notes (optional)</label><input type="text" id="lb-notes" placeholder="Hook, angle or what they said"></div>
+      <div class="llms-actions" style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="lb-add">Add prospect</button>
+        <button type="button" class="btn btn-glass" id="lb-csv">Download CSV</button>
+        <button type="button" class="btn btn-glass" id="lb-clear">Clear all</button>
+      </div>
+    </form>
+
+    <div class="contact-info-card llms-preview-card" style="margin-bottom:22px;">
+      <div class="llms-preview-head"><strong>Pipeline summary</strong><span id="lb-status" class="llms-status">Empty</span></div>
+      <pre id="lb-summary" class="llms-output" style="white-space:pre-wrap;max-height:300px;">Add your first prospect to see your pipeline.</pre>
+    </div>
+
+    <div class="contact-info-card llms-preview-card" style="overflow-x:auto;">
+      <div class="llms-preview-head"><strong>Your prospects</strong><span class="llms-status">Saved in this browser</span></div>
+      <table id="lb-table" style="width:100%;border-collapse:collapse;font-size:0.9rem;"></table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Link Building Management Tool Tracks</h2>
+    <ul class="service-points">
+      <li><strong>Pipeline stage:</strong> prospect, contacted, replied, link agreed, live or lost, changed from a drop-down on each row</li>
+      <li><strong>Method:</strong> resource page, reclamation, guest post, digital PR, broken link or partnership, so you can see which route works for you</li>
+      <li><strong>Follow-ups:</strong> a date for each prospect, with overdue ones flagged in the summary</li>
+      <li><strong>Rates:</strong> reply rate (replied or further, out of contacted) and win rate (live, out of contacted)</li>
+      <li><strong>Notes:</strong> the hook or angle for each prospect, so your next email is specific</li>
+    </ul>
+
+    <h2>How to Use the Pipeline</h2>
+    <ul>
+      <li><strong>Add prospects after you score them.</strong> Our <a href="/tools/link-prospect-scorer">link prospect scorer</a> and the <a href="/blog/link-prospecting">link prospecting guide</a> help you decide who is worth a place on the list.</li>
+      <li><strong>Move each row as things happen.</strong> A stage that never changes is a prospect you forgot.</li>
+      <li><strong>Write personal emails.</strong> The <a href="/tools/outreach-email-generator">outreach email generator</a> drafts one per tactic.</li>
+      <li><strong>When a link goes live,</strong> record it in the <a href="/tools/backlink-monitor-tool">backlink monitor tool</a> and check its rel attribute.</li>
+    </ul>
+    <p>Google's spam policies list buying or selling links for ranking purposes as link spam, and its guidance on qualifying outbound links asks that paid placements carry <code>rel="sponsored"</code>. If a prospect asks for payment, note it in the row and mark the stage honestly, so your records show which links were earned and which were bought.</p>
+
+    <h2>Link Building Management Tool FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>Is this a full CRM?<span class="faq-icon"></span></summary>
+        <p>No. It is a simple pipeline for link building outreach: prospects, stages, follow-ups and rates. It does not send emails or find prospects for you.</p>
+      </details>
+      <details>
+        <summary>Where is my data stored?<span class="faq-icon"></span></summary>
+        <p>In your browser's local storage on this device. Nothing is sent to any server, including ours. Clearing site data removes it, so download the CSV as a backup.</p>
+      </details>
+      <details>
+        <summary>How are reply rate and win rate calculated?<span class="faq-icon"></span></summary>
+        <p>Reply rate is the number of prospects at replied, link agreed or live, divided by prospects at contacted or further. Win rate is prospects at live, divided by the same base. Lost prospects count as contacted.</p>
+      </details>
+      <details>
+        <summary>What counts as a follow-up that is due?<span class="faq-icon"></span></summary>
+        <p>Any prospect at the contacted or replied stage whose follow-up date is today or earlier.</p>
+      </details>
+      <details>
+        <summary>Does it check whether a link is live?<span class="faq-icon"></span></summary>
+        <p>No. It never fetches any page. Use the backlink monitor tool and paste the linking page's HTML to confirm a link is live.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything runs in your browser with JavaScript and is kept only in your own local storage.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a link profile reviewed by a person?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Link Building Management Tool',
+    url: site.baseUrl + '/tools/link-building-management-tool',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Track link building prospects from first email to live link, with stages, follow-up dates, reply and win rates, and CSV export. Free, no signup.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Link Building Management Tool', item: site.baseUrl + '/tools/link-building-management-tool' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Is this a full CRM?', acceptedAnswer: { '@type': 'Answer', text: 'No. It is a simple pipeline for link building outreach: prospects, stages, follow-ups and rates. It does not send emails or find prospects for you.' } },
+      { '@type': 'Question', name: 'Where is my data stored?', acceptedAnswer: { '@type': 'Answer', text: 'In your browser local storage on this device. Nothing is sent to any server. Download the CSV as a backup.' } },
+      { '@type': 'Question', name: 'How are reply rate and win rate calculated?', acceptedAnswer: { '@type': 'Answer', text: 'Reply rate is prospects at replied, link agreed or live divided by prospects at contacted or further. Win rate is prospects at live divided by the same base.' } },
+      { '@type': 'Question', name: 'Does it check whether a link is live?', acceptedAnswer: { '@type': 'Answer', text: 'No. It never fetches any page. Use the backlink monitor tool and paste the linking page HTML to confirm a link is live.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything runs in your browser with JavaScript and is kept only in your own local storage.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var KEY = 'ctx_lb_pipeline_v1', rows = [];
+  var STAGES = ['Prospect', 'Contacted', 'Replied', 'Link agreed', 'Live', 'Lost'];
+  function load() { try { rows = JSON.parse(localStorage.getItem(KEY) || '[]') || []; } catch (e) { rows = []; } }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(rows)); } catch (e) {} }
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function today() { return new Date().toISOString().slice(0, 10); }
+
+  function summary() {
+    var n = rows.length;
+    if (!n) { $('lb-summary').textContent = 'Add your first prospect to see your pipeline.'; $('lb-status').textContent = 'Empty'; return; }
+    var c = {}; STAGES.forEach(function (s) { c[s] = 0; }); rows.forEach(function (r) { c[r.stage] = (c[r.stage] || 0) + 1; });
+    var contacted = rows.filter(function (r) { return r.stage !== 'Prospect'; }).length;
+    var replied = rows.filter(function (r) { return r.stage === 'Replied' || r.stage === 'Link agreed' || r.stage === 'Live'; }).length;
+    var live = c['Live'];
+    var due = rows.filter(function (r) { return (r.stage === 'Contacted' || r.stage === 'Replied') && r.follow && r.follow <= today(); });
+    var byM = {}; rows.forEach(function (r) { var m = byM[r.method] || (byM[r.method] = { n: 0, live: 0 }); m.n++; if (r.stage === 'Live') m.live++; });
+    var L = [];
+    L.push('Prospects: ' + n + '   ' + STAGES.map(function (s) { return s + ' ' + c[s]; }).join('   '));
+    L.push('Contacted or further: ' + contacted);
+    L.push('Reply rate: ' + (contacted ? Math.round(replied / contacted * 100) + '%' : 'n/a') + '   Win rate: ' + (contacted ? Math.round(live / contacted * 100) + '%' : 'n/a'));
+    L.push('Follow-ups due: ' + due.length + (due.length ? ' (' + due.slice(0, 5).map(function (r) { return r.url; }).join(', ') + ')' : ''));
+    L.push('By method: ' + Object.keys(byM).map(function (m) { return m + ' ' + byM[m].live + '/' + byM[m].n + ' live'; }).join(', '));
+    $('lb-summary').textContent = L.join('\n');
+    $('lb-status').textContent = n + ' prospect' + (n > 1 ? 's' : '');
+  }
+
+  function table() {
+    var h = '<tr style="text-align:left;border-bottom:1px solid #ddd;"><th>Prospect</th><th>Method</th><th>Stage</th><th>Follow up</th><th>Notes</th><th></th></tr>';
+    rows.forEach(function (r, i) {
+      var opts = STAGES.map(function (s) { return '<option' + (s === r.stage ? ' selected' : '') + '>' + s + '</option>'; }).join('');
+      var overdue = (r.stage === 'Contacted' || r.stage === 'Replied') && r.follow && r.follow <= today();
+      h += '<tr style="border-bottom:1px solid #eee;"><td style="max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + esc(r.url) + '">' + esc(r.url) + (r.contact ? '<br><small>' + esc(r.contact) + '</small>' : '') + '</td><td>' + esc(r.method) + '</td><td><select data-st="' + i + '">' + opts + '</select></td><td' + (overdue ? ' style="color:#b45309;font-weight:600;"' : '') + '><input type="date" data-fu="' + i + '" value="' + esc(r.follow || '') + '"></td><td>' + esc(r.notes || '') + '</td><td><button type="button" data-del="' + i + '" class="btn btn-glass" style="padding:2px 8px;">x</button></td></tr>';
+    });
+    $('lb-table').innerHTML = rows.length ? h : '<tr><td>No prospects yet.</td></tr>';
+  }
+  function redraw() { table(); summary(); }
+
+  $('lb-add').addEventListener('click', function () {
+    var url = $('lb-url').value.trim(); if (!url) { $('lb-status').textContent = 'Enter a URL'; return; }
+    rows.push({ url: url, contact: $('lb-contact').value.trim(), target: $('lb-target').value.trim(), method: $('lb-method').value, follow: $('lb-follow').value, notes: $('lb-notes').value.trim(), stage: 'Prospect', added: today() });
+    save(); $('lb-url').value = ''; $('lb-contact').value = ''; $('lb-notes').value = ''; redraw();
+  });
+  $('lb-table').addEventListener('change', function (e) {
+    var t = e.target; var st = t.getAttribute && t.getAttribute('data-st'); var fu = t.getAttribute && t.getAttribute('data-fu');
+    if (st !== null && st !== undefined) { rows[+st].stage = t.value; if ((t.value === 'Contacted') && !rows[+st].follow) { var d = new Date(); d.setDate(d.getDate() + 5); rows[+st].follow = d.toISOString().slice(0, 10); } save(); redraw(); }
+    else if (fu !== null && fu !== undefined) { rows[+fu].follow = t.value; save(); redraw(); }
+  });
+  $('lb-table').addEventListener('click', function (e) { var d = e.target.getAttribute && e.target.getAttribute('data-del'); if (d !== null && d !== undefined) { rows.splice(+d, 1); save(); redraw(); } });
+  $('lb-clear').addEventListener('click', function () { if (rows.length && confirm('Remove all prospects?')) { rows = []; save(); redraw(); } });
+  $('lb-csv').addEventListener('click', function () {
+    if (!rows.length) return;
+    var q = function (s) { return '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"'; };
+    var out = ['prospect,contact,target_page,method,stage,follow_up,notes,added'].concat(rows.map(function (r) { return [r.url, r.contact, r.target, r.method, r.stage, r.follow, r.notes, r.added].map(q).join(','); })).join('\n');
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([out], { type: 'text/csv' })); a.download = 'link-building-pipeline.csv'; a.click();
+  });
+  load(); redraw();
+})();
+</script>

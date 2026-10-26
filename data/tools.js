@@ -152,6 +152,11 @@ module.exports = [
     summary: 'Log your backlinks, check a link is still live by pasting the linking page HTML, and see live rate, referring domains and cost per live link.'
   },
   {
+    slug: 'link-building-management-tool',
+    title: 'Link Building Management Tool',
+    summary: 'Track link building prospects from first email to live link with stages, follow-up dates, reply and win rates, and CSV export.'
+  },
+  {
     slug: 'dofollow-link-checker',
     title: 'Dofollow Link Checker',
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'

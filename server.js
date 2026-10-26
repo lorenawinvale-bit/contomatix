@@ -206,7 +206,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/link-prospect-scorer', '/tools/anchor-text-checker', '/tools/outbound-link-checker', '/tools/backlink-monitor-tool', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/link-prospect-scorer', '/tools/anchor-text-checker', '/tools/outbound-link-checker', '/tools/backlink-monitor-tool', '/tools/link-building-management-tool', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -542,6 +542,14 @@ app.get('/tools/backlink-monitor-tool', (req, res) => {
   res.render('pages/backlink-monitor-tool', {
     title: 'Free Backlink Monitor Tool: Log and Check Your Links | Contomatix',
     description: 'Log your backlinks, check a link is still live by pasting the linking page HTML, and see live rate, referring domains and cost per live link. Free.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/link-building-management-tool', (req, res) => {
+  res.render('pages/link-building-management-tool', {
+    title: 'Free Link Building Management Tool: Track Outreach | Contomatix',
+    description: 'Track link building prospects from first email to live link with stages, follow-up dates, reply and win rates, and CSV export. Free, no signup.',
     pageClass: 'page-tool'
   });
 });
