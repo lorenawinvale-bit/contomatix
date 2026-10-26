@@ -41,7 +41,7 @@
     <text x="562" y="214" font-size="12" font-weight="700" fill="#8A8371" text-anchor="middle">CANDIDATES CHECKED</text>
     <text x="562" y="262" font-size="44" font-weight="800" fill="#16192A" text-anchor="middle">20+</text>
     <line x1="490" y1="280" x2="634" y2="280" stroke="#F1EDE3" stroke-width="1.5"/>
-    <text x="562" y="306" font-size="15" font-weight="700" fill="#0B807C" text-anchor="middle">9 made the list</text>
+    <text x="562" y="306" font-size="15" font-weight="700" fill="#0B807C" text-anchor="middle">10 made the list</text>
     <text x="562" y="326" font-size="10.5" fill="#8A8371" text-anchor="middle">address, live site, clear fit</text>
   </g>
 
