@@ -1,0 +1,31 @@
+// One-off: read organic pages (Google US, 27 Oct 2026) for Day-13 keywords + fresh Google docs. Sites are not named in the posts.
+const fs = require('fs'); const path = require('path');
+const UA = { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130 Safari/537.36', 'accept-language': 'en-US,en;q=0.9' };
+const sets = {
+  'content-brief-template': ['https://ahrefs.com/blog/content-briefs/', 'https://literalhumans.com/content-brief-template/', 'https://www.campfirelabs.co/blog/content-brief-template', 'https://www.contentharmony.com/blog/content-brief-template-examples/', 'https://www.pandadoc.com/content-brief-template/', 'https://www.canny-creative.com/blog/how-to-write-content-brief-with-template/'],
+  'set-up-google-search-console': ['https://support.google.com/webmasters/answer/10267942?hl=en', 'https://seranking.com/blog/how-to-set-up-google-search-console/', 'https://webstandards.ca.gov/google-search-console-setup-and-user-access/', 'https://www.shopify.com/blog/google-search-console', 'https://developers.google.com/search/docs/monitor-debug/search-console-start?hl=en', 'https://www.freshegg.co.uk/guides-and-white-papers/how-to-set-up-google-search-console-account/', 'https://www.semrush.com/blog/google-search-console/'],
+  'blogger-outreach': ['https://www.bloggeroutreach.io/', 'https://prbloggeroutreach.com/', 'https://www.brafton.com/blog/strategy/blogger-outreach-campaigns/', 'https://fatjoe.com/blogger-outreach/', 'https://onelittleweb.com/blogger-outreach-service/', 'https://www.serplogic.com/what-is-blogger-outreach/', 'https://learn.g2.com/blog-outreach']
+};
+const GOOGLE = { start: 'https://developers.google.com/search/docs/monitor-debug/search-console-start?hl=en', verify: 'https://support.google.com/webmasters/answer/9008080?hl=en', property: 'https://support.google.com/webmasters/answer/34592?hl=en', spam: 'https://developers.google.com/search/docs/essentials/spam-policies?hl=en', qualify: 'https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links?hl=en' };
+const strip = s => s.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<nav[\s\S]*?<\/nav>/gi, ' ').replace(/<footer[\s\S]*?<\/footer>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&#39;|&#x27;/g, "'").replace(/&nbsp;|&amp;|&#\d+;|&[a-z]+;/g, ' ').replace(/\s+/g, ' ');
+const POL = /spam polic|google('s)? (guidelines|policy|policies)|search essentials/i;
+const SIG = {
+  'content-brief-template': { audience: /audience|persona|reader/i, goal: /goal|objective|purpose/i, keyword: /target keyword|primary keyword|focus keyword|keywords?/i, intent: /search intent|intent/i, outline: /outline|headings?|h2|structure/i, wordCount: /word count|length/i, competitors: /competitor|serp|top[- ]ranking/i, sources: /source|reference|cite|citation/i, cta: /\bcta\b|call to action/i, tone: /tone|voice|style guide/i, internalLinks: /internal link/i, meta: /meta (title|description)/i, faq: /faq|questions/i, template: /template/i, tools: /tool|software|notion|google docs|clearscope|surfer|marketmuse/i, ai: /\bAI\b|chatgpt|generative/i, example: /example/i, deadline: /deadline|due date|timeline/i, policy: POL },
+  'set-up-google-search-console': { domain: /domain property/i, urlPrefix: /url[- ]prefix/i, dns: /dns/i, htmlFile: /html file/i, htmlTag: /html tag|meta tag/i, ga: /google analytics|gtm|tag manager/i, sitemap: /sitemap/i, users: /user|permission|owner/i, performance: /performance|clicks|impressions/i, indexing: /index(ing)?\b|url inspection/i, timeline: /days?|hours?|weeks?|take(s)? time/i, free: /\bfree\b/i, bing: /bing/i, backlinks: /links report|backlink/i, mistakes: /mistake|common issue|troubleshoot/i, policy: POL, steps: /step\s?\d|^\s*\d\./i },
+  'blogger-outreach': { sells: /get a quote|order now|pricing|packages?|from \$|buy|our services|book a call|get started/i, guide: /how to|step\s?\d|what is|guide/i, emailTemplate: /email template|subject line|template/i, paid: /paid|pay (bloggers?|for)|compensat|sponsored post/i, disclosure: /disclos|ftc|nofollow|rel=\"?sponsored|sponsored/i, review: /product review|review (copy|product)|free product|gifted/i, tools: /tool|software|platform|buzzstream|pitchbox/i, metrics: /\bDA\b|\bDR\b|domain authority|domain rating|traffic/i, followUp: /follow[- ]?up/i, rate: /reply rate|response rate|\d+ ?%/i, policy: POL, guestPost: /guest post/i, relevance: /relevan/i, risk: /risk|spam|penalt/i }
+};
+async function one(u, sig) {
+  const o = { url: u }; try {
+    const r = await fetch(u, { redirect: 'follow', headers: UA, signal: AbortSignal.timeout(25000) }); o.status = r.status; const raw = await r.text(); const x = strip(raw); o.words = x.split(' ').length;
+    for (const [k, re] of Object.entries(sig)) o[k] = re.test(x);
+    const host = new URL(u).hostname.replace(/^www\./, ''); o.pct = (x.match(/\d+(\.\d+)?\s?%/g) || []).length;
+    const yrs = x.match(/\b(20[12]\d)\b/g) || []; o.years = [...new Set(yrs)].sort(); o.maxYear = o.years.length ? o.years[o.years.length - 1] : null;
+    o.googleDoc = /developers\.google\.com|support\.google\.com/i.test(raw); o.date = (x.match(/(updated|published|last modified)[^.]{0,40}20\d\d/i) || [''])[0];
+    o.extLinks = [...raw.matchAll(/<a\b[^>]*href=["'](https?:\/\/[^"']+)["']/gi)].map(m => { try { return new URL(m[1]).hostname.replace(/^www\./, ''); } catch (e) { return null; } }).filter(h => h && h !== host).length;
+  } catch (e) { o.error = String(e.message || e).slice(0, 60); } return o;
+}
+(async () => {
+  for (const [k, us] of Object.entries(sets)) { const out = []; for (const u of us) out.push(await one(u, SIG[k])); fs.writeFileSync(path.join(__dirname, '..', '..', 'keyword-research', 'serp-' + k + '-2026-10-27.json'), JSON.stringify(out, null, 1)); console.log(k, out.map(o => o.status + '/' + o.words).join(' ')); }
+  const g = {}; for (const [k, u] of Object.entries(GOOGLE)) { try { const r = await fetch(u, { headers: UA, signal: AbortSignal.timeout(25000) }); const x = strip(await r.text()); g[k] = { url: u, status: r.status, len: x.length, text: x.slice(0, 40000) }; console.log(k, r.status, x.length); } catch (e) { g[k] = { url: u, error: e.message }; } }
+  fs.writeFileSync(path.join(__dirname, '..', '..', 'keyword-research', 'google-docs-day13-2026-10-27.json'), JSON.stringify(g, null, 1));
+})();

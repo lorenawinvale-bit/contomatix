@@ -177,6 +177,11 @@ module.exports = [
     summary: 'Match old URLs to new URLs for a site move, flag weak matches and chains, and export Apache or Nginx 301 rules and a CSV.'
   },
   {
+    slug: 'content-brief-generator',
+    title: 'Content Brief Generator',
+    summary: 'Enter a keyword, intent, audience and your research and get a structured content brief with outline, FAQ, sources, internal links and a meta draft.'
+  },
+  {
     slug: 'keyword-mapping-tool',
     title: 'Keyword Mapping Tool',
     summary: 'Match keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords — export to CSV.'

@@ -1,0 +1,198 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Content Brief Generator — Turn a Keyword and Your Research Into a Writer-Ready Brief</h1>
+    <p>Enter your primary keyword, search intent, audience and the research you already have, and this <strong>content brief generator</strong> builds a structured brief: goal, outline, questions, sources, internal links, a meta title and description draft and a pre-publish checklist. It runs in your browser: nothing is uploaded.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="cb-form" onsubmit="return false;" aria-label="Content brief generator form">
+        <div><label for="cb-kw">Primary keyword</label><input type="text" id="cb-kw" placeholder="e.g. content brief template"></div>
+        <div><label for="cb-intent">Search intent</label>
+          <select id="cb-intent"><option value="informational">Informational (learn something)</option><option value="commercial">Commercial (compare options)</option><option value="transactional">Transactional (buy or sign up)</option><option value="navigational">Navigational (find a page)</option></select></div>
+        <div><label for="cb-aud">Audience</label><input type="text" id="cb-aud" placeholder="e.g. in-house marketers at small companies"></div>
+        <div><label for="cb-goal">Goal of the page</label><input type="text" id="cb-goal" placeholder="e.g. rank for the keyword and get tool sign-ups"></div>
+        <div><label for="cb-sec">Secondary keywords, one per line (become outline headings)</label><textarea id="cb-sec" rows="5" placeholder="what is a content brief&#10;how to write a content brief&#10;content brief example"></textarea></div>
+        <div><label for="cb-q">Questions readers ask, one per line (become the FAQ)</label><textarea id="cb-q" rows="4" placeholder="What goes in a content brief?&#10;How long should a brief be?"></textarea></div>
+        <div><label for="cb-src">Sources and data you will use, one per line</label><textarea id="cb-src" rows="3" placeholder="Google documentation page&#10;Our own survey of 40 pages"></textarea></div>
+        <div><label for="cb-int">Internal links to include, one per line</label><textarea id="cb-int" rows="3" placeholder="/blog/seo-audit-report-template&#10;/tools/keyword-mapping-tool"></textarea></div>
+        <div><label for="cb-wc">Target word count</label><input type="number" id="cb-wc" min="300" step="100" value="2000"></div>
+        <div><label for="cb-tone">Tone and style notes</label><input type="text" id="cb-tone" placeholder="e.g. plain English, short sentences, no hype"></div>
+        <div><label for="cb-cta">Call to action</label><input type="text" id="cb-cta" placeholder="e.g. try the free tool"></div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Content brief</strong>
+        <span id="cb-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="cb-output" class="llms-output" style="max-height:640px;white-space:pre-wrap;">Enter a primary keyword to start.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="cb-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="cb-download">Download .md</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Content Brief Generator Builds</h2>
+    <ul class="service-points">
+      <li><strong>Goal and audience:</strong> who the page is for and what it should achieve, in two lines a writer can act on</li>
+      <li><strong>Keyword and intent:</strong> the primary keyword, the intent and what that intent means for the page format</li>
+      <li><strong>Outline:</strong> a draft H1, with one H2 for each secondary keyword you enter, plus an FAQ block from your questions</li>
+      <li><strong>Sources and data:</strong> what the writer must cite or use, so claims are checked</li>
+      <li><strong>Internal links:</strong> pages to link to, so the new page joins your site</li>
+      <li><strong>Meta draft:</strong> a title and description with character counts</li>
+      <li><strong>Checklist:</strong> pre-publish checks including sources, links and one primary keyword per page</li>
+    </ul>
+
+    <h2>What It Does Not Do</h2>
+    <p>The tool arranges what you give it. It does not look at search results, measure competitors or invent data. Research the keyword first: read the pages that rank, note what they cover and what they miss, and collect your own data. Then use the generator to turn that research into a brief a writer can follow. For finding keywords for the outline, see our guide to <a href="/blog/long-tail-low-competition-keywords">long-tail low-competition keywords</a>, and use the <a href="/tools/keyword-mapping-tool">keyword mapping tool</a> to make sure each keyword belongs to one page.</p>
+
+    <h2>How to Use a Brief Well</h2>
+    <ul>
+      <li><strong>Keep it to one or two pages.</strong> A brief a writer will not read is not a brief.</li>
+      <li><strong>Be specific about the angle.</strong> "What we found when we checked 13 pages" is a better instruction than "write a guide".</li>
+      <li><strong>List sources before drafting.</strong> It is much cheaper to fix a wrong claim in a brief than in a published page.</li>
+      <li><strong>Review after publishing.</strong> Note what worked and update your brief template.</li>
+    </ul>
+    <p>For the full guide, see our <a href="/blog/content-brief-template">content brief template</a> article, which covers the fields, an example and what 218 ranking pages look like.</p>
+
+    <h2>Content Brief Generator FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>What is a content brief?<span class="faq-icon"></span></summary>
+        <p>It is a short document that tells a writer what a page should achieve and contain: the keyword, intent, audience, outline, sources and requirements.</p>
+      </details>
+      <details>
+        <summary>Does the generator research my keyword?<span class="faq-icon"></span></summary>
+        <p>No. It structures the information you enter. Read the ranking pages and gather your sources first, then use the tool to organise them.</p>
+      </details>
+      <details>
+        <summary>Does it use AI?<span class="faq-icon"></span></summary>
+        <p>No. It builds the brief with simple rules in your browser, so the output contains only what you typed plus a standard structure.</p>
+      </details>
+      <details>
+        <summary>How many secondary keywords should I add?<span class="faq-icon"></span></summary>
+        <p>Six to ten related terms usually give a good outline. Each becomes a heading, so choose ones that deserve a section.</p>
+      </details>
+      <details>
+        <summary>Can I save my briefs?<span class="faq-icon"></span></summary>
+        <p>Copy the text or download it as a Markdown file. The tool does not store anything.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is processed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want help planning content that ranks?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Content Brief Generator',
+    url: site.baseUrl + '/tools/content-brief-generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Enter a keyword, intent, audience and your research and get a structured content brief with outline, FAQ, sources, internal links, meta draft and checklist. Free, runs in your browser.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Content Brief Generator', item: site.baseUrl + '/tools/content-brief-generator' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What is a content brief?', acceptedAnswer: { '@type': 'Answer', text: 'It is a short document that tells a writer what a page should achieve and contain: the keyword, intent, audience, outline, sources and requirements.' } },
+      { '@type': 'Question', name: 'Does the generator research my keyword?', acceptedAnswer: { '@type': 'Answer', text: 'No. It structures the information you enter. Read the ranking pages and gather your sources first.' } },
+      { '@type': 'Question', name: 'Does it use AI?', acceptedAnswer: { '@type': 'Answer', text: 'No. It builds the brief with simple rules in your browser, so the output contains only what you typed plus a standard structure.' } },
+      { '@type': 'Question', name: 'How many secondary keywords should I add?', acceptedAnswer: { '@type': 'Answer', text: 'Six to ten related terms usually give a good outline. Each becomes a heading.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is processed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+  var IDS = ['cb-kw', 'cb-intent', 'cb-aud', 'cb-goal', 'cb-sec', 'cb-q', 'cb-src', 'cb-int', 'cb-wc', 'cb-tone', 'cb-cta'];
+  var INTENT = {
+    informational: 'The reader wants to learn. Lead with a clear definition and answer, then go deeper. Use headings that match their questions.',
+    commercial: 'The reader is comparing options. Give honest criteria, a comparison and clear trade-offs. Avoid hype.',
+    transactional: 'The reader is ready to act. Make the next step obvious, show price or terms and reduce friction.',
+    navigational: 'The reader wants a specific page or brand. Make the page easy to recognise and link directly to the destination.'
+  };
+  function lines(id) { return $(id).value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean); }
+  function title(s) { return s.replace(/\b([a-z])/g, function (m) { return m.toUpperCase(); }); }
+  function ask(s) { s = s.trim(); return /\?$/.test(s) ? s : s.charAt(0).toUpperCase() + s.slice(1) + '?'; }
+
+  function build() {
+    var kw = $('cb-kw').value.trim();
+    if (!kw) { $('cb-output').textContent = 'Enter a primary keyword to start.'; $('cb-status').textContent = 'Waiting for input'; current = ''; return; }
+    var sec = lines('cb-sec'), qs = lines('cb-q'), src = lines('cb-src'), links = lines('cb-int');
+    var wc = parseInt($('cb-wc').value, 10) || 2000, intent = $('cb-intent').value;
+    var aud = $('cb-aud').value.trim(), goal = $('cb-goal').value.trim(), tone = $('cb-tone').value.trim(), cta = $('cb-cta').value.trim();
+    var h1 = title(kw);
+    var mt = h1 + ': ' + (qs.length ? 'Answers and Examples' : 'A Practical Guide');
+    var md = 'Learn about ' + kw + (aud ? ' for ' + aud : '') + '. ' + (goal ? goal.charAt(0).toUpperCase() + goal.slice(1) + '.' : '');
+    var L = [];
+    L.push('# Content brief: ' + h1); L.push('');
+    L.push('## 1. Goal and audience'); L.push('- Goal: ' + (goal || '(add the goal of this page)')); L.push('- Audience: ' + (aud || '(add who this is for)')); L.push('');
+    L.push('## 2. Keyword and intent'); L.push('- Primary keyword: ' + kw + ' (one primary keyword per page; check no other page targets it)'); L.push('- Intent: ' + intent + '. ' + INTENT[intent]); L.push('');
+    L.push('## 3. Outline'); L.push('- H1: ' + h1);
+    if (sec.length) sec.forEach(function (s, i) { L.push('- H2 ' + (i + 1) + ': ' + title(s)); }); else L.push('- H2s: (add secondary keywords to build the outline)');
+    L.push('- H2: Key takeaways'); L.push('- H2: Frequently asked questions'); L.push('');
+    L.push('## 4. FAQ (use these questions as written)'); if (qs.length) qs.forEach(function (q) { L.push('- ' + ask(q)); }); else L.push('- (add questions readers ask)'); L.push('');
+    L.push('## 5. Sources and data'); if (src.length) src.forEach(function (s) { L.push('- ' + s); }); else L.push('- (list the sources every claim will rest on)');
+    L.push('- Rule: every figure, date and rule is checked against the primary source on the day of writing.'); L.push('');
+    L.push('## 6. Internal links'); if (links.length) links.forEach(function (s) { L.push('- ' + s); }); else L.push('- (add pages to link to, with natural anchor text)'); L.push('');
+    L.push('## 7. Requirements'); L.push('- Target length: about ' + wc + ' words'); L.push('- Tone: ' + (tone || '(add tone notes)')); L.push('- Call to action: ' + (cta || '(add a call to action)')); L.push('');
+    L.push('## 8. Meta draft'); L.push('- Title (' + mt.length + ' characters): ' + mt); L.push('- Description (' + md.length + ' characters): ' + md); L.push('- Aim for a title of about 55 to 60 characters and a description under 160.'); L.push('');
+    L.push('## 9. Before you publish');
+    ['Primary keyword appears in the title, first paragraph and one heading, written naturally', 'Each H2 answers one question or topic', 'Every claim has a source, and the date is stated', 'Images have alt text', 'Internal links added and working', 'Page does not duplicate another page on the site', 'Read aloud once for tone and clarity'].forEach(function (c) { L.push('- [ ] ' + c); });
+    current = L.join('\n');
+    $('cb-output').textContent = current;
+    $('cb-status').textContent = sec.length + ' heading' + (sec.length === 1 ? '' : 's') + ', ' + qs.length + ' question' + (qs.length === 1 ? '' : 's');
+  }
+
+  IDS.forEach(function (id) { $(id).addEventListener('input', build); $(id).addEventListener('change', build); });
+  $('cb-copy').addEventListener('click', function () { if (current && navigator.clipboard) navigator.clipboard.writeText(current); });
+  $('cb-download').addEventListener('click', function () { if (!current) return; var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([current], { type: 'text/markdown' })); a.download = 'content-brief.md'; a.click(); });
+})();
+</script>
