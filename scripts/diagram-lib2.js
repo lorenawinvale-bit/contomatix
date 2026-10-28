@@ -12,7 +12,7 @@ function stats(o) {
   return frame(w, h, o.title, b, o.note);
 }
 function columns(o) {
-  const w = o.w || 1200, h = o.h || 560, n = o.items.length, top = 96, base = h - (o.note ? 200 : 140), cw = (w - 56) / n, bw = Math.min(54, cw - 18); let b = `<line x1="28" y1="${base}" x2="${w - 28}" y2="${base}" stroke="${C.line}" stroke-width="2"/>`;
+  const w = o.w || 1200, h = (o.h || 560) - (o.note ? 0 : 76), n = o.items.length, top = 96, base = h - (o.note ? 200 : 110), cw = (w - 56) / n, bw = Math.min(54, cw - 18); let b = `<line x1="28" y1="${base}" x2="${w - 28}" y2="${base}" stroke="${C.line}" stroke-width="2"/>`;
   o.items.forEach((it, i) => {
     const cx = 28 + cw * i + cw / 2, bh = Math.max(5, (base - top - 24) * it.v / o.max);
     b += `<rect x="${cx - bw / 2}" y="${base - bh}" width="${bw}" height="${bh}" rx="7" fill="${it.color || C.teal}"/><text x="${cx}" y="${base - bh - 8}" font-size="15" font-weight="800" fill="${C.ink}" text-anchor="middle">${esc(it.text)}</text>`
@@ -40,7 +40,7 @@ function timeline(o) {
   return frame(w, h, o.title, b, o.note);
 }
 function rings(o) {
-  const w = o.w || 760, h = o.h || 560, n = o.items.length, cw = (w - 56) / n, R = Math.min(78, cw / 2 - 16), cy = 220; let b = '';
+  const w = o.w || 760, h = (o.h || 560) - (o.note ? 0 : 76), n = o.items.length, cw = (w - 56) / n, R = Math.min(78, cw / 2 - 16), cy = 220; let b = '';
   o.items.forEach((it, i) => {
     const cx = 28 + cw * i + cw / 2, f = Math.min(1, it.pct), a = f * 2 * Math.PI - Math.PI / 2, x = cx + R * Math.cos(a), y = cy + R * Math.sin(a);
     b += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="${C.line}" stroke-width="16"/>`
@@ -52,7 +52,7 @@ function rings(o) {
 }
 // split: dark hero panel on the left, list of facts on the right. o {title, note, big, bigLabel, items:[{v, t}], w, h}
 function split(o) {
-  const w = o.w || 1200, h = o.h || 470, top = 80, ph = h - top - 100, pw = w * 0.34; let b = `<rect x="28" y="${top}" width="${pw}" height="${ph}" rx="16" fill="${C.navy}"/>`
+  const w = o.w || 1200, h = (o.h || 470) - (o.note ? 0 : 100), top = 80, ph = h - top - (o.note ? 100 : 30), pw = w * 0.34; let b = `<rect x="28" y="${top}" width="${pw}" height="${ph}" rx="16" fill="${C.navy}"/>`
     + `<text x="${28 + pw / 2}" y="${top + ph / 2 - 6}" font-size="72" font-weight="800" fill="#fff" text-anchor="middle">${esc(o.big)}</text>`
     + lines(28 + pw / 2, top + ph / 2 + 34, wrap(o.bigLabel, 28).slice(0, 3), 17, '#C9D3E6', 600, 'middle', 24);
   const n = o.items.length, rh = ph / n, x0 = 28 + pw + 22;

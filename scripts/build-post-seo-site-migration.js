@@ -17,7 +17,7 @@ for (const k of Object.keys(exp)) if (D[k] !== exp[k]) throw new Error('data cha
 console.log(JSON.stringify(D), JSON.stringify(O));
 const pct = Math.round(O.toYear / O.links * 100);
 build({
-  slug: 'seo-site-migration', category: 'Technical SEO', author: 'Hamza Siddiqui', date: '2026-10-26',
+  slug: 'seo-site-migration', category: 'Technical SEO', author: 'Hamza Siddiqui', date: '2026-10-28',
   title: "SEO Site Migration Checklist: Built on Google's Own Guidance",
   excerpt: `SEO site migration checklist from Google's guidance: 301 or 308, no chains, keep redirects a year. ${D.ok} guides read and our own URL data.`,
   donut: [['SEO SITE', 'MIGRATION'], [['Map Every', 'URL'], 'Redirect Once', ['Move In', 'One Step'], 'Watch Search Console', ['Keep Redirects', 'A Year']]],

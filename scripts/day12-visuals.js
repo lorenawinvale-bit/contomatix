@@ -1,6 +1,8 @@
 // Designed visuals for the three Day-12 posts. All 13 images use a different layout: cards, stats tiles, bars, timeline, flow, columns,
 // compare, split, rings, ruler, dots, lollipop, pairs. Called by post-day9-common.js; numbers come from the builder's own table rows.
-const D = require('./diagram-lib2.js');
+const D0 = require('./diagram-lib2.js');
+// The bottom note strip was removed from every image on request: drop `note` before each generator runs.
+const D = Object.fromEntries(Object.entries(D0).map(([k, fn]) => [k, typeof fn === 'function' && k !== 'logoSvg' && k !== 'proofHtml' && k !== 'hero' ? (o => { const c = Object.assign({}, o); delete c.note; return fn(c); }) : fn]));
 const num = s => parseFloat(String(s).replace(/[^0-9.]/g, ''));
 const ofN = s => { const m = /(\d+) of (\d+)/.exec(s); return { v: +m[1], max: +m[2] }; };
 const TEAL = '#0EA5A0', AMBER = '#F5A623', RED = '#E5484D';

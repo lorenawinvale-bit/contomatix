@@ -17,7 +17,7 @@ function frame(w, h, title, body, note) {
 }
 // o: {title, note, items:[{t, d, q}] (3-5), qLabel, w, h}
 function cards(o) {
-  const w = o.w || 760, h = o.h || 560, n = o.items.length, gap = 14, cw = (w - 56 - gap * (n - 1)) / n, top = 80, ch = Math.min(h - top - 100, 330);
+  const w = o.w || 760, h = (o.h || 560) - (o.note ? 0 : 150), n = o.items.length, gap = 14, cw = (w - 56 - gap * (n - 1)) / n, top = 80, ch = Math.min(h - top - (o.note ? 100 : 30), 330);
   const cpl = Math.floor(cw / 7.4); let b = ''; const ch0 = ch;
   o.items.forEach((it, i) => {
     const x = 28 + i * (cw + gap), cx = x + cw / 2;
@@ -33,7 +33,7 @@ function cards(o) {
 }
 // o: {title, note, steps:[{t, s, c}] (3-5; c = caption under box)}; last step filled
 function flow(o) {
-  const w = o.w || 760, h = o.h || 560, n = o.steps.length, gap = 30, bw = (w - 56 - gap * (n - 1)) / n, y = 140, bh = 96, cpl = Math.floor(bw / 7.2); let b = '';
+  const w = o.w || 760, h = (o.h || 560) - (o.note ? 0 : 150), n = o.steps.length, gap = 30, bw = (w - 56 - gap * (n - 1)) / n, y = 140, bh = 96, cpl = Math.floor(bw / 7.2); let b = '';
   o.steps.forEach((s, i) => {
     const x = 28 + i * (bw + gap), cx = x + bw / 2, last = i === n - 1;
     b += `<rect x="${x}" y="${y}" width="${bw}" height="${bh}" rx="14" fill="${last ? C.teal : '#fff'}" stroke="${last ? C.teal : C.line}" stroke-width="2"/>`
@@ -46,7 +46,7 @@ function flow(o) {
 }
 // o: {title, note, rows:[{t, d, v (1-5), tag}], scaleLabels:[lo, hi]}
 function scale(o) {
-  const w = o.w || 760, h = o.h || 560, n = o.rows.length, top = 84, rh = Math.min(104, (h - top - 100) / n), lw = 210, segw = (w - 56 - lw - 90) / 5; let b = '';
+  const w = o.w || 760, h = (o.h || 560) - (o.note ? 0 : 150), n = o.rows.length, top = 84, rh = Math.min(104, (h - top - 100) / n), lw = 210, segw = (w - 56 - lw - 90) / 5; let b = '';
   b += `<text x="${28 + lw}" y="${top - 4}" font-size="11" font-weight="800" fill="${C.mute}">${esc((o.scaleLabels || ['LOW', 'HIGH'])[0]).toUpperCase()}</text><text x="${28 + lw + segw * 5}" y="${top - 4}" font-size="11" font-weight="800" fill="${C.mute}" text-anchor="end">${esc((o.scaleLabels || ['LOW', 'HIGH'])[1]).toUpperCase()}</text>`;
   o.rows.forEach((r, i) => {
     const y = top + 8 + i * rh;
@@ -59,7 +59,7 @@ function scale(o) {
 }
 // o: {title, note, left:{h, items:[]}, right:{h, items:[]}}  left = bad/before (red), right = good/after (teal)
 function compare(o) {
-  const w = o.w || 760, h = o.h || 560, top = 84, colw = (w - 56 - 20) / 2, ch = h - top - 100; let b = '';
+  const w = o.w || 760, h = (o.h || 560) - (o.note ? 0 : 150), top = 84, colw = (w - 56 - 20) / 2, ch = h - top - (o.note ? 100 : 30); let b = '';
   [[o.left, 28, C.red, C.redBg, '✕'], [o.right, 28 + colw + 20, C.teal, C.tealBg, '✓']].forEach(([c, x, col, bg, sym]) => {
     b += `<rect x="${x}" y="${top}" width="${colw}" height="${ch}" rx="14" fill="#fff" stroke="${C.line}" stroke-width="1.5"/><rect x="${x}" y="${top}" width="${colw}" height="46" rx="14" fill="${bg}"/><rect x="${x}" y="${top + 30}" width="${colw}" height="16" fill="${bg}"/>`
       + `<text x="${x + 18}" y="${top + 30}" font-size="16" font-weight="800" fill="${col}">${esc(c.h)}</text>`;

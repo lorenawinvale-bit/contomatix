@@ -18,7 +18,7 @@ for (const k of Object.keys(exp)) if (D[k] !== exp[k]) throw new Error('data cha
 console.log(JSON.stringify(D), JSON.stringify(O));
 const p = n => Math.round(n / O.urls * 100) + '%';
 build({
-  slug: 'types-of-schema-markup', category: 'Technical SEO', author: 'Umaira Liaquat', date: '2026-10-26',
+  slug: 'types-of-schema-markup', category: 'Technical SEO', author: 'Umaira Liaquat', date: '2026-10-28',
   title: 'Types of Schema Markup: What 406 Pages on Our Site Use',
   excerpt: `Types of schema markup from our own scan of ${O.urls} pages, plus Google's May 2026 end of FAQ rich results and ${D.ok} guides compared. Which types still matter.`,
   donut: [['TYPES OF', 'SCHEMA MARKUP'], [['Pick the', 'Right Type'], 'Use JSON-LD', ['Match Visible', 'Content'], 'Validate It', ['Recheck Google', 'Support']]],

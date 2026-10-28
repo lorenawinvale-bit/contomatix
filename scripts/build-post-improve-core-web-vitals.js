@@ -26,7 +26,7 @@ const f2 = n => n.toFixed(3);
 const afterRows = BLOG.map(p => [p, f2(clsB(p)), f2(clsA(p))]);
 const rows = pages.map(p => [p.p === '/' ? 'Home page' : p.p, `${p.lcp} ms`, f2(p.cls), `${p.tbt} ms`]);
 build({
-  slug: 'improve-core-web-vitals', category: 'Technical SEO', author: 'Muhammad Reyan Nizami', date: '2026-10-26',
+  slug: 'improve-core-web-vitals', category: 'Technical SEO', author: 'Muhammad Reyan Nizami', date: '2026-10-28',
   title: 'How to Improve Core Web Vitals: What Our Own Pages Showed',
   excerpt: `Core Web Vitals tested on our own site: ${O.n} pages measured, 1 over the CLS limit, and the hero-image bug behind it. Google's thresholds and ${D.ok} guides compared.`,
   donut: [['IMPROVE', 'CORE WEB VITALS'], [['Measure', 'First'], 'Reserve Space', ['Trim Heavy', 'Assets'], 'Fix the Biggest', ['Re-Measure', 'After']]],
