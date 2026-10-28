@@ -18,6 +18,7 @@ function donut(slug, center, labels) {
     const L = Array.isArray(labels[i]) ? labels[i] : [labels[i]];
     rep(old, L.map((t, j) => `<tspan x="${x}"${j ? ' dy="15"' : ''}>${esc(t)}</tspan>`).join(''));
   });
+  d = d.replace(/<\/svg>\s*$/, () => require('./diagram-lib.js').logoSvg(760, 560) + '</svg>');
   fs.writeFileSync(path.join(img, `diagram-${slug}.svg`), d);
 }
 
@@ -58,7 +59,7 @@ h1{position:absolute;left:0;right:0;top:46px;text-align:center;font-size:38px;fo
 .row{display:flex;align-items:center;gap:16px;margin-bottom:20px}.lab{width:270px;font-size:19px;font-weight:600;line-height:1.15}.lab small{display:block;font-size:14px;color:#6b6459;font-weight:400}.track{flex:1;height:30px;background:#F1EDE3;border-radius:15px;overflow:hidden}.fill{height:100%;border-radius:15px}.num{width:62px;font-size:26px;font-weight:800;text-align:right}
 ul{list-style:none;padding:0}li{margin-bottom:18px;font-size:20px;font-weight:700;line-height:1.25}li small{display:block;font-size:16px;color:#6b6459;font-weight:400;margin-top:2px}li:before{content:'';display:inline-block;width:12px;height:12px;border-radius:50%;background:#F5A623;margin-right:12px}
 .note{position:absolute;left:56px;right:56px;top:640px;height:100px;background:#16192A;color:#fff;border-radius:18px;display:flex;align-items:center;justify-content:center;gap:22px;padding:0 30px}.note b{font-size:50px;color:#5EEAD4;font-weight:800;white-space:nowrap}.note p{font-size:23px;line-height:1.35}.note em{font-style:normal;color:#FBBF24;font-weight:700}
-</style></head><body><div class="b1"></div><div class="b2"></div><div class="logo">${MARK}Contomatix</div>
+</style></head><body><div class="b1"></div><div class="b2"></div><div class="logo">${MARK}<span>Conto<span style="background:linear-gradient(120deg,#14B8A6,#0EA5A0 55%,#0B807C);-webkit-background-clip:text;background-clip:text;color:transparent">matix</span></span></div>
 <h1>${esc(o.title)}</h1><div class="sub">${esc(o.sub)}</div>
 <div class="card l"><h2>${esc(o.leftTitle)}</h2><div class="tag">${esc(o.leftTag)}</div>${bars}</div>
 <div class="card r"><h2>${esc(o.rightTitle)}</h2><div class="tag">${esc(o.rightTag)}</div><ul>${items}</ul></div>
@@ -70,11 +71,11 @@ function tableHtml(o) {
   const th = o.head.map(h => `<th>${esc(h)}</th>`).join('');
   const tr = o.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('');
   return `<!doctype html><html><head><meta charset="utf-8"><style>
-body{margin:0;width:1280px;box-sizing:border-box;background:#fff;font-family:'Segoe UI',Arial,sans-serif;color:#16192A;padding:28px 32px}
+body{position:relative;margin:0;width:1280px;box-sizing:border-box;background:#fff;font-family:'Segoe UI',Arial,sans-serif;color:#16192A;padding:28px 32px}
 h3{margin:0 0 4px;font-size:22px}p{margin:0 0 16px;color:#6b6459;font-size:15px}
 table{width:100%;border-collapse:collapse;font-size:18px}th{background:#F1EDE3;text-align:right;padding:12px 14px;font-size:14px;color:#6b6459;text-transform:uppercase;letter-spacing:.3px}th:first-child,td:first-child{text-align:left}
 td{padding:13px 14px;text-align:right;border-bottom:1px solid #EAE0D2;font-variant-numeric:tabular-nums}td:first-child{font-weight:600}${o.lastBold ? 'tr:last-child td{font-weight:800;background:#FAF5EF;border-bottom:0}' : ''}
-</style></head><body><h3>${esc(o.title)}</h3><p>${esc(o.sub)}</p><table><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table></body></html>`;
+</style></head><body><h3>${esc(o.title)}</h3><p>${esc(o.sub)}</p><table><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table><div style="position:absolute;top:24px;right:32px">${MARK.replace('width="44" height="44"','width="30" height="30" style="vertical-align:middle"')} <b style="vertical-align:middle;font-size:17px;color:#16192A;letter-spacing:-0.3px">Conto<span style="background:linear-gradient(120deg,#14B8A6,#0EA5A0 55%,#0B807C);-webkit-background-clip:text;background-clip:text;color:transparent">matix</span></b></div></body></html>`;
 }
 
 module.exports = { donut, cover, infographicHtml, tableHtml, img, esc };

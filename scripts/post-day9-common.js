@@ -8,6 +8,12 @@ module.exports = function build(cfg) {
   L.cover(SLUG, cfg.cover);
   fs.writeFileSync(path.join(__dirname, 'infographic-' + SLUG + '.html'), L.infographicHtml(cfg.info));
   for (const [n, t] of Object.entries(cfg.tables)) fs.writeFileSync(path.join(__dirname, 'table-' + SLUG + '-' + n + '.html'), L.tableHtml(t));
+  const V = require('./day12-visuals.js')[SLUG];
+  if (V) {
+    const DG = require('./diagram-lib.js'); const vis = V(cfg);
+    DG.hero(SLUG, vis.hero);
+    for (const [n, svg] of Object.entries(vis.tables)) fs.writeFileSync(path.join(__dirname, 'table-' + SLUG + '-' + n + '.html'), DG.proofHtml(svg));
+  }
   const pr = path.join(root, 'public', 'images', 'blog', 'proof');
   const hh = n => { const f = path.join(pr, SLUG + '-' + n + '.png'); if (!fs.existsSync(f)) return 600; return fs.readFileSync(f).readUInt32BE(20); };
   const h = {
