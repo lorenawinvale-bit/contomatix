@@ -162,6 +162,11 @@ module.exports = [
     summary: 'Paste a page HTML and see every link marked followed, nofollow, sponsored or ugc, internal or external, including page-level nofollow.'
   },
   {
+    slug: 'log-file-analyzer',
+    title: 'Log File Analyzer',
+    summary: 'Paste or open an Apache or Nginx access log and see which URLs Googlebot and other crawlers request, with status code counts and problem URLs.'
+  },
+  {
     slug: 'robots-txt-tester',
     title: 'Robots.txt Tester',
     summary: 'Paste a robots.txt, pick a crawler and test URLs against it with Google matching rules. See which rule allows or blocks each one.'

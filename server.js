@@ -206,7 +206,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/link-prospect-scorer', '/tools/anchor-text-checker', '/tools/outbound-link-checker', '/tools/backlink-monitor-tool', '/tools/link-building-management-tool', '/tools/content-brief-generator', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/link-prospect-scorer', '/tools/anchor-text-checker', '/tools/outbound-link-checker', '/tools/backlink-monitor-tool', '/tools/link-building-management-tool', '/tools/log-file-analyzer', '/tools/content-brief-generator', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -253,6 +253,20 @@ ${serviceLines}
 - [Sitemap](${site.baseUrl}/sitemap.xml)
 `);
 });
+
+// Reads a hero diagram's SVG viewBox so the <img> width/height match its real aspect ratio (prevents layout shift when it loads).
+const _heroDimCache = {};
+function heroDims(src) {
+  if (!src) return { w: 700, h: 620 };
+  if (_heroDimCache[src]) return _heroDimCache[src];
+  let d = { w: 700, h: 620 };
+  try {
+    const head = require('fs').readFileSync(require('path').join(__dirname, 'public', src), 'utf8').slice(0, 600);
+    const m = head.match(/viewBox="[\d.]+\s+[\d.]+\s+([\d.]+)\s+([\d.]+)"/);
+    if (m) d = { w: Math.round(parseFloat(m[1])), h: Math.round(parseFloat(m[2])) };
+  } catch (e) { /* keep default */ }
+  return (_heroDimCache[src] = d);
+}
 
 app.get('/', (req, res) => {
   const allPosts = blogStore.getPublished();
@@ -554,6 +568,14 @@ app.get('/tools/link-building-management-tool', (req, res) => {
   });
 });
 
+app.get('/tools/log-file-analyzer', (req, res) => {
+  res.render('pages/log-file-analyzer', {
+    title: 'Free Log File Analyzer: See What Googlebot Crawls | Contomatix',
+    description: 'Paste or open an Apache or Nginx access log and see which URLs Googlebot and other crawlers request, with status codes and problem URLs. Free, in your browser.',
+    pageClass: 'page-tool'
+  });
+});
+
 app.get('/tools/content-brief-generator', (req, res) => {
   res.render('pages/content-brief-generator', {
     title: 'Free Content Brief Generator: Writer-Ready Briefs | Contomatix',
@@ -690,6 +712,7 @@ app.get('/blog/:slug', (req, res) => {
   const wordCount = post.content.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).length;
   const readMinutes = Math.max(1, Math.round(wordCount / 200));
   res.render('pages/blog-post', {
+    heroDims: heroDims(post.heroDiagram),
     title: post.title,
     description: post.excerpt,
     pageClass: 'page-blog-post',

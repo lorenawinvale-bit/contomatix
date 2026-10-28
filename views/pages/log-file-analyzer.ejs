@@ -1,0 +1,234 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Log File Analyzer — See Which URLs Googlebot Crawls and What Status It Gets</h1>
+    <p>Paste lines from an Apache or Nginx access log, or open a log file, and this <strong>log file analyzer</strong> shows how often Googlebot and other crawlers visit, which URLs they hit most, and how many requests return 404, 5xx or redirects. It runs in your browser: your log never leaves your device.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="lf-form" onsubmit="return false;" aria-label="Log file analyzer form">
+        <div>
+          <label for="lf-input">Access log lines (combined log format)</label>
+          <textarea id="lf-input" rows="12" placeholder='66.249.66.1 - - [26/Oct/2026:10:15:32 +0000] "GET /blog/page HTTP/1.1" 200 5123 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"'></textarea>
+        </div>
+        <div>
+          <label for="lf-file">Or open a log file (read in your browser only)</label>
+          <input type="file" id="lf-file" accept=".log,.txt,text/plain">
+        </div>
+        <div>
+          <label for="lf-bot">Crawler to focus on</label>
+          <select id="lf-bot">
+            <option value="googlebot">Googlebot</option>
+            <option value="bingbot">Bingbot</option>
+            <option value="gptbot|oai-searchbot|chatgpt-user">OpenAI crawlers</option>
+            <option value="claudebot|claude-web|anthropic">Anthropic crawlers</option>
+            <option value="ahrefsbot|semrushbot|mj12bot">SEO tool crawlers</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Crawl report</strong>
+        <span id="lf-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="lf-output" class="llms-output" style="max-height:520px;white-space:pre-wrap;">Paste log lines to start.</pre>
+      <div id="lf-notes" style="margin-top:12px;font-size:0.92rem;line-height:1.6;"></div>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="lf-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="lf-download">Download .txt</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Log File Analyzer Reports</h2>
+    <ul class="service-points">
+      <li><strong>Crawler share:</strong> requests from the crawler you pick, compared with all requests in the log</li>
+      <li><strong>Status codes:</strong> how many of that crawler's requests returned 200, 3xx, 404 and 5xx</li>
+      <li><strong>Top URLs:</strong> the pages it requests most, so you can see where crawling is spent</li>
+      <li><strong>Problem URLs:</strong> URLs returning 404, 5xx and redirects to the crawler, most frequent first</li>
+      <li><strong>Parameter URLs:</strong> how many crawler hits go to URLs with a query string, which can point to wasted crawling</li>
+      <li><strong>Crawl by day:</strong> daily request counts for the crawler, so spikes and gaps stand out</li>
+    </ul>
+
+    <h2>What a Server Log Tells You That Search Console Does Not</h2>
+    <p>Google Search Console reports on crawling and indexing from Google's side, and its Crawl Stats report summarises requests. A server log is your own record of every request that reached your server, with the exact URL, time, status code and user agent. That makes it the place to see crawlers other than Google, to see every URL a crawler requested rather than a sample, and to spot errors that happen before a page ever reaches a report. A log is also the source for questions such as "does Googlebot ever reach this section?" and "how often does it get a 404?".</p>
+
+    <h2>Important Limits</h2>
+    <ul>
+      <li><strong>User agents can be faked.</strong> Anyone can send "Googlebot" in the user agent. Google documents how to verify that a request really came from Googlebot, using reverse DNS or its published IP ranges. This tool matches the user-agent text only, so treat results as indicative.</li>
+      <li><strong>It reads combined log format.</strong> Apache and Nginx default logs use it. Custom formats may not parse, and the tool tells you how many lines it could not read.</li>
+      <li><strong>Logs may be partial.</strong> A CDN or host may keep its own logs. Use logs that cover all requests for the period.</li>
+      <li><strong>It does not render pages or follow redirects.</strong> It counts what the log says.</li>
+    </ul>
+
+    <h2>How to Get Your Logs</h2>
+    <ul>
+      <li><strong>Shared hosting:</strong> look for "Raw access logs" or "Logs" in your hosting panel and download a recent file.</li>
+      <li><strong>VPS or your own server:</strong> Apache logs are usually under /var/log/apache2 and Nginx under /var/log/nginx. Copy a day or a week of lines.</li>
+      <li><strong>CDN or platform:</strong> ask for access logs for the period, in a format with the request line, status and user agent.</li>
+    </ul>
+    <p>Pair this with the <a href="/tools/robots-txt-tester">robots.txt tester</a> to see whether a crawled URL is allowed, the <a href="/tools/sitemap-validator">sitemap validator</a> to check that your sitemap lists only good URLs, and the <a href="/tools/redirect-mapper">redirect mapper</a> if the report shows many redirects.</p>
+
+    <h2>Log File Analyzer FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>What is log file analysis in SEO?<span class="faq-icon"></span></summary>
+        <p>It is reading your server's access log to see which URLs search engine crawlers request, how often, and what status your server returns. It shows crawling as it actually happened.</p>
+      </details>
+      <details>
+        <summary>Which log format does the tool read?<span class="faq-icon"></span></summary>
+        <p>The combined log format used by Apache and Nginx by default: client IP, date, request line, status, bytes, referrer and user agent. Lines in other formats are counted as unreadable.</p>
+      </details>
+      <details>
+        <summary>Does it verify that a request really came from Googlebot?<span class="faq-icon"></span></summary>
+        <p>No. It matches the user-agent text. User agents can be spoofed, so verify important findings using the method Google documents, such as reverse DNS lookup.</p>
+      </details>
+      <details>
+        <summary>Is my log file uploaded anywhere?<span class="faq-icon"></span></summary>
+        <p>No. The file or text is processed in your browser with JavaScript. Nothing is sent to any server, including ours.</p>
+      </details>
+      <details>
+        <summary>How much log data should I use?<span class="faq-icon"></span></summary>
+        <p>Enough to show a pattern: a few days to a few weeks for a small site. Very large logs may be slow in a browser, so use a sample.</p>
+      </details>
+      <details>
+        <summary>What should I do about 404s the crawler hits?<span class="faq-icon"></span></summary>
+        <p>Decide for each one whether the URL should exist. If it moved, add a permanent redirect. If it never existed or was removed on purpose, a 404 or 410 is fine, but fix any internal or external links that point to it.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want a technical SEO review by a person?</h2>
+      <p>Contomatix does audits, on-page work and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Log File Analyzer',
+    url: site.baseUrl + '/tools/log-file-analyzer',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste or open an Apache or Nginx access log and see which URLs Googlebot and other crawlers request, with status code counts and problem URLs. Free, runs in your browser.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Log File Analyzer', item: site.baseUrl + '/tools/log-file-analyzer' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What is log file analysis in SEO?', acceptedAnswer: { '@type': 'Answer', text: 'It is reading your server access log to see which URLs search engine crawlers request, how often, and what status your server returns.' } },
+      { '@type': 'Question', name: 'Which log format does the tool read?', acceptedAnswer: { '@type': 'Answer', text: 'The combined log format used by Apache and Nginx by default. Lines in other formats are counted as unreadable.' } },
+      { '@type': 'Question', name: 'Does it verify that a request really came from Googlebot?', acceptedAnswer: { '@type': 'Answer', text: 'No. It matches the user-agent text, which can be spoofed. Verify important findings using the method Google documents, such as reverse DNS lookup.' } },
+      { '@type': 'Question', name: 'Is my log file uploaded anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The file or text is processed in your browser with JavaScript. Nothing is sent to any server, including ours.' } },
+      { '@type': 'Question', name: 'How much log data should I use?', acceptedAnswer: { '@type': 'Answer', text: 'Enough to show a pattern: a few days to a few weeks for a small site. Very large logs may be slow in a browser, so use a sample.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '';
+  var LINE = /^(\S+) \S+ \S+ \[([^\]]+)\] "([A-Z]+) (\S+)(?: [^"]*)?" (\d{3}) (\S+)(?: "([^"]*)" "([^"]*)")?/;
+
+  function parse(text) {
+    var rows = [], bad = 0;
+    text.split(/\r?\n/).forEach(function (l) {
+      if (!l.trim()) return;
+      var m = LINE.exec(l);
+      if (!m) { bad++; return; }
+      var d = m[2].split(':')[0];
+      rows.push({ ip: m[1], day: d, method: m[3], url: m[4], status: +m[5], ua: (m[8] || '').toLowerCase() });
+    });
+    return { rows: rows, bad: bad };
+  }
+
+  function top(map, n) { return Object.keys(map).sort(function (a, b) { return map[b] - map[a]; }).slice(0, n); }
+
+  function render() {
+    var text = $('lf-input').value;
+    if (!text.trim()) { $('lf-output').textContent = 'Paste log lines to start.'; $('lf-notes').innerHTML = ''; $('lf-status').textContent = 'Waiting for input'; current = ''; return; }
+    var p = parse(text), rows = p.rows;
+    if (!rows.length) { $('lf-output').textContent = 'No readable lines. This tool reads the combined log format used by Apache and Nginx.'; $('lf-status').textContent = 'No lines read'; current = ''; return; }
+    var re = new RegExp($('lf-bot').value, 'i');
+    var bot = rows.filter(function (r) { return re.test(r.ua); });
+    var codes = {}, urls = {}, bad404 = {}, err5 = {}, redir = {}, days = {}, params = 0, files = {};
+    bot.forEach(function (r) {
+      var cls = Math.floor(r.status / 100) + 'xx'; codes[cls] = (codes[cls] || 0) + 1;
+      urls[r.url] = (urls[r.url] || 0) + 1;
+      if (r.status === 404 || r.status === 410) bad404[r.url] = (bad404[r.url] || 0) + 1;
+      if (r.status >= 500) err5[r.url] = (err5[r.url] || 0) + 1;
+      if (r.status >= 300 && r.status < 400) redir[r.url] = (redir[r.url] || 0) + 1;
+      if (r.url.indexOf('?') !== -1) params++;
+      days[r.day] = (days[r.day] || 0) + 1;
+      var ext = (r.url.split('?')[0].match(/\.([a-z0-9]{2,5})$/i) || [0, 'page'])[1].toLowerCase(); files[ext] = (files[ext] || 0) + 1;
+    });
+    var uniq = Object.keys(urls).length, n = bot.length;
+    var pct = function (x) { return n ? Math.round(x / n * 100) + '%' : '0%'; };
+    var L = [];
+    L.push('LOG FILE REPORT'); L.push('');
+    L.push('Lines read: ' + rows.length + '   Unreadable lines: ' + p.bad);
+    L.push('Requests from selected crawler: ' + n + ' (' + Math.round(n / rows.length * 100) + '% of all)   Unique URLs: ' + uniq);
+    if (n) {
+      L.push('Status: 2xx ' + (codes['2xx'] || 0) + ' (' + pct(codes['2xx'] || 0) + ')   3xx ' + (codes['3xx'] || 0) + ' (' + pct(codes['3xx'] || 0) + ')   4xx ' + (codes['4xx'] || 0) + ' (' + pct(codes['4xx'] || 0) + ')   5xx ' + (codes['5xx'] || 0) + ' (' + pct(codes['5xx'] || 0) + ')');
+      L.push('Requests to URLs with a query string: ' + params + ' (' + pct(params) + ')');
+      L.push(''); L.push('TOP URLS CRAWLED'); top(urls, 10).forEach(function (u) { L.push('  ' + urls[u] + '  ' + u); });
+      function block(title, map) { var k = top(map, 8); if (k.length) { L.push(''); L.push(title); k.forEach(function (u) { L.push('  ' + map[u] + '  ' + u); }); } }
+      block('404 / 410 URLS', bad404); block('5xx URLS', err5); block('REDIRECTED URLS (3xx)', redir);
+      L.push(''); L.push('BY FILE TYPE'); top(files, 8).forEach(function (e) { L.push('  ' + e + ': ' + files[e]); });
+      L.push(''); L.push('BY DAY'); Object.keys(days).sort().slice(0, 14).forEach(function (d) { L.push('  ' + d + ': ' + days[d]); });
+    }
+    current = L.join('\n'); $('lf-output').textContent = current;
+    var notes = [];
+    if (!n) notes.push('No requests matched that crawler. Check the crawler choice or that your log includes the user agent field.');
+    if (n && (codes['4xx'] || 0) / n > 0.05) notes.push('<strong>More than 5% of crawler requests returned 4xx.</strong> Review the 404 list: fix links to URLs that should exist and redirect moved ones.');
+    if (n && (codes['5xx'] || 0)) notes.push('<strong>The crawler received 5xx errors.</strong> Server errors can slow crawling. Check what failed at those times.');
+    if (n && params / n > 0.2) notes.push('<strong>Over 20% of crawler hits go to URLs with parameters.</strong> Look for filters, sessions or tracking parameters that create many URLs.');
+    if (p.bad / (rows.length + p.bad) > 0.1) notes.push('Some lines could not be read, so your log may use a custom format.');
+    notes.push('This matches the user-agent text only. User agents can be faked, so verify Googlebot as Google documents.');
+    $('lf-notes').innerHTML = '<ul style="padding-left:18px;margin:0;"><li>' + notes.join('</li><li>') + '</li></ul>';
+    $('lf-status').textContent = n + ' crawler request' + (n === 1 ? '' : 's');
+  }
+
+  $('lf-input').addEventListener('input', render);
+  $('lf-bot').addEventListener('change', render);
+  $('lf-file').addEventListener('change', function (e) { var f = e.target.files[0]; if (!f) return; var rd = new FileReader(); rd.onload = function () { $('lf-input').value = String(rd.result).slice(0, 8000000); render(); }; rd.readAsText(f); });
+  $('lf-copy').addEventListener('click', function () { if (current && navigator.clipboard) navigator.clipboard.writeText(current); });
+  $('lf-download').addEventListener('click', function () { if (!current) return; var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([current], { type: 'text/plain' })); a.download = 'log-file-report.txt'; a.click(); });
+})();
+</script>

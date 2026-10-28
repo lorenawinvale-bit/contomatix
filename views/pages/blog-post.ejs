@@ -63,7 +63,7 @@ var shareUrl = encodeURIComponent(postUrl);
 
       <% if (post.heroDiagram) { %>
         <div class="post-hero-diagram">
-          <img src="<%= post.heroDiagram %>" alt="Overview diagram: <%= post.title %>" width="700" height="620" loading="eager" fetchpriority="high">
+          <img src="<%= post.heroDiagram %>" alt="Overview diagram: <%= post.title %>" width="<%= heroDims.w %>" height="<%= heroDims.h %>" loading="eager" fetchpriority="high">
         </div>
       <% } %>
     </div>
