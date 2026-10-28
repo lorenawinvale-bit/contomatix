@@ -14,7 +14,16 @@ const expO = { n: 13, runs: 39, maxLcp: 932, maxTbt: 9, overCls: 1, nearCls: 4, 
 for (const k of Object.keys(expO)) if (O[k] !== expO[k]) throw new Error('own data changed ' + k + ' ' + O[k]);
 const D = { shown: 8, ok: ok.length, median: Math.round((w[3] + w[4]) / 2), lcp: c('lcp'), inp: c('inp'), cls: c('cls'), fid: c('fid'), threshold: c('threshold'), field: c('field'), lab: c('lab'), psi: c('psi'), images: c('images'), cache: c('cache'), js: c('js'), fonts: c('fonts'), wordpress: c('wordpress'), rankingFactor: c('rankingFactor'), tools: c('tools'), policy: c('policy'), gdoc: c('googleDoc'), dated: c('date') };
 console.log(JSON.stringify(D), JSON.stringify(O));
+const LA = fs.readFileSync(path.join(__dirname, '..', '..', 'keyword-research', 'cwv-own-pages-after-2026-10-28.jsonl'), 'utf8').trim().split(String.fromCharCode(10)).map(l => JSON.parse(l));
+const byA = {}; LA.forEach(x => (byA[x.path] = byA[x.path] || []).push(x.m));
+const clsA = p => med(byA[p].map(m => m.cls)); const clsB = p => pages.find(x => x.p === p).cls;
+const BLOG = ['/blog/free-seo-tools', '/blog/link-acquisition', '/blog/directory-links', '/blog/pr-link-building', '/blog/offpage-seo'];
+const AF = { runs: LA.length, worstAfter: Math.max(...BLOG.map(clsA)), prAfter: clsA('/blog/pr-link-building'), over: BLOG.filter(p => clsA(p) > 0.1).length, improved: BLOG.filter(p => clsA(p) < clsB(p)).length };
+const expAF = { runs: 39, over: 0, improved: 5 };
+for (const k of Object.keys(expAF)) if (AF[k] !== expAF[k]) throw new Error('after data changed ' + k + ' ' + AF[k]);
+if (Math.abs(AF.prAfter - 0.060) > 0.002) throw new Error('pr after changed ' + AF.prAfter);
 const f2 = n => n.toFixed(3);
+const afterRows = BLOG.map(p => [p, f2(clsB(p)), f2(clsA(p))]);
 const rows = pages.map(p => [p.p === '/' ? 'Home page' : p.p, `${p.lcp} ms`, f2(p.cls), `${p.tbt} ms`]);
 build({
   slug: 'improve-core-web-vitals', category: 'Technical SEO', author: 'Muhammad Reyan Nizami', date: '2026-10-26',
@@ -30,12 +39,13 @@ build({
     serp: { title: `What ${D.ok} pages ranking for improving Core Web Vitals say`, sub: `Organic results read on 26 October 2026 (${D.shown} listed, ${D.ok} readable). Sites are not named. A topic counts once per page.`, head: ['Topic', 'Pages'], lastBold: false,
       rows: [['LCP or largest contentful paint', `${D.lcp} of ${D.ok}`], ['CLS or layout shift', `${D.cls} of ${D.ok}`], ['INP or interaction to next paint', `${D.inp} of ${D.ok}`], ['Still mention FID (the older metric)', `${D.fid} of ${D.ok}`], ['Give a threshold number', `${D.threshold} of ${D.ok}`], ['Distinguish field data from lab data', `${D.field} of ${D.ok}`], ['Name PageSpeed Insights', `${D.psi} of ${D.ok}`], ['Cover images', `${D.images} of ${D.ok}`], ['Cover caching or a CDN', `${D.cache} of ${D.ok}`], ['Cover WordPress or plugins', `${D.wordpress} of ${D.ok}`], ['Link Google or web.dev documentation', `${D.gdoc} of ${D.ok}`], ['Show a publish or update date', `${D.dated} of ${D.ok}`]] },
     ours: { title: 'Our own pages, measured', sub: `Headless Chrome on a desktop, no throttling, against the live site on 26 October 2026. Median of 3 runs per page (${O.runs} runs). LCP = largest contentful paint, CLS = layout shift, TBT = total blocking time.`, head: ['Page', 'LCP', 'CLS', 'TBT'], lastBold: false, rows },
+    after: { title: 'Layout shift on our blog posts, before and after the fix', sub: 'Same method both times: headless Chrome, no throttling, median of 3 runs, live site. Before = 26 October 2026, after = 28 October 2026, once the template fix was deployed.', head: ['Page', 'CLS before', 'CLS after'], lastBold: false, rows: afterRows },
     google: { title: "Google's Core Web Vitals thresholds", sub: "From Google Search Central's Core Web Vitals page, read on 26 October 2026.", head: ['Metric', 'What it measures', 'Good'], lastBold: false,
       rows: [['LCP', 'Loading performance', 'Within 2.5 seconds'], ['INP', 'Responsiveness', 'Less than 200 ms'], ['CLS', 'Visual stability', 'Less than 0.1']] }
   },
   content: h => `${h.updated}
 
-<p><strong>Core Web Vitals</strong> are three measurements of real-world page experience: how fast the main content loads (LCP), how quickly the page responds to input (INP) and how stable the layout is while it loads (CLS). Google's documentation asks for LCP within 2.5 seconds, INP under 200 milliseconds and CLS under 0.1. To see what that looks like in practice, we measured ${O.n} of our own live pages three times each on 26 October 2026. Twelve were under the limit. One, a blog post published the day before, had a layout shift of ${f2(O.worstCls)}, more than four times the limit, and the cause was a single wrong number in a template.</p>
+<p><strong>Core Web Vitals</strong> are three measurements of real-world page experience: how fast the main content loads (LCP), how quickly the page responds to input (INP) and how stable the layout is while it loads (CLS). Google's documentation asks for LCP within 2.5 seconds, INP under 200 milliseconds and CLS under 0.1. To see what that looks like in practice, we measured ${O.n} of our own live pages three times each on 26 October 2026. Twelve were under the limit. One, a blog post published the day before, had a layout shift of ${f2(O.worstCls)}, more than four times the limit, and the cause was a single wrong number in a template. After we fixed it and re-measured on 28 October, it fell to 0.060.</p>
 
 <p>This guide gives you Google's thresholds, what ${D.ok} top-ranking guides say, our measurements, the bug we found, and a fix loop you can repeat on any site. For the wider technical picture, see our <a href="/blog/technical-seo-agency-2026">technical SEO guide</a> and the free <a href="/tools/technical-seo-audit-tool">technical SEO audit tool</a>.</p>
 
@@ -55,7 +65,9 @@ ${h.fig('ours', 'Table of 13 Contomatix pages measured three times each on 26 Oc
 
 <h2>The Bug: A Wrong Size on a Hero Image</h2>
 <p>We logged the layout shift entries on the worst page. There was a single shift, about 0.9 seconds in, where the main container grew by 66 pixels as the hero diagram loaded. The template declared every hero diagram as 700 by 620 pixels, but the diagrams are SVG files with their own aspect ratios. The browser reserved space for a 700 by 620 image, then rearranged the page when the real image arrived. We checked the hero diagrams of all 347 posts that have one: 173 are 760 by 560, 90 are 700 by 620, and 84 use other ratios. Only 90 of 347, about 26 percent, matched the declared size, which explains why shifts of different sizes appeared on different posts.</p>
-<p>The fix is small and sits in the template, not in each post: read each SVG's viewBox once and write the real width and height into the image tag. We made the change locally and confirmed that the pages now declare the right size, for example 760 by 560 for the PR guide. Because a local test loads the image instantly, the true check is a re-measurement on the live site, using the same method, after the change is deployed.</p>
+<p>The fix is small and sits in the template, not in each post: read each SVG's viewBox once and write the real width and height into the image tag. We deployed the change on 28 October 2026 and confirmed that the pages now declare the right size, for example 760 by 560 for the PR guide. Then we re-ran the same measurement on the live site.</p>
+${h.fig('after', 'Table of layout shift on five Contomatix blog posts before and after the fix: the PR link building guide fell from 0.425 to 0.060 and the other four posts fell to 0.020 or less, all under the 0.1 limit')}
+<p>Result: the worst page fell from ${f2(clsB('/blog/pr-link-building'))} to ${f2(AF.prAfter)}, and all ${AF.improved} of the five blog posts improved, with none over the 0.1 limit. One shift of ${f2(AF.prAfter)} remains on the PR guide, which we have not yet traced, so we do not claim a perfect score. LCP and blocking time moved around between the two runs by more than the CLS change did (the test machine was busier on the second day), so we treat those differences as noise, not as a regression or a gain.</p>
 
 ${h.info('Infographic of what 8 Core Web Vitals guides cover and a four-step fix loop: measure first, find the biggest shift, fix at the source and re-measure, with our worst layout shift of 0.425 caused by one wrong image size')}
 
@@ -119,7 +131,7 @@ ${h.info('Infographic of what 8 Core Web Vitals guides cover and a four-step fix
 <ul>
 <li>Google's good targets are LCP within 2.5 seconds, INP under 200 ms and CLS under 0.1.</li>
 <li>On ${O.n} of our own pages, loading and responsiveness were fine; the one failure was a layout shift of ${f2(O.worstCls)}.</li>
-<li>The cause was a template that declared a wrong size for 257 of 347 hero diagrams.</li>
+<li>The cause was a template that declared a wrong size for 257 of 347 hero diagrams. After the fix, the worst page fell from ${f2(O.worstCls)} to ${f2(AF.prAfter)} and all five blog posts we re-measured improved.</li>
 <li>Fix problems at the source and re-measure with the same method.</li>
 <li>Do not promise a ranking change from a better score.</li>
 </ul>

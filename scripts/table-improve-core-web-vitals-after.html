@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0;width:1280px;box-sizing:border-box;background:#fff;font-family:'Segoe UI',Arial,sans-serif;color:#16192A;padding:28px 32px}
+h3{margin:0 0 4px;font-size:22px}p{margin:0 0 16px;color:#6b6459;font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:18px}th{background:#F1EDE3;text-align:right;padding:12px 14px;font-size:14px;color:#6b6459;text-transform:uppercase;letter-spacing:.3px}th:first-child,td:first-child{text-align:left}
+td{padding:13px 14px;text-align:right;border-bottom:1px solid #EAE0D2;font-variant-numeric:tabular-nums}td:first-child{font-weight:600}
+</style></head><body><h3>Layout shift on our blog posts, before and after the fix</h3><p>Same method both times: headless Chrome, no throttling, median of 3 runs, live site. Before = 26 October 2026, after = 28 October 2026, once the template fix was deployed.</p><table><thead><tr><th>Page</th><th>CLS before</th><th>CLS after</th></tr></thead><tbody><tr><td>/blog/free-seo-tools</td><td>0.032</td><td>0.000</td></tr><tr><td>/blog/link-acquisition</td><td>0.063</td><td>0.005</td></tr><tr><td>/blog/directory-links</td><td>0.093</td><td>0.007</td></tr><tr><td>/blog/pr-link-building</td><td>0.425</td><td>0.060</td></tr><tr><td>/blog/offpage-seo</td><td>0.089</td><td>0.020</td></tr></tbody></table></body></html>
