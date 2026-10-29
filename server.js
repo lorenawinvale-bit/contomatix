@@ -206,7 +206,7 @@ app.use((req, res, next) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().slice(0, 10);
-  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/link-prospect-scorer', '/tools/anchor-text-checker', '/tools/outbound-link-checker', '/tools/backlink-monitor-tool', '/tools/link-building-management-tool', '/tools/log-file-analyzer', '/tools/content-brief-generator', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
+  const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/link-prospect-scorer', '/tools/anchor-text-checker', '/tools/outbound-link-checker', '/tools/backlink-monitor-tool', '/tools/link-building-management-tool', '/tools/log-file-analyzer', '/tools/keyword-grouping-tool', '/tools/content-brief-generator', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
     ...staticPaths.map(u => ({ loc: u, lastmod: today })),
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
@@ -572,6 +572,14 @@ app.get('/tools/log-file-analyzer', (req, res) => {
   res.render('pages/log-file-analyzer', {
     title: 'Free Log File Analyzer: See What Googlebot Crawls | Contomatix',
     description: 'Paste or open an Apache or Nginx access log and see which URLs Googlebot and other crawlers request, with status codes and problem URLs. Free, in your browser.',
+    pageClass: 'page-tool'
+  });
+});
+
+app.get('/tools/keyword-grouping-tool', (req, res) => {
+  res.render('pages/keyword-grouping-tool', {
+    title: 'Free Keyword Grouping Tool: Group Keywords by Topic | Contomatix',
+    description: 'Paste a keyword list and group it by shared words, with a primary keyword, intent tag and combined volume for each group. Free, runs in your browser.',
     pageClass: 'page-tool'
   });
 });

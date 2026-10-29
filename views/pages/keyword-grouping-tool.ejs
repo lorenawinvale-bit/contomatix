@@ -1,0 +1,220 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Keyword Grouping Tool — Sort a Keyword List Into Groups and Page Targets</h1>
+    <p>Paste a keyword list, with search volume if you have it, and this <strong>keyword grouping tool</strong> sorts it into groups that share words, picks a primary keyword for each group, tags the search intent and flags keywords that are the same query in a different word order. It runs in your browser: nothing is uploaded.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="kg-form" onsubmit="return false;" aria-label="Keyword grouping tool form">
+        <div><label for="kg-in">Keywords, one per line (add a volume after a comma or tab if you have it)</label>
+          <textarea id="kg-in" rows="14" placeholder="blogger outreach, 800&#10;blogger outreach agency, 500&#10;blogger outreach software, 150&#10;best blogger outreach tools, 100&#10;outreach blogger&#10;how to do blogger outreach"></textarea></div>
+        <div><label for="kg-min">Smallest group size</label>
+          <select id="kg-min"><option value="2">2 keywords</option><option value="3">3 keywords</option><option value="4">4 keywords</option></select></div>
+        <div><label for="kg-ignore">Words to ignore, separated by commas (optional)</label><input type="text" id="kg-ignore" placeholder="e.g. best, free, online"></div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Keyword groups</strong>
+        <span id="kg-status" class="llms-status">Waiting for input</span>
+      </div>
+      <pre id="kg-output" class="llms-output" style="max-height:640px;white-space:pre-wrap;">Paste a keyword list to start.</pre>
+      <div class="llms-actions" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="kg-copy">Copy</button>
+        <button type="button" class="btn btn-glass" id="kg-download">Download CSV</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Keyword Grouping Tool Does</h2>
+    <ul class="service-points">
+      <li><strong>Groups by shared words:</strong> it finds the word or two-word phrase that the most ungrouped keywords share and builds a group around it, then repeats</li>
+      <li><strong>Picks a primary keyword:</strong> the keyword with the highest volume in each group, or the shortest one if you gave no volumes</li>
+      <li><strong>Tags intent:</strong> informational, commercial or transactional, from words such as how, best and price, so you can see mixed groups</li>
+      <li><strong>Flags word-order duplicates:</strong> "blogger outreach agency" and "agency blogger outreach" are marked as the same query</li>
+      <li><strong>Adds up volume:</strong> the combined volume of each group, so you can see which groups deserve a page first</li>
+      <li><strong>Exports:</strong> copy the result or download a CSV with group, keyword, volume, intent and a primary flag</li>
+    </ul>
+
+    <h2>What It Does Not Do</h2>
+    <p>This is word-overlap grouping, not SERP-based clustering. It does not look at search results, so it cannot tell that two keywords with no shared words are served by the same ranking pages. Treat the groups as a first draft: for each group, search the primary keyword and check whether the same pages rank for the others before you decide on one page or two. To then match each group to a URL, use the <a href="/tools/keyword-mapping-tool">keyword mapping tool</a>, and for the bigger picture read our guide to a <a href="/blog/topical-map-seo">topical map for SEO</a>.</p>
+
+    <h2>How to Use the Groups</h2>
+    <ul>
+      <li><strong>One group, one page, usually.</strong> Keywords in a group that share an intent often belong on one page, with the primary keyword in the title and the rest as headings or FAQs.</li>
+      <li><strong>Split mixed-intent groups.</strong> If a group holds both "how to" and "best" or "price" keywords, they may need separate pages.</li>
+      <li><strong>Check the ungrouped list.</strong> Keywords left over are either one-offs worth a page of their own or terms to drop.</li>
+      <li><strong>Check for cannibalization.</strong> Before you build, make sure no existing page already targets the primary keyword.</li>
+    </ul>
+
+    <h2>Keyword Grouping Tool FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>What is keyword grouping?<span class="faq-icon"></span></summary>
+        <p>It is sorting a list of keywords into sets that can be answered by one page, so you build one page per topic instead of one page per keyword.</p>
+      </details>
+      <details>
+        <summary>Is this semantic keyword clustering?<span class="faq-icon"></span></summary>
+        <p>No. It groups by shared words and phrases. Semantic or SERP-based clustering compares the pages that rank for each keyword, which needs search data that a browser tool does not have.</p>
+      </details>
+      <details>
+        <summary>Does it need search volume?<span class="faq-icon"></span></summary>
+        <p>No. Without volumes the tool still groups and picks the shortest keyword as the primary one. With volumes it picks the highest-volume keyword and adds up each group.</p>
+      </details>
+      <details>
+        <summary>How many keywords can I paste?<span class="faq-icon"></span></summary>
+        <p>A few thousand work fine because everything runs in your browser. Very large lists may take a few seconds.</p>
+      </details>
+      <details>
+        <summary>What does "same query" mean?<span class="faq-icon"></span></summary>
+        <p>Two keywords that use exactly the same words in a different order, such as "seo tools best" and "best seo tools". Search engines treat these as the same need, so they should share a page.</p>
+      </details>
+      <details>
+        <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
+        <p>No. Everything is processed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want help turning keywords into a content plan?</h2>
+      <p>Contomatix does keyword research, content planning and link building for businesses and agencies.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Keyword Grouping Tool',
+    url: site.baseUrl + '/tools/keyword-grouping-tool',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Paste a keyword list and group it by shared words, with a primary keyword, intent tag and combined volume for each group. Free, runs in your browser.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Keyword Grouping Tool', item: site.baseUrl + '/tools/keyword-grouping-tool' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What is keyword grouping?', acceptedAnswer: { '@type': 'Answer', text: 'It is sorting a list of keywords into sets that can be answered by one page, so you build one page per topic instead of one page per keyword.' } },
+      { '@type': 'Question', name: 'Is this semantic keyword clustering?', acceptedAnswer: { '@type': 'Answer', text: 'No. It groups by shared words and phrases. Semantic or SERP-based clustering compares the pages that rank for each keyword, which needs search data that a browser tool does not have.' } },
+      { '@type': 'Question', name: 'Does it need search volume?', acceptedAnswer: { '@type': 'Answer', text: 'No. Without volumes the tool still groups and picks the shortest keyword as the primary one. With volumes it picks the highest-volume keyword and adds up each group.' } },
+      { '@type': 'Question', name: 'What does same query mean?', acceptedAnswer: { '@type': 'Answer', text: 'Two keywords that use exactly the same words in a different order. Search engines treat these as the same need, so they should share a page.' } },
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is processed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var current = '', csv = '', SHOW = {};
+  var STOP = {}; 'a an the of for to in on and or how what is are with your you do does can i my best top free online vs versus near me'.split(' ').forEach(function (w) { STOP[w] = 1; });
+  var INFO = /^(how|what|why|when|where|guide|tutorial|examples?|ideas?|meaning|definition|learn)$/;
+  var COMM = /^(best|top|vs|versus|review|reviews|compare|comparison|alternatives?|software|tools?|platforms?)$/;
+  var TRAN = /^(buy|price|pricing|cost|cheap|service|services|agency|company|hire|quote|order|consultant)$/;
+  // intent words must not be removed before tagging, so STOP is used for grouping only
+  function stem(w) { if (w.length > 4 && /ies$/.test(w)) return w.replace(/ies$/, 'y'); if (w.length > 4 && /(ing|es)$/.test(w)) return w.replace(/(ing|es)$/, ''); if (w.length > 3 && /s$/.test(w) && !/ss$/.test(w)) return w.replace(/s$/, ''); return w; }
+  function parse(text) {
+    var out = [], seen = {};
+    text.split('\n').forEach(function (line) {
+      line = line.trim(); if (!line) return;
+      var vol = null, kw = line, m = line.match(/^(.*?)[,\t;]\s*([\d.,]+k?)\s*$/i);
+      if (m) { kw = m[1].trim(); var v = m[2].toLowerCase().replace(/,/g, ''); vol = /k$/.test(v) ? Math.round(parseFloat(v) * 1000) : Math.round(parseFloat(v)); if (isNaN(vol)) vol = null; }
+      kw = kw.replace(/^["']|["']$/g, '').replace(/\s+/g, ' ').toLowerCase(); if (!kw) return;
+      if (seen[kw] !== undefined) { if (vol !== null) out[seen[kw]].vol = Math.max(out[seen[kw]].vol || 0, vol); return; }
+      seen[kw] = out.length; out.push({ kw: kw, vol: vol });
+    });
+    return out;
+  }
+  function intentOf(words) { var t = null; words.forEach(function (w) { if (INFO.test(w)) t = t || 'informational'; else if (TRAN.test(w)) t = (t === 'informational') ? 'mixed' : 'transactional'; else if (COMM.test(w)) t = t || 'commercial'; }); return t || 'unlabelled'; }
+  function group(items, min, ignore) {
+    items.forEach(function (it) {
+      it.words = it.kw.replace(/[^a-z0-9 ]/g, ' ').split(' ').filter(Boolean);
+      it.tok = it.words.filter(function (w) { return !STOP[w] && !ignore[w]; }).map(stem);
+      it.sig = it.words.map(stem).sort().join(' '); it.intent = intentOf(it.words);
+      it.words.forEach(function (w) { if (!SHOW[stem(w)]) SHOW[stem(w)] = w; });
+    });
+    var left = items.filter(function (it) { return it.tok.length; }), groups = [];
+    while (left.length) {
+      var cnt = {}, cand = {};
+      left.forEach(function (it) {
+        var s = {}; it.tok.forEach(function (t, i) { s[t] = 1; if (i < it.tok.length - 1) s[it.tok[i] + ' ' + it.tok[i + 1]] = 1; if (i < it.tok.length - 1) s[it.tok[i + 1] + ' ' + it.tok[i]] = 1; });
+        Object.keys(s).forEach(function (k) { cnt[k] = (cnt[k] || 0) + 1; });
+      });
+      var best = null, bestN = 0, bestScore = 0;
+      Object.keys(cnt).forEach(function (k) { var n = cnt[k], sc = n * (k.indexOf(' ') > -1 ? 1.5 : 1); if (n >= min && sc > bestScore) { best = k; bestN = n; bestScore = sc; } });
+      if (!best) break;
+      var parts = best.split(' ');
+      var hit = left.filter(function (it) { return parts.every(function (p) { return it.tok.indexOf(p) > -1; }); });
+      var rest = left.filter(function (it) { return hit.indexOf(it) < 0; });
+      groups.push({ name: parts.map(function (p) { return SHOW[p] || p; }).join(' '), items: hit }); left = rest;
+    }
+    return { groups: groups, ungrouped: items.filter(function (it) { return !it.tok.length; }).concat(left) };
+  }
+  function esc(s) { return '"' + String(s).replace(/"/g, '""') + '"'; }
+  function render() {
+    var items = parse($('kg-in').value);
+    if (!items.length) { $('kg-output').textContent = 'Paste a keyword list to start.'; $('kg-status').textContent = 'Waiting for input'; current = ''; csv = ''; return; }
+    var ignore = {}; $('kg-ignore').value.split(',').forEach(function (w) { w = w.trim().toLowerCase(); if (w) ignore[w] = 1; });
+    var min = parseInt($('kg-min').value, 10) || 2, hasVol = items.some(function (i) { return i.vol !== null; });
+    var res = group(items, min, ignore), L = [], C = ['group,keyword,volume,intent,primary,same_query_as'];
+    res.groups.forEach(function (g) {
+      g.items.sort(function (a, b) { return (b.vol || 0) - (a.vol || 0) || a.kw.length - b.kw.length; });
+      var primary = g.items[0], total = g.items.reduce(function (s, i) { return s + (i.vol || 0); }, 0), sigs = {};
+      var intents = {}; g.items.forEach(function (i) { if (i.intent !== 'unlabelled') intents[i.intent] = 1; });
+      L.push('GROUP: ' + g.name + '  (' + g.items.length + ' keywords' + (hasVol ? ', ' + total + ' total volume' : '') + ')');
+      L.push('  Primary: ' + primary.kw + (primary.vol !== null ? ' (' + primary.vol + ')' : '') + (Object.keys(intents).length > 1 ? '   [mixed intent: consider splitting the page]' : ''));
+      g.items.forEach(function (i) {
+        var dupe = sigs[i.sig] ? ' = same query as "' + sigs[i.sig] + '"' : ''; if (!sigs[i.sig]) sigs[i.sig] = i.kw;
+        L.push('  - ' + i.kw + (i.vol !== null ? ' (' + i.vol + ')' : '') + '  [' + i.intent + ']' + dupe);
+        C.push([esc(g.name), esc(i.kw), i.vol === null ? '' : i.vol, i.intent, i === primary ? 'yes' : '', dupe ? esc(sigs[i.sig]) : ''].join(','));
+      });
+      L.push('');
+    });
+    if (res.ungrouped.length) {
+      L.push('UNGROUPED (' + res.ungrouped.length + '): one-offs, each may need its own page or can be dropped');
+      res.ungrouped.forEach(function (i) { L.push('  - ' + i.kw + (i.vol !== null ? ' (' + i.vol + ')' : '')); C.push(['ungrouped', esc(i.kw), i.vol === null ? '' : i.vol, i.intent, '', ''].join(',')); });
+    }
+    current = L.join('\n'); csv = C.join('\n');
+    $('kg-output').textContent = current;
+    $('kg-status').textContent = res.groups.length + ' group' + (res.groups.length === 1 ? '' : 's') + ', ' + res.ungrouped.length + ' ungrouped';
+  }
+  ['kg-in', 'kg-min', 'kg-ignore'].forEach(function (id) { $(id).addEventListener('input', render); $(id).addEventListener('change', render); });
+  $('kg-copy').addEventListener('click', function () { if (current && navigator.clipboard) navigator.clipboard.writeText(current); });
+  $('kg-download').addEventListener('click', function () { if (!csv) return; var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = 'keyword-groups.csv'; a.click(); });
+})();
+</script>

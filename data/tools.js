@@ -187,6 +187,11 @@ module.exports = [
     summary: 'Enter a keyword, intent, audience and your research and get a structured content brief with outline, FAQ, sources, internal links and a meta draft.'
   },
   {
+    slug: 'keyword-grouping-tool',
+    title: 'Keyword Grouping Tool',
+    summary: 'Paste a keyword list and group it by shared words, with a primary keyword, intent tag and combined volume for each group. Export to CSV.'
+  },
+  {
     slug: 'keyword-mapping-tool',
     title: 'Keyword Mapping Tool',
     summary: 'Match keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords — export to CSV.'

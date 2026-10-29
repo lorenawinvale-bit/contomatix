@@ -8,7 +8,7 @@ module.exports = function build(cfg) {
   L.cover(SLUG, cfg.cover);
   fs.writeFileSync(path.join(__dirname, 'infographic-' + SLUG + '.html'), L.infographicHtml(cfg.info));
   for (const [n, t] of Object.entries(cfg.tables)) fs.writeFileSync(path.join(__dirname, 'table-' + SLUG + '-' + n + '.html'), L.tableHtml(t));
-  const V = require('./day12-visuals.js')[SLUG];
+  const V = require('./day12-visuals.js')[SLUG] || require('./day14-visuals.js')[SLUG];
   if (V) {
     const DG = require('./diagram-lib.js'); const vis = V(cfg);
     DG.hero(SLUG, vis.hero);
