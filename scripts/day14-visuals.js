@@ -6,6 +6,43 @@ const ofN = s => { const m = /(\d+) of (\d+)/.exec(s); return { v: +m[1], max: +
 const TEAL = '#0EA5A0', AMBER = '#F5A623', RED = '#E5484D';
 
 module.exports = {
+  'top-seo-companies-ramsgate-2026': cfg => {
+    const T = cfg.tables;
+    return {
+      hero: D.rings({ title: 'Who is really in Ramsgate?', items: [
+        { pct: 5 / 18, big: '5/18', t: 'results show a Ramsgate address', c: 'Read from each site, 30 October 2026', color: TEAL },
+        { pct: 4 / 18, big: '4/18', t: 'also offer SEO', c: 'These four are on our list', color: TEAL },
+        { pct: 13 / 18, big: '13/18', t: 'show no Ramsgate address', c: 'Another town, or no address at all', color: RED }] }),
+      tables: {
+        where: D.columns({ title: 'Where the 18 results say they are based', items: [
+          { t: 'Ramsgate', v: 5, text: '5', color: TEAL }, { t: 'Chatham', v: 1, text: '1', color: AMBER }, { t: 'Gillingham', v: 1, text: '1', color: AMBER }, { t: 'London', v: 1, text: '1', color: AMBER }, { t: 'Maidstone or East Grinstead', v: 1, text: '1', color: AMBER }, { t: 'Essex', v: 1, text: '1', color: AMBER }, { t: 'Isle of Sheppey', v: 1, text: '1', color: AMBER }, { t: 'Margate (register)', v: 1, text: '1', color: AMBER }, { t: 'No address found', v: 6, text: '6', color: RED }], max: 6 }),
+        check: D.cards({ w: 1200, h: 560, title: 'The four Ramsgate companies', qLabel: 'Address on site', items: [
+          { big: '1', t: 'Esabi', d: 'SEO, local SEO, link building. Companies House match', q: '424 Margate Road, CT12 6SJ' },
+          { big: '2', t: 'Busywebs', d: 'Web design with a local SEO guide for Thanet', q: '23 Pysons Road, CT12 6TS' },
+          { big: '3', t: '9G Agency', d: 'SEO service page, three-month guarantee terms', q: 'Marlowe Innovation Centre, CT12 6FA' },
+          { big: '4', t: 'Web Dandy', d: 'Web design with on-page SEO included', q: '128 Crescent Road, CT11 9RE' }] }),
+        method: D.flow({ w: 1200, h: 420, title: 'How we checked each company', steps: [
+          { t: 'Read results', s: 'Google UK', c: 'Sites ranking for Ramsgate SEO searches' }, { t: 'Open the site', s: 'home, contact, about', c: 'Pages where an address usually sits' },
+          { t: 'Find the address', s: 'postcode', c: 'CT11 or CT12 means Ramsgate' }, { t: 'Companies House', s: 'name search', c: 'Registered office and incorporation date' }, { t: 'Keep confirmed', s: 'address and SEO', c: 'Four companies passed' }] })
+      }
+    };
+  },
+  'top-seo-companies-ashford-2026': cfg => {
+    return {
+      hero: D.split({ title: 'Who is really in Ashford?', big: '8/23', bigLabel: 'results show an Ashford-area address', h: 440, items: [
+        { v: '5', t: 'offer SEO and are on our list' }, { v: '8', t: 'give an office in another town' }, { v: '7', t: 'show no address at all' }, { v: '£495', t: 'the only monthly SEO price published' }] }),
+      tables: {
+        where: D.bars({ title: 'Where the 23 results say they are based', max: 23, rows: [{ t: 'An Ashford-area address', v: 8, text: '8 of 23', color: TEAL }, { t: 'An address in another town', v: 8, text: '8 of 23', color: AMBER }, { t: 'No address on the pages we read', v: 7, text: '7 of 23', color: RED }] }),
+        check: D.cards({ w: 1200, h: 560, title: 'The five Ashford companies', qLabel: 'Address on site', items: [
+          { big: '1', t: 'Discoverable', d: 'SEO, PPC and analytics. Companies House match', q: 'Evegate Business Park, TN25 6SX' },
+          { big: '2', t: 'Quad Web Design', d: 'SEO from £495 a month. Company since 2006', q: 'Church Lane, Hamstreet, TN26' },
+          { big: '3', t: 'Smart Web Agency', d: 'Full SEO page. Registered office is in London', q: 'The Panorama, TN24 8DF' },
+          { big: '4', t: 'Ashford Web Services', d: 'Web design and SEO, established 2010', q: '4 Stowell Close, TN23 5HS' },
+          { big: '5', t: 'Lustre Digital', d: 'Website with on-page SEO. Company since March 2026', q: '15 Tritton Fields, TN24 9HG' }] }),
+        method: D.compare({ w: 1200, h: 480, title: 'What we accepted and what we did not', left: { h: 'Not accepted', items: ['A page called SEO Ashford with no address', 'An office only in another town', 'Web design with no SEO mentioned', 'A company record that does not exist'] }, right: { h: 'Accepted', items: ['An Ashford-area address on its own site', 'A matching company, or a sole trader we flag', 'A readable SEO service on its pages', 'Caveats stated: registered office, new company'] } })
+      }
+    };
+  },
   'blogger-outreach': cfg => {
     const T = cfg.tables, s = T.serp.rows, o = T.ours.rows, g = T.google.rows;
     const pick = n => s.find(r => r[0].startsWith(n));
