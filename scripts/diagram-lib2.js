@@ -31,11 +31,11 @@ function dots(o) {
   return frame(w, h, o.title, b, o.note);
 }
 function timeline(o) {
-  const w = o.w || 1200, n = o.items.length, rh = 92, top = 90, h = top + n * rh + (o.note ? 100 : 30); let b = `<line x1="150" y1="${top + 10}" x2="150" y2="${top + (n - 1) * rh + 30}" stroke="${C.line}" stroke-width="4"/>`;
+  const lx = o.lw || 150, w = o.w || 1200, n = o.items.length, rh = 92, top = 90, h = top + n * rh + (o.note ? 100 : 30); let b = `<line x1="${lx}" y1="${top + 10}" x2="${lx}" y2="${top + (n - 1) * rh + 30}" stroke="${C.line}" stroke-width="4"/>`;
   o.items.forEach((it, i) => {
     const y = top + i * rh, last = i === n - 1;
-    b += lines(28, y + 30, [it.d], 17, C.ink, 800) + `<circle cx="150" cy="${y + 24}" r="12" fill="${last ? C.teal : C.amber}" stroke="#fff" stroke-width="3"/>`
-      + `<rect x="190" y="${y}" width="${w - 218}" height="${rh - 14}" rx="12" fill="#fff" stroke="${C.line}"/>` + lines(208, y + 28, [it.t], 16, C.ink, 800) + lines(208, y + 52, wrap(it.c, Math.floor((w - 250) / 7.2)).slice(0, 1), 13.5, C.mute);
+    b += lines(28, y + 30, [it.d], 17, C.ink, 800) + `<circle cx="${lx}" cy="${y + 24}" r="12" fill="${last ? C.teal : C.amber}" stroke="#fff" stroke-width="3"/>`
+      + `<rect x="${lx + 40}" y="${y}" width="${w - lx - 68}" height="${rh - 14}" rx="12" fill="#fff" stroke="${C.line}"/>` + lines(lx + 58, y + 28, [it.t], 16, C.ink, 800) + lines(lx + 58, y + 52, wrap(it.c, Math.floor((w - lx - 100) / 7.2)).slice(0, 1), 13.5, C.mute);
   });
   return frame(w, h, o.title, b, o.note);
 }

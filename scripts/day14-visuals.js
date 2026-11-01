@@ -6,6 +6,36 @@ const ofN = s => { const m = /(\d+) of (\d+)/.exec(s); return { v: +m[1], max: +
 const TEAL = '#0EA5A0', AMBER = '#F5A623', RED = '#E5484D';
 
 module.exports = {
+  '301-vs-302-redirect': cfg => {
+    const T = cfg.tables, s = T.serp.rows, o = T.ours.rows;
+    return {
+      hero: D.compare({ title: '301 vs 302: permanent or temporary?', left: { h: '301 or 308: permanent', items: ['The old URL is gone for good', 'Google shows the new URL', 'Use after a move, rename or https switch', 'Use only if you will not revert it'] }, right: { h: '302 or 307: temporary', items: ['The old URL will come back', 'Google shows the old URL', 'Use for a short offer or maintenance page', 'Change it if the move becomes permanent'] } }),
+      tables: {
+        serp: D.bars({ title: 'What 6 guides on 301 vs 302 cover', max: 6, rows: s.map(r => ({ t: r[0], v: ofN(r[1]).v, text: r[1].replace(' of ', '/'), color: ofN(r[1]).v === 6 ? TEAL : (ofN(r[1]).v <= 2 ? AMBER : undefined) })) }),
+        google: D.cards({ w: 1200, h: 560, title: 'How Google treats each redirect code', qLabel: 'In search results', items: [
+          { big: '301', t: 'Permanent', d: 'Moved permanently', q: 'Shows the new target' }, { big: '308', t: 'Permanent', d: 'Moved permanently, newer twin of 301', q: 'Shows the new target' },
+          { big: '302', t: 'Temporary', d: 'Found', q: 'Shows the source page' }, { big: '307', t: 'Temporary', d: 'Temporary redirect, newer twin of 302', q: 'Shows the source page' }] }),
+        ours: D.rings({ w: 1200, h: 520, title: 'First redirect code on 178 sites, http to https', items: [
+          { pct: num(o[0][1]) / 178, big: o[0][2], t: o[0][1] + ' sites use a 301', c: 'The default choice', color: TEAL },
+          { pct: num(o[1][1]) / 178, big: o[1][2], t: o[1][1] + ' sites use a 308', c: 'The permanent newer code', color: TEAL },
+          { pct: num(o[2][1]) / 178, big: o[2][2], t: o[2][1] + ' sites use a 302', c: 'Temporary, unusual for http to https', color: AMBER }] })
+      }
+    };
+  },
+  'monthly-seo-report': cfg => {
+    const T = cfg.tables, s = T.serp.rows, o = T.ours.rows, sec = T.sections.rows;
+    return {
+      hero: D.stats({ w: 760, cols: 2, title: 'Our own October SEO report', items: [
+        { big: o[2][1], t: 'impressions in October, to the 27th' }, { big: o[2][2], t: 'clicks in the same period', color: AMBER },
+        { big: o[2][3], t: 'click rate, down from ' + o[0][3] }, { big: '452', t: 'pages indexed, 36 not (27 Oct)', color: AMBER },
+        { big: '30', t: 'external links (29 Oct), 13 on 15 Oct' }, { big: '0.060', t: 'worst layout shift, was 0.425', color: AMBER }] }),
+      tables: {
+        serp: D.dots({ title: 'What 7 guides on monthly SEO reports include', rows: s.map(r => ({ t: r[0], v: ofN(r[1]).v, max: ofN(r[1]).max, text: r[1].replace(' of ', '/') })) }),
+        ours: D.columns({ title: 'Our impressions by month (clicks in brackets)', max: 60000, items: o.map((r, i) => ({ t: r[0], v: num(r[1]), text: r[1] + ' (' + r[2] + ')', color: i === 2 ? TEAL : AMBER })) }),
+        sections: D.timeline({ title: 'The seven sections of our monthly SEO report', items: sec.map(r => ({ d: 'Section ' + r[0].split(' ')[0], t: r[0].replace(/^\d+ /, ''), c: r[1] })) })
+      }
+    };
+  },
   'top-seo-companies-ramsgate-2026': cfg => {
     const T = cfg.tables;
     return {
