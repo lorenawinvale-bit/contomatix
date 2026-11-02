@@ -6,6 +6,50 @@ const ofN = s => { const m = /(\d+) of (\d+)/.exec(s); return { v: +m[1], max: +
 const TEAL = '#0EA5A0', AMBER = '#F5A623', RED = '#E5484D';
 
 module.exports = {
+  'backlink-strategy': cfg => {
+    const T = cfg.tables, s = T.serp.rows, st = T.steps.rows;
+    return {
+      hero: D.stats({ w: 760, cols: 2, title: 'Our own backlink starting point', items: [
+        { big: '30', t: 'external links in Search Console' }, { big: '23', t: 'of them point at the homepage', color: AMBER },
+        { big: '24', t: 'come from just 5 sites' }, { big: '19', t: 'come from two profile pages', color: AMBER },
+        { big: '10,704', t: 'internal links on our own site' }, { big: '5', t: 'top link texts: brand, generic, tool name', color: AMBER }] }),
+      tables: {
+        serp: D.columns({ title: 'What 7 guides on backlink strategy cover', max: 7, items: s.slice(0, 12).map(r => ({ t: r[0], v: ofN(r[1]).v, text: r[1].replace(' of ', '/'), color: ofN(r[1]).v >= 6 ? TEAL : (ofN(r[1]).v <= 1 ? RED : AMBER) })) }),
+        ours: D.split({ w: 1200, h: 440, title: 'Our own link inventory, 29 October 2026', big: '23/30', bigLabel: 'external links point at the homepage', items: [{ v: '24', t: 'links come from the top 5 linking sites' }, { v: '19', t: 'links come from two profile pages' }, { v: '5', t: 'top link texts, all brand or generic' }, { v: '10,704', t: 'internal links on our own site' }] }),
+        steps: D.timeline({ title: 'The seven steps of our backlink strategy', items: st.map(r => ({ d: 'Step ' + r[0].split(' ')[0], t: r[0].replace(/^d+ /, ''), c: r[1] })) })
+      }
+    };
+  },
+  'what-is-a-google-penalty': cfg => {
+    const T = cfg.tables, s = T.serp.rows, o = T.ours.rows;
+    return {
+      hero: D.compare({ title: 'Manual action or something else?', left: { h: 'A manual action', items: ['A human at Google reviewed the pages', 'Shown in the Manual actions report', 'You also get a message in Search Console', 'Fix every affected page, then request a review'] }, right: { h: 'Not a manual action', items: ['No entry in the report, a green check mark', 'May be an algorithm change or a technical fault', 'Check indexing, robots.txt and noindex first', 'Improve the site and wait for Google to reassess'] } }),
+      tables: {
+        serp: D.bars({ title: 'What 5 guides on Google penalties cover', max: 5, rows: s.map(r => ({ t: r[0], v: ofN(r[1]).v, text: r[1].replace(' of ', '/'), color: ofN(r[1]).v === 5 ? TEAL : (ofN(r[1]).v <= 1 ? RED : undefined) })) }),
+        flow: D.flow({ w: 1200, h: 420, title: 'Is my traffic drop a penalty? Five checks, in order', steps: [
+          { t: 'Manual actions', s: 'Search Console', c: 'Green check mark means none' }, { t: 'Security issues', s: 'Search Console', c: 'Hacked content or malware' },
+          { t: 'Indexing', s: 'URL Inspection', c: 'Pages indexed, not blocked' }, { t: 'Timing', s: 'daily chart', c: 'When did it start, which pages' }, { t: 'Content and links', s: 'your own changes', c: 'What changed on your side' }] }),
+        ours: D.stats({ title: 'Our own Search Console, 2 November 2026', cols: 3, items: [
+          { big: '0', t: 'manual actions: no issues detected' }, { big: '0', t: 'security issues: no issues detected', color: AMBER },
+          { big: '4%', t: 'of impressions at position 10 or better' }, { big: '87%', t: 'of impressions at position 21 or lower', color: AMBER },
+          { big: '433', t: 'pages with impressions in 3 months' }, { big: '80', t: 'clicks in the same 3 months', color: AMBER }] })
+      }
+    };
+  },
+  'meta-keywords': cfg => {
+    const T = cfg.tables, s = T.serp.rows, o = T.ours.rows, g = T.google.rows;
+    return {
+      hero: D.rings({ title: 'Who still uses meta keywords?', items: [
+        { pct: 9 / 195, big: '9/195', t: 'ranking pages carry the tag', c: 'HTML read, 2 November 2026', color: AMBER },
+        { pct: 0, big: '0/25', t: 'of our own pages do', c: 'We do not use the tag', color: TEAL },
+        { pct: 4 / 5, big: '4/5', t: 'guides say Google ignores it', c: 'Google: no effect at all', color: TEAL }] }),
+      tables: {
+        serp: D.dots({ title: 'What 5 guides on meta keywords say', rows: s.map(r => ({ t: r[0], v: ofN(r[1]).v, max: ofN(r[1]).max, text: r[1].replace(' of ', '/') })) }),
+        google: D.compare({ w: 1200, h: 480, title: 'What Google supports and ignores', left: { h: 'Google ignores', items: ['meta keywords: no effect on indexing and ranking at all', 'lang attributes: language comes from the content', 'rel next and prev: no effect on indexing'] }, right: { h: 'Google supports', items: ['description: page summaries', 'robots and googlebot: indexing control', 'google-site-verification: site ownership', 'viewport and charset: page display and encoding'] } }),
+        ours: D.split({ w: 1200, h: 440, title: 'Meta keywords tags in the HTML we read', big: '4.6%', bigLabel: 'of 195 ranking pages carry a meta keywords tag', items: [{ v: '9', t: 'ranking pages with the tag, 1 to 12 keywords each' }, { v: '186', t: 'ranking pages without it' }, { v: '0', t: 'of our own 25 pages use it' }, { v: '46', t: 'SERP files the pages came from' }] })
+      }
+    };
+  },
   '301-vs-302-redirect': cfg => {
     const T = cfg.tables, s = T.serp.rows, o = T.ours.rows;
     return {
