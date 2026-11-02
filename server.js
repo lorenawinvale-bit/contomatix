@@ -212,7 +212,7 @@ app.get('/sitemap.xml', (req, res) => {
     ...services.map(s => ({ loc: `/services/${s.slug}`, lastmod: today })),
     ...locations.map(l => ({ loc: `/services/${l.slug}`, lastmod: today })),
     ...blogStore.getPublished().map(p => ({ loc: `/blog/${p.slug}`, lastmod: p.date })),
-    ...team.map(m => ({ loc: `/team/${blogStore.slugify(m.name)}`, lastmod: today }))
+    ...team.filter(m => blogStore.getPublished().some(p => p.author === m.name)).map(m => ({ loc: `/team/${blogStore.slugify(m.name)}`, lastmod: today }))
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -753,6 +753,7 @@ app.get('/team/:slug', (req, res) => {
   const mine = blogStore.getPublished()
     .filter(p => p.author === member.name)
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  if (!mine.length) return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
   const perPage = 12;
   const totalPages = Math.max(1, Math.ceil(mine.length / perPage));
   const rawPage = req.query.page;

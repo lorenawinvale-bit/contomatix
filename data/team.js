@@ -2,6 +2,13 @@
 // `photo` is optional: path under /images/team/. Falls back to initials avatar if omitted.
 module.exports = [
   {
+    name: 'Abdul Wahab Siddiqui',
+    role: 'Founder',
+    bio: 'Abdul Wahab is the founder of Contomatix. He sets the direction for the agency’s link building and SEO work, and talks with clients about strategy, link targets and campaign priorities, so the plan agreed on a call is the plan that gets built.',
+    photo: '',
+    linkedin: 'https://www.linkedin.com/in/abdul-wahab-siddiqui-019607435/'
+  },
+  {
     name: 'Umaira Liaquat',
     role: 'Co-Founder & SEO Strategist',
     bio: 'Umaira leads strategy at Contomatix — from keyword research and content planning to the link building roadmaps behind every campaign. She works directly with clients to translate business goals into rankings that actually convert.',
