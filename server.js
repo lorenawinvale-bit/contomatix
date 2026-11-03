@@ -402,7 +402,7 @@ app.get('/tools/hreflang-generator', (req, res) => {
 
 app.get('/tools/sitemap-validator', (req, res) => {
   res.render('pages/sitemap-validator', {
-    title: 'Free Sitemap Validator: Check a sitemap.xml for Errors | Contomatix',
+    title: 'Free Sitemap Validator: Check Sitemap Errors | Contomatix',
     description: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates, and limit violations, for free, in seconds.',
     pageClass: 'page-tool'
   });
@@ -410,7 +410,7 @@ app.get('/tools/sitemap-validator', (req, res) => {
 
 app.get('/tools/hreflang-sitemap-validator', (req, res) => {
   res.render('pages/hreflang-sitemap-validator', {
-    title: 'Free Hreflang Sitemap Validator: Check Annotations | Contomatix',
+    title: 'Free Hreflang Sitemap Validator: Find Errors | Contomatix',
     description: 'Check the hreflang annotations in a sitemap.xml for missing self-references, missing return links, invalid codes and namespace errors, for free.',
     pageClass: 'page-tool'
   });
@@ -434,23 +434,23 @@ app.get('/tools/heading-checker', (req, res) => {
 
 app.get('/tools/geo-grid-rank-planner', (req, res) => {
   res.render('pages/geo-grid-rank-planner', {
-    title: 'Free GMB Rank Checker Grid: Local Geo-Grid Planner | Contomatix',
-    description: 'Build a geo-grid of Google Maps check points around your business, enter the ranks you see, and get an average, top-3 coverage and a heatmap. Free, no signup.',
+    title: 'Free GMB Rank Checker Grid: Geo-Grid Planner | Contomatix',
+    description: 'Build a geo-grid of Google Maps check points around your business, enter the ranks you see, and get an average, top-3 coverage and heatmap. Free.',
     pageClass: 'page-tool'
   });
 });
 
 app.get('/tools/seo-proposal-generator', (req, res) => {
   res.render('pages/seo-proposal-generator', {
-    title: 'Free SEO Proposal Generator: Client-Ready Template | Contomatix',
-    description: 'Build a structured SEO proposal with scope, timeline, reporting and terms. Uses only the fee and dates you enter. Copy, download or print to PDF. Free, no signup.',
+    title: 'Free SEO Proposal Generator: Client Template | Contomatix',
+    description: 'Build a structured SEO proposal with scope, timeline, reporting and terms. Uses only the fee and dates you enter. Copy, download or print. Free.',
     pageClass: 'page-tool'
   });
 });
 
 app.get('/tools/internal-link-checker', (req, res) => {
   res.render('pages/internal-link-checker', {
-    title: 'Free Internal Link Checker: Anchors and Crawlability | Contomatix',
+    title: 'Free Internal Link Checker: Audit Page Links | Contomatix',
     description: 'Paste a page HTML to sort its links into internal, external and non-crawlable, and flag empty, generic and nofollowed anchors. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -458,7 +458,7 @@ app.get('/tools/internal-link-checker', (req, res) => {
 
 app.get('/tools/robots-txt-tester', (req, res) => {
   res.render('pages/robots-txt-tester', {
-    title: 'Free Robots.txt Tester: Check If a URL Is Blocked | Contomatix',
+    title: 'Free Robots.txt Tester: Is a URL Blocked? | Contomatix',
     description: 'Paste your robots.txt, choose a crawler and test URLs with Google matching rules. See which rule allows or blocks each URL. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -467,7 +467,7 @@ app.get('/tools/robots-txt-tester', (req, res) => {
 app.get('/tools/schema-markup-validator', (req, res) => {
   res.render('pages/schema-markup-validator', {
     title: 'Free Schema Markup Validator: Check JSON-LD | Contomatix',
-    description: 'Paste JSON-LD or page HTML and validate syntax plus the required and recommended properties Google documents for FAQ, Breadcrumb, Article, Product and LocalBusiness markup. Free.',
+    description: 'Paste JSON-LD or page HTML and validate syntax plus the required and recommended properties Google documents for FAQ, Breadcrumb and Article markup. Free.',
     pageClass: 'page-tool'
   });
 });
@@ -475,15 +475,15 @@ app.get('/tools/schema-markup-validator', (req, res) => {
 app.get('/tools/technical-seo-audit-tool', (req, res) => {
   res.render('pages/technical-seo-audit-tool', {
     title: 'Free SEO Page Audit: Technical SEO Audit Tool | Contomatix',
-    description: 'Run a free SEO page audit: paste a page HTML and check its title, meta description, headings, canonical, robots meta, hreflang, structured data, images and links.',
+    description: 'Run a free SEO page audit: paste a page HTML and check title, meta description, headings, canonical, robots, hreflang, schema, images and links.',
     pageClass: 'page-tool'
   });
 });
 
 app.get('/tools/seo-report-generator', (req, res) => {
   res.render('pages/seo-report-generator', {
-    title: 'Free SEO Report Generator: Monthly Report Template | Contomatix',
-    description: 'Enter Search Console clicks, impressions and position for two periods and get a plain-language SEO report with CTR, changes, top pages and next steps. Free, no signup.',
+    title: 'Free SEO Report Generator: Monthly Template | Contomatix',
+    description: 'Enter Search Console clicks, impressions and position for two periods and get a plain-language SEO report with CTR, changes and next steps. Free.',
     pageClass: 'page-tool'
   });
 });
@@ -491,7 +491,7 @@ app.get('/tools/seo-report-generator', (req, res) => {
 app.get('/tools/outreach-email-generator', (req, res) => {
   res.render('pages/outreach-email-generator', {
     title: 'Free Link Building Outreach Email Generator | Contomatix',
-    description: 'Write a short link building outreach email, subject lines and a follow-up for resource pages, broken links, link insertions and guest pitches. Free, no signup.',
+    description: 'Write a short link building outreach email, subject lines and a follow-up for resource pages, broken links, link insertions and guest pitches. Free.',
     pageClass: 'page-tool'
   });
 });
@@ -506,7 +506,7 @@ app.get('/tools/html-sitemap-generator', (req, res) => {
 
 app.get('/tools/link-building-cost-calculator', (req, res) => {
   res.render('pages/link-building-cost-calculator', {
-    title: 'Free Link Building Cost Calculator: Cost per Live Link | Contomatix',
+    title: 'Free Link Building Cost Calculator: Per Link | Contomatix',
     description: 'Enter per-link prices, a retainer or your own time and get the total cost, cost per live link after losses and cost per target page. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -546,7 +546,7 @@ app.get('/tools/anchor-text-checker', (req, res) => {
 
 app.get('/tools/outbound-link-checker', (req, res) => {
   res.render('pages/outbound-link-checker', {
-    title: 'Free Outbound Link Checker: List External Links by Domain | Contomatix',
+    title: 'Free Outbound Link Checker: List External Links | Contomatix',
     description: 'Paste a page HTML and list every external link grouped by domain, with nofollow, sponsored and ugc status and flags for insecure and shortened links. Free.',
     pageClass: 'page-tool'
   });
@@ -554,7 +554,7 @@ app.get('/tools/outbound-link-checker', (req, res) => {
 
 app.get('/tools/backlink-monitor-tool', (req, res) => {
   res.render('pages/backlink-monitor-tool', {
-    title: 'Free Backlink Monitor Tool: Log and Check Your Links | Contomatix',
+    title: 'Free Backlink Monitor Tool: Log and Check | Contomatix',
     description: 'Log your backlinks, check a link is still live by pasting the linking page HTML, and see live rate, referring domains and cost per live link. Free.',
     pageClass: 'page-tool'
   });
@@ -562,7 +562,7 @@ app.get('/tools/backlink-monitor-tool', (req, res) => {
 
 app.get('/tools/link-building-management-tool', (req, res) => {
   res.render('pages/link-building-management-tool', {
-    title: 'Free Link Building Management Tool: Track Outreach | Contomatix',
+    title: 'Free Link Building Management Tool | Contomatix',
     description: 'Track link building prospects from first email to live link with stages, follow-up dates, reply and win rates, and CSV export. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -570,15 +570,15 @@ app.get('/tools/link-building-management-tool', (req, res) => {
 
 app.get('/tools/log-file-analyzer', (req, res) => {
   res.render('pages/log-file-analyzer', {
-    title: 'Free Log File Analyzer: See What Googlebot Crawls | Contomatix',
-    description: 'Paste or open an Apache or Nginx access log and see which URLs Googlebot and other crawlers request, with status codes and problem URLs. Free, in your browser.',
+    title: 'Free Log File Analyzer: What Googlebot Crawls | Contomatix',
+    description: 'Paste or open an Apache or Nginx access log and see which URLs Googlebot and other crawlers request, with status codes and problem URLs. Free.',
     pageClass: 'page-tool'
   });
 });
 
 app.get('/tools/keyword-grouping-tool', (req, res) => {
   res.render('pages/keyword-grouping-tool', {
-    title: 'Free Keyword Grouping Tool: Group Keywords by Topic | Contomatix',
+    title: 'Free Keyword Grouping Tool: Group by Topic | Contomatix',
     description: 'Paste a keyword list and group it by shared words, with a primary keyword, intent tag and combined volume for each group. Free, runs in your browser.',
     pageClass: 'page-tool'
   });
@@ -586,8 +586,8 @@ app.get('/tools/keyword-grouping-tool', (req, res) => {
 
 app.get('/tools/content-brief-generator', (req, res) => {
   res.render('pages/content-brief-generator', {
-    title: 'Free Content Brief Generator: Writer-Ready Briefs | Contomatix',
-    description: 'Enter a keyword, intent, audience and your research and get a structured content brief with outline, FAQ, sources, internal links and meta draft. Free, no signup.',
+    title: 'Free Content Brief Generator: Writer Briefs | Contomatix',
+    description: 'Enter a keyword, intent, audience and research and get a structured content brief with outline, FAQ, sources, internal links and meta draft. Free.',
     pageClass: 'page-tool'
   });
 });
@@ -602,7 +602,7 @@ app.get('/tools/dofollow-link-checker', (req, res) => {
 
 app.get('/tools/sitemap-url-extractor', (req, res) => {
   res.render('pages/sitemap-url-extractor', {
-    title: 'Free Sitemap URL Extractor: List Every URL in a Sitemap | Contomatix',
+    title: 'Free Sitemap URL Extractor: List All URLs | Contomatix',
     description: 'Pull every URL out of a sitemap.xml into a clean list or CSV, with last-modified dates and a path filter. Reads sitemap index files too. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -610,7 +610,7 @@ app.get('/tools/sitemap-url-extractor', (req, res) => {
 
 app.get('/tools/redirect-mapper', (req, res) => {
   res.render('pages/redirect-mapper', {
-    title: 'Free Redirect Mapper: Match Old URLs to New URLs | Contomatix',
+    title: 'Free Redirect Mapper: Match Old to New URLs | Contomatix',
     description: 'Match old URLs to new URLs for a site move, flag weak matches and redirect chains, and export Apache or Nginx 301 rules and a CSV. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -618,7 +618,7 @@ app.get('/tools/redirect-mapper', (req, res) => {
 
 app.get('/tools/canonical-tag-checker', (req, res) => {
   res.render('pages/canonical-tag-checker', {
-    title: 'Free Canonical Tag Checker: Find Canonical Errors | Contomatix',
+    title: 'Free Canonical Tag Checker: Find Errors | Contomatix',
     description: 'Paste a page URL and its HTML source to find missing, duplicate, relative or misplaced canonical tags and compare them with the page URL. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -626,7 +626,7 @@ app.get('/tools/canonical-tag-checker', (req, res) => {
 
 app.get('/tools/keyword-mapping-tool', (req, res) => {
   res.render('pages/keyword-mapping-tool', {
-    title: 'Free Keyword Mapping Tool: Match Keywords to Pages | Contomatix',
+    title: 'Free Keyword Mapping Tool: Match to Pages | Contomatix',
     description: 'Match your keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords. Export to CSV. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -642,7 +642,7 @@ app.get('/tools/llm-seo-checker', (req, res) => {
 
 app.get('/tools/invoice-generator', (req, res) => {
   res.render('pages/invoice-generator', {
-    title: 'Free Invoice Generator & Freelance Invoice Template | Contomatix',
+    title: 'Free Invoice Generator & Invoice Template | Contomatix',
     description: 'A free, ready-to-use freelance invoice template, fill it in, download as a PDF in seconds. No signup, nothing leaves your browser.',
     pageClass: 'page-tool'
   });

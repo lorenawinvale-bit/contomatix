@@ -1,7 +1,7 @@
 module.exports = [
   {
     slug: 'seo-kent-wa',
-    title: 'Kent SEO Services',
+    title: 'Kent, WA SEO Services',
     heading: 'Kent SEO Services: Rankings Built on Real Authority',
     summary: 'Contomatix helps Kent, Washington businesses earn organic rankings through white-hat SEO and manual link building, no PBNs, no link farms, no shortcuts.',
     city: 'Kent',
