@@ -1,4 +1,4 @@
-// node scripts/build-post-white-hat-link-building.js [--write] — data: 8 ranking pages (Google US, 23 Oct 2026) + Google spam policies and outbound-link docs read the same day. Sites are not named.
+// node scripts/build-post-white-hat-link-building.js [--write], data: 8 ranking pages (Google US, 23 Oct 2026) + Google spam policies and outbound-link docs read the same day. Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-white-hat-link-building-2026-10-23.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

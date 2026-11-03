@@ -1,4 +1,4 @@
-// node scripts/build-post-meta-description-length.js [--write] — data: 8 readable ranking pages (Google US, 3 Nov 2026), Google's "Control your snippets in search results" page read the same day (page says last updated 2026-04-20), and the meta description (excerpt) length of all 363 of our own posts. Sites are not named.
+// node scripts/build-post-meta-description-length.js [--write], data: 8 readable ranking pages (Google US, 3 Nov 2026), Google's "Control your snippets in search results" page read the same day (page says last updated 2026-04-20), and the meta description (excerpt) length of all 363 of our own posts. Sites are not named.
 const build = require('./post-day9-common.js'); const fs = require('fs'); const path = require('path');
 const R = require('../../keyword-research/serp-meta-description-length-2026-11-03.json');
 const G = require('../../keyword-research/google-docs-day17-2026-11-03.json').snippet;

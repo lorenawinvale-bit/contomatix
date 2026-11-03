@@ -1,4 +1,4 @@
-// node scripts/build-post-javascript-seo.js [--write] — data: 6 readable ranking pages (Google US, 29 Oct 2026), Google's JavaScript SEO docs read the same day, and our own raw-vs-rendered test of 25 live pages (29 Oct 2026). Sites are not named.
+// node scripts/build-post-javascript-seo.js [--write], data: 6 readable ranking pages (Google US, 29 Oct 2026), Google's JavaScript SEO docs read the same day, and our own raw-vs-rendered test of 25 live pages (29 Oct 2026). Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-javascript-seo-2026-10-29.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

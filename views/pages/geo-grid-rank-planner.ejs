@@ -2,7 +2,7 @@
   <div id="ambient-canvas" class="ambient-canvas"></div>
   <div class="container page-hero-inner">
     <span class="eyebrow">Free Tool</span>
-    <h1>Free GMB Rank Checker Grid — Plan and Score a Local Geo-Grid Check</h1>
+    <h1>Free GMB Rank Checker Grid: Plan and Score a Local Geo-Grid Check</h1>
     <p>This <strong>free GMB rank checker grid</strong> builds a map of check points around your business, gives you a Google Maps link for each one, and scores the ranks you type in as an average, a top-3 coverage figure and a colour heatmap. It is a manual check, so there is no signup and nothing leaves your browser.</p>
   </div>
 </section>
@@ -41,9 +41,9 @@
         <div>
           <label for="gg-zoom">Map zoom on each point</label>
           <select id="gg-zoom">
-            <option value="13">13 — wide</option>
-            <option value="14" selected>14 — standard</option>
-            <option value="15">15 — close</option>
+            <option value="13">13, wide</option>
+            <option value="14" selected>14, standard</option>
+            <option value="15">15, close</option>
           </select>
         </div>
       </form>
@@ -106,7 +106,7 @@
       </details>
       <details>
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
-        <p>No. Everything is calculated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours. The map links open Google Maps in a new tab.</p>
+        <p>No. Everything is calculated in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours. The map links open Google Maps in a new tab.</p>
       </details>
     </div>
 
@@ -263,7 +263,7 @@
     var checked = nums.length + nf;
     var out = $('gg-stats');
     if (!checked) { out.textContent = 'Checked 0 of ' + total + ' points.'; return; }
-    var avg = nums.length ? (nums.reduce(function (a, b) { return a + b; }, 0) / nums.length).toFixed(1) : '—';
+    var avg = nums.length ? (nums.reduce(function (a, b) { return a + b; }, 0) / nums.length).toFixed(1) : 'n/a';
     var t3 = nums.filter(function (x) { return x <= 3; }).length;
     var t10 = nums.filter(function (x) { return x <= 10; }).length;
     out.innerHTML = 'Checked <strong>' + checked + '</strong> of ' + total + ' points<br>' +

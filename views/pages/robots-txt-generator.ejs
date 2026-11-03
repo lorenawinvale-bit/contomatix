@@ -3,7 +3,7 @@
   <div class="container page-hero-inner">
     <span class="eyebrow">Free Tool</span>
     <h1>Free Robots.txt Generator</h1>
-    <p>This <strong>free robots.txt generator</strong> builds a valid robots.txt file in seconds — control which crawlers can access your site and point them to your sitemap. No signup, nothing leaves your browser.</p>
+    <p>This <strong>free robots.txt generator</strong> builds a valid robots.txt file in seconds, control which crawlers can access your site and point them to your sitemap. No signup, nothing leaves your browser.</p>
   </div>
 </section>
 
@@ -16,11 +16,11 @@
           <select id="rt-mode">
             <option value="allow">Allow all crawling (recommended for most sites)</option>
             <option value="disallow">Block all crawling (site not ready for indexing)</option>
-            <option value="custom">Custom — I'll set specific rules below</option>
+            <option value="custom">Custom. I'll set specific rules below</option>
           </select>
         </div>
         <div data-group="custom" hidden>
-          <label for="rt-disallow">Paths to block — one per line (optional)</label>
+          <label for="rt-disallow">Paths to block, one per line (optional)</label>
           <textarea id="rt-disallow" placeholder="/admin&#10;/cart&#10;/checkout&#10;/search"></textarea>
         </div>
         <div>
@@ -56,7 +56,7 @@ Allow: /</pre>
   <div class="container llms-explainer">
 
     <h2>What Is Robots.txt?</h2>
-    <p>robots.txt is a plain-text file at your domain's root that tells search engine and AI crawlers which parts of your site they're allowed to request. It's the first file most well-behaved crawlers check before visiting anything else. It doesn't hide pages from people who already have the link, and it isn't a security tool — it's a politeness convention that reputable crawlers (Googlebot, Bingbot) respect.</p>
+    <p>robots.txt is a plain-text file at your domain's root that tells search engine and AI crawlers which parts of your site they're allowed to request. It's the first file most well-behaved crawlers check before visiting anything else. It doesn't hide pages from people who already have the link, and it isn't a security tool, it's a politeness convention that reputable crawlers (Googlebot, Bingbot) respect.</p>
 
     <h2>Robots.txt vs. Meta Robots vs. noindex</h2>
     <div style="overflow-x: auto;">
@@ -70,21 +70,21 @@ Allow: /</pre>
         </thead>
         <tbody>
           <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">robots.txt</td><td style="padding:10px 8px;">Whether a crawler requests the page at all</td><td style="padding:10px 8px;">Blocking a page here does NOT remove it from Google if it's already indexed and linked elsewhere</td></tr>
-          <tr><td style="padding:10px 8px;">Meta <code>noindex</code> tag</td><td style="padding:10px 8px;">Whether a crawled page gets indexed</td><td style="padding:10px 8px;">If robots.txt blocks the page, Google can't see the noindex tag at all — the two can work against each other</td></tr>
+          <tr><td style="padding:10px 8px;">Meta <code>noindex</code> tag</td><td style="padding:10px 8px;">Whether a crawled page gets indexed</td><td style="padding:10px 8px;">If robots.txt blocks the page, Google can't see the noindex tag at all, the two can work against each other</td></tr>
         </tbody>
       </table>
     </div>
     <p>To actually remove a page from search results, let crawlers access it (don't block it in robots.txt) but add a <code>&lt;meta name="robots" content="noindex"&gt;</code> tag to the page itself.</p>
 
     <h2>Should You Block AI Crawlers?</h2>
-    <p>This is a genuine judgment call, not a technical necessity. Blocking bots like GPTBot (OpenAI) or CCBot (Common Crawl) stops your content from being used to train future AI models, but it may also reduce your chances of being cited by AI answer engines that rely on the same or related crawl data. There's no universally "correct" answer — publishers who want maximum AI visibility typically leave these open; publishers concerned about content scraping block them.</p>
+    <p>This is a genuine judgment call, not a technical necessity. Blocking bots like GPTBot (OpenAI) or CCBot (Common Crawl) stops your content from being used to train future AI models, but it may also reduce your chances of being cited by AI answer engines that rely on the same or related crawl data. There's no universally "correct" answer, publishers who want maximum AI visibility typically leave these open; publishers concerned about content scraping block them.</p>
 
     <h2>Common Robots.txt Mistakes</h2>
     <ul class="service-points">
-      <li><strong>Blocking your entire site by accident</strong> — a stray <code>Disallow: /</code> left over from a staging environment is one of the most common self-inflicted SEO disasters</li>
-      <li><strong>Forgetting the sitemap reference</strong> — it costs one line and helps crawlers discover your pages faster</li>
-      <li><strong>Trying to block a page that's already indexed</strong> — use a noindex tag instead, or the page can persist in search results with no description</li>
-      <li><strong>Putting the file anywhere but the root</strong> — <code>yoursite.com/robots.txt</code> only, a subfolder location is ignored entirely</li>
+      <li><strong>Blocking your entire site by accident</strong>, a stray <code>Disallow: /</code> left over from a staging environment is one of the most common self-inflicted SEO disasters</li>
+      <li><strong>Forgetting the sitemap reference</strong>, it costs one line and helps crawlers discover your pages faster</li>
+      <li><strong>Trying to block a page that's already indexed</strong>, use a noindex tag instead, or the page can persist in search results with no description</li>
+      <li><strong>Putting the file anywhere but the root</strong>, <code>yoursite.com/robots.txt</code> only, a subfolder location is ignored entirely</li>
     </ul>
 
     <h2>Free Robots.txt Generator FAQs</h2>
@@ -95,19 +95,19 @@ Allow: /</pre>
       </details>
       <details>
         <summary>Will blocking AI crawlers hurt my SEO?<span class="faq-icon"></span></summary>
-        <p>Not for traditional Google/Bing search rankings — those use separate crawlers (Googlebot, Bingbot) that this doesn't affect. It may reduce visibility in AI-generated answers that rely on the blocked crawlers' data.</p>
+        <p>Not for traditional Google/Bing search rankings, those use separate crawlers (Googlebot, Bingbot) that this doesn't affect. It may reduce visibility in AI-generated answers that rely on the blocked crawlers' data.</p>
       </details>
       <details>
         <summary>Do I need a robots.txt file at all?<span class="faq-icon"></span></summary>
-        <p>Not strictly — crawlers will assume everything is allowed if no file exists. Having one is still good practice: it lets you reference your sitemap and gives you control if you ever need to restrict something.</p>
+        <p>Not strictly, crawlers will assume everything is allowed if no file exists. Having one is still good practice: it lets you reference your sitemap and gives you control if you ever need to restrict something.</p>
       </details>
       <details>
         <summary>Can I have different rules for different crawlers?<span class="faq-icon"></span></summary>
-        <p>Yes — robots.txt supports separate <code>User-agent</code> blocks for specific bots. This tool generates a simple universal ruleset; for per-bot rules, edit the downloaded file directly.</p>
+        <p>Yes, robots.txt supports separate <code>User-agent</code> blocks for specific bots. This tool generates a simple universal ruleset; for per-bot rules, edit the downloaded file directly.</p>
       </details>
       <details>
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
-        <p>No. Everything is generated in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+        <p>No. Everything is generated in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
     </div>
 

@@ -1,4 +1,4 @@
-// node scripts/build-post-301-redirect-not-working.js [--write] — data: the 9 results for "301 redirect not working" (Google US, 27 Oct 2026; 4 guides read, 5 forum/Q&A threads not readable), Google's redirect docs read the same day, and our own test of how 185 sites redirect http://host/ (27 Oct 2026). Sites are not named.
+// node scripts/build-post-301-redirect-not-working.js [--write], data: the 9 results for "301 redirect not working" (Google US, 27 Oct 2026; 4 guides read, 5 forum/Q&A threads not readable), Google's redirect docs read the same day, and our own test of how 185 sites redirect http://host/ (27 Oct 2026). Sites are not named.
 const build = require('./post-day9-common.js'); const fs = require('fs'); const path = require('path');
 const kr = path.join(__dirname, '..', '..', 'keyword-research');
 const J = require('../../keyword-research/serp-301-redirect-not-working-2026-10-27.json');

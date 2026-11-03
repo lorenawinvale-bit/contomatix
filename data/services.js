@@ -3,25 +3,25 @@ module.exports = [
     "slug": "link-building",
     "title": "Link Building",
     "icon": "link",
-    "summary": "Earn high-authority backlinks that move your rankings, not just your link count — vetted by hand, no PBNs or automation.",
-    "description": "We build editorial, white-hat backlinks from relevant, high-authority sites in your niche — through outreach-earned placements and link insertions in already-ranking content. Every link is manually vetted for domain authority, topical relevance, and traffic — no PBNs, no link farms. Most campaigns start with a backlink gap analysis against the sites already outranking you, so the first placements target the exact links doing the most work in your niche rather than whatever happens to be available that month.",
+    "summary": "Earn high-authority backlinks that move your rankings, not just your link count, vetted by hand, no PBNs or automation.",
+    "description": "We build editorial, white-hat backlinks from relevant, high-authority sites in your niche, through outreach-earned placements and link insertions in already-ranking content. Every link is manually vetted for domain authority, topical relevance, and traffic, no PBNs, no link farms. Most campaigns start with a backlink gap analysis against the sites already outranking you, so the first placements target the exact links doing the most work in your niche rather than whatever happens to be available that month.",
     "points": [
       "Manual outreach to relevant, high-DA publishers",
       "Link insertions in live, already-ranking content for faster authority",
       "Niche-relevant anchor text strategy",
       "Monthly link velocity reports",
-      "Every site manually vetted before outreach — no PBNs, no automation",
+      "Every site manually vetted before outreach, no PBNs, no automation",
       "Target list shared with metrics before any placement goes live",
       "Anchor text diversity tracked to keep the profile looking natural"
     ],
     "faqs": [
       {
         "q": "How many links do I need per month?",
-        "a": "It depends on your niche and competition. After the free audit we recommend a monthly link velocity based on what the top-ranking competitors have — usually somewhere between 4 and 20 quality links a month."
+        "a": "It depends on your niche and competition. After the free audit we recommend a monthly link velocity based on what the top-ranking competitors have, usually somewhere between 4 and 20 quality links a month."
       },
       {
         "q": "What makes a link \"high quality\"?",
-        "a": "A real site with real organic traffic, topical relevance to your niche, a clean outbound-link history, and an editorial placement inside content — not a sidebar or footer. We check all four before any placement."
+        "a": "A real site with real organic traffic, topical relevance to your niche, a clean outbound-link history, and an editorial placement inside content, not a sidebar or footer. We check all four before any placement."
       },
       {
         "q": "Do you use PBNs or link farms?",
@@ -29,15 +29,15 @@ module.exports = [
       },
       {
         "q": "What is a link insertion and do you do those too?",
-        "a": "Yes — instead of only earning links in brand-new content, we also place links inside existing articles that already rank and get traffic. Since the page already has authority, it passes to your site faster than waiting on a new placement to be indexed."
+        "a": "Yes, instead of only earning links in brand-new content, we also place links inside existing articles that already rank and get traffic. Since the page already has authority, it passes to your site faster than waiting on a new placement to be indexed."
       },
       {
         "q": "How long before a new link affects rankings?",
-        "a": "Google typically has to recrawl the linking page and reprocess your site's link graph first, which usually takes a few weeks. Movement from any single link is gradual — the compounding effect across a sustained campaign is what actually moves rankings, not any one placement."
+        "a": "Google typically has to recrawl the linking page and reprocess your site's link graph first, which usually takes a few weeks. Movement from any single link is gradual, the compounding effect across a sustained campaign is what actually moves rankings, not any one placement."
       },
       {
         "q": "Do you guarantee a specific domain rating or number of referring domains?",
-        "a": "No — anyone promising a guaranteed DR is optimizing for a vanity metric, not rankings. We report DR and referring domains alongside relevance and traffic because a high-DR link with no topical fit or real traffic is worth less than a mid-DR link that is genuinely relevant."
+        "a": "No, anyone promising a guaranteed DR is optimizing for a vanity metric, not rankings. We report DR and referring domains alongside relevance and traffic because a high-DR link with no topical fit or real traffic is worth less than a mid-DR link that is genuinely relevant."
       }
     ],
     "process": [
@@ -51,7 +51,7 @@ module.exports = [
       },
       {
         "title": "Outreach & placement",
-        "text": "Manual outreach secures the placement — a guest post, a link insertion in existing content, or an editorial mention — with anchor text chosen to keep the profile looking natural."
+        "text": "Manual outreach secures the placement, a guest post, a link insertion in existing content, or an editorial mention, with anchor text chosen to keep the profile looking natural."
       },
       {
         "title": "Reporting & monitoring",
@@ -62,7 +62,7 @@ module.exports = [
     "types": [
       {
         "title": "Guest post links",
-        "text": "An original article placed on a relevant publication, with your link woven in as a natural reference — not an advertorial."
+        "text": "An original article placed on a relevant publication, with your link woven in as a natural reference, not an advertorial."
       },
       {
         "title": "Link insertions (niche edits)",
@@ -74,7 +74,7 @@ module.exports = [
       },
       {
         "title": "Editorial mentions",
-        "text": "A citation or reference earned through genuine outreach to a journalist, blogger, or industry site — not a paid placement."
+        "text": "A citation or reference earned through genuine outreach to a journalist, blogger, or industry site, not a paid placement."
       },
       {
         "title": "Digital PR links",
@@ -86,8 +86,8 @@ module.exports = [
     "slug": "guest-posting",
     "title": "Guest Posting",
     "icon": "post",
-    "summary": "Original content published on relevant blogs, with a natural link back to your site — written by us, reviewed by their editors.",
-    "description": "We write and place original, high-quality guest articles on real, relevant publications in your industry — building both authority and referral traffic alongside your backlink profile. Every target site is vetted for real organic traffic and an active, engaged readership before outreach even starts, so the placement earns you readers as well as a link — not just a line item on a backlink report.",
+    "summary": "Original content published on relevant blogs, with a natural link back to your site, written by us, reviewed by their editors.",
+    "description": "We write and place original, high-quality guest articles on real, relevant publications in your industry, building both authority and referral traffic alongside your backlink profile. Every target site is vetted for real organic traffic and an active, engaged readership before outreach even starts, so the placement earns you readers as well as a link, not just a line item on a backlink report.",
     "points": [
       "Hand-picked, niche-relevant publishers",
       "Original content written for each site",
@@ -99,11 +99,11 @@ module.exports = [
     "faqs": [
       {
         "q": "Who writes the guest articles?",
-        "a": "Our writers do — each article is original, written for the host site's audience, and reviewed by their editors. You can review drafts before they are submitted if you prefer."
+        "a": "Our writers do, each article is original, written for the host site's audience, and reviewed by their editors. You can review drafts before they are submitted if you prefer."
       },
       {
         "q": "Will the articles mention my brand?",
-        "a": "Yes, naturally. The article provides genuine value on a topic in your niche, with your link and brand woven in as a relevant reference — not an advertorial."
+        "a": "Yes, naturally. The article provides genuine value on a topic in your niche, with your link and brand woven in as a relevant reference, not an advertorial."
       },
       {
         "q": "Do guest posts still work for SEO?",
@@ -111,7 +111,7 @@ module.exports = [
       },
       {
         "q": "How do you find publishers to pitch?",
-        "a": "Manual outreach based on topical relevance to your niche, genuine organic traffic, and an editorial history of publishing outside contributors — not a rented list of sites that accept anything for a fee."
+        "a": "Manual outreach based on topical relevance to your niche, genuine organic traffic, and an editorial history of publishing outside contributors, not a rented list of sites that accept anything for a fee."
       },
       {
         "q": "Can I choose the topics the guest posts cover?",
@@ -119,7 +119,7 @@ module.exports = [
       },
       {
         "q": "How is this different from paying for a sponsored post?",
-        "a": "A sponsored post is disclosed as paid placement and often marked with rel=\"sponsored\". A genuine guest post is accepted on editorial merit — the publication wants the content for its own readers, which is what makes the resulting link carry more weight."
+        "a": "A sponsored post is disclosed as paid placement and often marked with rel=\"sponsored\". A genuine guest post is accepted on editorial merit, the publication wants the content for its own readers, which is what makes the resulting link carry more weight."
       }
     ]
   },
@@ -140,7 +140,7 @@ module.exports = [
     "faqs": [
       {
         "q": "What does an on-page audit cover?",
-        "a": "Titles, metas, header structure, content depth against ranking competitors, internal links, image optimization, schema, indexability, and page speed basics — delivered as a prioritized fix list, not a 90-page PDF."
+        "a": "Titles, metas, header structure, content depth against ranking competitors, internal links, image optimization, schema, indexability, and page speed basics, delivered as a prioritized fix list, not a 90-page PDF."
       },
       {
         "q": "Do you implement the fixes or just report them?",
@@ -148,7 +148,7 @@ module.exports = [
       },
       {
         "q": "How soon do on-page changes show results?",
-        "a": "On-page fixes are usually the fastest wins in SEO — improvements often show within a few weeks of re-crawling, especially for pages already ranking on page 2-3."
+        "a": "On-page fixes are usually the fastest wins in SEO, improvements often show within a few weeks of re-crawling, especially for pages already ranking on page 2-3."
       },
       {
         "q": "Do you rewrite existing content or just adjust the structure?",
@@ -156,11 +156,11 @@ module.exports = [
       },
       {
         "q": "How does on-page SEO relate to your keyword research service?",
-        "a": "Keyword research tells you which terms to target and which page should own each one; on-page SEO is the execution — making sure that page is actually structured and written to rank for the term it's been assigned."
+        "a": "Keyword research tells you which terms to target and which page should own each one; on-page SEO is the execution, making sure that page is actually structured and written to rank for the term it's been assigned."
       },
       {
         "q": "Will on-page changes affect my site's design?",
-        "a": "Rarely in any visible way. Most on-page work happens in the HTML head, heading structure, and content itself — not the visual layout — though we'll flag it upfront on the few occasions a fix does touch something visible."
+        "a": "Rarely in any visible way. Most on-page work happens in the HTML head, heading structure, and content itself, not the visual layout, though we'll flag it upfront on the few occasions a fix does touch something visible."
       }
     ],
     "process": [
@@ -170,7 +170,7 @@ module.exports = [
       },
       {
         "title": "Content gap analysis",
-        "text": "Your page is compared against the pages currently outranking it to find what they cover that yours doesn’t — missing sections, unanswered questions, or thinner depth."
+        "text": "Your page is compared against the pages currently outranking it to find what they cover that yours doesn’t, missing sections, unanswered questions, or thinner depth."
       },
       {
         "title": "Internal linking & schema",
@@ -197,8 +197,8 @@ module.exports = [
     "slug": "off-page-seo",
     "title": "Off-Page SEO",
     "icon": "offpage",
-    "summary": "Everything outside your site that builds trust, authority, and visibility with search engines — links, mentions, citations, and PR.",
-    "description": "Off-page SEO covers the signals search engines use to judge your site's credibility — backlinks, brand mentions, citations, and digital PR — all managed with a long-term authority-building strategy. Where our link building service focuses on individual placements, off-page SEO is the strategy layer above it: deciding which authority signals matter most for your specific niche and competitive gap, then coordinating link building, citations, and digital PR toward the same target keywords instead of working in isolation.",
+    "summary": "Everything outside your site that builds trust, authority, and visibility with search engines, links, mentions, citations, and PR.",
+    "description": "Off-page SEO covers the signals search engines use to judge your site's credibility, backlinks, brand mentions, citations, and digital PR, all managed with a long-term authority-building strategy. Where our link building service focuses on individual placements, off-page SEO is the strategy layer above it: deciding which authority signals matter most for your specific niche and competitive gap, then coordinating link building, citations, and digital PR toward the same target keywords instead of working in isolation.",
     "points": [
       "Backlink & authority strategy",
       "Brand mentions & citations",
@@ -218,11 +218,11 @@ module.exports = [
       },
       {
         "q": "How do you track off-page progress?",
-        "a": "Monthly reporting on referring domains, domain rating, share of voice for target keywords, and every new placement — all in a live sheet you can open any time."
+        "a": "Monthly reporting on referring domains, domain rating, share of voice for target keywords, and every new placement, all in a live sheet you can open any time."
       },
       {
         "q": "What is an unlinked mention and why does it matter?",
-        "a": "It's when a site mentions your brand name or cites your data without linking to you — common after PR coverage or a quoted stat. We find these and reach out to ask for the link, which is usually a much easier conversion than cold outreach."
+        "a": "It's when a site mentions your brand name or cites your data without linking to you, common after PR coverage or a quoted stat. We find these and reach out to ask for the link, which is usually a much easier conversion than cold outreach."
       },
       {
         "q": "Do citations matter if my business isn't local?",
@@ -238,12 +238,12 @@ module.exports = [
     "slug": "white-label-seo",
     "title": "White-Label SEO",
     "icon": "whitelabel",
-    "summary": "Full SEO delivery for your agency's clients — audits, link building, content, and reporting, running quietly behind your brand.",
-    "description": "We become your agency's SEO department behind the curtain. You keep the client relationship, the branding, and the margin; we handle the execution — technical audits, on-page fixes, content, and link building — on a schedule and under a name of your choosing. No co-branding, no Contomatix mentions in any deliverable, and no direct contact with your clients. It's how agencies that don't want to hire an in-house SEO team (or don't want to risk a subcontractor poaching a client) still offer full-service SEO.",
+    "summary": "Full SEO delivery for your agency's clients, audits, link building, content, and reporting, running quietly behind your brand.",
+    "description": "We become your agency's SEO department behind the curtain. You keep the client relationship, the branding, and the margin; we handle the execution, technical audits, on-page fixes, content, and link building, on a schedule and under a name of your choosing. No co-branding, no Contomatix mentions in any deliverable, and no direct contact with your clients. It's how agencies that don't want to hire an in-house SEO team (or don't want to risk a subcontractor poaching a client) still offer full-service SEO.",
     "points": [
-      "Fully white-labeled reporting — your logo, your agency name, zero Contomatix branding",
+      "Fully white-labeled reporting, your logo, your agency name, zero Contomatix branding",
       "End-to-end execution: technical audits, on-page fixes, content, and link building",
-      "We never contact your clients directly — all communication stays with you",
+      "We never contact your clients directly, all communication stays with you",
       "Flexible retainer or per-project pricing built around your resale margin",
       "Scales up or down with your client roster, no hiring or firing on your end"
     ],
@@ -266,21 +266,21 @@ module.exports = [
       },
       {
         "q": "Can you take on just overflow work, not my whole client list?",
-        "a": "Yes — some partners send us every client, others only the ones they don't have bandwidth for. Volume can flex month to month."
+        "a": "Yes, some partners send us every client, others only the ones they don't have bandwidth for. Volume can flex month to month."
       },
       {
         "q": "What services can I resell through this arrangement?",
-        "a": "The same range we offer directly: link building, guest posting, on-page and off-page SEO, and keyword research — mixed and matched per client, reported under your brand."
+        "a": "The same range we offer directly: link building, guest posting, on-page and off-page SEO, and keyword research, mixed and matched per client, reported under your brand."
       },
       {
         "q": "How do you keep quality consistent across different partner agencies' clients?",
-        "a": "The same vetting and process we use on direct clients applies here — manual outreach, no PBNs, the same reporting rigor — because our own reputation with search engines depends on every placement holding up, regardless of whose name is on the report."
+        "a": "The same vetting and process we use on direct clients applies here, manual outreach, no PBNs, the same reporting rigor, because our own reputation with search engines depends on every placement holding up, regardless of whose name is on the report."
       }
     ],
     "process": [
       {
         "title": "Partner onboarding",
-        "text": "We agree scope, reporting format, and communication channel — under your branding, with zero Contomatix mentions anywhere client-facing."
+        "text": "We agree scope, reporting format, and communication channel, under your branding, with zero Contomatix mentions anywhere client-facing."
       },
       {
         "title": "Audit & strategy",
@@ -299,7 +299,7 @@ module.exports = [
     "types": [
       {
         "title": "Branded reports",
-        "text": "PDF or sheet-based reports carrying your logo and agency name — no Contomatix branding anywhere in the deliverable."
+        "text": "PDF or sheet-based reports carrying your logo and agency name, no Contomatix branding anywhere in the deliverable."
       },
       {
         "title": "A direct account channel",
@@ -319,7 +319,7 @@ module.exports = [
     "slug": "keyword-research",
     "title": "Keyword Research",
     "icon": "keyword",
-    "summary": "Find the exact terms your customers search for and the gaps your competitors missed — mapped to a page and a plan.",
+    "summary": "Find the exact terms your customers search for and the gaps your competitors missed, mapped to a page and a plan.",
     "description": "We research search volume, intent, and competition to build a keyword roadmap that prioritizes terms you can realistically rank for and that actually drive qualified traffic. The output is deliberately practical: every keyword is mapped to a specific page and a specific reason it was prioritized, so it plugs directly into a content calendar or link-target list instead of sitting in a spreadsheet nobody acts on.",
     "points": [
       "Search intent & volume analysis",
@@ -332,7 +332,7 @@ module.exports = [
     "faqs": [
       {
         "q": "What do I actually receive?",
-        "a": "A prioritized keyword roadmap: each keyword with volume, difficulty, intent, the page it should map to, and the order we recommend attacking them — ready to hand to writers or use for link targets."
+        "a": "A prioritized keyword roadmap: each keyword with volume, difficulty, intent, the page it should map to, and the order we recommend attacking them, ready to hand to writers or use for link targets."
       },
       {
         "q": "How do you decide which keywords to prioritize?",
@@ -348,7 +348,7 @@ module.exports = [
       },
       {
         "q": "Do you research keywords for AI search and chat assistants too?",
-        "a": "Yes, where relevant — we look at how questions get phrased conversationally, not just as short search-box queries, since that increasingly determines whether AI Overviews and assistants cite a page at all."
+        "a": "Yes, where relevant, we look at how questions get phrased conversationally, not just as short search-box queries, since that increasingly determines whether AI Overviews and assistants cite a page at all."
       },
       {
         "q": "How does this connect to your other services?",
@@ -360,8 +360,8 @@ module.exports = [
     "slug": "ai-seo",
     "title": "AI SEO",
     "icon": "ai",
-    "summary": "Get found and cited in ChatGPT, Gemini, Perplexity, and Google AI Overviews — not just the ten blue links.",
-    "description": "We check where your brand currently shows up (and doesn’t) across the major AI platforms, then close the gap: restructuring content so it can actually be extracted and cited, and building the brand mentions and citation-worthy signals these systems weigh most heavily. This runs alongside classic SEO rather than replacing it — the same well-structured, genuinely useful content tends to win in both places, just measured differently.",
+    "summary": "Get found and cited in ChatGPT, Gemini, Perplexity, and Google AI Overviews, not just the ten blue links.",
+    "description": "We check where your brand currently shows up (and doesn’t) across the major AI platforms, then close the gap: restructuring content so it can actually be extracted and cited, and building the brand mentions and citation-worthy signals these systems weigh most heavily. This runs alongside classic SEO rather than replacing it, the same well-structured, genuinely useful content tends to win in both places, just measured differently.",
     "points": [
       "AI visibility audit across ChatGPT, Gemini, and Perplexity for your real customer questions",
       "Content restructured for direct-answer extraction (AEO) and generated-response citation (GEO)",
@@ -377,11 +377,11 @@ module.exports = [
       },
       {
         "title": "Structure for extraction",
-        "text": "Existing and new content gets restructured with direct-answer openers, clear headings, and FAQ sections — the same discipline that wins featured snippets, applied to AI citation."
+        "text": "Existing and new content gets restructured with direct-answer openers, clear headings, and FAQ sections, the same discipline that wins featured snippets, applied to AI citation."
       },
       {
         "title": "Build citation-worthy signals",
-        "text": "We build the brand mentions, original data points, and third-party citations that AI systems weigh alongside — and sometimes above — raw backlinks."
+        "text": "We build the brand mentions, original data points, and third-party citations that AI systems weigh alongside, and sometimes above, raw backlinks."
       },
       {
         "title": "Re-check & report",
@@ -391,11 +391,11 @@ module.exports = [
     "faqs": [
       {
         "q": "What is AI SEO, exactly?",
-        "a": "It’s the practice of optimizing content and brand signals so AI systems like ChatGPT, Gemini, and Perplexity find, trust, and cite your content in their generated answers — not just optimizing to rank on a classic results page."
+        "a": "It’s the practice of optimizing content and brand signals so AI systems like ChatGPT, Gemini, and Perplexity find, trust, and cite your content in their generated answers, not just optimizing to rank on a classic results page."
       },
       {
         "q": "Does this replace traditional SEO?",
-        "a": "No. It builds on the same foundation — quality content, technical health, and authority. The emphasis shifts toward clarity, direct answers, and citation-worthy signals, but a site with no SEO foundation won’t succeed at either."
+        "a": "No. It builds on the same foundation, quality content, technical health, and authority. The emphasis shifts toward clarity, direct answers, and citation-worthy signals, but a site with no SEO foundation won’t succeed at either."
       },
       {
         "q": "How do you measure whether it is working?",
@@ -403,7 +403,7 @@ module.exports = [
       },
       {
         "q": "Is this the same as answer engine optimization (AEO)?",
-        "a": "AEO is one part of it — optimizing for a specific answer slot inside search itself. AI SEO also covers GEO (being cited inside a fully generated chat response) and general LLM visibility, which work slightly differently. See our guide to <a href=\"/blog/answer-engine-optimization-aeo-guide-2026\">AEO vs SEO vs GEO</a> for the distinction."
+        "a": "AEO is one part of it, optimizing for a specific answer slot inside search itself. AI SEO also covers GEO (being cited inside a fully generated chat response) and general LLM visibility, which work slightly differently. See our guide to <a href=\"/blog/answer-engine-optimization-aeo-guide-2026\">AEO vs SEO vs GEO</a> for the distinction."
       },
       {
         "q": "How much does AI SEO cost?",
@@ -419,8 +419,8 @@ module.exports = [
     "slug": "technical-seo",
     "title": "Technical SEO",
     "icon": "technical",
-    "summary": "Crawlability, indexation, Core Web Vitals, and schema — the foundation that decides whether the rest of your SEO work even gets seen.",
-    "description": "A full technical audit of how search engines actually crawl, render, and index your site — covering crawl budget, indexation gaps, Core Web Vitals, schema markup, and site architecture. This is usually the right starting point for a new engagement, because content and links cannot compensate for pages search engines cannot properly crawl or index in the first place.",
+    "summary": "Crawlability, indexation, Core Web Vitals, and schema, the foundation that decides whether the rest of your SEO work even gets seen.",
+    "description": "A full technical audit of how search engines actually crawl, render, and index your site, covering crawl budget, indexation gaps, Core Web Vitals, schema markup, and site architecture. This is usually the right starting point for a new engagement, because content and links cannot compensate for pages search engines cannot properly crawl or index in the first place.",
     "points": [
       "Full-site crawl and indexation audit",
       "Core Web Vitals diagnosis and fix recommendations",
@@ -436,7 +436,7 @@ module.exports = [
       },
       {
         "title": "Issues found & prioritized",
-        "text": "Every issue — broken redirects, duplicate titles, orphaned pages, render-blocking resources — is logged and ranked by how much it is actually costing you, not just by severity in the abstract."
+        "text": "Every issue, broken redirects, duplicate titles, orphaned pages, render-blocking resources, is logged and ranked by how much it is actually costing you, not just by severity in the abstract."
       },
       {
         "title": "Fixes shipped",
@@ -450,11 +450,11 @@ module.exports = [
     "faqs": [
       {
         "q": "What does a technical SEO audit actually cover?",
-        "a": "Crawlability and indexation status, Core Web Vitals, schema markup validity, site architecture and internal linking, redirect chains, and canonicalization — delivered as a prioritized fix list."
+        "a": "Crawlability and indexation status, Core Web Vitals, schema markup validity, site architecture and internal linking, redirect chains, and canonicalization, delivered as a prioritized fix list."
       },
       {
         "q": "How is this different from on-page SEO?",
-        "a": "On-page SEO is about content and metadata on individual pages — titles, headers, keyword mapping. Technical SEO is the underlying infrastructure that decides whether search engines can crawl, render, and index those pages at all."
+        "a": "On-page SEO is about content and metadata on individual pages, titles, headers, keyword mapping. Technical SEO is the underlying infrastructure that decides whether search engines can crawl, render, and index those pages at all."
       },
       {
         "q": "Do you implement the fixes or just report them?",
@@ -466,11 +466,11 @@ module.exports = [
       },
       {
         "q": "Do I need this if my site already ranks reasonably well?",
-        "a": "Often yes — technical issues tend to cap how far a site can go rather than tank it outright. Fixing crawl and indexation gaps is frequently the fastest way to unlock rankings a good backlink profile is not already achieving."
+        "a": "Often yes, technical issues tend to cap how far a site can go rather than tank it outright. Fixing crawl and indexation gaps is frequently the fastest way to unlock rankings a good backlink profile is not already achieving."
       },
       {
         "q": "What is log file analysis and do I need it?",
-        "a": "It is reviewing your server logs to see exactly how search engine crawlers move through your site — which pages they hit, how often, and where they waste crawl budget. It matters most for larger sites (roughly 10,000+ URLs); a small business site rarely needs it."
+        "a": "It is reviewing your server logs to see exactly how search engine crawlers move through your site, which pages they hit, how often, and where they waste crawl budget. It matters most for larger sites (roughly 10,000+ URLs); a small business site rarely needs it."
       }
     ]
   }

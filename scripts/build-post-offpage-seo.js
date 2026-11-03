@@ -1,4 +1,4 @@
-// node scripts/build-post-offpage-seo.js [--write] — data: 8 readable ranking pages (Google US, 23 Oct 2026), 4 Google Search Central docs searched for the term, and our own earlier measured link/brand data. Sites are not named.
+// node scripts/build-post-offpage-seo.js [--write], data: 8 readable ranking pages (Google US, 23 Oct 2026), 4 Google Search Central docs searched for the term, and our own earlier measured link/brand data. Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-offpage-seo-2026-10-23.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

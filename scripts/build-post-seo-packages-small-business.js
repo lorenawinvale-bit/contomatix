@@ -19,7 +19,7 @@ fs.writeFileSync(path.join(__dirname, 'infographic-seo-packages-small-business.h
 
 fs.writeFileSync(path.join(__dirname, 'table-seo-packages-small-business.html'), L.tableHtml({ title: 'What the first-page results for "seo packages for small business" quoted', sub: 'Nine organic results, Google search from Pakistan on 10 October 2026. Snippets only; prices are the sites’ own claims, not verified. Sites are not named.',
   head: ['Result', 'Price statement in the snippet', 'Unit in the snippet'], lastBold: false,
-  rows: [['A', 'Packages start at $150', 'Not stated'], ['B', 'Small business packages $300 to $1,500; some from $199', 'Per month'], ['C', 'Local agency services $800 to $2,000', 'Cut off'], ['D', 'Packages typically $500 to $1,500', 'Not stated'], ['E', 'Plans from 40,000 PKR (Pakistan market)', 'Per month'], ['F to I', 'No price in the snippet', '—']] }));
+  rows: [['A', 'Packages start at $150', 'Not stated'], ['B', 'Small business packages $300 to $1,500; some from $199', 'Per month'], ['C', 'Local agency services $800 to $2,000', 'Cut off'], ['D', 'Packages typically $500 to $1,500', 'Not stated'], ['E', 'Plans from 40,000 PKR (Pakistan market)', 'Per month'], ['F to I', 'No price in the snippet', 'n/a']] }));
 
 // ---------- article
 const content = `<p class="article-updated" style="color: #6b6459; font-size: 0.85rem; font-style: italic; margin: -8px 0 20px;">Last updated: October 2026</p>

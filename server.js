@@ -69,7 +69,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const isProd = process.env.NODE_ENV === 'production';
 
-// Hostinger terminates TLS in front of this app — without this, req.secure and
+// Hostinger terminates TLS in front of this app, without this, req.secure and
 // req.protocol always read "http" even on a real https:// request, which would
 // break the https redirect below and mark secure cookies as never-sendable.
 app.set('trust proxy', 1);
@@ -116,7 +116,7 @@ app.use((req, res, next) => {
 
 // None of the public pages are personalized (no per-visitor content), so a
 // short, CDN-cacheable window is safe. Admin (session-gated) and every
-// non-GET request (the /contact submit handler) are excluded — those must
+// non-GET request (the /contact submit handler) are excluded, those must
 // never be served from a shared cache.
 app.use((req, res, next) => {
   if (req.method === 'GET' && !req.path.startsWith('/admin')) {
@@ -134,7 +134,7 @@ app.set('layout', 'partials/layout');
 // Static assets
 app.use(express.static(path.join(__dirname, 'public'), {
   // Images, SVGs and other static assets change rarely and are referenced by
-  // stable URLs — a 30-day cache keeps repeat views fast (flagged by PSI).
+  // stable URLs, a 30-day cache keeps repeat views fast (flagged by PSI).
   maxAge: '30d',
   setHeaders: (res, filePath) => {
     // Some hosting/CDN layers drop the charset param from static responses,
@@ -144,7 +144,7 @@ app.use(express.static(path.join(__dirname, 'public'), {
     if (filePath.endsWith('.js')) res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
     // Every CSS/JS request already carries a ?v=<assetVersion> query string
     // (see data/site.js), bumped on every edit, so a long cache is normally
-    // safe — the URL itself changes on deploy. Deliberately NOT `immutable`
+    // safe, the URL itself changes on deploy. Deliberately NOT `immutable`
     // and capped at a week rather than a year: a transient host/CDN hiccup
     // (seen once already) can get a bad response cached under this exact
     // versioned URL, and a shorter, revalidatable cache limits how long that
@@ -155,10 +155,10 @@ app.use(express.static(path.join(__dirname, 'public'), {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // A missing SESSION_SECRET in production should never take the whole site
-// down — but a fresh random secret on every restart logs every admin session
+// down, but a fresh random secret on every restart logs every admin session
 // out each time the process restarts. Persist a generated one to a local,
 // gitignored file instead, so it only changes if that file is ever removed.
-// Adding a real SESSION_SECRET to the host's env vars is still preferable —
+// Adding a real SESSION_SECRET to the host's env vars is still preferable, 
 // this is just a safety net for when that hasn't been done.
 function getOrCreateSessionSecret() {
   if (process.env.SESSION_SECRET) return process.env.SESSION_SECRET;
@@ -171,9 +171,9 @@ function getOrCreateSessionSecret() {
     try {
       fs.writeFileSync(secretFile, generated, { mode: 0o600 });
     } catch (err) {
-      console.warn('[server] Could not persist a generated SESSION_SECRET to disk — a new one will be generated on every restart:', err.message);
+      console.warn('[server] Could not persist a generated SESSION_SECRET to disk, a new one will be generated on every restart:', err.message);
     }
-    console.warn('[server] SESSION_SECRET is not set — generated and saved one to .session-secret. Set a real SESSION_SECRET in the environment when convenient.');
+    console.warn('[server] SESSION_SECRET is not set, generated and saved one to .session-secret. Set a real SESSION_SECRET in the environment when convenient.');
     return generated;
   }
 }
@@ -198,7 +198,7 @@ app.use((req, res, next) => {
   res.locals.siteName = 'Contomatix';
   res.locals.site = site;
   // Fallbacks so views that don't pass these (e.g. 404) still render.
-  res.locals.description = 'Contomatix — link building and SEO services.';
+  res.locals.description = 'Contomatix, link building and SEO services.';
   next();
 });
 
@@ -233,7 +233,7 @@ Sitemap: ${site.baseUrl}/sitemap.xml`);
 
 // llms.txt: a plain-language summary for AI assistants and LLM crawlers,
 // separate from robots.txt (which only governs crawl permissions). Purely
-// additive/descriptive — doesn't change what's crawled or indexed.
+// additive/descriptive, doesn't change what's crawled or indexed.
 app.get('/llms.txt', (req, res) => {
   const serviceLines = services.map(s => `- [${s.title}](${site.baseUrl}/services/${s.slug}): ${s.summary}`).join('\n');
   res.type('text/plain').send(`# Contomatix
@@ -275,7 +275,7 @@ app.get('/', (req, res) => {
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
     .slice(0, 6);
   res.render('pages/home', {
-    title: 'Contomatix — Link Building & SEO Services',
+    title: 'Contomatix: Link Building & SEO Services',
     description: 'Contomatix helps brands grow organic traffic and AI search visibility through link building, technical & on-page SEO, and AI SEO.',
     pageClass: 'page-home',
     postCount: allPosts.length,
@@ -286,8 +286,8 @@ app.get('/', (req, res) => {
 
 app.get('/services', (req, res) => {
   res.render('pages/services', {
-    title: 'SEO & Link Building Services — Contomatix',
-    description: 'Link building, guest posting, on-page, off-page, technical, and AI SEO, white-label SEO, and keyword research — one connected strategy.',
+    title: 'SEO & Link Building Services: Contomatix',
+    description: 'Link building, guest posting, on-page, off-page, technical, and AI SEO, white-label SEO, and keyword research, one connected strategy.',
     pageClass: 'page-services'
   });
 });
@@ -296,7 +296,7 @@ app.get('/services/:slug', (req, res) => {
   const loc = locations.find(l => l.slug === req.params.slug);
   if (loc) {
     return res.render('pages/service-location', {
-      title: `${loc.title} — Contomatix`,
+      title: `${loc.title}: Contomatix`,
       description: loc.summary,
       pageClass: 'page-service',
       loc
@@ -305,7 +305,7 @@ app.get('/services/:slug', (req, res) => {
   const service = services.find(s => s.slug === req.params.slug);
   if (!service) return res.status(404).render('pages/404', { title: 'Page not found', pageClass: 'page-404' });
   res.render('pages/service', {
-    title: service.metaTitle || `${service.title} Services — Contomatix`,
+    title: service.metaTitle || `${service.title} Services: Contomatix`,
     description: service.metaDescription || service.summary,
     pageClass: 'page-service',
     service
@@ -314,8 +314,8 @@ app.get('/services/:slug', (req, res) => {
 
 app.get('/tools', (req, res) => {
   res.render('pages/tools', {
-    title: 'Free SEO Tools & Generators — Contomatix',
-    description: 'Free, no-signup SEO and AI-search tools from Contomatix — starting with a free llms.txt generator, with more tools on the way.',
+    title: 'Free SEO Tools & Generators: Contomatix',
+    description: 'Free, no-signup SEO and AI-search tools from Contomatix, starting with a free llms.txt generator, with more tools on the way.',
     pageClass: 'page-tools'
   });
 });
@@ -323,7 +323,7 @@ app.get('/tools', (req, res) => {
 app.get('/tools/llms-txt-generator', (req, res) => {
   res.render('pages/llms-txt-generator', {
     title: 'Free llms.txt Generator | Contomatix',
-    description: 'Generate a valid llms.txt file for free in seconds — a plain-language site summary that helps AI assistants understand and cite your business.',
+    description: 'Generate a valid llms.txt file for free in seconds, a plain-language site summary that helps AI assistants understand and cite your business.',
     pageClass: 'page-tool'
   });
 });
@@ -331,7 +331,7 @@ app.get('/tools/llms-txt-generator', (req, res) => {
 app.get('/tools/schema-markup-generator', (req, res) => {
   res.render('pages/schema-markup-generator', {
     title: 'Free Schema Markup Generator | Contomatix',
-    description: 'Generate valid FAQ, HowTo, Local Business, or Article JSON-LD schema markup for free — ready to paste into your site, no signup required.',
+    description: 'Generate valid FAQ, HowTo, Local Business, or Article JSON-LD schema markup for free, ready to paste into your site, no signup required.',
     pageClass: 'page-tool'
   });
 });
@@ -355,7 +355,7 @@ app.get('/tools/readability-checker', (req, res) => {
 app.get('/tools/robots-txt-generator', (req, res) => {
   res.render('pages/robots-txt-generator', {
     title: 'Free Robots.txt Generator | Contomatix',
-    description: 'Generate a valid robots.txt file for free — control crawler access, block AI bots, and reference your sitemap, all in your browser.',
+    description: 'Generate a valid robots.txt file for free, control crawler access, block AI bots, and reference your sitemap, all in your browser.',
     pageClass: 'page-tool'
   });
 });
@@ -363,14 +363,14 @@ app.get('/tools/robots-txt-generator', (req, res) => {
 app.get('/tools/utm-builder', (req, res) => {
   res.render('pages/utm-builder', {
     title: 'Free UTM Tag Generator & Campaign URL Builder | Contomatix',
-    description: 'Build properly tagged UTM campaign URLs for Google Analytics in seconds, for free — no more guessing parameter names.',
+    description: 'Build properly tagged UTM campaign URLs for Google Analytics in seconds, for free, no more guessing parameter names.',
     pageClass: 'page-tool'
   });
 });
 
 app.get('/tools/og-preview-generator', (req, res) => {
   res.render('pages/og-preview-generator', {
-    title: 'Free Social Share Preview Generator — OG Tags | Contomatix',
+    title: 'Free Social Share Preview Generator: OG Tags | Contomatix',
     description: 'See how your link looks on Facebook, LinkedIn, and X, and generate the Open Graph tags to fix it, for free.',
     pageClass: 'page-tool'
   });
@@ -379,15 +379,15 @@ app.get('/tools/og-preview-generator', (req, res) => {
 app.get('/tools/meta-tag-generator', (req, res) => {
   res.render('pages/meta-tag-generator', {
     title: 'Free Meta Tag Generator | Contomatix',
-    description: 'Generate a complete, ready-to-paste HTML head block of meta tags — title, description, canonical, robots, and more — for free.',
+    description: 'Generate a complete, ready-to-paste HTML head block of meta tags, title, description, canonical, robots, and more, for free.',
     pageClass: 'page-tool'
   });
 });
 
 app.get('/tools/sitemap-generator', (req, res) => {
   res.render('pages/sitemap-generator', {
-    title: 'Free XML Sitemap Generator — From a URL List | Contomatix',
-    description: 'Turn a plain list of URLs into a valid sitemap.xml file in seconds, for free — no crawler or software needed.',
+    title: 'Free XML Sitemap Generator: From a URL List | Contomatix',
+    description: 'Turn a plain list of URLs into a valid sitemap.xml file in seconds, for free, no crawler or software needed.',
     pageClass: 'page-tool'
   });
 });
@@ -402,7 +402,7 @@ app.get('/tools/hreflang-generator', (req, res) => {
 
 app.get('/tools/sitemap-validator', (req, res) => {
   res.render('pages/sitemap-validator', {
-    title: 'Free Sitemap Validator — Check a sitemap.xml for Errors | Contomatix',
+    title: 'Free Sitemap Validator: Check a sitemap.xml for Errors | Contomatix',
     description: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates, and limit violations, for free, in seconds.',
     pageClass: 'page-tool'
   });
@@ -410,7 +410,7 @@ app.get('/tools/sitemap-validator', (req, res) => {
 
 app.get('/tools/hreflang-sitemap-validator', (req, res) => {
   res.render('pages/hreflang-sitemap-validator', {
-    title: 'Free Hreflang Sitemap Validator — Check Annotations | Contomatix',
+    title: 'Free Hreflang Sitemap Validator: Check Annotations | Contomatix',
     description: 'Check the hreflang annotations in a sitemap.xml for missing self-references, missing return links, invalid codes and namespace errors, for free.',
     pageClass: 'page-tool'
   });
@@ -418,7 +418,7 @@ app.get('/tools/hreflang-sitemap-validator', (req, res) => {
 
 app.get('/tools/slug-generator', (req, res) => {
   res.render('pages/slug-generator', {
-    title: 'Free URL Slug Generator — Clean SEO Slugs | Contomatix',
+    title: 'Free URL Slug Generator: Clean SEO Slugs | Contomatix',
     description: 'Turn any page title into a clean, lowercase, hyphen-separated URL slug. Strips accents, removes stop words, caps length. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -426,7 +426,7 @@ app.get('/tools/slug-generator', (req, res) => {
 
 app.get('/tools/heading-checker', (req, res) => {
   res.render('pages/heading-checker', {
-    title: 'Free Heading Checker — H1-H6 Outline Tool | Contomatix',
+    title: 'Free Heading Checker: H1-H6 Outline Tool | Contomatix',
     description: 'Paste a page HTML to see its H1-H6 heading outline and flag skipped levels, empty headings, a missing H1 and repeated text. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -434,7 +434,7 @@ app.get('/tools/heading-checker', (req, res) => {
 
 app.get('/tools/geo-grid-rank-planner', (req, res) => {
   res.render('pages/geo-grid-rank-planner', {
-    title: 'Free GMB Rank Checker Grid — Local Geo-Grid Planner | Contomatix',
+    title: 'Free GMB Rank Checker Grid: Local Geo-Grid Planner | Contomatix',
     description: 'Build a geo-grid of Google Maps check points around your business, enter the ranks you see, and get an average, top-3 coverage and a heatmap. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -442,7 +442,7 @@ app.get('/tools/geo-grid-rank-planner', (req, res) => {
 
 app.get('/tools/seo-proposal-generator', (req, res) => {
   res.render('pages/seo-proposal-generator', {
-    title: 'Free SEO Proposal Generator — Client-Ready Template | Contomatix',
+    title: 'Free SEO Proposal Generator: Client-Ready Template | Contomatix',
     description: 'Build a structured SEO proposal with scope, timeline, reporting and terms. Uses only the fee and dates you enter. Copy, download or print to PDF. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -450,7 +450,7 @@ app.get('/tools/seo-proposal-generator', (req, res) => {
 
 app.get('/tools/internal-link-checker', (req, res) => {
   res.render('pages/internal-link-checker', {
-    title: 'Free Internal Link Checker — Anchors and Crawlability | Contomatix',
+    title: 'Free Internal Link Checker: Anchors and Crawlability | Contomatix',
     description: 'Paste a page HTML to sort its links into internal, external and non-crawlable, and flag empty, generic and nofollowed anchors. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -458,7 +458,7 @@ app.get('/tools/internal-link-checker', (req, res) => {
 
 app.get('/tools/robots-txt-tester', (req, res) => {
   res.render('pages/robots-txt-tester', {
-    title: 'Free Robots.txt Tester — Check If a URL Is Blocked | Contomatix',
+    title: 'Free Robots.txt Tester: Check If a URL Is Blocked | Contomatix',
     description: 'Paste your robots.txt, choose a crawler and test URLs with Google matching rules. See which rule allows or blocks each URL. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -602,7 +602,7 @@ app.get('/tools/dofollow-link-checker', (req, res) => {
 
 app.get('/tools/sitemap-url-extractor', (req, res) => {
   res.render('pages/sitemap-url-extractor', {
-    title: 'Free Sitemap URL Extractor — List Every URL in a Sitemap | Contomatix',
+    title: 'Free Sitemap URL Extractor: List Every URL in a Sitemap | Contomatix',
     description: 'Pull every URL out of a sitemap.xml into a clean list or CSV, with last-modified dates and a path filter. Reads sitemap index files too. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -610,7 +610,7 @@ app.get('/tools/sitemap-url-extractor', (req, res) => {
 
 app.get('/tools/redirect-mapper', (req, res) => {
   res.render('pages/redirect-mapper', {
-    title: 'Free Redirect Mapper — Match Old URLs to New URLs | Contomatix',
+    title: 'Free Redirect Mapper: Match Old URLs to New URLs | Contomatix',
     description: 'Match old URLs to new URLs for a site move, flag weak matches and redirect chains, and export Apache or Nginx 301 rules and a CSV. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -618,7 +618,7 @@ app.get('/tools/redirect-mapper', (req, res) => {
 
 app.get('/tools/canonical-tag-checker', (req, res) => {
   res.render('pages/canonical-tag-checker', {
-    title: 'Free Canonical Tag Checker — Find Canonical Errors | Contomatix',
+    title: 'Free Canonical Tag Checker: Find Canonical Errors | Contomatix',
     description: 'Paste a page URL and its HTML source to find missing, duplicate, relative or misplaced canonical tags and compare them with the page URL. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -626,7 +626,7 @@ app.get('/tools/canonical-tag-checker', (req, res) => {
 
 app.get('/tools/keyword-mapping-tool', (req, res) => {
   res.render('pages/keyword-mapping-tool', {
-    title: 'Free Keyword Mapping Tool — Match Keywords to Pages | Contomatix',
+    title: 'Free Keyword Mapping Tool: Match Keywords to Pages | Contomatix',
     description: 'Match your keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords. Export to CSV. Free, no signup.',
     pageClass: 'page-tool'
   });
@@ -634,7 +634,7 @@ app.get('/tools/keyword-mapping-tool', (req, res) => {
 
 app.get('/tools/llm-seo-checker', (req, res) => {
   res.render('pages/llm-seo-checker', {
-    title: 'Free LLM SEO Checker — AI Crawler Access Audit | Contomatix',
+    title: 'Free LLM SEO Checker: AI Crawler Access Audit | Contomatix',
     description: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended) your robots.txt allows or blocks, for free, in seconds.',
     pageClass: 'page-tool'
   });
@@ -643,7 +643,7 @@ app.get('/tools/llm-seo-checker', (req, res) => {
 app.get('/tools/invoice-generator', (req, res) => {
   res.render('pages/invoice-generator', {
     title: 'Free Invoice Generator & Freelance Invoice Template | Contomatix',
-    description: 'A free, ready-to-use freelance invoice template — fill it in, download as a PDF in seconds. No signup, nothing leaves your browser.',
+    description: 'A free, ready-to-use freelance invoice template, fill it in, download as a PDF in seconds. No signup, nothing leaves your browser.',
     pageClass: 'page-tool'
   });
 });
@@ -693,7 +693,7 @@ app.get('/blog', (req, res) => {
     };
   });
   res.render('pages/blog', {
-    title: page > 1 ? `Blog — Page ${page} — Contomatix` : 'Blog — SEO & Link Building Insights | Contomatix',
+    title: page > 1 ? `Blog: Page ${page}, Contomatix` : 'Blog: SEO & Link Building Insights | Contomatix',
     description: 'SEO strategy, link building tactics, and content marketing insights from Contomatix.',
     pageClass: 'page-blog',
     posts,
@@ -739,8 +739,8 @@ app.get('/blog/:slug', (req, res) => {
 app.get('/team', (req, res) => {
   const published = blogStore.getPublished();
   res.render('pages/team', {
-    title: 'Meet the Contomatix Team — SEO & Link Building Experts',
-    description: 'Meet the SEO strategists and link building specialists behind Contomatix — the people who plan and run every campaign.',
+    title: 'Meet the Contomatix Team: SEO & Link Building Experts',
+    description: 'Meet the SEO strategists and link building specialists behind Contomatix, the people who plan and run every campaign.',
     pageClass: 'page-team',
     team: team.map(withPhotoCheck).map(m => ({ ...m, postCount: published.filter(p => p.author === m.name).length }))
   });
@@ -767,7 +767,7 @@ app.get('/team/:slug', (req, res) => {
     return { ...p, readMinutes: Math.max(1, Math.round(wordCount / 200)), authorInfo: member };
   });
   res.render('pages/author', {
-    title: page > 1 ? `Posts by ${member.name} — Page ${page} — Contomatix` : `Posts by ${member.name} — Contomatix`,
+    title: page > 1 ? `Posts by ${member.name}: Page ${page}, Contomatix` : `Posts by ${member.name}, Contomatix`,
     description: `${member.name}, ${member.role} at Contomatix. Read all ${mine.length} articles written by ${member.name} on SEO, link building, and content.`,
     pageClass: 'page-author',
     member,
@@ -782,7 +782,7 @@ app.get('/team/:slug', (req, res) => {
 app.get('/about', (req, res) => {
   const blogPosts = blogStore.getPublished();
   res.render('pages/about', {
-    title: 'About Contomatix — White-Hat SEO & Link Building Agency',
+    title: 'About Contomatix: White-Hat SEO & Link Building Agency',
     description: 'Learn what Contomatix does, how the team works, and how we help brands rank higher through white-hat SEO.',
     pageClass: 'page-about',
     team: team.map(withPhotoCheck),
@@ -802,7 +802,7 @@ app.get('/privacy-policy', (req, res) => {
 
 app.get('/terms', (req, res) => {
   res.render('pages/terms', {
-    title: 'Terms of Service — Contomatix.com',
+    title: 'Terms of Service: Contomatix.com',
     description: 'The terms governing use of contomatix.com and Contomatix\'s link building and SEO services.',
     pageClass: 'page-legal'
   });
@@ -810,8 +810,8 @@ app.get('/terms', (req, res) => {
 
 app.get('/contact', (req, res) => {
   res.render('pages/contact', {
-    title: 'Contact Contomatix — Get a Free SEO Audit',
-    description: 'Get in touch with Contomatix for link building and SEO services — free audit, reply within 24 hours.',
+    title: 'Contact Contomatix: Get a Free SEO Audit',
+    description: 'Get in touch with Contomatix for link building and SEO services, free audit, reply within 24 hours.',
     pageClass: 'page-contact',
     submitted: false,
     error: null,
@@ -825,11 +825,11 @@ app.post('/contact', async (req, res) => {
   const message = (req.body.message || '').trim();
 
   // Honeypot: a real visitor never sees or fills this field (hidden off-screen).
-  // A bot that fills every input trips it — pretend success without sending.
+  // A bot that fills every input trips it, pretend success without sending.
   if ((req.body.website || '').trim()) {
     return res.render('pages/contact', {
-      title: 'Contact Contomatix — Get a Free SEO Audit',
-      description: 'Get in touch with Contomatix for link building and SEO services — free audit, reply within 24 hours.',
+      title: 'Contact Contomatix: Get a Free SEO Audit',
+      description: 'Get in touch with Contomatix for link building and SEO services, free audit, reply within 24 hours.',
       pageClass: 'page-contact',
       submitted: true,
       error: null,
@@ -838,8 +838,8 @@ app.post('/contact', async (req, res) => {
   }
 
   const renderContact = (state) => res.render('pages/contact', {
-    title: 'Contact Contomatix — Get a Free SEO Audit',
-    description: 'Get in touch with Contomatix for link building and SEO services — free audit, reply within 24 hours.',
+    title: 'Contact Contomatix: Get a Free SEO Audit',
+    description: 'Get in touch with Contomatix for link building and SEO services, free audit, reply within 24 hours.',
     pageClass: 'page-contact',
     submitted: false,
     error: null,
@@ -854,13 +854,13 @@ app.post('/contact', async (req, res) => {
   try {
     const result = await sendContactEmail({ name, email, message });
     if (!result.sent) {
-      // SMTP not configured — keep the lead in the server log rather than losing it.
-      console.warn('[contact] SMTP not configured — submission logged only:', { name, email, message });
+      // SMTP not configured, keep the lead in the server log rather than losing it.
+      console.warn('[contact] SMTP not configured, submission logged only:', { name, email, message });
     }
     return renderContact({ submitted: true, form: {} });
   } catch (err) {
     console.error('[contact] Failed to send email:', err);
-    return renderContact({ error: 'Sorry — something went wrong sending your message. Please try again, or reach us on WhatsApp or email instead.' });
+    return renderContact({ error: 'Sorry, something went wrong sending your message. Please try again, or reach us on WhatsApp or email instead.' });
   }
 });
 
@@ -927,7 +927,7 @@ app.post('/admin/posts/new', requireAdmin, (req, res) => {
   const posts = blogStore.getAll();
   try {
     blogStore.create({ slug: cleanSlug, title, category, excerpt, date, author, image: image || '', content });
-    const msg = blogStore.isPublished({ date }) ? 'Post published.' : `Post scheduled — goes live automatically on ${date}.`;
+    const msg = blogStore.isPublished({ date }) ? 'Post published.' : `Post scheduled, goes live automatically on ${date}.`;
     res.redirect('/admin?success=' + encodeURIComponent(msg));
   } catch (err) {
     res.render('admin/post-form', {
@@ -963,7 +963,7 @@ app.post('/admin/posts/:slug/edit', requireAdmin, (req, res) => {
   const posts = blogStore.getAll();
   try {
     blogStore.update(req.params.slug, { slug: cleanSlug, title, category, excerpt, date, author, image: image || '', content });
-    const msg = blogStore.isPublished({ date }) ? 'Changes saved.' : `Changes saved — scheduled to go live automatically on ${date}.`;
+    const msg = blogStore.isPublished({ date }) ? 'Changes saved.' : `Changes saved, scheduled to go live automatically on ${date}.`;
     res.redirect('/admin?success=' + encodeURIComponent(msg));
   } catch (err) {
     res.render('admin/post-form', {

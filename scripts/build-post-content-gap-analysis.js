@@ -1,4 +1,4 @@
-// node scripts/build-post-content-gap-analysis.js [--write] — data: 5 readable ranking pages (Google US, 3 Nov 2026) and a check of our own Search Console export of 28 Oct 2026 (top 1,000 queries) against the titles and slugs of our 363 posts and 44 tools (scripts/measure-content-gaps.js). Sites are not named.
+// node scripts/build-post-content-gap-analysis.js [--write], data: 5 readable ranking pages (Google US, 3 Nov 2026) and a check of our own Search Console export of 28 Oct 2026 (top 1,000 queries) against the titles and slugs of our 363 posts and 44 tools (scripts/measure-content-gaps.js). Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-content-gap-analysis-2026-11-03.json');
 const OWN = require('../../keyword-research/own-content-gaps-2026-11-03.json');

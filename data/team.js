@@ -1,4 +1,4 @@
-// Drafted bios — adjust wording, titles, or details to match reality.
+// Drafted bios, adjust wording, titles, or details to match reality.
 // `photo` is optional: path under /images/team/. Falls back to initials avatar if omitted.
 module.exports = [
   {
@@ -11,7 +11,7 @@ module.exports = [
   {
     name: 'Umaira Liaquat',
     role: 'Co-Founder & SEO Strategist',
-    bio: 'Umaira leads strategy at Contomatix — from keyword research and content planning to the link building roadmaps behind every campaign. She works directly with clients to translate business goals into rankings that actually convert.',
+    bio: 'Umaira leads strategy at Contomatix, from keyword research and content planning to the link building roadmaps behind every campaign. She works directly with clients to translate business goals into rankings that actually convert.',
     photo: '',
     linkedin: 'https://www.linkedin.com/in/umaira-liaquat-7b78403a1/'
   },

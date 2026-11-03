@@ -1,4 +1,4 @@
-// node scripts/build-post-set-up-google-search-console.js [--write] — data: 6 readable ranking pages (Google US, 27 Oct 2026), Google's Search Console help pages read the same day, and our own Search Console numbers (27 Oct 2026). Sites are not named.
+// node scripts/build-post-set-up-google-search-console.js [--write], data: 6 readable ranking pages (Google US, 27 Oct 2026), Google's Search Console help pages read the same day, and our own Search Console numbers (27 Oct 2026). Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-set-up-google-search-console-2026-10-27.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

@@ -1,4 +1,4 @@
-// node scripts/build-post-subdomain-vs-subdirectory.js [--write] — data: 6 readable ranking pages (Google US, 3 Nov 2026), Google's pages on multi-regional sites, localized versions and robots.txt read the same day, the host of 377 unique URLs from 50 of our saved SERP files, and the hosts of the 433 pages in our Search Console export of 28 Oct 2026. Sites are not named.
+// node scripts/build-post-subdomain-vs-subdirectory.js [--write], data: 6 readable ranking pages (Google US, 3 Nov 2026), Google's pages on multi-regional sites, localized versions and robots.txt read the same day, the host of 377 unique URLs from 50 of our saved SERP files, and the hosts of the 433 pages in our Search Console export of 28 Oct 2026. Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-subdomain-vs-subdirectory-2026-11-03.json');
 const SP = require('../../keyword-research/serp-subdomain-split-2026-11-03.json');

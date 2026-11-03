@@ -2,7 +2,7 @@
   <div id="ambient-canvas" class="ambient-canvas"></div>
   <div class="container page-hero-inner">
     <span class="eyebrow">Free Tool</span>
-    <h1>Free Internal Link Checker — Audit a Page's Links, Anchors and Crawlability</h1>
+    <h1>Free Internal Link Checker: Audit a Page's Links, Anchors and Crawlability</h1>
     <p>Paste a page's HTML and this <strong>free internal link checker</strong> sorts every link into internal, external and non-crawlable, then flags empty, generic and nofollowed anchors. It checks the links on one page you paste, with no signup, and nothing leaves your browser.</p>
   </div>
 </section>
@@ -44,12 +44,12 @@
 
     <h2>What This Checks</h2>
     <ul class="service-points">
-      <li><strong>Internal vs external</strong> — links that stay on the same host as the page URL you enter, and links that leave it</li>
-      <li><strong>Crawlable links</strong> — Google says it can only crawl a link that is an <code>&lt;a&gt;</code> element with an <code>href</code>, so <code>javascript:</code> links, bare <code>#</code> links and anchors with no href are listed separately</li>
-      <li><strong>Anchor text</strong> — empty anchors, image links with no alt text and generic phrases such as "click here" and "read more"</li>
-      <li><strong>rel attributes</strong> — internal links marked nofollow, and external links marked sponsored, ugc or nofollow</li>
-      <li><strong>Repeated links</strong> — the same address linked more than once, shown with every anchor used</li>
-      <li><strong>Self-links</strong> — links on the page that point back to the same page</li>
+      <li><strong>Internal vs external</strong>, links that stay on the same host as the page URL you enter, and links that leave it</li>
+      <li><strong>Crawlable links</strong>. Google says it can only crawl a link that is an <code>&lt;a&gt;</code> element with an <code>href</code>, so <code>javascript:</code> links, bare <code>#</code> links and anchors with no href are listed separately</li>
+      <li><strong>Anchor text</strong>, empty anchors, image links with no alt text and generic phrases such as "click here" and "read more"</li>
+      <li><strong>rel attributes</strong>, internal links marked nofollow, and external links marked sponsored, ugc or nofollow</li>
+      <li><strong>Repeated links</strong>, the same address linked more than once, shown with every anchor used</li>
+      <li><strong>Self-links</strong>, links on the page that point back to the same page</li>
     </ul>
 
     <h2>Why Internal Links Deserve a Check</h2>
@@ -80,7 +80,7 @@
       </details>
       <details>
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
-        <p>No. Everything is checked in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+        <p>No. Everything is checked in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
     </div>
 
@@ -161,7 +161,7 @@
       var label = anchor || '(no anchor text)';
       if (href === null) { res.noncrawl.push('<a> with no href: "' + short(label) + '"'); return; }
       var h = href.trim();
-      if (h === '' || h === '#' || /^javascript:/i.test(h)) { res.noncrawl.push((h || '(empty href)') + ' — "' + short(label) + '"'); return; }
+      if (h === '' || h === '#' || /^javascript:/i.test(h)) { res.noncrawl.push((h || '(empty href)') + ', "' + short(label) + '"'); return; }
       if (/^(mailto:|tel:|sms:)/i.test(h)) { res.specials++; return; }
       if (h.charAt(0) === '#') { res.specials++; return; }
       var u;
@@ -170,7 +170,7 @@
       var rel = (a.getAttribute('rel') || '').toLowerCase();
       var isInternal = base ? u.hostname.replace(/^www\./, '') === base.hostname.replace(/^www\./, '') : !/^https?:\/\//i.test(h);
       var item = { href: u.href, anchor: anchor, label: label, rel: rel };
-      if (!anchor) res.issues.push('Empty anchor text (link to ' + short(u.href, 60) + ')' + (img ? ' — image link with no alt text' : ''));
+      if (!anchor) res.issues.push('Empty anchor text (link to ' + short(u.href, 60) + ')' + (img ? ', image link with no alt text' : ''));
       else if (GENERIC.test(anchor)) res.issues.push('Generic anchor "' + anchor + '" (link to ' + short(u.href, 60) + ')');
       if (isInternal) {
         res.internal.push(item);
@@ -182,7 +182,7 @@
     });
     var map = {};
     res.internal.forEach(function (i) { var k = i.href.split('#')[0]; (map[k] = map[k] || []).push(i.label); });
-    Object.keys(map).forEach(function (k) { if (map[k].length > 1) res.dup.push(short(k, 70) + ' — ' + map[k].length + '× (anchors: ' + map[k].map(function (x) { return '"' + short(x, 30) + '"'; }).slice(0, 4).join(', ') + ')'); });
+    Object.keys(map).forEach(function (k) { if (map[k].length > 1) res.dup.push(short(k, 70) + ', ' + map[k].length + '× (anchors: ' + map[k].map(function (x) { return '"' + short(x, 30) + '"'; }).slice(0, 4).join(', ') + ')'); });
     return res;
   }
 

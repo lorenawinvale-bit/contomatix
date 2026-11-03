@@ -38,7 +38,7 @@
       <div>
         <label for="date">Date</label>
         <input type="date" id="date" name="date" value="<%= post.date || '' %>" required>
-        <p class="hint">A future date schedules the post — it goes live on the site automatically that day, no redeploy needed.</p>
+        <p class="hint">A future date schedules the post, it goes live on the site automatically that day, no redeploy needed.</p>
       </div>
       <div>
         <label for="image">Image path</label>
@@ -52,7 +52,7 @@
 
     <label for="content">Content (HTML)</label>
     <textarea id="content" name="content" class="content-editor" required><%= post.content || '' %></textarea>
-    <div class="hint">Raw HTML — same format as the rest of the site (h2, p, ul, .post-faq details/summary blocks, .post-cta at the end).</div>
+    <div class="hint">Raw HTML, same format as the rest of the site (h2, p, ul, .post-faq details/summary blocks, .post-cta at the end).</div>
 
     <div style="margin-top:26px; display:flex; gap:10px;">
       <button type="submit" class="btn"><%= isEdit ? 'Save Changes' : 'Publish Post' %></button>

@@ -1,4 +1,4 @@
-// node scripts/build-post-improve-core-web-vitals.js [--write] — data: 8 readable ranking pages (Google US, 26 Oct 2026), Google's Core Web Vitals doc read the same day, and our own measurement of 13 live pages (3 runs each, 26 Oct 2026).
+// node scripts/build-post-improve-core-web-vitals.js [--write], data: 8 readable ranking pages (Google US, 26 Oct 2026), Google's Core Web Vitals doc read the same day, and our own measurement of 13 live pages (3 runs each, 26 Oct 2026).
 const build = require('./post-day9-common.js'); const fs = require('fs'); const path = require('path');
 const R = require('../../keyword-research/serp-improve-core-web-vitals-2026-10-26.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

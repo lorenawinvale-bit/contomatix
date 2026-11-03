@@ -1,4 +1,4 @@
-// node scripts/build-post-backlink-strategy.js [--write] — data: 7 readable ranking pages (Google US, 2 Nov 2026), Google's spam policies and "qualify your outbound links" pages (read 29 Oct and 2 Nov 2026), our own Search Console Links report (29 Oct 2026) and our own 28 Oct 2026 Search Console export by page. Sites are not named.
+// node scripts/build-post-backlink-strategy.js [--write], data: 7 readable ranking pages (Google US, 2 Nov 2026), Google's spam policies and "qualify your outbound links" pages (read 29 Oct and 2 Nov 2026), our own Search Console Links report (29 Oct 2026) and our own 28 Oct 2026 Search Console export by page. Sites are not named.
 const build = require('./post-day9-common.js'); const fs = require('fs'); const path = require('path');
 const R = require('../../keyword-research/serp-backlink-strategy-2026-11-02.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

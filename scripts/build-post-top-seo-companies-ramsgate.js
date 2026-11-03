@@ -1,4 +1,4 @@
-// node scripts/build-post-top-seo-companies-ramsgate.js [--write] — data: 18 sites that ranked for Ramsgate SEO searches (Google UK, 30 Oct 2026), each site's address read from its own pages, Companies House name searches the same day, and Google's Business Profile and SEO starter guide pages. Our own Search Console queries: 3 months to 28 Oct 2026.
+// node scripts/build-post-top-seo-companies-ramsgate.js [--write], data: 18 sites that ranked for Ramsgate SEO searches (Google UK, 30 Oct 2026), each site's address read from its own pages, Companies House name searches the same day, and Google's Business Profile and SEO starter guide pages. Our own Search Console queries: 3 months to 28 Oct 2026.
 const build = require('./post-day9-common.js');
 const fs = require('fs'); const path = require('path');
 const V1 = require('../../keyword-research/kent-agency-verify-2026-10-30.json').ramsgate, V2 = require('../../keyword-research/kent-agency-verify-ramsgate2-2026-10-30.json').ramsgate;

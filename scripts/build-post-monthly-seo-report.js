@@ -1,4 +1,4 @@
-// node scripts/build-post-monthly-seo-report.js [--write] — data: 7 readable ranking pages (Google US, 1 Nov 2026), Google's Search Console performance report help page read the same day, and our own numbers: Search Console export of 28 Oct 2026 (daily chart aggregated by month), Page indexing report (27 Oct), Links report (15 Oct and 29 Oct), CWV measurements (26 and 28 Oct) and our blog data. Sites are not named.
+// node scripts/build-post-monthly-seo-report.js [--write], data: 7 readable ranking pages (Google US, 1 Nov 2026), Google's Search Console performance report help page read the same day, and our own numbers: Search Console export of 28 Oct 2026 (daily chart aggregated by month), Page indexing report (27 Oct), Links report (15 Oct and 29 Oct), CWV measurements (26 and 28 Oct) and our blog data. Sites are not named.
 const build = require('./post-day9-common.js'); const fs = require('fs'); const path = require('path');
 const R = require('../../keyword-research/serp-monthly-seo-report-2026-11-01.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

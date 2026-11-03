@@ -1,4 +1,4 @@
-// node scripts/build-post-link-acquisition.js [--write]  — data: 6 readable ranking pages (Google US, 23 Oct 2026) + our own earlier measured link ledger. Sites are not named.
+// node scripts/build-post-link-acquisition.js [--write] , data: 6 readable ranking pages (Google US, 23 Oct 2026) + our own earlier measured link ledger. Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-link-acquisition-2026-10-23.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

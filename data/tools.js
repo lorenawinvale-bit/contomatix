@@ -1,15 +1,15 @@
-// Free tools directory — add a new entry here whenever a new tool page ships
+// Free tools directory, add a new entry here whenever a new tool page ships
 // so it automatically appears in the nav dropdown, footer, and /tools index.
 module.exports = [
   {
     slug: 'llms-txt-generator',
     title: 'llms.txt Generator',
-    summary: 'Build a valid llms.txt file in seconds — a plain-language map of your site for ChatGPT, Claude, and other AI assistants.'
+    summary: 'Build a valid llms.txt file in seconds, a plain-language map of your site for ChatGPT, Claude, and other AI assistants.'
   },
   {
     slug: 'schema-markup-generator',
     title: 'Schema Markup Generator',
-    summary: 'Generate valid FAQ, HowTo, Local Business, or Article JSON-LD schema markup — ready to paste into your site.'
+    summary: 'Generate valid FAQ, HowTo, Local Business, or Article JSON-LD schema markup, ready to paste into your site.'
   },
   {
     slug: 'serp-snippet-preview',
@@ -24,7 +24,7 @@ module.exports = [
   {
     slug: 'robots-txt-generator',
     title: 'Robots.txt Generator',
-    summary: 'Build a valid robots.txt file in seconds — control crawler access, block AI bots, and reference your sitemap.'
+    summary: 'Build a valid robots.txt file in seconds, control crawler access, block AI bots, and reference your sitemap.'
   },
   {
     slug: 'utm-builder',
@@ -54,7 +54,7 @@ module.exports = [
   {
     slug: 'sitemap-validator',
     title: 'Sitemap Validator',
-    summary: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates, and limit violations — for free, in seconds.'
+    summary: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates, and limit violations, for free, in seconds.'
   },
   {
     slug: 'hreflang-sitemap-validator',
@@ -64,7 +64,7 @@ module.exports = [
   {
     slug: 'slug-generator',
     title: 'Slug Generator',
-    summary: 'Turn any page title into a clean, lowercase, hyphen-separated URL slug — accents stripped, stop words optional.'
+    summary: 'Turn any page title into a clean, lowercase, hyphen-separated URL slug, accents stripped, stop words optional.'
   },
   {
     slug: 'heading-checker',
@@ -79,7 +79,7 @@ module.exports = [
   {
     slug: 'seo-proposal-generator',
     title: 'SEO Proposal Generator',
-    summary: 'Build a structured, client-ready SEO proposal with scope, timeline, reporting and terms — copy, download or print to PDF.'
+    summary: 'Build a structured, client-ready SEO proposal with scope, timeline, reporting and terms, copy, download or print to PDF.'
   },
   {
     slug: 'internal-link-checker',
@@ -194,16 +194,16 @@ module.exports = [
   {
     slug: 'keyword-mapping-tool',
     title: 'Keyword Mapping Tool',
-    summary: 'Match keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords — export to CSV.'
+    summary: 'Match keywords to your page URLs, flag keywords that need a new page and group near-duplicate keywords, export to CSV.'
   },
   {
     slug: 'llm-seo-checker',
     title: 'LLM SEO Checker',
-    summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks — for free, in seconds.'
+    summary: 'Check which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows or blocks, for free, in seconds.'
   },
   {
     slug: 'invoice-generator',
     title: 'Invoice Generator & Template',
-    summary: 'A free freelance invoice template that generates a professional, itemized PDF in seconds — no signup, nothing leaves your browser.'
+    summary: 'A free freelance invoice template that generates a professional, itemized PDF in seconds, no signup, nothing leaves your browser.'
   }
 ];

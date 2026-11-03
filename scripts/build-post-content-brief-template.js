@@ -1,4 +1,4 @@
-// node scripts/build-post-content-brief-template.js [--write] — data: 5 readable ranking pages for "content brief template" (Google US, 27 Oct 2026) + a benchmark of 218 ranking pages from 32 of our own SERP reads (15-26 Oct 2026). Sites are not named.
+// node scripts/build-post-content-brief-template.js [--write], data: 5 readable ranking pages for "content brief template" (Google US, 27 Oct 2026) + a benchmark of 218 ranking pages from 32 of our own SERP reads (15-26 Oct 2026). Sites are not named.
 const build = require('./post-day9-common.js'); const fs = require('fs'); const path = require('path');
 const kr = path.join(__dirname, '..', '..', 'keyword-research');
 const R = require('../../keyword-research/serp-content-brief-template-2026-10-27.json');

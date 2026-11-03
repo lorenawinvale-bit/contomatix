@@ -1,4 +1,4 @@
-// node scripts/build-post-social-backlinks.js [--write] — data: 8 readable ranking pages (Google US, 26 Oct 2026), 5 Google Search Central docs searched the same day, and our own Google Business Profile setup (24 Oct 2026). Sites are not named.
+// node scripts/build-post-social-backlinks.js [--write], data: 8 readable ranking pages (Google US, 26 Oct 2026), 5 Google Search Central docs searched the same day, and our own Google Business Profile setup (24 Oct 2026). Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-social-backlinks-2026-10-26.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

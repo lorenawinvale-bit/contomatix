@@ -1,4 +1,4 @@
-// node scripts/build-post-topical-map-seo.js [--write] — data: 7 readable ranking pages (Google US, 29 Oct 2026), Google's helpful content guide and spam policies read the same day, Ahrefs mirror keyword volumes (US, 29 Oct 2026), and our own sort of 353 posts joined to the 28 Oct 2026 Search Console export. Sites are not named.
+// node scripts/build-post-topical-map-seo.js [--write], data: 7 readable ranking pages (Google US, 29 Oct 2026), Google's helpful content guide and spam policies read the same day, Ahrefs mirror keyword volumes (US, 29 Oct 2026), and our own sort of 353 posts joined to the 28 Oct 2026 Search Console export. Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-topical-map-seo-2026-10-29.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

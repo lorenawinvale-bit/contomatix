@@ -1,4 +1,4 @@
-// node scripts/build-post-types-of-schema-markup.js [--write] — data: 8 readable ranking pages (Google US, 26 Oct 2026), Google's structured data docs and changelog read the same day, and a scan of the JSON-LD on our own 406 live URLs (26 Oct 2026). Sites are not named.
+// node scripts/build-post-types-of-schema-markup.js [--write], data: 8 readable ranking pages (Google US, 26 Oct 2026), Google's structured data docs and changelog read the same day, and a scan of the JSON-LD on our own 406 live URLs (26 Oct 2026). Sites are not named.
 const build = require('./post-day9-common.js'); const fs = require('fs'); const path = require('path');
 const R = require('../../keyword-research/serp-types-of-schema-markup-2026-10-26.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

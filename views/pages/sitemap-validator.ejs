@@ -2,8 +2,8 @@
   <div id="ambient-canvas" class="ambient-canvas"></div>
   <div class="container page-hero-inner">
     <span class="eyebrow">Free Tool</span>
-    <h1>Free Sitemap Validator — Check a sitemap.xml for Errors</h1>
-    <p>Paste your <strong>sitemap.xml</strong> and this <strong>free sitemap validator</strong> checks it against the rules Google actually enforces — valid XML, absolute URLs, the 50,000 URL / 50MB limits, and more. No signup, nothing leaves your browser.</p>
+    <h1>Free Sitemap Validator: Check a sitemap.xml for Errors</h1>
+    <p>Paste your <strong>sitemap.xml</strong> and this <strong>free sitemap validator</strong> checks it against the rules Google actually enforces, valid XML, absolute URLs, the 50,000 URL / 50MB limits, and more. No signup, nothing leaves your browser.</p>
   </div>
 </section>
 
@@ -33,40 +33,40 @@
 
     <h2>What This Checks</h2>
     <ul class="service-points">
-      <li><strong>Valid XML</strong> — the file must parse without errors; one malformed tag can make crawlers discard the whole file</li>
-      <li><strong>Correct root element</strong> — a <code>&lt;urlset&gt;</code> (or <code>&lt;sitemapindex&gt;</code> for a sitemap of sitemaps) in the sitemaps.org namespace</li>
-      <li><strong>Every <code>&lt;url&gt;</code> has a <code>&lt;loc&gt;</code></strong> — the one required child element</li>
-      <li><strong>Absolute URLs</strong> — relative paths in <code>&lt;loc&gt;</code> are invalid; every URL needs a full scheme and host</li>
-      <li><strong>One consistent host</strong> — a sitemap should only list URLs from the domain (or subdomain) it's served from</li>
-      <li><strong>No duplicate URLs</strong> — the same <code>&lt;loc&gt;</code> listed twice wastes crawl budget and can confuse priority signals</li>
-      <li><strong>Size limits</strong> — a maximum of 50,000 URLs and 50MB uncompressed per sitemap file, per Google's sitemap protocol</li>
-      <li><strong>Valid <code>&lt;lastmod&gt;</code> dates</strong> — when present, it should be a real W3C Datetime value, not a placeholder</li>
+      <li><strong>Valid XML</strong>, the file must parse without errors; one malformed tag can make crawlers discard the whole file</li>
+      <li><strong>Correct root element</strong>, a <code>&lt;urlset&gt;</code> (or <code>&lt;sitemapindex&gt;</code> for a sitemap of sitemaps) in the sitemaps.org namespace</li>
+      <li><strong>Every <code>&lt;url&gt;</code> has a <code>&lt;loc&gt;</code></strong>, the one required child element</li>
+      <li><strong>Absolute URLs</strong>, relative paths in <code>&lt;loc&gt;</code> are invalid; every URL needs a full scheme and host</li>
+      <li><strong>One consistent host</strong>, a sitemap should only list URLs from the domain (or subdomain) it's served from</li>
+      <li><strong>No duplicate URLs</strong>, the same <code>&lt;loc&gt;</code> listed twice wastes crawl budget and can confuse priority signals</li>
+      <li><strong>Size limits</strong>, a maximum of 50,000 URLs and 50MB uncompressed per sitemap file, per Google's sitemap protocol</li>
+      <li><strong>Valid <code>&lt;lastmod&gt;</code> dates</strong>, when present, it should be a real W3C Datetime value, not a placeholder</li>
     </ul>
 
     <h2>Why a Sitemap Fails Silently</h2>
-    <p>Google doesn't usually reject an invalid sitemap outright — it logs the error in Search Console's Sitemaps report and skips the broken entries, which means a typo or a relative URL can sit unnoticed for weeks while those pages simply never get crawled through that path. Running the raw file through a check like this before submitting it catches the structural problems a quick visual scan misses.</p>
+    <p>Google doesn't usually reject an invalid sitemap outright, it logs the error in Search Console's Sitemaps report and skips the broken entries, which means a typo or a relative URL can sit unnoticed for weeks while those pages simply never get crawled through that path. Running the raw file through a check like this before submitting it catches the structural problems a quick visual scan misses.</p>
 
     <h2>Sitemap Validator FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
         <summary>Does a sitemap need a &lt;lastmod&gt; for every URL?<span class="faq-icon"></span></summary>
-        <p>No, it's optional. When included, it should reflect a genuine last-modified date — Google's own guidance says it ignores lastmod values it doesn't trust, such as ones that update on every crawl regardless of real changes.</p>
+        <p>No, it's optional. When included, it should reflect a genuine last-modified date. Google's own guidance says it ignores lastmod values it doesn't trust, such as ones that update on every crawl regardless of real changes.</p>
       </details>
       <details>
         <summary>Can a sitemap mix URLs from different subdomains?<span class="faq-icon"></span></summary>
-        <p>Only if the sitemap is hosted at a location that covers all of them (for example, served from the root domain with the right path setup) — by default, a sitemap can only include URLs that share its own host.</p>
+        <p>Only if the sitemap is hosted at a location that covers all of them (for example, served from the root domain with the right path setup), by default, a sitemap can only include URLs that share its own host.</p>
       </details>
       <details>
         <summary>What happens if I go over 50,000 URLs?<span class="faq-icon"></span></summary>
-        <p>Split the URLs across multiple sitemap files and list them all in a single sitemap index file — this tool flags the limit so you know when it's time to split.</p>
+        <p>Split the URLs across multiple sitemap files and list them all in a single sitemap index file, this tool flags the limit so you know when it's time to split.</p>
       </details>
       <details>
         <summary>Is a sitemap index file the same as a regular sitemap?<span class="faq-icon"></span></summary>
-        <p>No — a sitemap index uses <code>&lt;sitemapindex&gt;</code> and <code>&lt;sitemap&gt;</code> elements pointing to other sitemap files, rather than <code>&lt;urlset&gt;</code> and <code>&lt;url&gt;</code> elements pointing to pages. This tool detects which type you've pasted.</p>
+        <p>No, a sitemap index uses <code>&lt;sitemapindex&gt;</code> and <code>&lt;sitemap&gt;</code> elements pointing to other sitemap files, rather than <code>&lt;urlset&gt;</code> and <code>&lt;url&gt;</code> elements pointing to pages. This tool detects which type you've pasted.</p>
       </details>
       <details>
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
-        <p>No. Everything is checked in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+        <p>No. Everything is checked in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
     </div>
 
@@ -161,7 +161,7 @@
     var doc = parser.parseFromString(xmlText, 'application/xml');
     var parseError = doc.getElementsByTagName('parsererror')[0];
     if (parseError) {
-      errors.push('The file is not valid XML — fix the parse error before anything else can be checked: ' + parseError.textContent.split('\n')[0]);
+      errors.push('The file is not valid XML, fix the parse error before anything else can be checked: ' + parseError.textContent.split('\n')[0]);
       return { errors: errors, warnings: warnings, info: info };
     }
 
@@ -194,7 +194,7 @@
 
     var ns = root.namespaceURI;
     if (ns !== 'http://www.sitemaps.org/schemas/sitemap/0.9') {
-      warnings.push('The <urlset> element is missing the standard sitemaps.org namespace — some parsers are strict about this.');
+      warnings.push('The <urlset> element is missing the standard sitemaps.org namespace, some parsers are strict about this.');
     }
 
     var urls = Array.prototype.slice.call(root.getElementsByTagName('url'));
@@ -204,7 +204,7 @@
     }
 
     if (urls.length > MAX_URLS) {
-      errors.push('Contains ' + urls.length + ' URLs, over the 50,000 limit per sitemap file — split into multiple files and a sitemap index.');
+      errors.push('Contains ' + urls.length + ' URLs, over the 50,000 limit per sitemap file, split into multiple files and a sitemap index.');
     }
 
     var seen = {};
@@ -242,13 +242,13 @@
     });
 
     if (missingLoc > 0) errors.push(missingLoc + ' <url> entr' + (missingLoc === 1 ? 'y is' : 'ies are') + ' missing a <loc>.');
-    if (relativeUrls > 0) errors.push(relativeUrls + ' URL(s) are relative, not absolute — every <loc> needs a full https:// (or http://) address.');
+    if (relativeUrls > 0) errors.push(relativeUrls + ' URL(s) are relative, not absolute, every <loc> needs a full https:// (or http://) address.');
     if (dupes > 0) warnings.push(dupes + ' duplicate URL(s) found.');
     if (badDates > 0) warnings.push(badDates + ' <lastmod> value(s) are not a valid date format.');
 
     var hostList = Object.keys(hosts);
     if (hostList.length > 1) {
-      warnings.push('URLs span ' + hostList.length + ' different hosts (' + hostList.join(', ') + ') — a sitemap should normally list one host only.');
+      warnings.push('URLs span ' + hostList.length + ' different hosts (' + hostList.join(', ') + '), a sitemap should normally list one host only.');
     }
 
     info.push('Checked ' + urls.length + ' URL(s), ' + Object.keys(seen).length + ' unique.');

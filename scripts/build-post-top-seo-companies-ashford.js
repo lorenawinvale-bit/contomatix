@@ -1,4 +1,4 @@
-// node scripts/build-post-top-seo-companies-ashford.js [--write] — data: 23 sites that ranked for Ashford (Kent) SEO searches (Google UK, 30 Oct 2026), each site's address read from its own pages, Companies House name searches the same day, and Google's Business Profile and SEO starter guide pages.
+// node scripts/build-post-top-seo-companies-ashford.js [--write], data: 23 sites that ranked for Ashford (Kent) SEO searches (Google UK, 30 Oct 2026), each site's address read from its own pages, Companies House name searches the same day, and Google's Business Profile and SEO starter guide pages.
 const build = require('./post-day9-common.js');
 const V1 = require('../../keyword-research/kent-agency-verify-2026-10-30.json').ashford, V3 = require('../../keyword-research/kent-agency-verify-ashford2-2026-10-30.json').ashford;
 const GL = require('../../keyword-research/google-docs-local-2026-10-30.json');

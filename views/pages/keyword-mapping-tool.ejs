@@ -2,7 +2,7 @@
   <div id="ambient-canvas" class="ambient-canvas"></div>
   <div class="container page-hero-inner">
     <span class="eyebrow">Free Tool</span>
-    <h1>Free Keyword Mapping Tool — Match Keywords to Pages and Spot the Gaps</h1>
+    <h1>Free Keyword Mapping Tool: Match Keywords to Pages and Spot the Gaps</h1>
     <p>Paste your keywords and your page URLs and this <strong>free keyword mapping tool</strong> matches each keyword to the page it fits best, flags keywords that need a new page, and warns about near-duplicate keywords that could compete with each other. Export the result as a CSV. No signup, nothing leaves your browser.</p>
   </div>
 </section>
@@ -76,7 +76,7 @@
       </details>
       <details>
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
-        <p>No. Everything is matched in your browser with JavaScript — nothing is uploaded, logged, or stored on any server, including ours.</p>
+        <p>No. Everything is matched in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
     </div>
 
@@ -203,8 +203,8 @@
     rowsOut = results;
     var lines = ['SUMMARY: ' + kws.length + ' keywords · ' + mapped + ' mapped · ' + review + ' to review · ' + need + ' need a new page', ''];
     results.forEach(function (r) {
-      var l = r.kw + (r.vol ? ' (' + r.vol + ')' : '') + '\n    → ' + (r.url ? pathOf(r.url) + '  [' + r.st + ', ' + r.score + '% word match]' : 'NEEDS A NEW PAGE — suggested ' + r.slug);
-      if (r.grp) l += '\n    ! Same words as: ' + r.grp + ' — target with one page';
+      var l = r.kw + (r.vol ? ' (' + r.vol + ')' : '') + '\n    → ' + (r.url ? pathOf(r.url) + '  [' + r.st + ', ' + r.score + '% word match]' : 'NEEDS A NEW PAGE, suggested ' + r.slug);
+      if (r.grp) l += '\n    ! Same words as: ' + r.grp + ', target with one page';
       lines.push(l);
     });
     var orphans = urls.filter(function (u) { return !used[u.url]; });

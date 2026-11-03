@@ -1,4 +1,4 @@
-// node scripts/build-post-301-vs-302-redirect.js [--write] — data: 6 readable ranking pages (Google US, 1 Nov 2026), Google's "Redirects and Google Search" and site move pages read the same day, our own redirect scan of 185 SEO-related sites (27 Oct 2026, see scripts/scan-redirect-chains.js) and a test of our own redirects (1 Nov 2026). Sites are not named.
+// node scripts/build-post-301-vs-302-redirect.js [--write], data: 6 readable ranking pages (Google US, 1 Nov 2026), Google's "Redirects and Google Search" and site move pages read the same day, our own redirect scan of 185 SEO-related sites (27 Oct 2026, see scripts/scan-redirect-chains.js) and a test of our own redirects (1 Nov 2026). Sites are not named.
 const build = require('./post-day9-common.js');
 const R = require('../../keyword-research/serp-301-vs-302-2026-11-01.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;

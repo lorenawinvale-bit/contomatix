@@ -1,4 +1,4 @@
-// node scripts/build-post-meta-keywords.js [--write] — data: 5 readable ranking pages (Google US, 2 Nov 2026), Google's "Meta tags that Google supports" page read the same day (page says last updated 2025-12-10), a scan of the HTML of 195 pages that ranked in Google US in our October to November 2026 research (46 SERP files), and a scan of 25 of our own pages. Sites are not named.
+// node scripts/build-post-meta-keywords.js [--write], data: 5 readable ranking pages (Google US, 2 Nov 2026), Google's "Meta tags that Google supports" page read the same day (page says last updated 2025-12-10), a scan of the HTML of 195 pages that ranked in Google US in our October to November 2026 research (46 SERP files), and a scan of 25 of our own pages. Sites are not named.
 const build = require('./post-day9-common.js'); const fs = require('fs'); const path = require('path');
 const R = require('../../keyword-research/serp-meta-keywords-2026-11-02.json');
 const ok = R.filter(o => o.status === 200 && o.words > 500); const c = k => ok.filter(o => o[k]).length;
