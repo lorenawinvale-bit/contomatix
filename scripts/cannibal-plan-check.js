@@ -1,6 +1,6 @@
 // Compares upcoming primary keywords (Content Plan v2) with existing posts. node scripts/cannibal-plan-check.js
 const posts = require('../data/blog.json');
-const plan = ['editorial backlinks','high authority backlinks','types of backlinks','what is link building and why it matters','link building strategies','link building mistakes','guest post opportunities','link building for ecommerce','example of keyword research','ppc keyword research tools','yoast seo keyword research','keyword volume research','long tail low competition keywords','ecommerce sitemap','mobile sitemap','ux seo audit','seo audit for saas','top content marketing tools','content marketing strategy checklist','how to read seo report','how to report negative seo','search console impressions explained','google analytics vs search console','cluster ai seo'];
+const plan = ['meta description length','technical seo audit checklist','content gap analysis','are subdomains bad for seo','keyword proximity','relative vs absolute canonical url','meta description checker'];
 const stop = new Set('a an the of for to in on and or how what is are with your you our guide best top 2026 2025 complete verified real data tested why'.split(' '));
 const stem = w => w.replace(/(ing|es|s)$/, '');
 const toks = s => new Set(s.toLowerCase().replace(/[^a-z0-9 -]/g, ' ').split(/[\s-]+/).filter(w => w && !stop.has(w) && !/^\d+$/.test(w)).map(stem));
