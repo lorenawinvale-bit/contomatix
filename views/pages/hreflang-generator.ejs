@@ -3,7 +3,7 @@
   <div class="container page-hero-inner">
     <span class="eyebrow">Free Tool</span>
     <h1>Free Hreflang Generator for International SEO</h1>
-    <p>This <strong>free hreflang generator</strong> builds correct language and region annotations for multi-language sites in seconds — a common source of international SEO errors. No signup, nothing leaves your browser.</p>
+    <p>This <strong>free hreflang generator</strong> (a hreflang tag generator for HTML, XML sitemaps and HTTP headers) builds correct language and region annotations in seconds, and flags bad codes as you type. No signup, nothing leaves your browser.</p>
   </div>
 </section>
 
@@ -29,6 +29,7 @@ es-MX | https://example.com/mx/</textarea>
           <select id="hf-format">
             <option value="html">HTML &lt;link&gt; tags (for the page &lt;head&gt;)</option>
             <option value="xml">XML sitemap annotations</option>
+            <option value="header">HTTP Link header (for PDFs and non-HTML files)</option>
           </select>
         </div>
       </form>
@@ -43,6 +44,7 @@ es-MX | https://example.com/mx/</textarea>
       <div class="llms-actions">
         <button type="button" class="btn btn-outline btn-sm" id="hf-copy">Copy</button>
       </div>
+      <ul id="hf-checks" class="llms-hint" style="margin:0 0 10px 18px;"></ul>
       <p class="llms-hint">If using HTML tags, paste the full set into the <code>&lt;head&gt;</code> of <strong>every</strong> language version listed — not just one page.</p>
     </div>
   </div>
@@ -50,6 +52,9 @@ es-MX | https://example.com/mx/</textarea>
 
 <section>
   <div class="container llms-explainer">
+
+    <h2>What Is a Hreflang Tag?</h2>
+    <p>A hreflang tag is an <code>rel="alternate" hreflang="..."</code> annotation that tells Google a page has equivalent versions in other languages or for other regions. A hreflang tag generator saves you from hand-writing the full set for every URL, which is where most typos and missing return links come from. Hreflang is a hint rather than a command, and it does not change rankings by itself: it swaps in the right language or country version of a page for the searcher.</p>
 
     <h2>What Hreflang Actually Does</h2>
     <p>Hreflang tells search engines which version of a page to show a searcher based on their language and location — French speakers in France get the <code>fr</code> page, French speakers in Canada get <code>fr-CA</code> if it exists. Without it, Google guesses using signals like server location and on-page language, which frequently sends the wrong regional version to the wrong audience, or lets one version outrank the others.</p>
@@ -63,6 +68,30 @@ es-MX | https://example.com/mx/</textarea>
       <li><strong>Language + region</strong> (e.g. <code>en-GB</code>, <code>es-MX</code>) — targets a specific country using an ISO 3166-1 Alpha-2 region code, always language first</li>
       <li><strong>x-default</strong> — a special value marking the fallback page shown to visitors who don't match any listed language/region</li>
     </ul>
+
+    <h2>Self-Referencing Hreflang Tags</h2>
+    <p>Every page must list itself in its own hreflang set, alongside all of its alternates. If the English page lists only the French and Spanish versions, the set is incomplete. This generator outputs every row for every page, so the self-reference is always included. Paste the full block on each version, unchanged.</p>
+
+    <h2>Hreflang HTML, Sitemap or HTTP Header: Which Format?</h2>
+    <ul class="service-points">
+      <li><strong>HTML <code>&lt;link&gt;</code> tags</strong> — simplest for small sites; one block in the <code>&lt;head&gt;</code> of every version</li>
+      <li><strong>XML sitemap annotations</strong> — easier at scale, since no page templates change. Check the result with our <a href="/tools/hreflang-sitemap-validator">hreflang sitemap validator</a></li>
+      <li><strong>HTTP <code>Link</code> header</strong> — the only option for PDFs and other non-HTML files, which have no <code>&lt;head&gt;</code></li>
+    </ul>
+    <p>Pick one method per site. Mixing them gives no benefit in Search and makes conflicts harder to find.</p>
+
+    <h2>Hreflang and Canonical Tags</h2>
+    <p>Each language version should carry a canonical tag pointing to itself, not to another language. If the French page canonicalises to the English page, Google treats the French page as a duplicate and the hreflang pair breaks. See our guide to <a href="/blog/canonical-hreflang">canonical and hreflang together</a> for the cases that go wrong, and <a href="/blog/hreflang-spanish">hreflang for Spanish</a> if you are mapping es, es-ES and es-MX.</p>
+
+    <h2>Common Hreflang Mistakes This Generator Flags</h2>
+    <ul class="service-points">
+      <li><strong>Wrong region codes</strong> — <code>en-UK</code> is invalid; the UK code is <code>en-GB</code></li>
+      <li><strong>Region without a language</strong> — <code>GB</code> alone is not a valid value</li>
+      <li><strong>Relative URLs</strong> — hreflang needs fully-qualified URLs starting with <code>https://</code></li>
+      <li><strong>Duplicate language entries</strong> — two rows for the same code confuse which page to serve</li>
+      <li><strong>Underscores instead of hyphens</strong> — <code>en_GB</code> should be <code>en-GB</code></li>
+    </ul>
+    <p>The checks list under the output updates as you type. Once your tags are live, test a few URLs by hand in the browser and in Search Console.</p>
 
     <h2>Free Hreflang Generator FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
@@ -81,6 +110,22 @@ es-MX | https://example.com/mx/</textarea>
       <details>
         <summary>Do I need an x-default page?<span class="faq-icon"></span></summary>
         <p>It's optional but recommended — without it, visitors whose language doesn't match any listed version may be shown search results inconsistently rather than a sensible fallback.</p>
+      </details>
+      <details>
+        <summary>What is a hreflang tag generator?<span class="faq-icon"></span></summary>
+        <p>It is a tool that turns a list of language and URL pairs into the complete set of hreflang annotations, so you do not write each tag by hand. This one outputs HTML tags, sitemap XML or an HTTP header.</p>
+      </details>
+      <details>
+        <summary>Should a page list itself in its hreflang set?<span class="faq-icon"></span></summary>
+        <p>Yes. Each version must include a self-referencing entry plus all the alternates. The generator includes it automatically.</p>
+      </details>
+      <details>
+        <summary>What is the right hreflang code for the UK?<span class="faq-icon"></span></summary>
+        <p><code>en-GB</code>. The code <code>en-UK</code> is a common mistake, because the ISO 3166-1 region code for the United Kingdom is GB.</p>
+      </details>
+      <details>
+        <summary>How do I add hreflang to a PDF?<span class="faq-icon"></span></summary>
+        <p>Use the HTTP Link header output. PDFs have no HTML head, so the annotation is sent in the response header instead.</p>
       </details>
       <details>
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
@@ -136,6 +181,10 @@ es-MX | https://example.com/mx/</textarea>
       { '@type': 'Question', name: 'What happens if my hreflang tags are not reciprocal?', acceptedAnswer: { '@type': 'Answer', text: 'Non-reciprocal hreflang annotations may be ignored entirely by Google, meaning none of the language-targeting signals get applied.' } },
       { '@type': 'Question', name: 'Should hreflang tags be in the HTML or the sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'Either works. Google says combining methods has no benefit in Search and is harder to manage, so pick one if you can. Sitemap annotations are often easier to maintain at scale.' } },
       { '@type': 'Question', name: 'Do I need an x-default page?', acceptedAnswer: { '@type': 'Answer', text: 'It is optional but recommended as a sensible fallback for visitors whose language does not match any listed version.' } },
+      { '@type': 'Question', name: 'What is a hreflang tag generator?', acceptedAnswer: { '@type': 'Answer', text: 'It is a tool that turns a list of language and URL pairs into the complete set of hreflang annotations, so you do not write each tag by hand. This one outputs HTML tags, sitemap XML or an HTTP header.' } },
+      { '@type': 'Question', name: 'Should a page list itself in its hreflang set?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Each version must include a self-referencing entry plus all the alternates. The generator includes it automatically.' } },
+      { '@type': 'Question', name: 'What is the right hreflang code for the UK?', acceptedAnswer: { '@type': 'Answer', text: 'en-GB. The code en-UK is a common mistake, because the ISO 3166-1 region code for the United Kingdom is GB.' } },
+      { '@type': 'Question', name: 'How do I add hreflang to a PDF?', acceptedAnswer: { '@type': 'Answer', text: 'Use the HTTP Link header output. PDFs have no HTML head, so the annotation is sent in the response header instead.' } },
       { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
     ]
   }) %>
@@ -173,6 +222,10 @@ es-MX | https://example.com/mx/</textarea>
       text = allRows.map(function (r) {
         return '<link rel="alternate" hreflang="' + esc(r.lang) + '" href="' + esc(r.url) + '">';
       }).join('\n');
+    } else if (format === 'header') {
+      text = 'Link: ' + allRows.map(function (r) {
+        return '<' + esc(r.url) + '>; rel="alternate"; hreflang="' + esc(r.lang) + '"';
+      }).join(',\n      ');
     } else {
       text = rows.map(function (r) {
         var alts = allRows.map(function (a) {
@@ -185,6 +238,29 @@ es-MX | https://example.com/mx/</textarea>
 
     output.textContent = text;
     status.textContent = 'Updated';
+    check(rows);
+  }
+
+  function check(rows) {
+    var list = document.getElementById('hf-checks');
+    var msgs = [];
+    var seen = {};
+    rows.forEach(function (r) {
+      var l = r.lang;
+      if (/^en-uk$/i.test(l)) msgs.push('"' + l + '" is not valid: the UK code is en-GB.');
+      else if (l.indexOf('_') !== -1) msgs.push('"' + l + '" uses an underscore: use a hyphen (e.g. en-GB).');
+      else if (!/^([a-z]{2,3}(-[A-Za-z]{2,4})?(-[A-Za-z]{2})?|x-default)$/i.test(l)) msgs.push('"' + l + '" does not look like a valid language[-region] code.');
+      if (!/^https?:\/\//i.test(r.url)) msgs.push('URL for "' + l + '" must be fully qualified (start with https://).');
+      var k = l.toLowerCase();
+      if (seen[k]) msgs.push('"' + l + '" appears more than once.');
+      seen[k] = true;
+    });
+    list.innerHTML = '';
+    (msgs.length ? msgs : ['No problems found in the codes or URLs above.']).forEach(function (m) {
+      var li = document.createElement('li');
+      li.textContent = m;
+      list.appendChild(li);
+    });
   }
 
   document.querySelectorAll('#hf-form textarea, #hf-form select, #hf-form input[type="checkbox"]').forEach(function (el) {

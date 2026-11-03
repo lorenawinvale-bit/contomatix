@@ -394,8 +394,8 @@ app.get('/tools/sitemap-generator', (req, res) => {
 
 app.get('/tools/hreflang-generator', (req, res) => {
   res.render('pages/hreflang-generator', {
-    title: 'Free Hreflang Generator — International SEO Tags | Contomatix',
-    description: 'Generate correct, reciprocal hreflang tags for multi-language and multi-region sites, for free, in seconds.',
+    title: 'Free Hreflang Generator: Hreflang Tag Generator | Contomatix',
+    description: 'Free hreflang generator: build hreflang tags for HTML, XML sitemaps or HTTP headers, with self-references, x-default and code checks. No signup.',
     pageClass: 'page-tool'
   });
 });
