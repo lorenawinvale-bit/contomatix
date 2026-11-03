@@ -38,7 +38,7 @@
     <text x="106" y="248" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">Mention DR: 4 of 6</text>
     <text x="106" y="268" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">Mention relevance: 4 of 6</text>
     <text x="106" y="288" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">Google docs using DA or DR: 0 of 5</text>
-    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">undefined</text>
+    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E"></text>
     <text x="106" y="332" font-family="Consolas, monospace" font-size="12.5" fill="#0B807C">Metrics are third-party numbers</text>
   </g>
   <g>

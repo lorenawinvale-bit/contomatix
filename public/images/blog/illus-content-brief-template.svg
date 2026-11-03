@@ -38,7 +38,7 @@
     <text x="106" y="248" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">Under 1,500 words: 56 pages</text>
     <text x="106" y="268" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">Over 3,000 words: 72 pages</text>
     <text x="106" y="288" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">Show a date: 34 of 89</text>
-    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">undefined</text>
+    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E"></text>
     <text x="106" y="332" font-family="Consolas, monospace" font-size="12.5" fill="#0B807C">Briefs should state length and dates</text>
   </g>
   <g>

@@ -32,7 +32,7 @@ function cover(slug, o) {
   rc('x="671" y="52"', `x="${746 - bw / 2}" y="52"`);
   rc('>blocked by robots.txt<', `>${esc(o.search)}<`);
   rc('Page indexing report', esc(o.card));
-  ['Status: Blocked by robots.txt', 'Crawled: no', 'Indexed: can still happen', 'Snippet: usually missing', 'Fix: narrow the rule'].forEach((t, i) => rc(t, esc(o.lines[i])));
+  ['Status: Blocked by robots.txt', 'Crawled: no', 'Indexed: can still happen', 'Snippet: usually missing', 'Fix: narrow the rule'].forEach((t, i) => rc(t, esc(o.lines[i] || '')));
   rc('Then: validate the fix', esc(o.last));
   rc('>No crawl<', `>${esc(o.big)}<`);
   rc('is not the same as no index', esc(o.k1));

@@ -38,7 +38,7 @@
     <text x="106" y="248" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">Mention translation or localization: 7 of 8</text>
     <text x="106" y="268" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">Mention local PR or media: 6 of 8</text>
     <text x="106" y="288" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">Link Google's documentation: 1 of 8</text>
-    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">undefined</text>
+    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E"></text>
     <text x="106" y="332" font-family="Consolas, monospace" font-size="12.5" fill="#0B807C">Google names local links as a signal</text>
   </g>
   <g>

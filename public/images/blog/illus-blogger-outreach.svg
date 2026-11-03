@@ -38,7 +38,7 @@
     <text x="106" y="248" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">From two profile sites: 19</text>
     <text x="106" y="268" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">Top 5 sites: 24 links</text>
     <text x="106" y="288" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">Internal links: 10,704</text>
-    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">undefined</text>
+    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E"></text>
     <text x="106" y="332" font-family="Consolas, monospace" font-size="12.5" fill="#0B807C">Google's link spam rules checked</text>
   </g>
   <g>

@@ -38,7 +38,7 @@
     <text x="106" y="248" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">Pages over the CLS limit: 1 of 13</text>
     <text x="106" y="268" font-family="Consolas, monospace" font-size="12.5" fill="#16192A">Slowest paint in our test: 932 ms</text>
     <text x="106" y="288" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">Total blocking time, worst page: 9 ms</text>
-    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E">undefined</text>
+    <text x="106" y="308" font-family="Consolas, monospace" font-size="12.5" fill="#B5730E"></text>
     <text x="106" y="332" font-family="Consolas, monospace" font-size="12.5" fill="#0B807C">The bug was a wrong image size</text>
   </g>
   <g>
