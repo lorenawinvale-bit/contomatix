@@ -1,0 +1,286 @@
+<section class="page-hero">
+  <div id="ambient-canvas" class="ambient-canvas"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Free Tool</span>
+    <h1>Free Meta Description Checker: Length, Width and Snippet Preview</h1>
+    <p>Paste a title and meta description and this <strong>meta description checker</strong> counts the characters, estimates the pixel width, shows how the snippet may look on desktop and mobile, and checks your target keyword. A bulk mode checks a whole list. No signup, nothing leaves your browser.</p>
+  </div>
+</section>
+
+<style>
+  .mdc-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin:0 0 14px; }
+  .mdc-stat { background:#fff; border:1px solid #EAE0D2; border-radius:12px; padding:12px 14px; }
+  .mdc-stat b { display:block; font-size:1.5rem; line-height:1.1; }
+  .mdc-stat span { font-size:.8rem; color:#6b6459; }
+  .mdc-good { color:#0B807C; } .mdc-warn { color:#B5730E; } .mdc-bad { color:#C23B3F; }
+  .mdc-checks { list-style:none; margin:0 0 14px; padding:0; display:grid; gap:6px; }
+  .mdc-checks li { font-size:.92rem; padding:8px 12px; border-radius:10px; background:#fff; border:1px solid #EAE0D2; }
+  .mdc-checks li.ok { border-left:4px solid #0EA5A0; } .mdc-checks li.warn { border-left:4px solid #F5A623; } .mdc-checks li.bad { border-left:4px solid #E5484D; }
+  .mdc-serp { background:#fff; border:1px solid #EAE0D2; border-radius:12px; padding:16px 18px; font-family:Arial, Helvetica, sans-serif; }
+  .mdc-serp.mobile { max-width:360px; }
+  .mdc-serp .u { font-size:12px; color:#4d5156; margin-bottom:2px; word-break:break-all; }
+  .mdc-serp .t { font-size:20px; line-height:1.3; color:#1a0dab; margin:0 0 3px; }
+  .mdc-serp .d { font-size:14px; line-height:1.58; color:#4d5156; }
+  .mdc-tabs { display:flex; gap:8px; margin:0 0 10px; }
+  .mdc-tabs button { cursor:pointer; }
+  .mdc-bulk table { width:100%; border-collapse:collapse; font-size:.88rem; }
+  .mdc-bulk th, .mdc-bulk td { text-align:left; padding:7px 8px; border-bottom:1px solid #EAE0D2; vertical-align:top; }
+  .mdc-bulk td.txt { max-width:340px; word-break:break-word; }
+</style>
+
+<section>
+  <div class="container contact-grid llms-tool-grid">
+    <div>
+      <form class="contact-form llms-form" id="mdc-form" onsubmit="return false;" aria-label="Meta description checker form">
+        <div><label for="mdc-title">Page title (optional)</label>
+          <input type="text" id="mdc-title" placeholder="Meta Description Length: What Google Says vs 8 Guides"></div>
+        <div><label for="mdc-desc">Meta description</label>
+          <textarea id="mdc-desc" rows="5" placeholder="Learn how long a meta description should be, what Google cuts off and how to write one that fits.">Learn how long a meta description should be, what Google cuts off and how to write one that fits. Based on 8 guides and 363 of our own posts.</textarea></div>
+        <div><label for="mdc-url">Page URL (optional, for the preview)</label>
+          <input type="text" id="mdc-url" placeholder="https://example.com/blog/meta-description-length"></div>
+        <div><label for="mdc-kw">Target keyword (optional)</label>
+          <input type="text" id="mdc-kw" placeholder="meta description length"></div>
+      </form>
+    </div>
+
+    <div class="contact-info-card llms-preview-card">
+      <div class="llms-preview-head">
+        <strong>Result</strong>
+        <span id="mdc-status" class="llms-status">Waiting for input</span>
+      </div>
+      <div class="mdc-grid" id="mdc-stats"></div>
+      <ul class="mdc-checks" id="mdc-checks"></ul>
+      <div class="mdc-tabs">
+        <button type="button" class="btn btn-primary btn-sm" id="mdc-tab-d">Desktop preview</button>
+        <button type="button" class="btn btn-outline btn-sm" id="mdc-tab-m">Mobile preview</button>
+      </div>
+      <div class="mdc-serp" id="mdc-serp"></div>
+      <p class="llms-hint">The preview is an approximation. Google decides what to show and cuts snippets to fit the device width, so the real result can differ.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mdc-bulk">
+  <div class="container llms-explainer">
+    <h2>Bulk Meta Description Checker</h2>
+    <p>Paste one description per line, or one <code>title | description</code> pair per line. The tool gives each a length, an estimated width and a status, and flags duplicates.</p>
+    <form class="contact-form llms-form" onsubmit="return false;" aria-label="Bulk meta description checker">
+      <div><label for="mdc-bulk-in">Descriptions or title | description pairs, one per line</label>
+        <textarea id="mdc-bulk-in" rows="8" placeholder="Home | We do link building and technical SEO by hand.&#10;Services | Link building, technical SEO and content for brands that want rankings that hold up."></textarea></div>
+    </form>
+    <p id="mdc-bulk-sum" style="margin:14px 0;"></p>
+    <div style="overflow-x:auto;"><table id="mdc-bulk-table" style="display:none;"><thead><tr><th>#</th><th>Text</th><th>Characters</th><th>Est. width</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+    <div style="margin-top:12px;"><button type="button" class="btn btn-glass" id="mdc-bulk-csv" style="display:none;">Download CSV</button></div>
+  </div>
+</section>
+
+<section>
+  <div class="container llms-explainer">
+
+    <h2>What the Meta Description Checker Measures</h2>
+    <ul class="service-points">
+      <li><strong>Characters:</strong> the length of the description including spaces, which is the number most guides quote</li>
+      <li><strong>Estimated width:</strong> the width in pixels of the text set in 14px Arial in your browser, because search results are cut by width, not by character count</li>
+      <li><strong>Status:</strong> short (under 120 characters), in range (120 to 155), borderline (156 to 160) or too long (over 160)</li>
+      <li><strong>Title length:</strong> a 60 character target for the title, which is a safe guide rather than a Google rule</li>
+      <li><strong>Keyword checks:</strong> whether your target keyword appears in the description and in its first 120 characters, and whether it appears in the title</li>
+      <li><strong>Common problems:</strong> line breaks, HTML tags, double spaces, a description that repeats the title, and a word repeated four or more times</li>
+      <li><strong>Preview:</strong> a desktop and a mobile approximation of the snippet, cut where a long description may be shortened</li>
+    </ul>
+
+    <h2>How Long Should a Meta Description Be?</h2>
+    <p>Google sets no limit. Its page on snippets says there is no limit on how long a meta description can be, but the snippet is truncated as needed, typically to fit the device width. Most guides give 155 to 160 characters as the practical maximum and about 120 characters for mobile, so this tool uses 120 to 155 as the in-range zone. We compared the numbers in a guide of our own: <a href="/blog/meta-description-length">meta description length</a>, with data from eight ranking guides and 363 of our posts.</p>
+
+    <h2>How the Width Estimate Works</h2>
+    <p>The tool measures your text with the browser's canvas in 14px Arial and shows the result in pixels. Tools and guides quote different limits, from about 920 to 985 pixels for desktop descriptions, and Google changes how it displays results, so treat the number as a rough guide. If the estimate is well over 920 pixels, shorten the text even when the character count looks safe. Wide letters such as m and w take more room than narrow ones such as i and l, which is why two descriptions with the same character count can have different widths.</p>
+
+    <h2>How to Use the Results</h2>
+    <ul>
+      <li><strong>Put the main point first.</strong> If the end is cut off, nothing important is lost.</li>
+      <li><strong>Add a reason to click.</strong> A description under 120 characters often has room for a benefit, a number or a detail.</li>
+      <li><strong>Make each one unique.</strong> The bulk mode flags exact duplicates across your list.</li>
+      <li><strong>Check the title too.</strong> Titles are cut by width as well. Our <a href="/tools/serp-snippet-preview">SERP snippet preview</a> shows a result in full, and our <a href="/tools/meta-tag-generator">meta tag generator</a> builds the full set of tags.</li>
+      <li><strong>Do not stuff keywords.</strong> Google says descriptions made of long strings of keywords are less likely to be shown.</li>
+    </ul>
+
+    <h2>Meta Description Checker FAQs</h2>
+    <div class="faq-list" style="margin-top: 22px;">
+      <details>
+        <summary>What is a meta description checker?<span class="faq-icon"></span></summary>
+        <p>A tool that counts the characters in a meta description, estimates how wide it will be in search results and flags problems such as being too long or too short. This one also previews the snippet and checks a target keyword.</p>
+      </details>
+      <details>
+        <summary>How many characters should a meta description be?<span class="faq-icon"></span></summary>
+        <p>Google sets no limit, but snippets are cut to fit the device width. About 120 to 155 characters is a safe target, and most guides quote 160 as the top.</p>
+      </details>
+      <details>
+        <summary>Why does the tool show pixels as well as characters?<span class="faq-icon"></span></summary>
+        <p>Search results are cut by width, not by character count. A description full of wide letters is cut sooner than one with the same number of characters in narrow letters, so the width estimate is a useful second check.</p>
+      </details>
+      <details>
+        <summary>Will Google show my meta description exactly as written?<span class="faq-icon"></span></summary>
+        <p>Not always. Google says it sometimes uses the meta description when it describes the page better than other parts of the content, and it may use other text instead.</p>
+      </details>
+      <details>
+        <summary>Does the length of a meta description affect rankings?<span class="faq-icon"></span></summary>
+        <p>Google does not say length is a ranking factor. Length affects how the snippet looks and whether it is cut off, which can affect clicks.</p>
+      </details>
+      <details>
+        <summary>Can I check many descriptions at once?<span class="faq-icon"></span></summary>
+        <p>Yes. Use the bulk mode below the main checker: paste one description or one title and description pair per line, and download the results as a CSV.</p>
+      </details>
+      <details>
+        <summary>Does this tool fetch my page or store my text?<span class="faq-icon"></span></summary>
+        <p>No. You paste the text, and everything is processed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.</p>
+      </details>
+    </div>
+
+    <div class="cta-band" style="margin-top: 44px;">
+      <span class="cta-orb cta-orb-1"></span>
+      <span class="cta-orb cta-orb-2"></span>
+      <h2>Want your titles and descriptions reviewed?</h2>
+      <p>Contomatix checks titles, descriptions and snippets against your Search Console data and fixes the ones that hold clicks back.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://wa.me/<%= site.whatsappNumber %>" target="_blank" rel="noopener" class="btn btn-glass">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Meta Description Checker',
+    url: site.baseUrl + '/tools/meta-description-checker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any (browser-based)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Check a meta description for length, estimated pixel width and snippet preview, with title and keyword checks and a bulk mode. Free, in your browser.',
+    provider: { '@id': site.baseUrl + '/#organization' }
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: site.baseUrl + '/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Meta Description Checker', item: site.baseUrl + '/tools/meta-description-checker' }
+    ]
+  }) %>
+</script>
+
+<script type="application/ld+json">
+  <%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What is a meta description checker?', acceptedAnswer: { '@type': 'Answer', text: 'A tool that counts the characters in a meta description, estimates how wide it will be in search results and flags problems such as being too long or too short. This one also previews the snippet and checks a target keyword.' } },
+      { '@type': 'Question', name: 'How many characters should a meta description be?', acceptedAnswer: { '@type': 'Answer', text: 'Google sets no limit, but snippets are cut to fit the device width. About 120 to 155 characters is a safe target, and most guides quote 160 as the top.' } },
+      { '@type': 'Question', name: 'Why does the tool show pixels as well as characters?', acceptedAnswer: { '@type': 'Answer', text: 'Search results are cut by width, not by character count. A description full of wide letters is cut sooner than one with the same number of characters in narrow letters, so the width estimate is a useful second check.' } },
+      { '@type': 'Question', name: 'Will Google show my meta description exactly as written?', acceptedAnswer: { '@type': 'Answer', text: 'Not always. Google says it sometimes uses the meta description when it describes the page better than other parts of the content, and it may use other text instead.' } },
+      { '@type': 'Question', name: 'Does the length of a meta description affect rankings?', acceptedAnswer: { '@type': 'Answer', text: 'Google does not say length is a ranking factor. Length affects how the snippet looks and whether it is cut off, which can affect clicks.' } },
+      { '@type': 'Question', name: 'Can I check many descriptions at once?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Use the bulk mode below the main checker: paste one description or one title and description pair per line, and download the results as a CSV.' } },
+      { '@type': 'Question', name: 'Does this tool fetch my page or store my text?', acceptedAnswer: { '@type': 'Answer', text: 'No. You paste the text, and everything is processed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.' } }
+    ]
+  }) %>
+</script>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var canvas = document.createElement('canvas'); var ctx = canvas.getContext('2d');
+  function width(text, font) { if (!ctx) return Math.round(text.length * 6.6); ctx.font = font; return Math.round(ctx.measureText(text).width); }
+  function descWidth(t) { return width(t, '14px Arial, Helvetica, sans-serif'); }
+  function titleWidth(t) { return width(t, '20px Arial, Helvetica, sans-serif'); }
+  function status(len) {
+    if (!len) return { k: 'warn', t: 'Empty', cls: 'mdc-warn' };
+    if (len < 120) return { k: 'warn', t: 'Short: room to add a benefit', cls: 'mdc-warn' };
+    if (len <= 155) return { k: 'ok', t: 'In range', cls: 'mdc-good' };
+    if (len <= 160) return { k: 'warn', t: 'Borderline: may be cut', cls: 'mdc-warn' };
+    return { k: 'bad', t: 'Too long: likely cut', cls: 'mdc-bad' };
+  }
+  function clip(text, max) {
+    if (text.length <= max) return text;
+    var cut = text.slice(0, max); var i = cut.lastIndexOf(' ');
+    return (i > max * 0.6 ? cut.slice(0, i) : cut).replace(/[\s,;:.\-]+$/, '') + ' ...';
+  }
+  var mode = 'd';
+  function stat(big, label, cls) { var d = document.createElement('div'); d.className = 'mdc-stat'; var b = document.createElement('b'); b.textContent = big; if (cls) b.className = cls; var s = document.createElement('span'); s.textContent = label; d.appendChild(b); d.appendChild(s); return d; }
+  function check(list, kind, text) { var li = document.createElement('li'); li.className = kind; li.textContent = text; list.appendChild(li); }
+  function words(s) { return (s.toLowerCase().match(/[a-z0-9']+/g) || []); }
+
+  function run() {
+    var title = $('mdc-title').value.trim(), desc = $('mdc-desc').value, url = $('mdc-url').value.trim(), kw = $('mdc-kw').value.trim().toLowerCase();
+    var d = desc.replace(/\s+/g, ' ').trim(); var len = d.length; var st = status(len); var w = d ? descWidth(d) : 0;
+    var stats = $('mdc-stats'); stats.textContent = '';
+    stats.appendChild(stat(String(len), 'characters (with spaces)', st.cls));
+    stats.appendChild(stat(String(d ? d.split(' ').length : 0), 'words'));
+    stats.appendChild(stat(w + ' px', 'estimated width (14px Arial)', w > 920 ? 'mdc-bad' : (w > 0 ? 'mdc-good' : '')));
+    stats.appendChild(stat(String(title.length), 'title characters', title.length > 60 ? 'mdc-warn' : ''));
+    $('mdc-status').textContent = st.t;
+    var list = $('mdc-checks'); list.textContent = '';
+    if (!d) { check(list, 'warn', 'Paste a meta description to check it.'); }
+    else {
+      check(list, st.k, 'Length: ' + len + ' characters. ' + st.t + '.');
+      check(list, w > 920 ? 'warn' : 'ok', 'Estimated width: ' + w + ' px. ' + (w > 920 ? 'Over about 920 px, a commonly quoted desktop limit, so the end may be cut.' : 'Under about 920 px, a commonly quoted desktop limit.'));
+      if (len > 120) check(list, 'ok', 'Tip: on mobile the visible text may be shorter, so put the main point in the first 120 characters.');
+      if (/[\r\n\t]/.test(desc)) check(list, 'warn', 'The text contains line breaks or tabs. Use a single line.');
+      if (/<[^>]+>/.test(desc)) check(list, 'bad', 'The text contains HTML tags. Remove them.');
+      if (/ {2,}/.test(desc)) check(list, 'warn', 'The text contains double spaces.');
+      if (title && d.toLowerCase().indexOf(title.toLowerCase()) === 0) check(list, 'warn', 'The description starts by repeating the title. Say something new.');
+      var counts = {}; words(d).forEach(function (x) { if (x.length > 3) counts[x] = (counts[x] || 0) + 1; });
+      var rep = Object.keys(counts).filter(function (x) { return counts[x] >= 4; });
+      if (rep.length) check(list, 'warn', 'The word "' + rep[0] + '" appears ' + counts[rep[0]] + ' times. Repeating a word can read as stuffing.');
+      if (kw) {
+        var dl = d.toLowerCase(); var pos = dl.indexOf(kw);
+        if (pos === -1) check(list, 'warn', 'The target keyword "' + kw + '" is not in the description.');
+        else check(list, pos < 120 ? 'ok' : 'warn', 'The target keyword is in the description' + (pos < 120 ? ', within the first 120 characters.' : ', but after the first 120 characters.'));
+        if (title) check(list, title.toLowerCase().indexOf(kw) === -1 ? 'warn' : 'ok', title.toLowerCase().indexOf(kw) === -1 ? 'The target keyword is not in the title.' : 'The target keyword is in the title.');
+      }
+    }
+    if (title) check(list, title.length > 60 ? 'warn' : (title.length < 30 ? 'warn' : 'ok'), 'Title: ' + title.length + ' characters, about ' + titleWidth(title) + ' px. ' + (title.length > 60 ? 'Over 60 characters, so it may be cut.' : (title.length < 30 ? 'Short: room for more.' : 'Within a safe length.')));
+    // preview
+    var serp = $('mdc-serp'); serp.textContent = ''; serp.className = 'mdc-serp' + (mode === 'm' ? ' mobile' : '');
+    var host = url ? url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/\//g, ' > ') : 'example.com > page';
+    var u = document.createElement('div'); u.className = 'u'; u.textContent = host; var t = document.createElement('div'); t.className = 't'; t.textContent = title ? clip(title, mode === 'm' ? 55 : 60) : 'Your page title';
+    var dd = document.createElement('div'); dd.className = 'd'; dd.textContent = d ? clip(d, mode === 'm' ? 120 : 155) : 'Your meta description will appear here.';
+    serp.appendChild(u); serp.appendChild(t); serp.appendChild(dd);
+  }
+
+  function bulk() {
+    var lines = $('mdc-bulk-in').value.split('\n').map(function (l) { return l.trim(); }).filter(Boolean);
+    var tb = $('mdc-bulk-table').querySelector('tbody'); tb.textContent = '';
+    var sum = $('mdc-bulk-sum'); var csv = $('mdc-bulk-csv');
+    if (!lines.length) { $('mdc-bulk-table').style.display = 'none'; csv.style.display = 'none'; sum.textContent = ''; return; }
+    var seen = {}; var rows = lines.map(function (l, i) {
+      var parts = l.indexOf('|') !== -1 ? l.split('|') : [null, l]; var desc = (parts.length > 1 ? parts.slice(1).join('|') : parts[0]).trim();
+      var key = desc.toLowerCase(); seen[key] = (seen[key] || 0) + 1; return { n: i + 1, text: desc, len: desc.length, w: descWidth(desc), key: key };
+    });
+    var counts = { ok: 0, long: 0, short: 0, dup: 0 };
+    rows.forEach(function (r) {
+      var s = status(r.len); var dup = seen[r.key] > 1; if (dup) counts.dup++; if (s.k === 'ok') counts.ok++; else if (r.len > 155) counts.long++; else counts.short++;
+      r.status = s.t + (dup ? ' (duplicate)' : '');
+      var tr = document.createElement('tr');
+      [String(r.n), r.text, String(r.len), r.w + ' px', r.status].forEach(function (v, i) { var td = document.createElement('td'); td.textContent = v; if (i === 1) td.className = 'txt'; if (i === 4) td.className = s.cls; tr.appendChild(td); });
+      tb.appendChild(tr);
+    });
+    $('mdc-bulk-table').style.display = ''; csv.style.display = '';
+    sum.textContent = rows.length + ' checked: ' + counts.ok + ' in range, ' + counts.long + ' too long, ' + counts.short + ' short, ' + counts.dup + ' duplicates.';
+    csv.onclick = function () {
+      var out = '"#","Text","Characters","Est. width px","Status"\n' + rows.map(function (r) { return [r.n, '"' + r.text.replace(/"/g, '""') + '"', r.len, r.w, '"' + r.status + '"'].join(','); }).join('\n');
+      var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([out], { type: 'text/csv' })); a.download = 'meta-description-check.csv'; a.click();
+    };
+  }
+
+  ['mdc-title', 'mdc-desc', 'mdc-url', 'mdc-kw'].forEach(function (id) { $(id).addEventListener('input', run); });
+  $('mdc-bulk-in').addEventListener('input', bulk);
+  $('mdc-tab-d').addEventListener('click', function () { mode = 'd'; $('mdc-tab-d').className = 'btn btn-primary btn-sm'; $('mdc-tab-m').className = 'btn btn-outline btn-sm'; run(); });
+  $('mdc-tab-m').addEventListener('click', function () { mode = 'm'; $('mdc-tab-m').className = 'btn btn-primary btn-sm'; $('mdc-tab-d').className = 'btn btn-outline btn-sm'; run(); });
+  run();
+})();
+</script>

@@ -1,0 +1,13 @@
+// Day-18: does Google's documentation mention keyword proximity? + Search Console URL inspection wording (5 Nov 2026) + own canonical stats from the live crawl rows.
+const fs = require('fs'); const path = require('path'); const kr = path.join(__dirname, '..', '..', 'keyword-research');
+const UA = { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130 Safari/537.36', 'accept-language': 'en-US,en;q=0.9' };
+const strip = s => s.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
+const docs = { starter: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=en', ranking: 'https://developers.google.com/search/docs/appearance/ranking-systems-guide?hl=en', howsearch: 'https://developers.google.com/search/docs/fundamentals/how-search-works?hl=en', spam: 'https://developers.google.com/search/docs/essentials/spam-policies?hl=en', helpful: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=en', urlinspect: 'https://support.google.com/webmasters/answer/9012289?hl=en' };
+(async () => {
+  const out = {}; for (const [k, u] of Object.entries(docs)) { try { const r = await fetch(u, { headers: UA, signal: AbortSignal.timeout(30000) }); const x = strip(await r.text()); out[k] = { url: u, status: r.status, len: x.length, updated: (x.match(/Last updated[^.]{0,30}/i) || [''])[0], proximity: (x.match(/proximity/gi) || []).length, keywordProximity: (x.match(/keyword proximity/gi) || []).length, keywords: (x.match(/keyword/gi) || []).length, text: k === 'urlinspect' ? x : undefined }; } catch (e) { out[k] = { error: String(e.message) }; } }
+  fs.writeFileSync(path.join(kr, 'google-docs-proximity-2026-11-05.json'), JSON.stringify(out, null, 1));
+  console.log(Object.entries(out).map(([k, v]) => k + ':' + (v.status || v.error) + ' len' + v.len + ' proximity=' + v.proximity + ' kwprox=' + v.keywordProximity + ' kw=' + v.keywords + ' ' + v.updated).join('\n'));
+  const t = out.urlinspect.text || ''; console.log('url inspect canonical hits:', [...t.matchAll(/[^.]{0,120}(User-declared canonical|Google-selected canonical)[^.]{0,200}\./gi)].slice(0, 4).map(m => m[0].trim().slice(0, 300)));
+  const rows = JSON.parse(fs.readFileSync(path.join(kr, 'own-crawl-rows-2026-11-03.json'))).filter(r => r.status === 200);
+  console.log('own pages', rows.length, 'with canonical', rows.filter(r => r.canon).length, 'absolute', rows.filter(r => /^https?:\/\//i.test(r.canon || '')).length, 'self', rows.filter(r => r.canon && !r.canonDiff).length, 'different', rows.filter(r => r.canonDiff).length);
+})();

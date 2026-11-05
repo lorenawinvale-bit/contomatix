@@ -205,5 +205,10 @@ module.exports = [
     slug: 'invoice-generator',
     title: 'Invoice Generator & Template',
     summary: 'A free freelance invoice template that generates a professional, itemized PDF in seconds, no signup, nothing leaves your browser.'
+  },
+  {
+    slug: 'meta-description-checker',
+    title: 'Meta Description Checker',
+    summary: 'Check a meta description for length, estimated pixel width and snippet preview, with title and keyword checks and a bulk mode.'
   }
 ];
