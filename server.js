@@ -45,10 +45,10 @@ const upload = multer({
 // emit FAQPage structured data. The FAQ markup lives inside the post content, so
 // this parses it back out rather than duplicating the copy in two places.
 function extractFaqs(html) {
-  const block = html.match(/<div class="post-faq">([\s\S]*?)<\/div>/);
+  const block = html.match(/<div class="(?:post-faq|faq-list)"[^>]*>([\s\S]*?)<\/div>/);
   if (!block) return [];
   const faqs = [];
-  const re = /<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>/g;
+  const re = /<summary[^>]*>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>/g;
   let m;
   while ((m = re.exec(block[1])) !== null) {
     const strip = s => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
