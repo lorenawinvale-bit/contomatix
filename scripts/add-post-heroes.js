@@ -1,0 +1,51 @@
+// Replaces the old numbered-list hero diagram of older posts with a new concept diagram (new logo top-left, no note strip).
+// Rule (user, 6 Nov 2026): every blog gets its own hero style and its content images use other layouts than its hero. Facts come only from the post itself.
+// usage: node scripts/add-post-heroes.js [slug ...]
+const fs = require('fs'); const path = require('path');
+const root = path.join(__dirname, '..'); process.chdir(root);
+const D0 = require('./diagram-lib2.js');
+const D = Object.fromEntries(Object.entries(D0).map(([k, fn]) => [k, typeof fn === 'function' && !['logoSvg', 'proofHtml', 'hero'].includes(k) ? (o => { const c = Object.assign({}, o); delete c.note; return fn(c); }) : fn]));
+const TEAL = '#0EA5A0', AMBER = '#F5A623';
+const W = 760; // the hero sits in a 440 px column next to the title, so it is drawn at 760 px wide
+const HEROES = {
+  'check-backlinks-of-website': D.stats({ w: W, cols: 2, title: 'Four free ways to check backlinks', items: [
+    { big: '1', t: 'Search Console Links report: free, from Google' }, { big: '2', t: 'Open the linking page and read the link', color: AMBER },
+    { big: '3', t: 'Search your brand and domain for mentions' }, { big: '4', t: 'Use a backlink checker for a wider index', color: AMBER }] }),
+  'how-many-backlinks-do-i-need': D.columns({ w: W, title: 'Our own backlinks, 6 November 2026', max: 40, items: [
+    { t: 'External links', v: 38, text: '38', color: AMBER }, { t: 'Linking sites', v: 13, text: '13', color: TEAL }, { t: 'Links from two sites', v: 21, text: '21', color: AMBER }] }),
+  'robots-txt-file': D.timeline({ w: W, title: 'The four lines that do all the work', items: [
+    { d: 'Line 1', t: 'User-agent', c: 'Which crawler the rules apply to' }, { d: 'Line 2', t: 'Disallow', c: 'A path the crawler should not request' },
+    { d: 'Line 3', t: 'Allow', c: 'An exception carved out of a Disallow' }, { d: 'Line 4', t: 'Sitemap', c: 'The full URL of your sitemap' }] }),
+  'ai-powered-seo-tools': D.split({ w: W, h: 520, title: 'AI SEO tools: one label, five jobs', big: '5', bigLabel: 'different jobs share the "AI-powered" label', items: [
+    { v: 'Clustering', t: 'Groups keywords by meaning' }, { v: 'Briefs', t: 'Summarizes what already ranks' }, { v: 'Audits', t: 'Triage across large crawls' }, { v: 'Linking', t: 'Suggests pages to link' }, { v: 'Visibility', t: 'Tracks AI mentions and citations' }] }),
+  'how-duckduckgo-ai-search-works-2026': D.timeline({ w: W, title: 'DuckDuckGo AI: two products, one name', items: [
+    { d: 'Product 1', t: 'Search Assist', c: 'An AI answer in the results, via DuckAssistBot' }, { d: 'Product 2', t: 'Duck.ai', c: 'A private chat that routes to third-party models' },
+    { d: 'Not a product', t: 'Bing', c: 'Supplies most of the organic results' }] }),
+    'hreflang-spanish': D.cards({ w: W, title: 'Spanish hreflang: use these, not es-419', qLabel: 'Targets', items: [
+    { big: 'es', t: 'Catch-all', d: 'Language only', q: 'Any Spanish speaker' }, { big: 'es-MX', t: 'Country code', d: 'Language, then country', q: 'Mexico' }, { big: 'es-ES', t: 'Country code', d: 'Language, then country', q: 'Spain' }] }),
+  'blocked-by-robots-txt': D.flow({ w: W, title: 'Fixing "blocked by robots.txt"', steps: [
+    { t: 'Find the rule', s: 'Test the URL', c: 'Which Disallow line matches?' }, { t: 'Decide', s: 'Should it be in search?', c: 'Some blocks are intentional' }, { t: 'Fix and validate', s: 'Then recrawl', c: 'To remove a page, noindex it first' }] }),
+  'image-sitemap': D.rings({ w: W, title: 'Our own image sitemap numbers', items: [
+    { pct: 2 / 6, big: '2 of 6', t: 'image tags Google still reads', c: '4 tags were removed', color: TEAL },
+    { pct: 13 / 1000, big: '13', t: 'images on our busiest page, limit 1,000', c: 'Per page URL', color: AMBER },
+    { pct: 0, big: '0 of 1,220', t: 'image references were in a sitemap', c: 'Across 299 posts', color: AMBER }] }),
+  'ai-seo-agents': D.cards({ w: W, title: 'Three jobs AI SEO agents get', qLabel: 'The rule', items: [
+    { big: 'Audit', t: 'Rule-based checks', d: 'Crawl against a rule set', q: 'Safe to run alone' }, { big: 'Draft', t: 'Content drafting', d: 'Full pages from a brief', q: 'A human reviews' }, { big: 'Pitch', t: 'Outreach', d: 'Targets and pitch emails', q: 'Never unsupervised' }] }),
+  'innovative-marketing-campaigns-2026': D.stats({ w: W, cols: 2, title: 'B2C and B2B innovation differ', items: [
+    { big: 'B2C', t: 'Built to spread through millions of feeds in a week' }, { big: 'B2B', t: 'Built to survive a buying committee and a long sales cycle', color: AMBER }] }),
+    'why-is-duplicate-content-an-issue-for-seo-2026': D.compare({ w: W, title: 'Duplicate content: myth and reality', left: { h: 'The myth', items: ['A separate penalty exists', 'Copies are punished', 'Google said no in 2008'] }, right: { h: 'What happens', items: ['One version is picked to show', 'Signals split across copies', 'AI may credit one source'] } }),
+  'what-is-llm-seo-2026': D.split({ w: W, h: 520, title: 'LLM SEO: a citations game', big: '4', bigLabel: 'pillars of LLM visibility', items: [
+    { v: 'Extractability', t: 'A model can lift a clean answer' }, { v: 'Authority', t: 'Consistent facts across sources' }, { v: 'Freshness', t: 'Current, and says so' }, { v: 'Clarity', t: 'Headings, lists, Q&A' }] }),
+  'how-to-get-cited-by-chatgpt-2026': D.split({ w: W, h: 520, title: 'What gets a page cited by ChatGPT', big: '5', bigLabel: 'tactics that earn a citation', items: [
+    { v: 'Answer', t: 'A 40 to 60 word answer first' }, { v: 'Sections', t: 'One sub-question each' }, { v: 'Data', t: 'Recent and attributed' }, { v: 'Authority', t: 'Signals beyond your site' }, { v: 'Crawlers', t: 'Do not block OAI-SearchBot' }] })
+};
+(async () => {
+  const fp = path.join(root, 'data', 'blog.json'); const posts = JSON.parse(fs.readFileSync(fp, 'utf8')); const only = process.argv.slice(2); const out = [];
+  for (const [slug, svg] of Object.entries(HEROES)) {
+    if (only.length && !only.includes(slug)) continue; const p = posts.find(x => x.slug === slug); if (!p || !p.heroDiagram) throw new Error('no hero path for ' + slug);
+    if (/—/.test(svg)) throw new Error('em dash in hero ' + slug);
+    fs.writeFileSync(path.join(root, 'public', p.heroDiagram.replace(/^\//, '')), svg);
+    const vb = svg.match(/viewBox="[\d.]+\s+[\d.]+\s+([\d.]+)\s+([\d.]+)"/); out.push(`${slug}: ${vb ? vb[1] + 'x' + vb[2] : '?'}, ${Math.round(svg.length / 1024)} kB`);
+  }
+  console.log(out.join('\n'));
+})();
