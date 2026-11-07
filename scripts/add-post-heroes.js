@@ -52,8 +52,8 @@ const HEROES = {
   'maritime-digital-marketing': D.timeline({ w: W, title: 'Five areas of maritime digital marketing', items: [
     { d: 'Area 1', t: 'SEO for maritime and shipping', c: 'Specific technical and commercial searches' }, { d: 'Area 2', t: 'A B2B website built for long cycles', c: 'Answers procurement questions' },
     { d: 'Area 3', t: 'Content and thought leadership', c: 'Explainers that large competitors skip' }, { d: 'Area 4', t: 'LinkedIn and B2B social', c: 'Where the industry lives online' }, { d: 'Area 5', t: 'Trade directories and press', c: 'Links from maritime sources' }] }),
-  'google-disavow-backlinks': D.split({ w: W, h: 480, title: 'Google\'s two-part disavow test', big: '2', bigLabel: 'tests must both be true before you disavow', items: [
-    { v: '1', t: 'A considerable number of spammy or low-quality links' }, { v: '2', t: 'They caused a manual action, or are likely to' }, { v: 'No', t: 'A tool\'s toxicity score alone does not qualify' }] }),
+  'google-disavow-backlinks': D.flow({ w: W, title: 'Google\'s two-part disavow test', steps: [
+    { t: 'Test 1', s: 'Many bad links', c: 'Spammy or low quality, and a considerable number' }, { t: 'Test 2', s: 'Real harm', c: 'A manual action, or likely to get one' }, { t: 'Not a test', s: 'Toxicity score', c: 'A tool score alone does not qualify' }] }),
   'link-building-agencies-dubai-2026': D.stats({ w: W, cols: 2, title: 'Link building in Dubai, in numbers', items: [
     { big: '3', t: 'agencies passed our verification' }, { big: '3', t: 'checks each one had to clear', color: AMBER }, { big: '11.3M', t: 'UAE internet users at the end of 2025' }, { big: '3-6', t: 'months for link building to compound, at minimum', color: AMBER }] }),
   'how-to-find-competitor-backlinks-2026': D.flow({ w: W, title: 'Finding competitor backlinks, in three moves', steps: [
