@@ -41,5 +41,15 @@ module.exports = D => [
           { big: 'DPA', t: 'GDPR terms', d: 'A signed Data Processing Agreement for EU contacts', q: 'Only a privacy policy' },
           { big: 'Where', t: 'Data residency', d: 'Where data is hosted and the vendor\'s jurisdiction', q: 'No answer on hosting' }] }) }
     ]
+  },
+  {
+    slug: 'seo-audit-report-template',
+    images: [
+      { name: 'cwv', afterH2: 'Checks Google Gives Numbers For', alt: 'Good Core Web Vitals thresholds: LCP 2.5 s, INP 200 ms, CLS 0.1, at the 75th percentile',
+        svg: D.cards({ w: 1200, h: 520, title: 'Core Web Vitals: the "good" thresholds, at the 75th percentile', qLabel: 'Good', items: [
+          { big: '2.5 s', t: 'Largest Contentful Paint', d: 'Loading performance', q: '2.5 seconds or less' },
+          { big: '200 ms', t: 'Interaction to Next Paint', d: 'Interactivity', q: '200 milliseconds or less' },
+          { big: '0.1', t: 'Cumulative Layout Shift', d: 'Visual stability', q: '0.1 or less' }] }) }
+    ]
   }
 ];
