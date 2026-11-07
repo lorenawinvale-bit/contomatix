@@ -51,5 +51,15 @@ module.exports = D => [
           { big: '200 ms', t: 'Interaction to Next Paint', d: 'Interactivity', q: '200 milliseconds or less' },
           { big: '0.1', t: 'Cumulative Layout Shift', d: 'Visual stability', q: '0.1 or less' }] }) }
     ]
+  },
+  {
+    slug: 'sitemap-priority',
+    images: [
+      { name: 'google-rule', afterH2: 'What Google Says About Priority and Changefreq', alt: 'Google ignores priority and changefreq and uses lastmod only if consistently and verifiably accurate',
+        svg: D.stats({ cols: 3, title: 'What Google does with the three optional tags', items: [
+          { big: 'priority', t: 'Ignored by Google' }, { big: 'changefreq', t: 'Ignored by Google', color: '#F5A623' }, { big: 'lastmod', t: 'Used only if consistently and verifiably accurate' }] }) },
+      { name: 'lastmod-rule', afterH2: 'Lastmod: The Tag Worth Getting Right', alt: 'Lastmod updates that count: content, structured data, links. The copyright date does not',
+        svg: D.compare({ w: 1200, h: 460, title: 'What counts as a significant update for lastmod', left: { h: 'Not significant', items: ['An update to the copyright date'] }, right: { h: 'Significant', items: ['An update to the main content', 'An update to the structured data', 'An update to links on the page'] } }) }
+    ]
   }
 ];

@@ -37,7 +37,29 @@ const HEROES = {
   'what-is-llm-seo-2026': D.split({ w: W, h: 520, title: 'LLM SEO: a citations game', big: '4', bigLabel: 'pillars of LLM visibility', items: [
     { v: 'Extractability', t: 'A model can lift a clean answer' }, { v: 'Authority', t: 'Consistent facts across sources' }, { v: 'Freshness', t: 'Current, and says so' }, { v: 'Clarity', t: 'Headings, lists, Q&A' }] }),
   'how-to-get-cited-by-chatgpt-2026': D.split({ w: W, h: 520, title: 'What gets a page cited by ChatGPT', big: '5', bigLabel: 'tactics that earn a citation', items: [
-    { v: 'Answer', t: 'A 40 to 60 word answer first' }, { v: 'Sections', t: 'One sub-question each' }, { v: 'Data', t: 'Recent and attributed' }, { v: 'Authority', t: 'Signals beyond your site' }, { v: 'Crawlers', t: 'Do not block OAI-SearchBot' }] })
+    { v: 'Answer', t: 'A 40 to 60 word answer first' }, { v: 'Sections', t: 'One sub-question each' }, { v: 'Data', t: 'Recent and attributed' }, { v: 'Authority', t: 'Signals beyond your site' }, { v: 'Crawlers', t: 'Do not block OAI-SearchBot' }] }),
+  // ---- 7 Nov 2026 batch ----
+  'ai-tools-for-seo-keyword-research': D.split({ w: W, h: 480, title: 'AI keyword research: ideas, not numbers', big: '21', bigLabel: 'real keywords guessed blind by an AI assistant', items: [
+    { v: 'Brainstorm', t: 'AI does steps one and three' }, { v: 'Numbers', t: 'Data does step two' }, { v: 'Mapping', t: 'A mapping step keeps the list tidy' }] }),
+  'seo-audit-report-template': D.stats({ w: W, cols: 2, title: 'Our own audit sample in numbers', items: [
+    { big: '419', t: 'URLs crawled, every one returned 200' }, { big: '337', t: 'of them listed in the sitemap', color: AMBER }, { big: '7', t: 'things every audit report needs' }, { big: '2', t: 'false positives we caught by hand', color: AMBER }] }),
+  'enterprise-seo-audit': D.columns({ w: W, title: 'Our 419-URL test crawl, grouped', max: 300, items: [
+    { t: 'Blog posts', v: 296, text: '296', color: TEAL }, { t: 'Thin pages', v: 89, text: '89', color: AMBER }, { t: 'Posts without FAQ data', v: 25, text: '25', color: AMBER }] }),
+  'wix-seo-specialist': D.flow({ w: W, title: 'Before you hire a Wix SEO specialist', steps: [
+    { t: 'Ask for examples', s: 'Past work and a past client', c: 'Ideally including Wix sites' }, { t: 'Ask about the rules', s: 'Google Search Essentials', c: 'What it means for their tactics' }, { t: 'Check the quote', s: 'What Wix already does', c: 'Why are you paying for it?' }] }),
+  'sitemap-priority': D.cards({ w: W, title: 'Sitemap tags: what Google uses', qLabel: 'Google', items: [
+    { big: 'priority', t: 'Optional, 0.0 to 1.0', d: 'Default is 0.5', q: 'Ignored' }, { big: 'changefreq', t: 'Optional hint', d: 'How often a page changes', q: 'Ignored' }, { big: 'lastmod', t: 'Optional date', d: 'When the page last changed', q: 'Used only if accurate' }] }),
+  'maritime-digital-marketing': D.timeline({ w: W, title: 'Five areas of maritime digital marketing', items: [
+    { d: 'Area 1', t: 'SEO for maritime and shipping', c: 'Specific technical and commercial searches' }, { d: 'Area 2', t: 'A B2B website built for long cycles', c: 'Answers procurement questions' },
+    { d: 'Area 3', t: 'Content and thought leadership', c: 'Explainers that large competitors skip' }, { d: 'Area 4', t: 'LinkedIn and B2B social', c: 'Where the industry lives online' }, { d: 'Area 5', t: 'Trade directories and press', c: 'Links from maritime sources' }] }),
+  'google-disavow-backlinks': D.split({ w: W, h: 480, title: 'Google\'s two-part disavow test', big: '2', bigLabel: 'tests must both be true before you disavow', items: [
+    { v: '1', t: 'A considerable number of spammy or low-quality links' }, { v: '2', t: 'They caused a manual action, or are likely to' }, { v: 'No', t: 'A tool\'s toxicity score alone does not qualify' }] }),
+  'link-building-agencies-dubai-2026': D.stats({ w: W, cols: 2, title: 'Link building in Dubai, in numbers', items: [
+    { big: '3', t: 'agencies passed our verification' }, { big: '3', t: 'checks each one had to clear', color: AMBER }, { big: '11.3M', t: 'UAE internet users at the end of 2025' }, { big: '3-6', t: 'months for link building to compound, at minimum', color: AMBER }] }),
+  'how-to-find-competitor-backlinks-2026': D.flow({ w: W, title: 'Finding competitor backlinks, in three moves', steps: [
+    { t: 'Pick competitors', s: 'SERP and business', c: 'Three to five of each' }, { t: 'Find their links', s: 'A gap report or by hand', c: 'Paid tools or free search' }, { t: 'Filter, then pitch', s: 'Relevance first', c: 'Real outreach follows' }] }),
+  'best-crm-automation-tools-2026': D.stats({ w: W, cols: 2, title: 'CRM and automation tools, compared', items: [
+    { big: '8', t: 'tools compared on price and fit' }, { big: 'Sep 2026', t: 'prices read from each vendor\'s own page', color: AMBER }, { big: '20.0%', t: 'Salesforce share of the global CRM market (IDC)' }, { big: '1', t: 'tool on the list is not actually a CRM', color: AMBER }] })
 };
 (async () => {
   const fp = path.join(root, 'data', 'blog.json'); const posts = JSON.parse(fs.readFileSync(fp, 'utf8')); const only = process.argv.slice(2); const out = [];
