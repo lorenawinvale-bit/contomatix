@@ -38,6 +38,20 @@
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Check every link on a page in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Copy the page HTML</h3><p>Open the page, view its source and copy the HTML. You can also paste just the part of the page that holds the links.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Paste it in</h3><p>Paste the HTML into the box. The check runs in your browser, so nothing is uploaded.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Read the link list</h3><p>Each link is marked followed, nofollow, sponsored or ugc, and internal or external. A page-level robots nofollow is flagged too.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -54,6 +68,17 @@
     <p>Run it on a page that links out to a partner, a sponsor or a forum, and check that each link carries the value you intended. Run it on a page where you earned a link to confirm that the link pointing to you is followed. The tool reads the HTML you paste, which is the same source a crawler receives for a static page. If your page builds links with JavaScript, copy the rendered HTML from the browser's element inspector instead of the page source.</p>
     <p>A few things sit outside the HTML and cannot be seen here. An X-Robots-Tag HTTP header can set nofollow for a whole file, and a link inside a blocked or noindexed page may not pass what you expect. Treat the report as a check of the markup, and use a crawler or Search Console to confirm the rest.</p>
 
+    <h2>Related Questions About Dofollow and Nofollow Checkers</h2>
+    <h3>Nofollow Link Checker: How Each Link Is Marked</h3>
+    <p>The checker reads the rel attribute of every link in the HTML you paste. Links with nofollow, sponsored or ugc are marked as such, and a link without any of those values is shown as followed. It also checks the robots meta tag, because a page-level nofollow changes every link on the page.</p>
+    <h3>Dofollow Link Checker Online: Paste the HTML, No Install</h3>
+    <p>This <strong>dofollow link checker online</strong> needs no extension and no account. Paste the page HTML and the report appears instantly, with each link's URL, anchor, rel value and whether it is internal or external.</p>
+    <h3>Check Nofollow Backlinks: What This Tool Can and Cannot See</h3>
+    <p>To check how a backlink to your site is marked, open the page that links to you, copy its HTML and paste it here, then find your link in the list. The tool cannot discover backlinks by itself, because it only reads the HTML you give it. Our guide on how to <a href="/blog/check-backlinks-of-website">check backlinks of a website</a> shows where to find the linking pages first.</p>
+    <h3>Dofollow vs Nofollow Checker: Do the Labels Matter?</h3>
+    <p>"Dofollow" is not an HTML value. A link is followed by default and only changes when the rel attribute says nofollow, sponsored or ugc, the values Google documents. Whether a nofollow link still helps your SEO is a separate question, covered in <a href="/blog/do-nofollow-links-help-seo-2026">do nofollow links help SEO</a>.</p>
+    <h3>Do Follow Checker for a Whole Page, Not One Link at a Time</h3>
+    <p>Instead of inspecting one link in the browser, paste the full page and see every link in one list. That makes it quick to spot paid placements without a sponsored value, or a footer full of followed links. For a view grouped by domain, use the <a href="/tools/outbound-link-checker">outbound link checker</a>.</p>
     <h2>Dofollow Link Checker FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -76,8 +101,22 @@
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
         <p>No. The HTML is parsed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Can I use this as a free nofollow links checker?<span class="faq-icon"></span></summary>
+        <p>Yes. It lists every link on the page you paste with its rel value, so nofollow, sponsored and ugc links are easy to pick out. It is free and runs in your browser.</p>
+      </details>
+      <details>
+        <summary>How do I check if a backlink is dofollow or nofollow?<span class="faq-icon"></span></summary>
+        <p>Open the page that links to you, copy its HTML and paste it into this tool. Find your link in the list: if it shows nofollow, sponsored or ugc it is marked that way, and otherwise it is followed.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/blog/do-nofollow-links-help-seo-2026"><span>Guide</span><strong>Do nofollow links help SEO?</strong><em>What nofollow, sponsored and ugc mean for rankings.</em></a>
+      <a href="/tools/outbound-link-checker"><span>Tool</span><strong>Outbound link checker</strong><em>Group a page's external links by domain.</em></a>
+      <a href="/blog/check-backlinks-of-website"><span>Guide</span><strong>Check backlinks of a website</strong><em>Four free ways to find who links to you.</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -126,7 +165,9 @@
       { '@type': 'Question', name: 'Can this tool check the backlinks pointing to my site?', acceptedAnswer: { '@type': 'Answer', text: 'It checks the HTML you paste. To check a backlink, open the page that links to you, copy its HTML, paste it here and enter your domain. The report shows how that link is marked.' } },
       { '@type': 'Question', name: 'Why is a link without rel still marked nofollow?', acceptedAnswer: { '@type': 'Answer', text: 'The page has a robots meta tag containing nofollow, which applies to all links on the page. The checker shows this as a page-level setting.' } },
       { '@type': 'Question', name: 'What is the difference between sponsored, ugc and nofollow?', acceptedAnswer: { '@type': 'Answer', text: 'Sponsored is for paid or compensated links, ugc is for user-generated content such as comments and forum posts, and nofollow is the general hint when neither applies. Google treats all three as hints.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The HTML is parsed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The HTML is parsed in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Can I use this as a free nofollow links checker?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. It lists every link on the page you paste with its rel value, so nofollow, sponsored and ugc links are easy to pick out. It is free and runs in your browser.' } },
+      { '@type': 'Question', name: 'How do I check if a backlink is dofollow or nofollow?', acceptedAnswer: { '@type': 'Answer', text: 'Open the page that links to you, copy its HTML and paste it into this tool. Find your link in the list: if it shows nofollow, sponsored or ugc it is marked that way, and otherwise it is followed.' } }
     ]
   }) %>
 </script>

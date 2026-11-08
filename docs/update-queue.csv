@@ -1,11 +1,11 @@
 priority,slug,tier,impressions_3mo,clicks,avg_position,content_images,words,keywords_added,hero,images_added,status,notes
-1,outsource-link-building,"A informational, has impressions",261,0,80.56,3,2760,,old,,todo,
-2,gravitywrite-alternatives-2026,"A informational, has impressions",234,0,33.35,0,2170,,old,,todo,
-3,international-seo-audit,"A informational, has impressions",219,0,84.53,3,1805,,old,,todo,
-4,white-label-seo,"A informational, has impressions",214,0,32.04,1,2163,,old,,todo,
-5,free-seo-tools,"A informational, has impressions",208,0,73.45,3,2577,,old,,todo,
-6,instagram-search-optimization-2026,"A informational, has impressions",190,0,8.02,0,3130,,old,,todo,
-7,meta-tags-best-practices,"A informational, has impressions",171,0,67.91,3,2258,,old,,todo,
+1,outsource-link-building,"A informational, has impressions",261,0,80.56,3,2760,9,new,0,done-local,8 Nov
+2,gravitywrite-alternatives-2026,"A informational, has impressions",234,0,33.35,0,2170,3,new,3,done-local,8 Nov
+3,international-seo-audit,"A informational, has impressions",219,0,84.53,3,1805,4,new,0,done-local,8 Nov
+4,white-label-seo,"A informational, has impressions",214,0,32.04,1,2163,10,new,2,done-local,8 Nov
+5,free-seo-tools,"A informational, has impressions",208,0,73.45,3,2577,8,new,0,done-local,8 Nov
+6,instagram-search-optimization-2026,"A informational, has impressions",190,0,8.02,0,3130,9,new,3,done-local,8 Nov
+7,meta-tags-best-practices,"A informational, has impressions",171,0,67.91,3,2258,8,new,0,done-local,8 Nov
 8,do-backlinks-matter-for-ai-search-2026,"A informational, has impressions",169,0,64.02,0,1624,,old,,todo,
 9,robots-txt-sitemap,"A informational, has impressions",163,0,68.53,3,2302,,old,,todo,
 10,cross-channel-attribution,"A informational, has impressions",158,0,40.29,3,3328,,old,,todo,

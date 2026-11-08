@@ -4,7 +4,7 @@
 const fs = require('fs'); const path = require('path'); const { execFileSync } = require('child_process'); const sharp = require('sharp');
 const root = path.join(__dirname, '..'); process.chdir(root);
 const D = require('./diagram-lib2.js'); // diagram-lib generators plus the extra layouts
-const SPECS = require('./add-post-images-specs.js')(D).concat(require('./add-post-images-specs2.js')(D)).concat(require('./add-post-images-specs3.js')(D));
+const SPECS = require('./add-post-images-specs.js')(D).concat(require('./add-post-images-specs2.js')(D)).concat(require('./add-post-images-specs3.js')(D)).concat(require('./add-post-images-specs4.js')(D));
 const only = process.argv.slice(2); const img = path.join(root, 'public', 'images', 'blog', 'proof');
 const url = f => 'file:///' + f.replace(/\\/g, '/').replace(/ /g, '%20');
 const plain = s => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;|&rsquo;|’/g, "'").replace(/&quot;|“|”/g, '"').replace(/\s+/g, ' ').trim();

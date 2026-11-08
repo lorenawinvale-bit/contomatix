@@ -2255,3 +2255,35 @@ html.motion-on .cta-orb {
 .author-meta { margin-top: 14px; font-size: 0.9rem; color: var(--text-dim); }
 .author-meta .team-linkedin { margin-top: 0; }
 @media (max-width: 640px) { .author-hero { flex-direction: column; align-items: flex-start; gap: 16px; } }
+
+/* Tool pages: how-it-works steps and related links (8 Nov 2026) */
+.tool-how { padding-top: 10px; }
+.tool-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
+.tool-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 18px 0 8px; }
+.tool-related a { display: flex; flex-direction: column; gap: 6px; padding: 20px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); text-decoration: none; color: inherit; transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+.tool-related a:hover { transform: translateY(-3px); border-color: rgba(14,165,160,0.45); box-shadow: var(--shadow-card); }
+.tool-related a span { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-teal); }
+.tool-related a strong { font-size: 1rem; }
+.tool-related a em { font-style: normal; color: var(--text-dim); font-size: 0.9rem; }
+@media (max-width: 900px) { .tool-steps, .tool-related { grid-template-columns: 1fr; } }
+
+/* Tool pages: slow drifting colour glow behind the content (8 Nov 2026).
+   Pure CSS, transform only (runs on the compositor, no JavaScript, no layout or paint work), paused by the browser in hidden tabs, off for reduced motion. */
+body.page-tool::before, body.page-tool::after {
+  content: ''; position: fixed; z-index: -1; pointer-events: none; border-radius: 50%;
+  width: 70vmax; height: 70vmax; will-change: transform;
+}
+body.page-tool::before {
+  top: -28vmax; right: -22vmax;
+  background: radial-gradient(circle, rgba(14,165,160,0.17), rgba(14,165,160,0) 62%);
+  animation: toolGlowA 26s ease-in-out infinite alternate;
+}
+body.page-tool::after {
+  bottom: -34vmax; left: -26vmax;
+  background: radial-gradient(circle, rgba(245,158,11,0.14), rgba(245,158,11,0) 62%);
+  animation: toolGlowB 32s ease-in-out infinite alternate;
+}
+@keyframes toolGlowA { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(-12vmax, 14vmax, 0) scale(1.18); } }
+@keyframes toolGlowB { from { transform: translate3d(0, 0, 0) scale(1.1); } to { transform: translate3d(16vmax, -12vmax, 0) scale(0.92); } }
+@media (max-width: 700px) { body.page-tool::after { display: none; } }
+@media (prefers-reduced-motion: reduce) { body.page-tool::before, body.page-tool::after { animation: none; } }

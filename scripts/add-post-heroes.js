@@ -59,7 +59,25 @@ const HEROES = {
   'how-to-find-competitor-backlinks-2026': D.flow({ w: W, title: 'Finding competitor backlinks, in three moves', steps: [
     { t: 'Pick competitors', s: 'SERP and business', c: 'Three to five of each' }, { t: 'Find their links', s: 'A gap report or by hand', c: 'Paid tools or free search' }, { t: 'Filter, then pitch', s: 'Relevance first', c: 'Real outreach follows' }] }),
   'best-crm-automation-tools-2026': D.stats({ w: W, cols: 2, title: 'CRM and automation tools, compared', items: [
-    { big: '8', t: 'tools compared on price and fit' }, { big: 'Sep 2026', t: 'prices read from each vendor\'s own page', color: AMBER }, { big: '20.0%', t: 'Salesforce share of the global CRM market (IDC)' }, { big: '1', t: 'tool on the list is not actually a CRM', color: AMBER }] })
+    { big: '8', t: 'tools compared on price and fit' }, { big: 'Sep 2026', t: 'prices read from each vendor\'s own page', color: AMBER }, { big: '20.0%', t: 'Salesforce share of the global CRM market (IDC)' }, { big: '1', t: 'tool on the list is not actually a CRM', color: AMBER }] }),
+  // ---- 8 Nov 2026 batch ----
+  'outsource-link-building': D.cards({ w: W, title: 'Three ways to pay for outsourced link building', qLabel: 'Watch for', items: [
+    { big: 'Retainer', t: 'A team\'s time and process', d: 'Suits ongoing campaigns', q: 'Activity without outcomes' }, { big: 'Per link', t: 'A price for each placement', d: 'Looks transparent', q: 'It rewards volume' }, { big: 'Project', t: 'A fixed price for defined work', d: 'Suits one-off campaigns', q: 'Scope must be precise' }] }),
+  'gravitywrite-alternatives-2026': D.stats({ w: W, cols: 2, title: 'Choosing a GravityWrite alternative', items: [
+    { big: '250+', t: 'features promised across blogs, video and social' }, { big: '4', t: 'criteria used to compare the alternatives', color: AMBER }, { big: '3', t: 'needs: output quality, SEO depth, workflow' }, { big: '0', t: 'AI writing tools replace real expertise', color: AMBER }] }),
+  'international-seo-audit': D.rings({ w: W, title: 'Our own international data', items: [
+    { pct: 0.921, big: '92.1%', t: 'of impressions from the US and UK', c: 'The target markets', color: TEAL },
+    { pct: 8 / 48, big: '8 of 48', t: 'clicks came from those two countries', c: 'Average positions 41.5 and 46.43', color: AMBER },
+    { pct: 30 / 48, big: '30 of 48', t: 'clicks came from one country', c: 'With 0.5% of impressions', color: AMBER }] }),
+  'white-label-seo': D.columns({ w: W, title: 'Markup is not margin', max: 200, items: [
+    { t: 'Markup', v: 100, text: '100%', color: AMBER }, { t: 'Margin', v: 50, text: '50%', color: TEAL }, { t: 'Markup', v: 200, text: '200%', color: AMBER }, { t: 'Margin', v: 66.7, text: '67%', color: TEAL }] }),
+  'free-seo-tools': D.timeline({ w: W, title: 'A four-week free SEO routine', items: [
+    { d: 'Week 1', t: 'Measure', c: 'Export clicks, impressions, CTR and position' }, { d: 'Week 2', t: 'Audit', c: 'Check your five most important pages' },
+    { d: 'Week 3', t: 'Fix structure', c: 'Validate sitemap, robots.txt and markup' }, { d: 'Week 4', t: 'Report', c: 'One-page summary and next priorities' }] }),
+  'instagram-search-optimization-2026': D.timeline({ w: W, title: 'How Instagram Search ranks results', items: [
+    { d: '1st signal', t: 'Text', c: 'Usernames, bios, captions, hashtags, places' }, { d: '2nd signal', t: 'Activity', c: 'Follows, views and past interactions' }, { d: '3rd signal', t: 'Popularity', c: 'Mostly breaks ties between matches' }] }),
+  'meta-tags-best-practices': D.cards({ w: W, title: 'Three meta tags, three jobs', qLabel: 'Rule', items: [
+    { big: 'description', t: 'A pitch for the click', d: 'Google may rewrite it', q: 'Not a ranking lever' }, { big: 'robots', t: 'Control over the page', d: 'noindex, nosnippet, max-snippet', q: 'Set it on purpose' }, { big: 'keywords', t: 'The tag Google ignores', d: 'No effect on ranking', q: 'Stop maintaining it' }] })
 };
 (async () => {
   const fp = path.join(root, 'data', 'blog.json'); const posts = JSON.parse(fs.readFileSync(fp, 'utf8')); const only = process.argv.slice(2); const out = [];

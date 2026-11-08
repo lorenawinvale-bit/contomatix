@@ -28,6 +28,20 @@
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Run an AI crawler check in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Copy your robots.txt</h3><p>Open yourdomain.com/robots.txt in a browser and copy the whole file.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Paste it in</h3><p>Paste it into the box. The tool does not fetch your file for you, and nothing leaves your browser.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Read the verdicts</h3><p>Each of the 11 AI crawlers is marked allowed or blocked, with a count such as "9 of 11 AI crawlers allowed".</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -58,6 +72,17 @@
     <h2>Google-Extended Is Different From the Rest</h2>
     <p>Google-Extended isn't a crawler that visits your site, it's a control token read by the regular Googlebot. Blocking it doesn't stop Googlebot from crawling and indexing your pages normally; it only opts that already-crawled content out of being used to train Gemini or ground Google's AI features. Every other bot on this list is a separate crawler with its own distinct visits and its own IP ranges.</p>
 
+    <h2>Related Questions About LLM SEO Checkers</h2>
+    <h3>LLM SEO Checker: What It Checks</h3>
+    <p>This <strong>LLM SEO checker</strong> checks one thing precisely: whether your robots.txt lets the main AI crawlers read your site. It covers 11 of them, from OpenAI, Anthropic, Perplexity, Google, Apple and Common Crawl, and shows which are allowed and which are blocked.</p>
+    <h3>LLM SEO Check: What a Robots.txt Check Cannot Tell You</h3>
+    <p>Access is the first condition for being cited, not a guarantee of it. A robots.txt check cannot tell you whether an AI assistant mentions your brand, or how your pages are written. For that side of the work, read <a href="/blog/what-is-llm-seo-2026">what is LLM SEO</a> and <a href="/blog/how-to-get-cited-by-chatgpt-2026">how to get cited by ChatGPT</a>.</p>
+    <h3>LLM SEO Checking Tool: How to Run the Check</h3>
+    <p>Copy your robots.txt from yourdomain.com/robots.txt and paste it into the box. The report lists every crawler with its company and purpose, such as model training, search citations or live user requests, so you can see which parts of your access are open and which are closed.</p>
+    <h3>LLM SEO Checkers: Why One Crawler Can Be Blocked While Another Is Not</h3>
+    <p>The crawlers do different jobs, so a site can allow search citations and still block training. Blocking GPTBot is not the same as blocking ChatGPT-User, and Google-Extended works differently from the rest, as the sections above explain.</p>
+    <h3>LLM SEO Analysis Tool: Where This Fits in Your Workflow</h3>
+    <p>Use this check after you edit robots.txt, and test individual URLs with the <a href="/tools/robots-txt-tester">robots.txt tester</a>. If you want to give AI assistants a plain-language map of your site, build one with the <a href="/tools/llms-txt-generator">llms.txt generator</a>.</p>
     <h2>LLM SEO Checker FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -84,8 +109,22 @@
         <summary>Does this tool store or send my data anywhere?</summary>
         <p>No. Everything is checked in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Is there a free LLM SEO checker?<span class="faq-icon"></span></summary>
+        <p>Yes. This one is free, needs no signup and runs in your browser. You paste your robots.txt and it shows which AI crawlers can read your site.</p>
+      </details>
+      <details>
+        <summary>Does an LLM SEO check tell me if ChatGPT cites my site?<span class="faq-icon"></span></summary>
+        <p>No. It checks whether your robots.txt allows AI crawlers to read your pages, which is only the first step. Whether you are cited depends on your content and your authority.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/blog/what-is-llm-seo-2026"><span>Guide</span><strong>What is LLM SEO?</strong><em>The four pillars of LLM visibility.</em></a>
+      <a href="/tools/robots-txt-tester"><span>Tool</span><strong>Robots.txt tester</strong><em>Test individual URLs against your rules.</em></a>
+      <a href="/tools/llms-txt-generator"><span>Tool</span><strong>llms.txt generator</strong><em>Build a plain-language map of your site for AI.</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -134,7 +173,9 @@
       { '@type': 'Question', name: 'If I block GPTBot, am I also blocking ChatGPT-User?', acceptedAnswer: { '@type': 'Answer', text: 'No, each company runs separate bots for training versus live user requests versus search indexing, and blocking one does not block the others.' } },
       { '@type': 'Question', name: 'Does ChatGPT-User or Claude-User respect robots.txt at all?', acceptedAnswer: { '@type': 'Answer', text: 'These user-triggered bots fetch a page because a person asked a direct question, and robots.txt may not apply the same way it does to autonomous crawling bots.' } },
       { '@type': 'Question', name: 'Is there a downside to blocking all AI crawlers?', acceptedAnswer: { '@type': 'Answer', text: 'Blocking training bots has no visibility downside. Blocking search and citation bots means your pages will not be cited in those tools answers.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Is there a free LLM SEO checker?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This one is free, needs no signup and runs in your browser. You paste your robots.txt and it shows which AI crawlers can read your site.' } },
+      { '@type': 'Question', name: 'Does an LLM SEO check tell me if ChatGPT cites my site?', acceptedAnswer: { '@type': 'Answer', text: 'No. It checks whether your robots.txt allows AI crawlers to read your pages, which is only the first step. Whether you are cited depends on your content and your authority.' } }
     ]
   }) %>
 </script>
