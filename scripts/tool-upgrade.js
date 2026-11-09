@@ -5,7 +5,7 @@ const fs = require('fs'); const path = require('path');
 const root = path.join(__dirname, '..');
 const blog = new Set(require('../data/blog.json').map(p => p.slug)); const tools = new Set(require('../data/tools.js').map(t => t.slug));
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-const SPECS = require('./tool-upgrade-specs.js');
+const SPECS = Object.assign({}, require('./tool-upgrade-specs.js'), require('./tool-upgrade-specs2.js'));
 const only = process.argv.slice(2);
 for (const [slug, s] of Object.entries(SPECS)) {
   if (only.length && !only.includes(slug)) continue;

@@ -77,7 +77,25 @@ const HEROES = {
   'instagram-search-optimization-2026': D.timeline({ w: W, title: 'How Instagram Search ranks results', items: [
     { d: '1st signal', t: 'Text', c: 'Usernames, bios, captions, hashtags, places' }, { d: '2nd signal', t: 'Activity', c: 'Follows, views and past interactions' }, { d: '3rd signal', t: 'Popularity', c: 'Mostly breaks ties between matches' }] }),
   'meta-tags-best-practices': D.cards({ w: W, title: 'Three meta tags, three jobs', qLabel: 'Rule', items: [
-    { big: 'description', t: 'A pitch for the click', d: 'Google may rewrite it', q: 'Not a ranking lever' }, { big: 'robots', t: 'Control over the page', d: 'noindex, nosnippet, max-snippet', q: 'Set it on purpose' }, { big: 'keywords', t: 'The tag Google ignores', d: 'No effect on ranking', q: 'Stop maintaining it' }] })
+    { big: 'description', t: 'A pitch for the click', d: 'Google may rewrite it', q: 'Not a ranking lever' }, { big: 'robots', t: 'Control over the page', d: 'noindex, nosnippet, max-snippet', q: 'Set it on purpose' }, { big: 'keywords', t: 'The tag Google ignores', d: 'No effect on ranking', q: 'Stop maintaining it' }] }),
+  // ---- 9 Nov 2026 batch ----
+  'how-to-index-backlinks': D.timeline({ w: W, title: 'A realistic backlink indexing timeline', items: [
+    { d: 'Day 0', t: 'Record the link', c: 'Date, linking page, target and attribute' }, { d: 'Week 1', t: 'Search the exact URL', c: 'site: followed by the full address' },
+    { d: 'Weeks 2 to 4', t: 'Check again', c: 'Search and the Links report in Search Console' }, { d: 'Month 1', t: 'Look for blockers', c: 'Then message the owner once' }] }),
+  'offpage-seo': D.rings({ w: W, title: 'Our own off-page snapshot, 21 October 2026', items: [
+    { pct: 2 / 24, big: '2 of 24', t: 'external links are editorial mentions', c: 'The rest are listings', color: TEAL },
+    { pct: 8 / 14, big: '8 of 14', t: 'pages naming our brand do not link', c: 'Links to ask for', color: AMBER },
+    { pct: 17 / 24, big: '17 of 24', t: 'links point at the home page', c: 'Inner pages get few', color: AMBER }] }),
+  'link-building-statistics': D.stats({ w: W, cols: 2, title: 'Link building statistics, our own data', items: [
+    { big: '24', t: 'external links from 10 sites, 21 October 2026' }, { big: '8%', t: 'of them editorial mentions inside articles', color: AMBER }, { big: '4.4%', t: 'of 205 resource-page links returned a 404' }, { big: '$100-$300', t: 'cost per link in published SaaS link building prices', color: AMBER }] }),
+  'editorial-backlinks': D.cards({ w: W, title: 'Three kinds of link, by who decides', qLabel: 'Who pays', items: [
+    { big: 'Editorial', t: 'The author decides', d: 'Chosen inside the article', q: 'Nobody pays' }, { big: 'Guest post', t: 'You write, the host publishes', d: 'A negotiated placement', q: 'You, in effort' }, { big: 'Sponsored', t: 'The link is bought', d: 'Qualify it as sponsored', q: 'The buyer' }] }),
+  'white-label-link-building': D.flow({ w: W, title: 'How white label link building works', steps: [
+    { t: 'The provider', s: 'Does the work', c: 'Targets, outreach and placements' }, { t: 'You', s: 'Keep the client', c: 'The invoice and the branding' }, { t: 'The report', s: 'Carries your logo', c: 'URLs, anchors, attributes and dates' }] }),
+  'high-authority-backlinks': D.stats({ w: W, cols: 3, title: 'Authority metrics versus Google', items: [
+    { big: '6 of 6', t: 'ranking pages use Domain Authority' }, { big: '0', t: 'DA or DR mentions in two Google guides', color: AMBER }, { big: '9+', t: 'out of 12: a strong link on our test' }] }),
+  'monthly-seo-report': D.columns({ w: W, title: 'Our impressions by month, 2026', max: 60000, items: [
+    { t: 'August', v: 16492, text: '16.5K', color: TEAL }, { t: 'September', v: 52053, text: '52.1K', color: AMBER }, { t: 'Oct, to the 27th', v: 59549, text: '59.5K', color: TEAL }] })
 };
 (async () => {
   const fp = path.join(root, 'data', 'blog.json'); const posts = JSON.parse(fs.readFileSync(fp, 'utf8')); const only = process.argv.slice(2); const out = [];

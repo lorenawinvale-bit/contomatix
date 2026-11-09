@@ -52,6 +52,20 @@
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Build a tagged campaign URL in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Enter the page URL</h3><p>Paste the landing page address you want visitors to reach.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Fill the three required tags</h3><p>Add the campaign source, medium and name. Term and content are optional.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Copy the tagged URL</h3><p>Copy the finished link into your email, ad or social post.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -86,6 +100,19 @@
       <li><strong>No naming convention</strong>, agree on a source/medium/campaign naming standard before a team starts tagging links, or your reports fragment into dozens of near-duplicate labels</li>
     </ul>
 
+    <h2>Related Questions About UTM Tag Generators</h2>
+    <h3>UTM Tag Generator: What It Builds</h3>
+    <p>This <strong>UTM tag generator</strong> adds the five UTM parameters to your link, utm_source, utm_medium, utm_campaign, utm_term and utm_content, and gives you one tagged URL to copy. It runs in your browser, so nothing is uploaded or stored.</p>
+    <h3>UTM Tags: What They Tell Google Analytics</h3>
+    <p>UTM tags are small additions to the end of a URL that tell Google Analytics where a visitor came from. Without them, Analytics can only guess from referrer data, which breaks down for email, social apps and offline campaigns such as QR codes and print ads that pass no referrer at all.</p>
+    <h3>UTM Tag Maker and UTM Tags Builder: Which Fields to Fill</h3>
+    <p>In this UTM generator, source, medium and campaign are the three fields Analytics needs to attribute traffic. Source is the site or platform that sent the visitor, such as newsletter or facebook, medium is the type of traffic, such as email, cpc or social, and campaign names the promotion, such as spring_sale_2026. Term and content are optional and mainly useful for paid search keywords and A/B tests of ad variations.</p>
+    <h3>UTM Tag Builder and Custom Tag Builder: Keep Names Consistent</h3>
+    <p>Capital letters and spelling matter: Facebook, facebook and FB show up as three separate sources in your reports. Use underscores or hyphens instead of spaces, which are encoded as %20, and agree a naming standard before a team starts tagging links.</p>
+    <h3>URL Tag Builder: Where Not to Use Tags</h3>
+    <p>Use UTM links only for links coming from outside your site, such as ads, emails and social posts. Adding them to links between your own pages can overwrite the visitor's original traffic source in Analytics.</p>
+    <h3>UTM Tags Generator and SEO: Do Tagged URLs Affect Rankings?</h3>
+    <p>No. UTM-tagged URLs are for analytics and have no effect on search rankings. Make sure your page has a proper canonical tag, so search engines do not treat the tagged URL as a separate page from the clean one. You can check it with our <a href="/tools/canonical-tag-checker">canonical tag checker</a>.</p>
     <h2>Free UTM Builder FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -108,8 +135,22 @@
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
         <p>No. The URL is built entirely in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Is there a free UTM tag generator with no signup?<span class="faq-icon"></span></summary>
+        <p>Yes. This one is free, needs no account and builds the tagged URL in your browser.</p>
+      </details>
+      <details>
+        <summary>What is the difference between utm_source and utm_medium?<span class="faq-icon"></span></summary>
+        <p>utm_source says which site or platform sent the traffic, such as newsletter, facebook or google. utm_medium says what type of traffic it is, such as email, cpc, social or referral.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/blog/cross-channel-attribution"><span>Guide</span><strong>Cross-channel attribution</strong><em>How to credit traffic across channels.</em></a>
+      <a href="/tools/canonical-tag-checker"><span>Tool</span><strong>Canonical tag checker</strong><em>Check that tagged URLs point to the clean page.</em></a>
+      <a href="/tools/seo-report-generator"><span>Tool</span><strong>SEO report generator</strong><em>Turn your numbers into a monthly report.</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -158,7 +199,9 @@
       { '@type': 'Question', name: 'Which fields are actually required?', acceptedAnswer: { '@type': 'Answer', text: 'Google Analytics needs source, medium, and campaign to attribute traffic properly. Term and content are optional.' } },
       { '@type': 'Question', name: 'Should I use UTM links for internal navigation?', acceptedAnswer: { '@type': 'Answer', text: 'No, UTM parameters are meant for links coming from outside your site. Adding them to internal links can overwrite the visitor original traffic source.' } },
       { '@type': 'Question', name: 'Will a long UTM URL look unprofessional in an email or ad?', acceptedAnswer: { '@type': 'Answer', text: 'It can. Many marketers run the final tagged URL through a link shortener for customer-facing use while keeping the full link for tracking.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The URL is built entirely in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The URL is built entirely in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Is there a free UTM tag generator with no signup?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This one is free, needs no account and builds the tagged URL in your browser.' } },
+      { '@type': 'Question', name: 'What is the difference between utm_source and utm_medium?', acceptedAnswer: { '@type': 'Answer', text: 'utm_source says which site or platform sent the traffic, such as newsletter, facebook or google. utm_medium says what type of traffic it is, such as email, cpc, social or referral.' } }
     ]
   }) %>
 </script>

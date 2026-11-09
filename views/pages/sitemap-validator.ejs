@@ -28,6 +28,20 @@
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Validate a sitemap in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Copy your sitemap.xml</h3><p>Open yourdomain.com/sitemap.xml and copy the whole file.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Paste it in</h3><p>Paste it into the box. The check runs in your browser and nothing is uploaded.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Fix what is flagged</h3><p>Each problem is listed so you can correct the file before you submit it.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -46,6 +60,19 @@
     <h2>Why a Sitemap Fails Silently</h2>
     <p>Google doesn't usually reject an invalid sitemap outright, it logs the error in Search Console's Sitemaps report and skips the broken entries, which means a typo or a relative URL can sit unnoticed for weeks while those pages simply never get crawled through that path. Running the raw file through a check like this before submitting it catches the structural problems a quick visual scan misses.</p>
 
+    <h2>Related Questions About Sitemap Validators</h2>
+    <h3>Sitemap XML Checker: What the Validator Checks</h3>
+    <p>This <strong>sitemap XML checker</strong> tests that the file is valid XML, has the correct urlset or sitemapindex root element, gives every url a loc, uses absolute URLs, lists one consistent host, has no duplicate URLs, stays within 50,000 URLs and 50MB uncompressed, and uses real W3C datetime values in lastmod.</p>
+    <h3>Sitemap Validator and XML Sitemap Validator: Paste the File, Nothing Is Uploaded</h3>
+    <p>Paste your sitemap.xml and the result appears at once. The validator works entirely in your browser, with no account, so you can check a sitemap before it goes anywhere near Search Console.</p>
+    <h3>Sitemap Errors: Why a Broken Sitemap Fails Silently</h3>
+    <p>Google does not usually reject an invalid sitemap outright. It logs the error in the Sitemaps report in Search Console and skips the broken entries, so a typo or a relative URL can sit unnoticed for weeks while those pages never get crawled through that path.</p>
+    <h3>Check Sitemap Validity Before You Submit It</h3>
+    <p>Run the raw file through a check like this before you submit it. It catches the structural problems that a quick visual scan misses, such as a relative URL, a duplicate entry or a placeholder lastmod date.</p>
+    <h3>Verify Sitemap and Sitemap Tester: What This Check Does Not Cover</h3>
+    <p>The validator checks the structure of the file, not whether each page is indexable. Test whether a URL is blocked with the <a href="/tools/robots-txt-tester">robots.txt tester</a>, list every URL in a sitemap with the <a href="/tools/sitemap-url-extractor">sitemap URL extractor</a>, and check hreflang annotations in a sitemap with the <a href="/tools/hreflang-sitemap-validator">hreflang sitemap validator</a>.</p>
+    <h3>Check Sitemap Tags: What Google Uses</h3>
+    <p>Google ignores the priority and changefreq tags and uses lastmod only when it is consistently accurate. Our guide to <a href="/blog/sitemap-priority">sitemap priority</a> explains which tags are worth your time.</p>
     <h2>Sitemap Validator FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -68,8 +95,22 @@
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
         <p>No. Everything is checked in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Is there a free sitemap validator?<span class="faq-icon"></span></summary>
+        <p>Yes. This one is free, needs no signup and checks your sitemap.xml in your browser.</p>
+      </details>
+      <details>
+        <summary>Does the validator tell me whether my pages are indexed?<span class="faq-icon"></span></summary>
+        <p>No. It checks the structure of the sitemap file only. For indexing, use the Page indexing report in Search Console.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/blog/sitemap-priority"><span>Guide</span><strong>Sitemap priority</strong><em>Which sitemap tags Google uses and ignores.</em></a>
+      <a href="/tools/robots-txt-tester"><span>Tool</span><strong>Robots.txt tester</strong><em>Test whether a URL is blocked.</em></a>
+      <a href="/blog/image-sitemap"><span>Guide</span><strong>Image sitemap</strong><em>What an image sitemap can and cannot do.</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -118,7 +159,9 @@
       { '@type': 'Question', name: 'Can a sitemap mix URLs from different subdomains?', acceptedAnswer: { '@type': 'Answer', text: 'Only if the sitemap is hosted at a location that covers all of them. By default, a sitemap can only include URLs that share its own host.' } },
       { '@type': 'Question', name: 'What happens if I go over 50,000 URLs?', acceptedAnswer: { '@type': 'Answer', text: 'Split the URLs across multiple sitemap files and list them all in a single sitemap index file.' } },
       { '@type': 'Question', name: 'Is a sitemap index file the same as a regular sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'No. A sitemap index points to other sitemap files, rather than pointing to pages directly.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Is there a free sitemap validator?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This one is free, needs no signup and checks your sitemap.xml in your browser.' } },
+      { '@type': 'Question', name: 'Does the validator tell me whether my pages are indexed?', acceptedAnswer: { '@type': 'Answer', text: 'No. It checks the structure of the sitemap file only. For indexing, use the Page indexing report in Search Console.' } }
     ]
   }) %>
 </script>

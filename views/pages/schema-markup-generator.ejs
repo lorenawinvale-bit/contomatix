@@ -88,12 +88,26 @@
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Generate schema markup in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Pick a schema type</h3><p>Choose FAQ, HowTo, LocalBusiness or Article.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Fill in the real details</h3><p>Enter what the page actually says. Markup must match content a visitor can see.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Copy, paste and test</h3><p>Paste the code into your page and test it with Google's Rich Results Test.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
     <h2>What Is Schema Markup?</h2>
     <p>Schema markup (also called structured data) is a standardized code format, usually JSON-LD, that tells search engines exactly what your content means, not just what it says. A page of plain text says "we're open 9 to 5"; schema markup says <em>this is a LocalBusiness, and its openingHours is 09:00-17:00</em> in a format Google can parse with certainty.</p>
-    <p>Google, Bing, and increasingly AI answer engines use this data to build rich results: star ratings under a search listing, FAQ dropdowns directly in the SERP, step-by-step How-To carousels, and business info panels, all without a person having to read your page first.</p>
+    <p>Google uses structured data to understand a page and, for some types, to show richer results, such as business details in a knowledge panel or better title text, images and dates for an article. Two types have lost their search feature: Google says the FAQ rich result is no longer shown in Search (from 7 May 2026) and has removed the How-to rich result, so FAQ and HowTo markup from this generator is valid schema.org code but will not produce those results in Google. Check Google's current documentation before you add markup for a rich result.</p>
 
     <h2>Which Schema Type Should You Use?</h2>
     <div style="overflow-x: auto;">
@@ -102,14 +116,14 @@
           <tr style="border-bottom:2px solid currentColor;">
             <th style="text-align:left; padding:10px 8px;">Type</th>
             <th style="text-align:left; padding:10px 8px;">Best for</th>
-            <th style="text-align:left; padding:10px 8px;">Possible rich result</th>
+            <th style="text-align:left; padding:10px 8px;">What Google says today</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">FAQPage</td><td style="padding:10px 8px;">Any page with a genuine Q&amp;A section</td><td style="padding:10px 8px;">Expandable FAQ dropdown in search results</td></tr>
-          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">HowTo</td><td style="padding:10px 8px;">Step-by-step instructions</td><td style="padding:10px 8px;">Numbered step carousel</td></tr>
-          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">LocalBusiness</td><td style="padding:10px 8px;">A physical business location</td><td style="padding:10px 8px;">Knowledge panel details, map integration</td></tr>
-          <tr><td style="padding:10px 8px;">Article</td><td style="padding:10px 8px;">Blog posts and news articles</td><td style="padding:10px 8px;">Author/date display, Top Stories eligibility</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">FAQPage</td><td style="padding:10px 8px;">Any page with a genuine Q&amp;A section</td><td style="padding:10px 8px;">FAQ rich result no longer shown in Search (from 7 May 2026)</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">HowTo</td><td style="padding:10px 8px;">Step-by-step instructions</td><td style="padding:10px 8px;">How-to rich result removed, no longer shown in results</td></tr>
+          <tr style="border-bottom:1px solid rgba(128,128,128,0.3);"><td style="padding:10px 8px;">LocalBusiness</td><td style="padding:10px 8px;">A physical business location</td><td style="padding:10px 8px;">May appear in a knowledge panel with business details such as hours</td></tr>
+          <tr><td style="padding:10px 8px;">Article</td><td style="padding:10px 8px;">Blog posts and news articles</td><td style="padding:10px 8px;">Helps Google show better title text, images and dates; no markup is required for Top stories</td></tr>
         </tbody>
       </table>
     </div>
@@ -131,6 +145,19 @@
       <li>Update the markup whenever the underlying page content changes</li>
     </ul>
 
+    <h2>Related Questions About Schema Markup Generators</h2>
+    <h3>Schema Markup Generator: The Four Types It Builds</h3>
+    <p>This <strong>schema markup generator</strong> builds JSON-LD for four types: FAQPage, HowTo, LocalBusiness and Article. You fill in the details, then copy the code or download it as an HTML snippet. Our <a href="/blog/types-of-schema-markup">types of schema markup</a> guide explains the wider list.</p>
+    <h3>Schema Generator and Schema Code Generator: Where the Code Goes</h3>
+    <p>Paste the generated code into the head of your page, or anywhere in the body, since search engines read JSON-LD from anywhere in the document. Test it, and update the markup whenever the page content changes.</p>
+    <h3>Free Schema Markup Generator and Schema Markup Online: Nothing Leaves Your Browser</h3>
+    <p>The code is generated in your browser with JavaScript. Nothing is uploaded, logged or stored on any server, and you do not need an account or any coding knowledge. You get schema markup free of charge, so use this as your free schema markup generator when you want a fast, private result.</p>
+    <h3>FAQ Schema Generator: What Google Shows Today</h3>
+    <p>Google says the FAQ rich result is no longer shown in Search, starting 7 May 2026, and it has removed the documentation. A <strong>FAQ schema markup generator</strong> still produces valid markup, but you should not expect the dropdown in Google. If you add it, only mark up genuine questions and answers that are visible on the page. Check <a href="https://developers.google.com/search/updates" target="_blank" rel="nofollow noopener">Google's documentation updates</a> for the current position.</p>
+    <h3>Website Schema Generator and Review Schema: What This Tool Covers</h3>
+    <p>This generator covers FAQPage, HowTo, LocalBusiness and Article. It does not build WebSite or review markup. For a blog post, Article markup helps Google show better title text, images and dates, and for a business with a physical location, LocalBusiness markup can feed a knowledge panel with details such as hours.</p>
+    <h3>How to Schema Generator: Check Your Markup Is Valid</h3>
+    <p>Paste your page URL or the code into Google's Rich Results Test. It flags syntax errors and shows which rich results your page qualifies for. For a deeper structural check of existing markup, use our <a href="/tools/schema-markup-validator">schema markup validator</a>.</p>
     <h2>Free Schema Markup Generator FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -157,8 +184,22 @@
         <summary>How do I check my schema markup is valid?<span class="faq-icon"></span></summary>
         <p>Paste your page URL or the code directly into <a href="https://search.google.com/test/rich-results" target="_blank" rel="nofollow noopener">Google's Rich Results Test</a>, it flags syntax errors and shows which rich results your page qualifies for.</p>
       </details>
+      <details>
+        <summary>Does Google still show FAQ rich results?<span class="faq-icon"></span></summary>
+        <p>No. Google says the FAQ rich result is no longer shown in Search results, starting 7 May 2026. FAQ markup from this tool is still valid, but it will not produce the dropdown in Google.</p>
+      </details>
+      <details>
+        <summary>Does the generator support review or website schema?<span class="faq-icon"></span></summary>
+        <p>No. It builds FAQPage, HowTo, LocalBusiness and Article markup.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/blog/types-of-schema-markup"><span>Guide</span><strong>Types of schema markup</strong><em>The main schema types and what each is for.</em></a>
+      <a href="/tools/schema-markup-validator"><span>Tool</span><strong>Schema markup validator</strong><em>Check JSON-LD syntax and required properties.</em></a>
+      <a href="/tools/technical-seo-audit-tool"><span>Tool</span><strong>Technical SEO audit tool</strong><em>Check a page's title, headings, canonical and links.</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -208,7 +249,9 @@
       { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.' } },
       { '@type': 'Question', name: 'Can I add more than one schema type to the same page?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, technically, a page can carry multiple script type="application/ld+json" blocks. Just make sure each one accurately describes real, visible content on that specific page.' } },
       { '@type': 'Question', name: 'Where exactly should I paste the generated code?', acceptedAnswer: { '@type': 'Answer', text: 'Anywhere in your page HTML, the head is the most common convention, but search engines read JSON-LD from anywhere in the document.' } },
-      { '@type': 'Question', name: 'How do I check my schema markup is valid?', acceptedAnswer: { '@type': 'Answer', text: "Paste your page URL or the code directly into Google's Rich Results Test, it flags syntax errors and shows which rich results your page qualifies for." } }
+      { '@type': 'Question', name: 'How do I check my schema markup is valid?', acceptedAnswer: { '@type': 'Answer', text: "Paste your page URL or the code directly into Google's Rich Results Test, it flags syntax errors and shows which rich results your page qualifies for." } },
+      { '@type': 'Question', name: 'Does Google still show FAQ rich results?', acceptedAnswer: { '@type': 'Answer', text: 'No. Google says the FAQ rich result is no longer shown in Search results, starting 7 May 2026. FAQ markup from this tool is still valid, but it will not produce the dropdown in Google.' } },
+      { '@type': 'Question', name: 'Does the generator support review or website schema?', acceptedAnswer: { '@type': 'Answer', text: 'No. It builds FAQPage, HowTo, LocalBusiness and Article markup.' } }
     ]
   }) %>
 </script>

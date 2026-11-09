@@ -27,7 +27,8 @@ For each post, in this order:
 | 4 | Add a "related questions" section | One H3 per keyword with a 2 to 4 sentence real answer, before the FAQ. Use `scripts/lowvol-lib.js` in a new `scripts/lowvol-batch-N.js`. Facts only from the post, Google pages read today, or our own data |
 | 5 | New hero diagram | `scripts/add-post-heroes.js`, 760 px wide, layout different from the post's images |
 | 6 | Content images | If the post has fewer than 3, add diagrams with `scripts/add-post-images.js` and a spec file, each in a different layout, built only from facts in the post |
-| 7 | Check | Page returns 200, `node scripts/site-audit-full.js` stays at 19 errors, 10 warnings, 47 info, no em dash, first external link past 10% |
+| 7 | Semantic check (every post, every day) | `node scripts/semantic-check.js <slug>` must show 10/10: related-questions section with 5+ H3, 2,200+ words, FAQ, 5+ unique internal links (add relevant ones inside the answers if short), no broken links, 3+ content images, no figcaption, no em dash, answer-first intro, 6+ H2. Fix any FAIL line before showing the batch. `--queue` checks every finished row |
+| 7b | Check | Page returns 200, `node scripts/site-audit-full.js` stays at 19 errors, 10 warnings, 47 info, no em dash, first external link past 10% |
 | 8 | Record | Fill `keywords_added`, `images_added`, `status` in `docs/update-queue.csv`, save the keywords in `keyword-research\lowvol-keywords-<slug>.md` |
 
 ## 3. Backlinks (every day, 45 minutes)
