@@ -95,7 +95,25 @@ const HEROES = {
   'high-authority-backlinks': D.stats({ w: W, cols: 3, title: 'Authority metrics versus Google', items: [
     { big: '6 of 6', t: 'ranking pages use Domain Authority' }, { big: '0', t: 'DA or DR mentions in two Google guides', color: AMBER }, { big: '9+', t: 'out of 12: a strong link on our test' }] }),
   'monthly-seo-report': D.columns({ w: W, title: 'Our impressions by month, 2026', max: 60000, items: [
-    { t: 'August', v: 16492, text: '16.5K', color: TEAL }, { t: 'September', v: 52053, text: '52.1K', color: AMBER }, { t: 'Oct, to the 27th', v: 59549, text: '59.5K', color: TEAL }] })
+    { t: 'August', v: 16492, text: '16.5K', color: TEAL }, { t: 'September', v: 52053, text: '52.1K', color: AMBER }, { t: 'Oct, to the 27th', v: 59549, text: '59.5K', color: TEAL }] }),
+  // ---- 10 Nov 2026 batch ----
+  'b2b-seo-tools': D.stats({ w: W, cols: 2, title: 'What we found reading B2B SEO tool pages', items: [
+    { big: '7', t: 'readable pages ranking on Google US for the term' }, { big: '7 of 7', t: 'promote AI features', color: AMBER }, { big: '3,028', t: 'median words on those pages' }, { big: '500', t: 'URLs, where a free crawler stops', color: AMBER }] }),
+  '301-vs-302-redirect': D.columns({ w: W, title: 'First redirect from http to https, 178 sites', max: 160, items: [
+    { t: '301', v: 160, text: '160', color: TEAL }, { t: '308', v: 16, text: '16', color: AMBER }, { t: '302', v: 2, text: '2', color: AMBER }] }),
+  'robots-txt-sitemap': D.timeline({ w: W, title: 'Five rules for a Sitemap line in robots.txt', items: [
+    { d: 'Rule 1', t: 'A fully qualified URL', c: 'Protocol and host included' }, { d: 'Rule 2', t: 'The path is case-sensitive', c: '/Sitemap.xml is not /sitemap.xml' },
+    { d: 'Rule 3', t: 'It can live on another host', c: 'The declared URL must resolve' }, { d: 'Rule 4', t: 'Several lines are fine', c: 'No limit on Sitemap lines' }, { d: 'Rule 5', t: 'Not blocked by a Disallow', c: 'Crawlers must be able to fetch it' }] }),
+  'yoast-seo-sitemap': D.rings({ w: W, title: '15 real Yoast sitemaps, scanned 17 October 2026', items: [
+    { pct: 1, big: '15 of 15', t: 'carry a last-modified date', c: 'On every URL', color: TEAL },
+    { pct: 0, big: '0 of 15', t: 'use the priority tag', c: 'Google ignores it', color: AMBER },
+    { pct: 14 / 15, big: '14 of 15', t: 'include image entries', c: 'For each page', color: TEAL }] }),
+  'meta-keywords': D.cards({ w: W, title: 'Three tags, and what Google does with them', qLabel: 'Google', items: [
+    { big: 'Title', t: 'Names the page in results', d: 'Helps explain its topic', q: 'Used' }, { big: 'Description', t: 'Can be the summary', d: 'Shown under the title', q: 'Supported' }, { big: 'Keywords', t: 'Does nothing', d: 'No effect on ranking', q: 'Ignored' }] }),
+  'what-is-a-google-penalty': D.flow({ w: W, title: 'Do you have a manual action?', steps: [
+    { t: 'Open the report', s: 'Search Console', c: 'Security and Manual Actions' }, { t: 'Read the result', s: 'A green check mark', c: 'Means no manual action' }, { t: 'No action?', s: 'It is not a manual penalty', c: 'Check indexing and content' }] }),
+  'meta-description-length': D.split({ w: W, h: 480, title: 'Our 363 meta descriptions, by length', big: '84%', bigLabel: 'are between 120 and 155 characters', items: [
+    { v: '19', t: 'are under 120 characters' }, { v: '33', t: 'are 156 to 160 characters' }, { v: '6', t: 'are over 160 characters' }] })
 };
 (async () => {
   const fp = path.join(root, 'data', 'blog.json'); const posts = JSON.parse(fs.readFileSync(fp, 'utf8')); const only = process.argv.slice(2); const out = [];

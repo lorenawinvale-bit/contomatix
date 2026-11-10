@@ -39,6 +39,20 @@
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Check a page's links in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Copy the page HTML</h3><p>View the page source and copy the HTML of the page you want to check.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Paste it with the page URL</h3><p>Enter the page URL so the tool can tell internal links from external ones. Nothing is uploaded.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Read the link list</h3><p>Links are sorted into internal, external and non-crawlable, with flags for empty, generic and nofollowed anchors.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -56,6 +70,19 @@
     <p>Internal links are how both visitors and search engines move around a site. Google's link best practices say a link can only be crawled if it is an <code>&lt;a&gt;</code> element with an <code>href</code> attribute, and that good anchor text is descriptive, reasonably concise and relevant to the page it points to. A menu built from clickable <code>&lt;span&gt;</code> elements or script-only links can look fine to a visitor and still lead Google nowhere.</p>
     <p>Anchor text is the other half. Generic text such as "read more" tells neither people nor search engines what is on the other side, while a short descriptive phrase does. This tool reads one page at a time, so use it on the pages that matter most, like your home page, service pages and top posts, and fix what it flags: replace script links with real links, rewrite vague anchors and remove stray nofollow from links to your own pages.</p>
 
+    <h2>Related Questions About Internal Link Checkers</h2>
+    <h3>Internal Link Checker: What It Sorts</h3>
+    <p>This <strong>internal link checker</strong> sorts every link into internal, external and non-crawlable, lists empty anchors, image links with no alt text and generic phrases such as click here, shows repeated links with every anchor used, finds self-links, and reports rel attributes such as nofollow, sponsored and ugc.</p>
+    <h3>Internal Link Analysis Tool and Internal Link Tool: One Page at a Time</h3>
+    <p>The tool checks the single page whose HTML you paste. It does not crawl your site, because crawling needs a server and pasting keeps your pages off every server. Use it on the pages that matter most, such as your home page, service pages and top posts.</p>
+    <h3>Check Internal Links and Internal Link Check: What Makes a Link Crawlable</h3>
+    <p>Google says it can only crawl a link that is an a element with an href attribute. javascript: links, bare # links and anchors with no href are listed separately, because a menu built from script-only links can look fine to a visitor and still lead Google nowhere.</p>
+    <h3>Internal Linking Checker: Fix Weak Anchor Text</h3>
+    <p>Google recommends anchor text that is descriptive, reasonably concise and relevant to the page it points to. Generic text such as read more tells neither people nor search engines what is on the other side, so rewrite vague anchors with a short descriptive phrase. To sort anchors by type, use the <a href="/tools/anchor-text-checker">anchor text checker</a>.</p>
+    <h3>Find Internal Links to a Page and Check Internal Links to a Page: What This Tool Cannot Do</h3>
+    <p>It reads the links on a page, not the links pointing to it. To see which pages link to a page, use the Links report in Search Console, which lists your top linked pages, or a crawler. Our <a href="/blog/internal-link-building">internal link building</a> guide explains how to plan them.</p>
+    <h3>Website Internal Link Checker and Internal Link Checker Tool: Nofollow on Internal Links</h3>
+    <p>Usually internal links should not be nofollow. Google advises using nofollow selectively, for links you do not trust, and the tool flags nofollow on links to your own pages so you can check it was intentional. To read the rel value of every link, use the <a href="/tools/dofollow-link-checker">dofollow link checker</a>.</p>
     <h2>Internal Link Checker FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -82,8 +109,22 @@
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
         <p>No. Everything is checked in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Is there a free internal link checker?<span class="faq-icon"></span></summary>
+        <p>Yes. This one is free, needs no signup and checks the page whose HTML you paste, in your browser.</p>
+      </details>
+      <details>
+        <summary>Can this internal link analysis tool show which pages link to mine?<span class="faq-icon"></span></summary>
+        <p>No. It shows the links on the page you paste. Use the Links report in Search Console for the pages that link to a page.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/blog/internal-link-building"><span>Guide</span><strong>Internal link building</strong><em>How to plan links between your own pages.</em></a>
+      <a href="/tools/anchor-text-checker"><span>Tool</span><strong>Anchor text checker</strong><em>Sort anchors by type and spot repeats.</em></a>
+      <a href="/tools/technical-seo-audit-tool"><span>Tool</span><strong>Technical SEO audit tool</strong><em>Audit the whole page, not only its links.</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -132,7 +173,9 @@
       { '@type': 'Question', name: 'What makes a link crawlable?', acceptedAnswer: { '@type': 'Answer', text: 'Google says it can only crawl a link that is an a element with an href attribute. Links that rely only on JavaScript events or other tags are unreliable for crawling.' } },
       { '@type': 'Question', name: 'What is bad anchor text?', acceptedAnswer: { '@type': 'Answer', text: 'Google recommends anchor text that is descriptive, reasonably concise and relevant to the page. Generic phrases like click here or read more do not say what the linked page is about.' } },
       { '@type': 'Question', name: 'Should internal links be nofollow?', acceptedAnswer: { '@type': 'Answer', text: 'Usually not. Google advises using nofollow selectively, for links you do not trust.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Is there a free internal link checker?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This one is free, needs no signup and checks the page whose HTML you paste, in your browser.' } },
+      { '@type': 'Question', name: 'Can this internal link analysis tool show which pages link to mine?', acceptedAnswer: { '@type': 'Answer', text: 'No. It shows the links on the page you paste. Use the Links report in Search Console for the pages that link to a page.' } }
     ]
   }) %>
 </script>
