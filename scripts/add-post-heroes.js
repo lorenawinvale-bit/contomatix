@@ -113,7 +113,25 @@ const HEROES = {
   'what-is-a-google-penalty': D.flow({ w: W, title: 'Do you have a manual action?', steps: [
     { t: 'Open the report', s: 'Search Console', c: 'Security and Manual Actions' }, { t: 'Read the result', s: 'A green check mark', c: 'Means no manual action' }, { t: 'No action?', s: 'It is not a manual penalty', c: 'Check indexing and content' }] }),
   'meta-description-length': D.split({ w: W, h: 480, title: 'Our 363 meta descriptions, by length', big: '84%', bigLabel: 'are between 120 and 155 characters', items: [
-    { v: '19', t: 'are under 120 characters' }, { v: '33', t: 'are 156 to 160 characters' }, { v: '6', t: 'are over 160 characters' }] })
+    { v: '19', t: 'are under 120 characters' }, { v: '33', t: 'are 156 to 160 characters' }, { v: '6', t: 'are over 160 characters' }] }),
+  // ---- 11 Nov 2026 batch ----
+  'do-backlinks-matter-for-ai-search-2026': D.stats({ w: W, cols: 2, title: 'Backlinks and AI Overviews: the Ahrefs study', items: [
+    { big: '75,000', t: 'brands analysed, study published May 2025' }, { big: '0.664', t: 'correlation for brand web mentions', color: AMBER }, { big: '0.218', t: 'correlation for backlinks' }, { big: '3x', t: 'stronger for mentions than for backlinks', color: AMBER }] }),
+  'relevant-backlinks': D.rings({ w: W, title: 'Scoring relevance: our own links and the scorecard', items: [
+    { pct: 12 / 13, big: '12 of 13', t: 'external links from topic-related sites', c: 'Our Links report, October', color: TEAL },
+    { pct: 0.8, big: '8 of 10', t: 'is the score worth asking for', c: 'Five checks, 0 to 2 each', color: AMBER },
+    { pct: 0.4, big: '4 or less', t: 'is probably not worth your time', c: 'Whatever its metrics say', color: AMBER }] }),
+  'cross-channel-attribution': D.columns({ w: W, title: 'GA4 default lookback windows, in days', max: 90, items: [
+    { t: 'Acquisition, shortest', v: 7, text: '7', color: AMBER }, { t: 'Acquisition, default', v: 30, text: '30', color: TEAL }, { t: 'Other events, shortest', v: 30, text: '30', color: AMBER }, { t: 'Other events, default', v: 90, text: '90', color: TEAL }] }),
+  'set-up-google-search-console': D.timeline({ w: W, title: 'Your first week in Search Console', items: [
+    { d: 'Day 1', t: 'Verify and submit', c: 'Backup method, sitemap, users' }, { d: 'Days 2 to 3', t: 'Check the Sitemaps report', c: 'Google read the file without errors' },
+    { d: 'Days 4 to 7', t: 'Note your baseline', c: 'Indexed pages and top queries' }, { d: 'End of week', t: 'Inspect key pages', c: 'Then set a monthly reminder' }] }),
+  '301-redirect-not-working': D.stats({ w: W, cols: 2, title: 'What we saw testing 185 sites', items: [
+    { big: '185', t: 'sites tested on 27 October 2026' }, { big: '178', t: 'redirected on the first request', color: AMBER }, { big: '58', t: 'needed two or more hops to reach the page' }, { big: '5 of 9', t: 'top results are forum or Q&A threads', color: AMBER }] }),
+  'tiered-link-building': D.cards({ w: W, title: 'The tier pyramid, layer by layer', qLabel: 'Points at', items: [
+    { big: 'Tier 1', t: 'The links you care about', d: 'On pages that link to you', q: 'Your site' }, { big: 'Tier 2', t: 'Links built to tier 1', d: 'To strengthen those pages', q: 'Tier 1 pages' }, { big: 'Tier 3', t: 'Links built to tier 2', d: 'Another layer below', q: 'Tier 2 pages' }] }),
+  'keyword-research-tools': D.split({ w: W, h: 500, title: 'A free keyword research stack, in order', big: '4', bigLabel: 'free sources do the heavy lifting', items: [
+    { v: 'Own data', t: 'Search Console, positions 5 to 20' }, { v: 'Planner', t: 'Google demand data and ideas' }, { v: 'Bing', t: 'Question keywords' }, { v: 'Trends', t: 'Seasonality and direction' }] })
 };
 (async () => {
   const fp = path.join(root, 'data', 'blog.json'); const posts = JSON.parse(fs.readFileSync(fp, 'utf8')); const only = process.argv.slice(2); const out = [];

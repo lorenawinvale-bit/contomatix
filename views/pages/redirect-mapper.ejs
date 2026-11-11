@@ -45,6 +45,20 @@
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Map old URLs to new URLs in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Paste your old URLs</h3><p>Add the list of old addresses, one per line, from your crawl or sitemap.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Paste your new URLs</h3><p>Add the new addresses. The tool matches each old page to its closest new one.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Review and copy the rules</h3><p>Check the Review and No match rows, then copy the 301 rules for Apache or Nginx, or download the CSV.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -63,6 +77,19 @@
     <p>Google's site move guidance also says not to send many old URLs to one irrelevant destination such as the new homepage, which can be treated as a soft 404, and to keep redirects for as long as possible, generally at least a year. That is why this tool leaves weak matches unmatched instead of filling every row.</p>
     <p>The matching uses words in the URL only. It does not read your pages, so it cannot tell whether two pages cover the same topic. Treat the result as a first draft, check every Review and No match row, and test a sample of the final redirects before launch.</p>
 
+    <h2>Related Questions About Redirect Mapping</h2>
+    <h3>URL Redirect Mapper: What It Does</h3>
+    <p>This <strong>URL redirect mapper</strong> matches each old page to its closest new page, flags weak matches and chains, and gives you ready-to-paste 301 rules for Apache or Nginx plus a CSV. It runs in your browser, so your URLs are never uploaded.</p>
+    <h3>Redirect Mapping Tool: How the Matching Works</h3>
+    <p>Each URL is reduced to its path, ignoring the domain, query string, fragment, letter case, trailing slash and extensions such as .html and .php. An old path that appears unchanged in the new list is an exact match. Otherwise the tool compares the words in the two paths and picks the new URL with the highest overlap.</p>
+    <h3>Redirect Match: Match, Review or No Match</h3>
+    <p>A strong match is marked Match, a partial one is marked Review, and anything weaker is marked No match, so you decide it by hand instead of sending visitors to something irrelevant. The matching uses words in the URL only and does not read your pages, so check the weaker matches against the actual content.</p>
+    <h3>Redirect Mapper: Why Some Old URLs Stay Unmatched</h3>
+    <p>No new URL shared enough words with them. Google's site move guidance says not to send many old URLs to one irrelevant destination such as the new homepage, which can be treated as a soft 404, so unmatched URLs are listed for you to map by hand or retire.</p>
+    <h3>Redirect Mapping for a Site Move</h3>
+    <p>A redirect map says which new page each old page should send visitors and search engines to. For a site move Google recommends permanent server-side redirects where possible and keeping them for as long as possible, generally at least a year. See our <a href="/blog/seo-site-migration">site migration guide</a>.</p>
+    <h3>Redirect Map Generator: Chains and Merges</h3>
+    <p>The tool flags a target that is itself an old URL, which would create a redirect chain, and counts how many old pages point at the same new page so you can confirm a merge was intended. If a redirect misbehaves later, see <a href="/blog/301-redirect-not-working">301 redirect not working</a>.</p>
     <h2>Redirect Mapper FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -85,8 +112,22 @@
         <summary>Does this tool store or send my URLs anywhere?<span class="faq-icon"></span></summary>
         <p>No. The matching runs in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Is there a free redirect map generator?<span class="faq-icon"></span></summary>
+        <p>Yes. This one is free, needs no signup and builds the map and the Apache or Nginx rules in your browser.</p>
+      </details>
+      <details>
+        <summary>Does the redirect mapper use 301 or 302 rules?<span class="faq-icon"></span></summary>
+        <p>It writes 301 rules, a permanent redirect, which is what Google recommends for a permanent move. Change the code yourself if you need a temporary redirect, and see our <a href="/blog/301-vs-302-redirect">301 vs 302 guide</a>.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/blog/seo-site-migration"><span>Guide</span><strong>SEO site migration</strong><em>Plan a move without losing search traffic.</em></a>
+      <a href="/blog/301-redirect-not-working"><span>Guide</span><strong>301 redirect not working</strong><em>The usual causes, in the order to check them.</em></a>
+      <a href="/tools/sitemap-validator"><span>Tool</span><strong>Sitemap validator</strong><em>Check the new sitemap lists final URLs.</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -135,7 +176,9 @@
       { '@type': 'Question', name: 'Which redirect type do the rules use?', acceptedAnswer: { '@type': 'Answer', text: '301, a permanent redirect, which is what Google recommends for a permanent move. Change the code yourself if you need a temporary redirect.' } },
       { '@type': 'Question', name: 'Why are some old URLs left unmatched?', acceptedAnswer: { '@type': 'Answer', text: 'No new URL shared enough words with them. Redirecting them to an unrelated page, especially the homepage, is discouraged, so they are listed for you to map by hand or retire.' } },
       { '@type': 'Question', name: 'Can several old URLs point to one new URL?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, when old pages were merged into one. The tool counts these so you can confirm that the merge was intended.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my URLs anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The matching runs in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my URLs anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. The matching runs in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Is there a free redirect map generator?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This one is free, needs no signup and builds the map and the Apache or Nginx rules in your browser.' } },
+      { '@type': 'Question', name: 'Does the redirect mapper use 301 or 302 rules?', acceptedAnswer: { '@type': 'Answer', text: 'It writes 301 rules, a permanent redirect, which is what Google recommends for a permanent move. Change the code yourself if you need a temporary redirect, and see our 301 vs 302 guide.' } }
     ]
   }) %>
 </script>

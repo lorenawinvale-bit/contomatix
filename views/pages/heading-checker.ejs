@@ -28,6 +28,20 @@
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Check a page's headings in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Copy the page HTML</h3><p>View the page source and copy the HTML. If headings are added by scripts, copy the rendered HTML from the developer tools instead.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Paste it in</h3><p>Paste the HTML into the box. The check runs in your browser and nothing is uploaded.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Read the outline</h3><p>Every H1 to H6 appears as an indented outline, with flags for skipped levels, empty headings and repeated text.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -46,6 +60,19 @@
     <p>Less than most checklists suggest, and the reason is worth knowing. Google's SEO Starter Guide says there is no magical, ideal number of headings a page should have, and that from a Google Search perspective it does not matter if headings are used out of order. In other words, you will not be penalised for a skipped level or a second H1.</p>
     <p>The case for tidy headings is mostly about people. The same guide notes that headings in semantic order are fantastic for screen readers, and the W3C accessibility tutorial advises against skipping heading ranks because it can confuse people who navigate by headings. A clear outline also makes a long page easier for any reader to scan. That is why this tool labels each finding as an accessibility issue or a style note, rather than a ranking error.</p>
 
+    <h2>Related Questions About Heading Checkers</h2>
+    <h3>H1 Checker: What This Tool Finds</h3>
+    <p>This <strong>H1 checker</strong> pulls out every H1 to H6 heading in page order and shows them as an indented outline. It flags skipped levels, a missing H1 or a first heading that is not top-level, empty headings, repeated heading text and very long headings over 70 characters.</p>
+    <h3>H1 Tag Checker: Is More Than One H1 Allowed?</h3>
+    <p>Yes. Google does not prescribe a number of headings, and a second H1 does not break anything for Search. Many teams still use one H1 per page so the main topic is obvious, which is why the tool reports extra H1s as a note rather than an error.</p>
+    <h3>Check H1 H2 Tags: Why You Paste HTML</h3>
+    <p>Browsers block most cross-site requests to other people's pages, and pasting also keeps your page off every server. Use View Page Source, copy the HTML and paste it. Headings built later by scripts only appear if you copy the rendered HTML from the developer tools.</p>
+    <h3>Headings Checker: Skipped Levels and Accessibility</h3>
+    <p>A skipped level is an H2 followed directly by an H4. The W3C advises avoiding skipped ranks because it can confuse people who navigate by headings, while Google says it does not matter for Search if headings are used out of order. The tool labels each finding as an accessibility issue or a style note, not a ranking error.</p>
+    <h3>Heading Checker: Do Headings Matter for SEO?</h3>
+    <p>Less than most checklists suggest. Google's SEO Starter Guide says there is no ideal number of headings a page should have, and the case for tidy headings is mostly about people: headings in semantic order help screen readers, and a clear outline makes a long page easier to scan.</p>
+    <h3>Heading Tag Checker: Write Headings That Describe the Section</h3>
+    <p>Use words that describe the section honestly. A heading that reads naturally and tells the reader what follows will usually contain the relevant terms without forcing them in. For a wider on-page review, use our <a href="/tools/technical-seo-audit-tool">technical SEO audit tool</a> and the <a href="/blog/on-page-seo-checklist">on-page SEO checklist</a>.</p>
     <h2>Heading Checker FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -72,8 +99,22 @@
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
         <p>No. Everything is checked in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Is there a free H1 checker?<span class="faq-icon"></span></summary>
+        <p>Yes. This one is free, needs no signup and checks the HTML you paste in your browser.</p>
+      </details>
+      <details>
+        <summary>Can I check the headings of a live page by URL?<span class="faq-icon"></span></summary>
+        <p>Not by URL. Copy the page's HTML with View Page Source and paste it, because browsers block most cross-site requests and pasting keeps your page private.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/blog/on-page-seo-checklist"><span>Guide</span><strong>On-page SEO checklist</strong><em>The page-level checks that go beyond headings.</em></a>
+      <a href="/tools/technical-seo-audit-tool"><span>Tool</span><strong>Technical SEO audit tool</strong><em>Check title, canonical, structured data and links.</em></a>
+      <a href="/tools/internal-link-checker"><span>Tool</span><strong>Internal link checker</strong><em>Audit the links and anchors on a page.</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -122,7 +163,9 @@
       { '@type': 'Question', name: 'Does skipping a heading level hurt rankings?', acceptedAnswer: { '@type': 'Answer', text: 'Google says it does not matter for Search if headings are used out of order. The W3C advises avoiding skipped ranks because it can confuse people using assistive technology.' } },
       { '@type': 'Question', name: 'Should headings contain keywords?', acceptedAnswer: { '@type': 'Answer', text: 'Use words that describe the section honestly. A heading that reads naturally will usually contain the relevant terms without forcing them in.' } },
       { '@type': 'Question', name: 'Does it read headings that are added by JavaScript?', acceptedAnswer: { '@type': 'Answer', text: 'Only if they are in the HTML you paste. To include script-built headings, copy the rendered HTML from your browser developer tools.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is checked in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Is there a free H1 checker?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This one is free, needs no signup and checks the HTML you paste in your browser.' } },
+      { '@type': 'Question', name: 'Can I check the headings of a live page by URL?', acceptedAnswer: { '@type': 'Answer', text: 'Not by URL. Copy the page\'s HTML with View Page Source and paste it, because browsers block most cross-site requests and pasting keeps your page private.' } }
     ]
   }) %>
 </script>
