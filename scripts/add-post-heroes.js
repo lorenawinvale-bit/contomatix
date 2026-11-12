@@ -131,7 +131,24 @@ const HEROES = {
   'tiered-link-building': D.cards({ w: W, title: 'The tier pyramid, layer by layer', qLabel: 'Points at', items: [
     { big: 'Tier 1', t: 'The links you care about', d: 'On pages that link to you', q: 'Your site' }, { big: 'Tier 2', t: 'Links built to tier 1', d: 'To strengthen those pages', q: 'Tier 1 pages' }, { big: 'Tier 3', t: 'Links built to tier 2', d: 'Another layer below', q: 'Tier 2 pages' }] }),
   'keyword-research-tools': D.split({ w: W, h: 500, title: 'A free keyword research stack, in order', big: '4', bigLabel: 'free sources do the heavy lifting', items: [
-    { v: 'Own data', t: 'Search Console, positions 5 to 20' }, { v: 'Planner', t: 'Google demand data and ideas' }, { v: 'Bing', t: 'Question keywords' }, { v: 'Trends', t: 'Seasonality and direction' }] })
+    { v: 'Own data', t: 'Search Console, positions 5 to 20' }, { v: 'Planner', t: 'Google demand data and ideas' }, { v: 'Bing', t: 'Question keywords' }, { v: 'Trends', t: 'Seasonality and direction' }] }),
+  // ---- 12 Nov 2026 batch ----
+  'seo-packages-for-small-business': D.stats({ w: W, cols: 2, title: 'What the first page quotes for SEO packages', items: [
+    { big: '9', t: 'organic snippets read on 10 October 2026' }, { big: '5', t: 'of them stated a price', color: AMBER }, { big: '$150', t: 'the lowest figure quoted' }, { big: '$2,000', t: 'the top of the highest range', color: AMBER }] }),
+  'canonical-hreflang': D.cards({ w: W, title: 'Canonical and hreflang do different jobs', qLabel: 'Result', items: [
+    { big: 'Canonical', t: 'Which URL is the real version', d: 'A deduplication signal', q: 'Index this one' }, { big: 'Hreflang', t: 'Which version for which searcher', d: 'A targeting signal', q: 'Between different pages' }, { big: 'Conflict', t: 'Canonical points elsewhere', d: 'Hreflang goes to waste', q: 'The canonical wins' }] }),
+  'how-to-create-a-sitemap': D.flow({ w: W, title: 'Creating a sitemap in three moves', steps: [
+    { t: 'List the URLs', s: 'Canonical pages only', c: 'Ones that return a 200' }, { t: 'Build the file', s: 'Generator or by hand', c: 'Valid XML, absolute URLs' }, { t: 'Tell Google', s: 'robots.txt and Search Console', c: 'Then read the Sitemaps report' }] }),
+  'linkable-assets': D.rings({ w: W, title: 'What earned our links, October 2026', items: [
+    { pct: 17 / 24, big: '17 of 24', t: 'external links point at the home page', c: 'Mostly directories', color: AMBER },
+    { pct: 6 / 24, big: '6 of 24', t: 'point at free tool pages', c: 'Across four tools', color: TEAL },
+    { pct: 0, big: '0 of 331', t: 'posts had an external link', c: 'Posts earned nothing yet', color: AMBER }] }),
+  'link-reclamation': D.columns({ w: W, title: 'Our brand scan, 21 October 2026', max: 14, items: [
+    { t: 'Pages naming us', v: 14, text: '14', color: TEAL }, { t: 'Link to us', v: 6, text: '6', color: TEAL }, { t: 'Do not link', v: 8, text: '8', color: AMBER }, { t: 'Sites holding those 8', v: 2, text: '2', color: AMBER }] }),
+  'automated-link-building-2026': D.timeline({ w: W, title: 'Which stages are safe to automate', items: [
+    { d: 'Research', t: 'Safe to automate', c: 'Public data, found faster' }, { d: 'Outreach', t: 'Safe with guardrails', c: 'Relevant, personalised pitches' }, { d: 'Placement', t: 'Keep a human', c: 'This stage carries the risk' }] }),
+  'saas-link-building-services': D.cards({ w: W, title: 'Three ways to buy SaaS link building', qLabel: 'Suits', items: [
+    { big: 'Per link', t: 'A price for each placement', d: 'Control over every link', q: 'Pages you already know' }, { big: 'Retainer', t: 'A monthly plan with a link count', d: 'One point of contact', q: 'Steady output' }, { big: 'Project', t: 'A fixed price for new work', d: 'A study, tool or campaign', q: 'Something new to cite' }] })
 };
 (async () => {
   const fp = path.join(root, 'data', 'blog.json'); const posts = JSON.parse(fs.readFileSync(fp, 'utf8')); const only = process.argv.slice(2); const out = [];

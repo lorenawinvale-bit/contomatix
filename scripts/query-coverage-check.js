@@ -2,8 +2,8 @@
 const fs = require('fs'); const path = require('path'); const posts = require('../data/blog.json');
 const norm = s => s.toLowerCase().replace(/<[^>]+>/g, ' ').replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ');
 const want = {}; const add = (k, qs) => { (want[k] = want[k] || new Set()); qs.forEach(q => q.trim() && want[k].add(q.trim())); };
-for (const f of fs.readdirSync(__dirname).filter(f => /^lowvol-batch-[5-8]\.js$/.test(f))) { const t = fs.readFileSync(path.join(__dirname, f), 'utf8'); for (const m of t.matchAll(/slug: '([^']+)'[\s\S]*?keywords: \[([^\]]*)\]/g)) add('post ' + m[1], [...m[2].matchAll(/'([^']+)'/g)].map(x => x[1])); }
-for (const f of ['gsc-tool-queries-2026-11-08.md', 'gsc-queries-2026-11-09.md', 'gsc-queries-2026-11-10.md', 'gsc-queries-2026-11-11.md']) { const fp = path.join(__dirname, '..', '..', 'keyword-research', f); if (!fs.existsSync(fp)) continue; for (const l of fs.readFileSync(fp, 'utf8').split(/\r?\n/)) { const m = l.match(/^(tools\/)?([a-z0-9-]+): (.+)$/); if (!m || / \| /.test(l)) continue; add((m[1] ? 'tool ' : 'post ') + m[2], m[3].split(';').map(s => s.replace(/\s+\d+( \(\d+ click\))?$/, ''))); } }
+for (const f of fs.readdirSync(__dirname).filter(f => /^lowvol-batch-(?:[5-9]|1\d)\.js$/.test(f))) { const t = fs.readFileSync(path.join(__dirname, f), 'utf8'); for (const m of t.matchAll(/slug: '([^']+)'[\s\S]*?keywords: \[([^\]]*)\]/g)) add('post ' + m[1], [...m[2].matchAll(/'([^']+)'/g)].map(x => x[1])); }
+for (const f of ['gsc-tool-queries-2026-11-08.md', 'gsc-queries-2026-11-09.md', 'gsc-queries-2026-11-10.md', 'gsc-queries-2026-11-11.md', 'gsc-queries-2026-11-12.md']) { const fp = path.join(__dirname, '..', '..', 'keyword-research', f); if (!fs.existsSync(fp)) continue; for (const l of fs.readFileSync(fp, 'utf8').split(/\r?\n/)) { const m = l.match(/^(tools\/)?([a-z0-9-]+): (.+)$/); if (!m || / \| /.test(l)) continue; add((m[1] ? 'tool ' : 'post ') + m[2], m[3].split(';').map(s => s.replace(/\s+\d+( \(\d+ click\))?$/, ''))); } }
 let tot = 0, hit = 0;
 for (const [k, set] of Object.entries(want)) {
   const [kind, slug] = k.split(' '); let text;

@@ -57,6 +57,20 @@ https://example.com/contact</textarea>
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Generate a sitemap in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Paste your URLs</h3><p>Add the page addresses you want in the sitemap, one per line.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Generate the file</h3><p>The tool turns the list into a valid sitemap.xml with the required structure.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Upload and submit</h3><p>Upload it to your site's root, then submit it in Search Console or reference it in robots.txt.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -73,6 +87,19 @@ https://example.com/contact</textarea>
     <h2>Do Priority and Changefreq Still Matter?</h2>
     <p>Google has stated it largely ignores <code>&lt;priority&gt;</code> and <code>&lt;changefreq&gt;</code> values, treating them as unreliable since site owners rarely keep them accurate. They're still valid sitemap protocol fields and some other crawlers do use them, but don't expect them to meaningfully influence how Google crawls your site, <code>&lt;lastmod&gt;</code> (last modified date) is the one still worth keeping accurate if you can.</p>
 
+    <h2>Related Questions About Sitemap Generators</h2>
+    <h3>Free Sitemap Generator: What It Does</h3>
+    <p>This <strong>free sitemap generator</strong> turns a plain list of URLs into a valid sitemap.xml in seconds. It needs no crawler and no install, and it runs in your browser, so nothing is uploaded.</p>
+    <h3>Sitemap Generator From URL: Paste a List, Not One Address</h3>
+    <p>The tool does not crawl a site from a single address. You paste the URLs you want listed, which keeps you in control of what goes in. If you need to see what a site already lists, our <a href="/tools/sitemap-url-extractor">sitemap URL extractor</a> pulls the URLs out of an existing sitemap.</p>
+    <h3>Generate Sitemap From URL List: What Belongs in It</h3>
+    <p>Include canonical, indexable pages only: leave out redirect targets, noindexed pages and duplicate URL parameters. Use absolute https:// addresses, never relative paths, and list only pages you actually want ranked, because thin or low-value pages dilute crawl attention.</p>
+    <h3>XML Sitemap Generator Unlimited: The 50,000 URL Limit</h3>
+    <p>The sitemap protocol caps a single file at 50,000 URLs or 50MB uncompressed. Larger sites use a sitemap index file that links to several smaller sitemaps, so "unlimited" really means splitting into more files. If you want an unlimited sitemap generator, plan for several files under one index.</p>
+    <h3>Sitemap URL Generator: Do Priority and Changefreq Matter?</h3>
+    <p>Google has stated it largely ignores priority and changefreq, treating them as unreliable. They remain valid protocol fields, but lastmod is the one worth keeping accurate. See our guide to <a href="/blog/sitemap-priority">sitemap priority</a>.</p>
+    <h3>Create a Sitemap From a Website: Submit It Properly</h3>
+    <p>Upload the file to your site's root, then submit the URL under Sitemaps in Google Search Console, or reference it in robots.txt. Check the result with our <a href="/tools/sitemap-validator">sitemap validator</a>, and read <a href="/blog/how-to-create-a-sitemap">how to create a sitemap</a> for the full process.</p>
     <h2>Free Sitemap Generator FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -95,8 +122,22 @@ https://example.com/contact</textarea>
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
         <p>No. Everything is generated in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Is there a free sitemap generator from a URL list?<span class="faq-icon"></span></summary>
+        <p>Yes. This one is free, needs no signup and builds the sitemap.xml from the list of URLs you paste, in your browser.</p>
+      </details>
+      <details>
+        <summary>Can this tool crawl my website to build a sitemap?<span class="faq-icon"></span></summary>
+        <p>No. It generates the file from the URLs you provide. It does not crawl, so you choose exactly which pages are included.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/blog/how-to-create-a-sitemap"><span>Guide</span><strong>How to create a sitemap</strong><em>Formats, limits and mistakes to avoid.</em></a>
+      <a href="/tools/sitemap-validator"><span>Tool</span><strong>Sitemap validator</strong><em>Check a finished sitemap for errors.</em></a>
+      <a href="/blog/robots-txt-sitemap"><span>Guide</span><strong>Sitemap in robots.txt</strong><em>The Sitemap line and the ways it fails.</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -145,7 +186,9 @@ https://example.com/contact</textarea>
       { '@type': 'Question', name: 'How many URLs can one sitemap file contain?', acceptedAnswer: { '@type': 'Answer', text: 'The sitemap protocol caps a single file at 50,000 URLs or 50MB uncompressed. Larger sites use a sitemap index file.' } },
       { '@type': 'Question', name: 'Where do I submit my sitemap to Google?', acceptedAnswer: { '@type': 'Answer', text: 'Upload it to your site root, then submit the URL under the Sitemaps section of Google Search Console.' } },
       { '@type': 'Question', name: 'Should I include images or just pages?', acceptedAnswer: { '@type': 'Answer', text: 'This tool generates a standard page sitemap. Image and video sitemaps use additional tags as a separate sitemap type.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Is there a free sitemap generator from a URL list?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This one is free, needs no signup and builds the sitemap.xml from the list of URLs you paste, in your browser.' } },
+      { '@type': 'Question', name: 'Can this tool crawl my website to build a sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'No. It generates the file from the URLs you provide. It does not crawl, so you choose exactly which pages are included.' } }
     ]
   }) %>
 </script>
