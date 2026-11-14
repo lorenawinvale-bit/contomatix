@@ -4,7 +4,7 @@ module.exports = [
   {
     slug: 'llms-txt-generator',
     title: 'llms.txt Generator',
-    summary: 'Build a valid llms.txt file in seconds, a plain-language map of your site for ChatGPT, Claude, and other AI assistants.'
+    summary: 'Build a valid llms.txt file in seconds, a plain-language map of your site that some AI tools may read. Google Search does not need it.'
   },
   {
     slug: 'schema-markup-generator',

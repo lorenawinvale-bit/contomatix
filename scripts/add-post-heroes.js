@@ -8,6 +8,23 @@ const D = Object.fromEntries(Object.entries(D0).map(([k, fn]) => [k, typeof fn =
 const TEAL = '#0EA5A0', AMBER = '#F5A623';
 const W = 760; // the hero sits in a 440 px column next to the title, so it is drawn at 760 px wide
 const HEROES = {
+  'content-brief-template': D.stats({ w: W, cols: 2, title: 'What a content brief fixes first', items: [
+    { big: '12', t: 'fields in our content brief template' }, { big: '1', t: 'primary keyword per page', color: AMBER },
+    { big: '6-10', t: 'related keywords mapped to headings' }, { big: '0', t: 'drafts started before sources are listed', color: AMBER }] }),
+  'backlinks-exchange': D.cards({ w: W, title: 'Three shapes of a link exchange', qLabel: 'Looks like', items: [
+    { big: 'Reciprocal', t: 'A links to B, B links to A', d: 'The plain swap', q: 'A trade' }, { big: 'Three-way', t: 'A to B, B to C, C to A', d: 'Hides the swap', q: 'Still a trade' }, { big: 'Credits', t: 'A platform counts links given and received', d: 'Swaps at scale', q: 'Automated' }] }),
+  'pbn-backlinks': D.rings({ w: W, title: 'What 7 ranking PBN pages say', items: [
+    { pct: 4 / 7, big: '4 of 7', t: 'lean on DA or DR to describe quality', c: 'Third-party scores', color: AMBER },
+    { pct: 6 / 7, big: '6 of 7', t: 'discuss footprints', c: 'Hosting, content, history', color: TEAL }] }),
+  'link-acquisition': D.timeline({ w: W, title: 'Three ways a link is acquired', items: [
+    { d: 'Placed', t: 'You add it yourself', c: 'Fast, cheap, lowest weight' }, { d: 'Earned', t: 'Someone chose to cite you', c: 'Slow, most valuable' }, { d: 'Paid', t: 'Money changes hands', c: 'Mark it sponsored or nofollow' }] }),
+  'how-is-ranking-different-ppc-vs-seo-2026': D.stats({ w: W, cols: 2, title: 'PPC and SEO ranking, side by side', items: [
+    { big: 'Minutes', t: 'for PPC to take the top of the page' }, { big: 'Months', t: 'typical for SEO to earn a position', color: AMBER },
+    { big: 'Auction', t: 'decides PPC position every search' }, { big: 'Algorithm', t: 'weighs your site against all others', color: AMBER }] }),
+  'topical-map-seo': D.flow({ w: W, title: 'A topical map in three moves', steps: [
+    { t: 'Core topic', s: 'What you want to be known for', c: 'One pillar' }, { t: 'Subtopics', s: 'Questions, tools, comparisons', c: 'Grouped into clusters' }, { t: 'Pages and links', s: 'Pillar to cluster and back', c: 'One keyword per page' }] }),
+  'content-gap-analysis': D.columns({ w: W, title: 'Our own gap check, 28 October 2026', max: 998, items: [
+    { t: 'Top queries', v: 998, text: '998', color: TEAL }, { t: 'No matching page', v: 555, text: '555', color: AMBER }] }),
   'check-backlinks-of-website': D.stats({ w: W, cols: 2, title: 'Four free ways to check backlinks', items: [
     { big: '1', t: 'Search Console Links report: free, from Google' }, { big: '2', t: 'Open the linking page and read the link', color: AMBER },
     { big: '3', t: 'Search your brand and domain for mentions' }, { big: '4', t: 'Use a backlink checker for a wider index', color: AMBER }] }),

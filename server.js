@@ -323,7 +323,7 @@ app.get('/tools', (req, res) => {
 app.get('/tools/llms-txt-generator', (req, res) => {
   res.render('pages/llms-txt-generator', {
     title: 'Free llms.txt Generator | Contomatix',
-    description: 'Generate a valid llms.txt file for free in seconds, a plain-language site summary that helps AI assistants understand and cite your business.',
+    description: 'Generate a valid llms.txt file for free in seconds, a plain-language site summary some AI tools may read. Google Search does not need it.',
     pageClass: 'page-tool'
   });
 });
