@@ -8,6 +8,11 @@ const D = Object.fromEntries(Object.entries(D0).map(([k, fn]) => [k, typeof fn =
 const TEAL = '#0EA5A0', AMBER = '#F5A623';
 const W = 760; // the hero sits in a 440 px column next to the title, so it is drawn at 760 px wide
 const HEROES = {
+  'why-hire-a-forensic-seo-consultant-2026': D.stats({ w: W, cols: 2, title: 'Investigating a traffic drop', items: [
+    { big: '6', t: 'causes Google lists for a traffic drop' }, { big: '16', t: 'months of data to check first', color: AMBER },
+    { big: '3', t: 'parts of a good reconsideration request' }, { big: '1', t: 'root cause backed by evidence', color: AMBER }] }),
+  'how-to-vet-a-local-seo-company-2026': D.split({ w: W, h: 520, title: 'Vetting a local SEO company', big: '10', bigLabel: 'yes or no checks on our scorecard', items: [
+    { v: 'Who', t: 'A named person' }, { v: 'Accounts', t: 'You own the accounts' }, { v: 'Promise', t: 'A guarantee ends it' }] }),
   'link-prospecting': D.columns({ w: W, title: 'Our scan of 13 real prospect pages', max: 13, items: [
     { t: 'Pages checked', v: 13, text: '13', color: TEAL }, { t: 'Had a dead link', v: 6, text: '6', color: AMBER }, { t: 'Over 50 links', v: 2, text: '2', color: AMBER }, { t: 'Invited suggestions', v: 1, text: '1', color: TEAL }] }),
   'javascript-seo': D.rings({ w: W, title: 'Testing 25 of our own pages', items: [
