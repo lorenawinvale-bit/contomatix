@@ -50,6 +50,20 @@ es-MX | https://example.com/mx/</textarea>
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Generate hreflang tags in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>List your versions</h3><p>Add the URL of each language or regional version of the page.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Set the codes</h3><p>Choose a language code, plus a region code if you target a country, and an x-default fallback.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Paste the full block</h3><p>Copy the output and paste the same block on every version, self-reference included.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -93,6 +107,21 @@ es-MX | https://example.com/mx/</textarea>
     </ul>
     <p>The checks list under the output updates as you type. Once your tags are live, test a few URLs by hand in the browser and in Search Console.</p>
 
+    <h2>Related Questions About Hreflang Tags</h2>
+    <h3>Hreflang Generator: What This Tool Does</h3>
+    <p>This <strong>hreflang generator</strong> writes the full set of annotations for every URL, so you do not hand-write them and miss a return link. It outputs every row for every page, so the self-reference is always included, and it flags common mistakes as you type.</p>
+    <h3>Hreflang Tag Generator: What a Tag Looks Like</h3>
+    <p>A hreflang tag is a rel="alternate" hreflang="..." annotation that tells Google a page has equivalent versions in other languages or for other regions. A hreflang tag generator saves typing and catches typos. Hreflang is a hint, not a command, and it does not change rankings by itself.</p>
+    <h3>Hreflang Code Generator: Language and Region Codes</h3>
+    <p>A language code such as en, fr or es targets all speakers of a language. Add a region such as en-GB or es-MX to target a country, language first. x-default marks the fallback page for visitors who match no listed version.</p>
+    <h3>Hreflang Tags Generator: Why Return Links Matter</h3>
+    <p>Hreflang must be reciprocal. If your English page points to your French page, the French page must point back to English and to every other version. Google's documentation says non-reciprocal annotations may be ignored, which is the most common reason hreflang fails silently.</p>
+    <h3>Sitemap Hreflang Generator: HTML, Sitemap or Header</h3>
+    <p>You can place hreflang in HTML link tags, in XML sitemap annotations or in an HTTP header. HTML tags suit small sites, sitemaps are easier at scale, and headers are the only option for PDFs. Pick one method per site, and check a sitemap version with our <a href="/tools/hreflang-sitemap-validator">hreflang sitemap validator</a>. A hreflang sitemap generator writes the same annotations in XML form.</p>
+    <h3>Href Lang Generator: Mistakes It Flags</h3>
+    <p>It flags wrong region codes (en-UK is invalid, the UK code is en-GB), a region without a language, relative URLs, duplicate language entries and underscores instead of hyphens. Always use fully qualified URLs starting with https://.</p>
+    <h3>Hreflang Tag Generator Tool: Canonical Tags and Spanish Sites</h3>
+    <p>Each version should carry a canonical tag pointing to itself, not to another language, or the hreflang pair breaks. See our guides to <a href="/blog/canonical-hreflang">canonical and hreflang</a> together and <a href="/blog/hreflang-spanish">hreflang for Spanish</a> if you are mapping es, es-ES and es-MX.</p>
     <h2>Free Hreflang Generator FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -131,8 +160,22 @@ es-MX | https://example.com/mx/</textarea>
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
         <p>No. Everything is generated in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Is the hreflang generator free?<span class="faq-icon"></span></summary>
+        <p>Yes. It is free, needs no signup and runs in your browser, so your URLs are not uploaded.</p>
+      </details>
+      <details>
+        <summary>Where do I put the generated hreflang tags?<span class="faq-icon"></span></summary>
+        <p>Paste the full block unchanged on each version of the page, in the head for HTML tags. If you chose sitemap annotations or HTTP headers, use that format instead and do not mix methods.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/tools/hreflang-sitemap-validator"><span>Tool</span><strong>Hreflang sitemap validator</strong><em>Check sitemap annotations</em></a>
+      <a href="/blog/canonical-hreflang"><span>Guide</span><strong>Canonical vs hreflang</strong><em>Two different jobs</em></a>
+      <a href="/blog/hreflang-spanish"><span>Guide</span><strong>Hreflang for Spanish</strong><em>es, es-ES and es-MX</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -185,7 +228,9 @@ es-MX | https://example.com/mx/</textarea>
       { '@type': 'Question', name: 'Should a page list itself in its hreflang set?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Each version must include a self-referencing entry plus all the alternates. The generator includes it automatically.' } },
       { '@type': 'Question', name: 'What is the right hreflang code for the UK?', acceptedAnswer: { '@type': 'Answer', text: 'en-GB. The code en-UK is a common mistake, because the ISO 3166-1 region code for the United Kingdom is GB.' } },
       { '@type': 'Question', name: 'How do I add hreflang to a PDF?', acceptedAnswer: { '@type': 'Answer', text: 'Use the HTTP Link header output. PDFs have no HTML head, so the annotation is sent in the response header instead.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is generated in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Is the hreflang generator free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. It is free, needs no signup and runs in your browser, so your URLs are not uploaded.' } },
+      { '@type': 'Question', name: 'Where do I put the generated hreflang tags?', acceptedAnswer: { '@type': 'Answer', text: 'Paste the full block unchanged on each version of the page, in the head for HTML tags. If you chose sitemap annotations or HTTP headers, use that format instead and do not mix methods.' } }
     ]
   }) %>
 </script>

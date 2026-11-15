@@ -8,6 +8,22 @@ const D = Object.fromEntries(Object.entries(D0).map(([k, fn]) => [k, typeof fn =
 const TEAL = '#0EA5A0', AMBER = '#F5A623';
 const W = 760; // the hero sits in a 440 px column next to the title, so it is drawn at 760 px wide
 const HEROES = {
+  'link-prospecting': D.columns({ w: W, title: 'Our scan of 13 real prospect pages', max: 13, items: [
+    { t: 'Pages checked', v: 13, text: '13', color: TEAL }, { t: 'Had a dead link', v: 6, text: '6', color: AMBER }, { t: 'Over 50 links', v: 2, text: '2', color: AMBER }, { t: 'Invited suggestions', v: 1, text: '1', color: TEAL }] }),
+  'javascript-seo': D.rings({ w: W, title: 'Testing 25 of our own pages', items: [
+    { pct: 1, big: '25 of 25', t: 'had every H2 and image in raw HTML', c: 'Before any script runs', color: TEAL },
+    { pct: 1, big: '14 of 14', t: 'site and tool pages: same links either way', c: 'Raw and rendered', color: AMBER }] }),
+  'b2b-telemarketing': D.flow({ w: W, title: 'Where the phone call fits', steps: [
+    { t: 'Digital first', s: 'Content, ads, email nurture', c: 'Signals show who engages' }, { t: 'The call qualifies', s: 'Specific reason to call', c: 'Not a closing pitch' }, { t: 'Next step', s: 'A 15-minute call', c: 'Follow-up agreed' }] }),
+  'what-is-ai-visibility-2026': D.timeline({ w: W, title: 'What AI visibility measures', items: [
+    { d: 'Named', t: 'Visibility score', c: 'Share of answers that mention you' }, { d: 'Linked', t: 'Citation share', c: 'How often you are the source' }, { d: 'Described', t: 'Sentiment and positioning', c: 'Accurate, in the right category' }] }),
+  'hr-technology-consulting-2026': D.timeline({ w: W, title: 'Where HR tech projects succeed or fail', items: [
+    { d: 'Select', t: 'Choose the stack', c: 'Eight categories, one HRIS core' }, { d: 'Go live', t: 'Roughly the midpoint', c: 'Not the finish line' }, { d: 'Adopt', t: 'Where failures happen', c: 'Managers who never log in' }] }),
+  'guest-posting-vs-niche-edits-2026': D.stats({ w: W, cols: 2, title: 'Guest posts vs niche edits', items: [
+    { big: '56%', t: 'cheaper on average for a niche edit' }, { big: '+32%', t: 'price for each extra 10 DR points', color: AMBER },
+    { big: 'Days', t: 'for a niche edit to start passing value' }, { big: 'Weeks', t: 'extra for a new guest post to be indexed', color: AMBER }] }),
+  'seo-audit-cost': D.flow({ w: W, title: 'Comparing audit quotes fairly', steps: [
+    { t: 'Line up the scope', s: 'Technical, on-page, content, links', c: 'Before the price' }, { t: 'Compare deliverables', s: 'Report, URL sheet, roadmap', c: 'Line by line' }, { t: 'Ask what is out', s: 'Extras make cheap quotes costly', c: 'Get it in writing' }] }),
   'content-brief-template': D.stats({ w: W, cols: 2, title: 'What a content brief fixes first', items: [
     { big: '12', t: 'fields in our content brief template' }, { big: '1', t: 'primary keyword per page', color: AMBER },
     { big: '6-10', t: 'related keywords mapped to headings' }, { big: '0', t: 'drafts started before sources are listed', color: AMBER }] }),
