@@ -1,0 +1,9 @@
+// 15 Nov 2026: exact htaccess query phrases for 301-redirect-not-working (the biggest position gap: 46 to 47 on the htaccess variants).
+const fs = require('fs'); const path = require('path'); const { apply } = require('./lowvol-lib.js');
+const fp = path.join(__dirname, '..', 'data', 'blog.json'); const posts = JSON.parse(fs.readFileSync(fp, 'utf8')); const p = posts.find(x => x.slug === '301-redirect-not-working');
+const a = ' This is how to resolve 301 moved permanently error reports in practice.'; const i = p.content.indexOf('<h3>301 Moved Permanently: How to Fix and Resolve the Error</h3>'); const e = p.content.indexOf('</p>', i);
+if (i < 0) throw new Error('h3 missing'); if (!p.content.slice(i, e).includes('how to resolve 301 moved permanently error')) { p.content = p.content.slice(0, e) + a + p.content.slice(e); fs.writeFileSync(fp, JSON.stringify(posts, null, 2), 'utf8'); }
+apply([{ slug: '301-redirect-not-working', h2: 'Related Questions About 301 Redirects That Fail', sources: 'Search Console page queries (28 days to 13 Nov 2026)',
+  keywords: ['redirect 301 not working htaccess', 'htaccess redirect 301 not working', 'redirect 301 htaccess not working'],
+  items: [{ h3: 'Redirect 301 Not Working Htaccess: Check Rule Order First', html: `When a redirect 301 not working htaccess problem appears, the server reads the file from top to bottom, so an older or catch-all rule above your new one can win and your rule never runs. The same applies to an htaccess redirect 301 not working after a WordPress rewrite block. Move the specific redirect above the general rules, make sure the rewrite engine is on, and test with <code>curl -I</code>. If a redirect 301 htaccess not working report ends with a 200, the rule is not matching at all.` }] }], { date: '2026-11-15' });
+console.log('done');
