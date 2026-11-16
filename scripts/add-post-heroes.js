@@ -8,6 +8,16 @@ const D = Object.fromEntries(Object.entries(D0).map(([k, fn]) => [k, typeof fn =
 const TEAL = '#0EA5A0', AMBER = '#F5A623';
 const W = 760; // the hero sits in a 440 px column next to the title, so it is drawn at 760 px wide
 const HEROES = {
+  'international-link-building': D.stats({ w: W, cols: 2, title: 'What 8 ranking guides say', items: [
+    { big: '8 of 8', t: 'stress relevance and language' }, { big: '7 of 8', t: 'mention translation or localization', color: AMBER },
+    { big: '6 of 8', t: 'point to local media' }, { big: '1 of 8', t: 'link to Google\'s own documentation', color: AMBER }] }),
+  'improve-core-web-vitals': D.columns({ w: W, title: 'One layout shift, before and after', max: 0.45, items: [
+    { t: 'Before the fix', v: 0.425, text: '0.425', color: AMBER }, { t: 'Google limit', v: 0.1, text: '0.1', color: TEAL }, { t: 'After the fix', v: 0.06, text: '0.060', color: TEAL }] }),
+  'blogger-outreach': D.rings({ w: W, title: 'What 7 outreach guides do', items: [
+    { pct: 1, big: '7 of 7', t: 'also sell a service or tool', c: 'Read the advice with that in mind', color: AMBER },
+    { pct: 5 / 7, big: '5 of 7', t: 'say to personalise the email', c: 'The template shows how', color: TEAL }] }),
+  'backlinks-report': D.split({ w: W, h: 520, title: 'A useful backlinks report', big: '5', bigLabel: 'rows that fit on one page', items: [
+    { v: 'Domains', t: 'Referring domains, not raw links' }, { v: 'Changes', t: 'New and lost, named' }, { v: 'Pages', t: 'Which pages earned links' }, { v: 'Anchors', t: 'The spread, not every row' }, { v: 'Impact', t: 'Clicks and positions' }] }),
   'why-hire-a-forensic-seo-consultant-2026': D.stats({ w: W, cols: 2, title: 'Investigating a traffic drop', items: [
     { big: '6', t: 'causes Google lists for a traffic drop' }, { big: '16', t: 'months of data to check first', color: AMBER },
     { big: '3', t: 'parts of a good reconsideration request' }, { big: '1', t: 'root cause backed by evidence', color: AMBER }] }),
