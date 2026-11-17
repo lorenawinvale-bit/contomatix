@@ -1,0 +1,25 @@
+<%
+/* Interactive "Would we place this link?" card. Uses the four checks we run by hand on every target site (service page: Vetting).
+   Options: widgetId (string), compact (bool) */
+var wid = typeof widgetId !== 'undefined' ? widgetId : 'vet';
+%>
+<div class="sv-vet" data-vet id="<%= wid %>">
+  <div class="sv-vet-head">
+    <span class="sv-vet-kicker">Try our 4-point link check</span>
+    <span class="sv-vet-tag">Interactive</span>
+  </div>
+  <p class="sv-vet-sub">Imagine a site that could link to you. Tick what is true. These are the same four checks we run by hand before any outreach.</p>
+  <div class="sv-vet-list">
+    <label class="sv-vet-item"><input type="checkbox" data-vet-check checked><span class="sv-vet-box"></span><span><strong>Real organic traffic</strong><em>People actually read the site</em></span></label>
+    <label class="sv-vet-item"><input type="checkbox" data-vet-check checked><span class="sv-vet-box"></span><span><strong>Relevant to your niche</strong><em>The topic fits your page</em></span></label>
+    <label class="sv-vet-item"><input type="checkbox" data-vet-check><span class="sv-vet-box"></span><span><strong>Clean outbound links</strong><em>No history of selling links</em></span></label>
+    <label class="sv-vet-item"><input type="checkbox" data-vet-check><span class="sv-vet-box"></span><span><strong>Editorial placement</strong><em>In the article, not a footer</em></span></label>
+  </div>
+  <div class="sv-vet-result" aria-live="polite">
+    <div class="sv-vet-ring" data-vet-ring><span data-vet-score>2/4</span></div>
+    <div>
+      <strong data-vet-verdict>We would look closer</strong>
+      <p data-vet-note>Two checks pass. We would ask what is missing before sending a pitch.</p>
+    </div>
+  </div>
+</div>

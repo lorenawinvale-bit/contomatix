@@ -28,9 +28,7 @@
   <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css?v=<%= site.assetVersion %>">
-  <% if (pageClass === 'page-home') { %>
-  <link rel="preload" as="image" href="/images/hero-dashboard.svg" fetchpriority="high">
-  <% } %>
+  <% if (pageClass === 'page-service' || pageClass === 'page-home') { %><link rel="stylesheet" href="/css/sv.css?v=<%= site.assetVersion %>"><% } %>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
@@ -114,5 +112,6 @@
        interacts, and its render loop was costing 20s+ of main-thread time),
        and scroll reveals use main.js's built-in IntersectionObserver fallback. -->
   <script src="/js/main.js?v=<%= site.assetVersion %>" defer></script>
+  <% if (pageClass === 'page-service' || pageClass === 'page-home') { %><script src="/js/sv.js?v=<%= site.assetVersion %>" defer></script><% } %>
 </body>
 </html>

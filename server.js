@@ -7,7 +7,8 @@ const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 
 const serviceExtras = require('./data/service-extras');
-const services = require('./data/services').map(s => Object.assign({}, s, serviceExtras[s.slug] || {}));
+const serviceUi = require('./data/service-extras-ui');
+const services = require('./data/services').map(s => { const ui = serviceUi[s.slug] || {}; const ex = serviceExtras[s.slug] || {}; const m = Object.assign({}, s, ex, ui); m.moreFaqs = (ex.moreFaqs || []).concat(ui.moreFaqs || []); return m; });
 const tools = require('./data/tools');
 const locations = require('./data/locations');
 const blogStore = require('./lib/blogStore');
@@ -193,6 +194,7 @@ app.use(session({
 // Helper: pass common data to every view
 app.use((req, res, next) => {
   res.locals.services = services;
+  res.locals.counts = { posts: blogStore.getPublished().length, tools: tools.length };
   res.locals.tools = tools;
   res.locals.currentPath = req.path;
   res.locals.siteName = 'Contomatix';
