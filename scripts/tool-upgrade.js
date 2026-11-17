@@ -5,11 +5,11 @@ const fs = require('fs'); const path = require('path');
 const root = path.join(__dirname, '..');
 const blog = new Set(require('../data/blog.json').map(p => p.slug)); const tools = new Set(require('../data/tools.js').map(t => t.slug));
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-const SPECS = Object.assign({}, require('./tool-upgrade-specs.js'), require('./tool-upgrade-specs2.js'), require('./tool-upgrade-specs3.js'), require('./tool-upgrade-specs4.js'), require('./tool-upgrade-specs5.js'), require('./tool-upgrade-specs6.js'), require('./tool-upgrade-specs7.js'), require('./tool-upgrade-specs8.js'));
+const SPECS = Object.assign({}, require('./tool-upgrade-specs.js'), require('./tool-upgrade-specs2.js'), require('./tool-upgrade-specs3.js'), require('./tool-upgrade-specs4.js'), require('./tool-upgrade-specs5.js'), require('./tool-upgrade-specs6.js'), require('./tool-upgrade-specs7.js'), require('./tool-upgrade-specs8.js'), require('./tool-upgrade-specs9.js'));
 const only = process.argv.slice(2);
 for (const [slug, s] of Object.entries(SPECS)) {
   if (only.length && !only.includes(slug)) continue;
-  const fp = path.join(root, 'views', 'pages', slug + '.ejs'); let t = fs.readFileSync(fp, 'utf8');
+  const fp = path.join(root, 'views', 'pages', slug + '.ejs'); let t = fs.readFileSync(fp, 'utf8').replace(/\r\n/g, '\n');
   if (t.includes('<!-- tool-upgrade -->')) { console.log(slug + ': already upgraded'); continue; }
   const all = JSON.stringify(s); if (/\u2014/.test(all)) throw new Error('em dash in spec ' + slug);
   const links = [...s.related.map(r => r.href), ...[...all.matchAll(/href=\\"(\/[^"\\]+)\\"/g)].map(x => x[1])];

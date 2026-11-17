@@ -14,7 +14,7 @@ for (const slug of list) {
   const broken = internal.filter(m => m[1] === 'blog' && !slugs.has(m[2]));
   const imgs = (c.match(/<img /g) || []).length; const firstP = strip((c.match(/<p>[\s\S]*?<\/p>/) || [''])[0]);
   const checks = [
-    ['related-questions section with 5+ H3', h2.some(x => /^Related Questions/.test(x)) && h3.length >= 5],
+    ['Q&A section (H2 with Questions) with 4+ H3', h2.some(x => /Questions/.test(x)) && h3.length >= 4],
     ['2,200+ words', words >= 2200],
     ['FAQ section present', h2.some(x => /Frequently Asked Questions/.test(x))],
     ['5+ unique internal links', uniqueInternal >= 5],

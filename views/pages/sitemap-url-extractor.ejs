@@ -46,6 +46,20 @@
   </div>
 </section>
 
+<!-- tool-upgrade -->
+<section class="tool-how">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">How it works</span>
+      <h2>Pull the URLs out of a sitemap in three steps</h2>
+    </div>
+    <div class="tool-steps">
+      <div class="process-step"><span class="step-num">01</span><h3>Paste the sitemap</h3><p>Open the sitemap.xml in your browser, copy everything and paste it in.</p></div>
+      <div class="process-step"><span class="step-num">02</span><h3>Filter if you want</h3><p>Keep only URLs that contain a path such as /blog/, and remove duplicates.</p></div>
+      <div class="process-step"><span class="step-num">03</span><h3>Copy or export</h3><p>Copy the plain list, or take the CSV with lastmod to sort by the date each page changed.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container llms-explainer">
 
@@ -63,6 +77,17 @@
     <p>A sitemap is machine-readable, which makes it awkward to read by eye. Once the addresses are a plain list you can paste them into a spreadsheet and count pages by folder, compare them with a crawl to find pages that are in the sitemap but not linked internally, or build a redirect map before a migration. It is also a quick way to see how many URLs you are really asking Google to look at.</p>
     <p>Sitemaps have size limits: a single file can hold up to 50,000 URLs and 50MB uncompressed, so large sites split theirs into several files listed in a sitemap index. If you paste an index here, the tool shows the child sitemap addresses instead of page URLs. Open each child file, paste it, and extract from there.</p>
 
+    <h2>Quick Answers About Extracting URLs From a Sitemap</h2>
+    <h3>Sitemap URL Extractor: What You Get</h3>
+    <p>This <strong>sitemap URL extractor</strong> pulls every address out of a sitemap into a plain list. It reads sitemap index files too, so you know which child files to paste next. It runs in your browser and nothing is uploaded.</p>
+    <h3>What We Found Running It on Our Own Sitemap</h3>
+    <p>On 17 November 2026 our own sitemap listed 433 URLs: 371 under /blog/, 43 under /tools/, 10 under /services/ and a few pages such as team and terms. Seeing that split in a spreadsheet took a minute, and it showed that 86% of the URLs we ask Google to look at are blog posts.</p>
+    <h3>Extract URLs From a Sitemap Into a Spreadsheet</h3>
+    <p>Paste the list into a sheet, add a column for the folder and count pages by folder. Compare it with a crawl to find pages that are in the sitemap but not linked internally.</p>
+    <h3>Get Sitemap From URL: Why the Tool Asks You to Paste</h3>
+    <p>Browsers block most cross-site requests to other people's files, so the tool cannot fetch a sitemap from a URL. Open the file, copy it and paste it. To find where a sitemap lives, use our <a href="/tools/sitemap-finder">sitemap finder</a>.</p>
+    <h3>Sitemap to CSV for a Redirect Map</h3>
+    <p>The CSV keeps lastmod, so you can sort by last change. Before a migration, the list becomes the first column of your redirect map. See our <a href="/blog/seo-site-migration">SEO site migration checklist</a>.</p>
     <h2>Sitemap URL Extractor FAQs</h2>
     <div class="faq-list" style="margin-top: 22px;">
       <details>
@@ -89,8 +114,22 @@
         <summary>Does this tool store or send my data anywhere?<span class="faq-icon"></span></summary>
         <p>No. Everything is processed in your browser with JavaScript, nothing is uploaded, logged, or stored on any server, including ours.</p>
       </details>
+      <details>
+        <summary>Is there a free sitemap URL extractor?<span class="faq-icon"></span></summary>
+        <p>Yes. This one is free, needs no signup and runs in your browser, so your sitemap is not uploaded.</p>
+      </details>
+      <details>
+        <summary>Does it work on a sitemap index?<span class="faq-icon"></span></summary>
+        <p>Yes. It detects a sitemapindex root and lists the child sitemap addresses. Open each child file, paste it and extract from there.</p>
+      </details>
     </div>
 
+    <h2>Keep Going: Related Tools and Guides</h2>
+    <div class="tool-related">
+      <a href="/tools/sitemap-finder"><span>Tool</span><strong>Sitemap finder</strong><em>Find where a site keeps its sitemap</em></a>
+      <a href="/tools/sitemap-validator"><span>Tool</span><strong>Sitemap validator</strong><em>Check the file is valid</em></a>
+      <a href="/blog/seo-site-migration"><span>Guide</span><strong>SEO site migration</strong><em>Use the list as a redirect map</em></a>
+    </div>
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
       <span class="cta-orb cta-orb-2"></span>
@@ -139,7 +178,9 @@
       { '@type': 'Question', name: 'What if my sitemap is a sitemap index?', acceptedAnswer: { '@type': 'Answer', text: 'The tool detects a sitemapindex root and lists the child sitemap locations. Each child file then needs to be pasted separately to get its page URLs.' } },
       { '@type': 'Question', name: 'Can I get the last modified dates too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Switch the output format to CSV and each row includes the lastmod value when the sitemap provides one.' } },
       { '@type': 'Question', name: 'Does it work with compressed .xml.gz sitemaps?', acceptedAnswer: { '@type': 'Answer', text: 'Not directly. Unzip the file first and paste the XML text.' } },
-      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is processed in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } }
+      { '@type': 'Question', name: 'Does this tool store or send my data anywhere?', acceptedAnswer: { '@type': 'Answer', text: 'No. Everything is processed in your browser with JavaScript - nothing is uploaded, logged, or stored on any server, including ours.' } },
+      { '@type': 'Question', name: 'Is there a free sitemap URL extractor?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This one is free, needs no signup and runs in your browser, so your sitemap is not uploaded.' } },
+      { '@type': 'Question', name: 'Does it work on a sitemap index?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. It detects a sitemapindex root and lists the child sitemap addresses. Open each child file, paste it and extract from there.' } }
     ]
   }) %>
 </script>
