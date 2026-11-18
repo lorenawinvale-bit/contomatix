@@ -27,7 +27,7 @@ module.exports = {
       { h: 'White label link building service', t: 'Agencies can resell it under their own brand with white-labeled reporting.' },
       { h: 'Professional link building service', t: 'A short notice period, a free audit first and reporting tied to outcomes, so confidence in the work is why you stay.' }
     ],
-    metaDescription: 'A manual, white-hat SEO link building service: relevant editorial links, link insertions and guest posts, vetted by hand, no PBNs or automation. Free audit first.',
+    metaDescription: 'A manual, white-hat SEO link building service: relevant editorial links, link insertions and guest posts, vetted by hand. No PBNs. Free audit first.',
     problemsTitle: 'Problems this link building service fixes',
     problems: [
       { h: 'Links from sites nobody reads', t: 'Private blog networks and link farms look fine in a report and do little for rankings, or put the domain at risk. We place links only on real sites with genuine organic traffic.' },
@@ -53,3 +53,17 @@ module.exports = {
     ]
   }
 };
+
+Object.assign(module.exports, require('./service-extras-ui2'));
+
+// parity additions (checker widget, extra proof/offers/faqs)
+(function () {
+  ['./service-extras-ui3','./service-extras-ui4','./service-extras-ui5'].forEach(function (f) { var more = require(f);
+  Object.keys(more).forEach(function (k) {
+    var m = more[k], t = module.exports[k]; if (!t) return;
+    if (m.checker) { t.checker = m.checker; t.widget = 'check'; }
+    ['heroTitle', 'metaTitle'].forEach(function (p) { if (m[p]) t[p] = m[p]; });
+    ['proof', 'offers', 'moreFaqs'].forEach(function (p) { if (m[p]) t[p] = (t[p] || []).concat(m[p]); });
+  });
+  });
+})();

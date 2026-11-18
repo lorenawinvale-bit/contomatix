@@ -14,6 +14,8 @@
     ['We would place it', 'All four pass: real readers, a relevant topic, a clean history and a placement inside the content.', '#0EA5A0']
   ];
   document.querySelectorAll('[data-vet]').forEach(function (root) {
+    var custom = null;
+    try { custom = JSON.parse(root.getAttribute('data-verdicts') || 'null'); } catch (e) { custom = null; }
     var checks = root.querySelectorAll('[data-vet-check]');
     var ring = root.querySelector('[data-vet-ring]');
     var score = root.querySelector('[data-vet-score]');
@@ -21,7 +23,7 @@
     var note = root.querySelector('[data-vet-note]');
     function update() {
       var n = 0; checks.forEach(function (c) { if (c.checked) n++; });
-      var v = VERDICTS[n];
+      var v = custom ? [custom[n][0], custom[n][1], VERDICTS[n][2]] : VERDICTS[n];
       score.textContent = n + '/4';
       verdict.textContent = v[0]; note.textContent = v[1];
       ring.style.setProperty('--p', (n / 4 * 100) + '%');

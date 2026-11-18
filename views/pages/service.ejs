@@ -21,6 +21,8 @@ var allFaqs = (service.faqs || []).concat(service.moreFaqs || []);
     <div class="sv-hero-card">
       <% if (service.widget === 'link-vet') { %>
         <%- include('../partials/vet-widget', { widgetId: 'vet-service' }) %>
+      <% } else if (service.widget === 'check' && service.checker) { %>
+        <%- include('../partials/check-widget', { widgetId: 'chk-service', checker: service.checker }) %>
       <% } else { %>
         <div class="sv-snapshot">
           <span class="sv-vet-kicker">At a glance</span>

@@ -1,0 +1,23 @@
+<%
+/* Generic 4-check card, same look as vet-widget. Needs: checker {kicker, sub, items[{h,e,on}], verdicts[5][title,note]}, widgetId */
+var wid = typeof widgetId !== 'undefined' ? widgetId : 'chk';
+%>
+<div class="sv-vet" data-vet id="<%= wid %>" data-verdicts="<%= JSON.stringify(checker.verdicts) %>">
+  <div class="sv-vet-head">
+    <span class="sv-vet-kicker"><%= checker.kicker %></span>
+    <span class="sv-vet-tag">Interactive</span>
+  </div>
+  <p class="sv-vet-sub"><%= checker.sub %></p>
+  <div class="sv-vet-list">
+    <% checker.items.forEach(function (it) { %>
+    <label class="sv-vet-item"><input type="checkbox" data-vet-check<%= it.on ? ' checked' : '' %>><span class="sv-vet-box"></span><span><strong><%= it.h %></strong><em><%= it.e %></em></span></label>
+    <% }); %>
+  </div>
+  <div class="sv-vet-result" aria-live="polite">
+    <div class="sv-vet-ring" data-vet-ring><span data-vet-score>2/4</span></div>
+    <div>
+      <strong data-vet-verdict></strong>
+      <p data-vet-note></p>
+    </div>
+  </div>
+</div>

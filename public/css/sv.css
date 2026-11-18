@@ -1,6 +1,6 @@
 /* Service pages and homepage widget (17 Nov 2026, v2: matched to the site's cream, navy and teal theme).
    Loaded only on page-service and page-home. Uses the tokens from style.css. */
-.sv-hero { position: relative; overflow: hidden; padding: 118px 0 54px; isolation: isolate; border-bottom: 1px solid var(--border);
+.sv-hero { position: relative; overflow: hidden; padding: 108px 0 34px; isolation: isolate; border-bottom: 1px solid var(--border);
   background:
     radial-gradient(640px 360px at 8% -10%, rgba(20,184,166,0.20), transparent 70%),
     radial-gradient(560px 320px at 96% 8%, rgba(245,158,11,0.18), transparent 70%),
@@ -16,7 +16,7 @@
 .sv-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 0; padding: 0; }
 .sv-chips li { font-size: 0.82rem; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--surface); color: var(--text); border: 1px solid var(--border); box-shadow: 0 1px 2px rgba(22,25,42,0.04); }
 .sv-chips li::before { content: '\2713'; margin-right: 6px; color: var(--accent-teal); font-weight: 800; }
-.sv-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 44px; }
+.sv-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 30px; }
 .sv-stats div { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 20px 16px; text-align: center; box-shadow: 0 1px 2px rgba(22,25,42,0.04), var(--glow-teal); }
 .sv-stats b { display: block; font-family: var(--font-display); font-size: clamp(1.7rem, 3.4vw, 2.6rem); line-height: 1; background: var(--gradient-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .sv-stats span { display: block; margin-top: 8px; font-size: 0.82rem; color: var(--text-dim); }
@@ -51,16 +51,16 @@
 .sv-snapshot dd { margin: 2px 0 0; font-size: 0.86rem; color: var(--text-dim); }
 
 /* body */
-.sv-main { padding: 28px 0 84px; }
+.sv-main { padding: 12px 0 56px; }
 .sv-wrap { max-width: 1060px; }
-.sv-block { margin-top: 72px; }
+.sv-block { margin-top: 40px; }
 .sv-kicker { display: inline-block; font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-teal-dim); font-weight: 700; margin-bottom: 8px; }
 .sv-kicker::before { content: ''; display: inline-block; width: 22px; height: 2px; background: var(--gradient-brand); vertical-align: middle; margin-right: 10px; border-radius: 2px; }
 .sv-kicker-light { color: #CFFAF4; }
 .sv-kicker-light::before { background: #fff; }
 .sv-block h2, .sv-proof h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 14px; }
 .sv-prose { color: var(--text-dim); max-width: 70ch; font-size: 1.04rem; }
-.sv-answer { margin-top: 36px; padding: 22px 26px; border-radius: 20px; background: linear-gradient(135deg, rgba(20,184,166,0.12), rgba(245,158,11,0.10)); border: 1px solid rgba(14,165,160,0.28); }
+.sv-answer { margin-top: 24px; padding: 22px 26px; border-radius: 20px; background: linear-gradient(135deg, rgba(20,184,166,0.12), rgba(245,158,11,0.10)); border: 1px solid rgba(14,165,160,0.28); }
 .sv-answer span { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent-teal-dim); font-weight: 700; }
 .sv-answer p { margin: 6px 0 0; font-size: 1.1rem; }
 .sv-bento { display: grid; gap: 16px; margin-top: 22px; }
@@ -87,7 +87,7 @@
 .sv-included li { position: relative; padding: 14px 16px 14px 48px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border); font-size: 0.97rem; }
 .sv-included li::before { content: '\2713'; position: absolute; left: 14px; top: 13px; width: 24px; height: 24px; border-radius: 50%; background: rgba(14,165,160,0.14); color: var(--accent-teal-dim); font-weight: 800; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; }
 /* proof band uses the same teal gradient as the site's CTA band */
-.sv-proof { margin-top: 72px; padding: 46px 34px; border-radius: 24px; color: #fff; position: relative; overflow: hidden;
+.sv-proof { margin-top: 40px; padding: 36px 30px; border-radius: 24px; color: #fff; position: relative; overflow: hidden;
   background:
     radial-gradient(560px 260px at 15% -40px, rgba(251,191,36,0.24), transparent 70%),
     radial-gradient(520px 260px at 90% 120%, rgba(244,114,182,0.20), transparent 70%),
@@ -104,7 +104,7 @@
 .sv-related a { padding: 10px 16px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border-light); text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: all .2s; }
 .sv-related a:hover { background: var(--dark); color: #fff; border-color: var(--dark); }
 .sv-related a span { margin-left: 4px; color: var(--accent-teal); }
-.sv-final { margin-top: 80px; }
+.sv-final { margin-top: 44px; }
 @media (max-width: 860px) {
   .sv-hero { padding-top: 104px; }
   .sv-hero-grid { grid-template-columns: 1fr; }
