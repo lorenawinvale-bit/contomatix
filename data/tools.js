@@ -54,7 +54,7 @@ module.exports = [
   {
     slug: 'sitemap-validator',
     title: 'Sitemap Validator',
-    summary: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates, and limit violations, for free, in seconds.'
+    summary: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates and limit violations, for free, in seconds, before you submit it.'
   },
   {
     slug: 'hreflang-sitemap-validator',

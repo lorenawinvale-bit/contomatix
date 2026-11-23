@@ -365,7 +365,7 @@ app.get('/tools/robots-txt-generator', (req, res) => {
 app.get('/tools/utm-builder', (req, res) => {
   res.render('pages/utm-builder', {
     title: 'Free UTM Tag Generator & Campaign URL Builder | Contomatix',
-    description: 'Build properly tagged UTM campaign URLs for Google Analytics in seconds, for free, no more guessing parameter names.',
+    description: 'Build properly tagged UTM campaign URLs for Google Analytics in seconds, for free, with no more guessing parameter names or values.',
     pageClass: 'page-tool'
   });
 });
@@ -373,7 +373,7 @@ app.get('/tools/utm-builder', (req, res) => {
 app.get('/tools/og-preview-generator', (req, res) => {
   res.render('pages/og-preview-generator', {
     title: 'Free Social Share Preview Generator: OG Tags | Contomatix',
-    description: 'See how your link looks on Facebook, LinkedIn, and X, and generate the Open Graph tags to fix it, for free.',
+    description: 'See how your link looks on Facebook, LinkedIn and X, and generate the Open Graph tags to fix it, for free, before you publish the page.',
     pageClass: 'page-tool'
   });
 });
@@ -389,7 +389,7 @@ app.get('/tools/meta-tag-generator', (req, res) => {
 app.get('/tools/sitemap-generator', (req, res) => {
   res.render('pages/sitemap-generator', {
     title: 'Free XML Sitemap Generator: From a URL List | Contomatix',
-    description: 'Turn a plain list of URLs into a valid sitemap.xml file in seconds, for free, no crawler or software needed.',
+    description: 'Turn a plain list of URLs into a valid sitemap.xml file in seconds, for free, with no crawler or software to install, then upload it to your site.',
     pageClass: 'page-tool'
   });
 });
@@ -405,7 +405,7 @@ app.get('/tools/hreflang-generator', (req, res) => {
 app.get('/tools/sitemap-validator', (req, res) => {
   res.render('pages/sitemap-validator', {
     title: 'Free Sitemap Validator: Check Sitemap Errors | Contomatix',
-    description: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates, and limit violations, for free, in seconds.',
+    description: 'Check a sitemap.xml file for structural errors, invalid URLs, duplicates and limit violations, for free, in seconds, before you submit it.',
     pageClass: 'page-tool'
   });
 });
@@ -704,7 +704,7 @@ app.get('/blog', (req, res) => {
   });
   res.render('pages/blog', {
     title: page > 1 ? `Blog: Page ${page}, Contomatix` : 'Blog: SEO & Link Building Insights | Contomatix',
-    description: 'SEO strategy, link building tactics, and content marketing insights from Contomatix.',
+    description: 'Read the Contomatix blog for SEO strategy, link building tactics and content marketing insights, backed by data from our own site and tests.',
     pageClass: 'page-blog',
     posts,
     categories,
@@ -750,7 +750,7 @@ app.get('/team', (req, res) => {
   const published = blogStore.getPublished();
   res.render('pages/team', {
     title: 'Meet the Contomatix Team: SEO & Link Building Experts',
-    description: 'Meet the SEO strategists and link building specialists behind Contomatix, the people who plan and run every campaign.',
+    description: 'Meet the SEO strategists and link building specialists behind Contomatix, the people who plan and run every campaign for our clients.',
     pageClass: 'page-team',
     team: team.map(withPhotoCheck).map(m => ({ ...m, postCount: published.filter(p => p.author === m.name).length }))
   });
@@ -793,7 +793,7 @@ app.get('/about', (req, res) => {
   const blogPosts = blogStore.getPublished();
   res.render('pages/about', {
     title: 'About Contomatix: White-Hat SEO & Link Building Agency',
-    description: 'Learn what Contomatix does, how the team works, and how we help brands rank higher through white-hat SEO.',
+    description: 'Learn what Contomatix does, how the team works, and how we help brands rank higher through white-hat SEO and manual link building.',
     pageClass: 'page-about',
     team: team.map(withPhotoCheck),
     services,
@@ -805,7 +805,7 @@ app.get('/about', (req, res) => {
 app.get('/privacy-policy', (req, res) => {
   res.render('pages/privacy', {
     title: 'Privacy Policy | Contomatix.com SEO Agency',
-    description: 'How Contomatix collects, uses, and protects your information across our website and services.',
+    description: 'How Contomatix collects, uses and protects your information across our website and services, and the choices you have over your data.',
     pageClass: 'page-legal'
   });
 });
@@ -813,7 +813,7 @@ app.get('/privacy-policy', (req, res) => {
 app.get('/terms', (req, res) => {
   res.render('pages/terms', {
     title: 'Terms of Service: Contomatix.com',
-    description: 'The terms governing use of contomatix.com and Contomatix\'s link building and SEO services.',
+    description: 'The terms that govern use of contomatix.com and Contomatix\'s link building and SEO services. Read them before you start a project with us.',
     pageClass: 'page-legal'
   });
 });
@@ -821,7 +821,7 @@ app.get('/terms', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('pages/contact', {
     title: 'Contact Contomatix: Get a Free SEO Audit',
-    description: 'Get in touch with Contomatix for link building and SEO services, free audit, reply within 24 hours.',
+    description: 'Get in touch with Contomatix for link building and SEO services. Ask for a free audit by form, email or WhatsApp and expect a reply within 24 hours.',
     pageClass: 'page-contact',
     submitted: false,
     error: null,
@@ -839,7 +839,7 @@ app.post('/contact', async (req, res) => {
   if ((req.body.website || '').trim()) {
     return res.render('pages/contact', {
       title: 'Contact Contomatix: Get a Free SEO Audit',
-      description: 'Get in touch with Contomatix for link building and SEO services, free audit, reply within 24 hours.',
+      description: 'Get in touch with Contomatix for link building and SEO services. Ask for a free audit by form, email or WhatsApp and expect a reply within 24 hours.',
       pageClass: 'page-contact',
       submitted: true,
       error: null,
@@ -849,7 +849,7 @@ app.post('/contact', async (req, res) => {
 
   const renderContact = (state) => res.render('pages/contact', {
     title: 'Contact Contomatix: Get a Free SEO Audit',
-    description: 'Get in touch with Contomatix for link building and SEO services, free audit, reply within 24 hours.',
+    description: 'Get in touch with Contomatix for link building and SEO services. Ask for a free audit by form, email or WhatsApp and expect a reply within 24 hours.',
     pageClass: 'page-contact',
     submitted: false,
     error: null,
