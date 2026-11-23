@@ -380,3 +380,9 @@ html:has(.px){scroll-behavior:smooth}
 body.px:not(.page-home):not(.page-services):not(.page-service)::before,body.px:not(.page-home):not(.page-services):not(.page-service)::after{animation:none!important}
 body.px:not(.page-home):not(.page-services):not(.page-service) .tm-ring{animation:none}
 body.px:not(.page-home):not(.page-services):not(.page-service) .px-field{display:none}
+
+/* gutters v4: right side removed, left side minimal */
+.px-ind,.px-rail.r,.px-pix,.px-aur.a3{display:none!important}
+.px-rail.l{background:linear-gradient(180deg,transparent,rgba(22,25,42,.1) 15%,rgba(22,25,42,.1) 85%,transparent)}
+.px-rail i{display:none}
+.px-meter{opacity:.7}.px-meter em,.px-meter b{display:none}.px-meter .trk{height:90px}
