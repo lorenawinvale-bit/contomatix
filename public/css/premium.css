@@ -375,3 +375,8 @@ html:has(.px){scroll-behavior:smooth}
 /* no zoom on card images */
 .bl-card:hover .bl-img img,.gx-pro:hover .gx-img img{transform:none!important}
 .bl-img img,.gx-pro .gx-img img{transition:none}
+
+/* colour like the homepage everywhere, motion only on home and service pages */
+body.px:not(.page-home):not(.page-services):not(.page-service)::before,body.px:not(.page-home):not(.page-services):not(.page-service)::after{animation:none!important}
+body.px:not(.page-home):not(.page-services):not(.page-service) .tm-ring{animation:none}
+body.px:not(.page-home):not(.page-services):not(.page-service) .px-field{display:none}

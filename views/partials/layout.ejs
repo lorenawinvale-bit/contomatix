@@ -84,7 +84,7 @@
     }) %>
   </script>
 </head>
-<% var pxPage = (pageClass === 'page-home' || pageClass === 'page-services' || pageClass === 'page-service'); %>
+<% var pxPage = (pageClass !== 'page-404'); %>
 <body class="<%= pageClass %><%= pxPage ? ' px' : '' %>">
 
   <%- include('./header') %>
@@ -114,7 +114,7 @@
        interacts, and its render loop was costing 20s+ of main-thread time),
        and scroll reveals use main.js's built-in IntersectionObserver fallback. -->
   <script src="/js/main.js?v=<%= site.assetVersion %>" defer></script>
-  <% if (pxPage) { %><script src="/js/premium.js?v=<%= site.assetVersion %>" defer></script><% } %>
+  <% if (pageClass === 'page-home' || pageClass === 'page-services' || pageClass === 'page-service') { %><script src="/js/premium.js?v=<%= site.assetVersion %>" defer></script><% } %>
   <% if (pageClass === 'page-service' || pageClass === 'page-home') { %><script src="/js/sv.js?v=<%= site.assetVersion %>" defer></script><% } %>
 </body>
 </html>
