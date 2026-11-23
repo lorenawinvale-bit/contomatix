@@ -1,0 +1,54 @@
+<%
+/* "Watch our free tools work": heading first, then a large real screen recording at normal speed. The video loads only when played (preload none). */
+var chapters = [['0:00', 'Meta description checker', 'Type a description, see the length and the Google preview.', 0], ['0:07', 'UTM builder', 'Fill four fields, get a tagged URL you can copy.', 7], ['0:15', 'Link check', 'Tick what is true about a site and read our verdict.', 15]];
+var base = (typeof site !== 'undefined' && site.baseUrl) ? site.baseUrl : 'https://contomatix.com';
+%>
+<style>
+.tv{position:relative;padding:12px 0 96px}
+.tv-head{max-width:760px;margin:0 auto 38px;text-align:center}
+.tv-head h2{font-family:var(--font-display);font-size:clamp(2.2rem,4.6vw,3.7rem);line-height:1.03;letter-spacing:-.055em;margin:14px 0 14px;font-weight:700}
+.tv-head p{margin:0 auto;max-width:58ch;color:var(--text-dim);font-size:1.08rem;line-height:1.6}
+.tv-frame{position:relative;border-radius:26px;overflow:hidden;background:#fff;border:1px solid var(--px-line,#E4DBCB);aspect-ratio:1160/570;width:100%;
+ box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 0 0 1px rgba(8,50,60,.04),0 4px 8px rgba(8,50,60,.05),0 40px 80px -28px rgba(8,50,60,.34),0 100px 160px -60px rgba(8,50,60,.4),0 0 120px -40px rgba(14,165,160,.5)}
+.tv-frame video{display:block;width:100%;height:100%;object-fit:cover;background:#FBF6EE}
+.tv-play{position:absolute;inset:0;display:grid;place-items:center;border:0;cursor:pointer;background:linear-gradient(180deg,rgba(22,25,42,.03),rgba(22,25,42,.3));transition:opacity .35s}
+.tv-play span{display:grid;place-items:center;width:104px;height:104px;border-radius:50%;background:#fff;box-shadow:0 24px 48px -14px rgba(8,50,60,.6),0 0 0 14px rgba(255,255,255,.3);transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
+.tv-play:hover span{transform:scale(1.08)}.tv-play svg{width:38px;height:38px;margin-left:5px;fill:var(--accent-teal)}
+.tv-play::after{content:"Watch it work, 26 seconds";position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-weight:700;font-size:.9rem;color:#fff;background:rgba(22,25,42,.74);backdrop-filter:blur(8px);padding:9px 18px;border-radius:999px;white-space:nowrap}
+.tv-frame.is-playing .tv-play{opacity:0;pointer-events:none}
+.tv-ch{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tv-ch button{width:100%;display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:14px;text-align:left;font:inherit;cursor:pointer;padding:16px 18px;border-radius:16px;background:#fff;border:1px solid var(--px-line,#E4DBCB);color:var(--text);
+ box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 8px 16px -12px rgba(8,50,60,.2);transition:transform .3s cubic-bezier(.22,.9,.35,1),border-color .25s,box-shadow .3s}
+.tv-ch button:hover,.tv-ch button.a{transform:translateY(-3px);border-color:rgba(14,165,160,.5);box-shadow:0 18px 30px -16px rgba(8,50,60,.35)}
+.tv-ch time{font-family:var(--font-mono);font-size:.74rem;font-weight:700;color:#0A6E69;background:rgba(20,184,166,.12);padding:6px 0;border-radius:8px;text-align:center}
+.tv-ch strong{display:block;font-family:var(--font-display);font-size:1.02rem;letter-spacing:-.02em}.tv-ch small{display:block;margin-top:2px;color:var(--text-dim);font-size:.8rem;line-height:1.4}
+.tv-ch i{font-style:normal;color:var(--accent-teal-dim);font-weight:800;transition:transform .3s}.tv-ch button:hover i{transform:translateX(4px)}
+.tv-links{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:24px;font-weight:700;font-size:.94rem}.tv-links a{color:var(--accent-teal-dim);text-decoration:none}.tv-links a:hover{text-decoration:underline}
+@media (max-width:900px){.tv-ch{grid-template-columns:1fr}.tv-frame{aspect-ratio:16/9}}
+</style>
+<section class="tv" id="watch-the-tools">
+  <div class="container">
+    <div class="tv-head">
+      <span class="eyebrow">Free tools</span>
+      <h2>Watch our free tools work</h2>
+      <p>A real screen recording at normal speed, not a mock-up. Every tool on this site runs in your browser, and nothing you type is sent anywhere.</p>
+    </div>
+    <div class="tv-frame" data-tv>
+      <video preload="none" playsinline controlslist="nodownload" poster="/videos/free-tools-demo-poster.jpg" width="1160" height="570" aria-label="Screen recording of three Contomatix free tools in use"><source src="/videos/free-tools-demo.webm" type="video/webm"></video>
+      <button class="tv-play" type="button" aria-label="Play the video"><span><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></span></button>
+    </div>
+    <ul class="tv-ch">
+      <% chapters.forEach(function (c) { %><li><button type="button" data-seek="<%= c[3] %>"><time><%= c[0] %></time><span><strong><%= c[1] %></strong><small><%= c[2] %></small></span><i>&#9654;</i></button></li><% }); %>
+    </ul>
+    <div class="tv-links"><a href="/tools/meta-description-checker">Meta description checker &rarr;</a><a href="/tools/utm-builder">UTM builder &rarr;</a><a href="/tools">All free tools &rarr;</a></div>
+  </div>
+  <script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'VideoObject', name: 'Contomatix free SEO tools in use', description: 'A 26 second screen recording of the Contomatix meta description checker, UTM builder and link check tools.', thumbnailUrl: base + '/videos/free-tools-demo-poster.jpg', uploadDate: '2026-11-23', duration: 'PT26S', contentUrl: base + '/videos/free-tools-demo.webm', embedUrl: base + '/#watch-the-tools' }) %></script>
+</section>
+<script>
+(function(){var f=document.querySelector('[data-tv]');if(!f)return;var v=f.querySelector('video'),p=f.querySelector('.tv-play'),btns=[].slice.call(document.querySelectorAll('[data-seek]'));
+function go(t){f.classList.add('is-playing');v.setAttribute('controls','');var s=function(){try{if(typeof t==='number')v.currentTime=t}catch(e){}v.play().catch(function(){})};if(v.readyState>0)s();else{v.addEventListener('loadedmetadata',s,{once:true});v.load()}}
+p.addEventListener('click',function(){go(0)});
+btns.forEach(function(b){b.addEventListener('click',function(){f.scrollIntoView({behavior:'smooth',block:'center'});go(+b.dataset.seek)})});
+v.addEventListener('timeupdate',function(){var t=v.currentTime,k=0;btns.forEach(function(b,i){if(t>=+b.dataset.seek-.1)k=i});btns.forEach(function(b,i){b.classList.toggle('a',i===k&&!v.paused)})});
+v.addEventListener('ended',function(){f.classList.remove('is-playing');btns.forEach(function(b){b.classList.remove('a')})})})();
+</script>

@@ -9,26 +9,7 @@
 
 <section>
   <div class="container">
-    <div class="service-rows">
-      <% services.forEach(function(s, i) { %>
-        <div class="service-row <%= i % 2 === 1 ? 'flip' : '' %>">
-          <div class="sr-copy">
-            <span class="sr-badge"><span class="sr-num">0<%= i + 1 %></span> <%= i === 0 ? '★ Flagship service' : 'Core service' %></span>
-            <h2><%= s.title %></h2>
-            <p class="sr-lead"><%= s.summary %></p>
-            <ul class="sr-points">
-              <% s.points.slice(0, 4).forEach(function(pt) { %>
-                <li><%= pt %></li>
-              <% }); %>
-            </ul>
-            <div class="sr-actions">
-              <a href="/services/<%= s.slug %>" class="btn btn-primary">Explore <%= s.title %> &rarr;</a>
-              <a href="/contact" class="btn btn-outline">Get a free audit</a>
-            </div>
-          </div>
-        </div>
-      <% }); %>
-    </div>
+    <%- include('../partials/service-grid', { services: services }) %>
   </div>
 </section>
 

@@ -1,35 +1,33 @@
-<section class="hero">
-  <div id="hero-canvas" class="hero-canvas"></div>
-  <div class="container hero-center">
-    <div class="hero-badge"><span class="spark">✦</span> White-hat link building &amp; SEO</div>
-    <h1>Rankings built on <span class="grad-text">real authority</span>,<br>not <span class="grad-text-warm">shortcuts</span></h1>
-    <p class="hero-sub">Contomatix helps brands grow organic traffic and AI search visibility through link building, technical &amp; on-page SEO, and AI SEO that actually moves the needle.</p>
-    <div class="hero-actions">
-      <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
-      <a href="/services" class="btn btn-outline">Explore services</a>
+<%- include('../partials/lab-hero') %>
+
+<%- include('../partials/tools-video') %>
+
+<%- include('../partials/link-duo') %>
+
+<%- include('../partials/dashboard') %>
+
+
+<section class="lab-try">
+  <style>
+  .lab-try{padding:64px 0 8px}
+  .lab-try-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:48px;align-items:center}
+  .lab-try .k{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-teal-dim);font-weight:700}
+  .lab-try h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.08;letter-spacing:-.02em;margin:12px 0 14px}
+  .lab-try p{color:var(--text-dim);max-width:50ch;margin:0 0 10px}
+  .lab-try .hero-vet{max-width:460px;margin:0 auto;width:100%}
+  @media (max-width:900px){.lab-try-grid{grid-template-columns:1fr;gap:28px}}
+  </style>
+  <div class="container lab-try-grid">
+    <div>
+      <span class="k">Now you try</span>
+      <h2>Judge a link the way we do</h2>
+      <p>Picture a site that could link to you. Tick what is true and watch the verdict change. These are the same four checks we run by hand on every target before any outreach.</p>
+      <p>If a site fails, we do not pitch it. That is how a campaign stays free of risky links.</p>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><span class="num"><%= services.length %></span><span class="label">Core services</span></div>
-      <div class="hero-stat"><span class="num">100%</span><span class="label">White-hat</span></div>
-      <div class="hero-stat"><span class="num">&lt;24h</span><span class="label">Reply time</span></div>
-    </div>
-  </div>
-  <div class="hero-shot hero-vet">
-    <%- include('../partials/vet-widget', { widgetId: 'vet-home' }) %>
+    <div class="hero-vet"><%- include('../partials/vet-widget', { widgetId: 'vet-home' }) %></div>
   </div>
 </section>
 
-<div class="trust-strip">
-  <div class="container">
-    <p class="trust-label">Campaigns powered by industry-standard SEO platforms</p>
-  </div>
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Ahrefs</span><i>◆</i><span>Semrush</span><i>◆</i><span>Moz</span><i>◆</i><span>Google Search Console</span><i>◆</i><span>Majestic</span><i>◆</i><span>Screaming Frog</span><i>◆</i><span>Surfer</span><i>◆</i><span>Google Analytics</span><i>◆</i>
-      <span>Ahrefs</span><i>◆</i><span>Semrush</span><i>◆</i><span>Moz</span><i>◆</i><span>Google Search Console</span><i>◆</i><span>Majestic</span><i>◆</i><span>Screaming Frog</span><i>◆</i><span>Surfer</span><i>◆</i><span>Google Analytics</span><i>◆</i>
-    </div>
-  </div>
-</div>
 
 <section class="services">
   <span class="deco-blob deco-blob-1" aria-hidden="true"></span>
@@ -41,45 +39,7 @@
       <p>Services that compound with each other: research finds the targets, content and links build the authority, on-page and technical work make it stick.</p>
     </div>
 
-    <%
-    var serviceArt = {
-      'link-building':    { img: '/images/illus-links.svg',     chip: '🔗 Manually vetted placements' },
-      'guest-posting':    { img: '/images/illus-guestpost.svg', chip: '✍️ Original, editor-approved' },
-      'on-page-seo':      { img: '/images/illus-onpage.svg',    chip: '✅ Built to Google\'s own guidelines' },
-      'off-page-seo':     { img: '/images/illus-offpage.svg',   chip: '🌍 Authority beyond your site' },
-      'keyword-research': { img: '/images/illus-keyword.svg',   chip: '🎯 Real search-intent research' },
-      'white-label-seo':  { img: '/images/illus-whitelabel.svg', chip: '🏷️ Zero client-facing branding' },
-      'ai-seo':           { img: '/images/illus-ai-seo.svg',     chip: '🤖 Cited in ChatGPT & AI Overviews' },
-      'technical-seo':    { img: '/images/illus-technical-seo.svg', chip: '⚙️ Crawlable, fast, error-free' }
-    };
-    %>
-    <div class="service-rows">
-      <% services.forEach(function(s, i) { %>
-        <div class="service-row <%= i % 2 === 1 ? 'flip' : '' %>">
-          <div class="sr-copy">
-            <span class="sr-badge"><span class="sr-num">0<%= i + 1 %></span> <%= i === 0 ? '★ Flagship service' : 'Core service' %></span>
-            <h3><%
-              var words = s.title.split(' ');
-              var last = words.pop();
-            %><%= words.join(' ') %> <span class="grad-text"><%= last %></span></h3>
-            <p class="sr-lead"><%= s.description %></p>
-            <ul class="sr-points">
-              <% s.points.forEach(function(pt) { %>
-                <li><%= pt %></li>
-              <% }); %>
-            </ul>
-            <div class="sr-actions">
-              <a href="/services/<%= s.slug %>" class="btn btn-primary">Explore <%= s.title %> &rarr;</a>
-              <a href="/contact" class="btn btn-outline">Get a free audit</a>
-            </div>
-          </div>
-          <div class="sr-media">
-            <img src="<%= serviceArt[s.slug].img %>" alt="<%= s.title %> illustration" width="760" height="560" loading="lazy">
-            <span class="sr-chip"><%= serviceArt[s.slug].chip %></span>
-          </div>
-        </div>
-      <% }); %>
-    </div>
+    <%- include('../partials/service-grid', { services: services }) %>
   </div>
 </section>
 
@@ -132,16 +92,17 @@
       <h2>Recent guides</h2>
       <p>Real, published research, the same city and industry guides referenced in the stats above.</p>
     </div>
-    <div class="latest-guides-grid">
-      <% latestPosts.forEach(function(p) { %>
-        <a class="story-card" href="/blog/<%= p.slug %>">
-          <div class="story-thumb">
-            <% if (p.image) { %><picture><source srcset="<%= p.image.replace(/\.png$/, '.webp') %>" type="image/webp"><img src="<%= p.image %>" alt="<%= p.title %>" width="192" height="152" loading="lazy"></picture><% } %>
-          </div>
-          <div>
-            <span class="story-tag"><%= p.category %></span>
-            <div class="story-date">Published <%= p.date %></div>
+    <%    var gpal = { 'Link Building': ['#0EA5A0', '#E3F5F2', '#C5EAE4'], 'On-Page SEO': ['#D97706', '#FDF1DA', '#FADFB0'], 'Keyword Research': ['#DB2777', '#FCE8F1', '#F8CFE1'], 'Technical SEO': ['#334155', '#E7ECF3', '#D3DCE8'], 'Content Strategy': ['#B45309', '#FBEBD3', '#F6D5A5'], 'SEO Reporting': ['#0E7490', '#E1F3F7', '#C3E6EE'] };
+    %>
+    <div class="latest-guides-grid gx">
+      <% latestPosts.forEach(function (p, gi) { var c = gpal[p.category] || gpal['Link Building']; %>
+        <a class="gx-card gx-pro<%= gi === 0 ? ' gx-feat' : '' %>" href="/blog/<%= p.slug %>" style="--c:<%= c[0] %>;--i:<%= gi %>">
+          <div class="gx-img"><img src="<%= p.image %>" alt="<%= p.title %>" loading="lazy" decoding="async"></div>
+          <div class="gx-body">
+            <div class="gx-meta"><span class="gx-cat"><%= p.category %></span><span><%= p.date %></span></div>
             <h3><%= p.title %></h3>
+            <p class="gx-ex"><%= (p.excerpt || '').length > 130 ? p.excerpt.slice(0, 127).replace(/s+S*$/, '') + '...' : p.excerpt %></p>
+            <span class="gx-go">Read the guide <u>&rarr;</u></span>
           </div>
         </a>
       <% }); %>

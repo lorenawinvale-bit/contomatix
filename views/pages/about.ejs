@@ -1,52 +1,48 @@
-<section class="page-hero">
-  <div id="ambient-canvas" class="ambient-canvas"></div>
-  <div class="container page-hero-inner">
+<%
+var tone = ['#0EA5A0', '#DB2777', '#D97706', '#0E7490', '#334155', '#B45309'];
+var IC = ['<path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>', '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>', '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>', '<path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/>', '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>', '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>'];
+%>
+<section class="pg-hero">
+  <div class="container">
     <span class="eyebrow">About</span>
     <h1>We build authority, not shortcuts</h1>
     <p>Contomatix is an SEO and link building agency for brands that want rankings which hold up, earned through real placements and real content, not schemes that work until the next algorithm update.</p>
+    <div class="pg-chips">
+      <span><b><%= postCount %>+</b> guides published</span>
+      <span><b><%= services.length %></b> core services</span>
+      <span><b><%= team.length %></b> people, no layers</span>
+      <span><b>100%</b> white-hat</span>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="ab-sec">
   <div class="container">
     <div class="section-head centered">
       <span class="eyebrow">Why we exist</span>
       <h2>The problems we kept seeing</h2>
       <p>Every client who comes to us has usually been burned by at least one of these first.</p>
     </div>
-    <div class="process-list">
-      <div class="process-step">
-        <span class="step-num">01</span>
-        <h3>Links from sites nobody reads</h3>
-        <p>Placements on private blog networks and link farms that look fine in a report and do nothing for rankings, or actively put the domain at risk.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">02</span>
-        <h3>Reports full of rankings, empty of revenue</h3>
-        <p>Position tracking for keywords nobody searches, with no line connecting any of it to calls, enquiries or sales.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">03</span>
-        <h3>Twelve-month lock-ins before proof</h3>
-        <p>Long contracts signed before a single deliverable has been seen, which is exactly backwards from how trust should be earned.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">04</span>
-        <h3>Work that stops at the ranking</h3>
-        <p>A page reaching position three still fails if the content doesn't answer the question or the site doesn't convert once someone lands.</p>
-      </div>
+    <div class="pg-cards four">
+      <% [['Links from sites nobody reads', 'Placements on private blog networks and link farms that look fine in a report and do nothing for rankings, or actively put the domain at risk.'], ['Reports full of rankings, empty of revenue', 'Position tracking for keywords nobody searches, with no line connecting any of it to calls, enquiries or sales.'], ['Twelve-month lock-ins before proof', 'Long contracts signed before a single deliverable has been seen, which is exactly backwards from how trust should be earned.'], ['Work that stops at the ranking', 'A page reaching position three still fails if the content does not answer the question or the site does not convert once someone lands.']].forEach(function (s, n) { %>
+      <div class="pg-card" style="--c:<%= tone[n] %>"><em>0<%= n + 1 %></em><h3><%= s[0] %></h3><p><%= s[1] %></p></div>
+      <% }); %>
     </div>
   </div>
 </section>
 
-<section class="compare-section">
-  <div class="container" style="max-width: 860px;">
-    <div class="section-head centered">
-      <span class="eyebrow">What we believe</span>
-      <h2>Search works best when the most useful page wins</h2>
+<section class="ab-belief">
+  <div class="container">
+    <div class="ab-bel">
+      <div>
+        <span class="eyebrow">What we believe</span>
+        <h2>Search works best when the most useful page wins</h2>
+      </div>
+      <div class="ab-bel-t">
+        <p class="lead">Not the biggest budget, not the most aggressive link scheme. That is the version of search we want to be on the right side of, partly because it is the honest position, and partly because it is the only one that survives an algorithm update.</p>
+        <p>So our work is deliberately unglamorous: earn placements on sites with real traffic, publish content that genuinely answers the question, fix the technical problems holding a site back, and report on what actually changed. No guarantees of a first-page ranking, because nobody controls Google's results and anyone promising otherwise is selling certainty they do not have.</p>
+      </div>
     </div>
-    <p style="color:var(--text-dim); font-size:1.05rem;">Not the biggest budget, not the most aggressive link scheme. That is the version of search we want to be on the right side of, partly because it is the honest position, and partly because it is the only one that survives an algorithm update.</p>
-    <p style="color:var(--text-dim); font-size:1.05rem;">So our work is deliberately unglamorous: earn placements on sites with real traffic, publish content that genuinely answers the question, fix the technical problems holding a site back, and report on what actually changed. No guarantees of a first-page ranking, because nobody controls Google's results and anyone promising otherwise is selling certainty they do not have.</p>
   </div>
 </section>
 
@@ -67,90 +63,47 @@
   </div>
 </section>
 
-<section>
+<section class="ab-sec">
   <div class="container">
     <div class="section-head centered">
       <span class="eyebrow">Team</span>
       <h2>Say hello to the team</h2>
-      <p>A small, focused team, you talk to the people doing the work.</p>
+      <p>A small, focused team. You talk to the people doing the work.</p>
     </div>
-    <div class="container team-grid" style="padding:0;">
-      <% team.forEach(function(member) { %>
-        <div class="team-card">
-          <% if (member.hasPhoto) { %>
-            <div class="team-avatar team-avatar-photo">
-              <img src="<%= member.photo %>" alt="<%= member.name %>" width="88" height="88">
-              <span class="team-avatar-badge" aria-hidden="true"><%- include('../partials/logo', { logoSize: 18, logoId: 'about-badge-' + member.name.replace(/\s+/g,'') }) %></span>
-            </div>
-          <% } else { %>
-            <div class="team-avatar"><%= member.name.split(' ').map(function(w){ return w[0]; }).join('') %></div>
-          <% } %>
-          <h3><%= member.name %></h3>
-          <div class="role"><%= member.role %></div>
-          <p class="bio"><%= member.bio %></p>
-        </div>
+    <div class="ab-team">
+      <% team.forEach(function (m, i) { var ini = m.name.split(' ').map(function (w) { return w[0]; }).join(''); %>
+      <a class="ab-tm" href="/team" style="--c:<%= tone[i % 4] %>">
+        <span class="ab-ph"><% if (m.hasPhoto) { %><img src="<%= m.photo %>" alt="<%= m.name %>" width="72" height="72" loading="lazy"><% } else { %><b><%= ini %></b><% } %></span>
+        <strong><%= m.name %></strong><small><%= m.role %></small>
+        <p><%= m.bio.length > 120 ? m.bio.slice(0, 117).replace(/\s+\S*$/, '') + '...' : m.bio %></p>
+      </a>
       <% }); %>
     </div>
+    <p class="ab-more"><a href="/team">Meet the full team &rarr;</a></p>
   </div>
 </section>
 
-<section class="services">
-  <span class="deco-blob deco-blob-1" aria-hidden="true"></span>
+<section class="ab-sec ab-hold">
   <div class="container">
     <div class="section-head centered">
       <span class="eyebrow">How we work</span>
       <h2>Six things we hold to</h2>
     </div>
-    <div class="process-list">
-      <div class="process-step">
-        <span class="step-num">01</span>
-        <h3>Real sites, or no placement</h3>
-        <p>Every link goes on a site with genuine organic traffic, earned through manual outreach. You see the target list with metrics before anything goes live.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">02</span>
-        <h3>You own your accounts</h3>
-        <p>Analytics, Search Console and Google Business Profile stay in your accounts, with access granted to us, never the other way round.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">03</span>
-        <h3>We say what not to spend on</h3>
-        <p>Sometimes the honest answer is that local fundamentals will do more than the retainer you were about to buy. We would rather say it.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">04</span>
-        <h3>Reporting tied to outcomes</h3>
-        <p>Rankings are an input. We report calls, enquiries and the work that produced them, not a wall of positions with no context.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">05</span>
-        <h3>Short notice periods</h3>
-        <p>A first engagement should not need a twelve-month lock-in. Confidence in the work should be why you stay.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">06</span>
-        <h3>Honest about AI</h3>
-        <p>We use AI where it genuinely helps and say so. What we do not do is publish unedited AI output and call it content strategy.</p>
-      </div>
+    <div class="pg-cards three">
+      <% [['Real sites, or no placement', 'Every link goes on a site with genuine organic traffic, earned through manual outreach. You see the target list with metrics before anything goes live.'], ['You own your accounts', 'Analytics, Search Console and Google Business Profile stay in your accounts, with access granted to us, never the other way round.'], ['We say what not to spend on', 'Sometimes the honest answer is that local fundamentals will do more than the retainer you were about to buy. We would rather say it.'], ['Reporting tied to outcomes', 'Rankings are an input. We report calls, enquiries and the work that produced them, not a wall of positions with no context.'], ['Short notice periods', 'A first engagement should not need a twelve-month lock-in. Confidence in the work should be why you stay.'], ['Honest about AI', 'We use AI where it genuinely helps and say so. What we do not do is publish unedited AI output and call it content strategy.']].forEach(function (s, n) { %>
+      <div class="pg-card" style="--c:<%= tone[n] %>"><span class="pg-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><%- IC[n] %></svg></span><em>0<%= n + 1 %></em><h3><%= s[0] %></h3><p><%= s[1] %></p></div>
+      <% }); %>
     </div>
   </div>
 </section>
 
-<section>
+<section class="ab-sec">
   <div class="container">
     <div class="section-head centered">
       <span class="eyebrow">Services</span>
       <h2>What we actually do</h2>
     </div>
-    <div class="service-grid">
-      <% services.forEach(function(s) { %>
-        <a class="service-card" href="/services/<%= s.slug %>">
-          <h3><%= s.title %></h3>
-          <p><%= s.summary || s.description %></p>
-          <span class="service-card-link">Learn more &rarr;</span>
-        </a>
-      <% }); %>
-    </div>
+    <%- include('../partials/service-grid') %>
   </div>
 </section>
 

@@ -1,54 +1,50 @@
-<section class="blog-header">
+<% var gpal = { 'Link Building': '#0EA5A0', 'On-Page SEO': '#D97706', 'Keyword Research': '#DB2777', 'Technical SEO': '#334155', 'Content Strategy': '#B45309', 'SEO Reporting': '#0E7490' }; var isFirst = (page === 1 && activeCategory === 'All' && !search); %>
+<section class="bl-hero">
   <div class="container">
-    <h1>Contomatix blog</h1>
-    <p>SEO strategy, link building tactics, and content insights, from the Contomatix team.</p>
+    <span class="eyebrow">The Contomatix blog</span>
+    <h1>SEO guides backed by our own data</h1>
+    <p>Link building, on-page and technical SEO, written from what we measure on real sites. <%= totalPosts %> guides and counting.</p>
+    <form class="bl-search" method="get" action="/blog" role="search">
+      <% if (activeCategory && activeCategory !== 'All') { %><input type="hidden" name="category" value="<%= activeCategorySlug %>"><% } %>
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" name="q" placeholder="Search <%= totalPosts %> guides" value="<%= search || '' %>" aria-label="Search the blog">
+      <button type="submit">Search</button>
+    </form>
+    <div class="bl-cats">
+      <% categories.filter(function(cat){ return cat.name === 'All' || cat.name === activeCategory || (catCounts[cat.name] || 0) >= 10; }).forEach(function(cat) { %>
+        <a class="bl-cat <%= cat.name === activeCategory ? 'active' : '' %>" href="/blog?category=<%= cat.slug %><%= search ? '&q=' + encodeURIComponent(search) : '' %>"><%= cat.name %><em><%= cat.name === 'All' ? totalPosts : (catCounts[cat.name] || 0) %></em></a>
+      <% }); %>
+    </div>
+    <% if (search) { %><p class="bl-result"><%= resultCount %> result<%= resultCount === 1 ? '' : 's' %> for &ldquo;<%= search %>&rdquo; &middot; <a href="/blog">Clear</a></p><% } %>
   </div>
 </section>
 
-<div class="container blog-toolbar">
-  <div class="category-tabs">
-    <% categories.forEach(function(cat) { %>
-      <a class="category-tab <%= cat.name === activeCategory ? 'active' : '' %>" href="/blog?category=<%= cat.slug %><%= search ? '&q=' + encodeURIComponent(search) : '' %>"><%= cat.name %></a>
-    <% }); %>
-  </div>
-  <form class="search-form" method="get" action="/blog">
-    <% if (activeCategory && activeCategory !== 'All') { %><input type="hidden" name="category" value="<%= activeCategorySlug %>"><% } %>
-    <input class="search-box" type="search" name="q" placeholder="Search..." value="<%= search || '' %>">
-  </form>
-</div>
-
 <% if (posts.length) { %>
-<div class="container">
-  <div class="post-grid post-grid-main">
-    <% posts.forEach(function(p) { %>
-      <a class="post-card" href="/blog/<%= p.slug %>">
-        <div class="post-image">
-          <% if (p.image) { %><picture><source srcset="<%= p.image.replace(/\.png$/, '.webp') %>" type="image/webp"><img src="<%= p.image %>" alt="<%= p.title %>" width="360" height="225" loading="lazy"></picture><% } %>
-        </div>
-        <div class="post-body">
-          <span class="story-tag"><%= p.category %></span>
-          <h2><%= p.title %></h2>
-          <div class="post-byline">
-            <% if (p.authorInfo.hasPhoto) { %>
-              <img class="post-byline-avatar" src="<%= p.authorInfo.photo %>" alt="" width="24" height="24">
-            <% } else { %>
-              <span class="post-byline-avatar post-byline-initials"><%= p.authorInfo.name.split(' ').map(function(w){ return w[0]; }).join('') %></span>
-            <% } %>
-            <span class="post-byline-name"><%= p.authorInfo.name %></span>
-            <span class="post-byline-sep">&middot;</span>
-            <span class="post-byline-date"><%= p.date %></span>
-            <span class="post-byline-sep">&middot;</span>
-            <span class="post-byline-read"><%= p.readMinutes %> min read</span>
+<section class="bl-grid-wrap">
+  <div class="container">
+    <div class="bl-grid">
+      <% posts.forEach(function(p, gi) { var c = gpal[p.category] || '#0EA5A0'; var feat = isFirst && gi === 0; %>
+        <a class="bl-card<%= feat ? ' bl-feat' : '' %>" href="/blog/<%= p.slug %>" style="--c:<%= c %>;--i:<%= gi %>">
+          <div class="bl-img">
+            <% if (p.image) { %><picture><source srcset="<%= p.image.replace(/\.png$/, '.webp') %>" type="image/webp"><img src="<%= p.image %>" alt="<%= p.title %>" width="1200" height="630" loading="<%= gi < 3 ? 'eager' : 'lazy' %>" decoding="async"></picture><% } %>
           </div>
-        </div>
-      </a>
-    <% }); %>
+          <div class="bl-body">
+            <div class="bl-meta"><span class="bl-tag"><%= p.category %></span><span><%= p.date %></span></div>
+            <h2><%= p.title %></h2>
+            <% if (feat) { %><p class="bl-ex"><%= p.excerpt %></p><% } %>
+            <div class="bl-by">
+              <% if (p.authorInfo.hasPhoto) { %><img src="<%= p.authorInfo.photo %>" alt="" width="26" height="26"><% } else { %><span class="bl-ini"><%= p.authorInfo.name.split(' ').map(function(w){ return w[0]; }).join('') %></span><% } %>
+              <span><%= p.authorInfo.name %></span><span class="bl-dot"></span><span><%= p.readMinutes %> min read</span>
+              <u>&rarr;</u>
+            </div>
+          </div>
+        </a>
+      <% }); %>
+    </div>
   </div>
-</div>
+</section>
 <% } else { %>
-<div class="container">
-  <p style="color:var(--text-dim); padding: 40px 0;">No posts in this category yet, check back soon.</p>
-</div>
+<div class="container"><p style="color:var(--text-dim);padding:40px 0;">No posts match yet, check back soon.</p></div>
 <% } %>
 
 <div class="container">

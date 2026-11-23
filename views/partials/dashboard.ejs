@@ -1,0 +1,95 @@
+<%
+/* Our best backlinks, from Ahrefs (Referring domains report for contomatix.com, 23 Nov 2026), sorted by DR. Links from sites Ahrefs flags as spam are excluded.
+   DR and traffic are Ahrefs estimates. These are public facts about who links to us; no client data. */
+var bl = [
+ { d: 'designrush.com', dr: 90, tr: 194467, links: 18, follow: false, seen: '22 Sep 2026', isnew: false },
+ { d: 'goodfirms.co', dr: 87, tr: 159805, links: 1, follow: false, seen: '6 Sep 2026', isnew: false },
+ { d: 'referralcandy.com', dr: 83, tr: 10999, links: 1, follow: true, seen: '19 Oct 2026', isnew: false },
+ { d: 'apollotechnical.com', dr: 78, tr: 6235, links: 1, follow: true, seen: '19 Sep 2026', isnew: false },
+ { d: 'raptorkit.com', dr: 77, tr: 5827, links: 1, follow: true, seen: '10 Sep 2026', isnew: false },
+ { d: 'motocms.com', dr: 74, tr: 7897, links: 1, follow: true, seen: '14 Nov 2026', isnew: true },
+ { d: 'agilityportal.io', dr: 74, tr: 6688, links: 1, follow: true, seen: '22 Nov 2026', isnew: true },
+ { d: 'lyzr.ai', dr: 72, tr: 7644, links: 1, follow: true, seen: '30 Oct 2026', isnew: true },
+ { d: 'ampifire.com', dr: 71, tr: 6522, links: 1, follow: true, seen: '5 Nov 2026', isnew: true },
+ { d: 'nine.is', dr: 67, tr: 224, links: 1, follow: true, seen: '1 Oct 2026', isnew: false },
+ { d: 'agicent.com', dr: 61, tr: 4036, links: 1, follow: true, seen: '11 Oct 2026', isnew: false },
+ { d: 'solidgigs.com', dr: 59, tr: 1978, links: 1, follow: true, seen: '5 Nov 2026', isnew: true }
+];
+bl = bl.filter(function (b) { return b.follow; });
+var nB = bl.length, topDr = Math.max.apply(null, bl.map(function (b) { return b.dr; }));
+var big = bl.filter(function (b) { return b.dr >= 70; });
+var sumTr = big.reduce(function (a, b) { return a + b.tr; }, 0);
+function fmt(n) { return n >= 1000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1).replace('.0', '') + 'K' : String(n); }
+var newN = bl.filter(function (b) { return b.isnew; }).length;
+var follow = bl.filter(function (b) { return b.follow; }).length;
+var fp = Math.round(follow / bl.length * 100);
+%>
+<%- include('dashboard-css') %>
+<section class="db" aria-label="Our best backlinks">
+  <div class="container">
+    <div class="db-win" data-db>
+      <div class="db-bar">
+        <div class="db-brand"><i><svg width="16" height="16" viewBox="0 0 48 48"><path d="M 35.52 13.63 A 15.5 15.5 0 1 0 35.52 34.37" fill="none" stroke="#0EA5A0" stroke-width="5.5" stroke-linecap="round"/><circle cx="35.52" cy="13.63" r="3.6" fill="#F5A623"/><circle cx="35.52" cy="34.37" r="3.6" fill="#14B8A6"/></svg></i>Our best backlinks</div>
+        <div class="db-tabs" role="tablist"><button class="a" data-tab="overview" role="tab">Overview</button><button data-tab="sources" role="tab">All <%= nB %> links</button><button data-tab="method" role="tab">How we read it</button></div>
+        <div class="db-tools"><span class="db-real"><i></i>Real data &middot; Ahrefs &middot; 23 Nov 2026</span><button class="db-chip" type="button" data-export>Export CSV</button></div>
+      </div>
+      <div class="db-body">
+        <div class="db-panel a" data-panel="overview">
+          <div class="db-kpis">
+            <div class="db-kpi"><div class="l">Links from DR 70+ sites</div><div class="v"><span data-n="<%= big.length %>"><%= big.length %></span></div><p>Dofollow only. Spam-flagged sites are not counted.</p></div>
+            <div class="db-kpi"><div class="l">Highest linking DR</div><div class="v"><span data-n="<%= topDr %>"><%= topDr %></span></div><p>Domain rating of our strongest linking site.</p></div>
+            <div class="db-kpi"><div class="l">New in the last 30 days</div><div class="v"><span data-n="<%= newN %>"><%= newN %></span><span class="d">fresh</span></div><p>Links first seen since 24 October.</p></div>
+            <div class="db-kpi"><div class="l">Est. traffic of linking sites</div><div class="v"><span><%= fmt(sumTr) %></span></div><p>Combined, for the <%= big.length %> sites at DR 70+.</p></div>
+          </div>
+          <div class="db-mid">
+            <div class="db-card">
+              <h4>Linking sites by domain rating <small>Top <%= nB %>, dofollow, Ahrefs DR</small></h4>
+              <div class="db-hb">
+                <% bl.forEach(function (b, i) { %><div class="r" title="<%= b.d %>: DR <%= b.dr %>, est. traffic <%= b.tr.toLocaleString('en-US') %>"><span><%= b.d %><% if (b.isnew) { %> <em style="font-style:normal;font-size:.62rem;font-weight:800;color:#0B807C;background:rgba(20,184,166,.14);padding:1px 6px;border-radius:5px;margin-left:4px">NEW</em><% } %></span><span class="tr"><i style="--w:<%= b.dr %>;--i:<%= i %>;background:<%= b.dr >= 70 ? '#0EA5A0' : '#F5A623' %>"></i></span><b><%= b.dr %></b></div><% }); %>
+              </div>
+            </div>
+            <div class="db-card">
+              <h4>Link type <small>Dofollow only</small></h4>
+              <div class="db-donut">
+                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.915" stroke="#EFE8DB" style="stroke-dasharray:100 0"/><circle cx="21" cy="21" r="15.915" pathLength="100" stroke="#0EA5A0" style="--len:99;stroke-dashoffset:0"/></svg>
+                <ul><li><span><i style="background:#0EA5A0"></i>Dofollow</span><b><%= nB %> of <%= nB %></b></li><li><span><i style="background:#0EA5A0;opacity:.35"></i>Placed on real sites</span><b>Yes</b></li></ul>
+              </div>
+              <div class="db-note"><strong>How we filter:</strong> only links that pass authority are shown. Nofollow links and spam-flagged sites are left out, and <%= newN %> of these <%= nB %> arrived in the last 30 days.</div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="db-panel" data-panel="sources">
+          <div class="db-card db-tbl">
+            <h4>All <%= nB %> dofollow links <small>Click a column to sort</small></h4>
+            <table id="db-table"><thead><tr><th data-k="n">Linking site</th><th data-k="dr" data-num>DR</th><th data-k="tr" data-num>Est. traffic</th><th data-k="links" data-num>Links to us</th><th data-k="t">Type</th><th data-k="seen" data-num>First seen</th></tr></thead><tbody>
+            <% bl.forEach(function (b) { %><tr data-n="<%= b.d %>" data-dr="<%= b.dr %>" data-tr="<%= b.tr %>" data-links="<%= b.links %>" data-t="<%= b.follow ? 'Dofollow' : 'Nofollow' %>" data-seen="<%= Date.parse(b.seen) %>"><td><strong><%= b.d %></strong><% if (b.isnew) { %> <span class="db-ty" style="margin-left:6px">New</span><% } %></td><td><span style="display:inline-grid;min-width:30px;height:24px;place-items:center;border-radius:7px;background:rgba(20,184,166,.12);color:#0B807C;font-weight:700"><%= b.dr %></span></td><td><%= b.tr.toLocaleString('en-US') %></td><td><%= b.links %></td><td><span class="db-ty"><%= b.follow ? 'Dofollow' : 'Nofollow' %></span></td><td><%= b.seen %></td></tr><% }); %>
+            </tbody></table>
+            <div class="db-foot"><span>Source: Ahrefs, Referring domains report for contomatix.com, 23 November 2026.</span><a href="/blog/backlinks-example">How we review a backlink profile &rarr;</a></div>
+          </div>
+        </div>
+        <div class="db-panel" data-panel="method">
+          <div class="db-3">
+            <div class="db-q"><b>1</b><h5>We list real links, sorted by DR</h5><p>These are sites that link to contomatix.com today, taken from Ahrefs and sorted by domain rating.</p></div>
+            <div class="db-q"><b>2</b><h5>Spam-flagged sites are left out</h5><p>Ahrefs marks some referring domains as spam. We do not show them and we do not count them. Nofollow links are left out too: this list is dofollow only.</p></div>
+            <div class="db-q"><b>3</b><h5>Metrics are estimates</h5><p>DR and traffic are Ahrefs figures, not guarantees of rankings. A link is judged on relevance and context too.</p></div>
+          </div>
+          <div class="db-card" style="margin-top:14px"><h4>Why show our own profile</h4><p style="margin:0;font-size:.86rem;color:var(--text-dim);line-height:1.65">If we ask you to trust how we judge links, you should see how we judge ours. In the free audit we run the same review on your backlink profile and tell you which links help, which are noise and which are a risk.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="db-cap">Our own backlinks, not client data. Metrics from Ahrefs, 23 November 2026.</p>
+  </div>
+</section>
+<script>
+(function(){
+var win=document.querySelector('[data-db]');if(!win)return;
+function count(){win.querySelectorAll('[data-n]').forEach(function(el){if(!el.closest('.db-kpi'))return;var end=+el.dataset.n,t0=null,d=1300;
+ function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/d),e=1-Math.pow(1-p,3);el.textContent=Math.round(end*e);if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)})}
+var tabs=win.querySelectorAll('[data-tab]'),panels=win.querySelectorAll('[data-panel]');
+tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.classList.toggle('a',x===b)});panels.forEach(function(p){p.classList.toggle('a',p.dataset.panel===b.dataset.tab)})})});
+var tb=win.querySelector('#db-table');if(tb){var dir={};tb.querySelectorAll('th').forEach(function(th){th.addEventListener('click',function(){var k=th.dataset.k,num=th.hasAttribute('data-num');dir[k]=dir[k]===1?-1:1;tb.querySelectorAll('th').forEach(function(h){h.removeAttribute('data-dir')});th.setAttribute('data-dir',dir[k]);var body=tb.tBodies[0],rows=[].slice.call(body.rows);rows.sort(function(a,b){var x=a.dataset[k],y=b.dataset[k];return (num?(+x-+y):x.localeCompare(y))*dir[k]});rows.forEach(function(r){body.appendChild(r)})})})}
+var ex=win.querySelector('[data-export]');if(ex)ex.addEventListener('click',function(){var rows=[['Linking site','DR','Est. traffic','Links to us','Type','First seen']];win.querySelectorAll('#db-table tbody tr').forEach(function(r){rows.push([r.dataset.n,r.dataset.dr,r.dataset.tr,r.dataset.links,r.dataset.t,new Date(+r.dataset.seen).toISOString().slice(0,10)])});var q=String.fromCharCode(34);var csv=rows.map(function(r){return r.map(function(c){return q+String(c).split(q).join(q+q)+q}).join(',')}).join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Source: Ahrefs Referring domains report for contomatix.com, 23 November 2026. Spam-flagged sites excluded.';var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='contomatix-best-backlinks-2026-11-23.csv';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)});
+if(!('IntersectionObserver' in window)){win.classList.add('is-in');return}
+new IntersectionObserver(function(es,io){es.forEach(function(e){if(e.isIntersecting){win.classList.add('is-in');count();io.disconnect()}})},{threshold:.2}).observe(win)})();
+</script>

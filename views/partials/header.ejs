@@ -1,3 +1,97 @@
+<%
+/* Header with mega menus: Services (8 items with icons + audit card) and Tools (search + featured tools). Mobile keeps the simple lists. */
+var IC = {
+  'link-building': '<path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>',
+  'guest-posting': '<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/>',
+  'on-page-seo': '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+  'off-page-seo': '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
+  'white-label-seo': '<circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 5a3.5 3.5 0 0 1 0 7M18 14c2 .8 3 2.7 3 6"/>',
+  'keyword-research': '<circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/>',
+  'ai-seo': '<path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/>',
+  'technical-seo': '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>'
+};
+var TI = ['<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>', '<path d="M9 8l-5 4 5 4M15 8l5 4-5 4"/>', '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/>', '<path d="M6 3h9l4 4v14H6z"/><path d="M9 13h7M9 17h5"/>', '<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>', '<path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>'];
+var featured = ['meta-description-checker', 'utm-builder', 'schema-markup-generator', 'robots-txt-generator', 'llms-txt-generator', 'serp-snippet-preview', 'readability-checker', 'sitemap-generator', 'link-prospect-scorer', 'redirect-mapper', 'hreflang-generator', 'keyword-grouping-tool'];
+var feat = featured.filter(function (s) { return tools.some(function (t) { return t.slug === s; }); }).slice(0, 9);
+if (feat.length < 9) tools.forEach(function (t) { if (feat.length < 9 && feat.indexOf(t.slug) < 0) feat.push(t.slug); });
+var SL = { 'link-building': 'Vetted, relevant links that move rankings', 'guest-posting': 'Original articles on relevant blogs', 'on-page-seo': 'Titles, content, links and schema', 'off-page-seo': 'Authority, mentions and citations', 'white-label-seo': 'SEO delivery for agencies, under your brand', 'keyword-research': 'Search intent mapped to your pages', 'ai-seo': 'Get cited in ChatGPT and AI Overviews', 'technical-seo': 'Crawling, speed, indexing and schema' };
+function short(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '...' : s; }
+%>
+<style>
+.header-inner{position:relative}
+@media (min-width:901px){
+ .nav-dropdown-menu{display:none!important}
+ .main-nav{position:relative}
+ .nav-pill{position:absolute;left:0;top:50%;height:36px;border-radius:999px;background:rgba(22,25,42,.06);box-shadow:0 0 0 1px rgba(22,25,42,.05) inset;transform:translate3d(var(--x,0),-50%,0);width:var(--w,0);opacity:0;transition:transform .35s cubic-bezier(.22,.9,.35,1),width .35s cubic-bezier(.22,.9,.35,1),opacity .25s;pointer-events:none;z-index:0}
+ .main-nav.has-pill .nav-pill{opacity:1}
+ .main-nav>a,.main-nav>.nav-dropdown{position:relative;z-index:1}
+ .nav-dropdown{position:relative}
+ .nav-dropdown-toggle svg{transition:transform .3s}.nav-dropdown:hover .nav-dropdown-toggle svg,.nav-dropdown:focus-within .nav-dropdown-toggle svg{transform:rotate(180deg)}
+ .mega{position:absolute;left:50%;top:calc(100% + 18px);width:var(--mw,760px);transform:translate3d(-50%,10px,0) scale(.97);transform-origin:50% 0;opacity:0;visibility:hidden;pointer-events:none;
+  background:rgba(255,255,255,.985);backdrop-filter:blur(30px) saturate(1.6);-webkit-backdrop-filter:blur(24px) saturate(1.6);border:1px solid rgba(255,255,255,.95);border-radius:22px;padding:14px;z-index:50;
+  box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 0 0 1px rgba(8,50,60,.07),0 4px 8px rgba(8,50,60,.05),0 30px 60px -20px rgba(8,50,60,.35),0 70px 110px -40px rgba(8,50,60,.35);
+  transition:opacity .25s,transform .4s cubic-bezier(.22,.9,.35,1),visibility 0s .25s}
+ .mega::before{content:"";position:absolute;left:0;right:0;top:-22px;height:22px}
+ .nav-dropdown:hover .mega,.nav-dropdown:focus-within .mega,.nav-dropdown.open .mega{opacity:1;visibility:visible;pointer-events:auto;transform:translate3d(-50%,0,0) scale(1);transition-delay:0s}
+ .mega-sv{--mw:780px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px}
+ .mega-tl{--mw:820px}
+ .mg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+ .mg-it{display:flex;gap:12px;align-items:flex-start;padding:11px 12px;border-radius:14px;text-decoration:none;color:var(--text);transition:background .2s,transform .3s cubic-bezier(.22,.9,.35,1)}
+ .mg-it:hover{background:var(--bg);transform:translateX(3px)}
+ .mg-ic{flex:0 0 36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(20,184,166,.16),rgba(245,166,35,.14));color:#0A6E69;box-shadow:0 0 0 1px rgba(20,184,166,.18) inset;transition:transform .35s cubic-bezier(.3,1.5,.5,1),background .3s,color .3s}
+ .mg-it:hover .mg-ic{transform:scale(1.1) rotate(-4deg);background:var(--accent-teal);color:#fff}
+ .mg-it strong{display:block;font-family:var(--font-display);font-size:.92rem;letter-spacing:-.02em;line-height:1.2}
+ .mg-it small{display:block;margin-top:2px;font-size:.74rem;color:var(--text-dim);line-height:1.4;font-weight:500}
+ .mg-aside{position:relative;overflow:hidden;border-radius:16px;padding:18px;background:radial-gradient(260px 160px at 100% 0%,rgba(20,184,166,.3),transparent 70%),radial-gradient(240px 160px at 0% 100%,rgba(245,166,35,.25),transparent 70%),linear-gradient(160deg,#0F252C,#0B1A21);color:#fff;display:flex;flex-direction:column;gap:12px}
+ .mg-aside h5{margin:0;font-family:var(--font-display);font-size:1.18rem;letter-spacing:-.03em;line-height:1.15}
+ .mg-aside p{margin:0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.72)}
+ .mg-aud{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:7px;font-size:.76rem;font-weight:600}
+ .mg-aud li{display:flex;align-items:center;gap:9px;opacity:0;transform:translateX(-8px)}
+ .mg-aud li b{display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#14B8A6}
+ .mg-aud li b::after{content:"\2713";font-size:.58rem;color:#fff;font-weight:800}
+ .nav-dropdown:hover .mg-aud li,.nav-dropdown:focus-within .mg-aud li{animation:mgIn .5s cubic-bezier(.22,.9,.35,1) forwards}
+ .mg-aud li:nth-child(2){animation-delay:.12s!important}.mg-aud li:nth-child(3){animation-delay:.24s!important}.mg-aud li:nth-child(4){animation-delay:.36s!important}
+ @keyframes mgIn{to{opacity:1;transform:none}}
+ .mg-btn{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:12px;background:#fff;color:#0B1A21;font-weight:800;font-size:.84rem;text-decoration:none;transition:transform .3s cubic-bezier(.22,.9,.35,1),box-shadow .3s}
+ .mg-btn:hover{transform:translateY(-2px);box-shadow:0 14px 24px -10px rgba(0,0,0,.6)}
+ .mg-top{display:flex;align-items:center;gap:12px;padding:4px 4px 12px}
+ .mg-search{position:relative;flex:1}
+ .mg-search input{width:100%;font:inherit;font-size:.88rem;padding:11px 14px 11px 38px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--text);outline:0;transition:border-color .2s,box-shadow .2s,background .2s}
+ .mg-search input:focus{border-color:var(--accent-teal);background:#fff;box-shadow:0 0 0 3px rgba(20,184,166,.15)}
+ .mg-search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:#7A8294;fill:none;stroke-width:2;stroke-linecap:round}
+ .mg-badge{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#0A6E69;background:rgba(20,184,166,.12);border:1px solid rgba(20,184,166,.3);padding:5px 9px;border-radius:7px;white-space:nowrap}
+ .mg-tg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+ .mg-tg .mg-it{padding:10px}.mg-tg .mg-it.hide{display:none}
+ .mg-empty{display:none;grid-column:1/-1;padding:18px;text-align:center;color:var(--text-dim);font-size:.84rem}
+ .mg-foot{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding:12px 14px 4px;border-top:1px dashed var(--border-light);font-size:.8rem}
+ .mg-foot a{font-weight:800;color:var(--accent-teal-dim);text-decoration:none}.mg-foot a:hover{text-decoration:underline}.mg-foot span{color:var(--text-dim);font-weight:600}
+ .hd-prog{position:absolute;left:26px;right:26px;bottom:-1px;height:2px;border-radius:2px;background:rgba(22,25,42,.06);overflow:hidden;pointer-events:none}
+ .hd-prog i{display:block;height:100%;background:linear-gradient(90deg,#14B8A6,#F5A623);transform-origin:left;transform:scaleX(var(--hsp,0))}
+}
+@media (min-width:901px){
+ .site-header .header-inner{height:66px;background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(255,251,244,.62));border:1px solid transparent;
+  background-clip:padding-box;position:relative;
+  box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 0 0 1px rgba(22,25,42,.06),0 2px 4px rgba(22,25,42,.04),0 22px 44px -22px rgba(22,25,42,.38),0 0 60px -24px rgba(14,165,160,.5)}
+ .site-header .header-inner::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;z-index:-1;pointer-events:none;background:linear-gradient(100deg,rgba(14,165,160,.55),rgba(255,255,255,.9) 30%,rgba(255,255,255,.9) 70%,rgba(245,166,35,.55));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+ .brand-mark{display:grid;place-items:center;filter:drop-shadow(0 6px 10px rgba(14,165,160,.35))}
+ .brand-name{letter-spacing:-.045em;font-size:1.24rem}
+ .main-nav{gap:2px}
+ .nav-link{font-size:.93rem;font-weight:600;letter-spacing:-.01em;transition:color .25s}
+ .nav-link:hover{background:none;color:var(--text)}
+ .nav-link.active{background:none;color:var(--text)}
+ .nav-link:not(.nav-cta).active::after{content:"";position:absolute;left:50%;bottom:3px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--accent-teal);box-shadow:0 0 0 3px rgba(20,184,166,.18),0 0 10px rgba(20,184,166,.8)}
+ .nav-link{position:relative}
+ .nav-pill{background:linear-gradient(180deg,#fff,rgba(247,240,229,.9));box-shadow:0 0 0 1px rgba(22,25,42,.07),0 6px 14px -6px rgba(22,25,42,.25),0 1px 0 #fff inset}
+ .nav-count{font-style:normal;font-family:var(--font-mono);font-size:.58rem;font-weight:700;letter-spacing:.04em;color:#0A6E69;background:rgba(20,184,166,.14);border:1px solid rgba(20,184,166,.3);padding:2px 6px;border-radius:999px;line-height:1.2}
+ .nav-cta{position:relative;overflow:hidden;margin-left:10px;padding:11px 18px 11px 22px;gap:9px;background:linear-gradient(180deg,#2A2E48,#16192A);border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 1px 0 rgba(255,255,255,.28) inset,0 -10px 18px rgba(14,165,160,.18) inset,0 12px 24px -10px rgba(22,25,42,.7),0 0 0 4px rgba(22,25,42,.04);transition:transform .3s cubic-bezier(.22,.9,.35,1),box-shadow .3s}
+ .nav-cta:hover{background:linear-gradient(180deg,#2A2E48,#16192A);transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.3) inset,0 -10px 18px rgba(14,165,160,.3) inset,0 18px 30px -10px rgba(22,25,42,.75),0 0 0 4px rgba(14,165,160,.14)}
+ .nav-cta::after{content:"";position:absolute;top:0;bottom:0;left:-40%;width:30%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:ctaShine 5.5s ease-in-out infinite}
+ .cta-ar{transition:transform .3s cubic-bezier(.3,1.5,.5,1);position:relative}.nav-cta:hover .cta-ar{transform:translateX(4px)}
+ @keyframes ctaShine{0%,70%{left:-40%}100%{left:130%}}
+}
+@media (max-width:900px){.nav-count,.cta-ar{display:none}.mega,.nav-pill,.hd-prog{display:none!important}}
+</style>
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="brand">
@@ -8,10 +102,11 @@
     </a>
 
     <nav class="main-nav" id="main-nav">
+      <span class="nav-pill" aria-hidden="true"></span>
       <a href="/" class="nav-link <%= currentPath === '/' ? 'active' : '' %>">Home</a>
 
       <div class="nav-dropdown">
-        <a href="/services" class="nav-link nav-dropdown-toggle <%= currentPath === '/services' ? 'active' : '' %>">
+        <a href="/services" class="nav-link nav-dropdown-toggle <%= currentPath === '/services' ? 'active' : '' %>" aria-haspopup="true">
           Services
           <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
         </a>
@@ -21,13 +116,26 @@
             <a href="/services/<%= s.slug %>"><%= s.title %></a>
           <% }); %>
         </div>
+        <div class="mega mega-sv" role="menu" aria-label="Services">
+          <div class="mg-grid">
+            <% services.forEach(function(s) { %>
+              <a class="mg-it" role="menuitem" href="/services/<%= s.slug %>"><span class="mg-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><%- IC[s.slug] || IC['link-building'] %></svg></span><span><strong><%= s.title %></strong><small><%= SL[s.slug] || short(s.summary, 48) %></small></span></a>
+            <% }); %>
+          </div>
+          <div class="mg-aside">
+            <h5>Start with a free audit</h5>
+            <p>We look at your site and your backlink profile first, then tell you what is worth doing.</p>
+            <ul class="mg-aud"><li><b></b>Backlink gap against rivals</li><li><b></b>Technical and on-page issues</li><li><b></b>Links that help, noise and risk</li></ul>
+            <a class="mg-btn" href="/contact">Get a free audit <span>&rarr;</span></a>
+          </div>
+        </div>
       </div>
 
       <a href="/blog" class="nav-link <%= currentPath.startsWith('/blog') ? 'active' : '' %>">Blog</a>
 
       <div class="nav-dropdown">
-        <a href="/tools" class="nav-link nav-dropdown-toggle <%= currentPath === '/tools' ? 'active' : '' %>">
-          Tools
+        <a href="/tools" class="nav-link nav-dropdown-toggle <%= currentPath === '/tools' ? 'active' : '' %>" aria-haspopup="true">
+          Tools <em class="nav-count"><%= tools.length %></em>
           <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
         </a>
         <div class="nav-dropdown-menu">
@@ -36,14 +144,40 @@
             <a href="/tools/<%= t.slug %>"><%= t.title %></a>
           <% }); %>
         </div>
+        <div class="mega mega-tl" role="menu" aria-label="Free tools">
+          <div class="mg-top"><label class="mg-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input type="text" data-mg-q placeholder="Search <%= tools.length %> free tools" aria-label="Search free tools" autocomplete="off"></label><span class="mg-badge">Free &middot; in your browser</span></div>
+          <div class="mg-tg" data-mg-g>
+            <% tools.forEach(function(t, i) { var isF = feat.indexOf(t.slug) > -1; %>
+              <a class="mg-it<%= isF ? '' : ' hide' %>" data-f="<%= isF ? 1 : 0 %>" data-q="<%= (t.title + ' ' + (t.summary || '')).toLowerCase().replace(/"/g, '') %>" role="menuitem" href="/tools/<%= t.slug %>"><span class="mg-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><%- TI[i % TI.length] %></svg></span><span><strong><%= t.title %></strong><small><%= short(t.summary, 56) %></small></span></a>
+            <% }); %>
+            <div class="mg-empty" data-mg-e>No tool matches. <a href="/tools">See all tools</a>.</div>
+          </div>
+          <div class="mg-foot"><span>Nothing you type is sent anywhere.</span><a href="/tools">All <%= tools.length %> free tools &rarr;</a></div>
+        </div>
       </div>
       <a href="/team" class="nav-link <%= currentPath === '/team' ? 'active' : '' %>">Team</a>
       <a href="/about" class="nav-link <%= currentPath === '/about' ? 'active' : '' %>">About</a>
-      <a href="/contact" class="nav-link nav-cta <%= currentPath === '/contact' ? 'active' : '' %>">Get in touch</a>
+      <a href="/contact" class="nav-link nav-cta <%= currentPath === '/contact' ? 'active' : '' %>"><span>Get in touch</span><svg class="cta-ar" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </nav>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+    <span class="hd-prog" aria-hidden="true"><i></i></span>
   </div>
 </header>
+<script>
+(function(){
+var nav=document.getElementById('main-nav');if(!nav||innerWidth<901)return;
+var pill=nav.querySelector('.nav-pill'),links=[].slice.call(nav.querySelectorAll(':scope > a.nav-link:not(.nav-cta), :scope > .nav-dropdown > a.nav-link'));
+function place(a){var r=a.getBoundingClientRect(),n=nav.getBoundingClientRect();nav.style.setProperty('--x',(r.left-n.left)+'px');nav.style.setProperty('--w',r.width+'px');nav.classList.add('has-pill')}
+links.forEach(function(a){a.addEventListener('mouseenter',function(){place(a)});a.addEventListener('focus',function(){place(a)})});
+nav.addEventListener('mouseleave',function(){nav.classList.remove('has-pill')});
+/* tool search inside the mega menu */
+var q=nav.querySelector('[data-mg-q]'),g=nav.querySelector('[data-mg-g]'),em=nav.querySelector('[data-mg-e]');
+if(q){var items=[].slice.call(g.querySelectorAll('.mg-it'));q.addEventListener('input',function(){var v=q.value.trim().toLowerCase(),n=0;items.forEach(function(i){var show=v?i.dataset.q.indexOf(v)>-1:i.dataset.f==='1';if(show&&v){n++;if(n>9)show=false}i.classList.toggle('hide',!show)});em.style.display=v&&!items.some(function(i){return !i.classList.contains('hide')})?'block':'none'})}
+/* page scroll meter inside the header */
+var tk=0;function sp(){tk=0;var m=document.documentElement.scrollHeight-innerHeight;document.querySelector('.site-header').style.setProperty('--hsp',m>0?Math.min(1,scrollY/m).toFixed(4):0)}
+addEventListener('scroll',function(){if(!tk)tk=requestAnimationFrame(sp)},{passive:true});sp();
+})();
+</script>

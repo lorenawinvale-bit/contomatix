@@ -1,0 +1,97 @@
+<%
+/* The two things we sell first: link building and link insertion. Plain-language, no invented numbers. Example text in the mini articles is labelled as an example. */
+%>
+<style>
+.ld{position:relative;padding:8px 0 84px}
+.ld-head{max-width:760px;margin:0 auto 44px;text-align:center}
+.ld-head h2{font-family:var(--font-display);font-size:clamp(2.1rem,4.4vw,3.5rem);line-height:1.03;letter-spacing:-.055em;margin:14px 0 14px;font-weight:700}
+.ld-head p{margin:0 auto;max-width:58ch;color:var(--text-dim);font-size:1.08rem;line-height:1.6}
+.ld-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.ld-card{position:relative;display:flex;flex-direction:column;border-radius:26px;background:#fff;border:1px solid var(--px-line,#E4DBCB);overflow:hidden;
+ box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 0 0 1px rgba(8,50,60,.035),0 3px 6px rgba(8,50,60,.05),0 24px 48px -22px rgba(8,50,60,.25);transition:transform .45s cubic-bezier(.22,.9,.35,1),box-shadow .45s}
+.ld-card:hover{transform:translateY(-6px);box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 0 0 1px rgba(14,165,160,.4),0 6px 10px rgba(8,50,60,.06),0 44px 70px -30px rgba(8,50,60,.4)}
+.ld-stage{position:relative;height:270px;padding:26px 28px 0;overflow:hidden;border-bottom:1px solid var(--px-line,#E4DBCB)}
+.ld-card.a .ld-stage{background:radial-gradient(420px 220px at 15% 0%,rgba(20,184,166,.22),transparent 70%),linear-gradient(180deg,#EAF7F4,#E0F2EE)}
+.ld-card.b .ld-stage{background:radial-gradient(420px 220px at 85% 0%,rgba(245,166,35,.25),transparent 70%),linear-gradient(180deg,#FDF3E0,#FBEACB)}
+.ld-stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(22,25,42,.1) 1px,transparent 1px);background-size:20px 20px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.ld-tag{position:absolute;left:26px;top:20px;z-index:3;font-family:var(--font-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--text-dim);background:rgba(255,255,255,.75);border:1px solid var(--px-line,#E4DBCB);padding:4px 9px;border-radius:999px}
+.ld-art{position:relative;z-index:2;margin:34px auto 0;width:min(430px,100%);border-radius:14px 14px 0 0;background:#fff;border:1px solid var(--px-line,#E4DBCB);border-bottom:0;padding:20px 22px 0;height:236px;
+ box-shadow:0 20px 40px -18px rgba(8,50,60,.35);transform:translateY(30px);opacity:0;transition:transform 1s cubic-bezier(.22,.9,.35,1),opacity .7s}
+.ld-card.is-in .ld-art{transform:none;opacity:1}
+.ld-url{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-family:var(--font-mono);font-size:.64rem;color:#7A8294}
+.ld-url i{display:flex;gap:4px}.ld-url i b{width:6px;height:6px;border-radius:50%;background:#E3DACB}.ld-url span{flex:1;padding:4px 9px;border-radius:6px;background:var(--bg-alt)}
+.ld-art h4{margin:0 0 6px;font-family:var(--font-display);font-size:1.02rem;line-height:1.2;letter-spacing:-.03em}
+.ld-art .by{font-size:.68rem;color:#8A93A3;margin-bottom:10px;font-weight:600}
+.ld-art p{margin:0 0 8px;font-size:.78rem;line-height:1.65;color:#4A5262;max-width:none}
+.ld-lk{position:relative;font-weight:600;color:#0A6E69;background:linear-gradient(rgba(20,184,166,.18),rgba(20,184,166,.18)) 0 100%/0 100% no-repeat;transition:background-size .8s cubic-bezier(.3,.8,.3,1) 1.4s;border-bottom:1.5px solid transparent}
+.ld-card.is-in .ld-lk{background-size:100% 100%;border-bottom-color:var(--accent-teal)}
+.ld-pill{display:inline-block;margin-left:6px;vertical-align:1px;white-space:nowrap;font-family:var(--font-body);font-size:.6rem;font-weight:800;letter-spacing:.04em;padding:3px 8px;border-radius:999px;background:var(--ink,#16192A);color:#fff;opacity:0;transform:translateY(6px) scale(.9);transition:opacity .4s 2.1s,transform .5s cubic-bezier(.3,1.6,.5,1) 2.1s}
+
+.ld-card.is-in .ld-pill{opacity:1;transform:none}
+.ld-new{display:inline-block;margin-left:6px;font-size:.58rem;font-weight:800;letter-spacing:.06em;padding:2px 6px;border-radius:5px;background:rgba(245,166,35,.2);color:#B45309;text-transform:uppercase;vertical-align:middle;opacity:0;transition:opacity .4s 2.4s}.ld-card.is-in .ld-new{opacity:1}
+.ld-ex{position:absolute;right:24px;top:20px;z-index:3;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:#B45309;font-weight:700}
+.ld-body{padding:26px 30px 30px;display:flex;flex-direction:column;gap:12px;flex:1}
+.ld-body h3{margin:0;font-family:var(--font-display);font-size:1.7rem;line-height:1.08;letter-spacing:-.045em}
+.ld-body>p{margin:0;color:var(--text-dim);line-height:1.6;font-size:.98rem}
+.ld-steps{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;counter-reset:s}
+.ld-steps::before{content:"";position:absolute;left:12%;right:12%;top:13px;height:2px;background:var(--px-line,#E4DBCB)}
+.ld-steps::after{content:"";position:absolute;left:12%;top:13px;height:2px;width:0;background:var(--accent-teal);transition:width 1.6s cubic-bezier(.3,.8,.3,1) .6s}
+.ld-card.is-in .ld-steps::after{width:76%}
+.ld-steps li{position:relative;text-align:center;font-size:.74rem;font-weight:700;color:var(--text);counter-increment:s}
+.ld-steps li::before{content:counter(s);display:grid;place-items:center;width:28px;height:28px;margin:0 auto 8px;border-radius:50%;background:#fff;border:1.5px solid var(--px-line,#E4DBCB);font-family:var(--font-display);font-size:.78rem;color:var(--text-dim);position:relative;z-index:1;transition:background .4s,color .4s,border-color .4s;transition-delay:calc(var(--i)*320ms + .7s)}
+.ld-card.is-in .ld-steps li::before{background:var(--accent-teal);border-color:var(--accent-teal);color:#fff}
+.ld-steps small{display:block;margin-top:2px;font-weight:500;color:var(--text-faint);font-size:.68rem;line-height:1.35}
+.ld-pts{list-style:none;margin:6px 0 0;padding:14px 0 0;border-top:1px dashed var(--border-light);display:grid;gap:9px;font-size:.88rem;font-weight:600}
+.ld-pts li{display:flex;gap:10px;align-items:flex-start}.ld-pts li::before{content:"";flex:0 0 18px;height:18px;margin-top:1px;border-radius:50%;background:rgba(20,184,166,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.7 2.7L12 5.2' fill='none' stroke='%230B807C' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat}
+.ld-go{margin-top:8px;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;color:var(--accent-teal-dim);text-decoration:none}.ld-go span{transition:transform .3s}.ld-go:hover span{transform:translateX(5px)}
+@media (max-width:900px){.ld-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce) and (min-width:99999px){.ld-art,.ld-lk,.ld-pill,.ld-new,.ld-steps::after,.ld-steps li::before{transition:none}.ld-art{transform:none;opacity:1}.ld-lk{background-size:100% 100%;border-bottom-color:var(--accent-teal)}.ld-pill,.ld-new{opacity:1;transform:none}.ld-steps::after{width:76%}.ld-steps li::before{background:var(--accent-teal);color:#fff;border-color:var(--accent-teal)}}
+</style>
+<section class="ld" id="link-building-and-insertion">
+  <div class="container">
+    <div class="ld-head">
+      <span class="eyebrow">Link building, two ways</span>
+      <h2>Guest posting and link insertion</h2>
+      <p>The two ways we earn a link from a relevant site. We choose between them for each target, and you approve every site before we reach out.</p>
+    </div>
+    <div class="ld-grid">
+      <article class="ld-card a" data-ld>
+        <div class="ld-stage"><span class="ld-tag">Guest posting</span><span class="ld-ex">Example</span>
+          <div class="ld-art"><div class="ld-url"><i><b></b><b></b><b></b></i><span>industry-journal.example/guides</span></div>
+            <h4>How operations teams vet software vendors</h4><div class="by">By a Contomatix writer<span class="ld-new">New article</span></div>
+            <p>Start with the questions a vendor cannot dodge. Ask for references in your size band, and read <span class="ld-lk">our checklist for vendor reviews<span class="ld-pill">+ your link</span></span> before the first call.</p>
+            <p>Then compare pricing on a like-for-like basis, so the cheapest quote is not the one with the hidden services.</p>
+          </div>
+        </div>
+        <div class="ld-body">
+          <h3>An original article on a site your customers read</h3>
+          <p>We write the article, pitch the editor and place a natural link back to you. The slower route, and the one that builds topical authority and referral traffic.</p>
+          <ol class="ld-steps"><li style="--i:0">Find<small>relevant sites</small></li><li style="--i:1">Vet<small>4 checks, by hand</small></li><li style="--i:2">Pitch<small>one personal email</small></li><li style="--i:3">Publish<small>link in context</small></li></ol>
+          <ul class="ld-pts"><li>Original article written for each site</li><li>Editorial review before it goes live</li><li>Referral traffic as well as link equity</li></ul>
+          <a class="ld-go" href="/services/guest-posting">Guest posting service <span>&rarr;</span></a>
+        </div>
+      </article>
+      <article class="ld-card b" data-ld>
+        <div class="ld-stage"><span class="ld-tag">Link insertion</span><span class="ld-ex">Example</span>
+          <div class="ld-art"><div class="ld-url"><i><b></b><b></b><b></b></i><span>trade-notes.example/vendor-selection</span></div>
+            <h4>Choosing a vendor: what to check first</h4><div class="by">Published 2 years ago &middot; ranks on page one</div>
+            <p>Most teams shortlist on price, then find the real cost in month three. A safer habit is to ask for <span class="ld-lk">a reference check and a sample report<span class="ld-pill">+ link added</span></span> before signing anything.</p>
+            <p>Keep a short list of dealbreakers, and write them down before the demos start.</p>
+          </div>
+        </div>
+        <div class="ld-body">
+          <h3>A link inside content that already ranks</h3>
+          <p>We ask the owner of an existing, already-ranking article to add your link where it genuinely helps the reader. Faster, because the page is already indexed and trusted.</p>
+          <ol class="ld-steps"><li style="--i:0">Find<small>pages that rank</small></li><li style="--i:1">Match<small>sentence that fits</small></li><li style="--i:2">Ask<small>send the exact edit</small></li><li style="--i:3">Verify<small>link live, followed?</small></li></ol>
+          <ul class="ld-pts"><li>Live, already-ranking pages for faster authority</li><li>You see the exact sentence before anything is sent</li><li>Every link rechecked after it goes live</li></ul>
+          <a class="ld-go" href="/services/link-building">See the link building service <span>&rarr;</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<script>
+(function(){var c=[].slice.call(document.querySelectorAll('[data-ld]'));if(!c.length)return;
+if(!('IntersectionObserver' in window)||false){c.forEach(function(e){e.classList.add('is-in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.3});c.forEach(function(e){io.observe(e)})})();
+</script>

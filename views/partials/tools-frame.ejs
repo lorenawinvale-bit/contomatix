@@ -1,0 +1,144 @@
+<%
+/* Hero tools window: three of our free tools running for real (meta description length + SERP preview, UTM builder, 4-point link check).
+   A demo types itself on first view, then the visitor can use them. All logic is local JS, nothing is sent anywhere. */
+%>
+<style>
+.tf{position:relative;--tfp:0}
+.tf-win{position:relative;border-radius:20px;background:#fff;border:1px solid var(--px-line,#E4DBCB);overflow:hidden;color:var(--text);
+ box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 0 0 1px rgba(8,50,60,.04),0 4px 8px rgba(8,50,60,.05),0 26px 50px -20px rgba(8,50,60,.25),0 70px 110px -40px rgba(8,50,60,.4),0 0 90px -30px rgba(14,165,160,.4);
+ transform:perspective(1600px) rotateY(-5deg) rotateX(2deg);transform-origin:100% 50%;transition:transform .7s cubic-bezier(.22,.9,.35,1)}
+.tf-win:hover{transform:perspective(1600px) rotateY(-1deg) rotateX(0)}
+.tf-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;height:46px;padding:0 14px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#fff,#FCF9F3)}
+.tf-dots{display:flex;gap:6px}.tf-dots i{width:9px;height:9px;border-radius:50%;background:#E3DACB}.tf-dots i:first-child{background:#F4A3A0}.tf-dots i:nth-child(2){background:#F5D08A}.tf-dots i:nth-child(3){background:#9ED9B8}
+.tf-tabs{display:flex;gap:2px;font-size:.76rem}
+.tf-tabs button{font:inherit;font-weight:700;border:0;cursor:pointer;padding:6px 11px;border-radius:8px;background:transparent;color:var(--text-dim);transition:background .2s,color .2s;white-space:nowrap}
+.tf-tabs button:hover{background:var(--bg-alt);color:var(--text)}.tf-tabs button.a{background:var(--bg-alt);color:var(--text);box-shadow:0 0 0 1px var(--border) inset}
+.tf-free{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#0A6E69;background:rgba(20,184,166,.1);border:1px solid rgba(20,184,166,.35);padding:4px 8px;border-radius:6px;white-space:nowrap}
+.tf-body{position:relative;height:392px;padding:18px 18px 16px}
+.tf-pane{position:absolute;inset:18px 18px 16px;display:none}.tf-pane.a{display:block;animation:tfIn .45s cubic-bezier(.22,.9,.35,1)}
+@keyframes tfIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tf label{display:block;font-size:.7rem;font-weight:700;color:var(--text-dim);margin:0 0 6px;letter-spacing:.02em}
+.tf textarea,.tf input[type=text]{width:100%;font:inherit;font-size:.84rem;line-height:1.5;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:10px 12px;resize:none;outline:0;transition:border-color .2s,box-shadow .2s,background .2s}
+.tf textarea:focus,.tf input[type=text]:focus{border-color:var(--accent-teal);background:#fff;box-shadow:0 0 0 3px rgba(20,184,166,.15)}
+.tf textarea{height:74px}
+.tf-meter{display:flex;align-items:center;gap:12px;margin:12px 0}
+.tf-ring{position:relative;flex:0 0 52px;height:52px}.tf-ring svg{width:52px;height:52px;transform:rotate(-90deg)}.tf-ring circle{fill:none;stroke-width:5.5;stroke-linecap:round}
+.tf-ring .t{stroke:var(--surface-2)}.tf-ring .f{stroke:var(--accent-teal);stroke-dasharray:125.7;stroke-dashoffset:125.7;transition:stroke-dashoffset .35s,stroke .3s}
+.tf-ring b{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-display);font-size:.8rem;font-variant-numeric:tabular-nums}
+.tf-mx{flex:1;font-size:.78rem;color:var(--text-dim);line-height:1.4}.tf-mx strong{display:block;color:var(--text);font-size:.86rem}
+.tf-zone{position:relative;height:8px;border-radius:4px;background:var(--bg-alt);margin-top:7px;overflow:hidden}.tf-zone i{position:absolute;top:0;bottom:0;left:calc(120/200*100%);width:calc(35/200*100%);background:rgba(20,184,166,.28)}
+.tf-zone b{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--accent-teal);border-radius:4px;transition:width .3s,background .3s}
+.tf-serp{padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:#fff}
+.tf-serp .s{display:flex;align-items:center;gap:8px;font-size:.7rem;color:#4D5156}.tf-serp .s i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--border);font-style:normal;font-weight:700;font-size:.62rem}
+.tf-serp .s small{display:block;color:#80868B;font-size:.64rem}
+.tf-serp .ti{margin:7px 0 3px;font-size:1.02rem;color:#1A0DAB;font-family:Arial,sans-serif;line-height:1.25}
+.tf-serp .ds{font-size:.78rem;color:#4D5156;line-height:1.5;font-family:Arial,sans-serif;min-height:3.1em}
+.tf-open{position:absolute;right:0;bottom:0;font-size:.76rem;font-weight:700;color:var(--accent-teal-dim);text-decoration:none}.tf-open:hover{text-decoration:underline}
+.tf-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.tf-row>div{min-width:0}
+.tf-out{margin-top:12px;padding:12px 13px;border-radius:12px;background:var(--dark,#16192A);color:#CFF7F0;font-family:var(--font-mono);font-size:.7rem;line-height:1.6;word-break:break-all;min-height:92px;position:relative}
+.tf-out .k{color:#5EEAD4}.tf-out .v{color:#FCD34D}.tf-out .d{color:rgba(255,255,255,.45)}
+.tf-copy{position:absolute;right:9px;top:9px;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:.66rem;padding:5px 9px;border-radius:7px;background:rgba(255,255,255,.12);color:#fff;transition:background .2s}.tf-copy:hover{background:rgba(255,255,255,.22)}
+.tf-vet{display:grid;gap:8px}
+.tf-vet label{display:flex;align-items:center;gap:11px;margin:0;padding:10px 12px;border:1px solid var(--border);border-radius:11px;background:var(--bg);cursor:pointer;color:var(--text);font-size:.84rem;transition:background .2s,border-color .2s,transform .15s}
+.tf-vet label:hover{border-color:var(--accent-teal);transform:translateY(-1px)}.tf-vet label:has(input:checked){background:rgba(14,165,160,.08);border-color:rgba(14,165,160,.45)}
+.tf-vet input{position:absolute;opacity:0;pointer-events:none}.tf-vet b{display:grid;place-items:center;flex:0 0 20px;height:20px;border-radius:6px;border:2px solid var(--border-light);background:#fff;transition:background .2s,border-color .2s}
+.tf-vet input:checked+b{background:var(--accent-teal);border-color:var(--accent-teal)}.tf-vet input:checked+b::after{content:"\2713";color:#fff;font-size:.7rem;font-weight:800}
+.tf-vet em{display:block;font-style:normal;font-weight:500;color:var(--text-faint);font-size:.7rem}
+.tf-vres{display:flex;align-items:center;gap:13px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border-light)}
+.tf-vres strong{font-size:.95rem}.tf-vres p{margin:2px 0 0;font-size:.76rem;color:var(--text-dim)}
+.tf-wide .tf-win{transform:none!important;border-radius:22px}
+.tf-wide .tf-bar{height:54px;padding:0 20px}.tf-wide .tf-tabs{font-size:.9rem}.tf-wide .tf-tabs button{padding:8px 16px}.tf-wide .tf-free{font-size:.66rem}
+.tf-wide .tf-body{height:452px;padding:26px 30px}.tf-wide .tf-pane{inset:26px 30px}
+.tf-wide .tf label,.tf-wide label{font-size:.8rem}
+.tf-wide textarea,.tf-wide input[type=text]{font-size:1rem;padding:13px 15px}
+.tf-wide .tf-pane.a[data-pane=meta]{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto 1fr;column-gap:34px;align-content:start}
+.tf-wide [data-pane=meta] label{grid-column:1;grid-row:1}.tf-wide [data-pane=meta] textarea{grid-column:1;grid-row:2;height:170px}.tf-wide [data-pane=meta] .tf-meter{grid-column:1;grid-row:3;margin-top:18px}
+.tf-wide [data-pane=meta] .tf-serp{grid-column:2;grid-row:1/4;align-self:start;padding:22px 24px}.tf-wide .tf-serp .ti{font-size:1.25rem}.tf-wide .tf-serp .ds{font-size:.92rem}.tf-wide .tf-serp .s{font-size:.8rem}
+.tf-wide [data-pane=meta] .tf-open{grid-column:2;position:static;justify-self:end;align-self:end;font-size:.88rem}
+.tf-wide .tf-ring{flex:0 0 64px;height:64px}.tf-wide .tf-ring svg{width:64px;height:64px}.tf-wide .tf-ring b{font-size:.95rem}.tf-wide .tf-mx strong{font-size:1.05rem}.tf-wide .tf-mx{font-size:.88rem}
+.tf-wide .tf-pane.a[data-pane=utm]{display:grid;grid-template-columns:1fr 1fr;column-gap:34px;align-content:start}
+.tf-wide [data-pane=utm] .tf-row{grid-column:1;margin-top:14px;grid-template-columns:1fr}.tf-wide [data-pane=utm] .tf-row:first-of-type{margin-top:0}
+.tf-wide [data-pane=utm] .tf-out{grid-column:2;grid-row:1/4;margin-top:0;font-size:.9rem;min-height:250px;padding:22px}.tf-wide [data-pane=utm] .tf-copy{font-size:.78rem}
+.tf-wide [data-pane=utm] .tf-open{position:static;grid-column:2;justify-self:end;margin-top:12px;font-size:.88rem}
+.tf-wide .tf-pane.a[data-pane=vet]{display:grid;grid-template-columns:1fr 1fr;column-gap:34px;align-content:start}
+.tf-wide [data-pane=vet]>label{grid-column:1/-1;font-size:.95rem;margin-bottom:16px}.tf-wide .tf-vet{grid-column:1;gap:12px}.tf-wide .tf-vet label{padding:14px 16px;font-size:1rem}.tf-wide .tf-vet em{font-size:.8rem}
+.tf-wide .tf-vres{grid-column:2;grid-row:2;flex-direction:column;align-items:flex-start;justify-content:center;margin:0;padding:26px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(180deg,#fff,#FCF9F3);gap:18px;align-self:start}
+.tf-wide .tf-vres strong{font-size:1.4rem;font-family:var(--font-display);letter-spacing:-.03em}.tf-wide .tf-vres p{font-size:.95rem;line-height:1.5}
+.tf-wide .tf-vres .tf-ring{flex:0 0 96px;height:96px}.tf-wide .tf-vres .tf-ring svg{width:96px;height:96px}.tf-wide .tf-vres .tf-ring b{font-size:1.2rem}
+.tf-pix{position:absolute;right:30px;top:-10px;width:0;height:0;pointer-events:none}.tf-pix i{position:absolute;display:block;width:var(--s);height:var(--s);border-radius:2px;background:var(--c);left:var(--x);top:0;opacity:0;animation:tfPx var(--d) ease-out infinite;animation-delay:var(--w)}
+@keyframes tfPx{0%{opacity:0;transform:translateY(0) scale(1)}15%{opacity:.9}100%{opacity:0;transform:translateY(-90px) scale(.4)}}
+@media (max-width:900px){.tf-win{transform:none}.tf-body{height:auto;min-height:400px}.tf-free{display:none}}
+@media (prefers-reduced-motion:reduce) and (min-width:99999px){.tf-win,.tf-win:hover{transform:none;transition:none}.tf-pane.a{animation:none}.tf-pix{display:none}}
+</style>
+<div class="tf" data-tf>
+  <div class="tf-pix" aria-hidden="true"><% [[-10,7,'#14B8A6',3.2,0],[14,6,'#F5A623',3.8,.6],[40,8,'#14B8A6',3.4,1.3],[-34,5,'#F472B6',4,.3],[62,6,'#14B8A6',3.6,1.9],[-56,6,'#F5A623',3,1],[88,5,'#F472B6',3.3,2.4],[26,5,'#0EA5A0',4.2,2.8]].forEach(function (p) { %><i style="--x:<%= p[0] %>px;--s:<%= p[1] %>px;--c:<%= p[2] %>;--d:<%= p[3] %>s;--w:<%= p[4] %>s"></i><% }); %></div>
+  <div class="tf-win">
+    <div class="tf-bar"><div class="tf-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="tf-tabs" role="tablist"><button class="a" data-tab="meta" role="tab">Meta description</button><button data-tab="utm" role="tab">UTM builder</button><button data-tab="vet" role="tab">Link check</button></div>
+      <span class="tf-free">Free tools</span></div>
+    <div class="tf-body">
+      <div class="tf-pane a" data-pane="meta">
+        <label for="tf-md">Your meta description</label>
+        <textarea id="tf-md" data-md maxlength="400" spellcheck="false" placeholder="Type or paste a description..."></textarea>
+        <div class="tf-meter"><div class="tf-ring"><svg viewBox="0 0 48 48"><circle class="t" cx="24" cy="24" r="20"/><circle class="f" cx="24" cy="24" r="20" data-ring/></svg><b data-cnt>0</b></div>
+          <div class="tf-mx"><strong data-verdict>Start typing</strong><span data-hint>Aim for 120 to 155 characters.</span><div class="tf-zone"><i></i><b data-zone></b></div></div></div>
+        <div class="tf-serp"><div class="s"><i>C</i><span>contomatix.com<small>https://contomatix.com &rsaquo; tools</small></span></div><div class="ti">Your page title shows here</div><div class="ds" data-prev>Your description appears here, cut where Google usually cuts it.</div></div>
+        <a class="tf-open" href="/tools/meta-description-checker">Open the full tool &rarr;</a>
+      </div>
+      <div class="tf-pane" data-pane="utm">
+        <div class="tf-row" style="margin-top:0"><div><label for="tf-u1">Website URL</label><input id="tf-u1" type="text" data-u="url" spellcheck="false" placeholder="https://example.com/page"></div><div><label for="tf-u2">Campaign</label><input id="tf-u2" type="text" data-u="campaign" spellcheck="false" placeholder="spring-launch"></div></div>
+        <div class="tf-row"><div><label for="tf-u3">Source</label><input id="tf-u3" type="text" data-u="source" spellcheck="false" placeholder="newsletter"></div><div><label for="tf-u4">Medium</label><input id="tf-u4" type="text" data-u="medium" spellcheck="false" placeholder="email"></div></div>
+        <div class="tf-out" data-out><button class="tf-copy" type="button" data-copy>Copy</button><span class="d">Your tagged URL appears here.</span></div>
+        <a class="tf-open" href="/tools/utm-builder">Open the full tool &rarr;</a>
+      </div>
+      <div class="tf-pane" data-pane="vet">
+        <label>Think of a site that could link to you. Tick what is true.</label>
+        <div class="tf-vet">
+          <label><input type="checkbox" data-v checked><b></b><span>Real organic traffic<em>People actually read the site</em></span></label>
+          <label><input type="checkbox" data-v checked><b></b><span>Relevant to your niche<em>The topic fits your page</em></span></label>
+          <label><input type="checkbox" data-v><b></b><span>Clean outbound links<em>No history of selling links</em></span></label>
+          <label><input type="checkbox" data-v><b></b><span>Editorial placement<em>In the article, not a footer</em></span></label>
+        </div>
+        <div class="tf-vres"><div class="tf-ring"><svg viewBox="0 0 48 48"><circle class="t" cx="24" cy="24" r="20"/><circle class="f" cx="24" cy="24" r="20" data-vring/></svg><b data-vscore>2/4</b></div><div><strong data-vverdict>We would look closer</strong><p data-vnote>Two checks pass. We would ask what is missing first.</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+var root=document.querySelector('[data-tf]');if(!root)return;
+var reduce=false; /* gentle animations always run; only parallax and tilt honour reduced motion */
+var tabs=root.querySelectorAll('[data-tab]'),panes=root.querySelectorAll('[data-pane]'),touched=false,auto=false;
+function show(n){tabs.forEach(function(b){b.classList.toggle('a',b.dataset.tab===n)});panes.forEach(function(p){p.classList.toggle('a',p.dataset.pane===n)})}
+tabs.forEach(function(b){b.addEventListener('click',function(){touched=true;show(b.dataset.tab)})});
+root.addEventListener('pointerdown',function(){touched=true},{once:true});
+/* meta description */
+var md=root.querySelector('[data-md]'),ring=root.querySelector('[data-ring]'),cnt=root.querySelector('[data-cnt]'),vd=root.querySelector('[data-verdict]'),hint=root.querySelector('[data-hint]'),zone=root.querySelector('[data-zone]'),prev=root.querySelector('[data-prev]');
+function metaUpdate(){var t=md.value,n=t.length,pct=Math.min(n/200,1);
+ ring.style.strokeDashoffset=125.7*(1-Math.min(n/160,1));cnt.textContent=n;zone.style.width=(pct*100)+'%';
+ var s=n===0?['Start typing','Aim for 120 to 155 characters.','#0EA5A0']:n<120?['Too short','Add '+(120-n)+' more characters to use the space.','#F5A623']:n<=155?['Good length','Fits on mobile and desktop results.','#0EA5A0']:['Too long','About '+(n-155)+' characters may be cut off.','#E5484D'];
+ vd.textContent=s[0];hint.textContent=s[1];ring.style.stroke=s[2];zone.style.background=s[2];
+ prev.textContent=n?(n>155?t.slice(0,155).replace(/\s+\S*$/,'')+'...':t):'Your description appears here, cut where Google usually cuts it.'}
+md.addEventListener('input',function(){if(!auto)touched=true;metaUpdate()});metaUpdate();
+/* utm */
+var us={};root.querySelectorAll('[data-u]').forEach(function(i){us[i.dataset.u]=i;i.addEventListener('input',function(){if(!auto)touched=true;utmUpdate()})});
+var out=root.querySelector('[data-out]'),cp=root.querySelector('[data-copy]');
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function utmBuild(){var u=us.url.value.trim();if(!u)return '';var q=[];[['utm_source','source'],['utm_medium','medium'],['utm_campaign','campaign']].forEach(function(p){var v=us[p[1]].value.trim();if(v)q.push(p[0]+'='+encodeURIComponent(v.toLowerCase().replace(/\s+/g,'-')))});return u+(q.length?(u.indexOf('?')>-1?'&':'?')+q.join('&'):'')}
+function utmUpdate(){var u=us.url.value.trim();if(!u){out.innerHTML='<button class="tf-copy" type="button" data-copy>Copy</button><span class="d">Your tagged URL appears here.</span>';return}
+ var h='<button class="tf-copy" type="button" data-copy>Copy</button><span class="k">'+esc(u)+'</span>';var q=[];[['utm_source','source'],['utm_medium','medium'],['utm_campaign','campaign']].forEach(function(p){var v=us[p[1]].value.trim();if(v)q.push('<span class="d">'+p[0]+'=</span><span class="v">'+esc(encodeURIComponent(v.toLowerCase().replace(/\s+/g,'-')))+'</span>')});
+ if(q.length)h+='<span class="d">'+(u.indexOf('?')>-1?'&amp;':'?')+'</span>'+q.join('<span class="d">&amp;</span>');out.innerHTML=h}
+out.addEventListener('click',function(e){var b=e.target.closest('[data-copy]');if(!b)return;var t=utmBuild();if(!t)return;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).catch(function(){}).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1400)})});
+/* link check */
+var vc=[].slice.call(root.querySelectorAll('[data-v]')),vr=root.querySelector('[data-vring]'),vs=root.querySelector('[data-vscore]'),vv=root.querySelector('[data-vverdict]'),vn=root.querySelector('[data-vnote]');
+var V=[['We would walk away','None of the four hold. A link here adds risk, not authority.','#E5484D'],['We would walk away','One check holds. Not enough to put our name on a pitch.','#E5484D'],['We would look closer','Two checks pass. We would ask what is missing first.','#F5A623'],['Promising, one gap','Three pass. We would find out about the fourth.','#14B8A6'],['We would place it','All four pass: readers, relevance, clean history, real placement.','#0EA5A0']];
+function vet(){var n=vc.filter(function(c){return c.checked}).length,v=V[n];vs.textContent=n+'/4';vv.textContent=v[0];vn.textContent=v[1];vr.style.strokeDashoffset=125.7*(1-n/4);vr.style.stroke=v[2]}
+vc.forEach(function(c){c.addEventListener('change',function(){touched=true;vet()})});vet();
+/* the demo: types a real example once, then hands over */
+function type(el,txt,done){var i=0;(function step(){if(touched)return;el.value=txt.slice(0,i);auto=true;el.dispatchEvent(new Event('input'));auto=false;i++;if(i<=txt.length)setTimeout(step,txt.length>60?34:44);else if(done)setTimeout(done,1100)})()}
+function demo(){touched=false;
+ type(md,'We vet every link by hand before we place it: real traffic, relevant sites, clean outbound links and editorial placement. Free audit first.',function(){if(touched)return;show('utm');
+  var seq=[['url','https://contomatix.com/tools'],['source','newsletter'],['medium','email'],['campaign','link audit launch']],k=0;(function nxt(){if(touched||k>=seq.length){if(!touched)setTimeout(function(){if(touched)return;show('vet');setTimeout(function(){if(touched)return;vc[2].checked=true;vet();setTimeout(function(){if(touched)return;vc[3].checked=true;vet()},1700)},1700)},2000);return}var s=seq[k++];var el=us[s[0]],j=0;(function t(){if(touched)return;el.value=s[1].slice(0,j);auto=true;el.dispatchEvent(new Event('input'));auto=false;j++;if(j<=s[1].length)setTimeout(t,46);else setTimeout(nxt,520)})()})()})}
+if(reduce||!('IntersectionObserver' in window)){md.value='We vet every link by hand before we place it: real traffic, relevant sites, clean outbound links and editorial placement. Free audit first.';metaUpdate();return}
+new IntersectionObserver(function(es,io){es.forEach(function(e){if(e.isIntersecting){io.disconnect();setTimeout(demo,900)}})},{threshold:.4}).observe(root)})();
+</script>

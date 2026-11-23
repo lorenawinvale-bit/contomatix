@@ -270,6 +270,9 @@ function heroDims(src) {
   return (_heroDimCache[src] = d);
 }
 
+// internal page used only to record the homepage tools video (not linked, noindex)
+app.get('/_demo/tools-frame', (req, res) => res.render('pages/_demo-tools', { layout: false }));
+
 app.get('/', (req, res) => {
   const allPosts = blogStore.getPublished();
   const latestPosts = [...allPosts]
@@ -706,6 +709,9 @@ app.get('/blog', (req, res) => {
     title: page > 1 ? `Blog: Page ${page}, Contomatix` : 'Blog: SEO & Link Building Insights | Contomatix',
     description: 'Read the Contomatix blog for SEO strategy, link building tactics and content marketing insights, backed by data from our own site and tests.',
     pageClass: 'page-blog',
+    totalPosts: blogPosts.length,
+    catCounts: Object.fromEntries(categoryNames.map(c => [c, blogPosts.filter(p => p.category === c).length])),
+    resultCount: filtered.length,
     posts,
     categories,
     activeCategory: category,
@@ -748,11 +754,18 @@ app.get('/blog/:slug', (req, res) => {
 
 app.get('/team', (req, res) => {
   const published = blogStore.getPublished();
+  const members = team.map(withPhotoCheck).map(m => {
+    const mine = published.filter(p => p.author === m.name).sort((x, y) => (x.date < y.date ? 1 : x.date > y.date ? -1 : 0));
+    const cats = {};
+    mine.forEach(p => { cats[p.category] = (cats[p.category] || 0) + 1; });
+    return { ...m, postCount: mine.length, topCats: Object.entries(cats).sort((x, y) => y[1] - x[1]).slice(0, 3).map(e => e[0]), latest: mine.slice(0, 2).map(p => ({ slug: p.slug, title: p.title, date: p.date })) };
+  });
   res.render('pages/team', {
     title: 'Meet the Contomatix Team: SEO & Link Building Experts',
     description: 'Meet the SEO strategists and link building specialists behind Contomatix, the people who plan and run every campaign for our clients.',
     pageClass: 'page-team',
-    team: team.map(withPhotoCheck).map(m => ({ ...m, postCount: published.filter(p => p.author === m.name).length }))
+    totalPosts: published.length,
+    team: members
   });
 });
 
