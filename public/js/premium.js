@@ -7,9 +7,6 @@
   /* background field + scroll progress for every width */
   (function () {
     var f = d.createElement('div'); f.className = 'px-field'; f.setAttribute('aria-hidden', 'true'); d.body.appendChild(f);
-    var tk = 0;
-    function sp() { tk = 0; var m = d.documentElement.scrollHeight - innerHeight; d.documentElement.style.setProperty('--sp', m > 0 ? Math.min(1, scrollY / m).toFixed(4) : 0); }
-    addEventListener('scroll', function () { if (!tk) tk = requestAnimationFrame(sp); }, { passive: true }); sp();
     /* scroll-driven reveals (CSS view timelines; browsers without support simply show everything) */
     var m = function (sel, cls) { d.querySelectorAll(sel).forEach(function (e) { e.classList.add('sd'); if (cls) e.classList.add(cls); }); };
     m('.px .ld-card:nth-child(odd)', 'sd-l'); m('.px .ld-card:nth-child(even)', 'sd-r');

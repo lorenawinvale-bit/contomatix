@@ -66,7 +66,8 @@ function short(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n).
  .mg-foot{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding:12px 14px 4px;border-top:1px dashed var(--border-light);font-size:.8rem}
  .mg-foot a{font-weight:800;color:var(--accent-teal-dim);text-decoration:none}.mg-foot a:hover{text-decoration:underline}.mg-foot span{color:var(--text-dim);font-weight:600}
  .hd-prog{position:absolute;left:26px;right:26px;bottom:-1px;height:2px;border-radius:2px;background:rgba(22,25,42,.06);overflow:hidden;pointer-events:none}
- .hd-prog i{display:block;height:100%;background:linear-gradient(90deg,#14B8A6,#F5A623);transform-origin:left;transform:scaleX(var(--hsp,0))}
+ .hd-prog i{display:block;height:100%;background:linear-gradient(90deg,#14B8A6,#F5A623);transform-origin:left;transform:scaleX(0);animation:hdProg linear both;animation-timeline:scroll(root)}
+ @keyframes hdProg{to{transform:scaleX(1)}}
 }
 @media (min-width:901px){
  .site-header .header-inner{height:66px;background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(255,251,244,.62));border:1px solid transparent;
@@ -176,8 +177,5 @@ nav.addEventListener('mouseleave',function(){nav.classList.remove('has-pill')});
 /* tool search inside the mega menu */
 var q=nav.querySelector('[data-mg-q]'),g=nav.querySelector('[data-mg-g]'),em=nav.querySelector('[data-mg-e]');
 if(q){var items=[].slice.call(g.querySelectorAll('.mg-it'));q.addEventListener('input',function(){var v=q.value.trim().toLowerCase(),n=0;items.forEach(function(i){var show=v?i.dataset.q.indexOf(v)>-1:i.dataset.f==='1';if(show&&v){n++;if(n>9)show=false}i.classList.toggle('hide',!show)});em.style.display=v&&!items.some(function(i){return !i.classList.contains('hide')})?'block':'none'})}
-/* page scroll meter inside the header */
-var tk=0;function sp(){tk=0;var m=document.documentElement.scrollHeight-innerHeight;document.querySelector('.site-header').style.setProperty('--hsp',m>0?Math.min(1,scrollY/m).toFixed(4):0)}
-addEventListener('scroll',function(){if(!tk)tk=requestAnimationFrame(sp)},{passive:true});sp();
 })();
 </script>

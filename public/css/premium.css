@@ -386,3 +386,16 @@ body.px:not(.page-home):not(.page-services):not(.page-service) .px-field{display
 .px-rail.l{background:linear-gradient(180deg,transparent,rgba(22,25,42,.1) 15%,rgba(22,25,42,.1) 85%,transparent)}
 .px-rail i{display:none}
 .px-meter{opacity:.7}.px-meter em,.px-meter b{display:none}.px-meter .trk{height:90px}
+
+/* performance: no per-scroll repaints. Background drift runs on the compositor (scroll timeline), grain is static */
+.px::before{inset:-14% 0;height:auto;will-change:transform;
+ background:
+  radial-gradient(1200px 760px at 8% 4%,rgba(255,198,128,.50),transparent 62%),
+  radial-gradient(1100px 820px at 98% 14%,rgba(70,206,192,.36),transparent 62%),
+  radial-gradient(1300px 900px at 52% 96%,rgba(244,114,182,.20),transparent 64%),
+  linear-gradient(180deg,#FCF8F1 0%,#F8F1E6 52%,#F3EADB 100%);
+ animation:pxDrift linear both;animation-timeline:scroll(root)}
+@keyframes pxDrift{from{transform:translate3d(0,6%,0)}to{transform:translate3d(0,-6%,0)}}
+.px::after{top:0;left:0;width:100%;height:100%;animation:none;will-change:auto}
+.px-field{translate:none;will-change:auto}
+.px-aur{translate:none}
