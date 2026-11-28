@@ -131,6 +131,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(expressLayouts);
 app.set('layout', 'partials/layout');
+app.locals.toolChrome = require('./lib/tool-chrome');
+app.locals.toolCats = require('./data/tool-categories');
 
 // Static assets
 app.use(express.static(path.join(__dirname, 'public'), {
@@ -206,7 +208,7 @@ app.use((req, res, next) => {
 
 // ---------- Routes ----------
 
-app.get('/sitemap.xml', (req, res) => {
+function sitemapUrls() {
   const today = new Date().toISOString().slice(0, 10);
   const staticPaths = ['/', '/about', '/team', '/contact', '/blog', '/services', '/privacy-policy', '/terms', '/tools', '/tools/llms-txt-generator', '/tools/schema-markup-generator', '/tools/serp-snippet-preview', '/tools/readability-checker', '/tools/robots-txt-generator', '/tools/utm-builder', '/tools/og-preview-generator', '/tools/meta-tag-generator', '/tools/sitemap-generator', '/tools/hreflang-generator', '/tools/sitemap-validator', '/tools/hreflang-sitemap-validator', '/tools/slug-generator', '/tools/heading-checker', '/tools/geo-grid-rank-planner', '/tools/seo-proposal-generator', '/tools/internal-link-checker', '/tools/keyword-mapping-tool', '/tools/canonical-tag-checker', '/tools/redirect-mapper', '/tools/sitemap-url-extractor', '/tools/robots-txt-tester', '/tools/dofollow-link-checker', '/tools/technical-seo-audit-tool', '/tools/seo-report-generator', '/tools/outreach-email-generator', '/tools/html-sitemap-generator', '/tools/link-building-cost-calculator', '/tools/sitemap-finder', '/tools/content-marketing-roi-calculator', '/tools/link-prospect-scorer', '/tools/anchor-text-checker', '/tools/outbound-link-checker', '/tools/backlink-monitor-tool', '/tools/link-building-management-tool', '/tools/log-file-analyzer', '/tools/keyword-grouping-tool', '/tools/meta-description-checker', '/tools/content-brief-generator', '/tools/schema-markup-validator', '/tools/llm-seo-checker', '/tools/invoice-generator'];
   const urls = [
@@ -217,6 +219,12 @@ app.get('/sitemap.xml', (req, res) => {
     ...team.filter(m => blogStore.getPublished().some(p => p.author === m.name)).map(m => ({ loc: `/team/${blogStore.slugify(m.name)}`, lastmod: today }))
   ];
 
+  return urls;
+}
+
+app.get('/sitemap.xml', (req, res) => {
+  const urls = sitemapUrls();
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url><loc>${site.baseUrl}${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`).join('\n')}
@@ -225,13 +233,32 @@ ${urls.map(u => `  <url><loc>${site.baseUrl}${u.loc}</loc><lastmod>${u.lastmod}<
   res.type('application/xml').send(xml);
 });
 
-app.get('/robots.txt', (req, res) => {
-  res.type('text/plain').send(`User-agent: *
+function robotsTxt() {
+  return `User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: ${site.baseUrl}/sitemap.xml`);
+Sitemap: ${site.baseUrl}/sitemap.xml`;
+}
+
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain').send(robotsTxt());
 });
+
+// Facts about our own site for the homepage inspection sheet, read from the same code that serves them.
+function selfCheck(title, description) {
+  const robots = robotsTxt();
+  const bots = ['GPTBot', 'ClaudeBot', 'PerplexityBot'];
+  const wholeSiteBlocked = /^Disallow:\s*\/\s*$/m.test(robots);
+  return {
+    title,
+    description,
+    pages: sitemapUrls().length,
+    bots,
+    botsAllowed: !wholeSiteBlocked && !bots.some(b => robots.includes(b)),
+    date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  };
+}
 
 // llms.txt: a plain-language summary for AI assistants and LLM crawlers,
 // separate from robots.txt (which only governs crawl permissions). Purely
@@ -279,9 +306,12 @@ app.get('/', (req, res) => {
     .reverse()
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
     .slice(0, 6);
+  const homeTitle = 'Contomatix: Link Building & SEO Services';
+  const homeDescription = 'Contomatix helps brands grow organic traffic and AI search visibility through link building, technical & on-page SEO, and AI SEO.';
   res.render('pages/home', {
-    title: 'Contomatix: Link Building & SEO Services',
-    description: 'Contomatix helps brands grow organic traffic and AI search visibility through link building, technical & on-page SEO, and AI SEO.',
+    title: homeTitle,
+    description: homeDescription,
+    self: selfCheck(homeTitle, homeDescription),
     pageClass: 'page-home',
     postCount: allPosts.length,
     marketCount: allPosts.filter(p => p.slug.startsWith('best-seo-companies-in-')).length,

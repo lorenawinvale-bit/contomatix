@@ -22,7 +22,7 @@ function short(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n).
 @media (min-width:901px){
  .nav-dropdown-menu{display:none!important}
  .main-nav{position:relative}
- .nav-pill{position:absolute;left:0;top:50%;height:36px;border-radius:999px;background:rgba(22,25,42,.06);box-shadow:0 0 0 1px rgba(22,25,42,.05) inset;transform:translate3d(var(--x,0),-50%,0);width:var(--w,0);opacity:0;transition:transform .35s cubic-bezier(.22,.9,.35,1),width .35s cubic-bezier(.22,.9,.35,1),opacity .25s;pointer-events:none;z-index:0}
+ .nav-pill{position:absolute;left:0;top:50%;height:36px;border-radius:999px;background:rgba(22,25,42,.06);box-shadow:0 0 0 1px rgba(22,25,42,.05) inset;transform:translate3d(var(--x,0),-50%,0);width:var(--w,0);opacity:0;transition:transform .25s cubic-bezier(.22,.9,.35,1),width .25s cubic-bezier(.22,.9,.35,1),opacity .25s;pointer-events:none;z-index:0}
  .main-nav.has-pill .nav-pill{opacity:1}
  .main-nav>a,.main-nav>.nav-dropdown{position:relative;z-index:1}
  .nav-dropdown{position:relative}
@@ -30,7 +30,7 @@ function short(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n).
  .mega{position:absolute;left:50%;top:calc(100% + 18px);width:var(--mw,760px);transform:translate3d(-50%,10px,0) scale(.97);transform-origin:50% 0;opacity:0;visibility:hidden;pointer-events:none;
   background:rgba(255,255,255,.985);backdrop-filter:blur(30px) saturate(1.6);-webkit-backdrop-filter:blur(24px) saturate(1.6);border:1px solid rgba(255,255,255,.95);border-radius:22px;padding:14px;z-index:50;
   box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 0 0 1px rgba(8,50,60,.07),0 4px 8px rgba(8,50,60,.05),0 30px 60px -20px rgba(8,50,60,.35),0 70px 110px -40px rgba(8,50,60,.35);
-  transition:opacity .25s,transform .4s cubic-bezier(.22,.9,.35,1),visibility 0s .25s}
+  transition:opacity .25s,transform .25s cubic-bezier(.22,.9,.35,1),visibility 0s .25s}
  .mega::before{content:"";position:absolute;left:0;right:0;top:-22px;height:22px}
  .nav-dropdown:hover .mega,.nav-dropdown:focus-within .mega,.nav-dropdown.open .mega{opacity:1;visibility:visible;pointer-events:auto;transform:translate3d(-50%,0,0) scale(1);transition-delay:0s}
  .mega-sv{--mw:780px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px}
@@ -38,7 +38,7 @@ function short(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n).
  .mg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
  .mg-it{display:flex;gap:12px;align-items:flex-start;padding:11px 12px;border-radius:14px;text-decoration:none;color:var(--text);transition:background .2s,transform .3s cubic-bezier(.22,.9,.35,1)}
  .mg-it:hover{background:var(--bg);transform:translateX(3px)}
- .mg-ic{flex:0 0 36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(20,184,166,.16),rgba(245,166,35,.14));color:#0A6E69;box-shadow:0 0 0 1px rgba(20,184,166,.18) inset;transition:transform .35s cubic-bezier(.3,1.5,.5,1),background .3s,color .3s}
+ .mg-ic{flex:0 0 36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(20,184,166,.16),rgba(245,166,35,.14));color:#0A6E69;box-shadow:0 0 0 1px rgba(20,184,166,.18) inset;transition:transform .25s cubic-bezier(.3,1.5,.5,1),background .3s,color .3s}
  .mg-it:hover .mg-ic{transform:scale(1.1) rotate(-4deg);background:var(--accent-teal);color:#fff}
  .mg-it strong{display:block;font-family:var(--font-display);font-size:.92rem;letter-spacing:-.02em;line-height:1.2}
  .mg-it small{display:block;margin-top:2px;font-size:.74rem;color:var(--text-dim);line-height:1.4;font-weight:500}

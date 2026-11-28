@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="/css/style.css?v=<%= site.assetVersion %>">
   <% if (pageClass === 'page-service' || pageClass === 'page-home') { %><link rel="stylesheet" href="/css/sv.css?v=<%= site.assetVersion %>"><% } %>
   <% if (pageClass !== 'page-404') { %><link rel="stylesheet" href="/css/premium.css?v=<%= site.assetVersion %>"><% } %>
+  <% if (pageClass === 'page-tool' || pageClass === 'page-tools') { %><link rel="stylesheet" href="/css/tools.css?v=<%= site.assetVersion %>"><% } %>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
@@ -90,7 +91,7 @@
   <%- include('./header') %>
 
   <main>
-    <%- body %>
+    <%- (pageClass === 'page-tool' && typeof toolChrome === 'function') ? toolChrome(body, currentPath) : body %>
   </main>
 
   <%- include('./footer') %>

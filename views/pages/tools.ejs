@@ -1,23 +1,52 @@
-<section class="page-hero">
-  <div id="ambient-canvas" class="ambient-canvas"></div>
+<%
+var CATS = toolCats.categories;
+function catOf(slug) { return toolCats.categoryOf(slug); }
+var featured = [['geo-grid-rank-planner', 'Plan a grid of search points around your business and record where you rank at each one.'], ['keyword-mapping-tool', 'Paste keywords and page URLs and see which page each keyword belongs on, and which need a new one.'], ['llm-seo-checker', 'Paste a robots.txt file and see which AI crawlers can read your site.']];
+%>
+<section class="page-hero tl-hero">
   <div class="container page-hero-inner">
     <span class="eyebrow">Free Tools</span>
     <h1>Free SEO &amp; AI-Search Tools</h1>
     <p>No signup, no paywall, practical tools built by Contomatix, mostly for SEO and AI search, plus a few for running your business. More tools are added regularly.</p>
+    <div class="tl-search">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <input type="search" id="tl-q" placeholder="Search <%= tools.length %> free tools" aria-label="Search the tool list" autocomplete="off">
+    </div>
+    <div class="tl-cats" role="group" aria-label="Filter by category">
+      <button type="button" class="a" data-cat="all">All <em><%= tools.length %></em></button>
+      <% CATS.forEach(function (c) { var n = tools.filter(function (t) { return c.slugs.indexOf(t.slug) > -1; }).length; if (!n) return; %><button type="button" data-cat="<%= c.id %>"><%= c.name %> <em><%= n %></em></button><% }); %>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="tl-feat">
   <div class="container">
-    <div class="service-grid">
-      <% tools.forEach(function(t) { %>
-        <a class="service-card" href="/tools/<%= t.slug %>">
+    <div class="tl-feat-grid">
+      <% featured.forEach(function (f, i) { var t = tools.filter(function (x) { return x.slug === f[0]; })[0]; if (!t) return; var c = catOf(t.slug); %>
+      <a class="tl-big<%= i === 0 ? ' wide' : '' %>" href="/tools/<%= t.slug %>" style="--c:<%= c.c %>;--bg:<%= c.bg %>">
+        <div class="tl-big-t"><span class="tl-tag"><%= c.name %></span><h2><%= t.title %></h2><p><%= f[1] %></p><span class="tl-go">Open the tool <b>&rarr;</b></span></div>
+        <div class="tl-big-img"><img src="/images/tools/<%= t.slug %>.webp?v=<%= site.assetVersion %>" alt="<%= t.title %> with example data filled in" width="880" height="510" <%- i === 0 ? '' : 'loading="lazy"' %> decoding="async"></div>
+      </a>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="tl-list">
+  <div class="container">
+    <h2 class="tl-all">All <%= tools.length %> free tools</h2>
+    <div class="tl-grid">
+      <% tools.forEach(function(t) { var c = catOf(t.slug); %>
+        <a class="tl-card" href="/tools/<%= t.slug %>" data-cat="<%= c.id %>" style="--c:<%= c.c %>;--bg:<%= c.bg %>">
+          <span class="tl-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><%- c.icon %></svg></span>
+          <span class="tl-tag"><%= c.name %></span>
           <h2><%= t.title %></h2>
           <p><%= t.summary %></p>
-          <span class="service-card-link">Use tool &rarr;</span>
+          <span class="tl-go">Use tool <b>&rarr;</b></span>
         </a>
       <% }); %>
     </div>
+    <p class="tl-none" hidden>No tool matches that search. Try a shorter word.</p>
 
     <div class="cta-band" style="margin-top: 44px;">
       <span class="cta-orb cta-orb-1"></span>
@@ -31,6 +60,12 @@
     </div>
   </div>
 </section>
+
+<script>
+(function(){var q=document.getElementById('tl-q'),cards=[].slice.call(document.querySelectorAll('.tl-card')),btns=[].slice.call(document.querySelectorAll('.tl-cats button')),none=document.querySelector('.tl-none'),cat='all';
+function run(){var v=q.value.trim().toLowerCase(),n=0;cards.forEach(function(c){var ok=(cat==='all'||c.getAttribute('data-cat')===cat)&&(!v||c.textContent.toLowerCase().indexOf(v)>-1);c.hidden=!ok;if(ok)n++});none.hidden=n>0}
+q.addEventListener('input',run);btns.forEach(function(b){b.addEventListener('click',function(){cat=b.getAttribute('data-cat');btns.forEach(function(x){x.classList.toggle('a',x===b)});run()})})})();
+</script>
 
 <script type="application/ld+json">
   <%- JSON.stringify({

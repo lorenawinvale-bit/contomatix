@@ -377,6 +377,7 @@ function initGsapScroll() {
 
 // ---------- Scroll-reveal fallback (no GSAP): fade cards in as they enter the viewport ----------
 function initScrollReveal() {
+  return; // motion budget: content is visible from the start, no scroll reveals
   var selectors = '.service-card, .process-step, .post-card, .team-card, .story-card, ' +
     '.story-featured, .cta-band, .section-head, .contact-info-card, .contact-form, ' +
     '.newsletter-block, .feature-row, .faq-list details, .stats-band .stats-grid';
@@ -426,7 +427,7 @@ function initCounters() {
     var suffix = match[2];
     if (target <= 1) return;
     var start = null;
-    var duration = 1100;
+    var duration = 300;
     function tick(ts) {
       if (!start) start = ts;
       var p = Math.min((ts - start) / duration, 1);
@@ -487,7 +488,7 @@ function initBigCounters() {
   function run(el) {
     var target = parseInt(el.getAttribute('data-count'), 10);
     var start = null;
-    var duration = 1400;
+    var duration = 300;
     // The server renders the real number so it's correct without JS (SEO,
     // no-JS); only reset to 0 here, at animation time, for the count-up effect.
     el.textContent = '0';
@@ -565,7 +566,7 @@ function initCompare() {
       var swept = false;
       new IntersectionObserver(function (entries, obs) {
         entries.forEach(function (entry) {
-          if (entry.isIntersecting && !swept) {
+          if (false) { // auto sweep removed: motion budget
             swept = true;
             el.style.transition = '--cut 0s';
             var start = null;

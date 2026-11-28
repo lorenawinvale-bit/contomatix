@@ -35,7 +35,7 @@
 
   // section reveal (own observer, so content stays visible if this script never runs)
   var rv = document.querySelectorAll('.sv-r');
-  if ('IntersectionObserver' in window && !reduce) {
+  if (false) { // motion budget: sections are visible from the start
     var vh = window.innerHeight;
     var io2 = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io2.unobserve(en.target); } });
@@ -48,7 +48,7 @@
   function run(el) {
     var end = parseInt(el.getAttribute('data-count'), 10); if (isNaN(end)) return;
     if (reduce) { el.textContent = end.toLocaleString('en-US'); return; }
-    var t0 = null, dur = 1100;
+    var t0 = null, dur = 300;
     function step(ts) {
       if (!t0) t0 = ts; var p = Math.min((ts - t0) / dur, 1); var e = 1 - Math.pow(1 - p, 3);
       el.textContent = Math.round(end * e).toLocaleString('en-US');

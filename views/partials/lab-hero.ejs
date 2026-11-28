@@ -32,7 +32,7 @@ var specimens = [
 .tf-col{position:relative;min-width:0}
 /* the instrument */
 .lab{position:relative;height:452px;contain:layout;--mx:0;--my:0}
-.lab-par{position:absolute;inset:0;transform:translate3d(calc(var(--mx)*-12px),calc(var(--my)*-9px),0);transition:transform .45s cubic-bezier(.22,.9,.35,1)}
+.lab-par{position:absolute;inset:0;transform:translate3d(calc(var(--mx)*-12px),calc(var(--my)*-9px),0);transition:transform .25s cubic-bezier(.22,.9,.35,1)}
 .lab-chip{position:absolute;z-index:3;display:inline-flex;align-items:center;gap:8px;padding:8px 12px 8px 8px;border-radius:999px;background:rgba(255,255,255,.78);backdrop-filter:blur(14px) saturate(1.5);-webkit-backdrop-filter:blur(14px) saturate(1.5);border:1px solid rgba(255,255,255,.9);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 12px 28px -12px rgba(22,25,42,.35);font-size:.76rem;font-weight:700;color:var(--text);white-space:nowrap;animation:labFloat 6.5s ease-in-out infinite alternate}
 .lab-chip b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent-teal);color:#fff}
 .lab-chip b svg{width:11px;height:11px;stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -97,7 +97,7 @@ var specimens = [
       <span class="lab-kicker"><i></i>Link lab &middot; manual vetting</span>
       <h1>Links worth placing, <span class="u">or none at all<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 60 2, 120 11, 180 5 S 270 3, 297 7"/></svg></span>.</h1>
       <p class="lab-sub">Contomatix builds links, technical and on-page SEO and AI search visibility the checkable way. Every target site is inspected by hand before we ask for a single placement.</p>
-      <p class="lab-type" aria-live="off">We vet <span class="ty" data-words="every link|every site|every placement|every outreach email"></span><i class="cur" aria-hidden="true"></i> by hand.</p>
+      <p class="lab-type" aria-live="off">We vet <span class="ty" data-words="every link|every site|every placement|every outreach email"></span> by hand.</p>
       <div class="lab-actions">
         <a href="/contact" class="btn btn-primary">Get a free audit &rarr;</a>
         <a href="/services" class="btn btn-outline">Explore services</a>
@@ -112,7 +112,6 @@ var specimens = [
   </div>
 </section>
 <script>
-(function(){var el=document.querySelector('.lab-type .ty');if(el){var w=el.dataset.words.split('|'),i=0,j=0,del=false;var reduce=false; /* gentle animations always run; only parallax and tilt honour reduced motion */if(reduce){el.textContent=w[0]}else{(function tick(){var t=w[i];if(!del){j++;el.textContent=t.slice(0,j);if(j===t.length){del=true;return setTimeout(tick,1700)}return setTimeout(tick,70)}j--;el.textContent=t.slice(0,j);if(j===0){del=false;i=(i+1)%w.length;return setTimeout(tick,320)}setTimeout(tick,34)})()}}})();
 (function(){var l=document.querySelector('[data-lab]');if(!l||!('IntersectionObserver' in window))return;
 new IntersectionObserver(function(e){l.classList.toggle('paused',!e[0].isIntersecting)},{threshold:0.05}).observe(l)})();
 </script>

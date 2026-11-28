@@ -1,54 +1,64 @@
 <%
-/* "Watch our free tools work": heading first, then a large real screen recording at normal speed. The video loads only when played (preload none). */
-var chapters = [['0:00', 'Geo grid rank planner', 'Enter a keyword and centre point, get a grid to check local rankings.', 0], ['0:07', 'Keyword mapping tool', 'Paste keywords and URLs, see which page each keyword belongs on.', 7], ['0:16', 'LLM SEO checker', 'Paste a robots.txt and see which AI crawlers can read your site.', 16]];
+/* "Watch our free tools work": heading, a designed thumbnail with the play button, and three step cards.
+   Each tool is named once: the card jumps to its part of the video and carries the link to the tool. Video loads only when played (preload none). */
+var chapters = [
+  ['0:02', 'Geo grid rank planner', 'Enter a keyword and centre point, get a grid to check local rankings.', 1.6, '/tools/geo-grid-rank-planner'],
+  ['0:08', 'Keyword mapping tool', 'Paste keywords and URLs, see which page each keyword belongs on.', 8.2, '/tools/keyword-mapping-tool'],
+  ['0:16', 'LLM SEO checker', 'Paste a robots.txt and see which AI crawlers can read your site.', 16.4, '/tools/llm-seo-checker']
+];
 var base = (typeof site !== 'undefined' && site.baseUrl) ? site.baseUrl : 'https://contomatix.com';
 %>
 <style>
-.tv{position:relative;padding:12px 0 96px}
+.tv{position:relative;padding:76px 0 90px}
 .tv-head{max-width:760px;margin:0 auto 38px;text-align:center}
 .tv-head h2{font-family:var(--font-display);font-size:clamp(2.2rem,4.6vw,3.7rem);line-height:1.03;letter-spacing:-.055em;margin:14px 0 14px;font-weight:700}
 .tv-head p{margin:0 auto;max-width:58ch;color:var(--text-dim);font-size:1.08rem;line-height:1.6}
-.tv-frame{position:relative;border-radius:26px;overflow:hidden;background:#fff;border:1px solid var(--px-line,#E4DBCB);aspect-ratio:1160/570;width:100%;
- box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 0 0 1px rgba(8,50,60,.04),0 4px 8px rgba(8,50,60,.05),0 40px 80px -28px rgba(8,50,60,.34),0 100px 160px -60px rgba(8,50,60,.4),0 0 120px -40px rgba(14,165,160,.5)}
-.tv-frame video{display:block;width:100%;height:100%;object-fit:cover;background:#FBF6EE}
-.tv-play{position:absolute;inset:0;display:grid;place-items:center;border:0;cursor:pointer;background:linear-gradient(180deg,rgba(22,25,42,.03),rgba(22,25,42,.3));transition:opacity .35s}
-.tv-play span{display:grid;place-items:center;width:104px;height:104px;border-radius:50%;background:#fff;box-shadow:0 24px 48px -14px rgba(8,50,60,.6),0 0 0 14px rgba(255,255,255,.3);transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
-.tv-play:hover span{transform:scale(1.08)}.tv-play svg{width:38px;height:38px;margin-left:5px;fill:var(--accent-teal)}
-.tv-play::after{content:"Watch it work, 22 seconds";position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-weight:700;font-size:.9rem;color:#fff;background:rgba(22,25,42,.74);backdrop-filter:blur(8px);padding:9px 18px;border-radius:999px;white-space:nowrap}
+.tv-shell{max-width:1180px;margin:0 auto;padding:10px;border-radius:30px;background:rgba(255,255,255,.7);border:1px solid #E1D6C2;box-shadow:0 40px 80px -36px rgba(8,50,60,.42)}
+.tv-frame{position:relative;border-radius:21px;overflow:hidden;background:#16192A;aspect-ratio:1160/570;width:100%}
+.tv-frame video{display:block;width:100%;height:100%;object-fit:cover;background:#16192A}
+.tv-play{position:absolute;inset:0;width:100%;border:0;padding:0;cursor:pointer;background:transparent;transition:opacity .25s}
+.tv-play span{position:absolute;left:7.7%;bottom:8%;display:inline-flex;align-items:center;gap:13px;background:#14B8A6;color:#08201F;font:800 1rem/1 var(--font-body);border-radius:999px;padding:8px 24px 8px 8px;box-shadow:0 18px 34px -14px rgba(20,184,166,.8);transition:transform .25s}
+.tv-play i{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff}
+.tv-play svg{width:18px;height:18px;margin-left:3px;fill:#0B807C}
+.tv-play:hover span{transform:translateY(-3px)}
 .tv-frame.is-playing .tv-play{opacity:0;pointer-events:none}
-.tv-ch{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.tv-ch button{width:100%;display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:14px;text-align:left;font:inherit;cursor:pointer;padding:16px 18px;border-radius:16px;background:#fff;border:1px solid var(--px-line,#E4DBCB);color:var(--text);
- box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 8px 16px -12px rgba(8,50,60,.2);transition:transform .3s cubic-bezier(.22,.9,.35,1),border-color .25s,box-shadow .3s}
-.tv-ch button:hover,.tv-ch button.a{transform:translateY(-3px);border-color:rgba(14,165,160,.5);box-shadow:0 18px 30px -16px rgba(8,50,60,.35)}
-.tv-ch time{font-family:var(--font-mono);font-size:.74rem;font-weight:700;color:#0A6E69;background:rgba(20,184,166,.12);padding:6px 0;border-radius:8px;text-align:center}
-.tv-ch strong{display:block;font-family:var(--font-display);font-size:1.02rem;letter-spacing:-.02em}.tv-ch small{display:block;margin-top:2px;color:var(--text-dim);font-size:.8rem;line-height:1.4}
-.tv-ch i{font-style:normal;color:var(--accent-teal-dim);font-weight:800;transition:transform .3s}.tv-ch button:hover i{transform:translateX(4px)}
-.tv-links{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:24px;font-weight:700;font-size:.94rem}.tv-links a{color:var(--accent-teal-dim);text-decoration:none}.tv-links a:hover{text-decoration:underline}
-@media (max-width:900px){.tv-ch{grid-template-columns:1fr}.tv-frame{aspect-ratio:16/9}}
+.tv-ch{list-style:none;max-width:1180px;margin:22px auto 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tv-ch li{display:flex;flex-direction:column;background:#fff;border:1px solid var(--px-line,#E4DBCB);border-radius:18px;overflow:hidden;box-shadow:0 14px 28px -24px rgba(8,50,60,.4);transition:border-color .25s}
+.tv-ch li:hover,.tv-ch li.a{border-color:#0EA5A0}.tv-ch li.a{box-shadow:inset 0 3px 0 #14B8A6,0 14px 28px -20px rgba(8,50,60,.4)}
+.tv-ch button{flex:1;display:grid;grid-template-columns:44px 1fr;align-items:start;gap:14px;text-align:left;font:inherit;cursor:pointer;padding:18px 18px 12px;background:none;border:0;color:var(--text)}
+.tv-ch b{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:rgba(20,184,166,.13);color:#0A6E69;font-family:var(--font-display);font-size:1.05rem}
+.tv-ch strong{display:block;font-family:var(--font-display);font-size:1.04rem;letter-spacing:-.02em}.tv-ch small{display:block;margin-top:3px;color:var(--text-dim);font-size:.82rem;line-height:1.45}
+.tv-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 18px;border-top:1px dashed #E4DBCB;font-size:.82rem;font-weight:700}
+.tv-foot time{font-family:var(--font-mono);color:#6B7585}.tv-foot a{color:var(--accent-teal-dim);text-decoration:none}.tv-foot a:hover{text-decoration:underline}
+.tv-all{text-align:center;margin-top:24px}
+@media (max-width:900px){.tv{padding:54px 0 66px}.tv-ch{grid-template-columns:1fr}.tv-frame{aspect-ratio:16/9;border-radius:14px}.tv-shell{padding:6px;border-radius:20px}.tv-play span{left:50%;bottom:6%;transform:translateX(-50%);font-size:.82rem;padding:5px 16px 5px 5px;white-space:nowrap}.tv-play:hover span{transform:translateX(-50%)}.tv-play i{width:32px;height:32px}.tv-play svg{width:13px;height:13px}}
 </style>
 <section class="tv" id="watch-the-tools">
   <div class="container">
     <div class="tv-head">
       <span class="eyebrow">Free tools</span>
       <h2>Watch our free tools work</h2>
-      <p>A real screen recording at normal speed, not a mock-up. Every tool on this site runs in your browser, and nothing you type is sent anywhere.</p>
+      <p>A real screen recording, not a mock-up. Every tool on this site runs in your browser, and nothing you type is sent anywhere.</p>
     </div>
-    <div class="tv-frame" data-tv>
-      <video preload="none" playsinline controlslist="nodownload" poster="/videos/free-tools-demo-poster.jpg?v=<%= site.assetVersion %>" width="1160" height="570" aria-label="Screen recording of the geo grid rank planner, keyword mapping tool and LLM SEO checker"><source src="/videos/free-tools-demo.mp4?v=<%= site.assetVersion %>" type="video/mp4"></video>
-      <button class="tv-play" type="button" aria-label="Play the video"><span><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></span></button>
+    <div class="tv-shell">
+      <div class="tv-frame" data-tv>
+        <video preload="none" playsinline controlslist="nodownload" poster="/videos/free-tools-demo-poster.jpg?v=<%= site.assetVersion %>" width="1160" height="570" aria-label="Screen recording of three Contomatix free tools in use"><source src="/videos/free-tools-demo.mp4?v=<%= site.assetVersion %>" type="video/mp4"></video>
+        <button class="tv-play" type="button" aria-label="Play the 25 second video"><span><i><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></i>Watch the demo, 25 seconds</span></button>
+      </div>
     </div>
-    <ul class="tv-ch">
-      <% chapters.forEach(function (c) { %><li><button type="button" data-seek="<%= c[3] %>"><time><%= c[0] %></time><span><strong><%= c[1] %></strong><small><%= c[2] %></small></span><i>&#9654;</i></button></li><% }); %>
-    </ul>
-    <div class="tv-links"><a href="/tools/geo-grid-rank-planner">Geo grid rank planner &rarr;</a><a href="/tools/keyword-mapping-tool">Keyword mapping tool &rarr;</a><a href="/tools/llm-seo-checker">LLM SEO checker &rarr;</a><a href="/tools">All free tools &rarr;</a></div>
+    <ol class="tv-ch">
+      <% chapters.forEach(function (c, i) { %><li><button type="button" data-seek="<%= c[3] %>"><b><%= i + 1 %></b><span><strong><%= c[1] %></strong><small><%= c[2] %></small></span></button><div class="tv-foot"><time>&#9654; <%= c[0] %></time><a href="<%= c[4] %>">Open tool &rarr;</a></div></li><% }); %>
+    </ol>
+    <div class="tv-all"><a href="/tools" class="btn btn-outline">See all free tools &rarr;</a></div>
   </div>
-  <script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'VideoObject', name: 'Contomatix free SEO tools in use', description: 'A 22 second screen recording of the Contomatix geo grid rank planner, keyword mapping tool and LLM SEO checker.', thumbnailUrl: base + '/videos/free-tools-demo-poster.jpg', uploadDate: '2026-11-23', duration: 'PT22S', contentUrl: base + '/videos/free-tools-demo.mp4', embedUrl: base + '/#watch-the-tools' }) %></script>
+  <script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'VideoObject', name: 'Contomatix free SEO tools in use', description: 'A 25 second screen recording of the Contomatix geo grid rank planner, keyword mapping tool and LLM SEO checker.', thumbnailUrl: base + '/videos/free-tools-demo-poster.jpg', uploadDate: '2026-11-29', duration: 'PT25S', contentUrl: base + '/videos/free-tools-demo.mp4', embedUrl: base + '/#watch-the-tools' }) %></script>
 </section>
 <script>
 (function(){var f=document.querySelector('[data-tv]');if(!f)return;var v=f.querySelector('video'),p=f.querySelector('.tv-play'),btns=[].slice.call(document.querySelectorAll('[data-seek]'));
 function go(t){f.classList.add('is-playing');v.setAttribute('controls','');var s=function(){try{if(typeof t==='number')v.currentTime=t}catch(e){}v.play().catch(function(){})};if(v.readyState>0)s();else{v.addEventListener('loadedmetadata',s,{once:true});v.load()}}
 p.addEventListener('click',function(){go(0)});
 btns.forEach(function(b){b.addEventListener('click',function(){f.scrollIntoView({behavior:'smooth',block:'center'});go(+b.dataset.seek)})});
-v.addEventListener('timeupdate',function(){var t=v.currentTime,k=0;btns.forEach(function(b,i){if(t>=+b.dataset.seek-.1)k=i});btns.forEach(function(b,i){b.classList.toggle('a',i===k&&!v.paused)})});
-v.addEventListener('ended',function(){f.classList.remove('is-playing');btns.forEach(function(b){b.classList.remove('a')})})})();
+function mark(k){btns.forEach(function(b,i){b.parentNode.classList.toggle('a',i===k)})}
+v.addEventListener('timeupdate',function(){var t=v.currentTime,k=-1;btns.forEach(function(b,i){if(t>=+b.dataset.seek-.1)k=i});mark(v.paused?-1:k)});
+v.addEventListener('ended',function(){f.classList.remove('is-playing');mark(-1)})})();
 </script>

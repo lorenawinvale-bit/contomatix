@@ -40,7 +40,7 @@
 .sv-vet-item strong { display: block; font-size: 0.95rem; }
 .sv-vet-item em { display: block; font-style: normal; font-size: 0.8rem; color: var(--text-faint); }
 .sv-vet-result { display: flex; gap: 14px; align-items: center; margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--border-light); }
-.sv-vet-ring { --p: 50%; --c: #F59E0B; flex: 0 0 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--c) var(--p), var(--surface-2) 0); position: relative; transition: background .35s; }
+.sv-vet-ring { --p: 50%; --c: #F59E0B; flex: 0 0 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--c) var(--p), var(--surface-2) 0); position: relative; transition: background .25s; }
 .sv-vet-ring::before { content: ''; position: absolute; inset: 7px; background: var(--surface); border-radius: 50%; }
 .sv-vet-ring span { position: relative; font-family: var(--font-display); font-weight: 700; font-size: 1rem; }
 .sv-vet-result strong { font-size: 1.02rem; }
@@ -112,7 +112,7 @@
   .sv-proof { padding: 30px 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .sv-card, .sv-proof-card, .sv-vet-item { transition: none; } }
-.sv-js .sv-r { opacity: 0; transform: translateY(24px); transition: opacity .5s ease, transform .55s cubic-bezier(.22,.9,.35,1); }
+.sv-js .sv-r { opacity: 0; transform: translateY(24px); transition: opacity .25s ease, transform .25s cubic-bezier(.22,.9,.35,1); }
 .sv-js .sv-r.in { opacity: 1; transform: none; }
 
 /* homepage: same widget in the hero */

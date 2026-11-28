@@ -181,7 +181,7 @@ h1, h2, h3, h4 {
   width: 45%;
   background: linear-gradient(105deg, transparent, rgba(255,255,255,0.4), transparent);
   transform: skewX(-20deg);
-  transition: left 0.55s ease;
+  transition: left .25s ease;
   pointer-events: none;
 }
 .btn:hover::after { left: 135%; }
@@ -240,7 +240,7 @@ h1, h2, h3, h4 {
 .reveal {
   opacity: 0;
   transform: translateY(22px);
-  transition: opacity 0.38s ease, transform 0.42s cubic-bezier(0.22, 0.9, 0.35, 1);
+  transition: opacity .25s ease, transform .25s cubic-bezier(0.22, 0.9, 0.35, 1);
 }
 .reveal.in-view { opacity: 1; transform: none; }
 
@@ -2287,3 +2287,50 @@ body.page-tool::after {
 @keyframes toolGlowB { from { transform: translate3d(0, 0, 0) scale(1.1); } to { transform: translate3d(16vmax, -12vmax, 0) scale(0.92); } }
 @media (max-width: 700px) { body.page-tool::after { display: none; } }
 @media (prefers-reduced-motion: reduce) { body.page-tool::before, body.page-tool::after { animation: none; } }
+
+/* Motion budget (28 Nov 2026): every animation runs once in .25s or less; no ambient loops. */
+*,*::before,*::after{animation-duration:.25s!important;animation-delay:0s!important;animation-iteration-count:1!important}
+.hd-prog i{animation-duration:auto!important}
+.px::before,.px-aur,.px-rail i,.px-pix,.px-tr,.px-tr i,.px-field,.px-field::before,.px-field::after,.sd,.hs-px i,.hs-scan,.hs-top i,.lab-blob,.lab-kicker i,.deco-blob-1,.deco-blob-2,.svc-live i,.svc-stage .pulse,.svc-stage .shk,.db-real i,.whatsapp-float,.service-icon svg,.tm-ring,.nav-cta::after,.hs-slab,.hs-lab,.hs-beam{animation:none!important}
+.hs-lab{opacity:1!important}.hs-s3{opacity:.55}.hs-px{display:none}
+.hs-b1,.hs-b2{transform:translate3d(var(--bx),var(--by),66px) rotateX(-90deg) scaleY(1)!important}
+[data-rise],[data-split] *,.db *,.ld-card,.ld-card *,.svc-stage *{transition-delay:0s!important}
+
+/* Light scrolling (28 Nov 2026): no live blur, no lazy section painting, no overlay layers. */
+*,*::before,*::after{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.px *{content-visibility:visible!important}
+.px::after,.px-field{display:none!important}
+.px::before{will-change:auto!important;inset:0!important;height:auto!important}
+.px .site-header>*{background-color:#FFFDF9}
+[data-split] .w>i,.px [data-rise]{opacity:1!important;transform:none!important}
+.px-par,.hs-iso{transition:none!important}
+/* Phone layout fixes */
+.pagination{flex-wrap:wrap}
+@media (max-width:700px){
+ .newsletter-block{grid-template-columns:minmax(0,1fr)!important}
+ .newsletter-block>*{min-width:0}
+ .newsletter-form{flex-wrap:wrap}
+ .newsletter-form input{flex:1 1 180px;min-width:0}
+ .newsletter-form button{flex:1 1 120px;justify-content:center}
+ .db-bar{flex-wrap:wrap;height:auto!important;padding:12px 14px!important;gap:8px!important;white-space:normal!important}
+ .db-tools{flex-wrap:wrap}
+ .db-real{white-space:normal}
+}
+@media (max-width:900px){.hs .hs-l3{bottom:70px!important}.hs .hs-l4{bottom:6px!important}}
+@media (max-width:700px){.ld .ld-stage{height:auto!important}.ld .ld-art{height:auto!important;padding-bottom:16px}}
+.px .site-header .header-inner{background:linear-gradient(180deg,#FFFFFF,#FFFBF4)!important}
+/* calmer section headings: hairline between homepage sections, two-tone intro */
+.page-home .section-head p{font-size:1.08rem;max-width:62ch;margin-left:auto;margin-right:auto}
+
+
+/* Blog posts only: flat cream, the same colour as the picture backgrounds (#FAF5EF), so pictures sit flush */
+html:has(body.page-blog-post),body.page-blog-post{background:#FAF5EF!important}
+body.page-blog-post.px::before{display:none!important}
+body.page-blog-post .post-hero{background:#FAF5EF!important}
+/* post hero chart: bigger, in the same place beside the title */
+.page-blog-post .post-hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr)}
+@media (max-width:900px){.page-blog-post .post-hero-grid{grid-template-columns:minmax(0,1fr)}.page-blog-post .post-hero-diagram{max-width:100%;width:100%}}
+/* long code samples must not stretch the post wider than a phone screen */
+.page-blog-post .post-layout>*,.page-blog-post .post-content{min-width:0}
+.page-blog-post .post-content pre{max-width:100%;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+@media (max-width:900px){.page-blog-post .post-layout{grid-template-columns:minmax(0,1fr)}}
